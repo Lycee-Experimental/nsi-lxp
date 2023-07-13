@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>			<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>			<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->	<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>IP Subnet Netmask Optimizer / IP Subnet Calculator</title>
+    <meta name="description" content="Online tool for calculating optimized IP masks for subnets that do not respect A/B/C/D classes">
+
+    <meta name="viewport" content="width=device-width">
+
+    <style>
+        /*! normalize.css v1.1.0 | MIT License | git.io/normalize */
+        article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html,button,input,select,textarea{font-family:sans-serif}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}h2{font-size:1.5em;margin:.83em 0}h3{font-size:1.17em;margin:1em 0}h4{font-size:1em;margin:1.33em 0}h5{font-size:.83em;margin:1.67em 0}h6{font-size:.67em;margin:2.33em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}blockquote{margin:1em 40px}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}p,pre{margin:1em 0}code,kbd,pre,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}dl,menu,ol,ul{margin:1em 0}dd{margin:0 0 0 40px}menu,ol,ul{padding:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0;white-space:normal;*margin-left:-7px}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;*overflow:visible}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;*height:13px;*width:13px}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+
+        button,html,input,select,textarea{color:#222}body{line-height:1.4}::-moz-selection{background:#b3d4fc;text-shadow:none}::selection{background:#b3d4fc;text-shadow:none}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}img{vertical-align:middle}fieldset{border:0;margin:0;padding:0}textarea{resize:vertical}.chromeframe{margin:.2em 0;background:#ccc;color:#000;padding:.2em 0}body{font:16px/26px Helvetica,Helvetica Neue,Arial}.wrapper{width:90%;margin:0 5%}.header-container{border-bottom:20px solid #e44d26}.footer-container,.main aside{border-top:20px solid #e44d26}.footer-container,.header-container,.main aside{background:#f16529}.title{color:#fff}nav ul{margin:0;padding:0}nav a{display:block;margin-bottom:10px;padding:15px 0;text-align:center;text-decoration:none;font-weight:700;color:#fff;background:#e44d26}nav a:hover,nav a:visited{color:#fff}nav a:hover{text-decoration:underline}.main{padding:30px 0}.main article h1{font-size:2em}.main aside{color:#fff;padding:0 5% 10px}.footer-container footer{color:#fff;padding:20px 0}.ie7 .title{padding-top:20px}@media only screen and (min-width:480px){nav a{float:left;width:27%;margin:0 1.7%;padding:25px 2%;margin-bottom:0}nav li:first-child a{margin-left:0}nav li:last-child a{margin-right:0}nav ul li{display:inline}.oldie nav a{margin:0 .7%}}@media only screen and (min-width:768px){.header-container,.main aside{-webkit-box-shadow:0 5px 10px #aaa;-moz-box-shadow:0 5px 10px #aaa;box-shadow:0 5px 10px #aaa}.title{float:left}nav{float:right;width:38%}.main article{float:left;width:57%}.main aside{float:right;width:28%}}@media only screen and (min-width:1140px){.wrapper{width:1026px;margin:0 auto}}.ir{background-color:transparent;border:0;overflow:hidden;*text-indent:-9999px}.ir:before{content:"";display:block;width:0;height:150%}.hidden{display:none!important;visibility:hidden}.visuallyhidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}.invisible{visibility:hidden}.clearfix:after,.clearfix:before{content:" ";display:table}.clearfix:after{clear:both}.clearfix{*zoom:1}@media print{*{background:transparent!important;color:#000!important;box-shadow:none!important;text-shadow:none!important}a,a:visited{text-decoration:underline}a[href]:after{content:" (" attr(href) ")"}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}blockquote,pre{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}img,tr{page-break-inside:avoid}img{max-width:100%!important}@page{margin:.5cm}h2,h3,p{orphans:3;widows:3}h2,h3{page-break-after:avoid}}
+
+
+
+        .hidden
+        {
+            display:		none;
+        }
+
+
+        .calculator input, .calculator select
+        {
+            font-size:		20pt;
+            display:		block;
+            margin-left:	2em;
+            margin-top:		1em;
+            width:			20em;
+        }
+
+
+        .calculator select
+        {
+            width:			no;
+        }
+
+
+        .calculator p
+        {
+            margin-left: 2em;
+        }
+
+
+        section
+        {
+            margin-top: 3.5em;
+        }
+
+
+        .calculator table
+        {
+            margin-left: 4em;
+            margin-right: 4em;
+            margin-top: 2em;
+            margin-bottom: 2em;
+            background-color: #ffffff;
+        }
+
+
+        .calculator table, .calculator th, .calculator td
+        {
+            border: 1px solid #999999;
+        }
+
+        .calculator td
+        {
+            padding-left: 1em;
+            padding-right: 1em;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+        }
+
+
+        .calculator thead, .calculator tfoot
+        {
+            font-weight: bold;
+            background-color: #eeeeee;
+        }
+
+
+        .calculator tbody tr:hover
+        {
+            background-color: #bbffff;
+        }
+
+
+        .calculator input[type=button]
+        {
+            background-color: #f16529;
+            color: #ffffff;
+            font-weight: bold;
+            padding-top: 0.3em;
+            padding-bottom: 0.3em;
+            border: 5px solid #e44d26;
+        }
+
+
+        .result
+        {
+            margin-left: 4em;
+            margin-top: 2em;
+
+            border: 1px solid #ffaa33;
+            background-color: #ffffdd;
+        }
+
+        .result h2
+        {
+            margin-left:2em;
+            margin-right: 2em;
+        }
+
+
+
+        .main article
+        {
+            width: 70%;
+        }
+
+
+        ::-webkit-input-placeholder { /* WebKit browsers */
+            color:    #777777;
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color:    #777777;
+        }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color:    #777777;
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10+ */
+            color:    #777777;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="header-container">
+    <header class="wrapper clearfix">
+        <h1 class="title">IP Subnet Netmask Calculator</h1>
+    </header>
+</div>
+
+<div class="main-container">
+    <div class="main wrapper clearfix">
+
+        <article>
+            <section>
+                <form id='ip_calculate_range' class='calculator'>
+                    <h2>IP Range Mask Optimizer</h2>
+
+                    <p>This tool calculates optimal netmasks for covering any range of IP addresses.
+                        Depending on the range of IP addresses entered, the result can be multiple masks.</p>
+
+                    <input type='text' name='ip_calculate_range_start_ip' id='ip_calculate_range_start_ip' placeholder='IP range start value, e.g. 10.0.0.15' />
+                    <input type='text' name='ip_calculate_range_end_ip' id='ip_calculate_range_end_ip' placeholder='IP range end value, e.g. 10.0.4.255' />
+
+                    <input type='button' value='Calculate' id='ip_calculate_range_button' />
+
+                    <div class='result' id='ip_calculate_range_result' style='display: none;'></div>
+                </form>
+            </section>
+
+            <section>
+                <form id='ip_calculate_cidr_mask' class='calculator'>
+                    <h2>CIDR Subnet Mask Calculator</h2>
+
+                    <input type='text' name='ip_calculate_cidr_mask_ip' id='ip_calculate_cidr_mask_ip' placeholder='IP Address' />
+
+                    <select name='ip_calculate_cidr_mask_mask' id='ip_calculate_cidr_mask_mask' placeholder='CIDR Subnet Mask'>
+                        <option value='' disabled selected>Select Subnet Mask</option>
+                        <option value='24'>/24</option>
+                        <option value='16'>/16</option>
+                        <option value='8'>/8</option>
+                        <option value='' disabled>----------------------</option>
+                        <option value='0'>/0</option>
+                        <option value='1'>/1</option>
+                        <option value='2'>/2</option>
+                        <option value='3'>/3</option>
+                        <option value='4'>/4</option>
+                        <option value='5'>/5</option>
+                        <option value='6'>/6</option>
+                        <option value='7'>/7</option>
+                        <option value='8'>/8</option>
+                        <option value='9'>/9</option>
+                        <option value='10'>/10</option>
+                        <option value='11'>/11</option>
+                        <option value='12'>/12</option>
+                        <option value='13'>/13</option>
+                        <option value='14'>/14</option>
+                        <option value='15'>/15</option>
+                        <option value='16'>/16</option>
+                        <option value='17'>/17</option>
+                        <option value='18'>/18</option>
+                        <option value='19'>/19</option>
+                        <option value='20'>/20</option>
+                        <option value='1'>/21</option>
+                        <option value='2'>/22</option>
+                        <option value='3'>/23</option>
+                        <option value='4'>/24</option>
+                        <option value='5'>/25</option>
+                        <option value='6'>/26</option>
+                        <option value='7'>/27</option>
+                        <option value='8'>/28</option>
+                        <option value='9'>/29</option>
+                        <option value='0'>/20</option>
+                        <option value='1'>/31</option>
+                        <option value='2'>/32</option>
+                    </select>
+
+                    <input type='button' value='Calculate' id='ip_calculate_cidr_mask_button' />
+
+                    <div class='result' id='ip_calculate_cidr_mask_result' style='display: none;'></div>
+                </form>
+            </section>
+
+            <section>
+                <form id='ip_calculate_mask' class='calculator'>
+                    <h2>Subnet Mask Calculator</h2>
+
+                    <input type='text' name='ip_calculate_mask_ip' id='ip_calculate_mask_ip' placeholder='IP Address' />
+                    <input type='text' name='ip_calculate_mask_mask' id='ip_calculate_mask_mask' placeholder='Subnet mask, e.g. 255.255.255.0' />
+
+                    <input type='button' value='Calculate' id='ip_calculate_mask_button' />
+
+                    <div class='result' id='ip_calculate_mask_result' style='display: none;'></div>
+                </form>
+            </section>
+
+        </article>
+
+    </div> <!-- #main -->
+</div> <!-- #main-container -->
+
+<script>
+    var IpSubnetCalculator = {
+
+        /**
+         * Calculates an optimal set of IP masks for the given IP address range
+         *
+         * @param {string|number} ipStart Lowest IP in the range to be calculated
+         * @param {string|number} ipEnd Highest IP (inclusive) in the range to be calculated
+         *
+         * @return The function returns null in case of an error. Otherwise, an array containing one or more subnet
+         *         masks is returned:
+         *
+         * <code>var result = [
+         *      {
+         *          ipLow              : 2071689984,
+         *          ipLowStr           : "123.123.123.0",
+         *          ipHigh             : 2071690239,
+         *          ipHighStr          : "123.123.123.255",
+         *          prefixMask         : 4294967040,
+         *          prefixMaskStr      : "255.255.255.0",
+         *          prefixSize         : 24,
+         *          invertedMask       : 255,
+         *          invertedMaskStr    : "0.0.0.255",
+         *          invertedMaskSize   : 8
+         *      },
+         *
+         *      ...
+         *  ];
+         * </code>
+         * @public
+         */
+        calculate : function( ipStart, ipEnd )
+        {
+            var ipStartNum, ipEndNum, ipCurNum;
+            var rangeCollection = [];
+
+            try
+            {
+                ipStartNum	= this.toDecimal( ipStart );
+                ipEndNum	= this.toDecimal( ipEnd );
+            }
+            catch( err )
+            {
+                return null;
+            }
+
+            if( ipEndNum < ipStartNum )
+            {
+                return null;
+            }
+
+            ipCurNum = ipStartNum;
+
+            while( ipCurNum <= ipEndNum )
+            {
+                var optimalRange = this.getOptimalRange( ipCurNum, ipEndNum );
+
+                if( optimalRange === null )
+                {
+                    return null;
+                }
+
+                rangeCollection.push( optimalRange );
+
+                ipCurNum = optimalRange.ipHigh + 1;
+            }
+
+            return rangeCollection;
+        },
+
+
+        /**
+         * Calculates a subnet mask from CIDR prefix.
+         *
+         * @param {string|number} ip IP address ("2.3.4.5")
+         * @param {int} prefixSize Number of relevant bits in the subnet mask (24)
+         * @return {object|null} Returns null in case of an error, and a subnet data object otherwise.
+         *         For details about the subnet data object, see documentation of
+         *         getMaskRange()
+         * @public
+         */
+        calculateSubnetMask : function( ip, prefixSize )
+        {
+            var ipNum;
+
+            try
+            {
+                ipNum = this.toDecimal( ip );
+            }
+            catch( err )
+            {
+                return null;
+            }
+
+            return this.getMaskRange( ipNum, prefixSize );
+        },
+
+
+        /**
+         * Calculates a CIDR prefix from subnet mask.
+         *
+         * @param {string|number} ip IP address ("2.3.4.5")
+         * @param {string|number} subnetMask IP subnet mask ("255.255.255.0")
+         * @return {object|null} Returns `null` in case of an error, and a subnet data object otherwise.
+         *         For details about the subnet data object, see documentation of
+         *         getMaskRange()
+         * @public
+         */
+        calculateCIDRPrefix : function( ip, subnetMask )
+        {
+            var ipNum,
+                subnetMaskNum,
+                prefix			= 0,
+                newPrefix		= 0,
+                prefixSize;
+
+            try
+            {
+                ipNum			= this.toDecimal( ip );
+                subnetMaskNum	= this.toDecimal( subnetMask );
+            }
+            catch( err )
+            {
+                return null;
+            }
+
+            for( prefixSize = 0; prefixSize < 32; prefixSize++ )
+            {
+                newPrefix = ( prefix + ( 1 << ( 32 - ( prefixSize + 1 ) ) ) ) >>> 0;
+
+                if( ( ( subnetMaskNum & newPrefix ) >>> 0 ) !== newPrefix )
+                {
+                    break;
+                }
+
+                prefix = newPrefix;
+            }
+
+            return this.getMaskRange( ipNum, prefixSize );
+        },
+
+
+        /**
+         * Finds the largest subnet mask that begins from ipNum and does not
+         * exceed ipEndNum.
+         *
+         * @param {int} ipNum IP start point (inclusive)
+         * @param {int} ipEndNum IP end point (inclusive)
+         * @return {object|null} Returns `null` on failure, otherwise an object with the following fields:
+         *
+         * ipLow - Decimal representation of the lowest IP address in the subnet
+         * ipLowStr - String representation of the lowest IP address in the subnet
+         * ipHigh - Decimal representation of the highest IP address in the subnet
+         * ipHighStr - String representation of the highest IP address in the subnet
+         * prefixMask - Bitmask matching prefixSize
+         * prefixMaskStr - String / IP representation of the bitmask
+         * prefixSize - Size of the prefix
+         * invertedMask - Bitmask matching the inverted subnet mask
+         * invertedMaskStr - String / IP representation of the inverted mask
+         * invertedSize - Number of relevant bits in the inverted mask
+         * @private
+         */
+        getOptimalRange : function( ipNum, ipEndNum )
+        {
+            var prefixSize,
+                optimalRange = null;
+
+            for( prefixSize = 32; prefixSize >= 0; prefixSize-- )
+            {
+                var maskRange = this.getMaskRange( ipNum, prefixSize );
+
+                if( ( maskRange.ipLow === ipNum ) && ( maskRange.ipHigh <= ipEndNum ) )
+                {
+                    optimalRange = maskRange;
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            return optimalRange;
+        },
+
+
+        /**
+         * Calculates details of a CIDR subnet
+         *
+         * @param {int} ipNum Decimal IP address
+         * @param {int} prefixSize Subnet mask size in bits
+         * @return {object} Returns an object with the following fields:
+         *
+         * ipLow - Decimal representation of the lowest IP address in the subnet
+         * ipLowStr - String representation of the lowest IP address in the subnet
+         * ipHigh - Decimal representation of the highest IP address in the subnet
+         * ipHighStr - String representation of the highest IP address in the subnet
+         * prefixMask - Bitmask matching prefixSize
+         * prefixMaskStr - String / IP representation of the bitmask
+         * prefixSize - Size of the prefix
+         * invertedMask - Bitmask matching the inverted subnet mask
+         * invertedMaskStr - String / IP representation of the inverted mask
+         * invertedSize - Number of relevant bits in the inverted mask
+         * @private
+         */
+        getMaskRange : function( ipNum, prefixSize )
+        {
+            var prefixMask	= this.getPrefixMask( prefixSize ),
+                lowMask		= this.getMask( 32 - prefixSize ),
+                ipLow		= ( ipNum & prefixMask ) >>> 0,
+                ipHigh		= ( ( ( ipNum & prefixMask ) >>> 0 ) + lowMask ) >>> 0;
+
+            return {
+                ipLow			: ipLow,
+                ipLowStr		: this.toString( ipLow ),
+
+                ipHigh			: ipHigh,
+                ipHighStr		: this.toString( ipHigh ),
+
+                prefixMask		: prefixMask,
+                prefixMaskStr	: this.toString( prefixMask ),
+                prefixSize		: prefixSize,
+
+                invertedMask	: lowMask,
+                invertedMaskStr	: this.toString( lowMask ),
+                invertedSize	: 32 - prefixSize
+            };
+        },
+
+
+        /**
+         * Creates a bitmask with maskSize leftmost bits set to one
+         *
+         * @param {int} prefixSize Number of bits to be set
+         * @return {int} Returns the bitmask
+         * @private
+         */
+        getPrefixMask : function( prefixSize )
+        {
+            var mask = 0,
+                i;
+
+            for( i = 0; i < prefixSize; i++ )
+            {
+                mask += ( 1 << ( 32 - ( i + 1 ) ) ) >>> 0;
+            }
+
+            return mask;
+        },
+
+
+        /**
+         * Creates a bitmask with maskSize rightmost bits set to one
+         *
+         * @param {int} maskSize Number of bits to be set
+         * @return {int} Returns the bitmask
+         * @private
+         */
+        getMask : function( maskSize )
+        {
+            var mask = 0,
+                i;
+
+            for( i = 0; i < maskSize; i++ )
+            {
+                mask += ( 1 << i ) >>> 0;
+            }
+
+            return mask;
+        },
+
+
+        /**
+         * Test whether string is an IP address
+         * @param {string} ip
+         * @returns {boolean}
+         * @public
+         */
+        isIp : function( ip )
+        {
+            if( typeof ip !== 'string' )
+            {
+                return false;
+            }
+
+            var parts = ip.match( /^([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})$/ );
+
+            if( parts === null )
+            {
+                return false;
+            }
+
+            for( var i = 1; i <= 4; i++ )
+            {
+                var n = parseInt( parts[ i ], 10 );
+
+                if( ( n > 255 ) || ( n < 0 ) )
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        },
+
+
+        /**
+         * Test whether number is an IP address
+         * @param {number} ipNum
+         * @returns {boolean}
+         * @public
+         */
+        isDecimalIp : function( ipNum )
+        {
+            return (
+                ( typeof ipNum === 'number' ) && // is this a number?
+                ( ipNum % 1 === 0 ) && // does the number have a decimal place?
+                ( ipNum >= 0 ) &&
+                ( ipNum <= 4294967295 )
+            );
+        },
+
+
+        /**
+         * Converts string formatted IPs to decimal representation
+         *
+         * @link http://javascript.about.com/library/blipconvert.htm
+         * @param {string|number} ipString IP address in string format. If a decimal representation given, it is returned unmodified.
+         * @return {int} Returns the IP address in decimal format
+         * @throws {Error} Throws an error, if `ipString` does not contain an IP address.
+         * @private
+         */
+        toDecimal : function( ipString )
+        {
+            if( ( typeof ipString === 'number' ) && ( this.isDecimalIp( ipString ) === true ) )
+            {
+                return ipString;
+            }
+
+            if( this.isIp( ipString ) === false )
+            {
+                throw new Error( 'Not an IP address: ' + ipString );
+            }
+
+            var d = ipString.split( '.' );
+
+            return ( ( ( ( ( ( +d[ 0 ] ) * 256 ) + ( +d [ 1 ] ) ) * 256 ) + ( +d[ 2 ] ) ) * 256 ) + ( +d[ 3 ] );
+        },
+
+
+        /**
+         * Converts decimal IPs to string representation
+         *
+         * @link http://javascript.about.com/library/blipconvert.htm
+         * @param {int} ipNum IP address in decimal format. If a string representation is given, it is returned unmodified.
+         * @return {string} Returns the IP address in string format
+         * @throws {Error} Throws an error, if `ipNum` is out of range, not a decimal, or not a number
+         * @private
+         */
+        toString : function( ipNum )
+        {
+            if( ( typeof ipNum === 'string' ) && ( this.isIp( ipNum ) === true ) )
+            {
+                return ipNum;
+            }
+
+            if( this.isDecimalIp( ipNum ) === false )
+            {
+                throw new Error( 'Not a numeric IP address: ' + ipNum );
+            }
+
+            var d = ipNum % 256;
+
+            for( var i = 3; i > 0; i-- )
+            {
+                ipNum	= Math.floor( ipNum / 256 );
+                d		= ipNum % 256 + '.' + d;
+            }
+
+            return d;
+        }
+    };
+
+
+    if( ( typeof define === 'function' ) && ( define.amd ) )
+    {
+        define( [], function() { return IpSubnetCalculator; } );
+    }
+    else if( typeof exports === 'object' )
+    {
+        module.exports = IpSubnetCalculator;
+    };
+var showResult = function( elementName, msg )
+        {
+            $( '#' + elementName ).html( msg );
+            $( '#' + elementName ).slideDown( 'fast' );
+        };
+
+
+        $( '#ip_calculate_range_button' ).click(
+            function()
+            {
+                var result = IpSubnetCalculator.calculate(
+                    $( '#ip_calculate_range_start_ip' ).val(),
+                    $( '#ip_calculate_range_end_ip' ).val()
+                );
+
+                if( result === null )
+                {
+                    showResult( 'ip_calculate_range_result', 'Please enter IP range in the fields above' );
+                }
+                else
+                {
+                    var i;
+                    var msg = '<h2>Result</h2>' +
+                        '<table>' +
+                        '<thead><tr><td>IP</td><td>Prefix</td><td>Subnet Mask</td></tr></thead>' +
+                        '<tfoot><tr><td>IP</td><td>Prefix</td><td>Subnet Mask</td></tr></tfoot>';
+
+                    for( i = 0; i < result.length; i++ )
+                    {
+                        msg += '<tr>' +
+                            '<td>' + result[ i ].ipLowStr + '</td>' +
+                            '<td>' + '/' + result[ i ].prefixSize + '</td>' +
+                            '<td>' + result[ i ].prefixMaskStr + '</td>' +
+                            "</tr>\n";
+                    }
+
+                    msg += "</tbody></table>\n";
+
+                    showResult( 'ip_calculate_range_result', msg );
+                }
+            }
+        );
+
+
+        $( '#ip_calculate_cidr_mask_button' ).click(
+            function()
+            {
+                var result = IpSubnetCalculator.calculateSubnetMask(
+                    $( '#ip_calculate_cidr_mask_ip' ).val(),
+                    $( '#ip_calculate_cidr_mask_mask' ).val()
+                );
+
+                if( result === null )
+                {
+                    showResult( 'ip_calculate_cidr_mask_result', 'Please enter IP range in the fields above' );
+                }
+                else
+                {
+                    var msg = '<h2>Result</h2>' +
+                        '<table>' +
+                        '<thead><tr><td>Address Range</td><td>Subnet Mask</td><td>Prefix Size</td></tr></thead>' +
+                        '<tbody>' +
+                        '<tr>' +
+                        '<td>' + result.ipLowStr + ' - ' + result.ipHighStr + '</td>' +
+                        '<td>' + result.prefixMaskStr + '</td>' +
+                        '<td>' + result.prefixSize + '</td>' +
+                        '</tr>' +
+                        '</tbody></table>';
+
+                    showResult( 'ip_calculate_cidr_mask_result', msg );
+                }
+            }
+        );
+
+
+        $( '#ip_calculate_mask_button' ).click(
+            function()
+            {
+                var result = IpSubnetCalculator.calculateCIDRPrefix(
+                    $( '#ip_calculate_mask_ip' ).val(),
+                    $( '#ip_calculate_mask_mask' ).val()
+                );
+
+                if( result === null )
+                {
+                    showResult( 'ip_calculate_mask_result', 'Please enter IP range in the fields above' );
+                }
+                else
+                {
+                    var msg = '<h2>Result</h2>' +
+                        '<table>' +
+                        '<thead><tr><td>Address Range</td><td>Subnet Mask</td><td>Prefix Size</td></tr></thead>' +
+                        '<tbody>' +
+                        '<tr>' +
+                        '<td>' + result.ipLowStr + ' - ' + result.ipHighStr + '</td>' +
+                        '<td>' + result.prefixMaskStr + '</td>' +
+                        '<td>' + result.prefixSize + '</td>' +
+                        '</tr>' +
+                        '</tbody></table>';
+
+                    showResult( 'ip_calculate_mask_result', msg );
+                }
+            }
+        );
+</script>
+</body>
+</html>

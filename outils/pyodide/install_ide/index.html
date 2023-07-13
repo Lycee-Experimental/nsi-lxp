@@ -1,0 +1,2653 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Les sciences du numériques au Lycée Expérimental">
+      
+      
+      
+        <link rel="canonical" href="https://nsi.lycee-experimental.org/outils/pyodide/install_ide/">
+      
+      
+        <link rel="prev" href="../install_term/">
+      
+      
+        <link rel="next" href="../advanced/">
+      
+      <link rel="icon" href="../../../assets/images/logo-lxp-noir.svg">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.18">
+    
+    
+      
+        <title>Guide de l'IDE 🐍 - NSI-LXP</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.eebd395e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-light.min.css">
+<!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.12.5/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.12.5/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.asm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-md5"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
+<script src="../../../pyodide-mkdocs/utils.js"></script> 
+<script src="../../../pyodide-mkdocs/interpreter.js"></script> 
+
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../xtra/stylesheets/ajustements.css">
+    
+      <link rel="stylesheet" href="../../../xtra/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+
+<link rel="stylesheet" href="../../../pyodide-mkdocs/pyoditeur.css">
+<link rel="stylesheet" href="../../../qcm/qcm.css">
+
+
+
+<input id="ace_palette" autocomplete="off" class="md-toggle" data-ace-dark-mode="tomorrow_night_bright" data-ace-light-mode="crimson_editor" type="checkbox"></input>
+
+
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="deep-orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#guide-de-lide" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../.." title="NSI-LXP" class="md-header__button md-logo" aria-label="NSI-LXP" data-md-component="logo">
+      
+  <img src="../../../assets/images/logo-lxp-transparent.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NSI-LXP
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Guide de l'IDE 🐍
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="deep-orange"  aria-label="Passer au mode nuit"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Passer au mode nuit" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="deep-orange"  aria-label="Passer au mode jour"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Passer au mode jour" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lycee-experimental/nsi-lxp" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../premiere/fondement/" class="md-tabs__link">
+        Fondements
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../premiere/encodage/" class="md-tabs__link">
+        Encodage
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../premiere/linux/" class="md-tabs__link">
+        Linux
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../premiere/internet/" class="md-tabs__link">
+        Réseaux
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../premiere/web/" class="md-tabs__link">
+        Web
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../premiere/python/" class="md-tabs__link">
+        Python
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../premiere/data/" class="md-tabs__link">
+        Bigdata
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../premiere/algo/" class="md-tabs__link">
+        Algorithmes
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../premiere/ressources/" class="md-tabs__link md-tabs__link--active">
+        Ressources
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../projets/" class="md-tabs__link">
+        Projets
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../bac/sujet/" class="md-tabs__link">
+      Bac
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="NSI-LXP" class="md-nav__button md-logo" aria-label="NSI-LXP" data-md-component="logo">
+      
+  <img src="../../../assets/images/logo-lxp-transparent.svg" alt="logo">
+
+    </a>
+    NSI-LXP
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lycee-experimental/nsi-lxp" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../premiere/fondement/">Fondements</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Fondements
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/fondement/histoire/" class="md-nav__link">
+        Histoire de l'informatique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/fondement/binaire/" class="md-nav__link">
+        Binaire et portes logiques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/fondement/materiel/" class="md-nav__link">
+        Architecture matérielle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/fondement/assembleur/" class="md-nav__link">
+        Langage machine et assembleur
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../premiere/encodage/">Encodage</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Encodage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/encodage/entier-positif/" class="md-nav__link">
+        Entiers positifs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/encodage/entier-negatif/" class="md-nav__link">
+        Entiers signés
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/encodage/non-entier/" class="md-nav__link">
+        Nombres réels
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/encodage/caractere/" class="md-nav__link">
+        Caractères
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../premiere/linux/">Linux</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/linux/os/" class="md-nav__link">
+        Systèmes d'exploitation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/linux/linux/" class="md-nav__link">
+        Unix et linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/linux/install/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/linux/commande/" class="md-nav__link">
+        Commandes linux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../premiere/internet/">Réseaux</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Réseaux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/internet/histoire/" class="md-nav__link">
+        Histoire d'internet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/internet/architecture/" class="md-nav__link">
+        Architecture réseau
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/internet/protocole/" class="md-nav__link">
+        Protocoles de communication
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../premiere/web/">Web</a>
+          
+            <label for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Web
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/web/langage/" class="md-nav__link">
+        Langages web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/web/http/" class="md-nav__link">
+        Protocole HTTP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/web/requete/" class="md-nav__link">
+        Requêtes GET et POST et formulaires
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../premiere/python/">Python</a>
+          
+            <label for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/python/variable/" class="md-nav__link">
+        Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/python/boucle/" class="md-nav__link">
+        Boucles for et while
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/python/condition/" class="md-nav__link">
+        Instruction conditionnelle If
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/python/bool/" class="md-nav__link">
+        Booléens
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/python/fonction/" class="md-nav__link">
+        Fonctions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/python/liste/" class="md-nav__link">
+        Listes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/python/tuple/" class="md-nav__link">
+        Tuples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/python/dict/" class="md-nav__link">
+        Dictionnaires
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/python/char/" class="md-nav__link">
+        Chaînes de caractères
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../premiere/data/">Bigdata</a>
+          
+            <label for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Bigdata
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/data/csv/" class="md-nav__link">
+        Fichiers csv
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/data/tri/" class="md-nav__link">
+        Tri des données
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/data/pandas/" class="md-nav__link">
+        Module Pandas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../premiere/algo/">Algorithmes</a>
+          
+            <label for="__nav_8">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithmes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/algo/moy/" class="md-nav__link">
+        Extremums et moyennes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/algo/complex/" class="md-nav__link">
+        Complexité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/algo/insert/" class="md-nav__link">
+        Tri par insertion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/algo/select/" class="md-nav__link">
+        Tri par sélection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/algo/dichotomie/" class="md-nav__link">
+        Dichotomie
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/algo/glouton/" class="md-nav__link">
+        Algorithmes gloutons
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/algo/knn/" class="md-nav__link">
+        Algorithme KNN
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          Ressources
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Ressources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../premiere/ressources/" class="md-nav__link">
+        Ressources
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">Outils</a>
+          
+            <label for="__nav_9_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_9_2">
+          <span class="md-nav__icon md-icon"></span>
+          Outils
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../v86/" class="md-nav__link">
+        Terminal Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2_3" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Python en ligne</a>
+          
+            <label for="__nav_9_2_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_2_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_9_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Python en ligne
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install_term/" class="md-nav__link">
+        Guide du Terminal ⌨️
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Guide de l'IDE 🐍
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Guide de l'IDE 🐍
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exemple" class="md-nav__link">
+    Exemple
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prise-en-main" class="md-nav__link">
+    Prise en main
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/" class="md-nav__link">
+        Avancé ⭐️
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sandbox/" class="md-nav__link">
+        Bac à sable 🧾
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../redimensionner/sujet.md" class="md-nav__link">
+        Exemple pratique 🏖
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qcm/qcm/" class="md-nav__link">
+        QCM en MkDocs ✅❌
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../projets/">Projets</a>
+          
+            <label for="__nav_10">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Projets
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
+          Les bases de Git
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10_2">
+          <span class="md-nav__icon md-icon"></span>
+          Les bases de Git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/git/presentation/" class="md-nav__link">
+        Présentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/git/utilisation/" class="md-nav__link">
+        Utilisation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/git/commandes/" class="md-nav__link">
+        Commandes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_10_3" id="__nav_10_3_label" tabindex="0">
+          Django
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10_3">
+          <span class="md-nav__icon md-icon"></span>
+          Django
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3_1" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_10_3_1" id="__nav_10_3_1_label" tabindex="0">
+          Pycharm & Django-Lxp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Pycharm & Django-Lxp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/djangolxp/install-pycharm/" class="md-nav__link">
+        Installation de Pycharm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/djangolxp/deploiement-local/" class="md-nav__link">
+        Déploiement Django-lxp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/djangolxp/Utilisation-github_pycharm/" class="md-nav__link">
+        Git avec pycharm
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_10_3_2" id="__nav_10_3_2_label" tabindex="0">
+          Développement de Django-Lxp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Développement de Django-Lxp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/djangolxp/ajout-champs/" class="md-nav__link">
+        Ajout de champs au formulaires
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/djangolxp/style-fiche-inscription/" class="md-nav__link">
+        Affichage de la fiche d'inscription
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/djangolxp/tableau-filtre/" class="md-nav__link">
+        Afficher/filtrer les listes d'élèves
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_4" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_10_4" id="__nav_10_4_label" tabindex="0">
+          Renpy
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10_4">
+          <span class="md-nav__icon md-icon"></span>
+          Renpy
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/renpy/decompile.m" class="md-nav__link">
+        Décompiler un jeu
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_5" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_10_5" id="__nav_10_5_label" tabindex="0">
+          DrumXP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10_5">
+          <span class="md-nav__icon md-icon"></span>
+          DrumXP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/drumxp/intro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/drumxp/elec/" class="md-nav__link">
+        Électronique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/drumxp/progra/" class="md-nav__link">
+        Programmation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/drumxp/logiciels/" class="md-nav__link">
+        Logiciel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projets/drumxp/matos/" class="md-nav__link">
+        Structure
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bac/sujet/" class="md-nav__link">
+        Bac
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+
+  
+  
+
+
+<div><h1 id="guide-de-lide">Guide de l'IDE<a class="headerlink" href="#guide-de-lide" title="Permanent link">⚓︎</a></h1>
+<h2 id="exemple">Exemple<a class="headerlink" href="#exemple" title="Permanent link">⚓︎</a></h2>
+<p>Un IDE se présente sous cette forme :</p>
+<details class="info" open="open">
+<summary>Enroulez-moi !</summary>
+<p></p><div class="py_mk_ide" data-max="∞" data-max_size="20" data-exclude="eval,exec,eval,max"><div class="wrapper"><span id="comment_editor_743451d426ae838a10acc722574b4b6c6e52df67" class="comment">###</span><div class="line" id="editor_743451d426ae838a10acc722574b4b6c6e52df67"></div><div id="term_editor_743451d426ae838a10acc722574b4b6c6e52df67" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_743451d426ae838a10acc722574b4b6c6e52df67","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_743451d426ae838a10acc722574b4b6c6e52df67" class="py_mk_hide">assert somme([]) == None, "Test 1 failed"bksl-nlassert somme([1, 2]) == 3, "Test 2 failed"bksl-nlbksl-nl</span>            <button class="tooltip" onclick='check("editor_743451d426ae838a10acc722574b4b6c6e52df67","")'>            <img src="../../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">∞/∞</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_743451d426ae838a10acc722574b4b6c6e52df67","demo/exo2")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_743451d426ae838a10acc722574b4b6c6e52df67').click()">            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_743451d426ae838a10acc722574b4b6c6e52df67" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_743451d426ae838a10acc722574b4b6c6e52df67")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_743451d426ae838a10acc722574b4b6c6e52df67")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_743451d426ae838a10acc722574b4b6c6e52df67" class="py_mk_hide"># --HDR--#bksl-nldef mystere(a: int) -&gt; int:bksl-nl    return abksl-nlbksl-nlbksl-nl# --HDR--#bksl-nlbksl-nlbksl-nldef sommation(T: list) -&gt; int:bksl-nl    a = 0bksl-nl    for nombre in T:bksl-nl        a = a + nombrebksl-nl    return abksl-nlbksl-nlbksl-nldef somme(L: list) -&gt; None | int:bksl-nl    return None if len(L) == 0 else sum(L)bksl-nlbksl-nl</span><span id="corr_content_editor_743451d426ae838a10acc722574b4b6c6e52df67" class="py_mk_hide" data-strudel="">def somme(L: list[int]) -&gt; int:bksl-nl    return None if len(L) == 0 else sum(L)bksl-nlbksl-nl</span>
+</details>
+<p>Il dispose de six boutons :</p>
+<div class="py_mk_ide">
+<ul>
+<li> Lancer le script : <button class="tooltip"><img src="../pyodide-mkdocs/icons8-play-64.png"></button></li>
+<li> Valider le script avec des tests unitaires : <button class="tooltip"><img src="../pyodide-mkdocs/icons8-check-64.png"></button></li>
+<li> Télécharger le script actuel : <button class="tooltip"><img src="../pyodide-mkdocs/icons8-download-64.png"></button></li>
+<li> Téléverser un script local : <button class="tooltip"><img src="../pyodide-mkdocs/icons8-upload-64.png"></button></li>
+<li> Recharger l'énoncé : <button class="tooltip"><img src="../pyodide-mkdocs/icons8-restart-64.png"></button></li>
+<li> Enregistrer le script actuel : <button class="tooltip"><img src="../pyodide-mkdocs/icons8-save-64.png"></button></li>
+</ul>
+</div>
+
+<details class="info">
+<summary>Rappel RGPD</summary>
+<p>Tout se fait du côté client. <strong>Rien n'est envoyé au serveur</strong>.</p>
+</details>
+<h2 id="prise-en-main">Prise en main<a class="headerlink" href="#prise-en-main" title="Permanent link">⚓︎</a></h2>
+<p>Par défaut, la commande <code class="highlight">{{IDE('exo2')}}</code> permet de charger un script placé dans <code>docs/scripts/</code>.</p>
+<div class="admonition summary">
+<p class="admonition-title">Organisations possibles</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Classement par chapitre</label><label for="__tabbed_1_2">Classement par exercice</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Votre page <code>markdown</code> constitue un chapitre et regroupe de nombreux exercices avec de nombreux IDE. </p>
+<p>Dans ce cas, optez pour l'arborescence suivante :</p>
+<div class="highlight"><pre><span></span><code>docs/
+├──<span class="w"> </span>images
+│<span class="w">   </span>└──<span class="w"> </span>projet2
+│<span class="w">       </span>└──<span class="w"> </span>plante.png
+├──<span class="w"> </span>index.md
+├──<span class="w"> </span>projet1.md
+├──<span class="w"> </span>projet2.md<span class="w">     </span>⬅︎<span class="w"> </span>corps<span class="w"> </span>du<span class="w"> </span>chapitre<span class="w"> </span>que<span class="w"> </span>vous<span class="w"> </span>souhaitez<span class="w"> </span>écrire
+├──<span class="w"> </span>projet3.md
+├──<span class="w"> </span>scripts
+│<span class="w">   </span>├──<span class="w"> </span>projet2<span class="w">    </span>⬅︎<span class="w"> </span>dossier<span class="w"> </span>contenant<span class="w"> </span>les<span class="w"> </span>exercices<span class="w"> </span>à<span class="w"> </span>intégrer<span class="w"> </span>à<span class="w"> </span>vos<span class="w"> </span>IDE
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo1.py
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo1_corr.py
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo1_test.py
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo2.py
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo2_corr.py
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo2_test.py
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo3.py
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo3_corr.py
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo3_test.py
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo4.py
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo4_corr.py
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo4_test.py
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo5.py
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo5_corr.py
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>plante_fractale.py
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>tableau_dynamique.py
+......
+</code></pre></div>
+<p>Exemple : </p>
+<p><code class="highlight">{{IDE('projet2/exo2')}}</code> chargera le script exo2.py depuis <code>docs/scripts/projet2/</code>.</p>
+</div>
+<div class="tabbed-block">
+<p>Votre page <code>markdown</code> est spécialisée sur un exercice particulier, indiqué dans <code>mkdocs.yml</code>. </p>
+<p>Dans ce cas, optez pour l'arborescence ci-dessous :</p>
+<div class="highlight"><pre><span></span><code>docs/
+├──<span class="w"> </span>N1
+│<span class="w">   </span>├──<span class="w"> </span><span class="m">110</span>-maximum_nombres
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo.py
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo_corr.py
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo_test.py
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>sujet.md
+</code></pre></div>
+<p>Exemple : </p>
+<ul>
+<li><code>mkdocs.yml</code> contient la ligne <code class="highlight"><span class="k">-</span><span class="w"> </span>"Calcul de max": N1/110-maximum_nombres/sujet.md</code>. </li>
+<li><code class="highlight">{{IDE('exo')}}</code> chargera le script exo.py depuis <code>docs/N1/110-maximum_nombres/</code>.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Format de fichiers</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><input id="__tabbed_2_4" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Fichier d'exercice : <code>exo.py</code></label><label for="__tabbed_2_2">Fichier correction <code>exo_corr.py</code></label><label for="__tabbed_2_3">Fichier juge <code>exo_test.py</code> - Assert</label><label for="__tabbed_2_4">Fichier juge <code>exo_test.py</code> - Benchmark</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Le script Python est écrit de manière classique avec quelques particularités. </p>
+<p>Il peut se décomposer en ces éléments (tous facultatifs) :</p>
+<div class="highlight"><pre><span></span><code><span class="c1">#MAX Nombre_d_essais_autorisés</span>
+<span class="c1">#--- HDR ---#</span>
+<span class="sd">"""</span>
+<span class="sd">Code Python dans un header</span>
+<span class="sd">Ce code ne sera pas visible par l'élève et sera exécuté avant le code élève à l'exécution et à la validation</span>
+
+<span class="sd">Utile pour proposer des classes spécifiques à un exercice</span>
+<span class="sd">"""</span>
+<span class="c1">#--- HDR ---#</span>
+
+<span class="sd">"""</span>
+<span class="sd">Code élève à compléter</span>
+<span class="sd">"""</span>
+
+<span class="c1">#Tests</span>
+<span class="sd">"""</span>
+<span class="sd">Tests publics faits à l'exécution et à la validation</span>
+<span class="sd">Exemple: assert machin == 0, "vous avez une erreur de machin"</span>
+<span class="sd">"""</span>
+</code></pre></div>
+<p>Les librairies standards sont pour la plupart acceptées, les limitations étant principalement graphiques. Les annotations de type, le walrus opérator sont acceptées.</p>
+</div>
+<div class="tabbed-block">
+<p>Le fichier Python de correction s'appelle <code>nom_de_script_corr.py</code>. </p>
+<p>Vous pouvez répéter le HDR si vous le souhaitez afin que l'élève puisse tester en local</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>Le fichier de juge en ligne peut être écrit de manière beaucoup plus "classique" en utilisant <code class="highlight"><span class="k">assert</span></code> :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>
+</code></pre></div></td></tr></table></div>
+<p>Les <code class="highlight"><span class="k">assert</span></code> sont directement évalués par Pyodide. Seul le test ayant échoué sera affiché. Les tests réussis n'afficheront rien.</p>
+<p>Pas de problème pour tester autant de fonctions que nécessaire.</p>
+</div>
+<div class="tabbed-block">
+<p>Le fichier de juge en ligne doit contenir une variable appelée <code>benchmark</code>, de type <code class="highlight"><span class="nb">list</span></code> ou <code class="highlight"><span class="nb">tuple</span></code> :</p>
+<p>1) Si l'on souhaite vérifier une unique fonction grâce à l'évaluateur de code :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>
+</code></pre></div></td></tr></table></div>
+<p>On a donc un tuple de chaînes de caractères qui sera évalué avec <code class="highlight"><span class="nb">eval</span><span class="p">()</span></code>. </p>
+<p>2) Si l'on souhaite vérifier plusieurs fonctions grâce à l'évaluateur de code :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>
+</code></pre></div></td></tr></table></div>
+<p>On a donc un tuple de tableau de chaînes de caractères qui sera évalué avec <code class="highlight"><span class="nb">eval</span><span class="p">()</span></code>. </p>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Options</p>
+<p>Lors de l'appel à un IDE dans le fichier .md, il est possible de spécifier plusieurs options telles :</p>
+<p><code class="highlight">{{IDE("fichier1.py", MAX = 5, SANS = "sort, exec", SIZE = 14)}}</code></p>
+<p>ou</p>
+<p><code class="highlight">{{IDE("fichier2.py", MAX = "+")}}</code></p>
+<ul>
+<li>MAX : indique le nombre maximum d'essais autorisés pour résoudre un exercice avant révélation de la solution (1000 ou "+" pour infini). Par défaut : 5.</li>
+<li>SANS : exclu des instructions Python (builtins ou non). Par défaut : "exec, eval".</li>
+<li>SIZE : donne la taille <strong>maximale</strong> d'un IDE. Si le script est plus petit, la taille réelle s'adaptera au plus petit. Un script Python plus long que SIZE sera tout de même visible à l'aide des sliders. Par défaut : 20.</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>Le bouton de validation du script à l'aide de tests unitaires est présent uniquement si vous fournissez un fichier <code>nom_du_fichier_test.py</code> présent dans le même répertoire que <code>nom_du_fichier.py</code>.</p>
+<p>La solution apparait au bout du nombre de tests unitaires définis dans le fichier ou directement dans la création de l'IDE seulement si vous fournissez un fichier <code>nom_du_fichier_corr.py</code>dans le même répertoire que <code>nom_du_fichier.py</code>.</p>
+<p>Les boutons de lancement du script, de téléchargement, de téléversement, de sauvegarde et de rechargement sont présents par défaut.</p>
+</div>
+<div class="admonition conclu">
+<p class="admonition-title">Conclusion</p>
+<p>À condition que les fichiers <code>fichier.py</code>, <code>fichier_corr.py</code> et <code>fichier_test.py</code> soient présents, <code class="highlight">{{IDE('foo/bar/truc/muche/fichier')}}</code> gère <strong>tout seul</strong> :</p>
+<ul>
+<li>l'énoncé, </li>
+<li>le juge en ligne, </li>
+<li>les fichiers de correction</li>
+</ul>
+</div>
+<!-- !!! info "Exercices sur la longueur d'un tableau"
+
+    === "Exercice 1"
+        Complétez la fonction `longueur` afin que celle-ci renvoie la taille d'un tableau L.
+
+        <div class="py_mk_ide"  data-max="∞"  data-max_size="30"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_02931df33fb1029ec9d4fb7decda113b6b715143" class="comment">###</span><div class="line" id="editor_02931df33fb1029ec9d4fb7decda113b6b715143"></div><div id="term_editor_02931df33fb1029ec9d4fb7decda113b6b715143"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_02931df33fb1029ec9d4fb7decda113b6b715143","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_02931df33fb1029ec9d4fb7decda113b6b715143" class="py_mk_hide">benchmark = ['longueur([])==0', 'longueur([1,3,5,5])==4', 'longueur([0]py-str100)==100']bksl-nl</span>            <button class="tooltip" onclick='check("editor_02931df33fb1029ec9d4fb7decda113b6b715143","")'>            <img src="../../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">∞/∞</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_02931df33fb1029ec9d4fb7decda113b6b715143","demo/demo1")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_02931df33fb1029ec9d4fb7decda113b6b715143').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_02931df33fb1029ec9d4fb7decda113b6b715143" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_02931df33fb1029ec9d4fb7decda113b6b715143")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_02931df33fb1029ec9d4fb7decda113b6b715143")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_02931df33fb1029ec9d4fb7decda113b6b715143" class="py_mk_hide">L = [5,3,4,1]bksl-nlbksl-nldef longueur(L: list) -> int:bksl-nl    return bksl-nl</span><span id="corr_content_editor_02931df33fb1029ec9d4fb7decda113b6b715143" class="py_mk_hide" data-strudel="">def longueur(L: list) -> int:bksl-nl    return len(L)bksl-nl</span>
+
+
+
+
+    === "Exercice 2"
+        Complétez la fonction `longueur_ajout` afin que celle-ci renvoie la taille de deux tableaux T1 et T2.
+        <div class="py_mk_ide"  data-max="5"  data-max_size="30"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_ad09db92b70a0fb87c488c7c1a15be73fdcb969e" class="comment">###</span><div class="line" id="editor_ad09db92b70a0fb87c488c7c1a15be73fdcb969e"></div><div id="term_editor_ad09db92b70a0fb87c488c7c1a15be73fdcb969e"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_ad09db92b70a0fb87c488c7c1a15be73fdcb969e","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_ad09db92b70a0fb87c488c7c1a15be73fdcb969e" class="py_mk_hide">assert longueurpy-undajout([], []) == 0, 'longueurpy-undajout([], []) == 0'bksl-nlassert longueurpy-undajout([1, 3, 5, 5],[]) == 4, 'longueurpy-undajout([1, 3, 5, 5],[]) == 4'bksl-nlassert longueurpy-undajout([0]py-str100, [1]py-str20) == 120, 'longueurpy-undajout([0]py-str100, [1]py-str20) == 120'bksl-nl</span>            <button class="tooltip" onclick='check("editor_ad09db92b70a0fb87c488c7c1a15be73fdcb969e","")'>            <img src="../../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_ad09db92b70a0fb87c488c7c1a15be73fdcb969e","demo/demo2")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_ad09db92b70a0fb87c488c7c1a15be73fdcb969e').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_ad09db92b70a0fb87c488c7c1a15be73fdcb969e" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_ad09db92b70a0fb87c488c7c1a15be73fdcb969e")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_ad09db92b70a0fb87c488c7c1a15be73fdcb969e")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_ad09db92b70a0fb87c488c7c1a15be73fdcb969e" class="py_mk_hide">T1 = [5,3,4,1]bksl-nlT2 = [1,2]bksl-nlbksl-nldef longueurpy-undajout(T1: list, T2: list) -> int:bksl-nl    return bksl-nl</span><span id="corr_content_editor_ad09db92b70a0fb87c488c7c1a15be73fdcb969e" class="py_mk_hide" data-strudel="">def longueurpy-undajout(T1: list, T2: list) -> int:bksl-nl    return len(T1) + len(T2)bksl-nl</span>
+
+
+
+    === "Exercice 3"
+        On découpe une phrase à l'aide de l'instruction [split](https://docs.python.org/fr/3/library/stdtypes.html#str.split "Instruction split en Python").
+
+        Complétez la fonction `nombre_mots` afin que celle-ci renvoie le nombre de mots séparé par un espace d'une phrase `phrase`.
+        <div class="py_mk_ide"  data-max="5"  data-max_size="30"  data-exclude="eval,exec" ><div class="wrapper_v" ><span id="comment_editor_2178442cc996a402761be595edeb817e476d47ed" class="comment">###</span><div class="line_v"><div id="editor_2178442cc996a402761be595edeb817e476d47ed"></div></div><div id="term_editor_2178442cc996a402761be595edeb817e476d47ed"  class="term_editor_v" ></div></div><button class="tooltip" onclick='play("editor_2178442cc996a402761be595edeb817e476d47ed","_v")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_2178442cc996a402761be595edeb817e476d47ed" class="py_mk_hide">benchmark = ['nombrepy-undmots("Mon chien est beau.") == 4', 'nombrepy-undmots("") == 0', 'nombrepy-undmots("L\'esthète a des vices que la vertu ignore.") == 8']bksl-nl</span>            <button class="tooltip" onclick='check("editor_2178442cc996a402761be595edeb817e476d47ed","_v")'>            <img src="../../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_2178442cc996a402761be595edeb817e476d47ed","demo/demo3")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_2178442cc996a402761be595edeb817e476d47ed').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_2178442cc996a402761be595edeb817e476d47ed" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_2178442cc996a402761be595edeb817e476d47ed")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_2178442cc996a402761be595edeb817e476d47ed")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_2178442cc996a402761be595edeb817e476d47ed" class="py_mk_hide">adage = "Mon chien est beau."bksl-nlbksl-nldef nombrepy-undmots(phrase: str) -> int:bksl-nl    # tableaupy-undmots = bksl-nl    return bksl-nl</span><span id="corr_content_editor_2178442cc996a402761be595edeb817e476d47ed" class="py_mk_hide" data-strudel="">adage = "Mon chien est beau."bksl-nlbksl-nldef nombrepy-undmots(phrase: str) -> int:bksl-nl    tableaupy-undmots = phrase.split(' ')bksl-nl    return len(tableaupy-undmots) if len(phrase)>0 else 0bksl-nl</span>
+
+
+
+On peut bien sur enrouler tout cela... -->
+
+<!--
+??? info "Exercices sur la longueur d'un tableau"
+
+    === "Exercice 1"
+        Complétez la fonction `longueur` afin que celle-ci renvoie la taille d'un tableau L.
+
+        <div class="py_mk_ide"  data-max="∞"  data-max_size="30"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_02931df33fb1029ec9d4fb7decda113b6b715143" class="comment">###</span><div class="line" id="editor_02931df33fb1029ec9d4fb7decda113b6b715143"></div><div id="term_editor_02931df33fb1029ec9d4fb7decda113b6b715143"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_02931df33fb1029ec9d4fb7decda113b6b715143","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_02931df33fb1029ec9d4fb7decda113b6b715143" class="py_mk_hide">benchmark = ['longueur([])==0', 'longueur([1,3,5,5])==4', 'longueur([0]py-str100)==100']bksl-nl</span>            <button class="tooltip" onclick='check("editor_02931df33fb1029ec9d4fb7decda113b6b715143","")'>            <img src="../../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">∞/∞</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_02931df33fb1029ec9d4fb7decda113b6b715143","demo/demo1")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_02931df33fb1029ec9d4fb7decda113b6b715143').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_02931df33fb1029ec9d4fb7decda113b6b715143" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_02931df33fb1029ec9d4fb7decda113b6b715143")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_02931df33fb1029ec9d4fb7decda113b6b715143")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_02931df33fb1029ec9d4fb7decda113b6b715143" class="py_mk_hide">L = [5,3,4,1]bksl-nlbksl-nldef longueur(L: list) -> int:bksl-nl    return bksl-nl</span><span id="corr_content_editor_02931df33fb1029ec9d4fb7decda113b6b715143" class="py_mk_hide" data-strudel="">def longueur(L: list) -> int:bksl-nl    return len(L)bksl-nl</span>
+
+
+
+    === "Exercice 2"
+        Complétez la fonction `longueur_ajout` afin que celle-ci renvoie la taille de deux tableaux T1 et T2.
+        <div class="py_mk_ide"  data-max="5"  data-max_size="30"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_ad09db92b70a0fb87c488c7c1a15be73fdcb969e" class="comment">###</span><div class="line" id="editor_ad09db92b70a0fb87c488c7c1a15be73fdcb969e"></div><div id="term_editor_ad09db92b70a0fb87c488c7c1a15be73fdcb969e"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_ad09db92b70a0fb87c488c7c1a15be73fdcb969e","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_ad09db92b70a0fb87c488c7c1a15be73fdcb969e" class="py_mk_hide">assert longueurpy-undajout([], []) == 0, 'longueurpy-undajout([], []) == 0'bksl-nlassert longueurpy-undajout([1, 3, 5, 5],[]) == 4, 'longueurpy-undajout([1, 3, 5, 5],[]) == 4'bksl-nlassert longueurpy-undajout([0]py-str100, [1]py-str20) == 120, 'longueurpy-undajout([0]py-str100, [1]py-str20) == 120'bksl-nl</span>            <button class="tooltip" onclick='check("editor_ad09db92b70a0fb87c488c7c1a15be73fdcb969e","")'>            <img src="../../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_ad09db92b70a0fb87c488c7c1a15be73fdcb969e","demo/demo2")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_ad09db92b70a0fb87c488c7c1a15be73fdcb969e').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_ad09db92b70a0fb87c488c7c1a15be73fdcb969e" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_ad09db92b70a0fb87c488c7c1a15be73fdcb969e")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_ad09db92b70a0fb87c488c7c1a15be73fdcb969e")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_ad09db92b70a0fb87c488c7c1a15be73fdcb969e" class="py_mk_hide">T1 = [5,3,4,1]bksl-nlT2 = [1,2]bksl-nlbksl-nldef longueurpy-undajout(T1: list, T2: list) -> int:bksl-nl    return bksl-nl</span><span id="corr_content_editor_ad09db92b70a0fb87c488c7c1a15be73fdcb969e" class="py_mk_hide" data-strudel="">def longueurpy-undajout(T1: list, T2: list) -> int:bksl-nl    return len(T1) + len(T2)bksl-nl</span>
+
+
+
+    === "Exercice 3"
+        On découpe une phrase à l'aide de l'instruction [split](https://docs.python.org/fr/3/library/stdtypes.html#str.split "Instruction split en Python").
+
+        Complétez la fonction `nombre_mots` afin que celle-ci renvoie le nombre de mots séparé par un espace d'une phrase `phrase`.
+        <div class="py_mk_ide"  data-max="5"  data-max_size="30"  data-exclude="eval,exec" ><div class="wrapper_v" ><span id="comment_editor_2178442cc996a402761be595edeb817e476d47ed" class="comment">###</span><div class="line_v"><div id="editor_2178442cc996a402761be595edeb817e476d47ed"></div></div><div id="term_editor_2178442cc996a402761be595edeb817e476d47ed"  class="term_editor_v" ></div></div><button class="tooltip" onclick='play("editor_2178442cc996a402761be595edeb817e476d47ed","_v")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_2178442cc996a402761be595edeb817e476d47ed" class="py_mk_hide">benchmark = ['nombrepy-undmots("Mon chien est beau.") == 4', 'nombrepy-undmots("") == 0', 'nombrepy-undmots("L\'esthète a des vices que la vertu ignore.") == 8']bksl-nl</span>            <button class="tooltip" onclick='check("editor_2178442cc996a402761be595edeb817e476d47ed","_v")'>            <img src="../../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_2178442cc996a402761be595edeb817e476d47ed","demo/demo3")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_2178442cc996a402761be595edeb817e476d47ed').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_2178442cc996a402761be595edeb817e476d47ed" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_2178442cc996a402761be595edeb817e476d47ed")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_2178442cc996a402761be595edeb817e476d47ed")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_2178442cc996a402761be595edeb817e476d47ed" class="py_mk_hide">adage = "Mon chien est beau."bksl-nlbksl-nldef nombrepy-undmots(phrase: str) -> int:bksl-nl    # tableaupy-undmots = bksl-nl    return bksl-nl</span><span id="corr_content_editor_2178442cc996a402761be595edeb817e476d47ed" class="py_mk_hide" data-strudel="">adage = "Mon chien est beau."bksl-nlbksl-nldef nombrepy-undmots(phrase: str) -> int:bksl-nl    tableaupy-undmots = phrase.split(' ')bksl-nl    return len(tableaupy-undmots) if len(phrase)>0 else 0bksl-nl</span>
+
+
+
+
+## Technique !
+
+_Pour l'instant, j'ai la grosse flemme d'écrire cette section._
+
+En quelques mots, on crée deux `#!html div` désigné par un numéro auto-incrémenté : 
+
+- `#!html <div id="editor_6">` crée la partie éditeur de texte. Ce `#!html div` est converti en éditeur grâce à l'[éditeur ACE](https://ace.c9.io "ACE Editor") ;
+- `#!html <div id="term_editor_6">` crée la partie Terminal. Le Terminal n'est créé qu'au moment de la validation du script ou du juge en ligne. Il est créé grâce au plugin Terminal de jQuery par converstion du `#!html div` (voir section Guide du Terminal).
+
+
+<!-- ??? info "Patience, patience"
+
+    Le guide du IDE arrive bientôt.
+ --></div>
+
+
+
+
+
+                
+<script src="../../../pyodide-mkdocs/ide.js"></script> 
+
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Retour en haut de la page
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      GNU GPLv3 2023 <a href="https://github.com/lycee-experimental" target="_blank" rel="noopener">Lycée Expérimental</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Lycee-Experimental" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.top", "toc.integrate", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d3305f47.min.js"></script>
+      
+        
+          <script src="../../../xtra/javascripts/mathjax.js"></script>
+        
+      
+        
+          <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        
+      
+        
+          <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+      
+        
+          <script src="../../../xtra/javascripts/logic-circuit-simulator.js"></script>
+        
+      
+        
+          <script src="../../../xtra/javascripts/quizdown.js"></script>
+        
+      
+        
+          <script src="../../../xtra/javascripts/quizdownHighlight.js"></script>
+        
+      
+        
+          <script src="../../../xtra/javascripts/quizdownKatex.js"></script>
+        
+      
+        
+          <script src="../../../xtra/v86/libv86.js"></script>
+        
+      
+        
+          <script src="../../../xtra/javascripts/extra.js"></script>
+        
+      
+    
+  </body>
+</html>
