@@ -1,0 +1,230 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="563px"
+    height="359px" viewBox="-0.5 -0.5 563 380">
+    <defs />
+    <g>
+        <!-- Sortie -->
+        <rect x="440" y="143" width="120" height="35" rx="8.05" ry="8.05" fill="#000000" stroke="#000000"
+            pointer-events="all" transform="translate(2,3)" opacity="0.25" />
+        <rect x="440" y="143" width="120" height="35" rx="8.05" ry="8.05" fill="#cce5ff" stroke="#36393d"
+            pointer-events="all" />
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%"
+                    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                    style="overflow: visible; text-align: left;">
+                    <div id="sortie" class="element" xmlns="http://www.w3.org/1999/xhtml"
+                        style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 161px; margin-left: 441px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); "
+                            style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div
+                                style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <div style="text-align: center ; font-size: 12px"><b
+                                        style="font-size: 12px">Périphériques de sortie</b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description" style="display: none;">
+                            <h1>Le système Entrée/Sortie</h1>
+                            <p>Le système "entrée-sortie" (input/output - IO en anglais) permet de communiquer avec "le monde extérieur" au système CPU+RAM. </p>
+                            <p>Les périphériques d'entrée peuvent être des claviers, souris, scanner, webcam, clé USB... et ceux de sortie les écrans, carte graphique, carte son, clé USB...</p>                       
+                        </div>
+                    </div>
+                </foreignObject><text x="500" y="164" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px"
+                    text-anchor="middle">Périphériques de sortie</text>
+            </switch>
+        </g>
+        <!-- Central -->
+        <rect x="160" y="0.5" width="240" height="375" rx="9.6" ry="9.6" fill="#000000" stroke="#000000"
+            pointer-events="all" transform="translate(2,3)" opacity="0.25" />
+        <rect x="160" y="0.5" width="240" height="375" rx="9.6" ry="9.6" fill="#cce5ff" stroke="rgb(0, 0, 0)"
+            pointer-events="all" />
+        <!-- CPU -->
+        <rect x="181.25" y="13" width="197.5" height="250" rx="13.65" ry="13.65" fill="#000000" stroke="#000000"
+            pointer-events="all" transform="translate(2,3)" opacity="0.25" />
+        <rect x="181.25" y="13" width="197.5" height="250" rx="13.65" ry="13.65" fill="rgb(255, 255, 255)"
+            stroke="rgb(0, 0, 0)" pointer-events="all" />
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%"
+                    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                    style="overflow: visible; text-align: left;">
+                    <div id="CPU" class="element" xmlns="http://www.w3.org/1999/xhtml"
+                        style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 197.5px; height: 1px; padding-top: 35px; margin-left: 181px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); "
+                            style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div
+                                style="display: inline-block; font-size: 15px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; overflow-wrap: normal;">
+                                Unité Centrale de Traitement (CPU)</div>
+                        </div>
+                        <div class="description" style="display: none;">
+                           <h1>L'Unité Centrale de Traitement</h1>
+                            <p>En anglais <strong>Central Processing Unit (CPU)</strong> est le <strong>microprocesseur</strong> d'un ordinateur. C'est lui qui exécute les instructions. Il est constitué d'une Unité de Contrôle, d'une Unité Arithmétique et Logique et de plusieurs Registres.</p>
+                            <p> On appelle <strong>bus</strong> de communication les connexions électriques permettant de transporter les données entre le processeur et les différents composants.</p>
+                        </div>
+                    </div>
+                </foreignObject><text x="280" y="40" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="15px"
+                    text-anchor="middle" font-weight="bold" text-decoration="underline">Unité Centrale de
+                    Traitement</text>
+            </switch>
+        </g>
+        <!-- Mémoire -->
+        <rect x="180.63" y="313" width="198.75" height="50" rx="7.5" ry="7.5" fill="#000000" stroke="#000000"
+            pointer-events="all" transform="translate(2,3)" opacity="0.25" />
+        <rect x="180.63" y="313" width="198.75" height="50" rx="7.5" ry="7.5" fill="rgb(255, 255, 255)"
+            stroke="rgb(0, 0, 0)" pointer-events="all" />
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%"
+                    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                    style="overflow: visible; text-align: left;">
+                    <div id="memoire" class="element" xmlns="http://www.w3.org/1999/xhtml"
+                        style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 197px; height: 1px; padding-top: 338px; margin-left: 182px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); "
+                            style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div
+                                style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <font style="font-size: 12px"><b style="font-size: 12px">Mémoire</b></font>
+                            </div>
+                        </div>
+                        <div class="description" style="display: none;">
+                            <h1>La mémoire</h1>
+                            <p>La mémoire volatile (RAM) permet de mémoriser de l'information (données ou instructions) pour l'envoyer au CPU. Les résultats des calculs y sont ensuite réceptionnés. Cette idée de stocker au même endroit données et programmes est l'idée centrale de l'architecture von Neumann.</p>
+                        </div>
+                    </div>
+                </foreignObject><text x="280" y="287" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px"
+                    text-anchor="middle">Mémoire</text>
+            </switch>
+        </g>
+        <!-- Entrée -->
+        <rect x="0" y="143" width="120" height="35" rx="8.05" ry="8.05" fill="#000000" stroke="#000000"
+            pointer-events="all" transform="translate(2,3)" opacity="0.25" />
+        <rect x="0" y="143" width="120" height="35" rx="8.05" ry="8.05" fill="#cce5ff" stroke="#36393d"
+            pointer-events="all" />
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%"
+                    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                    style="overflow: visible; text-align: left;">
+                    <div id="entree" class="element" xmlns="http://www.w3.org/1999/xhtml"
+                        style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 161px; margin-left: 1px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); "
+                            style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div
+                                style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <div style="text-align: center ; font-size: 12px"><b
+                                        style="font-size: 12px">Périphériques d'entrée</b></div>
+                            </div>
+                        </div>
+                        <div class="description" style="display: none;">
+                            <h1>Le système Entrée/Sortie</h1>
+                            <p>Le système "entrée-sortie" (input/output - IO en anglais) permet de communiquer avec "le monde extérieur" au système CPU+RAM. </p>
+                            <p>Les périphériques d'entrée peuvent être des claviers, souris, scanner, webcam, clé USB... et ceux de sortie les écrans, carte graphique, carte son, clé USB...</p>                       
+                        </div>
+                    </div>
+                </foreignObject><text x="60" y="164" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px"
+                    text-anchor="middle">Périphériques d'entrée</text>
+            </switch>
+        </g>
+        <!-- Unité de controle -->
+        <rect x="200.62" y="61" width="158.76" height="50" rx="7.5" ry="7.5" fill="#000000" stroke="#000000"
+            pointer-events="all" transform="translate(2,3)" opacity="0.25" />
+        <rect x="200.62" y="61" width="158.76" height="50" rx="7.5" ry="7.5" fill="#ffcccc" stroke="#36393d"
+            pointer-events="all" />
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%"
+                    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                    style="overflow: visible; text-align: left;">
+                    <div id="controle" class="element" xmlns="http://www.w3.org/1999/xhtml"
+                        style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 157px; height: 1px; padding-top: 86px; margin-left: 202px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); "
+                            style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div
+                                style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; overflow-wrap: normal;">
+                                Unité de Contrôle</div>
+                        </div>
+                        <div class="description" style="display: none;">
+                           <h1>L'unité de contrôle</h1>
+                            <p>L'unité de contrôle va séquencer les opérations à envoyer à l'ALU pour réaliser les instructions. Lorsqu'on parle d'un processeur à 3 GHz, cela signifie (approximativement) que Unité de Contrôle va envoyer l'ordre d'une nouvelle opération à l'UAL 3 milliards de fois par seconde.</p>
+                        </div>
+                    </div>
+                </foreignObject><text x="280" y="90" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px"
+                    text-anchor="middle" font-weight="bold">Unité de Contrôle</text>
+            </switch>
+        </g>
+        <!-- Unité Arythmétique et Logique -->
+        <path d="M 200,125 L 270,125 L 280,137 L 290,125 L 360,125 L 320,180 L 240,180 L 200,125" fill="#000000"
+            stroke="#000000" pointer-events="all" transform="translate(2,3)" opacity="0.25" />
+        <path d="M 200,125 L 270,125 L 280,137 L 290,125 L 360,125 L 320,180 L 240,180 L 200,125" fill="#ffcccc"
+            stroke="#36393d" stroke-miterlimit="10" pointer-events="all" />
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%"
+                    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                    style="overflow: visible; text-align: left;">
+                    <div id="UAL" class="element" xmlns="http://www.w3.org/1999/xhtml"
+                        style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 157px; height: 1px; padding-top: 153px; margin-left: 201px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); "
+                            style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div
+                                style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; overflow-wrap: normal;">
+                                Unité Arithmetique et Logique</div>
+                        </div>
+                        <div class="description" style="display: none;">
+                           <h1>L'unité arithmétique et logique</h1>
+                            <p>L'unité arithmétique et logique (UAL ou ALU en anglais) est chargée de l'exécution de tous les calculs (combinaisons de portes logiques, addition, multiplication...) que peut réaliser le microprocesseur. Nous allons retrouver dans cette UAL des circuits comme l'additionneur vu précédemment.</p>
+                        </div>
+                    </div>
+                </foreignObject><text x="280" y="170" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px"
+                    text-anchor="middle" font-weight="bold">Unité Arithmetique et Logique</text>
+            </switch>
+        </g>
+        <!-- Registres -->
+        <rect x="200.31" y="196" width="159.38" height="50" rx="7.5" ry="7.5" fill="#000000" stroke="#000000"
+            pointer-events="all" transform="translate(2,3)" opacity="0.25" />
+        <rect x="200.31" y="196" width="159.38" height="50" rx="7.5" ry="7.5" fill="#ffcccc" stroke="#36393d"
+            pointer-events="all" />
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%"
+                    requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                    style="overflow: visible; text-align: left;">
+                    <div id="registre" class="element" xmlns="http://www.w3.org/1999/xhtml"
+                        style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 157px; height: 1px; padding-top: 221px; margin-left: 201px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); "
+                            style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div
+                                style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; overflow-wrap: normal;">
+                                Registres</div>
+                        </div>
+                        <div class="description" style="display: none;">
+                           <h1>Les registres</h1>
+                            <p>Les registres sont des mémoires de travail ultrarapides présentes dans le CPU, dans lesquels l'UAL va effectuer ses calculs. Leur nombre et leur taille sont variables en fonction du type de microprocesseur. Une fois les calculs effectués, les valeurs des registres repartent dans la mémoire.</p>
+                        </div>
+                    </div>
+                </foreignObject><text x="280" y="170" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px"
+                    text-anchor="middle" font-weight="bold">Registres</text>
+            </switch>
+        </g>
+        <!-- Flèche entrée -->
+        <path d="M 120 160.5 L 151.88 160.5" fill="none" stroke="#968d8d" stroke-miterlimit="10"
+            pointer-events="stroke" />
+        <path d="M 158.88 160.5 L 151.88 164 L 151.88 157 Z" fill="#968d8d" stroke="#968d8d" stroke-miterlimit="10"
+            pointer-events="all" />
+        <!-- Flèche sortie -->
+        <path d="M 400 160.5 L 431.88 160.5" fill="none" stroke="#968d8d" stroke-miterlimit="10"
+            pointer-events="stroke" />
+        <path d="M 438.88 160.5 L 431.88 164 L 431.88 157 Z" fill="#968d8d" stroke="#968d8d" stroke-miterlimit="10"
+            pointer-events="all" />
+        <!-- Flèche Mémoire haut -->
+        <path d="M 329.39 264.12 L 332.98 271.07 L 325.98 271.16 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)"
+            stroke-miterlimit="10" pointer-events="all" />
+        <path d="M 329.69 313 L 329.7 298 Q 329.7 288 329.59 279.56 L 329.48 271.12" fill="none" stroke="rgb(0, 0, 0)"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <!-- Flèche Mémoire bas -->
+        <path d="M 230.63 263 L 230.61 278 Q 230.6 288 230.5 296.44 L 230.41 304.88" fill="none" stroke="rgb(0, 0, 0)"
+            stroke-miterlimit="10" pointer-events="stroke" />
+        <path d="M 230.33 311.88 L 226.91 304.84 L 233.91 304.92 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)"
+            stroke-miterlimit="10" pointer-events="all" />
+    </g>
+</svg>

@@ -1,5 +1,6 @@
-quizdown.register(quizdownHighlight).init();
-//quizdown.register(quizdownKatex).register(quizdownHighlight).init();
+document$.subscribe(() => {
+    quizdown.register(quizdownHighlight).init();
+});
 
 // Adaptation de Logic Simulator au thème
 document.addEventListener('DOMContentLoaded', function() {
