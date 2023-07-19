@@ -2545,9 +2545,10 @@
 <p>🙏🏽 Merci à l'équipe autour de <strong>v86</strong> <a href="https://github.com/copy/v86"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2.6 10.59 8.38 4.8l1.69 1.7c-.24.85.15 1.78.93 2.23v5.54c-.6.34-1 .99-1 1.73a2 2 0 0 0 2 2 2 2 0 0 0 2-2c0-.74-.4-1.39-1-1.73V9.41l2.07 2.09c-.07.15-.07.32-.07.5a2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2c-.18 0-.35 0-.5.07L13.93 7.5a1.98 1.98 0 0 0-1.15-2.34c-.43-.16-.88-.2-1.28-.09L9.8 3.38l.79-.78c.78-.79 2.04-.79 2.82 0l7.99 7.99c.79.78.79 2.04 0 2.82l-7.99 7.99c-.78.79-2.04.79-2.82 0L2.6 13.41c-.79-.78-.79-2.04 0-2.82Z"></path></svg></span></a></p>
 <p>Plus d'info <a href="v86/">ici</a></p>
 <div id="screen_container">
-<div style="white-space: pre; font: 14px monospace; line-height: 14px"></div>
-<canvas style="display: none"></canvas>
-</div>
+                        <div style="white-space: pre; font: 14px monospace; line-height: 14px">
+                        </div>
+                        <canvas style="display: none"></canvas>
+                    </div>
 <script>
 "use strict";
 function launchDebian() {
@@ -2556,48 +2557,44 @@ function launchDebian() {
         memory_size: 512 * 1024 * 1024,
         vga_memory_size: 8 * 1024 * 1024,
         screen_container: document.getElementById("screen_container"),
-        initial_state: { url: "/xtra/v86/debian-state-base.bin.zst" },
-        filesystem: { baseurl: "/xtra/v86/debian-9p-rootfs-flat/" },
+        <!-- initial_state: { url: "/xtra/v86/debian-state-base.bin.zst" }, -->
+        initial_state: { url: "https://raw.githubusercontent.com/davy39/v86/master/images/debian-state-base.bin.zst" },
+        filesystem: { baseurl: "https://raw.githubusercontent.com/davy39/v86/master/images/debian-9p-rootfs-flat/" },
+        <!-- filesystem: { baseurl: "/xtra/v86/debian-9p-rootfs-flat/" },-->
         network_relay_url: "wss://relay.widgetry.org/",
         autostart: true,
     });
 }
 // Function to be executed when the `open` attribute changes
 function handleOpenAttributeChange(mutationsList) {
-  for (let mutation of mutationsList) {
+for (let mutation of mutationsList) {
     if (mutation.type === 'attributes' && mutation.attributeName === 'open') {
-      const isOpen = mutation.target.hasAttribute('open');
-      if (isOpen) {
-      setTimeout(function() {
-          launchDebian();
-          console.log('<details> element opened:', mutation.target);
+    const isOpen = mutation.target.hasAttribute('open');
+    if (isOpen) {
+    setTimeout(function() {
+        launchDebian();
+        console.log('<details> element opened:', mutation.target);
         }, 1000);
-      } else {
+    } else {
         console.log('<details> element closed:', mutation.target);
-      }
     }
-  }
+    }
 }
-
+}
 // Select the target node(s) using a CSS selector
 const detailsElements = document.querySelectorAll('details');
-
 // Create a new MutationObserver instance
 const observer = new MutationObserver(handleOpenAttributeChange);
-
 // Configure the observer to watch for changes in the `open` attribute
 const observerConfig = {
-  attributes: true,
-  attributeFilter: ['open']
+attributes: true,
+attributeFilter: ['open']
 };
-
 // Start observing the target node(s) and listen for attribute changes
 detailsElements.forEach(element => {
-  observer.observe(element, observerConfig);
+observer.observe(element, observerConfig);
 });
-
 $(document).ready(launchDebian());
-
 </script>
 
 <h2 id="un-simulateur-de-portes-logiques-logic-circuit-simulator">Un simulateur de portes logiques : Logic-Circuit-Simulator<a class="headerlink" href="#un-simulateur-de-portes-logiques-logic-circuit-simulator" title="Permanent link">⚓︎</a></h2>

@@ -726,18 +726,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#au-commencement-etait-lascii" class="md-nav__link">
-    Au commencement était l'ASCII
+  <a href="#la-norme-ascii" class="md-nav__link">
+    La norme ASCII
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#et-le-reste-du-monde" class="md-nav__link">
-    Et le reste du monde ?
+  <a href="#les-normes-iso-8859-xx" class="md-nav__link">
+    Les normes ISO 8859-xx
   </a>
   
-    <nav class="md-nav" aria-label="Et le reste du monde ?">
+    <nav class="md-nav" aria-label="Les normes ISO 8859-xx">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -760,16 +760,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#enfin-une-normalisation-larrivee-de-lutf" class="md-nav__link">
-    Enfin une normalisation : l'arrivée de l'UTF
+  <a href="#la-normalisation-utf" class="md-nav__link">
+    La normalisation UTF
+  </a>
+  
+    <nav class="md-nav" aria-label="La normalisation UTF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-cas-particulier-de-lutf-8" class="md-nav__link">
+    Le cas particulier de l'UTF-8
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#la-reponse-a-une-question-existentielle" class="md-nav__link">
-    La réponse à une question existentielle
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2630,37 +2636,102 @@
 </tr>
 </tbody>
 </table>
-<h2 id="au-commencement-etait-lascii">Au commencement était l'ASCII<a class="headerlink" href="#au-commencement-etait-lascii" title="Permanent link">⚓︎</a></h2>
-<p>pour <em>American Standard Code for Information Interchange</em>, créé en 1960 aux États-Unis.</p>
-<p><img alt="" class="center" src="/assets/images/ascii.png"></p>
-<p>En ASCII, 127 <em>«points de code»</em> (nombres associés aux caractères) sont disponibles. Les caractères sont donc codés sur <strong>7 bits</strong>.</p>
-<div class="admonition abstract">
-<p class="admonition-title">Exercice 1</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Aide</label><label for="__tabbed_1_3">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Décoder l'expression suivante, écrite en ASCII :</p>
-<p><code>1101100 1100101 1110011 100000 1001110 1010011 1001001 100000 1100011 100111 1100101 1110011 1110100 100000 1101100 1100101 1110011 100000 1101101 1100101 1101001 1101100 1101100 1100101 1110101 1110010 1110011</code></p>
-</div>
-<div class="tabbed-block">
+<details class="debian">
+<summary>Terminal Linux</summary>
+<p></p><div id="screen_container">
+                    <div style="white-space: pre; font: 14px monospace; line-height: 14px">
+                    </div>
+                    <canvas style="display: none"></canvas>
+                </div>
+</details>
+<script>
+"use strict";
+function launchDebian() {
+    var emulator = new V86Starter({
+        wasm_path: "/xtra/v86/v86.wasm",
+        memory_size: 512 * 1024 * 1024,
+        vga_memory_size: 8 * 1024 * 1024,
+        screen_container: document.getElementById("screen_container"),
+        <!-- initial_state: { url: "/xtra/v86/debian-state-base.bin.zst" }, -->
+        initial_state: { url: "https://raw.githubusercontent.com/davy39/v86/master/images/debian-state-base.bin.zst" },
+        filesystem: { baseurl: "https://raw.githubusercontent.com/davy39/v86/master/images/debian-9p-rootfs-flat/" },
+        <!-- filesystem: { baseurl: "/xtra/v86/debian-9p-rootfs-flat/" },-->
+        network_relay_url: "wss://relay.widgetry.org/",
+        autostart: true,
+    });
+}
+// Function to be executed when the `open` attribute changes
+function handleOpenAttributeChange(mutationsList) {
+for (let mutation of mutationsList) {
+    if (mutation.type === 'attributes' && mutation.attributeName === 'open') {
+    const isOpen = mutation.target.hasAttribute('open');
+    if (isOpen) {
+    setTimeout(function() {
+        launchDebian();
+        console.log('<details> element opened:', mutation.target);
+        }, 1000);
+    } else {
+        console.log('<details> element closed:', mutation.target);
+    }
+    }
+}
+}
+// Select the target node(s) using a CSS selector
+const detailsElements = document.querySelectorAll('details');
+// Create a new MutationObserver instance
+const observer = new MutationObserver(handleOpenAttributeChange);
+// Configure the observer to watch for changes in the `open` attribute
+const observerConfig = {
+attributes: true,
+attributeFilter: ['open']
+};
+// Start observing the target node(s) and listen for attribute changes
+detailsElements.forEach(element => {
+observer.observe(element, observerConfig);
+});
+$(document).ready(launchDebian());
+</script>
+
+<details class="question">
+<summary>Activité 1 - Introduction à l'encodage des caractères</summary>
+<p>Dans le terminal Linux ci-dessus :</p>
 <ul>
-<li>la fonction <code>split(" ")</code> permet de décomposer une chaine de caractères en une liste, en se servant de l'espace <code>" "</code> comme caractère séparateur.</li>
-<li><code>int("1101100",2)</code> permet de récupérer facilement la valeur en base 10 du nombre binaire <code>1101100</code>.</li>
+<li>Insert la chaine de caractère "test" dans un fichier <code>test.txt</code> :
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s1">'test'</span><span class="w"> </span>&gt;<span class="w"> </span>test.txt
+</code></pre></div></li>
+<li>Utilise la commande suivante pour connaitre le système d'encodage du fichier créé (charset) :
+<div class="highlight"><pre><span></span><code>file<span class="w"> </span>-i<span class="w"> </span>test.txt
+</code></pre></div></li>
+<li>Effectue les même opération avec la chaine de caractère "testé".</li>
 </ul>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="n">msg</span> <span class="o">=</span> <span class="s2">"1101100 1100101 1110011 100000 1001110 1010011 1001001 100000 1100011 100111 1100101 1110011 1110100 100000 1101100 1100101 1110011 100000 1101101 1100101 1101001 1101100 1101100 1100101 1110101 1110010 1110011"</span>
-<span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">' '</span><span class="p">)</span>
-<span class="n">s</span> <span class="o">=</span> <span class="s2">""</span>
-<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">msg</span> <span class="p">:</span>
-    <span class="n">s</span> <span class="o">+=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-</div>
-<h2 id="et-le-reste-du-monde">Et le reste du monde ?<a class="headerlink" href="#et-le-reste-du-monde" title="Permanent link">⚓︎</a></h2>
+<p><strong>Questions</strong> : </p>
+<ul>
+<li>
+<p>Pourquoi y a-t-il une différence entre l'encodage de ces 2 fichiers ?</p>
+</li>
+<li>
+<p>Quelle différence y a-t-il entre us-ascii et UTF-8 ?</p>
+</li>
+</ul>
+</details>
+<h2 id="la-norme-ascii">La norme ASCII<a class="headerlink" href="#la-norme-ascii" title="Permanent link">⚓︎</a></h2>
+<p>Le standard ACSII pour <em>American Standard Code for Information Interchange</em> a été créé en 1960 aux États-Unis.</p>
+<p>Les caractères sont codés sur <strong>7 bits</strong>, soit sur 127 <em>«points de code»</em> (nombres associés aux caractères). </p>
+<p><img alt="" class="center" src="/assets/images/ascii.png"></p>
+<details class="question">
+<summary>Activité 2 - Décodage de textes décodés en ASCII</summary>
+<p>Dans le terminal linux en haut de la page :</p>
+<ul>
+<li>Afficher le contenu hexadécimal du fichier <code>networking.sh</code> :
+<div class="highlight"><pre><span></span><code>od<span class="w"> </span>-t<span class="w"> </span>x1<span class="w"> </span>networking.sh
+</code></pre></div></li>
+<li>Utiliser le tableau ci-desous pour traduire les 11 premiers caractères (21, 23, ..., 68).</li>
+<li>Vérifier votre résultat en affichat le contenu du fichier :
+<div class="highlight"><pre><span></span><code>cat<span class="w"> </span>networking.sh
+</code></pre></div></li>
+</ul>
+</details>
+<h2 id="les-normes-iso-8859-xx">Les normes ISO 8859-xx<a class="headerlink" href="#les-normes-iso-8859-xx" title="Permanent link">⚓︎</a></h2>
 <p>Lorsque d'autres personnes que des americains ou des anglais ont voulu s'échanger des données faisant intervenir du texte, certains caractères (é, è, à, ñ, Ø, Ö, β, 漢...) étaient manquants. Les 127 caractères de l'ASCII étaient largement insuffisants. 
 Il a donc été décidé de passer à... 256 caractères ! Il suffisait pour cela de coder les caractères non plus sur 7 bits mais sur 8 bits.</p>
 <p>Ainsi naquît, après de nombreuses modifications successives (la dernière en date rajoutant par exemple le symbole €), la célèbre table <strong>ISO 8859-15</strong>, dite aussi <strong>Latin-9</strong> :</p>
@@ -2671,10 +2742,7 @@ Il a donc été décidé de passer à... 256 caractères ! Il suffisait pour cel
 <li>le caractère € correspond au code hexadécimal A4, donc au nombre décimal 164.</li>
 <li>le caractère A correspond au code hexadécimal 41, donc au nombre décimal 65.</li>
 </ul>
-<p>65... comme en ASCII ! Oui, la (seule) bonne idée aura été d'inclure les caractères ASCII avec leur même code, ce qui rendait cette nouvelle norme rétro-compatible.</p>
-<p><strong>Exemple :</strong> </p>
-<p>Le fichier <code>test.txt</code> contient un texte enregistré avec l'encodage Latin-9. Ce fichier est ensuite ouvert avec un éditeur hexadécimal, qui permet d'observer la valeur des octets qui composent le fichier. (Comme le fichier est un .txt, le fichier ne contient que les données et rien d'autre.)
-<img alt="" class="center" src="/assets/images/hexa_latin.png"></p>
+<p>Les caractères ASCII y ont été inclus avec leur même code, ce qui rendait cette nouvelle norme rétro-compatible.</p>
 <p>Parfait, mais comment font les Grecs pour écrire leur alphabet ?
 Pas de problème, il leur suffit d'utiliser... une autre table, appelée ISO-8859-7 :</p>
 <p><img alt="" class="center" src="/assets/images/isogrec.png"></p>
@@ -2688,21 +2756,42 @@ Pas de problème, il leur suffit d'utiliser... une autre table, appelée ISO-885
 <p>Normalement, pour un navigateur, une page web correctement codée doit contenir dans une balise <code>meta</code> le <code>charset</code> utilisé. 
 <img alt="" class="center" src="/assets/images/source_twitter.png"></p>
 <p>Mais parfois, il n'y a pas d'autre choix pour le logiciel d'essayer de deviner l'encodage qui semble être utilisé.</p>
-<div class="admonition abstract">
-<p class="admonition-title">Exercice 2</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Correction</label></div>
+<details class="question">
+<summary>Activité 3 - Identifier un encodage</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Le mot représenté par les octets ci-dessous est-il encodé en ASCII ou en Latin-9 ?
-<img alt="" class="center" src="data/exo2.png"></p>
+<p>Le fichier texte représenté par les octets ci-dessous est-il encodé en ASCII ou en Latin-9 ?
+</p><div class="highlight"><pre><span></span><code>4c 79 63 e9 65 58 50
+</code></pre></div>
 </div>
 <div class="tabbed-block">
-<p>C'est du Latin-9, et c'est le mot "vélo"</p>
+<p>C'est du Latin-9, car le point de code <code>e9</code> n'existe pas en ASCII. Le fichier texte contient le mot "LycéeXP"</p>
 </div>
 </div>
 </div>
-</div>
-<h2 id="enfin-une-normalisation-larrivee-de-lutf">Enfin une normalisation : l'arrivée de l'UTF<a class="headerlink" href="#enfin-une-normalisation-larrivee-de-lutf" title="Permanent link">⚓︎</a></h2>
+</details>
+<details class="question">
+<summary>Activité 4 - Limites des normes ISO-8859</summary>
+<div class="highlight"><pre><span></span><code>Dans le terminal linux :
+
+- Crée le fichier texte contenant "LycéeXP" :
+```bash
+echo "LycéeXP" &gt; test.txt
+```
+- Convertis-le en ISO8859-15 :
+```bash
+iconv -t ISO-8859-15 test.txt -o test.txt
+```
+- Affiche le : 
+```bash
+cat test.txt
+```
+??? note "Conclusion sur les normes ISO-8859"
+    Comme tu peux le constater, les normes ISO-8859 étant multiples, elles sont souvent sources de problèmes d'affichage...
+</code></pre></div>
+</details>
+<h2 id="la-normalisation-utf">La normalisation UTF<a class="headerlink" href="#la-normalisation-utf" title="Permanent link">⚓︎</a></h2>
 <p>En 1996, le <a href="https://home.unicode.org/">Consortium Unicode</a> décide de normaliser tout cela et de créer un système unique qui contiendra l'intégralité des caractères dont les êtres humains ont besoin pour communiquer entre eux.  </p>
 <p>Ils créent l'Universal character set Transformation Format : l'UTF. 
 Ou plutôt ils en créent... plusieurs  <img alt="😢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f622.svg" title=":cry:"> :</p>
@@ -2713,15 +2802,32 @@ Ou plutôt ils en créent... plusieurs  <img alt="😢" class="twemoji" src="htt
 </ul>
 <p>Pourquoi est-ce encore si compliqué ? En UTF-32, 32 bits sont disponibles, soit <span class="arithmatex">\(2^{32}=4294967296\)</span> caractères différents encodables. </p>
 <p>C'est largement suffisant, mais c'est surtout très très lourd !<br>
-D'autres encodages plus légers, mais plus complexes, sont donc proposés :</p>
-<p>Arrêtons-nous sur l'UTF-8 :
-<img alt="" class="center" src="/assets/images/cap_utf8.png"></p>
-<p>Le principe fondateur de l'UTF-8 est qu'il est <strong>adaptatif</strong> : les caracères les plus fréquents sont codés sur un octet, qui est la taille minimale (et qui donne le 8 de "UTF-8"). Les autres caractères peuvent être codés sur 2, 3 ou 4 octets au maximum.</p>
-<h2 id="la-reponse-a-une-question-existentielle">La réponse à une question existentielle<a class="headerlink" href="#la-reponse-a-une-question-existentielle" title="Permanent link">⚓︎</a></h2>
+D'autres encodages plus légers, mais plus complexes, sont donc proposés. </p>
+<h3 id="le-cas-particulier-de-lutf-8">Le cas particulier de l'UTF-8<a class="headerlink" href="#le-cas-particulier-de-lutf-8" title="Permanent link">⚓︎</a></h3>
+<p>Le principe de l'UTF-8 est qu'il est <strong>adaptatif</strong> : les caracères les plus fréquents sont codés sur un octet, qui est la taille minimale (et qui donne le 8 de "UTF-8"). Les autres caractères peuvent être codés sur 2, 3 ou 4 octets au maximum.</p>
+<p><img alt="" class="center" src="/assets/images/cap_utf8.png"></p>
+<div class="admonition python">
+<p class="admonition-title">L'encodage des caractères avec Python</p>
+<ul>
+<li>La fonction <code>ord(caractere)</code> renvoie le nombre entier Unicode associé au caractère.<br>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">'à'</span><span class="p">)</span>
+<span class="mi">224</span>
+</code></pre></div></li>
+<li>La fonction <code>chr(nombre)</code> renvoie le caractère codé par l'entier Unicode nombre.
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">chr</span><span class="p">(</span><span class="mi">224</span><span class="p">)</span>
+<span class="s1">'à'</span>
+</code></pre></div></li>
+</ul>
+</div>
 <details class="question">
-<summary>Activité 1</summary>
-<p>Pourquoi le caractère <code>é</code> en UTF-8 devient-il <code>Ã©</code> en ISO 8859-15 ?
-<strong>Q1.</strong> Grâce à la fonction <code>ord</code> puis à la fonction <code>bin</code>, écrire en binaire le nombre associé au caractère <code>é</code> en UTF-8.</p>
+<summary>Activité 5 - Réponse à une question existentielle...</summary>
+<p>** Mais pourquoi donc le caractère <code>é</code> en UTF-8 devient-il <code>Ã©</code> en ISO 8859-15 ?!</p>
+<p><strong>Q1.</strong> Grâce à python, écrire en binaire le nombre associé au caractère <code>é</code> en UTF-8.</p>
+<div class="admonition python">
+<p class="admonition-title">Rappel sur le binaire en python</p>
+<p>La fonction <code>bin()</code> convertit un entier en binaire.</p>
+</div>
+<p></p><div onclick='start_term("id3")' id="fake_id3" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id3" class="py_mk_hide"></div>
 <details class="tip">
 <summary>Correction</summary>
 <p></p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">'é'</span><span class="p">)</span>
@@ -2731,12 +2837,26 @@ D'autres encodages plus légers, mais plus complexes, sont donc proposés :</p>
 </code></pre></div>
 Donc en UTF-8, <code>é</code> est associé au nombre <code>11101001</code>.
 </details>
-<p><strong>Q2.</strong> D'après l'explication de fonctionnement de l'encodage adaptatif de l'UTF-8 (voir ci-dessus), les 8 bits nécessaires à l'encodage de <code>é</code> en UTF-8 vont être «encapsulés» dans 2 octets de la forme <code>110XXXXX 10XXXXXX</code>, où les 11 <code>X</code> représentent les 11 bits d'information disponibles. Écrire ces 2 octets en complétant si nécessaire avec des <code>0</code> à gauche.</p>
+<p><strong>Q2.</strong> D'après l'explication de fonctionnement de l'encodage adaptatif de l'UTF-8 (voir ci-dessus), les 8 bits nécessaires à l'encodage de <code>é</code> en UTF-8 doivent être «encapsulés» dans 2 octets de la forme <code>110XXXXX 10XXXXXX</code>, où les onze <code>X</code> représentent les 11 bits d'information disponibles. Écrire ces 2 octets en complétant si nécessaire avec des <code>0</code> à gauche.</p>
 <details class="tip">
 <summary>Correction</summary>
 <p>Sur 11 bits, le nombre <code>11101001</code> va s'écrire <code>00011101001</code>. En séparant ces 11 bits en deux groupes de 5 bits et 6 bits (<code>00011</code>et <code>101001</code>), et en les encapsulant, on obtient les deux octets <code>11000011 10101001</code>.</p>
 </details>
-<p><strong>Q3.</strong> Convertir les deux octets obtenus en notation décimale (grâce à <code>int</code>) puis en hexadécimal (grâce à <code>hex</code>).</p>
+<p><strong>Q3.</strong> Convertir les deux octets obtenus en notation décimale puis en hexadécimal.</p>
+<div class="admonition python">
+<p class="admonition-title">Rappel sur le décimal et hexadécimal en Python</p>
+<ul>
+<li>La fonction <code>int('monNombreBinaire', 2)</code> convertit un binaire en entier.
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="s1">'11000011'</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="mi">195</span>
+</code></pre></div></li>
+<li>La fonction <code>hex(nombre)</code> convertit nombre en hexadécimal.
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">hex</span><span class="p">(</span><span class="mi">169</span><span class="p">)</span>
+<span class="s1">'0xa9'</span>
+</code></pre></div></li>
+</ul>
+</div>
+<p></p><div onclick='start_term("id4")' id="fake_id4" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id4" class="py_mk_hide"></div>
 <details class="tip">
 <summary>Correction</summary>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="s1">'11000011'</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
@@ -2749,7 +2869,7 @@ Donc en UTF-8, <code>é</code> est associé au nombre <code>11101001</code>.
 <span class="s1">'0xa9'</span>
 </code></pre></div>
 </details>
-<p><strong>Q4.</strong> Si un logiciel considère <strong>à tort</strong> que les deux octets servant à encoder le <code>é</code> en UTF-8 servent à encoder deux caractères en ISO 8859-15, quels seront ces deux caractères ?</p>
+<p><strong>Q4.</strong> Conclusion : Si un logiciel considère <strong>à tort</strong> que les deux octets servant à encoder le <code>é</code> en UTF-8 servent à encoder deux caractères en ISO 8859-15, quels seront ces deux caractères ?</p>
 <details class="tip">
 <summary>Correction</summary>
 <p>Le premier octet, <code>c3</code> en hexadécimal, sera perçu en ISO 8859-15 comme le caractère <code>Ã</code>.<br>
@@ -2759,21 +2879,111 @@ Le deuxième octet, <code>a9</code> en hexadécimal, sera perçu en ISO 8859-15 
 </details>
 </details>
 <details class="question">
-<summary>Activité 2</summary>
-<p>On souhaite chiffrer (<em>chiffrer</em> est le mot utilisé en cryptographie pour <em>crypter</em>) le mot <code>"BONJOUR"</code> avec la clé <code>"LYCEEXP"</code>. Le chiffrement retenu est un chiffrement par XOR, ce qui signifie qu'on va effectuer un XOR entre les deux nombres associés aux lettres.</p>
+<summary>Activité 6 - Un peu de cryptographie</summary>
+<p>On souhaite chiffrer (<em>chiffrer</em> est le mot utilisé en cryptographie pour <em>crypter</em>) le mot <code>"BONJOUR"</code> avec la clé <code>"LYCEEXP"</code>. Le chiffrement retenu est un chiffrement par XOR, ce qui signifie qu'on va effectuer un XOR (^) entre les deux nombres associés aux lettres.</p>
 <p>Exemple :</p>
 <ul>
 <li>la lettre <code>'B'</code> va être chiffrée grâce au <code>'L'</code>.</li>
 <li>Le code ASCII de <code>'B'</code> est 66. (on le sait car <code>ord('B')</code> renvoie 66 )</li>
 <li>Le code ASCII de <code>'L'</code> est 76. (on le sait car <code>ord('L')</code> renvoie 76 )</li>
-<li>66 ^ 77 vaut 14.</li>
-<li>Le «caractère» associé à 14 est <code>'\x0f'</code> (on le sait car <code>chr(15)</code> renvoie <code>'\x0e'</code> )</li>
+<li>66 ^ 76 vaut 14.</li>
+<li>Le «caractère» associé à 14 est <code>'\x0e'</code> (on le sait car <code>chr(15)</code> renvoie <code>'\x0e'</code> )</li>
 </ul>
 <p>Le premier caractère du mot chiffré sera donc <code>'\x0e'</code></p>
 <p><strong>Q1.</strong> Écrire une fonction <code>chiffre</code> qui prendra en paramètre un mot <code>mot_clair</code> et un mot de passe <code>cle</code> <strong>de même taille</strong> que <code>mot_clair</code> et qui renvoie la chaîne de caractères obtenue en XORant <code>mot_clair</code> avec <code>cle</code>.</p>
-<p><strong>Q2.</strong> Chiffrer le mot <code>"BONJOUR"</code> avec la clé <code>"LYCEEXP"</code>.</p>
-<p><strong>Q3.</strong> Reprendre la chaîne de caractères précédemment obtenue et la rechiffrer à nouveau avec la clé <code>"LYCEEXP"</code>. Que constate-t-on ? Etait-ce prévisible ?</p>
+<p></p><div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_00000005" class="comment">###</span><div class="line" id="editor_00000005"></div><div id="term_editor_00000005" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_00000005","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000005","")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000005').click()">            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000005" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000005")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000005")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000005" class="py_mk_hide"></span><span id="corr_content_editor_00000005" class="py_mk_hide" data-strudel=""></span>
+<details class="tip">
+<summary>correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">chiffre</span><span class="p">(</span><span class="n">mot_clair</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
+    <span class="n">mot_chiffre</span> <span class="o">=</span> <span class="s2">""</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mot_clair</span><span class="p">)):</span>
+        <span class="n">code</span> <span class="o">=</span> <span class="nb">ord</span><span class="p">(</span><span class="n">mot_clair</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">^</span> <span class="nb">ord</span><span class="p">(</span><span class="n">cle</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">mot_chiffre</span> <span class="o">+=</span> <span class="nb">chr</span><span class="p">(</span><span class="n">code</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">mot_chiffre</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p><strong>Q2.</strong> Grâce à la fonction ci-dessus, chiffrer le mot <code>"BONJOUR"</code> avec la clé <code>"LYCEEXP"</code>.</p>
+<details class="tip">
+<summary>correction</summary>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">chiffre</span><span class="p">(</span><span class="s2">"BONJOUR"</span><span class="p">,</span> <span class="s2">"LYCEEXP"</span><span class="p">)</span>
+<span class="s1">'</span><span class="se">\x0f\x0e\x1b\x18\x06\x14\x11</span><span class="s1">'</span>
+</code></pre></div>
+</details>
+<p><strong>Q3.</strong> Reprendre la chaîne de caractères précédemment obtenue et la rechiffrer à nouveau avec la clé <code>"LYCEEXP"</code>. Que constate-t-on ? </p>
+<details class="tip">
+<summary>correction</summary>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">chiffre</span><span class="p">(</span><span class="s1">'</span><span class="se">\x0f\x0e\x1b\x18\x06\x14\x11</span><span class="s1">'</span><span class="p">,</span> <span class="s2">"LYCEEXP"</span><span class="p">)</span>
+<span class="s1">'BONJOUR'</span>
+</code></pre></div>
+</details>
+<p><strong>Q4.</strong> Montrer que <code>(a^b)^b = a</code> avec les portes logiques.</p>
+<p></p><div style="width: 100%; height: 400px">
+        <logic-editor mode="design" showonly="in out and or not xor">
+            <script type="application/json">
+            { // JSON5
+                v: 6
+            }
+            </script>
+        </logic-editor>
+</div>
+<details class="tip">
+<summary>Correction</summary>
+<p></p><div style="width: 100%; height: 193.5px">
+<logic-editor mode="design">
+    <script type="application/json">
+    { // JSON5
+        v: 6,
+        opts: {showGateTypes: true},
+        components: {
+        xor0: {type: 'xor', pos: [110, 90], in: [0, 1], out: 2},
+        xor1: {type: 'xor', pos: [210, 120], in: [3, 4], out: 5},
+        in0: {type: 'in', pos: [30, 25], id: 6, val: 1},
+        in1: {type: 'in', pos: [25, 150], id: 7, val: 1},
+        out0: {type: 'out', pos: [305, 120], id: 8},
+        label0: {type: 'label', pos: [25, 175], text: 'A'},
+        label1: {type: 'label', pos: [30, 50], text: 'B'},
+        },
+        wires: [[6, 0], [7, 1], [6, 3], [2, 4], [5, 8]]
+    }
+    </script>
+</logic-editor>
+</div>
+</details>
 <p><strong>Q4.</strong> <img alt="💀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f480.svg" title=":skull:"> Résoudre le Pydéfi <a class="" href="https://pydefis.callicode.fr/defis/MasqueJetable/txt" target="_blank">La clé endommagée</a></p>
+<details class="tip">
+<summary>correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">msg</span> <span class="o">=</span> <span class="p">[</span><span class="mi">255</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">254</span><span class="p">,</span> <span class="mi">112</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">239</span><span class="p">,</span> <span class="mi">146</span><span class="p">,</span> <span class="mi">205</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mi">198</span><span class="p">,</span> <span class="mi">173</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">174</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">218</span><span class="p">,</span> <span class="mi">189</span><span class="p">,</span> <span class="mi">130</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">173</span><span class="p">,</span> <span class="mi">143</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">175</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">109</span><span class="p">,</span> <span class="mi">216</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">206</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">157</span><span class="p">,</span> <span class="mi">181</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">248</span><span class="p">,</span> <span class="mi">119</span><span class="p">,</span> <span class="mi">153</span><span class="p">,</span> <span class="mi">204</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">137</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">203</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">251</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">214</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">249</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">115</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">241</span><span class="p">,</span> <span class="mi">175</span><span class="p">,</span> <span class="mi">160</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">217</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">205</span><span class="p">,</span> <span class="mi">234</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">172</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">113</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">194</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">239</span><span class="p">,</span> <span class="mi">194</span><span class="p">,</span> <span class="mi">122</span><span class="p">,</span> <span class="mi">244</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">246</span><span class="p">,</span> <span class="mi">241</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">182</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">220</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">147</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">139</span><span class="p">,</span> <span class="mi">169</span><span class="p">,</span> <span class="mi">104</span><span class="p">,</span> <span class="mi">236</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">106</span><span class="p">,</span> <span class="mi">192</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">233</span><span class="p">,</span> <span class="mi">130</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">235</span><span class="p">,</span> <span class="mi">199</span><span class="p">,</span> <span class="mi">149</span><span class="p">,</span> <span class="mi">108</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">217</span><span class="p">,</span> <span class="mi">156</span><span class="p">,</span> <span class="mi">175</span><span class="p">,</span> <span class="mi">175</span><span class="p">,</span> <span class="mi">234</span><span class="p">,</span> <span class="mi">177</span><span class="p">,</span> <span class="mi">145</span><span class="p">,</span> <span class="mi">242</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">245</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">113</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">170</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">226</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">122</span><span class="p">,</span> <span class="mi">189</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">185</span><span class="p">,</span> <span class="mi">159</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">160</span><span class="p">,</span> <span class="mi">84</span><span class="p">,</span> <span class="mi">147</span><span class="p">,</span> <span class="mi">231</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">238</span><span class="p">,</span> <span class="mi">196</span><span class="p">,</span> <span class="mi">137</span><span class="p">,</span> <span class="mi">133</span><span class="p">,</span> <span class="mi">222</span><span class="p">,</span> <span class="mi">174</span><span class="p">,</span> <span class="mi">208</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">191</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">220</span><span class="p">,</span> <span class="mi">231</span><span class="p">,</span> <span class="mi">196</span><span class="p">,</span> <span class="mi">172</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">237</span><span class="p">,</span> <span class="mi">211</span><span class="p">,</span> <span class="mi">163</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">119</span><span class="p">,</span> <span class="mi">247</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">177</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">246</span><span class="p">,</span> <span class="mi">136</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">222</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">245</span><span class="p">,</span> <span class="mi">202</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">164</span><span class="p">,</span> <span class="mi">177</span><span class="p">,</span> <span class="mi">167</span><span class="p">,</span> <span class="mi">174</span><span class="p">,</span> <span class="mi">203</span><span class="p">,</span> <span class="mi">247</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">201</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">189</span><span class="p">,</span> <span class="mi">241</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">208</span><span class="p">,</span> <span class="mi">125</span><span class="p">,</span> <span class="mi">167</span><span class="p">,</span> <span class="mi">111</span><span class="p">,</span> <span class="mi">217</span><span class="p">,</span> <span class="mi">84</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">158</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">129</span><span class="p">,</span> <span class="mi">202</span><span class="p">,</span> <span class="mi">116</span><span class="p">,</span> <span class="mi">149</span><span class="p">,</span> <span class="mi">226</span><span class="p">,</span> <span class="mi">195</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">221</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">233</span><span class="p">,</span> <span class="mi">119</span><span class="p">,</span> <span class="mi">186</span><span class="p">,</span> <span class="mi">113</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">194</span><span class="p">,</span> <span class="mi">240</span><span class="p">,</span> <span class="mi">244</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">195</span><span class="p">,</span> <span class="mi">251</span><span class="p">,</span> <span class="mi">186</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">175</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">193</span><span class="p">,</span> <span class="mi">189</span><span class="p">,</span> <span class="mi">143</span><span class="p">,</span> <span class="mi">151</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">153</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">151</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">176</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">183</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">119</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">142</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">170</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">231</span><span class="p">,</span> <span class="mi">149</span><span class="p">,</span> <span class="mi">131</span><span class="p">,</span> <span class="mi">139</span><span class="p">,</span> <span class="mi">249</span><span class="p">,</span> <span class="mi">247</span><span class="p">,</span> <span class="mi">209</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">206</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">121</span><span class="p">,</span> <span class="mi">175</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">246</span><span class="p">,</span> <span class="mi">189</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">147</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">208</span><span class="p">,</span> <span class="mi">131</span><span class="p">,</span> <span class="mi">163</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">220</span><span class="p">,</span> <span class="mi">148</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">167</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">179</span><span class="p">,</span> <span class="mi">117</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">234</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">170</span><span class="p">,</span> <span class="mi">134</span><span class="p">,</span> <span class="mi">203</span><span class="p">,</span> <span class="mi">240</span><span class="p">,</span> <span class="mi">164</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">220</span><span class="p">,</span> <span class="mi">122</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">249</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">145</span><span class="p">,</span> <span class="mi">217</span><span class="p">,</span> <span class="mi">151</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">249</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mi">231</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">166</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">134</span><span class="p">,</span> <span class="mi">182</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">166</span><span class="p">,</span> <span class="mi">106</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">194</span><span class="p">,</span> <span class="mi">160</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">69</span><span class="p">,</span> <span class="mi">84</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">217</span><span class="p">,</span> <span class="mi">189</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">212</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">225</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">196</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">199</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">126</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">251</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">182</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">213</span><span class="p">,</span> <span class="mi">119</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">187</span><span class="p">,</span> <span class="mi">173</span><span class="p">,</span> <span class="mi">239</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">196</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">124</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">222</span><span class="p">,</span> <span class="mi">191</span><span class="p">,</span> <span class="mi">238</span><span class="p">,</span> <span class="mi">152</span><span class="p">,</span> <span class="mi">142</span><span class="p">,</span> <span class="mi">208</span><span class="p">,</span> <span class="mi">122</span><span class="p">,</span> <span class="mi">139</span><span class="p">,</span> <span class="mi">135</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">212</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">126</span><span class="p">,</span> <span class="mi">210</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">225</span><span class="p">,</span> <span class="mi">202</span><span class="p">,</span> <span class="mi">106</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">206</span><span class="p">,</span> <span class="mi">156</span><span class="p">,</span> <span class="mi">216</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">163</span><span class="p">,</span> <span class="mi">159</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">248</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">145</span><span class="p">,</span> <span class="mi">234</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">196</span><span class="p">,</span> <span class="mi">189</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">247</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">172</span><span class="p">,</span> <span class="mi">109</span><span class="p">,</span> <span class="mi">215</span><span class="p">,</span> <span class="mi">134</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">145</span><span class="p">,</span> <span class="mi">236</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">198</span><span class="p">,</span> <span class="mi">217</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">158</span><span class="p">,</span> <span class="mi">165</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">246</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">161</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">159</span><span class="p">,</span> <span class="mi">194</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">208</span><span class="p">,</span> <span class="mi">234</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">205</span><span class="p">,</span> <span class="mi">227</span><span class="p">,</span> <span class="mi">167</span><span class="p">,</span> <span class="mi">199</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">112</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">202</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">243</span><span class="p">,</span> <span class="mi">163</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">143</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">241</span><span class="p">,</span> <span class="mi">108</span><span class="p">,</span> <span class="mi">239</span><span class="p">,</span> <span class="mi">216</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">236</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">222</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">244</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">151</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">175</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">153</span><span class="p">,</span> <span class="mi">253</span><span class="p">,</span> <span class="mi">241</span><span class="p">,</span> <span class="mi">160</span><span class="p">,</span> <span class="mi">117</span><span class="p">,</span> <span class="mi">232</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">253</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">142</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">234</span><span class="p">,</span> <span class="mi">251</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">239</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">157</span><span class="p">,</span> <span class="mi">181</span><span class="p">,</span> <span class="mi">106</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">227</span><span class="p">,</span> <span class="mi">121</span><span class="p">,</span> <span class="mi">164</span><span class="p">,</span> <span class="mi">183</span><span class="p">,</span> <span class="mi">124</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">238</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">244</span><span class="p">,</span> <span class="mi">245</span><span class="p">,</span> <span class="mi">116</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">124</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">118</span><span class="p">,</span> <span class="mi">126</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">209</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">226</span><span class="p">,</span> <span class="mi">252</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">124</span><span class="p">,</span> <span class="mi">151</span><span class="p">,</span> <span class="mi">185</span><span class="p">,</span> <span class="mi">184</span><span class="p">,</span> <span class="mi">203</span><span class="p">,</span> <span class="mi">231</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">216</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">202</span><span class="p">,</span> <span class="mi">174</span><span class="p">,</span> <span class="mi">211</span><span class="p">,</span> <span class="mi">210</span><span class="p">,</span> <span class="mi">125</span><span class="p">,</span> <span class="mi">145</span><span class="p">,</span> <span class="mi">220</span><span class="p">,</span> <span class="mi">185</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">204</span><span class="p">,</span> <span class="mi">215</span><span class="p">,</span> <span class="mi">210</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">111</span><span class="p">,</span> <span class="mi">217</span><span class="p">,</span> <span class="mi">202</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">177</span><span class="p">,</span> <span class="mi">165</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">206</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">213</span><span class="p">,</span> <span class="mi">192</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">222</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">115</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">131</span><span class="p">,</span> <span class="mi">221</span><span class="p">,</span> <span class="mi">218</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">249</span><span class="p">,</span> <span class="mi">207</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">155</span><span class="p">,</span> <span class="mi">84</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">242</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">133</span><span class="p">,</span> <span class="mi">248</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">205</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">158</span><span class="p">,</span> <span class="mi">226</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">216</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">154</span><span class="p">,</span> <span class="mi">153</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mi">190</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">134</span><span class="p">,</span> <span class="mi">187</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">126</span><span class="p">,</span> <span class="mi">246</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">190</span><span class="p">,</span> <span class="mi">173</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">236</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">242</span><span class="p">,</span> <span class="mi">144</span><span class="p">,</span> <span class="mi">244</span><span class="p">,</span> <span class="mi">145</span><span class="p">,</span> <span class="mi">117</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">246</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">192</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">126</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">168</span><span class="p">,</span> <span class="mi">223</span><span class="p">,</span> <span class="mi">222</span><span class="p">,</span> <span class="mi">247</span><span class="p">,</span> <span class="mi">236</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">240</span><span class="p">,</span> <span class="mi">243</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">193</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">223</span><span class="p">,</span> <span class="mi">143</span><span class="p">,</span> <span class="mi">208</span><span class="p">,</span> <span class="mi">133</span><span class="p">,</span> <span class="mi">125</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">107</span><span class="p">,</span> <span class="mi">106</span><span class="p">,</span> <span class="mi">245</span><span class="p">,</span> <span class="mi">118</span><span class="p">,</span> <span class="mi">248</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">199</span><span class="p">,</span> <span class="mi">116</span><span class="p">,</span> <span class="mi">190</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">236</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">106</span><span class="p">,</span> <span class="mi">244</span><span class="p">,</span> <span class="mi">212</span><span class="p">,</span> <span class="mi">241</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">179</span><span class="p">,</span> <span class="mi">245</span><span class="p">,</span> <span class="mi">238</span><span class="p">,</span> <span class="mi">185</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">199</span><span class="p">,</span> <span class="mi">175</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">218</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">84</span><span class="p">,</span> <span class="mi">184</span><span class="p">,</span> <span class="mi">177</span><span class="p">,</span> <span class="mi">174</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">171</span><span class="p">,</span> <span class="mi">176</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">149</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">202</span><span class="p">,</span> <span class="mi">151</span><span class="p">,</span> <span class="mi">181</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">163</span><span class="p">,</span> <span class="mi">117</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">149</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">248</span><span class="p">,</span> <span class="mi">235</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">181</span><span class="p">,</span> <span class="mi">136</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">188</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">108</span><span class="p">,</span> <span class="mi">213</span><span class="p">,</span> <span class="mi">104</span><span class="p">,</span> <span class="mi">165</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">208</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">153</span><span class="p">,</span> <span class="mi">186</span><span class="p">,</span> <span class="mi">163</span><span class="p">,</span> <span class="mi">221</span><span class="p">,</span> <span class="mi">165</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">235</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">167</span><span class="p">,</span> <span class="mi">252</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">228</span><span class="p">,</span> <span class="mi">210</span><span class="p">,</span> <span class="mi">187</span><span class="p">,</span> <span class="mi">151</span><span class="p">,</span> <span class="mi">178</span><span class="p">,</span> <span class="mi">242</span><span class="p">,</span> <span class="mi">221</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">143</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">230</span><span class="p">,</span> <span class="mi">159</span><span class="p">,</span> <span class="mi">164</span><span class="p">,</span> <span class="mi">253</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">182</span><span class="p">,</span> <span class="mi">142</span><span class="p">,</span> <span class="mi">122</span><span class="p">,</span> <span class="mi">140</span><span class="p">,</span> <span class="mi">115</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">182</span><span class="p">,</span> <span class="mi">104</span><span class="p">,</span> <span class="mi">132</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">109</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">205</span><span class="p">,</span> <span class="mi">185</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">184</span><span class="p">,</span> <span class="mi">199</span><span class="p">,</span> <span class="mi">121</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">254</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">158</span><span class="p">,</span> <span class="mi">215</span><span class="p">,</span> <span class="mi">245</span><span class="p">,</span> <span class="mi">187</span><span class="p">,</span> <span class="mi">143</span><span class="p">,</span> <span class="mi">211</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">228</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">168</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">126</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">238</span><span class="p">,</span> <span class="mi">208</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">241</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">235</span><span class="p">,</span> <span class="mi">254</span><span class="p">,</span> <span class="mi">184</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">182</span><span class="p">,</span> <span class="mi">239</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">242</span><span class="p">,</span> <span class="mi">232</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">187</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">113</span><span class="p">,</span> <span class="mi">176</span><span class="p">,</span> <span class="mi">228</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">135</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">183</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">142</span><span class="p">,</span> <span class="mi">156</span><span class="p">,</span> <span class="mi">242</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">253</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">138</span><span class="p">,</span> <span class="mi">207</span><span class="p">,</span> <span class="mi">131</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">191</span><span class="p">,</span> <span class="mi">198</span><span class="p">,</span> <span class="mi">107</span><span class="p">,</span> <span class="mi">233</span><span class="p">,</span> <span class="mi">202</span><span class="p">,</span> <span class="mi">227</span><span class="p">,</span> <span class="mi">108</span><span class="p">,</span> <span class="mi">186</span><span class="p">,</span> <span class="mi">124</span><span class="p">,</span> <span class="mi">165</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">247</span><span class="p">]</span>
+
+<span class="n">cle</span> <span class="o">=</span> <span class="p">[</span><span class="mi">111</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">177</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">199</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">175</span><span class="p">,</span> <span class="mi">181</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">174</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">212</span><span class="p">,</span> <span class="mi">225</span><span class="p">,</span> <span class="mi">63</span><span class="p">,</span> <span class="mi">106</span><span class="p">,</span> <span class="mi">248</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">175</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">247</span><span class="p">,</span> <span class="mi">245</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">160</span><span class="p">,</span> <span class="mi">111</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">167</span><span class="p">,</span> <span class="mi">177</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">89</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">decrypt</span><span class="p">(</span><span class="n">dec</span><span class="p">):</span>
+    <span class="n">l</span> <span class="o">=</span> <span class="s2">""</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cle</span><span class="p">)):</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">msg</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="n">dec</span><span class="p">]</span> <span class="o">^</span> <span class="n">cle</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">l</span> <span class="o">+</span> <span class="nb">chr</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">l</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">cle</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">decrypt</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </details>
 <div class="admonition info">
 <p class="admonition-title">Utilisation grandissante de l'encodage UTF-8</p>

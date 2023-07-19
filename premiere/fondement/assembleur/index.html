@@ -2853,11 +2853,12 @@ Néanmoins, il est parfois possible d'agir au niveau le plus bas (le langage-mac
 </div>
 </div>
 <p>Utilise ce terminal Linux pour cracker ce logiciel.</p>
-<div id="screen_container">
-
-<div style="white-space: pre; font: 14px monospace; line-height: 14px"></div>
-<canvas style="display: none"></canvas>
-</div>
+<p></p><div id="screen_container">
+                    <div style="white-space: pre; font: 14px monospace; line-height: 14px">
+                    </div>
+                    <canvas style="display: none"></canvas>
+                </div>
+</details>
 <script>
 "use strict";
 function launchDebian() {
@@ -2866,49 +2867,68 @@ function launchDebian() {
         memory_size: 512 * 1024 * 1024,
         vga_memory_size: 8 * 1024 * 1024,
         screen_container: document.getElementById("screen_container"),
-        initial_state: { url: "/xtra/v86/debian-state-base.bin.zst" },
-        filesystem: { baseurl: "/xtra/v86/debian-9p-rootfs-flat/" },
+        <!-- initial_state: { url: "/xtra/v86/debian-state-base.bin.zst" }, -->
+        initial_state: { url: "https://raw.githubusercontent.com/davy39/v86/master/images/debian-state-base.bin.zst" },
+        filesystem: { baseurl: "https://raw.githubusercontent.com/davy39/v86/master/images/debian-9p-rootfs-flat/" },
+        <!-- filesystem: { baseurl: "/xtra/v86/debian-9p-rootfs-flat/" },-->
         network_relay_url: "wss://relay.widgetry.org/",
         autostart: true,
     });
 }
 // Function to be executed when the `open` attribute changes
 function handleOpenAttributeChange(mutationsList) {
-  for (let mutation of mutationsList) {
+for (let mutation of mutationsList) {
     if (mutation.type === 'attributes' && mutation.attributeName === 'open') {
-      const isOpen = mutation.target.hasAttribute('open');
-      if (isOpen) {
-      setTimeout(function() {
-          launchDebian();
-          console.log('<details> element opened:', mutation.target);
+    const isOpen = mutation.target.hasAttribute('open');
+    if (isOpen) {
+    setTimeout(function() {
+        launchDebian();
+        console.log('<details> element opened:', mutation.target);
         }, 1000);
-      } else {
+    } else {
         console.log('<details> element closed:', mutation.target);
-      }
     }
-  }
+    }
 }
-
+}
 // Select the target node(s) using a CSS selector
 const detailsElements = document.querySelectorAll('details');
-
 // Create a new MutationObserver instance
 const observer = new MutationObserver(handleOpenAttributeChange);
-
 // Configure the observer to watch for changes in the `open` attribute
 const observerConfig = {
-  attributes: true,
-  attributeFilter: ['open']
+attributes: true,
+attributeFilter: ['open']
 };
-
 // Start observing the target node(s) and listen for attribute changes
 detailsElements.forEach(element => {
-  observer.observe(element, observerConfig);
+observer.observe(element, observerConfig);
 });
-
 $(document).ready(launchDebian());
+</script>
 
-</script></details></div>
+<p>https://aurelien-esnard.emi.u-bordeaux.fr/wiki/doku.php?id=archi:y86</p>
+<p>Assembleur y86</p>
+<p>y86 est un langage assembleur simplifié basé sur l'architecture des processeurs x86 (IA-32). Les mots mémoires sont alignés sur 32 bits et utilise la convention little endian (stockage des octets dans l'ordre inverse, c'est-à-dire en commençant par l'octet de poids faible).</p>
+<p>Le y86 utilise 8 registres généraux de 32 bits, dont certains ont des rôles historiques.</p>
+<div class="highlight"><pre><span></span><code>%eax : le registre d'accummulation
+%ecx : le registre de compteur utilisé dans les boucles
+%edx : un registre auxiliaire
+%ebx : le registre base index utilisé comme pointeur sur la base d'un tableau
+%esp : le registre stack pointer qui pointe sur le sommet du cadre d'appel de la fonction courante, c'est-à-dire le sommet de la pile
+%ebp : le registre frame base pointer qui pointe la base du cadre d'appel de la fonction courante
+%esi : le registre source index utilisé lors des copies de suite d'octets
+%edi : le registre destination index utilisé lors des copies de suite d'octets
+</code></pre></div>
+<p>En outre, le registre %eip (instruction pointer) pointe sur l'adresse de la prochaîne instruction à exécuter. On ne manipule pas ce registre directement. En revanche, il est modifié automatiquement lors de l'exécution ou par des instructions du type jmp, call, ret.</p>
+<p>y86 propose un jeu d'instructions réduit :</p>
+<div class="highlight"><pre><span></span><code>instructions arithmétiques : addl, subl, andl, xorl
+moves : irmovl, rrmovl, rmmovl, mrmovl
+sauts conditionnels (ou pas) : jmp, je, jne, jg, jge, jl, jle
+gestion pile : pushl, popl
+appel/retour de fonction : call, ret
+divers : nop, halt
+</code></pre></div></div>
 
 
 

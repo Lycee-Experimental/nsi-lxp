@@ -2551,9 +2551,10 @@
 <p>Pour afficher le terminal linux, il ne reste plus qu'à intégrer ce code : `{{ debian() }}``</p>
 <p><strong>Résultat</strong></p>
 <div id="screen_container">
-<div style="white-space: pre; font: 14px monospace; line-height: 14px"></div>
-<canvas style="display: none"></canvas>
-</div>
+                        <div style="white-space: pre; font: 14px monospace; line-height: 14px">
+                        </div>
+                        <canvas style="display: none"></canvas>
+                    </div>
 <script>
 "use strict";
 function launchDebian() {
@@ -2562,48 +2563,44 @@ function launchDebian() {
         memory_size: 512 * 1024 * 1024,
         vga_memory_size: 8 * 1024 * 1024,
         screen_container: document.getElementById("screen_container"),
-        initial_state: { url: "/xtra/v86/debian-state-base.bin.zst" },
-        filesystem: { baseurl: "/xtra/v86/debian-9p-rootfs-flat/" },
+        <!-- initial_state: { url: "/xtra/v86/debian-state-base.bin.zst" }, -->
+        initial_state: { url: "https://raw.githubusercontent.com/davy39/v86/master/images/debian-state-base.bin.zst" },
+        filesystem: { baseurl: "https://raw.githubusercontent.com/davy39/v86/master/images/debian-9p-rootfs-flat/" },
+        <!-- filesystem: { baseurl: "/xtra/v86/debian-9p-rootfs-flat/" },-->
         network_relay_url: "wss://relay.widgetry.org/",
         autostart: true,
     });
 }
 // Function to be executed when the `open` attribute changes
 function handleOpenAttributeChange(mutationsList) {
-  for (let mutation of mutationsList) {
+for (let mutation of mutationsList) {
     if (mutation.type === 'attributes' && mutation.attributeName === 'open') {
-      const isOpen = mutation.target.hasAttribute('open');
-      if (isOpen) {
-      setTimeout(function() {
-          launchDebian();
-          console.log('<details> element opened:', mutation.target);
+    const isOpen = mutation.target.hasAttribute('open');
+    if (isOpen) {
+    setTimeout(function() {
+        launchDebian();
+        console.log('<details> element opened:', mutation.target);
         }, 1000);
-      } else {
+    } else {
         console.log('<details> element closed:', mutation.target);
-      }
     }
-  }
+    }
 }
-
+}
 // Select the target node(s) using a CSS selector
 const detailsElements = document.querySelectorAll('details');
-
 // Create a new MutationObserver instance
 const observer = new MutationObserver(handleOpenAttributeChange);
-
 // Configure the observer to watch for changes in the `open` attribute
 const observerConfig = {
-  attributes: true,
-  attributeFilter: ['open']
+attributes: true,
+attributeFilter: ['open']
 };
-
 // Start observing the target node(s) and listen for attribute changes
 detailsElements.forEach(element => {
-  observer.observe(element, observerConfig);
+observer.observe(element, observerConfig);
 });
-
 $(document).ready(launchDebian());
-
 </script>
 
 <details class="note">
