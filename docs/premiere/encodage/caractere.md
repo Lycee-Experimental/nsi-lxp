@@ -19,7 +19,7 @@ Tout pour comprendre et Ã©viter les erreurs d'encodage
     ```bash
     file -i test.txt
     ```
-    - Effectue les même opération avec la chaine de caractère "testé".
+    - Effectue les mêmes opérations avec la chaine de caractère "testé".
 
     **Questions** : 
 
@@ -101,22 +101,22 @@ Mais parfois, il n'y a pas d'autre choix pour le logiciel d'essayer de deviner l
         C'est du Latin-9, car le point de code `e9` n'existe pas en ASCII. Le fichier texte contient le mot "LycéeXP"
 
 {{exercice(titre="Limites des normes ISO-8859")}}
-        Dans le terminal linux :
-        
-        - Crée le fichier texte contenant "LycéeXP" :
-        ```bash
-        echo "LycéeXP" > test.txt
-        ```
-        - Convertis-le en ISO8859-15 :
-        ```bash
-        iconv -t ISO-8859-15 test.txt -o test.txt
-        ```
-        - Affiche le : 
-        ```bash
-        cat test.txt
-        ```
-        ??? note "Conclusion sur les normes ISO-8859"
-            Comme tu peux le constater, les normes ISO-8859 étant multiples, elles sont souvent sources de problèmes d'affichage...
+    Dans le terminal linux :
+    
+    - Crée le fichier texte contenant "LycéeXP" :
+    ```bash
+    echo "LycéeXP" > test.txt
+    ```
+    - Convertis-le en ISO8859-15 :
+    ```bash
+    iconv -t ISO-8859-15 test.txt -o test.txt
+    ```
+    - Affiche le : 
+    ```bash
+    cat test.txt
+    ```
+    ??? note "Conclusion sur les normes ISO-8859"
+        Comme tu peux le constater, les normes ISO-8859 étant multiples, elles sont souvent sources de problèmes d'affichage...
 
 ## La normalisation UTF
 
@@ -125,9 +125,9 @@ En 1996, le [Consortium Unicode](https://home.unicode.org/) décide de normalise
 Ils créent l'Universal character set Transformation Format : l'UTF. 
 Ou plutôt ils en créent... plusieurs  :cry: :
 
-- l'UTF-8 : les caractères sont codés sur 1, 2, 3 ou 4 octets.
-- l'UTF-16 : les caractères sont codés sur 2 ou 4 octets.
-- l'UTF-32 : les caractères sont codés sur 4 octets.
+- l'**UTF-8** : les caractères sont codés sur 1, 2, 3 ou 4 octets.
+- l'**UTF-16** : les caractères sont codés sur 2 ou 4 octets.
+- l'**UTF-32** : les caractères sont codés sur 4 octets.
 
 Pourquoi est-ce encore si compliqué ? En UTF-32, 32 bits sont disponibles, soit $2^{32}=4294967296$ caractères différents encodables. 
 
@@ -136,7 +136,7 @@ D'autres encodages plus légers, mais plus complexes, sont donc proposés.
 
 ### Le cas particulier de l'UTF-8
 
-Le principe de l'UTF-8 est qu'il est **adaptatif** : les caracères les plus fréquents sont codés sur un octet, qui est la taille minimale (et qui donne le 8 de "UTF-8"). Les autres caractères peuvent être codés sur 2, 3 ou 4 octets au maximum.
+Le principe de l'**UTF-8** est qu'il est **adaptatif** : les caracères les plus fréquents sont codés sur un octet, qui est la taille minimale (et qui donne le 8 de **UTF-8**). Les autres caractères peuvent être codés sur 2, 3 ou 4 octets au maximum.
 
 
 ![](/assets/images/cap_utf8.png){: .center}
@@ -156,7 +156,7 @@ Le principe de l'UTF-8 est qu'il est **adaptatif** : les caracères les plus fr�
     ```
 
 {{exercice(titre="Réponse à une question existentielle...")}} 
-    ** Mais pourquoi donc le caractère `é` en UTF-8 devient-il `Ã©` en ISO 8859-15 ?!
+    ** Mais pourquoi donc le caractère `é` en UTF-8 devient-il **Ã©** en ISO 8859-15 ?!
 
 
     **Q1.** Grâce à python, écrire en binaire le nombre associé au caractère ```é``` en UTF-8.

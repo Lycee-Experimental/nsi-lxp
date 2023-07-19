@@ -2,7 +2,7 @@
 
 ## Le langage machine
 
-Revenons sur ces instructions aussi appelées "instructions machines" exécutées par l'Unité de Commande. Comme nous l'avons vu, un ordinateur exécute des programmes qui sont des suites d'instructions, elles même réalisables avec une combinaison de portes logiques. 
+Revenons sur ces instructions aussi appelées **instructions machines** exécutées par l'**Unité de Commande**. Comme nous l'avons vu, un ordinateur exécute des programmes qui sont des suites d'instructions, elles même réalisables avec une combinaison de **portes logiques**. 
 
 Toutefois, le CPU est incapable d'exécuter directement des programmes écrits, par exemple, en Python. En effet, comme tous les autres constituants d'un ordinateur, le CPU gère uniquement 2 états (toujours symbolisés par un "1" et un "0"), les instructions exécutées au niveau du CPU doivent donc préalablement être codées en binaire. 
 
@@ -21,7 +21,7 @@ Une **instruction machine** est donc une chaîne binaire composée principalemen
 
 <center>Instructions machine</center>
 
-#### Les codes opérations
+### Les codes opérations
 
 Les instructions machines sont relativement basiques (on parle d'instructions **de bas niveau**), voici quelques exemples :
 
@@ -32,7 +32,7 @@ Les instructions machines sont relativement basiques (on parle d'instructions **
 - les instructions de **rupture de séquence** : les instructions machines sont situées en mémoire vive, si, par exemple, l'instruction n°1 est située à l'adresse mémoire 343, l'instruction n°2 sera située à l'adresse mémoire 344, l'instruction n°3 sera située à l'adresse mémoire 345... Au cours de l'exécution d'un programme, le CPU passe d'une instruction à une autre en passant d'une adresse mémoire à l'adresse mémoire immédiatement supérieure : après avoir exécuté l'instruction n°2 (situé à l'adresse mémoire 344), le CPU "va chercher" l'instruction suivante à l'adresse mémoire 344+1=345. 
 Les instructions de rupture de séquence d'exécution encore appelées instructions de saut ou de branchement permettent d'interrompre l'ordre initial sous certaines conditions en passant à une instruction située une adresse mémoire donnée, par exemple, nous pouvons avoir une instruction qui ressemble à cela : imaginons qu'à l'adresse mémoire 354 nous avons l'instruction "si la valeur contenue dans le registre R1 est strictement supérieure à 0 alors exécuter l'instruction située à l'adresse mémoire 4521". Si la valeur contenue dans le registre R1 est strictement supérieure à 0 alors la prochaine instruction à exécuter est l'adresse mémoire 4521, dans le contraire, la prochaine instruction à exécuter est à l'adresse mémoire 355.
 
-#### Les opérandes
+### Les opérandes
 
 Les opérandes sont donc les données sur lesquelles le code opération de l'instruction doit être réalisée. Un opérande peut être de 3 natures différentes :
 
@@ -54,32 +54,49 @@ Un programme en langage machine est donc une suite très très longue de "1" et 
 
 ### Définition
 
-Reste à savoir comment traduire en binaire la phrase "additionne le nombre 125 et la valeur située dans le registre R2 , range le résultat dans le registre R1" pour qu'elle soit utilisable par le CPU...
+Il faut donc traduire en langage-machine (binaire)  la phrase "additionne le nombre 125 et la valeur située dans le registre R2 , range le résultat dans le registre R1" pour qu'elle soit utilisable par le CPU. Un programme de bas niveau appelé **assembleur (ou ASM)** assure le passage de symboles mnémoniques de type `addl %eax, %ebx` au langague-machine `11100010100000100001000001111101`. 
 
-Le processeur est uniquement capable d'interpréter le langage machine, un programme de bas niveau appelé **assembleur (ou ASM)** assure le passage de "ADD R1,R2,#125" à "11100010100000100001000001111101". 
+Si plus personne n'écrit de programme directement en langage machine, l'écriture de programme en assembleur est habituelle car elle permet d'optimiser d'avantage l'allocation des ressources matérielles qu'un langage de plus haut niveau (python par exemple).
 
-Par extension, on dit que l'on programme en assembleur quand on écrit des programmes avec ces symboles mnémoniques à la place de suites de "0" et de "1". Si plus personne n'écrit de programme directement en langage machine, l'écriture de programme en assembleur est encore chose relativement courante car elle permet d'optimiser d'avantage l'allocation des ressources matérielles qu'en programmant avec un langage de plus haut niveau (python par exemple).
+### Exemples de commandes en assembleur Y86
 
-### Exemples de commandes en assembleur
+Il existe différents types de langages assembleur, dépendant du type de processeur utilisé (x86-64, ARM...). 
 
+**y86** est un langage assembleur simplifié qui est dédié à l'apprentissage. Il est basé sur l'architecture des processeurs x86 (IA-32), les mémoires sont alignés sur 32 bits et utilise la convention little endian (stockage des octets dans l'ordre inverse, c'est-à-dire en commençant par l'octet de poids faible).
+
+y86 propose un jeu d'instructions réduit :
+
+- instructions **arithmétiques** :
 ```asm
-rrmov1 <rA>, <rB> ; Copie d'une valeur d'un registre à un autre
-mrmovl <D>, <rA> ; Copie d'une valeur de l'adresse D de la mémoire au registre rA
-rmmovl <rA>, <D> ; Copie d'une valeur du registre rA à l'adresse D de la mémoire
 addl <rA>, <rB> ; Addition : rB = rB + rA
 subl <rA>, <rB> ; Soustraction : rB = rB - rA 
 andl <rA>, <rB> ; ET bit à bit : rB = rB and rA
 xorl <rA>, <rB> ; Ou exclusif : rB = rB xor rA
 ```
 
+- instructions de **transfert de données** : 
+```asm
+rrmov1 <rA>, <rB> ; Copie d'une valeur d'un registre à un autre
+mrmovl <D>, <rA> ; Copie d'une valeur de l'adresse D de la mémoire au registre rA
+rmmovl <rA>, <D> ; Copie d'une valeur du registre rA à l'adresse D de la mémoire
+irmovl <V>, <rA> ; Copie d'une valeur immediate V à l'adresse  <rA> de la mémoire
+```
+
+- instruction de rupture de séquence (conditionnels ou pas) : jmp, je, jne, jg, jge, jl, jle
+
+- gestion pile : pushl, popl
+
+- appel/retour de fonction : call, ret
+
+- divers : nop, halt
+
 Les registres s'écrivent sous la forme `%eax`, `%ebx`...
+
+!!! note "Remarque"
+    - Il n'est pas nécessaire d'apprendre à coder en ASM au niveau NSI, mais il faut en connaitre les principes.
 
 
 {{exercice(1,titre="Simulation d'un programme en assembleur")}}
-
-    !!! note "Remarque"
-        - Il n'est pas nécessaire d'apprendre à coder en ASM au niveau NSI, mais il faut en connaitre le principe.
-        - Il existe différents types d'instructions en assembleur, dépendant du type de processeur utilisé (x86-64, ARM...). Nous utilisons ci-dessous une version simplifiée d'ASM nommée Y86 et dédiée exclusivement à l'apprentissage.
 
     Etudions le programme **python** ci-dessous :
 
@@ -255,46 +272,7 @@ Les registres s'écrivent sous la forme `%eax`, `%ebx`...
         - Executer `gcc crackme.c -S -o crackme.asm`
         - Visualiser le fichier généré avec `nano crackme.asm` (CTR+X pour en sortir)
 
-    Utilise ce terminal Linux pour cracker ce logiciel.
+    Utilise le terminal Linux pour cracker ce logiciel :
 
-    {{debian()}}
-    
-    
-
-
-https://aurelien-esnard.emi.u-bordeaux.fr/wiki/doku.php?id=archi:y86
-
-Assembleur y86
-
-y86 est un langage assembleur simplifié basé sur l'architecture des processeurs x86 (IA-32). Les mots mémoires sont alignés sur 32 bits et utilise la convention little endian (stockage des octets dans l'ordre inverse, c'est-à-dire en commençant par l'octet de poids faible).
-
-Le y86 utilise 8 registres généraux de 32 bits, dont certains ont des rôles historiques.
-
-    %eax : le registre d'accummulation
-    %ecx : le registre de compteur utilisé dans les boucles
-    %edx : un registre auxiliaire
-    %ebx : le registre base index utilisé comme pointeur sur la base d'un tableau
-    %esp : le registre stack pointer qui pointe sur le sommet du cadre d'appel de la fonction courante, c'est-à-dire le sommet de la pile
-    %ebp : le registre frame base pointer qui pointe la base du cadre d'appel de la fonction courante
-    %esi : le registre source index utilisé lors des copies de suite d'octets
-    %edi : le registre destination index utilisé lors des copies de suite d'octets
-
-En outre, le registre %eip (instruction pointer) pointe sur l'adresse de la prochaîne instruction à exécuter. On ne manipule pas ce registre directement. En revanche, il est modifié automatiquement lors de l'exécution ou par des instructions du type jmp, call, ret.
-
-y86 propose un jeu d'instructions réduit :
-
-    instructions arithmétiques : addl, subl, andl, xorl
-    moves : irmovl, rrmovl, rmmovl, mrmovl
-    sauts conditionnels (ou pas) : jmp, je, jne, jg, jge, jl, jle
-    gestion pile : pushl, popl
-    appel/retour de fonction : call, ret
-    divers : nop, halt
-
-
-
-
-
-
-
-
-
+    !!! debian "Terminal Linux"
+        {{debian()}}

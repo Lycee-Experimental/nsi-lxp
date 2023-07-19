@@ -51,14 +51,15 @@ Donc $243_{10}=11110011_2$
 
 
 
-{{exercice(1)}}
-    === "Énoncé"
-        Quelle est la valeur maximale d'un octet (un octet = 8 chiffres binaires) ?
-    === "Correction"
+{{exercice(1, "Nombre de valeurs d'un octet")}}
+    Quelle est la valeur maximale d'un octet (un octet = 8 chiffres binaires) ?
+
+    ??? TIP "Réponse"
         $11111111_2=255$. On retrouve ce nombre comme étant la valeur maximale d'une composante de couleur dans le codage RGB, ce qui signifie que chaque composante est codée sur un octet.
 
-{{exercice()}}
+{{exercice(titre="Fonction Python de conversion en binaire")}}
     Créer une fonction `binaire(n)` qui renvoie l'écriture binaire de `n`, en utilisant les divisions successives.
+
     !!! python "Rappel Python"
         L'opérateur `//` donne le quotient de la division et `%` donne le reste.
         ```python
@@ -109,14 +110,20 @@ On a donc la correspondance :
  En pratique, l'hexadécimal est surtout utilisé pour sa capacité à représenter la valeur de n'importe quel octet sur 2 chiffres ("chiffres" étant à prendre au sens large = chiffres ou lettres !).
  
 
-{{exercice()}}
-    === "Énoncé"
-        1. Donner la valeur des octets `FF`, `3A`, `B2`.
-        2. Expliquer pourquoi la couleur RGB (138,255,51) a pour code html `#8AFF33`.
-        3. Quelle est la couleur `html` du blanc ?
-    === "Correction"
+{{exercice(titre="Conversion en hexadécimal")}}
+
+    1. Donner la valeur des octets `FF`, `3A`, `B2`.
+
+    2. Expliquer pourquoi la couleur RGB (138,255,51) a pour code html `#8AFF33`.
+
+    3. Quelle est la couleur `html` du blanc ?
+
+    ??? tip "Réponses"
+        
         1. FF = 255 ; 3A = 58 ; B2 = 178
+
         2. 138 a pour code hexa 8A, 255 a pour code hexa 255, 51 a pour code hexa 33.
+        
         3. \#FFFFFF (rouge, vert et bleu sont au max)
 
 
@@ -127,29 +134,27 @@ On a donc la correspondance :
         >>> int("11010010", 2)
         210
         ```
-        {{terminal()}}
     === "Décimal -> Binaire"
         La fonction `bin(nombre)` renvoie une chaîne de caractère où le nombre binaire est précédé de `'0b'`.
         ```python
         >>> bin(243)
         '0b11110011'
         ```
-        {{terminal()}}
-
     === "Décimal -> Hexadécimal"
         La fonction `hex(nombre)` renvoie une chaîne de caractère où le nombre hexadécimal est précédé de `'0x'`.
         ```python
         >>> hex(125)
         '0x7d'
         ```
-        {{terminal()}}
-
     === "Hexadécimal -> décimal" 
         On peut utiliser la fonction `int("nombre",base)`.
         ```python
         >>> int("FF", 16)
         255
         ```
-        {{terminal()}}
+    
+    Amuse toi ici : 
 
+    {{terminal()}}
+    
 

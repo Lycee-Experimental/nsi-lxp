@@ -191,7 +191,7 @@ Les transistors effectuent des **opérations booléennes** directement liées à
   
 
 
-{{exercice(1)}}	
+{{exercice(1,"Combinaison de portes logiques")}}	
 	=== "Énoncé"
 		Des portes logique peuvent s'obtenir en combinant 2 autres.
 		Constituer les portes `NON OU` et `NON ET` et en établir le tableau de vérité.
@@ -265,8 +265,7 @@ Les transistors effectuent des **opérations booléennes** directement liées à
 		|1 |	0 |	0 |
 		|1 |	1 |	0 |
 
-!!! info "Application : l'additionneur"
-
+{{exercice(titre="Table de vérité d'un additionneur")}}
 		En combinant les portes logiques, on obtient des circuits plus complexes. Par exemple en combinant 2 portes "OU EXCLUSIF", 2 portes "ET" et une porte "OU" on obtient un additionneur, qui permet d'additionner 2 bits (E1 et E2) en tenant compte de la retenue entrante (C0). En sortie on obtient le résultat de l'addition (S) et la retenue sortante ("C1").
 
 		<div style="width: 100%; height: 300px">
@@ -297,23 +296,24 @@ Les transistors effectuent des **opérations booléennes** directement liées à
 			</logic-editor>
 		</div>
 		
-		Table de vérité :
+		**Question** : Constituer la table de vérité de S1 et C1 en fonction de E1, E2 et C0.
 
-		|E1| 	E2| 	C0| 	C1| 	S1|
-		|:-:|:-:|:-:|:-:|:-:|
-		|0| 	0| 	0 |	0 	|0|
-		|0| 	0| 	1 |	0 	|1|
-		|0| 	1| 	0 |	0 	|1|
-		|0| 	1| 	1 |	1 	|0|
-		|1| 	0| 	0| 	0 	|1|
-		|1| 	0| 	1 	|1 	|0|
-		|1| 	1| 	0 |	1 	|0|
-		|1| 	1| 	1| 	1 	|1|
+		??? tip "Réponse"
+			Table de vérité :
 
-		!!! note "Remarque" 
-			En combinant plusieurs fois le type de circuit décrit ci-dessus, on obtient des additionneurs capables d'additionner des nombres sur X bits.
+			|E1| 	E2| 	C0| 	C1| 	S1|
+			|:-:|:-:|:-:|:-:|:-:|
+			|0| 	0| 	0 |	0 	|0|
+			|0| 	0| 	1 |	0 	|1|
+			|0| 	1| 	0 |	0 	|1|
+			|0| 	1| 	1 |	1 	|0|
+			|1| 	0| 	0| 	0 	|1|
+			|1| 	0| 	1 	|1 	|0|
+			|1| 	1| 	0 |	1 	|0|
+			|1| 	1| 	1| 	1 	|1|
 
-
+			!!! note "Remarque" 
+				En combinant plusieurs fois le type de circuit décrit ci-dessus, on obtient des additionneurs capables d'additionner des nombres sur X bits.
 
 
 
@@ -361,8 +361,9 @@ Les transistors effectuent des **opérations booléennes** directement liées à
 	```
 
 	Pour comprendre ces résultats, il faut travailler en binaire :
+
 	- Les nombre binaires sont précédés de `0b`.
-	- La fonction bin(n) convertit un nombre entier en binaire.
+	- La fonction `bin(n)` convertit un nombre entier en binaire.
 	
 	Voici les mêmes calculs, qui peuvent mieux s'annalyser en prenant les bits un à un :
 
@@ -388,10 +389,6 @@ Les transistors effectuent des **opérations booléennes** directement liées à
 	{{terminal()}}
 
 
-!!! info "Du transistor aux circuits logiques complexes"
-	A la base de l'informatique, nous avons le transistor, composant muni de 2 entrées et une sortie. Une combinaison de transistors (sous forme de circuit intégré) permet d'obtenir des circuits logiques, la combinaison de circuits logiques permet d'obtenir des circuits plus complexes (exemple : l'additionneur), et ainsi de suite...
-
-
 {{exercice()}}	
     === "Énoncé"
         Effectuer les opérations suivantes.
@@ -412,7 +409,7 @@ Les transistors effectuent des **opérations booléennes** directement liées à
 
         ```
         
-    === "Correction"
+    === "Réponse"
         ```python
          1011011
         &1010101
@@ -430,3 +427,7 @@ Les transistors effectuent des **opérations booléennes** directement liées à
          0001110
         ```
 
+
+
+!!! conclu "Du transistor aux circuits logiques complexes"
+	A la base de l'informatique, nous avons le transistor, composant muni de 2 entrées et une sortie. Une combinaison de transistors (sous forme de circuit intégré) permet d'obtenir des circuits logiques, la combinaison de circuits logiques permet d'obtenir des circuits plus complexes (exemple : l'additionneur), et ainsi de suite...
