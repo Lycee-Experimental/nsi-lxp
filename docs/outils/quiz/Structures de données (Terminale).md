@@ -1,0 +1,1 @@
+{{quiz('outils/quiz/sources/Structures de données (Terminale).md')}}

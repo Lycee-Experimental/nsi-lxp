@@ -1,0 +1,239 @@
+site_name: NSI-LXP
+site_description: 'Les sciences du numériques au Lycée Expérimental'
+site_url: 'https://nsi.lycee-experimental.org/'
+site_dir: docs-build
+repo_url: https://github.com/lycee-experimental/nsi-lxp
+docs_dir: docs
+copyright: |
+  GNU GPLv3 2023 <a href="https://github.com/lycee-experimental" target="_blank" rel="noopener">Lycée Expérimental</a>
+
+theme:
+  name: material
+  logo: assets/images/logo-lxp-transparent.svg
+  favicon: assets/images/logo-lxp-noir.svg
+  custom_dir: my_theme_customizations/
+  font: false
+  language: fr
+  palette:
+      - media: "(prefers-color-scheme: light)"
+        scheme: default
+        primary: red
+        accent: deep orange
+        toggle:
+          icon: material/weather-sunny
+          name: Passer au mode nuit
+      - media: "(prefers-color-scheme: dark)"
+        scheme: slate
+        primary: red
+        accent: deep orange
+        toggle:
+          icon: material/weather-night
+          name: Passer au mode jour
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - toc.integrate
+    # Autres
+    #- search.highlight
+    #- search.share
+    #- search.suggest
+    - navigation.indexes
+    - content.code.annotate
+    - content.code.copy
+    
+markdown_extensions:
+  - meta
+  - abbr
+  - def_list # Les listes de définition.
+  - attr_list # Un peu de CSS et des attributs HTML.
+  - footnotes # Notes[^1] de bas de page.  [^1]: ma note.
+  - admonition # Blocs colorés  !!! info "ma remarque"
+  - pymdownx.details #   qui peuvent se plier/déplier.
+  - pymdownx.caret # Passage ^^souligné^^ ou en ^exposant^.
+  - pymdownx.mark # Passage ==surligné==.
+  - pymdownx.tilde # Passage ~~barré~~ ou en ~indice~.
+  - pymdownx.highlight # Coloration syntaxique du code
+  - pymdownx.inlinehilite # pour  `#!python  <python en ligne>`
+  - pymdownx.snippets: # Inclusion de fichiers externe.
+      base_path: docs
+  - pymdownx.tasklist: # Cases à cocher  - [ ]  et - [x]
+      custom_checkbox: false #   avec cases d'origine
+      clickable_checkbox: true #   et cliquables.
+  - pymdownx.tabbed: # Volets glissants.  === "Mon volet"
+      alternate_style: true
+  - pymdownx.superfences: # Imbrication de blocs.
+      preserve_tabs: true
+      custom_fences:
+        - name: quiz
+          class: python
+          format: !!python/name:custom_fences.custom_formatter
+          no-paragraph: true
+  - pymdownx.keys: # Touches du clavier.  ++ctrl+d++
+      separator: "\uff0b"
+  - pymdownx.emoji: # Émojis  :boom:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+  - pymdownx.arithmatex:
+      generic: true
+  - toc:
+      permalink: ⚓︎
+      toc_depth: 3
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Lycee-Experimental
+  site_url: https://nsi.lycee-experimental.org/
+  ace_style: # https://ace.c9.io/build/kitchen-sink.html for more customization
+    default: crimson_editor
+    slate: tomorrow_night_bright
+    # slate: tomorrow_night_bright|youtube if your dark mode is youtube
+
+plugins:
+  - search
+  - macros
+  - mkdocs-video
+  #- inline-svg
+
+extra_javascript:
+  # MathJax
+  - xtra/javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  # Portes logiques : https://github.com/jppellet/Logic-Circuit-Simulator
+  - xtra/javascripts/logic-circuit-simulator.js
+  # Quizz : https://github.com/bonartm/quizdown-js
+  - xtra/javascripts/quizdown.js
+  - xtra/javascripts/quizdownHighlight.js
+  - xtra/javascripts/quizdownKatex.js
+  - xtra/v86/libv86.js
+  - xtra/javascripts/extra.js
+
+extra_css:
+  - xtra/stylesheets/ajustements.css # ajustements piodide
+  - xtra/stylesheets/extra.css # mes ajustements
+
+nav:
+  - Fondements:
+      - 1️⃣ Introduction: premiere/fondement/index.md
+      - 1️⃣ Histoire de l'informatique: premiere/fondement/histoire.md
+      - 1️⃣ Binaire et portes logiques: premiere/fondement/binaire.md
+      - 1️⃣ Architecture matérielle: premiere/fondement/materiel.md
+      - 1️⃣ Langage machine et assembleur: premiere/fondement/assembleur.md
+      - 🇹 Systèmes sur puces (SoC): terminale/soc.md
+      - Quiz: outils/quiz/Architectures matérielles et systèmes d’exploitation (Première).md
+  - Encodage: 
+          - premiere/encodage/index.md
+          - 1️⃣ Entiers positifs: premiere/encodage/entier-positif.md
+          - 1️⃣ Entiers signés: premiere/encodage/entier-negatif.md
+          - 1️⃣ Nombres réels: premiere/encodage/non-entier.md
+          - 1️⃣ Caractères: premiere/encodage/caractere.md    
+  - OS & Linux:
+      - 1️⃣ Introduction: premiere/linux/index.md
+      - 1️⃣ Systèmes d'exploitation: premiere/linux/os.md
+      - 1️⃣ Unix et linux: premiere/linux/linux.md
+      - 1️⃣ Installation: premiere/linux/install.md
+      - 1️⃣ Commandes linux: premiere/linux/commande.md
+      - 🇹 Gestion des processus: terminale/processus.md
+
+  - Réseaux:
+      - 1️⃣ Introduction: premiere/internet/index.md
+      - 1️⃣ Histoire d'internet: premiere/internet/histoire.md
+      - 1️⃣ Architecture réseau: premiere/internet/architecture.md
+      - 1️⃣ Protocoles de communication: premiere/internet/protocole.md
+      - 🇹 Protocoles de routage: terminale/routage.md
+  - Web:
+      - 1️⃣ Introduction: premiere/web/index.md
+      - 1️⃣ Langages web: premiere/web/langage.md
+      - 1️⃣ Protocole HTTP: premiere/web/http.md
+      - 1️⃣ Requêtes GET et POST et formulaires: premiere/web/requete.md
+      - 🇹 Sécurité des communications: terminale/chiffrement.md
+
+  - Python:
+      - 1️⃣ Introduction: premiere/python/index.md
+      - 1️⃣ Variables: premiere/python/variable.md
+      - 1️⃣ Boucles for et while: premiere/python/boucle.md
+      - 1️⃣ Instruction conditionnelle If: premiere/python/condition.md
+      - 1️⃣ Booléens: premiere/python/bool.md
+      - 1️⃣ Fonctions: premiere/python/fonction.md
+      - 1️⃣ Listes: premiere/python/liste.md
+      - 1️⃣ Tuples: premiere/python/tuple.md
+      - 1️⃣ Dictionnaires: premiere/python/dict.md
+      - 1️⃣ Chaînes de caractères: premiere/python/char.md
+      - 🇹 Bonnes pratiques de la progra: terminale/progra.md
+      - 🇹 Progra Orientée Objet: terminale/objet.md
+      - 🇹 Récursivité: terminale/crecursivite.md
+      - 🇹 Paradigmes de la progra: terminale/paradigme.md
+      - 🇹 Décidabilité et calculabilité: terminale/chidecidabilite.md
+
+
+  - Bigdata:
+      - 1️⃣ Introduction: premiere/data/index.md
+      - 1️⃣ Fichiers csv: premiere/data/csv.md
+      - 1️⃣ Tri des données: premiere/data/tri.md
+      - 1️⃣ Module Pandas: premiere/data/pandas.md
+      - 🇹 Données linéaires: terminale/lineaire.md
+      - 🇹 Arbres binaires: terminale/arbre.md
+      - 🇹 Graphes: terminale/graphe.md
+      - 🇹 Bases de données: terminale/db.md
+
+  - Algorithmes:
+      - 1️⃣ Introduction: premiere/algo/index.md
+      - 1️⃣ Extremums et moyennes: premiere/algo/moy.md
+      - 1️⃣ Complexité: premiere/algo/complex.md
+      - 1️⃣ Tri par insertion: premiere/algo/insert.md
+      - 1️⃣ Tri par sélection: premiere/algo/select.md
+      - 1️⃣ Dichotomie: premiere/algo/dichotomie.md
+      - 1️⃣ Algorithmes gloutons: premiere/algo/glouton.md
+      - 1️⃣ Algorithme KNN: premiere/algo/knn.md
+      - 🇹 Diviser pour régner: terminale/diviser.md
+      - 🇹 Progra dynamique: terminale/dynamique.md
+      - 🇹 Recherche textuelle: terminale/textuel.md
+
+
+  - Ressources: 
+    - Ressources: premiere/ressources.md
+    - Outils: 
+        - Accueil: outils/index.md
+        - Terminal Linux: outils/v86.md
+        - Python en ligne: 
+            - "Terminal ▶️ et IDE 🖥 dans MkDocs": outils/pyodide/index.md
+            - "Guide du Terminal ⌨️": outils/pyodide/install_term.md
+            - "Guide de l'IDE 🐍": outils/pyodide/install_ide.md
+            - "Avancé ⭐️": outils/pyodide/advanced.md
+            - "Bac à sable 🧾": outils/pyodide/sandbox.md
+            - "Exemple pratique 🏖": outils/pyodide/redimensionner/sujet.md
+        - "QCM en MkDocs ✅❌": outils/qcm/qcm.md
+  - Projets:
+    - Introduction: projets/index.md
+    - Les bases de Git:
+      - Présentation: projets/git/presentation.md
+      - Utilisation: projets/git/utilisation.md
+      - Commandes: projets/git/commandes.md
+    - Django:
+      - Pycharm & Django-Lxp:
+        - Installation de Pycharm: projets/djangolxp/install-pycharm.md
+        - Déploiement Django-lxp: projets/djangolxp/deploiement-local.md
+        - Git avec pycharm: projets/djangolxp/Utilisation-github_pycharm.md
+      - Développement de Django-Lxp:
+        - Ajout de champs au formulaires: projets/djangolxp/ajout-champs.md
+        - Affichage de la fiche d'inscription: projets/djangolxp/style-fiche-inscription.md
+        - Afficher/filtrer les listes d'élèves: projets/djangolxp/tableau-filtre.md
+    - Renpy:
+      - Décompiler un jeu: projets/renpy/decompile.m
+    - DrumXP:
+      - Introduction: projets/drumxp/intro.md
+      - Électronique: projets/drumxp/elec.md
+      - Programmation: projets/drumxp/progra.md
+      - Logiciel: projets/drumxp/logiciels.md
+      - Structure: projets/drumxp/matos.md  
+  - Bac: bac/sujet.md
+   

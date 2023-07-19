@@ -1,0 +1,1 @@
+{{quiz('outils/quiz/sources/Représentation de données : Types et valeurs de base (Première).md')}}

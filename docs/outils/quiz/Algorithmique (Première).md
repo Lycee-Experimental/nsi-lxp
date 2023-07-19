@@ -1,0 +1,1 @@
+{{quiz('outils/quiz/sources/Algorithmique (Première).md',20)}}

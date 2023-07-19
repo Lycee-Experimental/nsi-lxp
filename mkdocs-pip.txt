@@ -1,0 +1,5 @@
+mkdocs-charts-plugin
+mkdocs-video
+mkdocs-macros-plugin
+mkdocs-material-extensions
+mkdocs-material

@@ -1,0 +1,1 @@
+assert binaire(225) == '11100001', "La valeur retournée n'est pas la bonne."
