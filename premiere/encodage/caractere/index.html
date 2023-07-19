@@ -2702,7 +2702,7 @@ $(document).ready(launchDebian());
 <li>Utilise la commande suivante pour connaitre le système d'encodage du fichier créé (charset) :
 <div class="highlight"><pre><span></span><code>file<span class="w"> </span>-i<span class="w"> </span>test.txt
 </code></pre></div></li>
-<li>Effectue les même opération avec la chaine de caractère "testé".</li>
+<li>Effectue les mêmes opérations avec la chaine de caractère "testé".</li>
 </ul>
 <p><strong>Questions</strong> : </p>
 <ul>
@@ -2773,38 +2773,37 @@ Pas de problème, il leur suffit d'utiliser... une autre table, appelée ISO-885
 </details>
 <details class="question">
 <summary>Activité 4 - Limites des normes ISO-8859</summary>
-<div class="highlight"><pre><span></span><code>Dans le terminal linux :
-
-- Crée le fichier texte contenant "LycéeXP" :
-```bash
-echo "LycéeXP" &gt; test.txt
-```
-- Convertis-le en ISO8859-15 :
-```bash
-iconv -t ISO-8859-15 test.txt -o test.txt
-```
-- Affiche le : 
-```bash
-cat test.txt
-```
-??? note "Conclusion sur les normes ISO-8859"
-    Comme tu peux le constater, les normes ISO-8859 étant multiples, elles sont souvent sources de problèmes d'affichage...
-</code></pre></div>
+<p>Dans le terminal linux :</p>
+<ul>
+<li>Crée le fichier texte contenant "LycéeXP" :
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">"LycéeXP"</span><span class="w"> </span>&gt;<span class="w"> </span>test.txt
+</code></pre></div></li>
+<li>Convertis-le en ISO8859-15 :
+<div class="highlight"><pre><span></span><code>iconv<span class="w"> </span>-t<span class="w"> </span>ISO-8859-15<span class="w"> </span>test.txt<span class="w"> </span>-o<span class="w"> </span>test.txt
+</code></pre></div></li>
+<li>Affiche le : 
+<div class="highlight"><pre><span></span><code>cat<span class="w"> </span>test.txt
+</code></pre></div></li>
+</ul>
+<details class="note">
+<summary>Conclusion sur les normes ISO-8859</summary>
+<p>Comme tu peux le constater, les normes ISO-8859 étant multiples, elles sont souvent sources de problèmes d'affichage...</p>
+</details>
 </details>
 <h2 id="la-normalisation-utf">La normalisation UTF<a class="headerlink" href="#la-normalisation-utf" title="Permanent link">⚓︎</a></h2>
 <p>En 1996, le <a href="https://home.unicode.org/">Consortium Unicode</a> décide de normaliser tout cela et de créer un système unique qui contiendra l'intégralité des caractères dont les êtres humains ont besoin pour communiquer entre eux.  </p>
 <p>Ils créent l'Universal character set Transformation Format : l'UTF. 
 Ou plutôt ils en créent... plusieurs  <img alt="😢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f622.svg" title=":cry:"> :</p>
 <ul>
-<li>l'UTF-8 : les caractères sont codés sur 1, 2, 3 ou 4 octets.</li>
-<li>l'UTF-16 : les caractères sont codés sur 2 ou 4 octets.</li>
-<li>l'UTF-32 : les caractères sont codés sur 4 octets.</li>
+<li>l'<strong>UTF-8</strong> : les caractères sont codés sur 1, 2, 3 ou 4 octets.</li>
+<li>l'<strong>UTF-16</strong> : les caractères sont codés sur 2 ou 4 octets.</li>
+<li>l'<strong>UTF-32</strong> : les caractères sont codés sur 4 octets.</li>
 </ul>
 <p>Pourquoi est-ce encore si compliqué ? En UTF-32, 32 bits sont disponibles, soit <span class="arithmatex">\(2^{32}=4294967296\)</span> caractères différents encodables. </p>
 <p>C'est largement suffisant, mais c'est surtout très très lourd !<br>
 D'autres encodages plus légers, mais plus complexes, sont donc proposés. </p>
 <h3 id="le-cas-particulier-de-lutf-8">Le cas particulier de l'UTF-8<a class="headerlink" href="#le-cas-particulier-de-lutf-8" title="Permanent link">⚓︎</a></h3>
-<p>Le principe de l'UTF-8 est qu'il est <strong>adaptatif</strong> : les caracères les plus fréquents sont codés sur un octet, qui est la taille minimale (et qui donne le 8 de "UTF-8"). Les autres caractères peuvent être codés sur 2, 3 ou 4 octets au maximum.</p>
+<p>Le principe de l'<strong>UTF-8</strong> est qu'il est <strong>adaptatif</strong> : les caracères les plus fréquents sont codés sur un octet, qui est la taille minimale (et qui donne le 8 de <strong>UTF-8</strong>). Les autres caractères peuvent être codés sur 2, 3 ou 4 octets au maximum.</p>
 <p><img alt="" class="center" src="/assets/images/cap_utf8.png"></p>
 <div class="admonition python">
 <p class="admonition-title">L'encodage des caractères avec Python</p>
@@ -2821,7 +2820,7 @@ D'autres encodages plus légers, mais plus complexes, sont donc proposés. </p>
 </div>
 <details class="question">
 <summary>Activité 5 - Réponse à une question existentielle...</summary>
-<p>** Mais pourquoi donc le caractère <code>é</code> en UTF-8 devient-il <code>Ã©</code> en ISO 8859-15 ?!</p>
+<p><strong> Mais pourquoi donc le caractère <code>é</code> en UTF-8 devient-il </strong>Ã©** en ISO 8859-15 ?!</p>
 <p><strong>Q1.</strong> Grâce à python, écrire en binaire le nombre associé au caractère <code>é</code> en UTF-8.</p>
 <div class="admonition python">
 <p class="admonition-title">Rappel sur le binaire en python</p>

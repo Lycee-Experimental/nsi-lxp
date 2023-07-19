@@ -712,50 +712,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tentatives-de-conversion" class="md-nav__link">
-    Tentatives de conversion
+  <a href="#encodage-des-reels-en-binaire" class="md-nav__link">
+    Encodage des réels en binaire
   </a>
   
-    <nav class="md-nav" aria-label="Tentatives de conversion">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-difficile-manipulation-des-flottants" class="md-nav__link">
+    La difficile manipulation des flottants
+  </a>
+  
+    <nav class="md-nav" aria-label="La difficile manipulation des flottants">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#theoreme-de-decomposition-en-puissances-de-2" class="md-nav__link">
-    Théorème de décomposition en puissances de 2
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#methode-de-conversion" class="md-nav__link">
-    Méthode de conversion
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    Conclusion
+  <a href="#comment-faire-des-tests-degalite-sur-les-flottants" class="md-nav__link">
+    Comment faire des tests d'egalité sur les flottants ?
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#consequences-la-difficile-manipulation-des-flottants" class="md-nav__link">
-    Conséquences : la difficile manipulation des flottants
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comment-faire-des-tests-degalite-sur-les-flottants" class="md-nav__link">
-    Comment faire des tests d'egalité sur les flottants ?
-  </a>
   
 </li>
       
@@ -2629,6 +2608,21 @@
 </tr>
 </tbody>
 </table>
+<details class="question">
+<summary>Activité 1 - Introduction</summary>
+<p>Effectuer l'opération <span class="arithmatex">\(0.1 + 0.2\)</span>  avec python :</p>
+<p></p><div onclick='start_term("id7")' id="fake_id7" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id7" class="py_mk_hide"></div>
+<p>Etonnant n'est-pas ?! Ce chapitre a pour but de nous aider à y voir plus clair sur l'encodage des nombres entiers.</p>
+</details>
+<h2 id="encodage-des-reels-en-binaire">Encodage des réels en binaire<a class="headerlink" href="#encodage-des-reels-en-binaire" title="Permanent link">⚓︎</a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Théorème de décomposition en puissances de 2</p>
+<p><strong>Tous</strong> les nombres réels peuvent s'écrire comme une somme de puissances de 2 (puissances positives et négatives).</p>
+<p>Pour tout réel <span class="arithmatex">\(x \in \mathbb{R}^+\)</span>, il existe <span class="arithmatex">\(p \in \mathbb{N}\)</span> et <span class="arithmatex">\((a_p,a_{p-1},...,a_0,a_{-1},a_{-2},...)\)</span> tels que <span class="arithmatex">\(x = \sum_{i=0}^pa_i2^i+\sum_{i=1}^{+\infty}a_{-i}2^{-i}\)</span></p>
+</div>
+<div class="admonition conclu">
+<p class="admonition-title">Conversion d'un nombre réel en base 2</p>
+<p><strong>Principe</strong></p>
 <p>Le principe est l'extension du système déjà rencontré pour les nombres entiers. La partie décimale (à droite de la virgule) correspondra aux puissances négatives de 2.  </p>
 <table>
 <thead>
@@ -2670,15 +2664,8 @@
 </tbody>
 </table>
 <p><strong>Exemple :</strong> <span class="arithmatex">\(110,101_2=1 \times 2^2 + 1 \times2^1 +0 \times 2^0 + 1 \times 2^{-1} +0 \times 2^{-2}+1 \times 2^{-2} =4+2+0,5+0,125=6,625\)</span> </p>
-<h2 id="tentatives-de-conversion">Tentatives de conversion<a class="headerlink" href="#tentatives-de-conversion" title="Permanent link">⚓︎</a></h2>
-<h3 id="theoreme-de-decomposition-en-puissances-de-2">Théorème de décomposition en puissances de 2<a class="headerlink" href="#theoreme-de-decomposition-en-puissances-de-2" title="Permanent link">⚓︎</a></h3>
-<p>Tout commence bien, avec un résultat mathématique rassurant : <strong>tous</strong> les nombres réels peuvent s'écrire comme une somme de puissances de 2 (puissances positives et négatives). </p>
-<div class="admonition abstract">
-<p class="admonition-title">Théorème</p>
-<p>Pour tout réel <span class="arithmatex">\(x \in \mathbb{R}^+\)</span>, il existe <span class="arithmatex">\(p \in \mathbb{N}\)</span> et <span class="arithmatex">\((a_p,a_{p-1},...,a_0,a_{-1},a_{-2},...)\)</span> tels que <span class="arithmatex">\(x = \sum_{i=0}^pa_i2^i+\sum_{i=1}^{+\infty}a_{-i}2^{-i}\)</span></p>
-</div>
 <p>Écrire un nombre en binaire revient à calculer les coefficients <span class="arithmatex">\(a_k\)</span> (ils sont égaux à 0 ou 1). Il y en a un nombre fini pour la partie entière, mais un nombre potentiellement infini pour la partie décimale. </p>
-<h3 id="methode-de-conversion">Méthode de conversion<a class="headerlink" href="#methode-de-conversion" title="Permanent link">⚓︎</a></h3>
+<p><strong>Méthode</strong></p>
 <p>Considérons le nombre <span class="arithmatex">\(3,6875\)</span>. Il se décompose en une partie entière (3) et une partie décimale (<span class="arithmatex">\(0,6875\)</span>).</p>
 <ul>
 <li><strong>partie entière :</strong> <span class="arithmatex">\(3=11_2\)</span> </li>
@@ -2690,14 +2677,12 @@
 </ul>
 <p>On prend ensuite le chiffre des unités de tous les nombres obtenus : 1011</p>
 <p>Donc <span class="arithmatex">\(3,6875=11,1011_2\)</span></p>
-<div class="admonition abstract">
-<p class="admonition-title">Exercice 1</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Donner l'écriture binaire de 20,875.</p>
 </div>
-<div class="tabbed-block">
+<details class="question">
+<summary>Activité 1 - Conversion d'un réel en binaire</summary>
+<p>Donner l'écriture binaire de 20,875.</p>
+<details class="tip">
+<summary>Réponse</summary>
 <ul>
 <li>partie entière : <span class="arithmatex">\(20 = 10100_2\)</span></li>
 <li>partie décimale :<ul>
@@ -2708,18 +2693,10 @@
 </li>
 </ul>
 <p>Donc <span class="arithmatex">\(20,875=10100,111_2\)</span></p>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition abstract">
-<p class="admonition-title">Exercice 2</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
+</details>
 <p>Donner l'écriture binaire de 0,2.</p>
-</div>
-<div class="tabbed-block">
+<details class="tip">
+<summary>Réponse</summary>
 <ul>
 <li>partie entière : <span class="arithmatex">\(0 = 0_2\)</span></li>
 <li>partie décimale :<ul>
@@ -2733,17 +2710,20 @@
 </li>
 </ul>
 <p>Le nombre 0,2 n'admet pas d'écriture binaire <strong>finie</strong>.</p>
-</div>
-</div>
-</div>
-</div>
-<h3 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">⚓︎</a></h3>
+</details>
+</details>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
 <p>Certains nombres n'admettent pas une écriture binaire <strong>finie</strong>. Or la mémoire d'un ordinateur, quelqu'il soit, est toujours finie. Certains nombres ne peuvent donc pas être représentés correctement en machine : c'est une impossibilité théorique. Cela amène à des comportements étranges : </p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span>
 <span class="mf">0.30000000000000004</span>
 </code></pre></div>
-<p><strong>Remarque :</strong> parmi les nombres décimaux à un chiffre après la virgule (0,1  0,2  0,3 ...) seul 0,5 admet une écriture binaire finie ! Tous les autres ont une représentation en machine qui n'en donne qu'une valeur approchée.</p>
-<h2 id="consequences-la-difficile-manipulation-des-flottants">Conséquences : la difficile manipulation des flottants<a class="headerlink" href="#consequences-la-difficile-manipulation-des-flottants" title="Permanent link">⚓︎</a></h2>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Remarque</p>
+<p>Parmi les nombres décimaux à un chiffre après la virgule (0,1  0,2  0,3 ...) seul 0,5 admet une écriture binaire finie ! Tous les autres ont une représentation en machine qui n'en donne qu'une valeur approchée.</p>
+</div>
+<h2 id="la-difficile-manipulation-des-flottants">La difficile manipulation des flottants<a class="headerlink" href="#la-difficile-manipulation-des-flottants" title="Permanent link">⚓︎</a></h2>
 <p>En python, les nombres non entiers sont du type <strong>float</strong>. </p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
 <span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">float</span><span class="s1">'&gt;</span>
@@ -2752,8 +2732,11 @@
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mf">0.5</span><span class="o">-</span><span class="mf">0.2</span><span class="o">-</span><span class="mf">0.2</span><span class="o">-</span><span class="mf">0.1</span>
 <span class="o">-</span><span class="mf">2.7755575615628914e-17</span>
 </code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Annectode</p>
 <p>En 1991, durant la Guerre du Golfe, un missile anti-missile américain a raté sa cible de 500 mètres car son ordinateur interne émettait un signal toutes les 0.1 secondes. Au bout de 100 heures de fonctionnement, l'approximation du nombre flottant 0.1 a conduit à un décalage de 0,34 secondes, ce qui lui a fait rater sa cible. (<a href="http://www-users.math.umn.edu/~arnold//disasters/patriot.html">source</a>)</p>
-<h2 id="comment-faire-des-tests-degalite-sur-les-flottants">Comment faire des tests d'egalité sur les flottants ?<a class="headerlink" href="#comment-faire-des-tests-degalite-sur-les-flottants" title="Permanent link">⚓︎</a></h2>
+</div>
+<h3 id="comment-faire-des-tests-degalite-sur-les-flottants">Comment faire des tests d'egalité sur les flottants ?<a class="headerlink" href="#comment-faire-des-tests-degalite-sur-les-flottants" title="Permanent link">⚓︎</a></h3>
 <p>Première réponse : <strong>ON N'EN FAIT PAS</strong>.</p>
 <p>Si <code>a</code> et <code>b</code> sont deux flottants, le test classique</p>
 <div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span> <span class="p">:</span>
@@ -2790,16 +2773,13 @@
 <p>renverra
 </p><div class="highlight"><pre><span></span><code>a et b sont égaux
 </code></pre></div>
-<div class="admonition abstract">
-<p class="admonition-title">Exercice</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Énoncé</label><label for="__tabbed_3_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
+<details class="question">
+<summary>Activité 2 - Résolution d'équation</summary>
 <p>On considère la fonction <span class="arithmatex">\(f(x)=x^3-6x+2\)</span>. <br>
 L'équation <span class="arithmatex">\(f(x)=1\)</span> admet une solution unique dans l'intervalle <span class="arithmatex">\([0;1]\)</span>.<br>
 Trouver une valeur approchée de cette solution à <span class="arithmatex">\(10^{-5}\)</span> près. On prendra <code>e</code><span class="arithmatex">\(=0,001\)</span>.</p>
-</div>
-<div class="tabbed-block">
+<details class="tip">
+<summary>Correction</summary>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">6</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
 
@@ -2809,10 +2789,8 @@ Trouver une valeur approchée de cette solution à <span class="arithmatex">\(10
     <span class="n">a</span> <span class="o">+=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </code></pre></div>
-</div>
-</div>
-</div>
-</div></div>
+</details>
+</details></div>
 
 
 

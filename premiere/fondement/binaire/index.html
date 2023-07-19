@@ -2901,7 +2901,7 @@ qui ne contient que <strong>deux éléments</strong> notés <strong>0 et 1</stro
 </div>
 </div>
 <details class="question">
-<summary>Activité 1</summary>
+<summary>Activité 1 - Combinaison de portes logiques</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Réponse</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3022,11 +3022,13 @@ Constituer les portes <code>NON OU</code> et <code>NON ET</code> et en établir 
 </div>
 </div>
 </details>
-<div class="admonition info">
-<p class="admonition-title">Application : l'additionneur</p><p>En combinant les portes logiques, on obtient des circuits plus complexes. Par exemple en combinant 2 portes "OU EXCLUSIF", 2 portes "ET" et une porte "OU" on obtient un additionneur, qui permet d'additionner 2 bits (E1 et E2) en tenant compte de la retenue entrante (C0). En sortie on obtient le résultat de l'addition (S) et la retenue sortante ("C1").</p>
-<p></p><div style="width: 100%; height: 300px">
-    <logic-editor mode="tryout">
-        <script type="application/json">
+<details class="question">
+<summary>Activité 2 - Table de vérité d'un additionneur</summary>
+<div class="highlight"><pre><span></span><code>En combinant les portes logiques, on obtient des circuits plus complexes. Par exemple en combinant 2 portes "OU EXCLUSIF", 2 portes "ET" et une porte "OU" on obtient un additionneur, qui permet d'additionner 2 bits (E1 et E2) en tenant compte de la retenue entrante (C0). En sortie on obtient le résultat de l'addition (S) et la retenue sortante ("C1").
+
+&lt;div style="width: 100%; height: 300px"&gt;
+    &lt;logic-editor mode="tryout"&gt;
+        &lt;script type="application/json"&gt;
         { // JSON5
             v: 6,
             components: {
@@ -3048,85 +3050,30 @@ Constituer les portes <code>NON OU</code> et <code>NON ET</code> et en établir 
             },
             wires: [[13, 19, {via: [[170, 115]]}], [13, 21, {via: [[170, 115]]}], [17, 18], [17, 22], [14, 16, {via: [[110, 95]]}], [14, 24, {via: [[110, 95]]}], [12, 25, {via: [[80, 40, 's'], [80, 200, 's']]}], [12, 15, {via: [[80, 40]]}], [20, 0], [23, 27], [26, 28], [29, 1]]
         }
-        </script>
-    </logic-editor>
-</div>
-<p>Table de vérité :</p>
-<table>
-<thead>
-<tr>
-<th align="center">E1</th>
-<th align="center">E2</th>
-<th align="center">C0</th>
-<th align="center">C1</th>
-<th align="center">S1</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">1</td>
-</tr>
-<tr>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">1</td>
-</tr>
-<tr>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">1</td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center">1</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Remarque</p>
-<p>En combinant plusieurs fois le type de circuit décrit ci-dessus, on obtient des additionneurs capables d'additionner des nombres sur X bits.</p>
-</div>
+        &lt;/script&gt;
+    &lt;/logic-editor&gt;
+&lt;/div&gt;
 
-</div>
+**Question** : Constituer la table de vérité de S1 et C1 en fonction de E1, E2 et C0.
+
+??? tip "Réponse"
+    Table de vérité :
+
+    |E1|    E2|     C0|     C1|     S1|
+    |:-:|:-:|:-:|:-:|:-:|
+    |0|     0|  0 | 0   |0|
+    |0|     0|  1 | 0   |1|
+    |0|     1|  0 | 0   |1|
+    |0|     1|  1 | 1   |0|
+    |1|     0|  0|  0   |1|
+    |1|     0|  1   |1  |0|
+    |1|     1|  0 | 1   |0|
+    |1|     1|  1|  1   |1|
+
+    !!! note "Remarque" 
+        En combinant plusieurs fois le type de circuit décrit ci-dessus, on obtient des additionneurs capables d'additionner des nombres sur X bits.
+</code></pre></div>
+</details>
 <div class="admonition python">
 <p class="admonition-title">La logique booléene en Python</p>
 <p>Les opérateurs <code>and</code>, <code>or</code> et <code>not</code> sont utilisables pour tester des conditions, et renvoient <code>False</code> ou <code>True</code>.
@@ -3158,9 +3105,11 @@ Constituer les portes <code>NON OU</code> et <code>NON ET</code> et en établir 
 <span class="o">&gt;&gt;&gt;</span> <span class="mi">12</span> <span class="o">^</span> <span class="mi">5</span>
 <span class="mi">9</span>
 </code></pre></div>
-<p>Pour comprendre ces résultats, il faut travailler en binaire :
-- Les nombre binaires sont précédés de <code>0b</code>.
-- La fonction bin(n) convertit un nombre entier en binaire.</p>
+<p>Pour comprendre ces résultats, il faut travailler en binaire :</p>
+<ul>
+<li>Les nombre binaires sont précédés de <code>0b</code>.</li>
+<li>La fonction <code>bin(n)</code> convertit un nombre entier en binaire.</li>
+</ul>
 <p>Voici les mêmes calculs, qui peuvent mieux s'annalyser en prenant les bits un à un :</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># calcul A</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="mb">0b1100</span> <span class="o">&amp;</span> <span class="mb">0b111</span><span class="p">)</span>
@@ -3175,15 +3124,11 @@ Constituer les portes <code>NON OU</code> et <code>NON ET</code> et en établir 
 <span class="s1">'0b1011'</span>
 </code></pre></div>
 <strong>A toi de jouer !</strong>
-<div onclick='start_term("id10")' id="fake_id10" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id10" class="py_mk_hide"></div>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Du transistor aux circuits logiques complexes</p>
-<p>A la base de l'informatique, nous avons le transistor, composant muni de 2 entrées et une sortie. Une combinaison de transistors (sous forme de circuit intégré) permet d'obtenir des circuits logiques, la combinaison de circuits logiques permet d'obtenir des circuits plus complexes (exemple : l'additionneur), et ainsi de suite...</p>
+<div onclick='start_term("id8")' id="fake_id8" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id8" class="py_mk_hide"></div>
 </div>
 <details class="question">
-<summary>Activité 2</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Énoncé</label><label for="__tabbed_3_2">Correction</label></div>
+<summary>Activité 3</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Énoncé</label><label for="__tabbed_3_2">Réponse</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Effectuer les opérations suivantes.
@@ -3221,7 +3166,11 @@ Constituer les portes <code>NON OU</code> et <code>NON ET</code> et en établir 
 </div>
 </div>
 </div>
-</details></div>
+</details>
+<div class="admonition conclu">
+<p class="admonition-title">Du transistor aux circuits logiques complexes</p>
+<p>A la base de l'informatique, nous avons le transistor, composant muni de 2 entrées et une sortie. Une combinaison de transistors (sous forme de circuit intégré) permet d'obtenir des circuits logiques, la combinaison de circuits logiques permet d'obtenir des circuits plus complexes (exemple : l'additionneur), et ainsi de suite...</p>
+</div></div>
 
 
 
