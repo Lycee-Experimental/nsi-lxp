@@ -1,4 +1,8 @@
-# Sujets de NSI
+---
+hide:
+  -navigation
+---
+# Sujets bac de NSI
 
 ??? abstract "Première"
     Tous les sujets de la banque officielle des **QCM** sont ici :

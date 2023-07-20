@@ -14,6 +14,9 @@ theme:
   custom_dir: my_theme_customizations/
   font: false
   language: fr
+  font:
+    text: Roboto
+    code: Roboto Mono
   palette:
       - media: "(prefers-color-scheme: light)"
         scheme: default
@@ -122,8 +125,9 @@ extra_css:
   - xtra/stylesheets/extra.css # mes ajustements
 
 nav:
+  - intro.md
   - Fondements:
-      - 1️⃣ Introduction: premiere/fondement/index.md
+      - premiere/fondement/index.md
       - 1️⃣ Histoire de l'informatique: premiere/fondement/histoire.md
       - 1️⃣ Binaire et portes logiques: premiere/fondement/binaire.md
       - 1️⃣ Architecture matérielle: premiere/fondement/materiel.md
@@ -199,26 +203,14 @@ nav:
       - 🇹 Recherche textuelle: terminale/textuel.md
 
 
-  - Ressources: 
-    - Ressources: premiere/ressources.md
-    - Outils: 
-        - Accueil: outils/index.md
-        - Terminal Linux: outils/v86.md
-        - Python en ligne: 
-            - "Terminal ▶️ et IDE 🖥 dans MkDocs": outils/pyodide/index.md
-            - "Guide du Terminal ⌨️": outils/pyodide/install_term.md
-            - "Guide de l'IDE 🐍": outils/pyodide/install_ide.md
-            - "Avancé ⭐️": outils/pyodide/advanced.md
-            - "Bac à sable 🧾": outils/pyodide/sandbox.md
-            - "Exemple pratique 🏖": outils/pyodide/redimensionner/sujet.md
-        - "QCM en MkDocs ✅❌": outils/qcm/qcm.md
+  - Ressources: ressources/index.md
   - Projets:
     - Introduction: projets/index.md
-    - Les bases de Git:
+    - Le dépot Git du LXP:
       - Présentation: projets/git/presentation.md
       - Utilisation: projets/git/utilisation.md
       - Commandes: projets/git/commandes.md
-    - Django:
+    - Django-LXP:
       - Pycharm & Django-Lxp:
         - Installation de Pycharm: projets/djangolxp/install-pycharm.md
         - Déploiement Django-lxp: projets/djangolxp/deploiement-local.md
@@ -229,7 +221,7 @@ nav:
         - Afficher/filtrer les listes d'élèves: projets/djangolxp/tableau-filtre.md
     - Renpy:
       - Décompiler un jeu: projets/renpy/decompile.m
-    - DrumXP:
+    - Drum-LXP:
       - Introduction: projets/drumxp/intro.md
       - Électronique: projets/drumxp/elec.md
       - Programmation: projets/drumxp/progra.md

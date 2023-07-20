@@ -89,4 +89,4 @@ label {display: flex;}
 span.label {width: 50%; text-align: right;}
 </style>
 
-<script src="/info/outils/subnet.js"></script>
+<script src="/xtra/javascripts/subnet.js"></script>

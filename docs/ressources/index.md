@@ -1,3 +1,8 @@
+---
+hide:
+  -navigation
+---
+
 # Ressources pour la NSI
 
 === "Sites de profs"

@@ -1,4 +1,4 @@
-# Introduction
+# L'encodage des données
 
 Comme nous l'avons vu dans le chapitre sur les [fondements](./../fondement) de l'informatique, les ordinateurs ont besoin de **numériser** de l'information.
 
