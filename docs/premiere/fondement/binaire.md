@@ -266,54 +266,54 @@ Les transistors effectuent des **opérations booléennes** directement liées à
 		|1 |	1 |	0 |
 
 {{exercice(titre="Table de vérité d'un additionneur")}}
-		En combinant les portes logiques, on obtient des circuits plus complexes. Par exemple en combinant 2 portes "OU EXCLUSIF", 2 portes "ET" et une porte "OU" on obtient un additionneur, qui permet d'additionner 2 bits (E1 et E2) en tenant compte de la retenue entrante (C0). En sortie on obtient le résultat de l'addition (S) et la retenue sortante ("C1").
+	En combinant les portes logiques, on obtient des circuits plus complexes. Par exemple en combinant 2 portes "OU EXCLUSIF", 2 portes "ET" et une porte "OU" on obtient un additionneur, qui permet d'additionner 2 bits (E1 et E2) en tenant compte de la retenue entrante (C0). En sortie on obtient le résultat de l'addition (S) et la retenue sortante ("C1").
 
-		<div style="width: 100%; height: 300px">
-			<logic-editor mode="tryout">
-				<script type="application/json">
-				{ // JSON5
-					v: 6,
-					components: {
-					in0: {type: 'in', pos: [25, 40], id: 12},
-					in1: {type: 'in', pos: [25, 145], id: 13},
-					in2: {type: 'in', pos: [25, 95], id: 14},
-					xor0: {type: 'xor', pos: [150, 65], in: [15, 16], out: 17},
-					xor1: {type: 'xor', pos: [255, 75], in: [18, 19], out: 20},
-					and0: {type: 'and', pos: [255, 130], in: [21, 22], out: 23},
-					and1: {type: 'and', pos: [255, 190], in: [24, 25], out: 26},
-					or0: {type: 'or', pos: [355, 160], in: [27, 28], out: 29},
-					out0: {type: 'out', pos: [440, 90], id: 0},
-					out1: {type: 'out', pos: [440, 160], id: 1},
-					label0: {type: 'label', pos: [25, 15], text: 'E1'},
-					label1: {type: 'label', pos: [25, 70], text: 'E2'},
-					label2: {type: 'label', pos: [25, 170], text: 'C0'},
-					label3: {type: 'label', pos: [440, 65], text: 'S1'},
-					label4: {type: 'label', pos: [445, 190], text: 'C1'},
-					},
-					wires: [[13, 19, {via: [[170, 115]]}], [13, 21, {via: [[170, 115]]}], [17, 18], [17, 22], [14, 16, {via: [[110, 95]]}], [14, 24, {via: [[110, 95]]}], [12, 25, {via: [[80, 40, 's'], [80, 200, 's']]}], [12, 15, {via: [[80, 40]]}], [20, 0], [23, 27], [26, 28], [29, 1]]
-				}
-				</script>
-			</logic-editor>
-		</div>
-		
-		**Question** : Constituer la table de vérité de S1 et C1 en fonction de E1, E2 et C0.
+	<div style="width: 100%; height: 300px">
+		<logic-editor mode="tryout">
+			<script type="application/json">
+			{ // JSON5
+				v: 6,
+				components: {
+				in0: {type: 'in', pos: [25, 40], id: 12},
+				in1: {type: 'in', pos: [25, 145], id: 13},
+				in2: {type: 'in', pos: [25, 95], id: 14},
+				xor0: {type: 'xor', pos: [150, 65], in: [15, 16], out: 17},
+				xor1: {type: 'xor', pos: [255, 75], in: [18, 19], out: 20},
+				and0: {type: 'and', pos: [255, 130], in: [21, 22], out: 23},
+				and1: {type: 'and', pos: [255, 190], in: [24, 25], out: 26},
+				or0: {type: 'or', pos: [355, 160], in: [27, 28], out: 29},
+				out0: {type: 'out', pos: [440, 90], id: 0},
+				out1: {type: 'out', pos: [440, 160], id: 1},
+				label0: {type: 'label', pos: [25, 15], text: 'E1'},
+				label1: {type: 'label', pos: [25, 70], text: 'E2'},
+				label2: {type: 'label', pos: [25, 170], text: 'C0'},
+				label3: {type: 'label', pos: [440, 65], text: 'S1'},
+				label4: {type: 'label', pos: [445, 190], text: 'C1'},
+				},
+				wires: [[13, 19, {via: [[170, 115]]}], [13, 21, {via: [[170, 115]]}], [17, 18], [17, 22], [14, 16, {via: [[110, 95]]}], [14, 24, {via: [[110, 95]]}], [12, 25, {via: [[80, 40, 's'], [80, 200, 's']]}], [12, 15, {via: [[80, 40]]}], [20, 0], [23, 27], [26, 28], [29, 1]]
+			}
+			</script>
+		</logic-editor>
+	</div>
+	
+	**Question** : Constituer la table de vérité de S1 et C1 en fonction de E1, E2 et C0.
 
-		??? tip "Réponse"
-			Table de vérité :
+	??? tip "Réponse"
+		Table de vérité :
 
-			|E1| 	E2| 	C0| 	C1| 	S1|
-			|:-:|:-:|:-:|:-:|:-:|
-			|0| 	0| 	0 |	0 	|0|
-			|0| 	0| 	1 |	0 	|1|
-			|0| 	1| 	0 |	0 	|1|
-			|0| 	1| 	1 |	1 	|0|
-			|1| 	0| 	0| 	0 	|1|
-			|1| 	0| 	1 	|1 	|0|
-			|1| 	1| 	0 |	1 	|0|
-			|1| 	1| 	1| 	1 	|1|
+		|E1| 	E2| 	C0| 	C1| 	S1|
+		|:-:|:-:|:-:|:-:|:-:|
+		|0| 	0| 	0 |	0 	|0|
+		|0| 	0| 	1 |	0 	|1|
+		|0| 	1| 	0 |	0 	|1|
+		|0| 	1| 	1 |	1 	|0|
+		|1| 	0| 	0| 	0 	|1|
+		|1| 	0| 	1 	|1 	|0|
+		|1| 	1| 	0 |	1 	|0|
+		|1| 	1| 	1| 	1 	|1|
 
-			!!! note "Remarque" 
-				En combinant plusieurs fois le type de circuit décrit ci-dessus, on obtient des additionneurs capables d'additionner des nombres sur X bits.
+		!!! note "Remarque" 
+			En combinant plusieurs fois le type de circuit décrit ci-dessus, on obtient des additionneurs capables d'additionner des nombres sur X bits.
 
 
 
