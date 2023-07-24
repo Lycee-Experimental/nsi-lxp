@@ -2801,11 +2801,10 @@ Constituer les portes <code>NON OU</code> et <code>NON ET</code> et en établir 
 </details>
 <details class="question">
 <summary>Activité 2 - Table de vérité d'un additionneur</summary>
-<div class="highlight"><pre><span></span><code>En combinant les portes logiques, on obtient des circuits plus complexes. Par exemple en combinant 2 portes "OU EXCLUSIF", 2 portes "ET" et une porte "OU" on obtient un additionneur, qui permet d'additionner 2 bits (E1 et E2) en tenant compte de la retenue entrante (C0). En sortie on obtient le résultat de l'addition (S) et la retenue sortante ("C1").
-
-&lt;div style="width: 100%; height: 300px"&gt;
-    &lt;logic-editor mode="tryout"&gt;
-        &lt;script type="application/json"&gt;
+<p>En combinant les portes logiques, on obtient des circuits plus complexes. Par exemple en combinant 2 portes "OU EXCLUSIF", 2 portes "ET" et une porte "OU" on obtient un additionneur, qui permet d'additionner 2 bits (E1 et E2) en tenant compte de la retenue entrante (C0). En sortie on obtient le résultat de l'addition (S) et la retenue sortante ("C1").</p>
+<p></p><div style="width: 100%; height: 300px">
+    <logic-editor mode="tryout">
+        <script type="application/json">
         { // JSON5
             v: 6,
             components: {
@@ -2827,29 +2826,87 @@ Constituer les portes <code>NON OU</code> et <code>NON ET</code> et en établir 
             },
             wires: [[13, 19, {via: [[170, 115]]}], [13, 21, {via: [[170, 115]]}], [17, 18], [17, 22], [14, 16, {via: [[110, 95]]}], [14, 24, {via: [[110, 95]]}], [12, 25, {via: [[80, 40, 's'], [80, 200, 's']]}], [12, 15, {via: [[80, 40]]}], [20, 0], [23, 27], [26, 28], [29, 1]]
         }
-        &lt;/script&gt;
-    &lt;/logic-editor&gt;
-&lt;/div&gt;
-
-**Question** : Constituer la table de vérité de S1 et C1 en fonction de E1, E2 et C0.
-
-??? tip "Réponse"
-    Table de vérité :
-
-    |E1|    E2|     C0|     C1|     S1|
-    |:-:|:-:|:-:|:-:|:-:|
-    |0|     0|  0 | 0   |0|
-    |0|     0|  1 | 0   |1|
-    |0|     1|  0 | 0   |1|
-    |0|     1|  1 | 1   |0|
-    |1|     0|  0|  0   |1|
-    |1|     0|  1   |1  |0|
-    |1|     1|  0 | 1   |0|
-    |1|     1|  1|  1   |1|
-
-    !!! note "Remarque" 
-        En combinant plusieurs fois le type de circuit décrit ci-dessus, on obtient des additionneurs capables d'additionner des nombres sur X bits.
-</code></pre></div>
+        </script>
+    </logic-editor>
+</div>
+<p><strong>Question</strong> : Constituer la table de vérité de S1 et C1 en fonction de E1, E2 et C0.</p>
+<details class="tip">
+<summary>Réponse</summary>
+<p>Table de vérité :</p>
+<table>
+<thead>
+<tr>
+<th align="center">E1</th>
+<th align="center">E2</th>
+<th align="center">C0</th>
+<th align="center">C1</th>
+<th align="center">S1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Remarque</p>
+<p>En combinant plusieurs fois le type de circuit décrit ci-dessus, on obtient des additionneurs capables d'additionner des nombres sur X bits.</p>
+</div>
+</details>
 </details>
 <div class="admonition python">
 <p class="admonition-title">La logique booléene en Python</p>
