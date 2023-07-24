@@ -101,9 +101,9 @@ Comme vous pouvez le remarquer sur le graphique ci-dessus, à partir de 2006 env
 
 !!! info "Nombre de coeur d'un microprocesseur"
 
-   Dans un microprocesseur, un coeur est principalement composé : d'une **UAL**, de **registres** (R0, R1...) et d'une **unité de commande**. Il est donc capable d'exécuter des programmes de façon autonome. 
-
-   La miniaturisation des techniques de gravage des microprocesseurs, a permis à partiur de 2006 de graver plusieurs coeurs sur une même puce. Aujourd'hui (en 2019) on trouve sur le marché des CPU possédant jusqu'à 18 coeurs ! Même les smartphones possèdent des microprocesseurs multicoeurs : le Snapdragon 845 possède 8 coeurs.
+     Dans un microprocesseur, un coeur est principalement composé : d'une **UAL**, de **registres** (R0, R1...) et d'une **unité de commande**. Il est donc capable d'exécuter des programmes de façon autonome. 
+  
+     La miniaturisation des techniques de gravage des microprocesseurs, a permis à partiur de 2006 de graver plusieurs coeurs sur une même puce. Aujourd'hui (en 2019) on trouve sur le marché des CPU possédant jusqu'à 18 coeurs ! Même les smartphones possèdent des microprocesseurs multicoeurs : le Snapdragon 845 possède 8 coeurs.
 
 !!! warning "Attention"
-   Augmenter le nombre de coeur ne suffit pas, il faut que les applications soient développées pour pouvoir utiliser plusieurs coeurs en simultané (multi-threading) De plus, les différents coeurs du CPU doivent se "partager" l'accès à la mémoire vive : quand un coeur travaille sur une certaine zone de la RAM, cette même zone n'est pas accessible aux autres coeurs, ce qui, bien évidemment va brider les performances. Il en va de même pour l'utilisation de la mémoire cache.
+     Augmenter le nombre de coeur ne suffit pas, il faut que les applications soient développées pour pouvoir utiliser plusieurs coeurs en simultané (multi-threading) De plus, les différents coeurs du CPU doivent se "partager" l'accès à la mémoire vive : quand un coeur travaille sur une certaine zone de la RAM, cette même zone n'est pas accessible aux autres coeurs, ce qui, bien évidemment va brider les performances. Il en va de même pour l'utilisation de la mémoire cache.
