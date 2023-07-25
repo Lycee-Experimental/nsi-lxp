@@ -141,11 +141,9 @@ nav:
           - 1️⃣ Nombres réels: premiere/encodage/non-entier.md
           - 1️⃣ Caractères: premiere/encodage/caractere.md    
   - OS & Linux:
-      - 1️⃣ Introduction: premiere/linux/index.md
-      - 1️⃣ Systèmes d'exploitation: premiere/linux/os.md
-      - 1️⃣ Unix et linux: premiere/linux/linux.md
-      - 1️⃣ Installation: premiere/linux/install.md
-      - 1️⃣ Commandes linux: premiere/linux/commande.md
+      - 1️⃣ Systèmes d'exploitation: premiere/linux/index.md
+      - Installer Linux: premiere/linux/install.md
+      - 1️⃣ Commandes Unix/Linux: premiere/linux/commande.md
       - 🇹 Gestion des processus: terminale/processus.md
 
   - Réseaux:
