@@ -81,3 +81,6 @@ hide:
         env.variables["compteur_exo"] += 1
         return root
     ```
+  
+??? tool "Terminus pour apprendre les commandes linux"
+    <iframe src="/xtra/Terminus" frameborder="0" scrolling="auto" style="height: 70vh; width: 100%;"></iframe>
