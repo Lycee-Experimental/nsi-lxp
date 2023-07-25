@@ -3,8 +3,8 @@ document$.subscribe(() => {
 });
 
 // Adaptation de Logic Simulator au thème
-document.addEventListener('DOMContentLoaded', function() {
-    var body = document.body;
+$(window).on('load', function() {
+	var body = document.body;
     if (body.getAttribute('data-md-color-scheme') === 'slate') {
       Logic.setDarkMode(true);
     } else if (body.getAttribute('data-md-color-scheme') === 'default') {
@@ -18,4 +18,4 @@ document.addEventListener('DOMContentLoaded', function() {
     lightInput.addEventListener('change', function() {
       Logic.setDarkMode(false);
     });
-  });
+});

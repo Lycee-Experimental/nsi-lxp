@@ -10,7 +10,9 @@
   margin: 0 auto;
 }
 
-
+strong {
+  color: var(--md-primary-fg-color--light);
+}
 
 
 /* Admonition tool */

@@ -1266,7 +1266,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/linux/install/</loc>
+         <loc>https://nsi.lycee-experimental.org/premiere/linux/dossier/</loc>
+         <lastmod>2023-07-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/premiere/linux/linux/</loc>
+         <lastmod>2023-07-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/premiere/linux/permission/</loc>
          <lastmod>2023-07-25</lastmod>
          <changefreq>daily</changefreq>
     </url>

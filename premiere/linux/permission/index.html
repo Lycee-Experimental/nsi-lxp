@@ -10,10 +10,10 @@
       
       
       
-        <link rel="canonical" href="https://nsi.lycee-experimental.org/premiere/linux/install/">
+        <link rel="canonical" href="https://nsi.lycee-experimental.org/premiere/linux/permission/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../dossier/">
       
       
         <link rel="next" href="../commande/">
@@ -23,7 +23,7 @@
     
     
       
-        <title>Installer Linux - NSI-LXP</title>
+        <title>1️⃣ La gestion des permissions - NSI-LXP</title>
       
     
     
@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ventoy" class="md-skip">
+        <a href="#la-gestion-des-permissions-dans-le-shell" class="md-skip">
           Aller au contenu
         </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Installer Linux
+              1️⃣ La gestion des permissions
             
           </span>
         </div>
@@ -762,6 +762,10 @@
         
           
         
+          
+        
+          
+        
       
       
         
@@ -788,6 +792,34 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../linux/" class="md-nav__link">
+        1️⃣ Tester et installer Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dossier/" class="md-nav__link">
+        1️⃣ L'arborescence des dossiers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -799,68 +831,9 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Installer Linux
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
-        Installer Linux
+        1️⃣ La gestion des permissions
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#telechargement-de-ventoy" class="md-nav__link">
-    Téléchargement de Ventoy.
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation-de-exfat" class="md-nav__link">
-    Installation de ExFat
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation-de-ventoy-sur-une-cle-usb-avec-linterface-graphique-gui" class="md-nav__link">
-    Installation de Ventoy sur une clé USB avec l'interface graphique (GUI)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#telechargement-dimages-disque-iso" class="md-nav__link">
-    Téléchargement d'images disque (.iso)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#demarrage-sur-la-cle-usb" class="md-nav__link">
-    Démarrage sur la clé USB
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -874,7 +847,7 @@
   
     <li class="md-nav__item">
       <a href="../commande/" class="md-nav__link">
-        1️⃣ Commandes Unix/Linux
+        1️⃣ Les commandes Shell
       </a>
     </li>
   
@@ -2344,32 +2317,7 @@
   
 
 
-<div><h1 id="ventoy">Ventoy<a class="headerlink" href="#ventoy" title="Permanent link">⚓︎</a></h1>
-<p>Ventoy est un logiciel qui permet de configurer une clé USB pour qu'elle puisse nous permettre d'installer un nouveau système d'exploitation sur nos machines, que ce soit linux ou Windows.  </p>
-<h2 id="telechargement-de-ventoy">Téléchargement de Ventoy.<a class="headerlink" href="#telechargement-de-ventoy" title="Permanent link">⚓︎</a></h2>
-<p>Site de téléchargement : https://github.com/ventoy/Ventoy/releases</p>
-<p>Télécharger la dernière version, avec la terminaison linux.tar.gz (la version avec la terminaison windows.zip est celle pour Windows).</p>
-<p>Clic droit sur le fichier téléchargé, et faite "extraire ici" (ou en ligne de commande : tar -xzvf ventoy-*-linux.tar.gz)</p>
-<p>Le fichier est décompressé, et un répertoire est créé. On peut déplacer ce répertoire où l'on souhaite le conserver.</p>
-<h2 id="installation-de-exfat">Installation de ExFat<a class="headerlink" href="#installation-de-exfat" title="Permanent link">⚓︎</a></h2>
-<p>Ventoy a besoin du format de fichier exFat (impératif au cas où des ISO dépassent 4 Gio), qui doit donc être installé sur notre machine.
--    Linux Mint 20.x (Ubuntu 20.04) installer <strong>exfat-utils</strong>
--    Linux Mint 21.x (Ubuntu 22.04) : installer <strong>exfatprogs</strong></p>
-<h2 id="installation-de-ventoy-sur-une-cle-usb-avec-linterface-graphique-gui">Installation de Ventoy sur une clé USB avec l'interface graphique (GUI)<a class="headerlink" href="#installation-de-ventoy-sur-une-cle-usb-avec-linterface-graphique-gui" title="Permanent link">⚓︎</a></h2>
-<ul>
-<li>Ouvrir le dossier décompressé, clic droit ouvrir dans un terminal.</li>
-<li>Executer le GUI avec la commande suivante : <code>./VentoyGUI.x86_64</code></li>
-<li>Il nous est ensuite demandé le mot de passe de la machine.</li>
-<li>Choisir ensuite la clé USB sur laquelle vous voulez installer Ventoy.</li>
-</ul>
-<h2 id="telechargement-dimages-disque-iso">Téléchargement d'images disque (.iso)<a class="headerlink" href="#telechargement-dimages-disque-iso" title="Permanent link">⚓︎</a></h2>
-<p>Il suffit ensuite de télécharger des image disque de systèmes d'exploitation (OS) et de les copier sur notre clé USB. Par exemple :
-- la dernière version de <strong>Linux Mint</strong> <a href="https://mirror.crexio.com/linuxmint/isos/stable/21/linuxmint-21-cinnamon-64bit.iso">ici</a>.</p>
-<ul>
-<li><strong>Clonezilla Server (DRBL)</strong> pour le clonage d'un système sur plusieurs machines <a href="https://free.nchc.org.tw/osdn//drbl/67430/drbl-live-xfce-2.5.1-16-amd64.iso">ici</a></li>
-</ul>
-<h2 id="demarrage-sur-la-cle-usb">Démarrage sur la clé USB<a class="headerlink" href="#demarrage-sur-la-cle-usb" title="Permanent link">⚓︎</a></h2>
-<p>Selon la machine, il faut appuyer sur <strong>Echap</strong>, ou <strong>F12</strong> ou autre au démarrage pour indiquer à la machine de <strong>booter</strong> sur la clé USB. </p></div>
+<h1 id="la-gestion-des-permissions-dans-le-shell">La gestion des permissions dans le shell<a class="headerlink" href="#la-gestion-des-permissions-dans-le-shell" title="Permanent link">⚓︎</a></h1>
 
 
 
@@ -2398,7 +2346,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Précédent: 1️⃣ Systèmes d&#39;exploitation" rel="prev">
+          <a href="../dossier/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: 1️⃣ L&#39;arborescence des dossiers" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -2407,20 +2355,20 @@
                 Précédent
               </span>
               <div class="md-ellipsis">
-                1️⃣ Systèmes d'exploitation
+                1️⃣ L'arborescence des dossiers
               </div>
             </div>
           </a>
         
         
           
-          <a href="../commande/" class="md-footer__link md-footer__link--next" aria-label="Suivant: 1️⃣ Commandes Unix/Linux" rel="next">
+          <a href="../commande/" class="md-footer__link md-footer__link--next" aria-label="Suivant: 1️⃣ Les commandes Shell" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Suivant
               </span>
               <div class="md-ellipsis">
-                1️⃣ Commandes Unix/Linux
+                1️⃣ Les commandes Shell
               </div>
             </div>
             <div class="md-footer__button md-icon">
