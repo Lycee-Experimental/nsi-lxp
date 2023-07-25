@@ -29,3 +29,26 @@ Microsoft a été créée par Bill Gates et Paul Allen en 1975. Microsoft est su
 ## Apple MacOS :material-apple:
 
 Enfin pour terminer, quelques mots sur le système d'exploitation des ordinateurs de marque Apple : tous les ordinateurs d'Apple sont livrés avec le système d'exploitation macOS. Ce système macOS est un système d'exploitation UNIX, c'est donc un système d'exploitation propriétaire.
+
+
+
+??? video "Quelques ressources vidéo"
+
+    - L'OS expliqué en 3 minutes
+    ![type:video](https://www.youtube.com/embed/AcZ87MTiXr4)
+
+    - Un système d'exploitation c'est quoi ?
+
+    ![type:video](https://www.youtube.com/embed/YScMI8lsy9s)
+
+    - Histoire des systèmes d'exploitation et leurs rôles
+    
+    ![type:video](https://www.youtube.com/embed/4OhUDAtmAUo)
+
+    - Notions de compilateurs/interpréteur 
+
+    ![type:video](https://www.youtube.com/embed/4lXp_89c3RU)
+
+    - Linux et son développement 
+
+    ![type:video](https://www.youtube.com/embed/yVpbFMhOAwE)
