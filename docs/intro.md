@@ -11,15 +11,15 @@ hide:
     Il est encore en construction, et sera probablement en permanente évolution. N'hésitez à en critiquer le contenu et à me proposer des pistes d'amélioration.
 
 !!! conclu "Par où commencer ?"
-    - Les chapitres sur les [fondements de l'informatique](./premiere/fondement/) et l'[encodage des données](./premiere/encodage/) commencent à être fonctionnels et mériteraient d'être testés.
+    - Les chapitres sur les [fondements de l'informatique](/premiere/fondement/) et l'[encodage des données](/premiere/encodage/) commencent à être fonctionnels et mériteraient d'être testés.
 
     - En parallèle, une très bonne manière d'apprendre les bases du langage de programmation **Python** serait de finaliser un parcours sur le site [FutureCoder](https://fr.futurecoder.io).
 
     - Plusieurs [quiz](/outils/quiz/) sont disponibles pour tester vos connaissances sur les différents chapitres.
 
-    - Enfin, les sujets bac de la banque (1ère) et annales (Term) sont accessibles [ici](./bac/sujet/).
+    - Enfin, les sujets bac de la banque (1ère) et annales (Term) sont accessibles [ici](../bac/sujet/).
 
 ??? info "A propos de ce site"
-    Ce site a été conçu en mobilisant de nombreux [outils](./outils/) web, un grand merci à tou·te·s leurs contributeur·ices !
+    Ce site a été conçu en mobilisant de nombreux [outils](/outils/) web, un grand merci à tou·te·s leurs contributeur·ices !
 
     Je me suis parfois grandement inspiré du travail de nombreu·ses collègues, un grand merci à ell·eux de partager leur travail ! Qu'iels se sentent libre d'utiliser le mien comme iels le veulent, dès lors qu'il n'en est pas fait d'utilisation commerciale. Leurs sites sont accessibles [ici](./ressources/), merci de m'aider à tenir à jour cette liste.
