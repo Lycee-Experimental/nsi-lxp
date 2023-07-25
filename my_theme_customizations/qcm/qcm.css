@@ -22,7 +22,7 @@
 }
 
 .md-typeset code {
-  background-color: transparent;
+  /*background-color: transparent;*/
   border-radius: 0.1rem;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
