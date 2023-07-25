@@ -142,9 +142,12 @@ nav:
           - 1️⃣ Caractères: premiere/encodage/caractere.md    
   - OS & Linux:
       - 1️⃣ Systèmes d'exploitation: premiere/linux/index.md
-      - Installer Linux: premiere/linux/install.md
-      - 1️⃣ Commandes Unix/Linux: premiere/linux/commande.md
+      - 1️⃣ Tester et installer Linux: premiere/linux/linux.md
+      - 1️⃣ L'arborescence des dossiers: premiere/linux/dossier.md
+      - 1️⃣ La gestion des permissions: premiere/linux/permission.md
+      - 1️⃣ Les commandes Shell: premiere/linux/commande.md
       - 🇹 Gestion des processus: terminale/processus.md
+
 
   - Réseaux:
       - 1️⃣ Introduction: premiere/internet/index.md
