@@ -12,9 +12,7 @@ Cliquer [ici](/assets/images/distro.svg) pour admirer l'arbre généalogiques de
 
 Il est possible d'utiliser Linux avec ou sans interface graphique (Graphical User Interface - GUI).
 
-- Sans GUI, on utilise Linux "en lignes de commandes". Le [shell](./commande.md) Linux est une **invite de commande** très puissante qui permet de réaliser toutes sortes d'actions : se déplacer dans l'[arborescence](./dossier.md), créer, supprimer des fichiers, lancer des applications ou des commandes (exemple : convertir un lot d'images d'un format vers un autre), etc.
-
-Cette invite de commande est suffisante par exemple quand on doit administrer un serveur Linux, et cela demande moins de ressources qu'une interface graphique. Un des objectifs de ce chapitre est de se familiariser avec quelques [commandes de base du shell](./commande.md).
+- Sans GUI, on utilise Linux "en lignes de commandes". Le [shell](./commande.md) Linux est une **invite de commande** très puissante qui permet de réaliser toutes sortes d'actions : se déplacer dans l'[arborescence](./dossier.md), créer, supprimer des fichiers, lancer des applications ou des commandes (exemple : convertir un lot d'images d'un format vers un autre), etc. Cette invite de commande est suffisante par exemple quand on doit administrer un serveur Linux, et cela demande moins de ressources qu'une interface graphique. Un des objectifs de ce chapitre est de se familiariser avec quelques [commandes de base du shell](./commande.md).
 
 - Il existe plusieurs interfaces graphiques sous Linux, il y en a pour tous les goûts, avec différentes expériences utilisateur, et plus ou moins gourmandes en ressources. Citons par exemple : Gnome, KDE, Cinnamon, Mate, Xfce, LxQt,  Budgie, Deepin, Unity, Pantheon, Enlightenment...
 
@@ -52,7 +50,8 @@ sudo apt install exfatprogs
 
 ### Téléchargement d'images disque (.iso)
 Il suffit ensuite de télécharger des image disque de systèmes d'exploitation (OS) et de les copier sur notre clé USB. Par exemple :
-- la dernière version de **Linux Mint** [ici](https://mirror.crexio.com/linuxmint/isos/stable/21/linuxmint-21-cinnamon-64bit.iso).
+
+- la dernière version de **Linux Mint** [ici](https://www.linuxmint.com/download.php).
 
 - **Clonezilla Server (DRBL)** pour le clonage d'un système sur plusieurs machines [ici](https://free.nchc.org.tw/osdn//drbl/67430/drbl-live-xfce-2.5.1-16-amd64.iso)
 
