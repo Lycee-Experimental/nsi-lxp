@@ -178,6 +178,7 @@ Cette progression est popularisée sous le nom de **loi de Moore**, du nom du fo
 1971 - Intel 4004  
 <p class="stretch"><img src="/assets/images/intelP4004.jpg"></p>
 Intégrant 2250 transistors bipolaires, sa puissance de calcul est comparable à celle de l'ENIAC (1946) qui occupait 167m<sup>2</sup>...
+
 -----
 ## Démocratisation des ordinateurs personnels
 ---
@@ -186,32 +187,33 @@ Dans les années 1950, les firmes DEC, BULL et surtout IBM développent les prem
 ---
 ## Informatique mobile
 Avec l'essor du réseau Internet et de ses applications comme le Web et l'explosion des télécommunications mobiles, les objets se transforment en ordinateurs : smartphones, objets connectés,...
+
 -----
-## Les systèmes d'exploitation
+## Les systèmes d'exploitation (OS)
 ---
 ## 1970-1990
-Développement du système unix (laboratoire Bells) par notamment Ken Thomson et Dennis Ritchie.
+Développement du système **Unix** (laboratoire Bells) par notamment Ken Thomson et Dennis Ritchie.
 ---
 ## 1980--1990
-Développement du système ms-dos (Microsoft)
+Développement du système **ms-dos** (Microsoft)
 ---
 ## 1983
-Projet de création d'un système d'exploitation libre semblable à unix (Richard Stallman). C'est le projet GNU.
+Projet de création d'un système d'exploitation libre semblable à unix (Richard Stallman). C'est le projet **GNU**.
 ---
-## 1990
-Développement progressif de Windows (Microsoft)
+## A partir de 1990
+Développement progressif de **Windows** (Microsoft)
 ---
 ## 1991
 Linus Torvalds alors étudiant se lance dans le développement d'un système d'exploitation *open source*.
 ---
-## 1992
-Développement rapide de Linux qui est associé à des applications du projet gnu. On devrait donc parler de GNU-Linux.
+## A partir de 1992
+Développement rapide de **Linux** qui est associé à des applications du projet gnu. On devrait donc parler de **GNU-Linux**.
 ---
 ## 2001
-Apple démarre le développement de MacOS sur la base du système bsd, lui-même une variante d'unix.
+Apple démarre le développement de **MacOS** sur la base du système bsd, lui-même une variante d'unix.
 ---
 ## 2008
-Google crée et diffuse le système d'exploitation Android pour téléphone. Ce système utilise le noyau du système Linux.
+Google crée et diffuse le système d'exploitation **Android** pour téléphone. Ce système utilise le noyau du système Linux.
 -----
 
 ## Le web
