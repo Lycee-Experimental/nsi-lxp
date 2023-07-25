@@ -32,8 +32,24 @@
           mask-image: var(--md-admonition-icon--tool);
 }
 
-
-
+/* Admonition video */
+:root {
+  --md-admonition-icon--video: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="m392-313 260-169-260-169v338ZM140-160q-24 0-42-18t-18-42v-520q0-24 18-42t42-18h680q24 0 42 18t18 42v520q0 24-18 42t-42 18H140Zm0-60h680v-520H140v520Zm0 0v-520 520Z"/></svg>')
+}
+.md-typeset .admonition.video,
+.md-typeset details.video {
+  border-color: rgb(201, 29, 29);
+}
+.md-typeset .video > .admonition-title,
+.md-typeset .video > summary {
+  background-color: rgba(181, 47, 47, 0.1);
+}
+.md-typeset .video > .admonition-title::before,
+.md-typeset .video > summary::before {
+  background-color: rgb(201, 29, 29);
+  -webkit-mask-image: var(--md-admonition-icon--video);
+          mask-image: var(--md-admonition-icon--video);
+}
 
 
 
