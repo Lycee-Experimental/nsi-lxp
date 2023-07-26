@@ -116,9 +116,7 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
     <a href="../../.." title="NSI-LXP" class="md-header__button md-logo" aria-label="NSI-LXP" data-md-component="logo">
       
@@ -221,8 +219,14 @@
     
   </nav>
   
+</header>
     
+    <div class="md-container" data-md-component="container">
       
+      
+        
+          
+            
 <nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
@@ -412,13 +416,7 @@
     </ul>
   </div>
 </nav>
-    
-  
-</header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -849,11 +847,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installer-linux-avec-ventoy" class="md-nav__link">
-    Installer Linux avec Ventoy
+  <a href="#installer-ou-tester-linux-avec-ventoy" class="md-nav__link">
+    Installer ou tester Linux avec Ventoy
   </a>
   
-    <nav class="md-nav" aria-label="Installer Linux avec Ventoy">
+    <nav class="md-nav" aria-label="Installer ou tester Linux avec Ventoy">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -887,6 +885,20 @@
           <li class="md-nav__item">
   <a href="#demarrage-sur-la-cle-usb" class="md-nav__link">
     Démarrage sur la clé USB
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choix-du-systeme-sur-lequel-demarrer" class="md-nav__link">
+    Choix du système sur lequel démarrer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
   </a>
   
 </li>
@@ -2412,25 +2424,33 @@
 
 <div><h1 id="tester-et-installer-linux">Tester et installer Linux<a class="headerlink" href="#tester-et-installer-linux" title="Permanent link">⚓︎</a></h1>
 <h2 id="des-centaines-de-distributions">Des centaines de distributions<a class="headerlink" href="#des-centaines-de-distributions" title="Permanent link">⚓︎</a></h2>
-<p>Le noyau GNU-Linux est ditribué dans de très nombreuses versions d'OS. On appelle <strong>distribution</strong> chacune de ces versions, certaines dérivant les unes des autres. Par exemple la distribution utilisée au Lycée Xp, <strong>Linux Mint</strong>, est dérivée d'<strong>Ubuntu</strong>, elle même dérivée de <strong>Debian</strong>.</p>
-<p>Le site <a href="https://distrowatch.com">Distrowatch</a> permet de se tenir au courrant des nouveautés de centaines de distributions.</p>
-<p>Cliquer <a href="/assets/images/distro.svg">ici</a> pour admirer l'arbre généalogiques des principales distributions.</p>
+<p>Le <strong>noyau GNU-Linux</strong> est ditribué dans de très nombreuses versions d'OS. On appelle <strong>distribution</strong> chacune de ces versions, certaines dérivant les unes des autres. Par exemple la distribution utilisée au Lycée XP, <strong>Linux Mint</strong>, est dérivée d'<strong>Ubuntu</strong>, elle même dérivée de <strong>Debian</strong>.</p>
+<p>Le site <strong><a href="https://distrowatch.com">Distrowatch</a></strong> permet de se tenir au courrant des nouveautés de centaines de distributions Linux. Vous pourrez ensuite en télécharger les <strong>images</strong> (fichiers <code>.iso</code>) sur les site de chaque distrib, pour ensuite les installer sur votre ordinateur ou les tester sur une <strong>clé USB bootable</strong>.</p>
+<p><a href="/assets/images/distro.svg">Cliquer ici</a> pour admirer l'arbre généalogiques des principales distributions.</p>
 <h2 id="avec-ou-sans-interface-graphique">Avec ou sans interface graphique<a class="headerlink" href="#avec-ou-sans-interface-graphique" title="Permanent link">⚓︎</a></h2>
-<p>Il est possible d'utiliser Linux avec ou sans interface graphique (Graphical User Interface - GUI).</p>
+<p>Il est possible d'utiliser Linux avec ou sans <strong>interface graphique</strong> (Graphical User Interface - <strong>GUI</strong>).</p>
 <ul>
 <li>
-<p>Sans GUI, on utilise Linux "en lignes de commandes". Le <a href="../commande/">shell</a> Linux est une <strong>invite de commande</strong> très puissante qui permet de réaliser toutes sortes d'actions : se déplacer dans l'<a href="../dossier/">arborescence</a>, créer, supprimer des fichiers, lancer des applications ou des commandes (exemple : convertir un lot d'images d'un format vers un autre), etc. Cette invite de commande est suffisante par exemple quand on doit administrer un serveur Linux, et cela demande moins de ressources qu'une interface graphique. Un des objectifs de ce chapitre est de se familiariser avec quelques <a href="../commande/">commandes de base du shell</a>.</p>
+<p>Sans GUI, on utilise Linux "en lignes de commandes". On appelle <a href="../commande/">shell</a> l'<strong>invite de commande</strong> qui permet de réaliser toutes sortes d'actions : se déplacer dans l'<a href="../dossier/">arborescence</a>, créer, supprimer des fichiers, lancer des applications ou des commandes (exemple : convertir un lot d'images d'un format vers un autre), etc. Cette invite de commande est suffisante par exemple quand on doit administrer un serveur Linux, et cela demande moins de ressources qu'une interface graphique. Un des objectifs de ce chapitre est de se familiariser avec quelques <a href="../commande/">commandes de base du shell</a>.</p>
 </li>
 <li>
 <p>Il existe plusieurs interfaces graphiques sous Linux, il y en a pour tous les goûts, avec différentes expériences utilisateur, et plus ou moins gourmandes en ressources. Citons par exemple : Gnome, KDE, Cinnamon, Mate, Xfce, LxQt,  Budgie, Deepin, Unity, Pantheon, Enlightenment...</p>
 </li>
 </ul>
+<div class="admonition info">
+<p class="admonition-title">Au LXP on utilise Cinnamon avec Linux Mint</p>
+</div>
 <h2 id="tester-linux">Tester Linux<a class="headerlink" href="#tester-linux" title="Permanent link">⚓︎</a></h2>
 <ul>
-<li>Il est possible de tester linux directement en ligne à partir du site <a href="https://distrosea.com">Distosea</a>.</li>
+<li>
+<p>Il est possible de tester linux directement en ligne à partir du site <a href="https://distrosea.com">Distosea</a>.</p>
+</li>
+<li>
+<p>Il est aussi possible de démarrer un système sur une clé USB sans avoir à l'installer. On parle alors de <strong>clé USB bootable</strong>. <strong>Ventoy</strong> est un logiciel qui permet de créer de telles clés et d'e pouvoir tester/installer plusieurs distributions à partir de la même clé.</p>
+</li>
 </ul>
-<h2 id="installer-linux-avec-ventoy">Installer Linux avec Ventoy<a class="headerlink" href="#installer-linux-avec-ventoy" title="Permanent link">⚓︎</a></h2>
-<p>Ventoy est un logiciel qui permet de configurer une clé USB pour qu'elle puisse nous permettre d'installer un nouveau système d'exploitation sur nos machines, que ce soit linux ou Windows.  </p>
+<h2 id="installer-ou-tester-linux-avec-ventoy">Installer ou tester Linux avec Ventoy<a class="headerlink" href="#installer-ou-tester-linux-avec-ventoy" title="Permanent link">⚓︎</a></h2>
+<p>Ventoy est un logiciel qui permet de configurer une clé USB pour qu'elle puisse nous permettre de tester, ou d'installer un nouveau système d'exploitation sur nos machines, que ce soit linux ou Windows.  </p>
 <h3 id="telechargement-de-ventoy">Téléchargement de Ventoy.<a class="headerlink" href="#telechargement-de-ventoy" title="Permanent link">⚓︎</a></h3>
 <p><a href="https://github.com/ventoy/Ventoy/releases">Télécharger</a> la dernière version compatible avec votre système d'exploitation.</p>
 <h4 id="avec-linux">Avec Linux<a class="headerlink" href="#avec-linux" title="Permanent link">⚓︎</a></h4>
@@ -2443,15 +2463,23 @@
 </li>
 </ul>
 <h3 id="installation-de-exfat">Installation de ExFat<a class="headerlink" href="#installation-de-exfat" title="Permanent link">⚓︎</a></h3>
-<p>Ventoy a besoin du format de fichier exFat (impératif au cas où des ISO dépassent 4 Gio), qui doit donc être installé sur notre machine.</p>
+<p>Ventoy a besoin du format de fichier exFat (impératif au cas où des ISO dépassent 4 Gio, c'est le cas des iso Windows), qui doit donc être installé sur notre machine.</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>exfatprogs
 </code></pre></div>
 <h3 id="installation-de-ventoy-sur-une-cle-usb-avec-linterface-graphique-gui">Installation de Ventoy sur une clé USB avec l'interface graphique (GUI)<a class="headerlink" href="#installation-de-ventoy-sur-une-cle-usb-avec-linterface-graphique-gui" title="Permanent link">⚓︎</a></h3>
 <ul>
-<li>Ouvrir le dossier décompressé, clic droit ouvrir dans un terminal.</li>
-<li>Executer le GUI avec la commande suivante : <code>./VentoyGUI.x86_64</code></li>
-<li>Il nous est ensuite demandé le mot de passe de la machine.</li>
-<li>Choisir ensuite la clé USB sur laquelle vous voulez installer Ventoy.</li>
+<li>
+<p>Ouvrir le dossier décompressé, clic droit ouvrir dans un terminal.</p>
+</li>
+<li>
+<p>Executer le GUI avec la commande suivante : <code>./VentoyGUI.x86_64</code></p>
+</li>
+<li>
+<p>Il nous est ensuite demandé le mot de passe de la machine.</p>
+</li>
+<li>
+<p>Choisir ensuite la clé USB sur laquelle vous voulez installer Ventoy.</p>
+</li>
 </ul>
 <h3 id="telechargement-dimages-disque-iso">Téléchargement d'images disque (.iso)<a class="headerlink" href="#telechargement-dimages-disque-iso" title="Permanent link">⚓︎</a></h3>
 <p>Il suffit ensuite de télécharger des image disque de systèmes d'exploitation (OS) et de les copier sur notre clé USB. Par exemple :</p>
@@ -2464,7 +2492,12 @@
 </li>
 </ul>
 <h3 id="demarrage-sur-la-cle-usb">Démarrage sur la clé USB<a class="headerlink" href="#demarrage-sur-la-cle-usb" title="Permanent link">⚓︎</a></h3>
-<p>Selon la machine, il faut appuyer sur <strong>Echap</strong>, ou <strong>F12</strong> ou autre au démarrage pour indiquer à la machine de <strong>booter</strong> sur la clé USB. </p></div>
+<p>Selon la machine, il faut appuyer sur <strong>Echap</strong>, ou <strong>F12</strong> ou autre au démarrage pour indiquer à la machine de <strong>booter</strong> sur la clé USB. </p>
+<h3 id="choix-du-systeme-sur-lequel-demarrer">Choix du système sur lequel démarrer<a class="headerlink" href="#choix-du-systeme-sur-lequel-demarrer" title="Permanent link">⚓︎</a></h3>
+<p>Le menu de Ventoy s'affichera alors, avec le choix des système sur lequel on souhaite démarrer (on peut utiliser l'angliscisme "booter").
+On peut alors tester le système.</p>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">⚓︎</a></h3>
+<p>On doit la plupars du temps cliquer sur l'icone d'installation du bureau pour lancer la procédure d'installation propre à chaque OS.</p></div>
 
 
 
@@ -2567,7 +2600,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.tracking", "navigation.top", "navigation.footer", "toc.integrate", "navigation.indexes", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.tracking", "navigation.top", "navigation.footer", "toc.integrate", "navigation.indexes", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.d3305f47.min.js"></script>
