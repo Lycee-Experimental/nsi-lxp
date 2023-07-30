@@ -50,7 +50,6 @@ theme:
     - content.code.copy
     
 markdown_extensions:
-  - meta
   - abbr
   - def_list # Les listes de définition.
   - attr_list # Un peu de CSS et des attributs HTML.
@@ -76,6 +75,9 @@ markdown_extensions:
           class: python
           format: !!python/name:custom_fences.custom_formatter
           no-paragraph: true
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.keys: # Touches du clavier.  ++ctrl+d++
       separator: "\uff0b"
   - pymdownx.emoji: # Émojis  :boom:
@@ -143,12 +145,10 @@ nav:
   - OS & Linux:
       - 1️⃣ Systèmes d'exploitation: premiere/linux/index.md
       - 1️⃣ Tester et installer Linux: premiere/linux/linux.md
+      - 1️⃣ Les commandes Shell: premiere/linux/commande.md
       - 1️⃣ L'arborescence des dossiers: premiere/linux/dossier.md
       - 1️⃣ La gestion des permissions: premiere/linux/permission.md
-      - 1️⃣ Les commandes Shell: premiere/linux/commande.md
       - 🇹 Gestion des processus: terminale/processus.md
-
-
   - Réseaux:
       - 1️⃣ Introduction: premiere/internet/index.md
       - 1️⃣ Histoire d'internet: premiere/internet/histoire.md
