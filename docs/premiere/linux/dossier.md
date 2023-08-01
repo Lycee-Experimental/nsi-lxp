@@ -1,13 +1,11 @@
 # Arborescence du système de fichiers Unix / GNU-Linux
 
-Dans les systèmes de type Unix / GNU-Linux, nous avons un système de fichier en **arborescence**. 
+Dans les systèmes de type Unix (dont GNU-Linux), le système de fichier est dit en **arborescence**, car ce système de fichier ressemble à un arbre à l'envers. La base de l'arbre s'appelle la **racine** (root) de l'arborescence et se représente par un simple `/`.
 
-On parle d'arborescence, car ce système de fichier ressemble à un arbre à l'envers. La base de l'arbre s'appelle la **racine** (root) de l'arborescence et se représente par un simple `/`.
-
-Dans le schéma ci-dessous on trouve des **répertoires** (entourés d'un rectangle sur le schéma) et des **fichiers** (entourés d'ovales).
+Le schéma ci-dessous représente les principaux **répertoires** (entourés d'un rectangle sur le schéma) et **fichiers** (entourés d'ovales) de l'arborescence GNU-Linux.
 
 !!! note "Remarque"
-    Il n'est pas nécessaire de connaitre le détail de l'arborescence GNU-Linux, mais il faut en connaitre le principe et déterminer le chemins **absolus** et **relatifs** d'un répertoire ou d'un fichier. Ci-dessous, à titre d'information, le détail des fonctions des principaux répertoires.
+    Il n'est pas nécessaire de connaitre le détail de l'arborescence GNU-Linux, mais il faut en connaitre le principe, et savoir déterminer le chemins **absolus** et **relatifs** d'un répertoire ou d'un fichier. Ci-dessous, à titre d'information, le détail des fonctions des principaux répertoires.
 
 <style>
   .mermaidTooltip {
@@ -87,22 +85,28 @@ Dans le schéma ci-dessous on trouve des **répertoires** (entourés d'un rectan
     M --> MA([.bashrc])
     click MA callback "Fichier présent dans le dossier /home/.. de chaque utilisateur. Contient des scripts à lancer au démarrage de la session."
     L --> N[luna]
-    N --> NA[Images]
-    NA --> NB([donjon.jpg])
-    NA --> NC[photo_vrac]
-    L --> O[marius]
-    O --> OA[Documents]
-    OA --> OB([monGrandOral.odt])
-    O --> OC[boulot]
-    OC --> OD([TODO.txt])
 ```
 
 
 !!! conclu "Chemins relatifs et absolus"
     Pour indiquer la position d'un fichier (ou d'un répertoire) dans l'arborescence, il existe 2 méthodes : indiquer un **chemin absolu** ou indiquer un **chemin relatif**.
 
+    ```mermaid
+        graph TD
+        A["/"] --> B[home]
+        B --> C[luna]
+        B --> D[davy]
+        C --> NA[Images]
+        NA --> NB([donjon.jpg])
+        NA --> NC[photo_vrac]
+        B --> O[marius]
+        O --> OA[Documents]
+        OA --> OB([monGrandOral.odt])
+        O --> OC[boulot]
+        OC --> OD([TODO.txt])
+    ```
 
-    - Le **chemin absolu** doit indiquer le chemin depuis la racine. Par exemple le chemin absolu du fichier `monGrandOral.odt` est : `/home/marius/Documents/monGrandOral.odt`.
+    - Le **chemin absolu** doit indiquer le chemin depuis la racine `/``. Par exemple le chemin absolu du fichier `monGrandOral.odt` est : `/home/marius/Documents/monGrandOral.odt`.
 
     - On peut aussi repérer ce fichier depuis le répertoire où l'on se trouve, et on parle alors de **chemin relatif**. Par exemple, toujours pour le fichier `monGrandOral.odt` :
         - si on est déjà dans le répertoire `marius`, son chemin relatif est `Documents/monGrandOral.odt` ;
@@ -114,8 +118,9 @@ Dans le schéma ci-dessous on trouve des **répertoires** (entourés d'un rectan
     !!! note "Remarque"
         L'absence du caractère `/` au début du chemin relatif : c'est cela qui permet de distinguer un chemin relatif et un chemin absolu.
 
-{{exercice(1, "Trouver le chemin relatif ?")}}
+{{exercice(1, "Trouver les chemins relatifs et absolus ?")}}
     Avec l'arborescence précédente, on suppose que l'on se trouve dans le répertoire `boulot`. Quel est le chemin relatif du répertoire `photo_vrac` ?
 
     ??? tip "Réponse"
-        `../../../luna/Images/photo_vrac`
+        - Chemin relatif : `../../luna/Images/photo_vrac`
+        - Chemin absolu : `/home/luna/Images/photo_vrac`
