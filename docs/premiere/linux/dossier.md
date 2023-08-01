@@ -2,9 +2,12 @@
 
 Dans les systèmes de type Unix / GNU-Linux, nous avons un système de fichier en **arborescence**. 
 
-On parle d'arborescence, car ce système de fichier ressemble à un arbre à l'envers. La base de l'arbre s'appelle la **racine** (root) de l'arborescence et se représente par un simple /.
+On parle d'arborescence, car ce système de fichier ressemble à un arbre à l'envers. La base de l'arbre s'appelle la **racine** (root) de l'arborescence et se représente par un simple `/`.
 
 Dans le schéma ci-dessous on trouve des **répertoires** (entourés d'un rectangle sur le schéma) et des **fichiers** (entourés d'ovales).
+
+!!! note "Remarque"
+    Il n'est pas nécessaire de connaitre le détail de l'arborescence GNU-Linux, mais il faut en connaitre le principe et déterminer le chemins **absolus** et **relatifs** d'un répertoire ou d'un fichier. Ci-dessous, à titre d'information, le détail des fonctions des principaux répertoires.
 
 <style>
   .mermaidTooltip {
