@@ -25,6 +25,7 @@ hide:
     - :logo: **Fabrice Nativel** : [:material-numeric-1-circle:](https://fabricenativel.github.io/Premiere/progression/)[:material-alpha-t-circle:](https://fabricenativel.github.io/Terminale/progression/)[:material-git:](https://github.com/fabricenativel)
     - :logo: **Vincent Bouillot** : [:material-alpha-t-circle:](https://ferney-nsi.gitlab.io/terminale/) [:material-numeric-1-circle:](https://ferney-nsi.gitlab.io/premiere/) [:material-alpha-t-circle:](https://ferney-nsi.gitlab.io/terminale/)[:material-git:](https://gitlab.com/ferney-nsi)
     - :logo: **Franck Chambon** : [:material-numeric-2-circle:](https://ens-fr.gitlab.io/algo0) [:material-numeric-1-circle:](https://ens-fr.gitlab.io/nsi1) [:material-alpha-t-circle:](https://ens-fr.gitlab.io/nsi2) - [Algo1](https://ens-fr.gitlab.io/algo1) - [Algo2](https://ens-fr.gitlab.io/algo2) - [Algo3](https://ens-fr.gitlab.io/algo3) - [Questions flash](https://ens-fr.gitlab.io/flash/) - [Problèmes de Mathématiques](https://ens-fr.gitlab.io/enumeration/) - [Python pour les Mathématiques](https://ens-fr.gitlab.io/python_maths/)[:material-git:](https://gitlab.com/ens-fr)
+    - :logo: **Éric Rougier & Paul Godard** du lycée Pierre Gilles de Gennes (Digne-les-Bains) [:material-numeric-1-circle:](https://pgdg.frama.io/1nsi/) [:material-alpha-t-circle:](https://pgdg.frama.io/tnsi/)[:material-git:](https://framagit.org/search?scope=projects&search=pgdg)
     - :logo: **Dominique Filoé** :
         - Première 
             - [Les réseaux](http://siingenieur.free.fr/nsi/site_reseau/index.html)
@@ -47,6 +48,7 @@ hide:
     - :logo: **Denis Quenton** (lycée Angellier): [:material-alpha-t-circle:](https://dquenton.forge.aeif.fr/nsi-terminale-specialite/)[:material-git:](https://forge.aeif.fr/dquenton/nsi-terminale-specialite/)
     - :logo: **Rodrigo Schwencke** : [:material-numeric-1-circle:](https://eskool.gitlab.io/1nsi/) [:material-alpha-t-circle:](https://eskool.gitlab.io/tnsi/)[:material-git:](https://gitlab.com/eskool)
     - :logo: **Nathalie Weibel** : [Carnets Info](https://www.carnets.info/)[:material-git:](https://github.com/nweibel)
+    Jean-Claud Meilland 
     - :logo: **Fabien Vergniaud**  du lycée Pavie (Guingamp) [:material-numeric-1-circle:](http://www.zonensi.fr/NSI/Premiere/C01/Bases_Python_1/)[:material-alpha-t-circle:](http://www.zonensi.fr/NSI/Terminale/home/)[:material-git:](https://github.com/BugJackBarron/ZoneNSI.md)
     - :logo: **Yves Moncheaux**  [:material-numeric-1-circle:](https://clogique.fr/nsi/premiere)  [:material-alpha-t-circle:](https://clogique.fr/nsi/terminale/)
     - :logo: **Patrice Thibaud** du  lycée Marguerite de Flandre (59147 Gondecourt) [:material-numeric-1-circle:](https://patth.frama.io/nsi1ere/) [:material-git:](https://framagit.org/patth/nsi1ere)
@@ -58,6 +60,7 @@ hide:
         - [Cours du DU de NSI](https://gitlab.com/GiYoM/du/-/tree/master/)
         - Dépôt GIT du cours de Python  en Licence [L1](https://github.com/Informathix/Complements_Info_L1_UCO_Angers) - [L2](https://github.com/Informathix/UCO_L2) - [L3](https://github.com/Informathix/UCO_L3) 
     - **Laurent Cooper** : [:material-numeric-1-circle:](http://lycee.educinfo.org/index.php?page=NSI1) [:material-alpha-t-circle:](http://lycee.educinfo.org/index.php?page=NSIT)    
+    - **Benjamin Abel** et son site [Lyceum.fr](https://lyceum.fr): [:material-numeric-1-circle:](https://www.lyceum.fr/1g/nsi/) [:material-alpha-t-circle:](https://www.lyceum.fr/tg/nsi/)[:material-git:](https://framagit.org/lyceum)
     - **Thomas Beline** : [:material-numeric-2-circle: :material-numeric-1-circle: :material-alpha-t-circle:](https://kxs.fr/cours/)   
     - **Vincent-Xavier Jumel** : [:material-numeric-1-circle:](https://lamadone.frama.io/informatique/premiere-nsi/index.html) [:material-alpha-t-circle:](https://lamadone.frama.io/informatique/terminale-nsi/index.html)
     - **Romain Janvier** : [:material-alpha-t-circle:](http://nsiterminale.janviercommelemois.fr/)
@@ -80,7 +83,7 @@ hide:
     - **Mon lycée numérique** : [:material-numeric-1-circle:](http://www.monlyceenumerique.fr/index_nsi.html#premiere)[:material-alpha-t-circle:](http://www.monlyceenumerique.fr/index_nsi.html#terminale)
     - Le **Proalgo** [Site](https://progalgo.fr/)
     - Le site du **lycée Toulouse centre** : [:material-numeric-1-circle:](https://sites.google.com/view/nsi-toulouse-centre/accueil/premiere-nsi)[:material-alpha-t-circle:](https://sites.google.com/view/nsi-toulouse-centre/accueil/terminale-nsi)
-    - Le site de **Quentin Konieczko** : [qkzk](https://qkzk.xyz/docs/nsi/)
+    - Le site de **Quentin Konieczko** du lycée des Flandres (Hazebrouck) : [qkzk](https://qkzk.xyz/docs/nsi/)
     - Le site **Maths-code** : [:material-numeric-1-circle:](http://maths-code.fr/cours/premiere-nsi-2/) [:material-alpha-t-circle:](http://maths-code.fr/cours/terminale-nsi/)
     - Le site **Modulo** (Suisse) : [site](https://dev-apprendre.modulo-info.ch/index.html)
     - **Patrick Fuchs** et **Pierre Poulain**: [Python pour la biologie](https://python.sdv.univ-paris-diderot.fr/)
