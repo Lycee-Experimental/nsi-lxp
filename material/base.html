@@ -28,7 +28,7 @@
         <link rel="next" href="{{ page.next_page.url | url }}">
       {% endif %}
       <link rel="icon" href="{{ config.theme.favicon | url }}">
-      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-9.1.18">
+      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-9.1.21">
     {% endblock %}
     {% block htmltitle %}
       {% if page.meta and page.meta.title %}
@@ -240,12 +240,12 @@
       </script>
     {% endblock %}
     {% block scripts %}
-      <script src="{{ 'assets/javascripts/bundle.d3305f47.min.js' | url }}"></script>
-      {% for path in config.extra_javascript %}
-        {% if path.endswith(".mjs") %}
-          <script type="module" src="{{ path | url }}"></script>
+      <script src="{{ 'assets/javascripts/bundle.e4f9f9ed.min.js' | url }}"></script>
+      {% for script in config.extra_javascript %}
+        {% if script.path %}
+          {{ script | script_tag }}
         {% else %}
-          <script src="{{ path | url }}"></script>
+          <script src="{{ script | url }}"></script>
         {% endif %}
       {% endfor %}
     {% endblock %}
