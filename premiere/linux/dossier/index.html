@@ -2316,12 +2316,11 @@
 
 
 <div><h1 id="arborescence-du-systeme-de-fichiers-unix-gnu-linux">Arborescence du système de fichiers Unix / GNU-Linux<a class="headerlink" href="#arborescence-du-systeme-de-fichiers-unix-gnu-linux" title="Permanent link">⚓︎</a></h1>
-<p>Dans les systèmes de type Unix / GNU-Linux, nous avons un système de fichier en <strong>arborescence</strong>. </p>
-<p>On parle d'arborescence, car ce système de fichier ressemble à un arbre à l'envers. La base de l'arbre s'appelle la <strong>racine</strong> (root) de l'arborescence et se représente par un simple <code>/</code>.</p>
-<p>Dans le schéma ci-dessous on trouve des <strong>répertoires</strong> (entourés d'un rectangle sur le schéma) et des <strong>fichiers</strong> (entourés d'ovales).</p>
+<p>Dans les systèmes de type Unix (dont GNU-Linux), le système de fichier est dit en <strong>arborescence</strong>, car ce système de fichier ressemble à un arbre à l'envers. La base de l'arbre s'appelle la <strong>racine</strong> (root) de l'arborescence et se représente par un simple <code>/</code>.</p>
+<p>Le schéma ci-dessous représente les principaux <strong>répertoires</strong> (entourés d'un rectangle sur le schéma) et <strong>fichiers</strong> (entourés d'ovales) de l'arborescence GNU-Linux.</p>
 <div class="admonition note">
 <p class="admonition-title">Remarque</p>
-<p>Il n'est pas nécessaire de connaitre le détail de l'arborescence GNU-Linux, mais il faut en connaitre le principe et déterminer le chemins <strong>absolus</strong> et <strong>relatifs</strong> d'un répertoire ou d'un fichier. Ci-dessous, à titre d'information, le détail des fonctions des principaux répertoires.</p>
+<p>Il n'est pas nécessaire de connaitre le détail de l'arborescence GNU-Linux, mais il faut en connaitre le principe, et savoir déterminer le chemins <strong>absolus</strong> et <strong>relatifs</strong> d'un répertoire ou d'un fichier. Ci-dessous, à titre d'information, le détail des fonctions des principaux répertoires.</p>
 </div>
 <style>
   .mermaidTooltip {
@@ -2399,21 +2398,25 @@
     L --&gt; M[davy]
     M --&gt; MA([.bashrc])
     click MA callback "Fichier présent dans le dossier /home/.. de chaque utilisateur. Contient des scripts à lancer au démarrage de la session."
-    L --&gt; N[luna]
-    N --&gt; NA[Images]
+    L --&gt; N[luna]</code></pre>
+<div class="admonition conclu">
+<p class="admonition-title">Chemins relatifs et absolus</p>
+<p>Pour indiquer la position d'un fichier (ou d'un répertoire) dans l'arborescence, il existe 2 méthodes : indiquer un <strong>chemin absolu</strong> ou indiquer un <strong>chemin relatif</strong>.</p>
+<pre class="mermaid"><code>    graph TD
+    A["/"] --&gt; B[home]
+    B --&gt; C[luna]
+    B --&gt; D[davy]
+    C --&gt; NA[Images]
     NA --&gt; NB([donjon.jpg])
     NA --&gt; NC[photo_vrac]
-    L --&gt; O[marius]
+    B --&gt; O[marius]
     O --&gt; OA[Documents]
     OA --&gt; OB([monGrandOral.odt])
     O --&gt; OC[boulot]
     OC --&gt; OD([TODO.txt])</code></pre>
-<div class="admonition conclu">
-<p class="admonition-title">Chemins relatifs et absolus</p>
-<p>Pour indiquer la position d'un fichier (ou d'un répertoire) dans l'arborescence, il existe 2 méthodes : indiquer un <strong>chemin absolu</strong> ou indiquer un <strong>chemin relatif</strong>.</p>
 <ul>
 <li>
-<p>Le <strong>chemin absolu</strong> doit indiquer le chemin depuis la racine. Par exemple le chemin absolu du fichier <code>monGrandOral.odt</code> est : <code>/home/marius/Documents/monGrandOral.odt</code>.</p>
+<p>Le <strong>chemin absolu</strong> doit indiquer le chemin depuis la racine <code>/``. Par exemple le chemin absolu du fichier</code>monGrandOral.odt<code>est :</code>/home/marius/Documents/monGrandOral.odt`.</p>
 </li>
 <li>
 <p>On peut aussi repérer ce fichier depuis le répertoire où l'on se trouve, et on parle alors de <strong>chemin relatif</strong>. Par exemple, toujours pour le fichier <code>monGrandOral.odt</code> :</p>
@@ -2436,11 +2439,14 @@
 </div>
 </div>
 <details class="question">
-<summary>Activité 1 - Trouver le chemin relatif ?</summary>
+<summary>Activité 1 - Trouver les chemins relatifs et absolus ?</summary>
 <p>Avec l'arborescence précédente, on suppose que l'on se trouve dans le répertoire <code>boulot</code>. Quel est le chemin relatif du répertoire <code>photo_vrac</code> ?</p>
 <details class="tip">
 <summary>Réponse</summary>
-<p><code>../../../luna/Images/photo_vrac</code></p>
+<ul>
+<li>Chemin relatif : <code>../../luna/Images/photo_vrac</code></li>
+<li>Chemin absolu : <code>/home/luna/Images/photo_vrac</code></li>
+</ul>
 </details>
 </details></div>
 
