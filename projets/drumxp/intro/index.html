@@ -19,7 +19,7 @@
         <link rel="next" href="../elec/">
       
       <link rel="icon" href="../../../assets/images/logo-lxp-noir.svg">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
+      <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
@@ -804,6 +804,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../premiere/linux/commande/" class="md-nav__link">
+        1️⃣ Les commandes Shell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../premiere/linux/dossier/" class="md-nav__link">
         1️⃣ L'arborescence des dossiers
       </a>
@@ -820,20 +834,6 @@
     <li class="md-nav__item">
       <a href="../../../premiere/linux/permission/" class="md-nav__link">
         1️⃣ La gestion des permissions
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../premiere/linux/commande/" class="md-nav__link">
-        1️⃣ Les commandes Shell
       </a>
     </li>
   
@@ -2358,14 +2358,13 @@
 <div><h1 id="drumxp">DrumXP<a class="headerlink" href="#drumxp" title="Permanent link">⚓︎</a></h1>
 <p>DrumpXP est un projet de fabrication de batterie électronique.</p>
 <p>Des <strong>capteurs piezo</strong> (sensibles aux vibrations) sont connectés à un <strong>microcontroleurs</strong> qui en traite le signal pour envoyer des commandes MIDI à un <strong>ordinateur</strong>. Un logiciel d'émulation de batterie peut alors transformer les signaux MIDI en musique.</p>
-<div class="highlight"><pre><span></span><code>graph LR
+<pre class="mermaid"><code>graph LR
   A[Piezo]--&gt;|analogique| B{Microcontroleur};
   B --&gt;|numérique| C{PC};
   C --&gt;|analogique| D{Enceintes};
   D --&gt;|son| E[Oreilles];
   E --&gt;|chimique| F[Youpi !];
-  F --&gt;|mécanique| A;
-</code></pre></div>
+  F --&gt;|mécanique| A;</code></pre>
 <h2 id="ce-que-lon-fait">Ce que l'on fait<a class="headerlink" href="#ce-que-lon-fait" title="Permanent link">⚓︎</a></h2>
 <ul>
 <li>
@@ -2496,7 +2495,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.tracking", "navigation.top", "navigation.footer", "toc.integrate", "navigation.indexes", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d3305f47.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.e4f9f9ed.min.js"></script>
       
         
           <script src="../../../xtra/javascripts/mathjax.js"></script>

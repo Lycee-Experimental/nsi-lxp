@@ -13,13 +13,13 @@
         <link rel="canonical" href="https://nsi.lycee-experimental.org/premiere/linux/dossier/">
       
       
-        <link rel="prev" href="../linux/">
+        <link rel="prev" href="../commande/">
       
       
         <link rel="next" href="../permission/">
       
       <link rel="icon" href="../../../assets/images/logo-lxp-noir.svg">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
+      <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#larborescence-des-dossiers" class="md-skip">
+        <a href="#arborescence-du-systeme-de-fichiers-unix-gnu-linux" class="md-skip">
           Aller au contenu
         </a>
       
@@ -804,6 +804,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../commande/" class="md-nav__link">
+        1️⃣ Les commandes Shell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -832,20 +846,6 @@
     <li class="md-nav__item">
       <a href="../permission/" class="md-nav__link">
         1️⃣ La gestion des permissions
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../commande/" class="md-nav__link">
-        1️⃣ Les commandes Shell
       </a>
     </li>
   
@@ -2315,7 +2315,130 @@
   
 
 
-<h1 id="larborescence-des-dossiers">L'arborescence des dossiers<a class="headerlink" href="#larborescence-des-dossiers" title="Permanent link">⚓︎</a></h1>
+<div><h1 id="arborescence-du-systeme-de-fichiers-unix-gnu-linux">Arborescence du système de fichiers Unix / GNU-Linux<a class="headerlink" href="#arborescence-du-systeme-de-fichiers-unix-gnu-linux" title="Permanent link">⚓︎</a></h1>
+<p>Dans les systèmes de type Unix / GNU-Linux, nous avons un système de fichier en <strong>arborescence</strong>. </p>
+<p>On parle d'arborescence, car ce système de fichier ressemble à un arbre à l'envers. La base de l'arbre s'appelle la <strong>racine</strong> (root) de l'arborescence et se représente par un simple /.</p>
+<p>Dans le schéma ci-dessous on trouve des <strong>répertoires</strong> (entourés d'un rectangle sur le schéma) et des <strong>fichiers</strong> (entourés d'ovales).</p>
+<style>
+  .mermaidTooltip {
+      position: absolute;
+      text-align: center;
+      max-width: 200px;
+      padding: 2px;
+      font-family: 'trebuchet ms', verdana, arial;
+      font-size: 12px;
+      background: #ffffde;
+      border: 1px solid #aaaa33;
+      color: black;
+      border-radius: 2px;
+      pointer-events: none;
+      z-index: 100;
+    }
+</style>
+
+<pre class="mermaid"><code>    graph TD
+    A["/"] --&gt; B[bin]
+    click A callback "C'est la racine. Ce dossier est le point de départ de l'arborescence, il contient les répertoires principaux."
+    click B callback "Binaries : Exécutables essentiels au système, utilisables par tous les utilisateurs. Par exemple on y trouve ls pwd..."
+    A --&gt; C[boot] 
+    click C callback "fichiers permettant à Linux de démarrer, tels que le noyau et les fichiers de démarrage (GRUB). Dans /boot/efi est monté la partition EFI pour les systèmes disposant de ce micrologiciel."
+    A --&gt; D[dev]
+    click D callback "Devices : Fichiers spéciaux représentant les point d'entrées de tous les périphériques (fichiers spéciaux des disques durs, écrans, partitions, consoles TTY, webcam, clavier, ...)"
+    A --&gt; E[etc]
+    click E callback "Editing Text Config : Contient les fichiers texte nécessaires à la configuration du système et des setvices (XXX.conf, passwd, inittab, fstab)"
+    A --&gt; L[home]
+    click L callback "Répertoire personnel des utilisateurs du système"
+    A --&gt; H[lib]
+    click H callback "Librairies : contient les bibliothèques partagées essentielles au système lors du démarrage (et modules noyau)"
+    A --&gt; I[opt]
+    click I callback "Optional : répertoire générique pour l'installation de programmes installés hors dépôts de la distribution."
+    A --&gt; P[proc]
+    click P callback "Process : répertoire virtuel ne prenant aucune place sur le disque. Contient des fichiers spéciaux offrant des informations sur le système (noyau, processus)."
+    A --&gt; F[root]
+    click F callback "Répertoire personnel du super utilisateur (le répertoire de root n'est pas dans /home, car bien souvent le /home est sur une partition à part. En cas d'échec de montage de /home, root à quand même accès à son répertoire personnel)."
+    A --&gt; J[run]
+    click J callback "Runtime system : contient des informations relatives au système concernant les utilisateurs et les services en cours d'exécution."
+    A --&gt; Q[sys] 
+    click Q callback "Répertoire virtuel ne prenant aucune place sur le disque. Contient des fichiers spéciaux offrant des informations entre le système et ses composants matériels."
+    A --&gt; K[tmp]
+    click K callback "Temporary : contient des fichiers temporaires"
+    A --&gt; R[usr]
+    click R callback "Unix System Resources : contient des programmes, des données et des documents utilisés par les utilisateurs du système."
+    A --&gt; G[var]
+    click G callback "Variable : contient les données variables qui varient en fonction de l'utilisation du système, tels que les fichiers de log, les fichiers de bases de données, des fichiers de mails, des sites internet..."
+    R --&gt; S[bin]
+    click S callback "Contient des exécutables et des commandes utilisées par les utilisateurs du système."
+    R --&gt; T[include]
+    click T callback "Contient des fichiers d'en-tête utilisés par les compilateurs pour inclure du code dans les programmes."
+    R --&gt; U[lib]
+    click U callback "Contient des bibliothèques (librairies) utilisées par les programmes (32 et 64 bits)"
+    R --&gt; V[local]
+    click V callback "Contient des programmes et des données installées localement sur le système, par un administrateur, non installés par le gestionnaire de paquets"
+    R --&gt; W[sbin]
+    click W callback "Contient des exécutables et des commandes utilisées par l'admin système"
+    R --&gt; X[share]
+    click X callback "Contient des données partagées utilisées par les programmes (fichiers de langue, images, polices de caractères ...)"
+    R --&gt; Y[src] 
+    click Y callback "Contient le code source des programmes installés"
+    G --&gt; GA[cache]
+    click GA callback "Contient des données mises en cache par les programmes et le système, telles que les paquets de logiciels téléchargés (apt, yum, dnf, emerge suivant votre distribution)"
+    G --&gt; GB[lib] 
+    click GB callback "Contient des données utilisées par les programmes du système, telles que les bases de données (mysql) par exemple"
+    G --&gt; GC[log] 
+    click GC callback "Contient des fichiers de log, avec un sous dossier par service installé"
+    G --&gt; GD[run] 
+    click GD callback "Contient des fichiers temporaires utilisés par les programmes en cours d'exécution (fichiers .pid, ...)"
+    G --&gt; GE[spool]
+    click GE callback "Contient des fichiers en attente d'être traités par les programmes système, tels que les impressions et les tâches cron."
+    G --&gt; GF[tmp] 
+    click GF callback "Contient des fichiers temporaires utilisés par les programmes. Par rapport à /tmp ces fichiers tomporaires ne sont pas épurés automatiquement."
+    L --&gt; M[davy]
+    M --&gt; MA([.bashrc])
+    click MA callback "Fichier présent dans le dossier /home/.. de chaque utilisateur. Contient des scripts à lancer au démarrage de la session."
+    L --&gt; N[luna]
+    N --&gt; NA[Images]
+    NA --&gt; NB([donjon.jpg])
+    NA --&gt; NC[photo_vrac]
+    L --&gt; O[marius]
+    O --&gt; OA[Documents]
+    OA --&gt; OB([monGrandOral.odt])
+    O --&gt; OC[boulot]
+    OC --&gt; OD([TODO.txt])</code></pre>
+<div class="admonition conclu">
+<p class="admonition-title">Chemins relatifs et absolus</p>
+<p>Pour indiquer la position d'un fichier (ou d'un répertoire) dans l'arborescence, il existe 2 méthodes : indiquer un <strong>chemin absolu</strong> ou indiquer un <strong>chemin relatif</strong>.</p>
+<ul>
+<li>
+<p>Le <strong>chemin absolu</strong> doit indiquer le chemin depuis la racine. Par exemple le chemin absolu du fichier <code>monGrandOral.odt</code> est : <code>/home/marius/Documents/monGrandOral.odt</code>.</p>
+</li>
+<li>
+<p>On peut aussi repérer ce fichier depuis le répertoire où l'on se trouve, et on parle alors de <strong>chemin relatif</strong>. Par exemple, toujours pour le fichier <code>monGrandOral.odt</code> :</p>
+<ul>
+<li>
+<p>si on est déjà dans le répertoire <code>marius</code>, son chemin relatif est <code>Documents/monGrandOral.odt</code> ;</p>
+</li>
+<li>
+<p>si on est dans le répertoire <code>boulot</code>, son chemin relatif est <code>../monGrandOral.odt</code> (où le <code>../</code> désigne une remontée d'un cran dans l'arborescence) ;</p>
+</li>
+<li>
+<p>si on est dans le répertoire <code>Images</code> de l'utilisateur <code>luna</code>, son chemin relatif est <code>../../marius/Documents/monGrandOral.odt</code>.</p>
+</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Remarque</p>
+<p>L'absence du caractère <code>/</code> au début du chemin relatif : c'est cela qui permet de distinguer un chemin relatif et un chemin absolu.</p>
+</div>
+</div>
+<details class="question">
+<summary>Activité 1 - Trouver le chemin relatif ?</summary>
+<p>Avec l'arborescence précédente, on suppose que l'on se trouve dans le répertoire <code>boulot</code>. Quel est le chemin relatif du répertoire <code>photo_vrac</code> ?</p>
+<details class="tip">
+<summary>Réponse</summary>
+<p><code>../../../luna/Images/photo_vrac</code></p>
+</details>
+</details></div>
 
 
 
@@ -2344,7 +2467,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
         
           
-          <a href="../linux/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: 1️⃣ Tester et installer Linux" rel="prev">
+          <a href="../commande/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: 1️⃣ Les commandes Shell" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -2353,7 +2476,7 @@
                 Précédent
               </span>
               <div class="md-ellipsis">
-                1️⃣ Tester et installer Linux
+                1️⃣ Les commandes Shell
               </div>
             </div>
           </a>
@@ -2421,7 +2544,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.tracking", "navigation.top", "navigation.footer", "toc.integrate", "navigation.indexes", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d3305f47.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.e4f9f9ed.min.js"></script>
       
         
           <script src="../../../xtra/javascripts/mathjax.js"></script>
