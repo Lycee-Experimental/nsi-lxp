@@ -106,7 +106,7 @@ Le schéma ci-dessous représente les principaux **répertoires** (entourés d'u
         OC --> OD([TODO.txt])
     ```
 
-    - Le **chemin absolu** doit indiquer le chemin depuis la racine `/``. Par exemple le chemin absolu du fichier `monGrandOral.odt` est : `/home/marius/Documents/monGrandOral.odt`.
+    - Le **chemin absolu** doit indiquer le chemin depuis la racine `/`. Par exemple le chemin absolu du fichier `monGrandOral.odt` est : `/home/marius/Documents/monGrandOral.odt`.
 
     - On peut aussi repérer ce fichier depuis le répertoire où l'on se trouve, et on parle alors de **chemin relatif**. Par exemple, toujours pour le fichier `monGrandOral.odt` :
         - si on est déjà dans le répertoire `marius`, son chemin relatif est `Documents/monGrandOral.odt` ;
