@@ -5,7 +5,8 @@ site_dir: docs-build
 repo_url: https://github.com/lycee-experimental/nsi-lxp
 docs_dir: docs
 copyright: |
-  GNU GPLv3 2023 <a href="https://github.com/lycee-experimental" target="_blank" rel="noopener">Lycée Expérimental</a>
+    Réalisé par <a href="https://github.com/davy39" target="_blank">Davy COTTET</a>
+    &copy; 2023 sous licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="_blank">CC BY-NC-SA 4.0</a>
 
 theme:
   name: material
