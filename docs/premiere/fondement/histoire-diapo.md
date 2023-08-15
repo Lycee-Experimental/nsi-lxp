@@ -32,9 +32,15 @@ XVIIIe siècle
 Construite par les Grecs dans l'Antiquité, c'est le premier calculateur mécanique de l'histoire. 
 Ces engrenages servaient notamment à prédire les dates et heures des éclipses (lunaires et solaires).  <!-- .element class="r-stretch" -->
 ---
-## Horlogerie
+## Horlogerie mécanique
+XIIIe siècle
+<p class="stretch"><img src="/assets/images/astrolabe.jpg"></p>
+Astrolabe du prince Asld du Yémen (1291)
 ---
 ## Orgue de barbarie
+XVe siècle
+<p class="stretch"><img src="/assets/images/orgue-barbarie-cylindre.jpg"></p>
+Orgue de barbarie à cylindre
 ---
 ## Métier à tisser Bouchon
 1725 - Basile Bouchon
@@ -51,6 +57,7 @@ Premier système mécanique programmable avec des cartes perforées.
 ## Pascaline 
 1642-1645 - Blaise Pascal
 <iframe width="560" height="315" src="https://www.youtube.com/embed/GX4RQK__fQc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 Première machine à calculer réalisant des additions.
 ---
 ## Machine arithmétique
@@ -71,15 +78,19 @@ Cette machine analytique à vapeur, jamais finalisée, comportait déjà une mé
 ## Premier programme informatique
 1843 - Ada Lovelace
 <p class="stretch"><img src="/assets/images/adaLovelace.png"></p>
-Dans ses travaux sur la machine de Babbage, elle utilisa la première boucle conditionnelle `while` dans ses programmes théoriques.
+
+Dans ses travaux sur la machine de Babbage, elle utilisa la première boucle conditionnelle (`while`) dans ses programmes théoriques.
 -----
 ## Bases de l'informatique
 ---
 ## Logique booléenne
 1815-1864 - Georges Boole  
+<p class="stretch"><img src="/assets/images/Cool-Boole.jpg"></p>
 ---
 ## Modèle algorithmique
 1936 - Alan Turing
+<p class="stretch"><img src="/assets/images/Alan-Turing.webp"></p>
+
 ---
 ## Interrupteurs et bits
 1937 - Claude Shannon  
@@ -106,13 +117,14 @@ Premier ordinateur numérique électronique, conçu pour la résolution d'équat
 ## Machines Lorenz 🇩🇪 
 1941 - SZ40 & 1942 - SZ42 
 <p class="stretch"><img src="/assets/images/lorenz.jpg"></p>
-Machines électro-mécaniques utilisées pour les communications sécurisées de l'armée allemande (type Enigma).
----
-## Machines Colossus 🇬🇧
-1943 - Tommy Flowers 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/g2tMcMQqSbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Ce **premier ordinateur entièrement électronique et programmable** a permis de craquer les clés de chiffrement de la marine allemande.
+Machines **électro-mécaniques** utilisées pour les communications sécurisées de l'armée allemande (type Enigma).
+---
+## Machine Colossus 🇬🇧
+1943 - Tommy Flowers 
+<iframe width="450" height="250" src="https://www.youtube.com/embed/g2tMcMQqSbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+Premier ordinateur entièrement **électronique et programmable**, a permis de craquer les clés de chiffrement de la marine allemande.
 ---
 ## Le Harvard Mark I. 🇺🇸
 1944 - Howard Aiken
@@ -129,50 +141,68 @@ Machine entièrement électronique, l'[ENIAC](https://fr.wikipedia.org/wiki/ENIA
 ---
 ## Manchester baby 🇬🇧
 1948 - Frederic C. Williams et Tom Kilburn
-<p class="stretch"><img src="/assets/images/SSEM.jpg"></p>
+<p class="stretch"><img src="/assets/images/Manchester-Baby.webp"></p>
 
 Première machine à être dotée d'une mémoire à accès direct (RAM), la [Small-Scale Experimental Machine](https://fr.wikipedia.org/wiki/Small-Scale_Experimental_Machine) est la première machine à **architecture de von Neumann**.
 ---
 ## EDVAC 🇺🇸
-1949 - Mauchly, Eckert & von Neumann  
-L'[EDVAC](https://fr.wikipedia.org/wiki/Electronic_Discrete_Variable_Automatic_Computer) opère en mode binaire en suivant l'architecture de von Neumann, et elle aussi doté de RAM.
+1949 - Mauchly, Eckert & von Neumann
+<p class="stretch"><img src="/assets/images/edvac.jpg"></p>
+ Doté de RAM, EDVAC opère en mode binaire en suivant l'architecture de von Neumann.
 ---
 ## BINAC 🇺🇸
 1949 - Mauchly & Eckert
-Deux co-inventeurs de l'ENIAC quittent l'université de Pennsylvanie pour fonder la Eckert–Mauchly Computer Corporation (EMCC), la première compagnie d'ordinateurs.  
-Le [BINAC](https://fr.wikipedia.org/wiki/BINAC) a donc été le premier ordinateur à programme enregistré aux États-Unis et le premier ordinateur commercial au monde.
+<p class="stretch"><img src="/assets/images/binac.jpg"></p>
+
+Premier ordinateur à programme enregistré aux États-Unis.
+Premier ordinateur commercial au monde.  
+
 ---
 ## EDSAC 🇬🇧
 1949 - Maurice Wilkes
 <p class="stretch"><img src="/assets/images/edsac.jpg"></p>
 
-L'[EDSAC](https://fr.wikipedia.org/wiki/Electronic_Delay_Storage_Automatic_Calculator), est une machine électronique programmable à programme enregistré sur ruban de papier.
+Machine électronique à programme enregistré sur ruban de papier.
 ---
 ## Univac 1 🇺🇸
 1951 - Mauchly & Eckert
-L'[Univac 1](https://fr.wikipedia.org/wiki/UNIVAC_I) a été le premier ordinateur commercial fabriqué en grande série (46 exemplaires).
+<p class="stretch"><img src="/assets/images/univac1.jpg"></p>
+
+Premier ordinateur commercial fabriqué en grande série (46 exemplaires).
 -----
 ## Miniaturisation de l'électronique
 ---
-## Les tubes électroniques
+## Diode à vide
 1904 - John Ambrose Fleming  
-Invention de la diode à vide, qui laisse passer le courant dans un sens unique.
-___
-1906 - Lee De Forest  
-Invention de la triode, qui permet d'amplifier un courant.
+<p class="stretch"><img src="/assets/images/Fleming_valves.jpg"></p>
+
+Laisse passer le courant dans un sens unique.
+
+---
+## Triode à vide
+1906 - Lee De Forest
+<p class="stretch"><img src="/assets/images/triode.jpeg"></p>
+
+Permet d'amplifier un courant, ancêtre du transistor à la base des premières radios.
 ---
 ## Le transistor 
 1947 - Bardeen, Shockley et Brattain  
+
+<p class="stretch"><img src="/assets/images/Bardeen-Shockley-Brattain.jpeg"></p>
+
 Le transistor plus petit, plus fiable, et moins gourmand en énergie remplace progressivement les tubes à vide.
 ---
 ## Le circuit intégré
 1958 - Jack Kilby et Robert Noyce  
+<p class="stretch"><img src="/assets/images/IC-Kilby-Noyce.jpg"></p>
+
 Mise au point d'un circuit intégrant des transistors à la surface de plaques de silicium. 
 ---
-## Miniaturisation des circuits intégrés
-Fin des années 60  
-La densité de transistors par unité de surface double environ tous les 18 mois. 
-Cette progression est popularisée sous le nom de **loi de Moore**, du nom du fondateur d'Intel. 
+## Miniaturisation
+1960-2023
+<p class="stretch"><img src="/assets/images/mooreslaw.jpg"></p>
+
+La densité de transistors par unité de surface sur les circuits intégrés double environ tous les 18 mois (**loi de Moore**). 
 ---
 ## Premiers microprocesseurs
 1971 - Intel 4004  
@@ -194,7 +224,7 @@ Avec l'essor du réseau Internet et de ses applications comme le Web et l'explos
 ## 1970-1990
 Développement du système **Unix** (laboratoire Bells) par notamment Ken Thomson et Dennis Ritchie.
 ---
-## 1980--1990
+## 1980-1990
 Développement du système **ms-dos** (Microsoft)
 ---
 ## 1983
