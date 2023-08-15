@@ -1,5 +1,7 @@
 # Opérateurs booléens et portes logiques
 
+## Programme 
+
 |Notions|Compétences|Remarques|
 |--|--|--|
 |Valeurs booléennes : 0, 1.<br> Opérateurs booléens : and, or, not.<br>Expressions booléennes| Dresser la table d'une expression booléenne.|Le ou exclusif (xor) est évoqué.<br>Quelques applications directes comme l'addition binaire sont présentées.<br>L'attention des élèves est attirée sur le caratctère séquentiel de certains opérateurs booléens. |
@@ -11,7 +13,7 @@
 
 ## Le langage binaire
 
-Avec le développement des premiers calculateurs fonctionnants à l'électricité, à base de relais, de tubes électroniques, de transistors, et enfin de circuits intégrés au sein de microprocesseurs, l'informatique s'est orienté vers un **langage binaire** : 
+Avec le développement des premiers calculateurs fonctionnant à l'électricité, à base de relais électromécaniques, puis de tubes électroniques, de transistors, et enfin de circuits intégrés au sein de microprocesseurs, l'informatique s'est orienté vers un **langage binaire** : 
 
 - **0** : le courant ne passe pas
 
@@ -22,9 +24,10 @@ Mathématiquement, on dira que les ordinateurs effectuent des opérations en **b
 ## Logique booléenne
 
 ### Un peu d'histoire
-En 1847, le  britannique  *George BOOLE*  inventait un formalisme permettant d'écrire des raisonnements logiques : l'algèbre de Boole. La notion même d'informatique n'existait pas à l'époque, même si les calculs étaient déjà automatisés (penser à la Pascaline de 1642). 
-Bien plus tard, en  1938, les travaux de l'américain *Claude  SHANNON*  prouva  que des  circuits  électriques
-peuvent  résoudre tous  les  problèmes  que l'algèbre  de  Boole peut  elle-même résoudre.  Pendant la deuxième guerre mondiale, les travaux  d'*Alan  TURING*  puis de *John VON NEUMANN* poseront définitivement les bases de l'informatique moderne.
+En **1847**, le  britannique  **George BOOLE**  inventait un formalisme permettant d'écrire des raisonnements logiques : l'**algèbre de Boole**. La notion même d'informatique n'existait pas à l'époque, même si les calculs étaient déjà automatisés (penser à la Pascaline de 1642). 
+
+Bien plus tard, en  **1938**, les travaux de l'américain **Claude  SHANNON** prouvèrent que des circuits électriques
+pouvaient résoudre tous les  problèmes de l'algèbre booléenne.  Pendant la deuxième guerre mondiale, les travaux  d'**Alan TURING** puis de **John VON NEUMANN** poseront définitivement les bases de l'informatique moderne.
 
 ### L'algèbre de Boole : une logique binaire
 
@@ -42,9 +45,10 @@ De nombreuses autres peuvent être obtenues en combinant les opérations fondame
 - la *disjonction exclusive* : **OU EXCLUSIF** = (A ET non B) OU (non A ET B)
 
 
-## Les portes logiques
+## Portes et circuits logiques
 
-Les transistors effectuent des **opérations booléennes** directement liées à l'algèbre de Boole. Ainsi, un circuit logique prend en **entrée** un ou des signaux électriques - chaque entrée est dans un état "haut" (symbolisé par un "1") ou à un état "bas" (symbolisé par un "0") - et donne en **sortie** un ou des signaux électriques (chaque sortie est aussi dans un état "haut" ou à un état "bas"). 
+### Définition
+En électronique, les transistors effectuent des **opérations booléennes** directement liées à l'algèbre de Boole. Ainsi, un circuit logique prend en **entrée** un ou plusieurs signaux électriques. Chaque entrée est dans un état "haut" **1** ou un état "bas" **0** et donne en **sortie** un ou plusieurs signaux électriques. Chaque sortie est alors également dans un état "haut" ou "bas". 
 
 !!! Note "Remarque"
 	Il existe deux catégories de circuit logique :
@@ -54,6 +58,10 @@ Les transistors effectuent des **opérations booléennes** directement liées à
 	- les circuits **séquentiels** : les états en sortie dépendent des états en entrée ainsi que du temps et des états antérieurs.
 
 	Dans la suite nous nous intéresserons principalement aux **circuits combinatoires**.
+
+### Fonctionnement des principales portes logiques
+
+Il est nécessaire de connaître le fonctionnement des principales portes logiques, et de savoir en établir les **tables de vérités**.
 
 === "La négation : porte NON - NOT" 
 	- symbole usuel : ~
@@ -189,7 +197,7 @@ Les transistors effectuent des **opérations booléennes** directement liées à
 		|1 |	0 |	1 |
 		|1 |	1 |	0 |
   
-
+### Activités
 
 {{exercice(1,"Combinaison de portes logiques")}}	
 	=== "Énoncé"
@@ -317,81 +325,13 @@ Les transistors effectuent des **opérations booléennes** directement liées à
 
 
 
-!!! python "La logique booléene en Python"
-	Les opérateurs `and`, `or` et `not` sont utilisables pour tester des conditions, et renvoient `False` ou `True`.
-	```python
-	>>> (n % 7 == 0) and (n % 0 == 0)
-	False
-	```
 
-	```python
-	>>> n = 20
-	>>> (n % 10 == 0) or (n % 7 == 0)
-	True
-	>>> (n % 4 == 0) or (n % 5 == 0)
-	True
-	>>> (n % 7 == 0) or (n % 3 == 0)
-	False
-	```
-
-	```python
-	>>> n = 20
-	>>> not(n % 10 == 0)
-	False
-	```
-
-	Les opérateurs `&`, `|` et `^` sont utilisables directement avec des nombres en Python
-
-	```python
-	# calcul A
-	>>> 12 & 7
-	4
-	```
-
-	```python
-	# calcul B
-	>>> 12 | 7
-	15
-	```
-
-	```python
-	# calcul C
-	>>> 12 ^ 5
-	9
-	```
-
-	Pour comprendre ces résultats, il faut travailler en binaire :
-
-	- Les nombre binaires sont précédés de `0b`.
-	- La fonction `bin(n)` convertit un nombre entier en binaire.
-	
-	Voici les mêmes calculs, qui peuvent mieux s'annalyser en prenant les bits un à un :
-
-	```python
-	# calcul A
-	>>> bin(0b1100 & 0b111)
-		'0b100'
-	```
-
-	```python
-	# calcul B
-	>>> bin(0b1100 | 0b111)
-	'0b1111'
-	```
-
-	```python
-	# calcul C
-	>>> bin(0b1100 ^ 0b111)
-	'0b1011'
-
-	```
-	**A toi de jouer !**
-	{{terminal()}}
-
-
-{{exercice()}}	
+{{exercice(titre="Réalisation d'opération logiques sur les bits")}}	
     === "Énoncé"
-        Effectuer les opérations suivantes.
+        1 - Effectue à la main les opérations suivantes, en les réalisant bit à bit.
+		
+		**Rappel** :  `&` est le symbole de **ET**, `|` de **OU**,  `^` de **OU EXCLUSIF**.
+
         ```python
            1011011
         &  1010101
@@ -408,7 +348,70 @@ Les transistors effectuent des **opérations booléennes** directement liées à
         ----------
 
         ```
-        
+        2 - Vérifie tes résultats avec python.
+		??? python "La logique booléenne en Python"
+			=== "and, or, not"
+				Les opérateurs `and`, `or` et `not` sont utilisables pour tester des **conditions**, et renvoient `False` ou `True`.
+				
+				```python
+				>>> n = 20
+				>>> (n > 1) and (n < 10)
+				False
+				>>> (n > 1) and (n < 30)
+				True
+				>>> (n > 1) or (n < 10)
+				True
+				>>> not(n == 5)
+				True
+				```
+			=== "&, | et ^"
+				Les opérateurs `&`, `|` et `^` sont utilisables directement avec des **nombres**, et renvoient des nombres.
+
+				```python
+				# calcul A
+				>>> 12 & 7
+				4
+				```
+
+				```python
+				# calcul B
+				>>> 12 | 7
+				15
+				```
+
+				```python
+				# calcul C
+				>>> 12 ^ 5
+				9
+				```
+				!!! tip "Explication"
+					Pour comprendre ces résultats, il faut travailler en binaire (voir le chapitre sur l'[encodage](premiere/encodage/entier-positif/) :
+
+					- Les nombre binaires sont précédés de `0b`.
+					- La fonction `bin(n)` convertit un nombre entier en binaire.
+					
+					Voici les mêmes calculs, qui peuvent mieux s'analyser en prenant les bits un à un :
+
+					```python
+					# calcul A
+					>>> bin(0b1100 & 0b111)
+						'0b100'
+					```
+
+					```python
+					# calcul B
+					>>> bin(0b1100 | 0b111)
+					'0b1111'
+					```
+
+					```python
+					# calcul C
+					>>> bin(0b1100 ^ 0b111)
+					'0b1011'
+
+					```
+	   	{{terminal()}}
+
     === "Réponse"
         ```python
          1011011
@@ -429,5 +432,5 @@ Les transistors effectuent des **opérations booléennes** directement liées à
 
 
 
-!!! conclu "Du transistor aux circuits logiques complexes"
-	A la base de l'informatique, nous avons le transistor, composant muni de 2 entrées et une sortie. Une combinaison de transistors (sous forme de circuit intégré) permet d'obtenir des circuits logiques, la combinaison de circuits logiques permet d'obtenir des circuits plus complexes (exemple : l'additionneur), et ainsi de suite...
+!!! conclu "Conclusion : Du transistor aux circuits logiques complexes"
+	A la base de l'informatique nous avons le transistor, composant muni de 2 entrées et une sortie. Une combinaison de transistors (sous forme de circuit intégré) permet d'obtenir des circuits logiques, la combinaison de circuits logiques permet d'obtenir des circuits plus complexes (exemple : l'additionneur), et ainsi de suite...
