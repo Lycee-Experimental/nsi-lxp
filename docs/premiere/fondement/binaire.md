@@ -215,7 +215,7 @@ Il est nécessaire de connaître le fonctionnement des principales portes logiqu
 
 	=== "Réponse"
 
-		**NON OU**
+		**NON ET**
 
 		<div style="width: 100%; height: 100px">
 			<logic-editor mode="tryout">
@@ -244,7 +244,7 @@ Il est nécessaire de connaître le fonctionnement des principales portes logiqu
 		|1 |	0 |	1 |
 		|1 |	1 |	0 |
 
-		**NON ET**
+		**NON OU**
 
 		<div style="width: 100%; height: 100px">
 			<logic-editor mode="tryout">
@@ -326,7 +326,7 @@ Il est nécessaire de connaître le fonctionnement des principales portes logiqu
 
 
 
-{{exercice(titre="Réalisation d'opération logiques sur les bits")}}	
+{{exercice(titre="Réalisation d'opérations logiques sur les bits")}}	
     === "Énoncé"
         1 - Effectue à la main les opérations suivantes, en les réalisant bit à bit.
 		
