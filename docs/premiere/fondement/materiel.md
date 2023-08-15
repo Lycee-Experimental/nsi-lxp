@@ -82,7 +82,6 @@ Pour remédier à ce goulot d'étranglement, les processeurs contiennent mainten
 
 Dans un ordinateur, il y a donc plusieurs niveaux de mémoire, leur capacité (liée à leur coût) étant inversement proportionnelle à leur vitesse.
 
-
 |Mémoire |	Temps d'accès |	Débit 	| Capacité|
 |:--:|:--:|:--:|:--:|  
 Registre |	1 ns 	| |≈ Kio
@@ -90,6 +89,11 @@ Mémoire cache |	2−3 ns 	| |≈ Mio
 RAM |	5−60 ns 	| 1−20 Gio/s |	≈ Gio
 Disque dur |	3−20 ms 	| 10−320 Mio/s |	≈ Tio
 
+!!! note "Rappel sur les multiples et sous-multiples d'unités"
+      Symbole|n |µ|m||k|M|G|T|
+      |:--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+      Nom|nano|micro|milli|1|kilo|Méga|Giga|Téra
+      Valeur|$10^{⁻9}$|$10^{⁻6}$|$10^{⁻3}$|1|$10^3$|$10^6$|$10^9$|$10^{12}$|
 
 ### Multiplier les processeurs
 
