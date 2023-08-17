@@ -647,13 +647,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#definition" class="md-nav__link">
-    Définition
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#exemples-de-commandes-en-assembleur-y86" class="md-nav__link">
     Exemples de commandes en assembleur Y86
   </a>
@@ -2395,13 +2388,13 @@
 
 <div><h1 id="de-lassembleur-au-langage-machine">De l'assembleur au langage machine<a class="headerlink" href="#de-lassembleur-au-langage-machine" title="Permanent link">⚓︎</a></h1>
 <h2 id="le-langage-machine">Le langage machine<a class="headerlink" href="#le-langage-machine" title="Permanent link">⚓︎</a></h2>
-<p>Revenons sur ces instructions aussi appelées <strong>instructions machines</strong> exécutées par l'<strong>Unité de Commande</strong>. Comme nous l'avons vu, un ordinateur exécute des programmes qui sont des suites d'instructions, elles même réalisables avec une combinaison de <strong>portes logiques</strong>. </p>
-<p>Toutefois, le CPU est incapable d'exécuter directement des programmes écrits, par exemple, en Python. En effet, comme tous les autres constituants d'un ordinateur, le CPU gère uniquement 2 états (toujours symbolisés par un "1" et un "0"), les instructions exécutées au niveau du CPU doivent donc préalablement être codées en binaire. </p>
+<p>Comme nous l'avons vu, au chapitre précédent, des <strong>instructions machines</strong> sont exécutées par l'<strong>Unité de Commande</strong>. Ainsi les programmes exécutés par les ordinateurs sont constitués de suites d'instructions, elles même réalisables au moyen de combinaisons de <strong>portes logiques</strong>. </p>
+<p>Toutefois, le CPU est incapable d'exécuter directement des programmes écrits, par exemple, en Python. En effet, comme tous les autres constituants d'un ordinateur, le CPU gère uniquement 2 états (toujours symbolisés par <code>1</code> et <code>0</code>), les instructions exécutées au niveau du CPU doivent donc préalablement être codées en binaire. </p>
 <div class="admonition conclu">
 <p class="admonition-title">A retenir</p>
 <p>L'ensemble des instructions binaires, exécutables directement par le microprocesseur, constitue ce que l'on appelle le <strong>langage machine</strong>.</p>
 </div>
-<p>Une <strong>instruction machine</strong> est donc une chaîne binaire composée principalement de 2 parties :</p>
+<p>Une <strong>instruction machine</strong> est donc une <strong>chaîne binaire</strong> composée principalement de 2 parties :</p>
 <ul>
 <li>
 <p>le champ <strong>code opération</strong> qui indique au processeur le type de traitement à réaliser. Par exemple le code "00100110" donne l'ordre au CPU d'effectuer une multiplication.</p>
@@ -2424,46 +2417,41 @@
 </tr>
 </tbody>
 </table>
-<p></p><center>Instructions machine</center>
+<p></p><center>Exemple d'instruction machine</center>
 <h3 id="les-codes-operations">Les codes opérations<a class="headerlink" href="#les-codes-operations" title="Permanent link">⚓︎</a></h3>
 <p>Les instructions machines sont relativement basiques (on parle d'instructions <strong>de bas niveau</strong>), voici quelques exemples :</p>
 <ul>
-<li>
-<p>les <strong>instructions arithmétiques</strong> (addition, soustraction, multiplication...). Par exemple, on peut avoir une instruction qui ressemble à "additionne la valeur contenue dans le registre R1 et le nombre 789 et range le résultat dans le registre R0" (l'adresse mémoire est donnée en base 10 pour souci de simplicité, n'oubliez pas qu'en interne elle est codée en binaire)</p>
-</li>
-<li>
-<p>les <strong>instructions de transfert de données</strong> qui permettent de transférer une donnée d'un registre du CPU vers la mémoire vive et vice versa. Par exemple, on peut avoir une instruction qui ressemble à "prendre la valeur située à l'adresse mémoire 487 et la placer dans la registre R2" ou encore "prendre la valeur située dans le registre R1 et la placer à l'adresse mémoire 512"</p>
-</li>
-<li>
-<p>les instructions de <strong>rupture de séquence</strong> : les instructions machines sont situées en mémoire vive, si, par exemple, l'instruction n°1 est située à l'adresse mémoire 343, l'instruction n°2 sera située à l'adresse mémoire 344, l'instruction n°3 sera située à l'adresse mémoire 345... Au cours de l'exécution d'un programme, le CPU passe d'une instruction à une autre en passant d'une adresse mémoire à l'adresse mémoire immédiatement supérieure : après avoir exécuté l'instruction n°2 (situé à l'adresse mémoire 344), le CPU "va chercher" l'instruction suivante à l'adresse mémoire 344+1=345. 
-Les instructions de rupture de séquence d'exécution encore appelées instructions de saut ou de branchement permettent d'interrompre l'ordre initial sous certaines conditions en passant à une instruction située une adresse mémoire donnée, par exemple, nous pouvons avoir une instruction qui ressemble à cela : imaginons qu'à l'adresse mémoire 354 nous avons l'instruction "si la valeur contenue dans le registre R1 est strictement supérieure à 0 alors exécuter l'instruction située à l'adresse mémoire 4521". Si la valeur contenue dans le registre R1 est strictement supérieure à 0 alors la prochaine instruction à exécuter est l'adresse mémoire 4521, dans le contraire, la prochaine instruction à exécuter est à l'adresse mémoire 355.</p>
-</li>
+<li>les <strong>instructions arithmétiques</strong> (addition, soustraction, multiplication...). </li>
 </ul>
-<h3 id="les-operandes">Les opérandes<a class="headerlink" href="#les-operandes" title="Permanent link">⚓︎</a></h3>
-<p>Les opérandes sont donc les données sur lesquelles le code opération de l'instruction doit être réalisée. Un opérande peut être de 3 natures différentes :</p>
-<p>1- l'opérande est une <strong>valeur immédiate</strong> : l'opération est effectuée directement sur la valeur donnée dans l'opérande</p>
-<p>2- l'opérande est un <strong>registre du CPU</strong> : l'opération est effectuée sur la valeur située dans un des registres (R0,R1, R2,...), l'opérande indique de quel registre il s'agit</p>
-<p>3- l'opérande est une donnée située <strong>en mémoire vive</strong> : l'opération est effectuée sur la valeur située en mémoire vive à l'adresse XXXXX. Cette adresse est indiquée dans l'opérande.</p>
-<p>Un programme en langage machine est donc une suite très très longue de "1" et de "0", ce qui est quelque peu rébarbatif à programmer : sur les dizaines de milliers de "1" et de "0" qui composent un programme en langage machine de taille modeste, une seule erreur, et votre programme ne fonctionne pas...imaginer la difficulté pour retrouver l'erreur 😅.</p>
-<details class="example">
-<summary>Exemples</summary>
+<p>Exemple : <em>additionne la valeur contenue dans le registre R1 et le nombre 789 et range le résultat dans le registre R0</em>.</p>
 <ul>
-<li>
-<p>Quand on considère l'instruction machine : "additionne le nombre 125 et la valeur située dans le registre R2 , range le résultat dans le registre R1", nous avons 2 valeurs : le "nombre 125" (qui est une valeur immédiate, nous sommes dans le cas n°1) et "la valeur située dans le registre R2" (nous sommes dans le cas n°2)</p>
-</li>
-<li>
-<p>Quand on considère l'instruction machine : "prendre la valeur située dans le registre R1 et la placer à l'adresse mémoire 512", nous avons 2 valeurs : "à l'adresse mémoire 512" (nous sommes dans le cas n°3) et "la valeur située dans le registre R1" (nous sommes toujours dans le cas n°2)</p>
-</li>
+<li>les <strong>instructions de transfert de données</strong> qui permettent de transférer une donnée d'un <strong>registre</strong> du CPU vers la <strong>mémoire vive</strong> et vice versa. </li>
 </ul>
-</details>
+<p>Exemple : <em>prendre la valeur située à l'adresse mémoire 487 et la placer dans la registre R2</em></p>
+<ul>
+<li>les instructions de <strong>rupture de séquence</strong> : Au cours de l'exécution d'un programme, le CPU passe d'une instruction à une autre dans l'ordre avec lequel elles sont inscrite dans la mémoire vive. Les instructions de <strong>rupture de séquence</strong> d'exécution permettent d'interrompre l'ordre initial sous certaines conditions.</li>
+</ul>
+<p>Exemple : <em>si la valeur contenue dans le registre R1 est strictement supérieure à 0 alors exécuter l'instruction située à l'adresse mémoire 4521</em></p>
+<h3 id="les-operandes">Les opérandes<a class="headerlink" href="#les-operandes" title="Permanent link">⚓︎</a></h3>
+<p>Les opérandes sont les <strong>données</strong> sur lesquelles le code opération de l'instruction doit être réalisée. Un opérande peut être de 3 natures différentes :</p>
+<p>1- l'opérande est une <strong>valeur immédiate</strong> : l'opération est effectuée directement sur la valeur donnée dans l'opérande.</p>
+<p>2- l'opérande est un <strong>registre du CPU</strong> : l'opération est effectuée sur la valeur située dans le registre indiqué dans l'opérande (R0,R1, R2,...).</p>
+<p>3- l'opérande est une donnée située <strong>en mémoire vive</strong> : l'opération est effectuée sur la valeur située en mémoire vive à l'adresse XXXXX indiquée dans l'opérande.</p>
 <h2 id="le-langage-assembleur">Le langage Assembleur<a class="headerlink" href="#le-langage-assembleur" title="Permanent link">⚓︎</a></h2>
-<h3 id="definition">Définition<a class="headerlink" href="#definition" title="Permanent link">⚓︎</a></h3>
-<p>Il faut donc traduire en langage-machine (binaire)  la phrase "additionne le nombre 125 et la valeur située dans le registre R2 , range le résultat dans le registre R1" pour qu'elle soit utilisable par le CPU. Un programme de bas niveau appelé <strong>assembleur (ou ASM)</strong> assure le passage de symboles mnémoniques de type <code>addl %eax, %ebx</code> au langague-machine <code>11100010100000100001000001111101</code>. </p>
-<p>Si plus personne n'écrit de programme directement en langage machine, l'écriture de programme en assembleur est habituelle car elle permet d'optimiser d'avantage l'allocation des ressources matérielles qu'un langage de plus haut niveau (python par exemple).</p>
+<p>Un programme en langage machine est donc une suite très très longue de <code>1</code> et de <code>0</code>, ce qui est très peu intuitif à programmer : une seule erreur et votre programme ne fonctionne pas. Il faut donc traduire en langage-machine (binaire)  la phrase <em>additionne le nombre 125 et la valeur située dans le registre R2 , range le résultat dans le registre R1</em> pour qu'elle soit interprétable par le CPU.</p>
+<div class="admonition conclu">
+<p class="admonition-title">Définition du langage assembleur</p>
+<p>Le programme de bas niveau réalisé dans le langage appelé <strong>assembleur (ou ASM)</strong> assure le passage de symboles mnémoniques de type <code>addl %eax, %ebx</code> au langague-machine <code>11100010100000100001000001111101</code>.  </p>
+<p>L'écriture de programme en assembleur plutôt qu'en langage de plus haut niveau (python par exemple) permet d'être au plus proche de l'architecture matérielle et d'en optimiser l'allocation des ressources.</p>
+</div>
 <h3 id="exemples-de-commandes-en-assembleur-y86">Exemples de commandes en assembleur Y86<a class="headerlink" href="#exemples-de-commandes-en-assembleur-y86" title="Permanent link">⚓︎</a></h3>
-<p>Il existe différents types de langages assembleur, dépendant du type de processeur utilisé (x86-64, ARM...). </p>
-<p><strong>y86</strong> est un langage assembleur simplifié qui est dédié à l'apprentissage. Il est basé sur l'architecture des processeurs x86 (IA-32), les mémoires sont alignés sur 32 bits et utilise la convention little endian (stockage des octets dans l'ordre inverse, c'est-à-dire en commençant par l'octet de poids faible).</p>
-<p>y86 propose un jeu d'instructions réduit :</p>
+<div class="admonition note">
+<p class="admonition-title">Remarque</p>
+<p>Il n'est pas nécessaire d'apprendre à coder en ASM au niveau NSI, mais il faut en connaître les principes.</p>
+</div>
+<p>Il existe différents types de langages assembleur, qui varient selon le type de processeur utilisé (x86-64, ARM...). </p>
+<p><strong>y86</strong> est un langage assembleur simplifié qui est dédié à l'apprentissage. Il est basé sur l'architecture des processeurs x86 (IA-32), les mémoires sont donc alignés sur 32 bits.</p>
+<p>y86 propose un jeu d'instructions réduit dont les principales sont :</p>
 <ul>
 <li>
 <p>instructions <strong>arithmétiques</strong> :
@@ -2482,34 +2470,52 @@ Les instructions de rupture de séquence d'exécution encore appelées instructi
 </code></pre></div>
 </li>
 <li>
-<p>instruction de rupture de séquence (conditionnels ou pas) : jmp, je, jne, jg, jge, jl, jle</p>
+<p>instructions de <strong>rupture de séquence</strong> (conditionnels ou pas). Évalue le résultat de la précédente opération arithmétique, que l'on appellera <code>r</code>.
+</p><div class="highlight"><pre><span></span><code><span class="nf">jmp</span><span class="w"> </span><span class="no">label</span><span class="w"> </span><span class="c1">; Se rend au point nommé label (Jump)</span>
+<span class="nf">je</span><span class="w"> </span><span class="no">label</span><span class="w"> </span><span class="c1">; Jump si r = 0 </span>
+<span class="nf">jne</span><span class="w"> </span><span class="no">label</span><span class="w"> </span><span class="c1">; Jump si r != 0</span>
+<span class="nf">jg</span><span class="w"> </span><span class="no">label</span><span class="w"> </span><span class="c1">; Jump si r &gt; 0</span>
+<span class="nf">jge</span><span class="w"> </span><span class="no">label</span><span class="w"> </span><span class="c1">; Jump si r &gt;= 0</span>
+<span class="nf">jl</span><span class="w"> </span><span class="no">label</span><span class="w"> </span><span class="c1">; Jump si r &lt; 0</span>
+<span class="nf">jle</span><span class="w"> </span><span class="no">label</span><span class="w"> </span><span class="c1">; Jump si r &lt;= 0</span>
+</code></pre></div>
 </li>
 <li>
-<p>gestion pile : pushl, popl</p>
+<p>gestion de la pile :
+</p><div class="highlight"><pre><span></span><code><span class="nf">pushl</span><span class="w"> </span><span class="nv">%eax</span><span class="w">    </span><span class="c1">; Empile la valeur du registre %eax sur la pile</span>
+<span class="nf">popl</span><span class="w"> </span><span class="nv">%ebx</span><span class="w">    </span><span class="c1">; Dépile la valeur du dessus de la pile et la stocke dans le registre %ebx</span>
+</code></pre></div>
 </li>
 <li>
-<p>appel/retour de fonction : call, ret</p>
+<p>appel/retour de fonction : 
+</p><div class="highlight"><pre><span></span><code><span class="nf">call</span><span class="w"> </span><span class="no">label</span><span class="w"> </span><span class="c1">; Execute la fonction située au label puis reviens ou il s'était arrêté</span>
+<span class="nf">ret</span><span class="w"> </span><span class="c1">; force le retour au point d'où une fonction à été appelée</span>
+</code></pre></div>
 </li>
 <li>
-<p>divers : nop, halt</p>
+<p>divers : 
+</p><div class="highlight"><pre><span></span><code><span class="nf">halt</span><span class="w">             </span><span class="c1">; Arrête l'exécution du programme</span>
+<span class="nf">nop</span><span class="w">              </span><span class="c1">; Aucune opération (instruction nulle)</span>
+</code></pre></div>
+</li>
+<li>
+<p>Les registres s'écrivent sous la forme : <code>%eax</code>, <code>%ebx</code>...</p>
 </li>
 </ul>
-<p>Les registres s'écrivent sous la forme <code>%eax</code>, <code>%ebx</code>...</p>
-<div class="admonition note">
-<p class="admonition-title">Remarque</p>
-<ul>
-<li>Il n'est pas nécessaire d'apprendre à coder en ASM au niveau NSI, mais il faut en connaitre les principes.</li>
-</ul>
-</div>
 <details class="question">
 <summary>Activité 1 - Simulation d'un programme en assembleur</summary>
-<p>Etudions le programme <strong>python</strong> ci-dessous :</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Démarche</label><label for="__tabbed_1_3">Résultat</label><label for="__tabbed_1_4">Explications</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Étudions le programme <strong>python</strong> ci-dessous :</p>
 <div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 </code></pre></div>
 <p>Le processeur ne comprend pas directement python : les instructions doivent lui être passées en <strong>langage-machine</strong>. C'est le rôle des <strong>interpréteurs</strong> (pour le Python, par exemple) ou des <strong>compilateurs</strong> (pour le C, par exemple) que de faire le lien entre le langage pratiqué par les humains (Python, C...) et le langage-machine, qui n'est qu'une <strong>succession de chiffres binaires</strong>.</p>
 <p><strong>Question :</strong> Comment déterminer le langage-machine correspondant à ce code ?</p>
+</div>
+<div class="tabbed-block">
 <p>En <strong>assembleur Y86</strong>, notre programme s'écrirait :</p>
 <div class="highlight"><pre><span></span><code><span class="na">.pos</span><span class="w"> </span><span class="mi">0</span>
 <span class="w">    </span><span class="nf">mrmovl</span><span class="w"> </span><span class="no">a</span><span class="p">,</span><span class="w"> </span><span class="nv">%eax</span><span class="w"> </span><span class="c1">;affecte la valeur a (3) au registre %eax</span>
@@ -2523,28 +2529,10 @@ Les instructions de rupture de séquence d'exécution encore appelées instructi
 <span class="nl">b:</span><span class="w">  </span><span class="na">.long</span><span class="w"> </span><span class="mi">5</span>
 <span class="nl">c:</span><span class="w">  </span><span class="na">.long</span><span class="w"> </span><span class="mi">0</span><span class="w">   </span>
 </code></pre></div>
-<p>Copier ce code dans le simulateur ci-dessous, cliquer sur assembler puis sur pas à pas :</p>
+<p>Copier ce code dans le simulateur ci-dessous, cliquer sur assembler, puis sur pas à pas, en observant l'évolution de la valeur en mémoire.</p>
 <p><iframe src="/xtra/y86jsv2/index.html" frameborder="0" scrolling="auto" style="width: 100%; height: 550px;"></iframe></p>
-<div class="admonition info">
-<p class="admonition-title">Explications</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">En vidéo</label><label for="__tabbed_1_2">Résumé</label><label for="__tabbed_1_3">En image</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p><div class="video-container"><iframe src="https://www.youtube.com/embed/5xABe90yolM" style="position:relative;width:100%;height:22.172vw" frameborder="0" allowfullscreen alt="type:video"></iframe></div></p>
 </div>
 <div class="tabbed-block">
-<ul>
-<li>Les registres sont à percevoir comme des zones de travail temporaires, à l'accès très rapide. Les données font l'aller-retour entre la mémoire et le registre : elles sont stockées en mémoire, passent dans le registre pour y être modifiées, et reviennent en mémoire.</li>
-<li>les données ET les instructions sont stockées ensemble dans la mémoire : c'est le principe fondateur de l'architecture Von Neumann. Ici, l'octet <code>03</code> situé à l'adresse <code>0x000d</code> signifie qu'il va falloir ajouter (on le sait grâce au <code>60</code> qui précède) le registre numéroté <code>0</code> (donc <code>%eax</code>) au registre numéroté <code>3</code> (donc <code>%ebx</code>). On retrouve un octet de même valeur <code>03</code> à l'adresse <code>0x0018</code>. Mais dans ce cas, cet octet n'est pas une instruction mais une simple donnée : c'est la valeur 3 qu'on a donnée à la variable <code>a</code> dans notre programme. </li>
-</ul>
-</div>
-<div class="tabbed-block">
-<p><img alt="image" class="center" src="/assets/images/cap_Y86_2.png"></p>
-</div>
-</div>
-</div>
-</div>
-<p><strong>Résultat</strong></p>
 <p>Sur la partie droite du simulateur, la zone Mémoire contient, après assemblage, la traduction de notre code en langage-machine au format hexadécimal :</p>
 <div class="highlight"><pre><span></span><code>500f1800
 0000503f
@@ -2555,7 +2543,7 @@ Les instructions de rupture de séquence d'exécution encore appelées instructi
 03000000
 05000000
 </code></pre></div>
-<p>Ce qui correspond correspond au <strong>langage-machine</strong> binnaire suivant (voir chapitre suivant pour conversions hexa-&gt; bin) : </p>
+<p>Ce qui correspond correspond au <strong>langage-machine</strong> binnaire suivant (voir <a href="/premiere/encodage/entier-positif/#le-systeme-hexadecimal">chapitre suivant</a> pour conversions hexa-&gt; bin) : </p>
 <div class="highlight"><pre><span></span><code>01010000 00001111 00011000 00000000
 00000000 00000000 01010000 00111111
 00011100 00000000 00000000 00000000
@@ -2565,6 +2553,12 @@ Les instructions de rupture de séquence d'exécution encore appelées instructi
 00000011 00000000 00000000 00000000
 00000101 00000000 00000000 00000000
 </code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><div class="video-container"><iframe src="https://www.youtube.com/embed/5xABe90yolM" style="position:relative;width:100%;height:22.172vw" frameborder="0" allowfullscreen alt="type:video"></iframe></div></p>
+</div>
+</div>
+</div>
 </details>
 <details class="question">
 <summary>Activité 2 - Réaliser un code en assembleur</summary>
@@ -2641,22 +2635,35 @@ Les instructions de rupture de séquence d'exécution encore appelées instructi
 </div>
 <div class="tabbed-block">
 <ul>
-<li>Dans le terminal ci-dessous, rend toi dans le dossier crackme : <code>cd crackme</code> puis tapez l'instruction <code>gcc crackme.c -o crackme</code> pour compiler le programme.</li>
-<li>Tapez <code>./crackme</code> pour lancer le programme et jouez avec.</li>
+<li>Dans le terminal ci-dessous, rend toi dans le dossier crackme : <code>cd crackme</code> puis tape l'instruction <code>gcc crackme.c -o crackme</code> pour <strong>compiler</strong> le programme, c'est à dire le convertir en langage machine : le fichier binaire <code>crackme</code>.</li>
+<li>Tape <code>./crackme</code> pour lancer le programme et joue avec. </li>
 </ul>
 </div>
 <div class="tabbed-block">
-<p>Avec la commande <code>hexedit crackme</code>, il est possible d'observer la valeur des octets directement dans le fichier binaire <code>crackme</code>. </p>
-<p>Écrit en langage-machine, il est incompréhensible pour un autre humain... <code>hexedit</code> nous aide en affichant notamment (dans la partie droite) la conversion chaînes de caractères... dont notre mot de passe 😱. </p>
-<p>A toi de le trouver !</p>
+<p>Avec la commande <code>hexedit crackme</code>, il est possible d'observer la valeur des octets directement dans le fichier binaire <code>crackme</code>. Écrit en langage-machine, il est incompréhensible. <code>hexedit</code> nous aide en affichant le code hexadécimal, mais aussi la conversion chaînes de caractères (dans la partie droite). </p>
+<ul>
+<li>Parcours le code (flèche vers le bas) et retrouve notre mot de passe. </li>
+</ul>
 </div>
 <div class="tabbed-block">
-<p>Dans notre code C l'instruction <code>while (strcmp(saisie,"LYCEEXP")!=0)</code> est le cœur de la vérification du mot de passe. En assembleur, elle va donner naissance à une instruction <code>JNE</code> (pour Jump if Not Equal, voir <a class="" href="https://www.gladir.com/LEXIQUE/ASM/jumpif.htm" target="_blank">ici</a> ). Cette instruction est codée en hexadécimal par l'opcode <code>75 BC</code>. Nous allons rechercher ces octets et les remplacer par <code>90 90</code>, <code>90</code> étant l'opcode pour <code>NOP</code> (ne rien faire).
-- Lance <code>hexedit crackme</code>
-- Recherche <code>75BC</code> (CTR+S).
-- Remplace par <code>90 90</code>.
-- Sauvegarde le fichier (CTR+O)<code>.
-- Exécute ce code</code>./crackme` et constate les changements !</p>
+<p>Dans notre code C l'instruction <code>while (strcmp(saisie,"LYCEEXP")!=0)</code> est le cœur de la vérification du mot de passe. En assembleur, elle va donner naissance à une instruction <code>JNE</code> (pour Jump if Not Equal). Cette instruction est codée en hexadécimal par l'opcode <code>75 BC</code>. Nous allons rechercher ces octets et les remplacer par <code>90 90</code>, <code>90</code> étant l'opcode pour <code>NOP</code> (ne rien faire).</p>
+<ul>
+<li>
+<p>Lance <code>hexedit crackme</code></p>
+</li>
+<li>
+<p>Recherche <code>75BC</code> (CTR+S).</p>
+</li>
+<li>
+<p>Remplace par <code>90 90</code>.</p>
+</li>
+<li>
+<p>Sauvegarde le fichier (CTR+O).</p>
+</li>
+<li>
+<p>Exécute ce code <code>./crackme</code> et constate les changements !</p>
+</li>
+</ul>
 <div class="admonition tip">
 <p class="admonition-title">Cracker des programme grâce au language-machine</p>
 <p>Le désassemblage d'un programme est une opération très complexe et les opérations et chaînes de caractères qui apparaissent sont souvent incompréhensibles (parfois volontairement, dans le cas d'<a class="" href="https://connect.ed-diamond.com/MISC/mischs-007/obfuscation-de-langage-interprete-cachez-ce-code-que-je-ne-saurais-voir" target="_blank">obfuscation</a>  de code).<br>
@@ -2664,9 +2671,15 @@ Néanmoins, il est parfois possible d'agir au niveau le plus bas (le langage-mac
 </div>
 </div>
 <div class="tabbed-block">
-<p>Le compilateur <code>gcc</code>, avec le paramètre -S, permet de générer le langage ASM correspondant. Ce langage, adapté au processeur de votre machine est un peu plus complexe que le langage Y86 étudié plus haut, mais le principe reste le même.
-- Executer <code>gcc crackme.c -S -o crackme.asm</code>
-- Visualiser le fichier généré avec <code>nano crackme.asm</code> (CTR+X pour en sortir)</p>
+<p>Le compilateur <code>gcc</code>, avec le paramètre -S, permet de générer le langage ASM correspondant. Ce langage, adapté au processeur de votre machine est un peu plus complexe que le langage Y86 étudié plus haut, mais le principe reste le même.</p>
+<ul>
+<li>
+<p>Executer <code>gcc crackme.c -S -o crackme.asm</code></p>
+</li>
+<li>
+<p>Visualiser le fichier généré avec <code>nano crackme.asm</code> (CTR+X pour en sortir)</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
