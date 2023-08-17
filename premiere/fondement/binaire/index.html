@@ -584,6 +584,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#programme" class="md-nav__link">
+    Programme
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#le-langage-binaire" class="md-nav__link">
     Le langage binaire
   </a>
@@ -618,9 +625,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#les-portes-logiques" class="md-nav__link">
-    Les portes logiques
+  <a href="#portes-et-circuits-logiques" class="md-nav__link">
+    Portes et circuits logiques
   </a>
+  
+    <nav class="md-nav" aria-label="Portes et circuits logiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fonctionnement-des-principales-portes-logiques" class="md-nav__link">
+    Fonctionnement des principales portes logiques
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activites" class="md-nav__link">
+    Activités
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2381,6 +2415,7 @@
 
 
 <div><h1 id="operateurs-booleens-et-portes-logiques">Opérateurs booléens et portes logiques<a class="headerlink" href="#operateurs-booleens-et-portes-logiques" title="Permanent link">⚓︎</a></h1>
+<h2 id="programme">Programme<a class="headerlink" href="#programme" title="Permanent link">⚓︎</a></h2>
 <table>
 <thead>
 <tr>
@@ -2401,7 +2436,7 @@
 <img src="/assets/images/watergates.gif" speed="1" play>
 </center>
 <h2 id="le-langage-binaire">Le langage binaire<a class="headerlink" href="#le-langage-binaire" title="Permanent link">⚓︎</a></h2>
-<p>Avec le développement des premiers calculateurs fonctionnants à l'électricité, à base de relais, de tubes électroniques, de transistors, et enfin de circuits intégrés au sein de microprocesseurs, l'informatique s'est orienté vers un <strong>langage binaire</strong> : </p>
+<p>Avec le développement des premiers calculateurs fonctionnant à l'électricité, à base de relais électromécaniques, puis de tubes électroniques, de transistors, et enfin de circuits intégrés au sein de microprocesseurs, l'informatique s'est orienté vers un <strong>langage binaire</strong> : </p>
 <ul>
 <li>
 <p><strong>0</strong> : le courant ne passe pas</p>
@@ -2413,9 +2448,9 @@
 <p>Mathématiquement, on dira que les ordinateurs effectuent des opérations en <strong>base 2</strong> (binaire), et non dans la <strong>base 10</strong> (décimale) que nous avons l'habitude d'utiliser.</p>
 <h2 id="logique-booleenne">Logique booléenne<a class="headerlink" href="#logique-booleenne" title="Permanent link">⚓︎</a></h2>
 <h3 id="un-peu-dhistoire">Un peu d'histoire<a class="headerlink" href="#un-peu-dhistoire" title="Permanent link">⚓︎</a></h3>
-<p>En 1847, le  britannique  <em>George BOOLE</em>  inventait un formalisme permettant d'écrire des raisonnements logiques : l'algèbre de Boole. La notion même d'informatique n'existait pas à l'époque, même si les calculs étaient déjà automatisés (penser à la Pascaline de 1642). 
-Bien plus tard, en  1938, les travaux de l'américain <em>Claude  SHANNON</em>  prouva  que des  circuits  électriques
-peuvent  résoudre tous  les  problèmes  que l'algèbre  de  Boole peut  elle-même résoudre.  Pendant la deuxième guerre mondiale, les travaux  d'<em>Alan  TURING</em>  puis de <em>John VON NEUMANN</em> poseront définitivement les bases de l'informatique moderne.</p>
+<p>En <strong>1847</strong>, le  britannique  <strong>George BOOLE</strong>  inventait un formalisme permettant d'écrire des raisonnements logiques : l'<strong>algèbre de Boole</strong>. La notion même d'informatique n'existait pas à l'époque, même si les calculs étaient déjà automatisés (penser à la Pascaline de 1642). </p>
+<p>Bien plus tard, en  <strong>1938</strong>, les travaux de l'américain <strong>Claude  SHANNON</strong> prouvèrent que des circuits électriques
+pouvaient résoudre tous les  problèmes de l'algèbre booléenne.  Pendant la deuxième guerre mondiale, les travaux  d'<strong>Alan TURING</strong> puis de <strong>John VON NEUMANN</strong> poseront définitivement les bases de l'informatique moderne.</p>
 <h3 id="lalgebre-de-boole-une-logique-binaire">L'algèbre de Boole : une logique binaire<a class="headerlink" href="#lalgebre-de-boole-une-logique-binaire" title="Permanent link">⚓︎</a></h3>
 <p>L'algèbre de Boole définit des opérations dans un ensemble
 qui ne contient que <strong>deux éléments</strong> notés <strong>0 et 1</strong>, ou bien <strong>FAUX et VRAI</strong>, ou encore <strong>False</strong> et <strong>True</strong> (en Python)</p>
@@ -2429,8 +2464,9 @@ qui ne contient que <strong>deux éléments</strong> notés <strong>0 et 1</stro
 <ul>
 <li>la <em>disjonction exclusive</em> : <strong>OU EXCLUSIF</strong> = (A ET non B) OU (non A ET B)</li>
 </ul>
-<h2 id="les-portes-logiques">Les portes logiques<a class="headerlink" href="#les-portes-logiques" title="Permanent link">⚓︎</a></h2>
-<p>Les transistors effectuent des <strong>opérations booléennes</strong> directement liées à l'algèbre de Boole. Ainsi, un circuit logique prend en <strong>entrée</strong> un ou des signaux électriques - chaque entrée est dans un état "haut" (symbolisé par un "1") ou à un état "bas" (symbolisé par un "0") - et donne en <strong>sortie</strong> un ou des signaux électriques (chaque sortie est aussi dans un état "haut" ou à un état "bas"). </p>
+<h2 id="portes-et-circuits-logiques">Portes et circuits logiques<a class="headerlink" href="#portes-et-circuits-logiques" title="Permanent link">⚓︎</a></h2>
+<h3 id="definition">Définition<a class="headerlink" href="#definition" title="Permanent link">⚓︎</a></h3>
+<p>En électronique, les transistors effectuent des <strong>opérations booléennes</strong> directement liées à l'algèbre de Boole. Ainsi, un circuit logique prend en <strong>entrée</strong> un ou plusieurs signaux électriques. Chaque entrée est dans un état "haut" <strong>1</strong> ou un état "bas" <strong>0</strong> et donne en <strong>sortie</strong> un ou plusieurs signaux électriques. Chaque sortie est alors également dans un état "haut" ou "bas". </p>
 <div class="admonition note">
 <p class="admonition-title">Remarque</p>
 <p>Il existe deux catégories de circuit logique :</p>
@@ -2444,6 +2480,8 @@ qui ne contient que <strong>deux éléments</strong> notés <strong>0 et 1</stro
 </ul>
 <p>Dans la suite nous nous intéresserons principalement aux <strong>circuits combinatoires</strong>.</p>
 </div>
+<h3 id="fonctionnement-des-principales-portes-logiques">Fonctionnement des principales portes logiques<a class="headerlink" href="#fonctionnement-des-principales-portes-logiques" title="Permanent link">⚓︎</a></h3>
+<p>Il est nécessaire de connaître le fonctionnement des principales portes logiques, et de savoir en établir les <strong>tables de vérités</strong>.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">La négation : porte NON - NOT</label><label for="__tabbed_1_2">La disjonction : porte OU - OR</label><label for="__tabbed_1_3">La conjonction : porte ET - AND</label><label for="__tabbed_1_4">La disjonction exclusive : porte OU EXCLUSIF - XOR</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -2675,6 +2713,7 @@ qui ne contient que <strong>deux éléments</strong> notés <strong>0 et 1</stro
 </div>
 </div>
 </div>
+<h3 id="activites">Activités<a class="headerlink" href="#activites" title="Permanent link">⚓︎</a></h3>
 <details class="question">
 <summary>Activité 1 - Combinaison de portes logiques</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Réponse</label></div>
@@ -2693,7 +2732,7 @@ Constituer les portes <code>NON OU</code> et <code>NON ET</code> et en établir 
 </div>
 </div>
 <div class="tabbed-block">
-<p><strong>NON OU</strong></p>
+<p><strong>NON ET</strong></p>
 <p></p><div style="width: 100%; height: 100px">
     <logic-editor mode="tryout">
         <script type="application/json">
@@ -2743,7 +2782,7 @@ Constituer les portes <code>NON OU</code> et <code>NON ET</code> et en établir 
 </tr>
 </tbody>
 </table>
-<p><strong>NON ET</strong></p>
+<p><strong>NON OU</strong></p>
 <p></p><div style="width: 100%; height: 100px">
     <logic-editor mode="tryout">
         <script type="application/json">
@@ -2906,65 +2945,14 @@ Constituer les portes <code>NON OU</code> et <code>NON ET</code> et en établir 
 </div>
 </details>
 </details>
-<div class="admonition python">
-<p class="admonition-title">La logique booléene en Python</p>
-<p>Les opérateurs <code>and</code>, <code>or</code> et <code>not</code> sont utilisables pour tester des conditions, et renvoient <code>False</code> ou <code>True</code>.
-</p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">7</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">0</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-<span class="kc">False</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">7</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">7</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-<span class="kc">False</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="ow">not</span><span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-<span class="kc">False</span>
-</code></pre></div>
-<p>Les opérateurs <code>&amp;</code>, <code>|</code> et <code>^</code> sont utilisables directement avec des nombres en Python</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># calcul A</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">12</span> <span class="o">&amp;</span> <span class="mi">7</span>
-<span class="mi">4</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1"># calcul B</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">12</span> <span class="o">|</span> <span class="mi">7</span>
-<span class="mi">15</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1"># calcul C</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">12</span> <span class="o">^</span> <span class="mi">5</span>
-<span class="mi">9</span>
-</code></pre></div>
-<p>Pour comprendre ces résultats, il faut travailler en binaire :</p>
-<ul>
-<li>Les nombre binaires sont précédés de <code>0b</code>.</li>
-<li>La fonction <code>bin(n)</code> convertit un nombre entier en binaire.</li>
-</ul>
-<p>Voici les mêmes calculs, qui peuvent mieux s'annalyser en prenant les bits un à un :</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># calcul A</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="mb">0b1100</span> <span class="o">&amp;</span> <span class="mb">0b111</span><span class="p">)</span>
-	<span class="s1">'0b100'</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1"># calcul B</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="mb">0b1100</span> <span class="o">|</span> <span class="mb">0b111</span><span class="p">)</span>
-<span class="s1">'0b1111'</span>
-</code></pre></div>
-<p></p><div class="highlight"><pre><span></span><code><span class="c1"># calcul C</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="mb">0b1100</span> <span class="o">^</span> <span class="mb">0b111</span><span class="p">)</span>
-<span class="s1">'0b1011'</span>
-</code></pre></div>
-<strong>A toi de jouer !</strong>
-<div onclick='start_term("id8")' id="fake_id8" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id8" class="py_mk_hide"></div>
-</div>
 <details class="question">
-<summary>Activité 3</summary>
+<summary>Activité 3 - Réalisation d'opérations logiques sur les bits</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Énoncé</label><label for="__tabbed_3_2">Réponse</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Effectuer les opérations suivantes.
-</p><div class="highlight"><pre><span></span><code>   <span class="mi">1011011</span>
+<p>1 - Effectue à la main les opérations suivantes, en les réalisant bit à bit.</p>
+<p><strong>Rappel</strong> :  <code>&amp;</code> est le symbole de <strong>ET</strong>, <code>|</code> de <strong>OU</strong>,  <code>^</code> de <strong>OU EXCLUSIF</strong>.</p>
+<p></p><div class="highlight"><pre><span></span><code>   <span class="mi">1011011</span>
 <span class="o">&amp;</span>  <span class="mi">1010101</span>
 <span class="o">----------</span>
 
@@ -2978,6 +2966,64 @@ Constituer les portes <code>NON OU</code> et <code>NON ET</code> et en établir 
 <span class="o">^</span>  <span class="mi">1010101</span>
 <span class="o">----------</span>
 </code></pre></div>
+2 - Vérifie tes résultats avec python.
+<details class="python">
+<summary>La logique booléenne en Python</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">and, or, not</label><label for="__tabbed_4_2">&amp;, | et ^</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Les opérateurs <code>and</code>, <code>or</code> et <code>not</code> sont utilisables pour tester des <strong>conditions</strong>, et renvoient <code>False</code> ou <code>True</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span>
+<span class="kc">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">)</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="ow">not</span><span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span>
+<span class="kc">True</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>Les opérateurs <code>&amp;</code>, <code>|</code> et <code>^</code> sont utilisables directement avec des <strong>nombres</strong>, et renvoient des nombres.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># calcul A</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">12</span> <span class="o">&amp;</span> <span class="mi">7</span>
+<span class="mi">4</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># calcul B</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">12</span> <span class="o">|</span> <span class="mi">7</span>
+<span class="mi">15</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># calcul C</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">12</span> <span class="o">^</span> <span class="mi">5</span>
+<span class="mi">9</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Explication</p>
+<p>Pour comprendre ces résultats, il faut travailler en binaire (voir le chapitre sur l'<a href="premiere/encodage/entier-positif/">encodage</a> :</p>
+<ul>
+<li>Les nombre binaires sont précédés de <code>0b</code>.</li>
+<li>La fonction <code>bin(n)</code> convertit un nombre entier en binaire.</li>
+</ul>
+<p>Voici les mêmes calculs, qui peuvent mieux s'analyser en prenant les bits un à un :</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># calcul A</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="mb">0b1100</span> <span class="o">&amp;</span> <span class="mb">0b111</span><span class="p">)</span>
+	<span class="s1">'0b100'</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># calcul B</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="mb">0b1100</span> <span class="o">|</span> <span class="mb">0b111</span><span class="p">)</span>
+<span class="s1">'0b1111'</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># calcul C</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="mb">0b1100</span> <span class="o">^</span> <span class="mb">0b111</span><span class="p">)</span>
+<span class="s1">'0b1011'</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+</details>
+<p></p><div onclick='start_term("id8")' id="fake_id8" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id8" class="py_mk_hide"></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code> <span class="mi">1011011</span>
@@ -3000,8 +3046,8 @@ Constituer les portes <code>NON OU</code> et <code>NON ET</code> et en établir 
 </div>
 </details>
 <div class="admonition conclu">
-<p class="admonition-title">Du transistor aux circuits logiques complexes</p>
-<p>A la base de l'informatique, nous avons le transistor, composant muni de 2 entrées et une sortie. Une combinaison de transistors (sous forme de circuit intégré) permet d'obtenir des circuits logiques, la combinaison de circuits logiques permet d'obtenir des circuits plus complexes (exemple : l'additionneur), et ainsi de suite...</p>
+<p class="admonition-title">Conclusion : Du transistor aux circuits logiques complexes</p>
+<p>A la base de l'informatique nous avons le transistor, composant muni de 2 entrées et une sortie. Une combinaison de transistors (sous forme de circuit intégré) permet d'obtenir des circuits logiques, la combinaison de circuits logiques permet d'obtenir des circuits plus complexes (exemple : l'additionneur), et ainsi de suite...</p>
 </div></div>
 
 
@@ -3106,7 +3152,7 @@ Constituer les portes <code>NON OU</code> et <code>NON ET</code> et en établir 
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.tracking", "navigation.top", "navigation.footer", "toc.integrate", "navigation.indexes", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.tracking", "navigation.top", "navigation.footer", "toc.integrate", "navigation.indexes", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.e4f9f9ed.min.js"></script>
