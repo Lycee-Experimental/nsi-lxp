@@ -34,7 +34,7 @@ theme:
           icon: material/weather-night
           name: Passer au mode jour
   features:
-    - navigation.instant
+    #- navigation.instant
     - navigation.tabs
     #- navigation.tabs.sticky
     - navigation.sections
