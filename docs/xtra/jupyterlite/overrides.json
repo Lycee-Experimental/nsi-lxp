@@ -1,0 +1,21 @@
+{
+  "@jupyterlab/apputils-extension:themes": {
+    "theme": "Material Darker"
+  },
+  "@jupyterlab/translation-extension:plugin": {
+    "locale": "fr_FR"
+  },
+  "@jupyterlab/notebook-extension:panel": {
+    "toolbar": [
+      {
+        "name": "download",
+        "label": "Download",
+        "args": {},
+        "command": "docmanager:download",
+        "icon": "ui-components:download",
+        "rank": 50
+      }
+    ]
+  }
+}
+
