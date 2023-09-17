@@ -1,0 +1,3451 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Les sciences du numériques au Lycée Expérimental">
+      
+      
+      
+        <link rel="canonical" href="https://nsi.lycee-experimental.org/terminale/data/1_donnees_lineaires/structure_donnees_lineaires/">
+      
+      
+        <link rel="prev" href="../../">
+      
+      
+        <link rel="next" href="../../2_donnees_arbres/arbres/">
+      
+      <link rel="icon" href="../../../../assets/images/logo-lxp-noir.svg">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+    
+    
+      
+        <title>Données linéaires - NSI-LXP</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.eebd395e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-light.min.css">
+<!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.26.0/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.26.0/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.24.0/full/pyodide.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.24.0/full/pyodide.asm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-md5"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.37.2/js/jquery.terminal.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.37.2/css/jquery.terminal.min.css" rel="stylesheet">
+<script src="../../../../pyodide-mkdocs/utils.js"></script> 
+<script src="../../../../pyodide-mkdocs/interpreter.js"></script> 
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../xtra/stylesheets/ajustements.css">
+    
+      <link rel="stylesheet" href="../../../../xtra/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+<link rel="stylesheet" href="../../../../assets/stylesheets/custom.f7ec4df2.min.css">
+<link rel="stylesheet" href="../../../../pyodide-mkdocs/pyoditeur.css">
+<link rel="stylesheet" href="../../../../qcm/qcm.css">
+
+
+
+<input id="ace_palette" autocomplete="off" class="md-toggle" data-ace-dark-mode="tomorrow_night_bright" data-ace-light-mode="crimson_editor" type="checkbox"></input>
+
+
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="deep-orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#structure-de-donnees-lineaires" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../../.." title="NSI-LXP" class="md-header__button md-logo" aria-label="NSI-LXP" data-md-component="logo">
+      
+  <img src="../../../../assets/images/logo-lxp-transparent.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NSI-LXP
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Données linéaires
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="deep-orange"  aria-label="Passer au mode nuit"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Passer au mode nuit" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="deep-orange"  aria-label="Passer au mode jour"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Passer au mode jour" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lycee-experimental/nsi-lxp" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../intro/" class="md-tabs__link">
+      Introduction
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../premiere/fondement/" class="md-tabs__link">
+        Fondements
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../premiere/encodage/" class="md-tabs__link">
+        Encodage
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../premiere/linux/" class="md-tabs__link">
+        OS & Linux
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../premiere/python/" class="md-tabs__link">
+        Python
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../premiere/data/" class="md-tabs__link md-tabs__link--active">
+        Bigdata
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../premiere/internet/" class="md-tabs__link">
+        Réseaux
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../premiere/web/" class="md-tabs__link">
+        Web
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../premiere/algo/" class="md-tabs__link">
+        Algorithmes
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../ressources/" class="md-tabs__link">
+      Ressources
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../projets/" class="md-tabs__link">
+        Projets
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../bac/sujet/" class="md-tabs__link">
+      Bac
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="NSI-LXP" class="md-nav__button md-logo" aria-label="NSI-LXP" data-md-component="logo">
+      
+  <img src="../../../../assets/images/logo-lxp-transparent.svg" alt="logo">
+
+    </a>
+    NSI-LXP
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lycee-experimental/nsi-lxp" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../intro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../premiere/fondement/">Fondements</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Fondements
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/fondement/histoire/" class="md-nav__link">
+        1️⃣ Histoire de l'informatique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/fondement/binaire/" class="md-nav__link">
+        1️⃣ Binaire et portes logiques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/fondement/materiel/" class="md-nav__link">
+        1️⃣ Architecture matérielle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/fondement/assembleur/" class="md-nav__link">
+        1️⃣ Langage machine et assembleur
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fondements/composants_integres_systeme_puce/composant/" class="md-nav__link">
+        🇹 Systèmes sur puces (SoC)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../outils/quiz/Architectures%20mat%C3%A9rielles%20et%20syst%C3%A8mes%20d%E2%80%99exploitation%20%28Premi%C3%A8re%29/" class="md-nav__link">
+        Quiz
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../premiere/encodage/">Encodage</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Encodage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/encodage/entier-positif/" class="md-nav__link">
+        1️⃣ Entiers positifs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/encodage/entier-negatif/" class="md-nav__link">
+        1️⃣ Entiers signés
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/encodage/non-entier/" class="md-nav__link">
+        1️⃣ Nombres réels
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/encodage/caractere/" class="md-nav__link">
+        1️⃣ Caractères
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../premiere/linux/">OS & Linux</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          OS & Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/linux/linux/" class="md-nav__link">
+        1️⃣ Tester et installer Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/linux/commande/" class="md-nav__link">
+        1️⃣ Commandes Shell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/linux/dossier/" class="md-nav__link">
+        1️⃣ Arborescence des dossiers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/linux/permission/" class="md-nav__link">
+        1️⃣ Gestion des permissions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../os/gestion_processus/gestion_processus/" class="md-nav__link">
+        🇹 Gestion des processus
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../premiere/python/">Python</a>
+          
+            <label for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/python/variable/" class="md-nav__link">
+        1️⃣ Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/python/boucle/" class="md-nav__link">
+        1️⃣ Boucles for et while
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/python/condition/" class="md-nav__link">
+        1️⃣ Instruction conditionnelle If
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/python/bool/" class="md-nav__link">
+        1️⃣ Booléens
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/python/fonction/" class="md-nav__link">
+        1️⃣ Fonctions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/python/liste/" class="md-nav__link">
+        1️⃣ Listes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/python/tuple/" class="md-nav__link">
+        1️⃣ Tuples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/python/dict/" class="md-nav__link">
+        1️⃣ Dictionnaires
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/python/char/" class="md-nav__link">
+        1️⃣ Chaînes de caractères
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../python/01-Bonnes_pratiques/Bonnes_pratiques/" class="md-nav__link">
+        🇹 Bonnes pratiques de la progra
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../python/02-Programmation_Orientee_Objet/Programmation_Orientee_Objet/" class="md-nav__link">
+        🇹 Progra Orientée Objet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../python/03-Recursivite/recursivite/" class="md-nav__link">
+        🇹 Récursivité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../python/4-Paradigmes_de_programmation/Paradigmes_de_programmation/" class="md-nav__link">
+        🇹 Paradigmes de la progra
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../python/5-Decidabilite-Calculabilite/Decidabilite-Calculabilite/" class="md-nav__link">
+        🇹 Décidabilité et calculabilité
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../premiere/data/">Bigdata</a>
+          
+            <label for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Bigdata
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../premiere/data/1_tables/">1️⃣ Les données en tables</a>
+          
+            <label for="__nav_6_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          1️⃣ Les données en tables
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6_2_2" id="__nav_6_2_2_label" tabindex="0">
+          Prendre un bon départ
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Prendre un bon départ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/data/1_tables/1_depart/1_listes/" class="md-nav__link">
+        Listes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/data/1_tables/1_depart/2_comprehension/" class="md-nav__link">
+        Listes en compréhension
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/data/1_tables/1_depart/3_dictionnaires/" class="md-nav__link">
+        Dictionnaires
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/data/1_tables/1_depart/4_imbriquees/" class="md-nav__link">
+        Listes de listes/dictionnaires
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6_2_3" id="__nav_6_2_3_label" tabindex="0">
+          Les fichiers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Les fichiers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/data/1_tables/2_fichiers_csv/1_manipulation/" class="md-nav__link">
+        Lire un fichier
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/data/1_tables/2_fichiers_csv/2_fichiers_csv/" class="md-nav__link">
+        Fichiers csv
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/data/1_tables/2_fichiers_csv/3_import_listes/" class="md-nav__link">
+        Import vers listes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/data/1_tables/2_fichiers_csv/4_import_dico/" class="md-nav__link">
+        Import vers dictionnaires
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2_4" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6_2_4" id="__nav_6_2_4_label" tabindex="0">
+          Requêtes simples
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_2_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Requêtes simples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/data/1_tables/3_requetes_simples/1_prenoms/" class="md-nav__link">
+        Prénoms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/data/1_tables/3_requetes_simples/2_communes/" class="md-nav__link">
+        Communes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/data/1_tables/4_requetes_elaborees/1_films/" class="md-nav__link">
+        Requêtes élaborées
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/data/1_tables/5_fusions/1_fusions/" class="md-nav__link">
+        Fusion de tables
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">🇹 Structures de données</a>
+          
+            <label for="__nav_6_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_6_3">
+          <span class="md-nav__icon md-icon"></span>
+          🇹 Structures de données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Données linéaires
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Données linéaires
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#la-liste" class="md-nav__link">
+    La LISTE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-piles-et-les-files" class="md-nav__link">
+    Les PILES et les FILES
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-dictionnaires" class="md-nav__link">
+    Les dictionnaires
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comment-choisir-une-structure-de-donnees-adaptee-a-la-situation-a-modeliser" class="md-nav__link">
+    Comment choisir une structure de données adaptée à la situation à modéliser ?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comment-distinguer-les-structures-par-le-jeu-des-methodes-qui-les-caracterisent" class="md-nav__link">
+    Comment distinguer les structures ? … par le jeu des méthodes qui les caractérisent
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structures-de-donnees-interface-et-implementation" class="md-nav__link">
+    Structures de données, interface et implémentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2_donnees_arbres/arbres/" class="md-nav__link">
+        Données en arbres
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3_donnees_graphes/Graphes/" class="md-nav__link">
+        Données en graphes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4_bases_de_donnees/bases_de_donnees/" class="md-nav__link">
+        🇹 Bases de données
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../premiere/internet/">Réseaux</a>
+          
+            <label for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Réseaux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/internet/histoire/" class="md-nav__link">
+        1️⃣ Histoire d'internet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/internet/architecture/" class="md-nav__link">
+        1️⃣ Architecture réseau
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/internet/protocole/" class="md-nav__link">
+        1️⃣ Protocoles de communication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reseau/routage/protocole_routage/" class="md-nav__link">
+        🇹 Protocoles de routage
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../premiere/web/">Web</a>
+          
+            <label for="__nav_8">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Web
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/web/langage/" class="md-nav__link">
+        1️⃣ Langages web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/web/http/" class="md-nav__link">
+        1️⃣ Protocole HTTP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/web/requete/" class="md-nav__link">
+        1️⃣ Requêtes GET et POST et formulaires
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../web/securisation_des_communications/Securisation_des_communications/" class="md-nav__link">
+        🇹 Sécurité des communications
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../premiere/algo/">Algorithmes</a>
+          
+            <label for="__nav_9">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithmes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/algo/moy/" class="md-nav__link">
+        1️⃣ Extremums et moyennes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/algo/complex/" class="md-nav__link">
+        1️⃣ Complexité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/algo/insert/" class="md-nav__link">
+        1️⃣ Tri par insertion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/algo/select/" class="md-nav__link">
+        1️⃣ Tri par sélection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/algo/dichotomie/" class="md-nav__link">
+        1️⃣ Dichotomie
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/algo/glouton/" class="md-nav__link">
+        1️⃣ Algorithmes gloutons
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../premiere/algo/knn/" class="md-nav__link">
+        1️⃣ Algorithme KNN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../algorithmes/diviser/" class="md-nav__link">
+        🇹 Diviser pour régner
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../algorithmes/dynamique/" class="md-nav__link">
+        🇹 Progra dynamique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../algorithmes/recherche_textuelle/" class="md-nav__link">
+        🇹 Recherche textuelle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ressources/" class="md-nav__link">
+        Ressources
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../projets/">Projets</a>
+          
+            <label for="__nav_11">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Projets
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
+          Le dépot Git du LXP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_11_2">
+          <span class="md-nav__icon md-icon"></span>
+          Le dépot Git du LXP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../projets/git/presentation/" class="md-nav__link">
+        Présentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../projets/git/utilisation/" class="md-nav__link">
+        Utilisation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../projets/git/commandes/" class="md-nav__link">
+        Commandes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_3" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_11_3" id="__nav_11_3_label" tabindex="0">
+          Django-LXP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_11_3">
+          <span class="md-nav__icon md-icon"></span>
+          Django-LXP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_3_1" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_11_3_1" id="__nav_11_3_1_label" tabindex="0">
+          Pycharm & Django-Lxp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_11_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Pycharm & Django-Lxp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../projets/djangolxp/install-pycharm/" class="md-nav__link">
+        Installation de Pycharm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../projets/djangolxp/deploiement-local/" class="md-nav__link">
+        Déploiement Django-lxp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../projets/djangolxp/Utilisation-github_pycharm/" class="md-nav__link">
+        Git avec pycharm
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_3_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_11_3_2" id="__nav_11_3_2_label" tabindex="0">
+          Développement de Django-Lxp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_11_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Développement de Django-Lxp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../projets/djangolxp/ajout-champs/" class="md-nav__link">
+        Ajout de champs au formulaires
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../projets/djangolxp/style-fiche-inscription/" class="md-nav__link">
+        Affichage de la fiche d'inscription
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../projets/djangolxp/tableau-filtre/" class="md-nav__link">
+        Afficher/filtrer les listes d'élèves
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_4" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_11_4" id="__nav_11_4_label" tabindex="0">
+          Renpy
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_11_4">
+          <span class="md-nav__icon md-icon"></span>
+          Renpy
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../projets/renpy/decompile.m" class="md-nav__link">
+        Décompiler un jeu
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_5" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_11_5" id="__nav_11_5_label" tabindex="0">
+          Drum-LXP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_11_5">
+          <span class="md-nav__icon md-icon"></span>
+          Drum-LXP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../projets/drumxp/intro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../projets/drumxp/elec/" class="md-nav__link">
+        Électronique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../projets/drumxp/progra/" class="md-nav__link">
+        Programmation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../projets/drumxp/logiciels/" class="md-nav__link">
+        Logiciel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../projets/drumxp/matos/" class="md-nav__link">
+        Structure
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bac/sujet/" class="md-nav__link">
+        Bac
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+
+  
+  
+
+
+<div><h1 id="structure-de-donnees-lineaires">Structure de données linéaires<a class="headerlink" href="#structure-de-donnees-lineaires" title="Permanent link">⚓︎</a></h1>
+<details class="conclu">
+<summary>Programme</summary>
+<table>
+<thead>
+<tr>
+<th>Notions</th>
+<th>Compétences</th>
+<th>Remarques</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Structures de données, interface et implémentation.<br> Listes, piles, files : structures linéaires. <br> Dictionnaires, index et clé.</td>
+<td>Spécifier une structure de données par son interface.<br> Distinguer interface et implémentation. <br> Écrire plusieurs implémentations d'une même structure de données.<br> Distinguer des structures par le jeu des méthodes qui  caractérisent. <br> Choisir une structure de données adaptée à la situation à modéliser. <br> Distinguer la recherche d’une valeur dans une liste et dans un dictionnaire.</td>
+<td>L’abstraction des structures de données est introduite après plusieurs implémentations d’une structure simple comme la file (avec un tableau ou avec deux piles). <br> On distingue les modes FIFO (first in first out) et LIFO (last in first out) des piles et des files.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<p>Une <strong>structure linéaire</strong> relie les données en <strong>séquences</strong>. C'est à dire qu'on peut numéroter les données, et que chaque élément a un rang.</p>
+<p>Nous verrons dans ce chapitre l'exemple de la LISTE, dont la PILE et la FILE en sont des sous-exemple avec des opérations restreintes.</p>
+<h2 id="la-liste">La LISTE<a class="headerlink" href="#la-liste" title="Permanent link">⚓︎</a></h2>
+<div class="admonition python">
+<p class="admonition-title">Rappels sur les types construits de Python</p>
+<p>Nous avons vu dans les chapitres <a href="../../premiere/encodage/">Encodage</a> et <a href="../../premiere/python/">Python</a> comment représenter des données avec des types et valeurs de base : <strong>entier</strong>,  <strong>flottant</strong>, <strong>booléen</strong> et <strong>texte</strong>, appelés respectivement en Python : <code>int</code>, <code>float</code>, <code>bool</code> et <code>str</code>.</p>
+<p>Nous avons appris à reconnaître différents <strong>types construits</strong> :</p>
+<ul>
+<li>
+<p>Le <strong>tuple</strong> : <code>tuple = ('1', 'a')</code> contenant des valeurs ordonnées et repérées par un index (index 0 pour le premier élément, <code>tuple[0] = '1'</code>) et pour lequel on ne peut pas remplacer la valeur en un index donné ; </p>
+</li>
+<li>
+<p>La <strong>liste</strong> : <code>liste = [1, 2, 3]</code> contenant des valeurs ordonnées et repérées aussi par un index (<code>liste[-1] = 3</code>). </p>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>On appelle <strong>liste</strong> en Python ce qui est plus généralement un <strong>tableau indexé</strong>. Un tableau indexé est une suite d’éléments de même type (il est possible de créer des listes contenant des valeurs de types différents mais c’est déconseillé car le traitement de la liste serait compliqué puisque chaque type devrait être traité différemment) . Il ne faudra pas confondre ces tableaux indexés avec les listes que l’on aborde dans ce chapitre. </p>
+</div>
+</div>
+<p>La <strong>LISTE</strong> est aussi une suite d’éléments de même type pour les mêmes raisons que le tableau indexé. Une LISTE est utilisée pour stocker en mémoire des données qui doivent être traitées dans un certain ordre. On peut y <strong>ajouter</strong>, <strong>enlever</strong>, <strong>consulter</strong> un élément d’une liste et <strong>modifier</strong> un élément sans affecter les autres éléments. </p>
+<p><strong>Etape 1 : Que fait une LISTE ? … les méthodes du type (ou de la classe) LISTE</strong></p>
+<p>La LISTE contiendra des données de même type T (que des entiers par exemple)</p>
+<p>On ne conserve que les opérations utiles et autant que possible, les plus efficaces.</p>
+<p>Les opérations (ou les méthodes ou interactions avec environnement) sont :</p>
+<ul>
+<li><code>CREER_LISTE_VIDE()</code> qui retourne un objet de type LISTE : la LISTE est créée et est vide.</li>
+<li><code>INSERER(L, i, e)</code> : l’élément e est inséré à la position i dans la LISTE L.</li>
+<li><code>SUPPRIMER(L, i)</code> : l’élément situé à la position i est supprimé.</li>
+<li><code>RECHERCHER(L, e)</code> qui retourne un objet de type entier  : l’élément e est cherché dans la LISTE et c’est la position i qui est retourné.</li>
+<li><code>LIRE(L, i)</code> qui retourne un objet du type T : c’est l’élément situé à la position i qui est retourné.</li>
+<li><code>MODIFIER(L, i, e)</code> : l’élément situé à la position i dans la LISTE est écrasé par le nouvel élément e.</li>
+<li><code>LONGUEUR(L)</code> qui retourne un objet de type entier : le nombre d’éléments de la LISTE est retourné.</li>
+</ul>
+<p><strong>Exercice d'utilisation d'une LISTE</strong></p>
+<p>1) Que donne la liste d'instructions suivante?</p>
+<div class="highlight"><pre><span></span><code><span class="n">L</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
+
+<span class="n">INSERER</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+
+<span class="n">SUPPRIMER</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">RECHERCHER</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">RECHERCHER</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">LIRE</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+
+<span class="n">MODIFIER</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">LONGUEUR</span><span class="p">(</span><span class="n">L</span><span class="p">))</span>
+</code></pre></div>
+<p>2) Vérifier avec la console ci-dessous (les fonctions sont déjà préchargées, mais non visibles)</p>
+<div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_74eba7b6aa1f8df0e8455baa55f22dfe9c3b5b54" class="comment">###</span><div class="line" id="editor_74eba7b6aa1f8df0e8455baa55f22dfe9c3b5b54"></div><div id="term_editor_74eba7b6aa1f8df0e8455baa55f22dfe9c3b5b54" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_74eba7b6aa1f8df0e8455baa55f22dfe9c3b5b54","")'>            <img src="../../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_74eba7b6aa1f8df0e8455baa55f22dfe9c3b5b54","scripts/utilisation_LISTE")'>            <img src="../../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_74eba7b6aa1f8df0e8455baa55f22dfe9c3b5b54').click()">            <img src="../../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_74eba7b6aa1f8df0e8455baa55f22dfe9c3b5b54" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_74eba7b6aa1f8df0e8455baa55f22dfe9c3b5b54")'>            <img src="../../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_74eba7b6aa1f8df0e8455baa55f22dfe9c3b5b54")'>            <img src="../../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+<p><span id="content_editor_74eba7b6aa1f8df0e8455baa55f22dfe9c3b5b54" class="py_mk_hide">#--- HDR ---#bksl-nlbksl-nl# Les Listesbksl-nlbksl-nldef CREERpy-undLISTEpy-undVIDE():bksl-nl    return []bksl-nlbksl-nldef INSERER(L, i, e):bksl-nl    if i &gt; len(L):bksl-nl        msg = "insertion pas possible: indice pas correct"bksl-nl    else:bksl-nl        L.insert(i, e)bksl-nl        L.pop()bksl-nl        msg = "insertion effectuée"bksl-nl    return msgbksl-nlbksl-nlbksl-nldef SUPPRIMER(L, i):    bksl-nl    if  i &gt; len(L):bksl-nl        msg = "suppression pas possible"bksl-nl    else :bksl-nl        del L[i]bksl-nl        L.append(None)bksl-nl        msg = "la suppression est possible"bksl-nl    return msgbksl-nlbksl-nlbksl-nldef RECHERCHER(L, e):bksl-nl    if e in L:bksl-nl        msg = L.index(e)bksl-nl    else:bksl-nl        msg = "L'élément n'est pas dans la liste"bksl-nl    return msgbksl-nlbksl-nldef LIRE(L, i):bksl-nl    if  i &gt; len(L):bksl-nl        msg = "lecture impossible"bksl-nl    else:bksl-nl        msg = L[i]bksl-nl    return msgbksl-nlbksl-nldef MODIFIER(L, i, e):bksl-nl    if  i &gt; len(L):bksl-nl        msg = "modification impossible"bksl-nl    else:bksl-nl        L[i] = ebksl-nl        msg = "modification effectuée"bksl-nl    return msgbksl-nlbksl-nldef LONGUEUR(L):bksl-nl    return len(L)bksl-nl#--- HDR ---#bksl-nlbksl-nlL=[2, 4, 7, 1, 9, None, None]bksl-nlbksl-nlINSERER(L, 2, 9)bksl-nlprint(L)bksl-nlbksl-nlSUPPRIMER(L, 1)bksl-nlprint(L)bksl-nlbksl-nlprint(RECHERCHER(L, 1))bksl-nlbksl-nlprint(RECHERCHER(L, 10))bksl-nlbksl-nlprint(LIRE(L, 7))bksl-nlbksl-nlMODIFIER(L, 4, 8)bksl-nlprint(L)bksl-nlbksl-nlbksl-nlprint(LONGUEUR(L))bksl-nlbksl-nlbksl-nlbksl-nl</span><span id="corr_content_editor_74eba7b6aa1f8df0e8455baa55f22dfe9c3b5b54" class="py_mk_hide" data-strudel=""></span></p>
+<p><strong>Etape 2 : comment représenter une liste ?</strong></p>
+<p>Puisqu’on les connaît bien, on peut choisir d’utiliser les tableaux indexés vus en première et qui sont de taille fixe.</p>
+<p>Lorsqu’on crée une LISTE de taille n, un espace mémoire légèrement plus grand lui est alloué.</p>
+<p>Mais attention, la première case de ce tableau, donc d’index 0 est réservée pour contenir le nombre d’éléments contenus dans la liste. </p>
+<p>Le nombre d’éléments contenus dans la liste indique la dernière position occupée et donc informe sur la position de la case disponible. Et chaque élément <em>e</em> sera caractérisé par sa position supérieure ou égale à 1.</p>
+<p>Supposons un tableau de 11 cases. Alors ce tableau pourra représenter une liste de <span class="arithmatex">\(n=10\)</span> éléments au maximum. On grise l’espace où l’insertion est possible.</p>
+<p><img alt="" class="center" src="../Images/tab1.JPG"></p>
+<p>Les espaces libres sont alloués au fur et à mesure, tant qu’il reste de l’espace. Ci-dessous, on rend compte de l’évolution du remplissage du tableau qui représente cette liste, pour différentes insertions</p>
+<p><strong>Exercice 1</strong></p>
+<p>On vous donne les deux premières allocations, à vous de compléter pour les suivantes.</p>
+<p><img alt="" class="center" src="../Images/tab2.JPG"></p>
+<div class="admonition note">
+<p class="admonition-title">Remarques</p>
+<p>Si on veut modifier un élément, puisque l’élément est de position connue, il n’y a pas de coût supplémentaire et ce quel que soit le nombre d’éléments de la liste. Donc la modification, de même que l’allocation, ne dépend pas du nombre d’éléments de la liste. On dit qu’elles ont un coût constant.</p>
+<p>En revanche si la liste doit être rallongée, il faut modifier le nombre de cases du tableau initial et l’index doit être modifié. Cette action dépend proportionnellement du nombre d’éléments de la liste.</p>
+<p>De même si on doit retirer un élément de la liste, il sera moins coûteux de retirer un élément en bout de liste qu’un élément au coeur de la liste où il faudrait redéfinir les index.</p>
+</div>
+<p><strong>Etape 3 : algorithme et implémentation dans Python</strong></p>
+<p>On sait déjà réaliser les opérations sur une liste déjà existante : trouver sa longueur, rechercher une valeur, lire une valeur, modifier une valeur. On limite donc l’étude à l’implémentation de l’insertion et de la suppression.</p>
+<p>Pour cette activité, on part de la liste suivante (un tableau pouvant accueillir les 10 valeurs entières d’une liste)  </p>
+<p><code>LISTE=[4, 1, 5, 4, 16, None, None, None, None, None, None]</code></p>
+<p><strong>Exercice 2</strong></p>
+<ul>
+<li>Objectif 1 : écrire une fonction qui affiche les éléments de la liste, excepté l’élément d’index 0 .</li>
+<li>Objectif 2 : écrire une fonction qui supprime l’élément e d’index i de la liste LISTE définie ci-dessus.</li>
+<li>Objectif 3 : écrire une fonction qui insère l’élément e à l’index i dans la LISTE définie ci-dessus.</li>
+</ul>
+<p>1) Complétez le programme ci-dessous.</p>
+<div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_e37a7834221fdb0943d10589f4d380a32e13890e" class="comment">###</span><div class="line" id="editor_e37a7834221fdb0943d10589f4d380a32e13890e"></div><div id="term_editor_e37a7834221fdb0943d10589f4d380a32e13890e" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_e37a7834221fdb0943d10589f4d380a32e13890e","")'>            <img src="../../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_e37a7834221fdb0943d10589f4d380a32e13890e","scripts/exercice2")'>            <img src="../../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_e37a7834221fdb0943d10589f4d380a32e13890e').click()">            <img src="../../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_e37a7834221fdb0943d10589f4d380a32e13890e" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_e37a7834221fdb0943d10589f4d380a32e13890e")'>            <img src="../../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_e37a7834221fdb0943d10589f4d380a32e13890e")'>            <img src="../../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+<p><span id="content_editor_e37a7834221fdb0943d10589f4d380a32e13890e" class="py_mk_hide">"""bksl-nlCe module contient les fonctions :bksl-nl- AFFICHER : fonction afficher la liste , sans l'element d'index 0bksl-nl- SUPPRIMER : fonction qui supprime un élément de la listebksl-nl- INSERER : fonction qui insère un élément dans la listebksl-nl"""bksl-nlbksl-nl#objectif 1: fonction afficher la liste , sans l'element d'index 0bksl-nldef AFFICHER(L):bksl-nl    """bksl-nl    Cette fonction permet d'afficher les éléments d'une liste à partir de l'indice 1bksl-nl    bksl-nl    param : L(list)bksl-nl    return msg(str)bksl-nl    bksl-nl    Exemples :bksl-nl    bksl-nl    &gt;&gt;&gt; AFFICHER([4, 1, 5, 4, 16, None, None, None, None, None, None])bksl-nl    'Liste :  1  5  4  16 ' bksl-nl    """bksl-nl    bksl-nl    ...bksl-nl    ...bksl-nl    ...bksl-nl    ...bksl-nl    return ...bksl-nlbksl-nl#objectif 2: fonction supprimer un elementbksl-nldef SUPPRIMER(L, i):bksl-nl    """bksl-nl    Cette fonction permet de supprimer un élément à l'indice i d'une listebksl-nl    bksl-nl    param : L(list)bksl-nl            i(int)bksl-nl    return : msg(str)bksl-nl    bksl-nl    Exemples :bksl-nl    &gt;&gt;&gt; SUPPRIMER([4, 1, 5, 4, 16, None, None, None, None, None, None], 2)bksl-nl    'la suppression est possible'bksl-nl    bksl-nl    &gt;&gt;&gt; SUPPRIMER([4, 1, 5 ,4, 16, None, None, None, None, None, None], 0)bksl-nl    'suppression pas possible'bksl-nl    """bksl-nl    bksl-nl    # Test de validite pour l'application de supprimerbksl-nl    if ...:bksl-nl        ...bksl-nl    # Recopie des valeurs gardeesbksl-nl    else:bksl-nl        ....bksl-nl        L[k] = L[k+1]bksl-nl        # mise a jour de la taille de la listebksl-nl        L[0] = L[0] - 1bksl-nl        msg = "la suppression est possible"bksl-nl    return ...bksl-nlbksl-nl#objectif 3: fonction inserer un elementbksl-nldef INSERER(L, i, e):bksl-nl    """bksl-nl    Cette fonction permet d'insérer un élément à un indice donné dans une listebksl-nl    bksl-nl    param : L(list)bksl-nl            i(int)bksl-nl            e(float)bksl-nl    return : msg(str)bksl-nl    bksl-nl    Exemples :bksl-nl    bksl-nl    &gt;&gt;&gt; INSERER([4, 1, 5 ,4, 16, None, None, None, None, None, None], 3, 9)bksl-nl    'insertion possible'bksl-nl    bksl-nl    &gt;&gt;&gt; INSERER([4, 1, 5 ,4, 16, None, None, None, None, None, None], 0, 9)bksl-nl    'insertion pas possible: indice pas correct'bksl-nl    bksl-nl    &gt;&gt;&gt; INSERER([10,1,5,4,16,5,6,7,8,9,10],8,3)bksl-nl    'insertion pas possible: liste pleine'bksl-nl    """bksl-nl    bksl-nl    # Test de validite pour l'application de insererbksl-nl    if ...:bksl-nl        msg = "insertion pas possible: indice pas correct"bksl-nl    elif ...:    bksl-nl        msg = "insertion pas possible: liste pleine"bksl-nl    # Recopie des valeurs deplaceesbksl-nl    else:bksl-nl        ...bksl-nl        L[k+1] = L[k]bksl-nl        # Insertion de la valeur e a la position ibksl-nl        ...bksl-nl        # mise a jour de la taille de la listebksl-nl        L[0] = L[0] + 1bksl-nl        msg = "insertion possible"bksl-nl    return ...bksl-nl</span><span id="corr_content_editor_e37a7834221fdb0943d10589f4d380a32e13890e" class="py_mk_hide" data-strudel=""></span></p>
+<p>2) Testez ce programme avec un doctest, et éventuellement, corrigez-le.</p>
+<h2 id="les-piles-et-les-files">Les PILES et les FILES<a class="headerlink" href="#les-piles-et-les-files" title="Permanent link">⚓︎</a></h2>
+<p><strong>Etape 1 : principe illustré dans une vidéo</strong></p>
+<p><strong>Exercice 3</strong></p>
+<ol>
+<li>
+<p>Lire la vidéo ci-dessous <strong>jusqu’à 6 minutes</strong>.</p>
+<p><iframe title="45522059-bb03-41c3-a38e-bcd390eabc2c-360" src="https://tube-sciences-technologies.apps.education.fr/videos/embed/2e283f1d-4658-4ad9-bb17-75a37cf8dd80" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" width="560" height="315" frameborder="0"></iframe></p>
+</li>
+<li>
+<p>Qu’est-ce qui distingue une PILE ou une FILE d’une LISTE ?</p>
+</li>
+<li>
+<p>Compléter le tableau suivant :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: center;">La PILE</th>
+<th style="text-align: center;">La FILE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Une image du quotidien qui l'illustre</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Qu'est-ce que c'est? (principe)</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Acronyme du mode associé et signification</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Ce qu'on peut faire avec? (méthodes)</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">A quoi cela sert?</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p>La vidéo évoque le type abstrait (reporté en fin de chapitre). La fin de la vidéo constitue une ouverture sur le type abstrait et des listes chainées et doublement chainées qui sont hors programme.</p>
+<div class="admonition info">
+<p class="admonition-title">Complément</p>
+<p>Ces deux structures bien que différentes par certains aspects, sont utilisées pour stocker des éléments dans la LISTE et effectuer des opérations comme ajouter ou supprimer l’élément d’une LISTE. Dans une PILE on n’utilise qu’un seul pointeur (vers le haut de la PILE), alors que dans une FILE, il en faut deux (un vers la tête et l’autre vers la queue)</p>
+<p>Les PILES sont très utilisées sur les plateformes de streaming musical. Lorsqu’on demande à la plateforme de lire une chanson à la suite, elle ajoute cette dernière, tout en haut de la liste "en attente de lecture".</p>
+<p>Mais si nous voulons accéder non pas aux dernières données ajoutées, mais aux premières, il faut alors utiliser une FILE. Les programmeurs l’utilisent dans des services de commande en ligne (commande de pizza sur Internet) ou dans les plateformes de gestion de la clientèle (le premier à avoir posé une question est le premier servi).</p>
+</div>
+<p><strong>Etape 2 : des méthodes de la PILE à son implémentation en Python avec un tableau</strong></p>
+<p>La PILE est encore une LISTE qui contiendra le même type T de données (que des entiers par exemple).</p>
+<p>Les opérations (ou les méthodes ou interactions avec environnement) sont :</p>
+<ul>
+<li><code>CREER_PILE_VIDE()</code>, qui retourne un objet de type PILE : la PILE existe et est vide</li>
+<li><code>EMPILER(P, e)</code>: l’élément e est placé au sommet de la PILE</li>
+<li><code>DEPILER(P)</code> qui retourne un objet de type T : l’élément situé au sommet de la PILE est retiré de la PILE et est renvoyé.</li>
+<li><code>PILE_VIDE(P)</code>, qui retourne un objet de type booléen  : si la PILE est vide True est renvoyé, sinon False</li>
+<li><code>PILE_PLEINE(P)</code>, qui retourne un objet de type booléen  : si la PILE est pleine True est renvoyé, sinon False</li>
+</ul>
+<p><strong>Exercice d'utilisation d'une PILE</strong></p>
+<p>1) Que donne la liste d'instructions suivante?</p>
+<div class="highlight"><pre><span></span><code><span class="n">P</span> <span class="o">=</span> <span class="n">CREER_PILE_VIDE</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">P</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">PILE_VIDE</span><span class="p">(</span><span class="n">P</span><span class="p">))</span>
+
+<span class="n">EMPILER</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">EMPILER</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">EMPILER</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">EMPILER</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">P</span><span class="p">)</span>
+
+<span class="n">DEPILER</span><span class="p">(</span><span class="n">P</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">P</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">PILE_VIDE</span><span class="p">(</span><span class="n">P</span><span class="p">))</span>
+</code></pre></div>
+<p>2) Vérifier avec la console ci-dessous (les fonctions sont déjà préchargées, mais non visibles)</p>
+<div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_088133db8a5c4a72d49fa80d5d580cc17df343f2" class="comment">###</span><div class="line" id="editor_088133db8a5c4a72d49fa80d5d580cc17df343f2"></div><div id="term_editor_088133db8a5c4a72d49fa80d5d580cc17df343f2" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_088133db8a5c4a72d49fa80d5d580cc17df343f2","")'>            <img src="../../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_088133db8a5c4a72d49fa80d5d580cc17df343f2","scripts/utilisation_PILE")'>            <img src="../../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_088133db8a5c4a72d49fa80d5d580cc17df343f2').click()">            <img src="../../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_088133db8a5c4a72d49fa80d5d580cc17df343f2" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_088133db8a5c4a72d49fa80d5d580cc17df343f2")'>            <img src="../../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_088133db8a5c4a72d49fa80d5d580cc17df343f2")'>            <img src="../../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+<p><span id="content_editor_088133db8a5c4a72d49fa80d5d580cc17df343f2" class="py_mk_hide">#--- HDR ---#bksl-nlbksl-nl# Les Pilesbksl-nlbksl-nldef CREERpy-undPILEpy-undVIDE():bksl-nl    return []bksl-nlbksl-nldef EMPILER(P, e):bksl-nl    P.append(e)bksl-nlbksl-nldef DEPILER(P):bksl-nl    x=P.pop()bksl-nl    return xbksl-nlbksl-nldef PILEpy-undVIDE(P):bksl-nl    if P==[]:bksl-nl        return Truebksl-nl    else:bksl-nl        return Falsebksl-nlbksl-nldef PILEpy-undPLEINE(P):bksl-nl    passbksl-nl#--- HDR ---#bksl-nlbksl-nlP = CREERpy-undPILEpy-undVIDE()bksl-nlprint(P)bksl-nlbksl-nlprint(PILEpy-undVIDE())bksl-nlbksl-nlEMPILER(P, 2)bksl-nlEMPILER(P, 5)bksl-nlEMPILER(P, 3)bksl-nlEMPILER(P, 7)bksl-nlbksl-nlprint(P)bksl-nlbksl-nlDEPILER(P)bksl-nlprint(P)bksl-nlbksl-nlprint(PILEpy-undVIDE())bksl-nl</span><span id="corr_content_editor_088133db8a5c4a72d49fa80d5d580cc17df343f2" class="py_mk_hide" data-strudel=""></span></p>
+<p>Si on choisit de représenter la PILE par un tableau, sa première case, d’index 0 contiendra l’indice (ou position) de la prochaine case vide et donc l’indice du prochain élément à insérer. Ensuite chaque élément inséré sera repéré par son index. Le sommet de la PILE correspond à la dernière case non vide du tableau.</p>
+<p>Un exemple pour fixer les idées : </p>
+<p>On part d’un tableau de 11 cases donc qui pourra accueillir les <span class="arithmatex">\(n=10\)</span> éléments d’une PILE :</p>
+<p><img alt="" class="center" src="../Images/tab3.JPG"></p>
+<p><strong>Exercice 4</strong></p>
+<p>Remplir les tableaux suivants. On grise les cases où l’empilement est possible.</p>
+<p><img alt="" class="center" src="../Images/tab4.JPG"></p>
+<p><strong>Remarque</strong> : on voit qu’il est inutile de « vider » la case lorsqu’on dépile, la valeur dépilée sera écrasée à l’empilement suivant.</p>
+<p><strong>Exercice 5</strong></p>
+<p>On part d’une PILE vide, à 4 cases donc pouvant accueillir 3 éléments : </p>
+<p><code>PILE = [1, None, None, None]</code></p>
+<ul>
+<li>Objectif 1 : écrire une fonction qui affiche les éléments de la PILE, sous forme d’une PILE.</li>
+<li>Objectif 2 : écrire une fonction qui empile. Attention on ne peut empiler que si la PILE n’est pas pleine.</li>
+<li>Objectif 3 : écrire une fonction qui dépile. Attention on ne peut dépiler que si la PILE n’est pas vide.</li>
+</ul>
+<p>1) Complétez le programme suivant.</p>
+<div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_09ac398f48968e83fa01e91eceea3fe1aca68713" class="comment">###</span><div class="line" id="editor_09ac398f48968e83fa01e91eceea3fe1aca68713"></div><div id="term_editor_09ac398f48968e83fa01e91eceea3fe1aca68713" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_09ac398f48968e83fa01e91eceea3fe1aca68713","")'>            <img src="../../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_09ac398f48968e83fa01e91eceea3fe1aca68713","scripts/exercice5")'>            <img src="../../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_09ac398f48968e83fa01e91eceea3fe1aca68713').click()">            <img src="../../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_09ac398f48968e83fa01e91eceea3fe1aca68713" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_09ac398f48968e83fa01e91eceea3fe1aca68713")'>            <img src="../../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_09ac398f48968e83fa01e91eceea3fe1aca68713")'>            <img src="../../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+<p><span id="content_editor_09ac398f48968e83fa01e91eceea3fe1aca68713" class="py_mk_hide">"""bksl-nlCe module contient les fonctions :bksl-nl- AFFICHER : fonction afficher la pile verticalement , sans l'element d'index 0bksl-nl- EMPILER : fonction qui empile l'element e dans la pile Pbksl-nl- DEPILER : fonction qui depile dans la pile Pbksl-nl"""bksl-nlbksl-nl#objectif 1: fonction qui affiche sous forme d’une pile, les elements de la pile P, excepte celui d'index 0bksl-nldef AFFICHER(P):bksl-nl    """bksl-nl    Cette fonction permet d'afficher les éléments d'une pile verticalement à partir de l'indice 1bksl-nl    param : L(list)bksl-nl    return msg(str)bksl-nl    Exemples :bksl-nl    &gt;&gt;&gt; print(AFFICHER([5, 1, 5, 4, 16, None, None, None ,None, None, None]))bksl-nl    Pile :bksl-nl    16bksl-nl    4bksl-nl    5bksl-nl    1bksl-nl    """ bksl-nl    bksl-nl    msg=f"Pile : \n"bksl-nl    ...bksl-nl    ...bksl-nl    return ...bksl-nlbksl-nl#objectif 2:fonction qui empile l'element e dans la pile Pbksl-nldef EMPILER(P, e):bksl-nl    """bksl-nl    Cette fonction permet d'empiler l'élement e dans la pile Pbksl-nl    param : L(list)bksl-nl            e(float)bksl-nl    return : msg(str)bksl-nl    Exemples :bksl-nl    &gt;&gt;&gt; EMPILER([5, 1, 5, 4, 16], 2)bksl-nl    'la pile est pleine'bksl-nl    &gt;&gt;&gt; EMPILER([5, 1, 5, 4, 16, None], 2)bksl-nl    'element empiler : 2'bksl-nl    """bksl-nl    bksl-nl    # test si on peut empilerbksl-nl    if ...:bksl-nl        msg = 'la pile est pleine'bksl-nl    else:bksl-nl        # empiler l'element ebksl-nl        ...bksl-nl        #mise a jour de la prochaine position disponiblebksl-nl        ...bksl-nl        msg = f"element empiler : {e}"bksl-nl    return ...bksl-nlbksl-nl #objectif 3: fonction qui depile dans la pile Pbksl-nldef DEPILER(P):bksl-nl    """bksl-nl    Cette fonction permet de dépiler la pile Pbksl-nl    param : L(list)bksl-nl    return : msg(str)bksl-nl    Exemples :bksl-nl    &gt;&gt;&gt; DEPILER([1, None, None, None, None, None, None])bksl-nl    'la pile est vide'bksl-nl    &gt;&gt;&gt; DEPILER([5, 1, 5, 4, 16, None, None, None, None, None, None])bksl-nl    'element dépilé : 16'bksl-nl    """bksl-nl    bksl-nl    # test si on peut depilerbksl-nl    if ...:bksl-nl        msg = 'la pile est vide'bksl-nl    else:bksl-nl        # mise a jour de la prochaine position disponiblebksl-nl        ...bksl-nl        # depiler et renvoyer l'element retirebksl-nl        ...bksl-nl        msg = f"element dépilé : {eltpy-unddepile}"bksl-nl    return msgbksl-nl</span><span id="corr_content_editor_09ac398f48968e83fa01e91eceea3fe1aca68713" class="py_mk_hide" data-strudel=""></span></p>
+<p>2) Testez ce programme avec Doctest.</p>
+<p><strong>Etape 3 : des méthodes de la FILE à son implémentation sous forme d’un tableau.</strong></p>
+<p>La FILE est encore une LISTE qui contiendra le même type T de données (que des entiers par exemple).</p>
+<p>Les opérations (ou les méthodes ou interactions avec environnement) sont :</p>
+<ul>
+<li><code>CREER_FILE_VIDE()</code>, qui retourne un objet de type FILE : la FILE existe et est vide</li>
+<li><code>ENFILER(F, e)</code>: l’élément e est enfilé en queue de FILE</li>
+<li><code>DEFILER(F)</code> qui retourne un objet de type T : l’élément situé à la tête de la FILE est retiré de la FILE et est renvoyé.</li>
+<li><code>FILE_VIDE(F)</code>, qui retourne un objet de type booléen  : si la FILE est vide True est renvoyé, sinon False</li>
+<li><code>FILE_PLEINE(F)</code>, qui retourne un objet de type booléen  : si la FILE est pleine True est renvoyé, sinon False</li>
+</ul>
+<p><strong>Exercice d'utilisation d'une FILE</strong></p>
+<p>1) Que donne la liste d'instructions suivante?</p>
+<div class="highlight"><pre><span></span><code><span class="n">F</span> <span class="o">=</span> <span class="n">CREER_FILE_VIDE</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">FILE_VIDE</span><span class="p">(</span><span class="n">F</span><span class="p">))</span>
+
+<span class="n">ENFILER</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">ENFILER</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">ENFILER</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">ENFILER</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
+
+<span class="n">DEFILER</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">FILE_VIDE</span><span class="p">(</span><span class="n">F</span><span class="p">))</span>
+</code></pre></div>
+<p>2) Vérifier avec la console ci-dessous (les fonctions sont déjà préchargées, mais non visibles)</p>
+<div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_7cb006810350806a5f84e3e7fc57b4e12232e423" class="comment">###</span><div class="line" id="editor_7cb006810350806a5f84e3e7fc57b4e12232e423"></div><div id="term_editor_7cb006810350806a5f84e3e7fc57b4e12232e423" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_7cb006810350806a5f84e3e7fc57b4e12232e423","")'>            <img src="../../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_7cb006810350806a5f84e3e7fc57b4e12232e423","scripts/utilisation_FILE")'>            <img src="../../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_7cb006810350806a5f84e3e7fc57b4e12232e423').click()">            <img src="../../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_7cb006810350806a5f84e3e7fc57b4e12232e423" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_7cb006810350806a5f84e3e7fc57b4e12232e423")'>            <img src="../../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_7cb006810350806a5f84e3e7fc57b4e12232e423")'>            <img src="../../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+<p><span id="content_editor_7cb006810350806a5f84e3e7fc57b4e12232e423" class="py_mk_hide">#--- HDR ---#bksl-nlbksl-nl# Les Filesbksl-nlbksl-nldef CREERpy-undFILEpy-undVIDE():bksl-nl    return []bksl-nlbksl-nldef ENFILER(P, e):bksl-nl    P.insert(0,e)bksl-nlbksl-nldef DEFILER(P):bksl-nl    x=P.pop()bksl-nl    return xbksl-nlbksl-nldef FILEpy-undVIDE(P):bksl-nl    if P==[]:bksl-nl        return Truebksl-nl    else:bksl-nl        return Falsebksl-nlbksl-nldef FILEpy-undPLEINE(P):bksl-nl    passbksl-nl#--- HDR ---#bksl-nlbksl-nlF = CREERpy-undFILEpy-undVIDE()bksl-nlprint(F)bksl-nlbksl-nlprint(FILEpy-undVIDE())bksl-nlbksl-nlEMFILER(F, 2)bksl-nlEMFILER(F, 5)bksl-nlEMFILER(F, 3)bksl-nlEMFILER(F, 7)bksl-nlbksl-nlprint(F)bksl-nlbksl-nlDEFILER(F)bksl-nlprint(F)bksl-nlbksl-nlprint(FILEpy-undVIDE())bksl-nl</span><span id="corr_content_editor_7cb006810350806a5f84e3e7fc57b4e12232e423" class="py_mk_hide" data-strudel=""></span></p>
+<p>Si on choisit de représenter la FILE par un tableau, sa première case, d’index 0 contiendra l’indice de la tête de la FILE ; la deuxième contiendra l’indice de la queue de la FILE et la troisième contiendra le nombre d’éléments présents dans la FILE.</p>
+<p>Ensuite chaque élément inséré sera repéré par son index.</p>
+<p>Un exemple pour fixer les idées : </p>
+<p>On part d’un tableau de 11 cases donc qui pourra accueillir les n=8 éléments d’une FILE :</p>
+<p><img alt="" class="center" src="../Images/tab5.JPG"></p>
+<p>Chaque fois qu’un élément est enfilé, la queue et la taille augmente chacune d’une unité.</p>
+<p>Chaque fois qu’un élément est défilé, la taille diminue d’une unité et la tête augmente d’une unité.</p>
+<p>Lorsque la tête ou la queue dépasse la longueur du tableau, on repart au début du tableau (gestion circulaire du tableau)</p>
+<p><strong>Exercice 6</strong></p>
+<p>Pour comprendre, remplir les tableaux suivants. On grise les espaces dans lesquelles les valeurs pourront être enfilées.</p>
+<p><img alt="" class="center" src="../Images/tab6.JPG"></p>
+<p><strong>Remarque :</strong> lorsqu’on défile, la case n’est pas vidée. Son contenu sera écrasé lorsqu’un prochain élément sera enfilé.</p>
+<p><strong>Exercice 7</strong></p>
+<p>On part d’une FILE vide, soit un tableau à 6 cases donc pouvant accueillir 3 éléments : </p>
+<p><code>FILE = [3, 3, 0, None, None, None]</code></p>
+<ul>
+<li>Objectif 1 : écrire une fonction qui affiche tous les éléments du tableau, y compris la tête, la queue et la taille</li>
+<li>Objectif 2 : écrire une fonction qui enfile. Attention on ne peut enfiler que si la FILE n’est pas pleine.</li>
+<li>Objectif 3 : écrire une fonction qui défile. Attention on ne peut défiler que si la FILE n’est pas vide.</li>
+</ul>
+<p>1) Complétez le programme ci-dessous.</p>
+<div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_78680ca9f83f194104b0302efa3d7510d3dc9785" class="comment">###</span><div class="line" id="editor_78680ca9f83f194104b0302efa3d7510d3dc9785"></div><div id="term_editor_78680ca9f83f194104b0302efa3d7510d3dc9785" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_78680ca9f83f194104b0302efa3d7510d3dc9785","")'>            <img src="../../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_78680ca9f83f194104b0302efa3d7510d3dc9785","scripts/exercice7")'>            <img src="../../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_78680ca9f83f194104b0302efa3d7510d3dc9785').click()">            <img src="../../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_78680ca9f83f194104b0302efa3d7510d3dc9785" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_78680ca9f83f194104b0302efa3d7510d3dc9785")'>            <img src="../../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_78680ca9f83f194104b0302efa3d7510d3dc9785")'>            <img src="../../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+<p><span id="content_editor_78680ca9f83f194104b0302efa3d7510d3dc9785" class="py_mk_hide">"""bksl-nlCe module contient les fonctions :bksl-nl- AFFICHER : fonction afficher la file , sans les elements d'index 0 et 1bksl-nl- ENFILER : fonction qui enfile l'element e dans la file Fbksl-nl- DEFILER : fonction qui defile dans la file Fbksl-nl"""bksl-nlbksl-nlbksl-nl#objectif 1: fonction qui affiche le tableau completbksl-nldef AFFICHERpy-undtableau(F):bksl-nl    """bksl-nl    Cette fonction permet d'afficher les éléments d'une pile à partir de l'indice 3bksl-nl    param : F(list)bksl-nl    return msg(str)bksl-nl    Exemples :bksl-nl    &gt;&gt;&gt; print(AFFICHERpy-undtableau([3,5,2,4,16,None,None]))bksl-nl    FILE : 4 16 None None bksl-nl    """   bksl-nl    bksl-nl    msg = f'FILE : 'bksl-nl    ...bksl-nl    ...bksl-nl    return ...bksl-nlbksl-nl#objectif 2:fonction qui enfile l'element e dans la file Fbksl-nldef ENFILER(F, e):bksl-nl    """bksl-nl    Cette fonction permet d'enfiler l'élement e dans la file Fbksl-nl    param : F(list)bksl-nl            e(float)bksl-nl    return : msg(str)bksl-nl    Exemples :bksl-nl    &gt;&gt;&gt; ENFILER([3, 3, 2, 4, 16], 2)bksl-nl    'la file est pleine'bksl-nl    &gt;&gt;&gt; ENFILER([3, 5, 2, 4, 16, None, None], 2)bksl-nl    'élément enfilé : 2'bksl-nl    &gt;&gt;&gt; ENFILER([3, 5, 2, 5, 10, None], 2)bksl-nl    'retour au debut, élément enfilé : 2'bksl-nl    """bksl-nl    bksl-nl    msg = ""bksl-nl    # test si on peut enfilerbksl-nl    if ...:bksl-nl        msg = 'la file est pleine'bksl-nl    else : bksl-nl        # enfiler l'element e dans la filebksl-nl        ...bksl-nl        # test si on doit retourner au debutbksl-nl        if ...:bksl-nl            ...bksl-nl            msg = 'retour au debut, 'bksl-nl        else:bksl-nl            # mise a jour de la position de la place prochaine place disponiblebksl-nl            ...bksl-nl        # mise a jour du nombre d'elements dans la filebksl-nl        ...bksl-nl        msg = msg + f"élément enfilé : {e}"bksl-nl    return ....bksl-nlbksl-nlbksl-nl#objectif 3: fonction qui defile dans la file Fbksl-nldef DEFILER(F):bksl-nl    """bksl-nl    Cette fonction permet de défiler la file Fbksl-nl    param : F(list)bksl-nl    return : msg(str)bksl-nl    Exemples :bksl-nl    &gt;&gt;&gt; DEFILER([2, 2, 0, None, None, None, None])bksl-nl    'la file est vide'bksl-nl    &gt;&gt;&gt; DEFILER([3, 5, 2, 4, 16, None, None])bksl-nl    'élément retiré : 4'bksl-nl    &gt;&gt;&gt; DEFILER([3, 3, 1, 5, 10, 15])bksl-nl    'élément retiré : 5'bksl-nl    """bksl-nl    bksl-nl    msg = ""bksl-nl    # test si on peut defilerbksl-nl    if ...:bksl-nl        msg = 'la file est vide'bksl-nl    else :bksl-nl        # defiler et renvoyer l'element retirebksl-nl        ...bksl-nl        # mise à jour de la têtebksl-nl            ...bksl-nl        # mise a jour du nombre d'elements dans la filebksl-nl        ...bksl-nl        msg = msg + f"élément retiré : {eltpy-undretire}"bksl-nl    return ...bksl-nl</span><span id="corr_content_editor_78680ca9f83f194104b0302efa3d7510d3dc9785" class="py_mk_hide" data-strudel=""></span></p>
+<p>2) Testez-le.</p>
+<h2 id="les-dictionnaires">Les dictionnaires<a class="headerlink" href="#les-dictionnaires" title="Permanent link">⚓︎</a></h2>
+<p>Les dictionnaires sont comme les listes, des objets structurés pouvant contenir d’autres objets. Mais contrairement aux listes, dans un dictionnaire, les données ne sont pas stockées dans un ordre précis. Donc pour accéder à un objet, on utilise une clé à la place d’un indice.</p>
+<p>Avantage du dictionnaire sur la liste : lors de la recherche d’une valeur, inutile de parcourir une liste, on la trouve grâce à la clé. Inconvénient, pour ajouter des paires au dictionnaire il faut prévoir plus de mémoire potentiellement inutilisée.</p>
+<p>Les dictionnaires existent nativement dans Python, il est donc inutile de les implémenter ; toutefois dans d’autres langages, on pourrait être amené à le faire. Auquel cas il faut définir les méthodes de la classe dictionnaire :</p>
+<ul>
+<li><code>CREER_DICO_VIDE()</code> : qui retourne un objet dictionnaire, le dictionnaire existe et il est vide.</li>
+<li><code>INSERER(D, cle, valeur)</code> : qui insère la paire clé-valeur dans le dictionnaire</li>
+<li><code>SUPPRIMER(D, cle)</code> : qui supprime la paire clé-valeur dans le dictionnaire, lorsque la clé est supprimée, la valeur l’est aussi automatiquement.</li>
+<li><code>LIRE(D, cle)</code> : qui retourne un objet de même type que celui de la valeur.</li>
+<li><code>RECHERCHER(D, cle)</code> : qui retourne un objet de type booléen, True si clé présente dans le dictionnaire et False si clé absente.</li>
+</ul>
+<h2 id="comment-choisir-une-structure-de-donnees-adaptee-a-la-situation-a-modeliser">Comment choisir une structure de données adaptée à la situation à modéliser ?<a class="headerlink" href="#comment-choisir-une-structure-de-donnees-adaptee-a-la-situation-a-modeliser" title="Permanent link">⚓︎</a></h2>
+<p><strong>Exercice 8</strong></p>
+<p>Nommer la structure de données qui convient pour chaque situation ci-dessous : </p>
+<ol>
+<li>Représenter un répertoire téléphonique.</li>
+<li>Stocker l’historique des actions effectuées dans un logiciel et disposer d’une commande Annuler (ou Undo).</li>
+<li>Envoyer des fichiers au serveur d’impression.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">A Noter</p>
+<p>Il est aisé de reconnaître l’outil adapté mais pourquoi est-il le mieux adapté?</p>
+<p>En organisant d'une certaine manière les données, on permet un traitement automatique de ces dernières plus efficace et rapide.</p>
+<p>Le fait d'utiliser une structure de données appropriée à un traitement informatique peut également faire baisser de manière significative la complexité d'une application informatique et ainsi contribuer à diminuer le taux d'erreurs.</p>
+<p>En plus de manipuler l'information, il faut aussi la stocker. La manière dont on organise cette information stockée peut avoir des conséquences très importantes sur leur manipulation.</p>
+<p>La performance est quantifiée par la notion de complexité (rien à voir avec difficulté) déjà abordée en première pour les algorithmes de recherche et de tris.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Rappels</p>
+<p>Vidéo à regarder pour revoir la notion de complexité et voir le lien entre la complexité et les structures de données à utiliser : 
+<iframe title="eca60635-980a-4883-96d3-ee42aea020fd-360" src="https://tube-sciences-technologies.apps.education.fr/videos/embed/9a6d40ee-d8fb-4756-93b5-96bf53eb6d1d" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" width="560" height="315" frameborder="0"></iframe></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">En Résumé</p>
+<p>Si un algorithme est une recette de cuisine (succession d’étapes à réaliser, plus ou moins difficiles et plus ou moins longues), la complexité de l’algorithme correspond à la difficulté des étapes, le nombre de réalisation et leur temps de réalisation. 
+Dans le cas du traitement des données, la complexité est liée à l’espace de stockage (mémoire) le temps de traitement (par le processeur) et le nombre de ces données.</p>
+</div>
+<p>Les complexités et leur représentation graphique :</p>
+<p><img alt="" class="center" src="../Images/tab7.JPG"></p>
+<p>Tableau résumé des complexités pour les différentes structures abordées :</p>
+<p><img alt="" class="center" src="../Images/tab8.JPG"></p>
+<h2 id="comment-distinguer-les-structures-par-le-jeu-des-methodes-qui-les-caracterisent">Comment distinguer les structures ? … par le jeu des méthodes qui les caractérisent<a class="headerlink" href="#comment-distinguer-les-structures-par-le-jeu-des-methodes-qui-les-caracterisent" title="Permanent link">⚓︎</a></h2>
+<p>Tableau résumé des méthodes de la liste, de la pile, de la file et du dictionnaire</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">classe</th>
+<th style="text-align: left;">LISTE</th>
+<th style="text-align: left;">PILE</th>
+<th style="text-align: left;">FILE</th>
+<th style="text-align: left;">dictionnaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Méthodes</strong></td>
+<td style="text-align: left;">CREER_LISTE_VIDE()</td>
+<td style="text-align: left;">CREER_PILE_VIDE()</td>
+<td style="text-align: left;">CREER_FILE_VIDE()</td>
+<td style="text-align: left;">CREER_DICO_VIDE()</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">INSERER(L,indice,element)</td>
+<td style="text-align: left;">EMPILER(P,element)</td>
+<td style="text-align: left;">ENFILER(F,element)</td>
+<td style="text-align: left;">INSERER(D, cle, valeur)</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">SUPPRIMER(L,indice)</td>
+<td style="text-align: left;">DEPILER(P)</td>
+<td style="text-align: left;">DEFILER(F)</td>
+<td style="text-align: left;">SUPPRIMER(D, cle)</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">RECHERCHER(L,element)</td>
+<td style="text-align: left;">PILE_VIDE(P)</td>
+<td style="text-align: left;">FILE_VIDE(F)</td>
+<td style="text-align: left;">LIRE(D, cle)</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">LIRE(L,indice)</td>
+<td style="text-align: left;">PILE_PLEINE(P)</td>
+<td style="text-align: left;">FILE_PLEINE(F)</td>
+<td style="text-align: left;">RECHERCHER(D, cle)</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">MODIFIER(L,indice,element)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">LONGUEUR(L)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p>On rend compte d’un jeu de méthodes spécifiques à chaque classe. C’est pour cela qu’on peut qualifier d’abstraite, chacune de ces structures de données.</p>
+<h2 id="structures-de-donnees-interface-et-implementation">Structures de données, interface et implémentation<a class="headerlink" href="#structures-de-donnees-interface-et-implementation" title="Permanent link">⚓︎</a></h2>
+<p>Dans les parties précédentes, nous avons choisi le tableau pour représenter, la LISTE, la PILE et la FILE. L’objectif de l’activité suivante est de réinvestir ce qui a été vu dans la programmation objet  et de montrer que l’on peut implémenter différemment une même structure de données : la FILE.</p>
+<p><strong>Objectif final : implémenter une FILE avec deux PILES</strong></p>
+<p>Pour alléger l’implémentation et réinvestir le vocabulaire de la programmation objet, on décompose la tâche en plusieurs étapes.</p>
+<p><strong>Etape 1 :</strong></p>
+<p>On crée la classe PILE avec les méthodes rappelées ci-dessus. </p>
+<p><strong>Exercice 9</strong> </p>
+<p>1) Parcourir le programme implémenté et indiquer ce que l’on obtient lorsqu’on effectue les tests.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Pile</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_n</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_n</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">PILE</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">TaillePILE</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Queue</span> <span class="o">=</span> <span class="mi">1</span>
+        
+    <span class="k">def</span> <span class="nf">set_n</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nouveau_n</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n</span> <span class="o">=</span> <span class="n">nouveau_n</span>
+        
+    <span class="k">def</span> <span class="nf">get_n</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">n</span>
+    
+    
+    <span class="k">def</span> <span class="nf">PILE_VIDE</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">Queue</span> <span class="o">==</span> <span class="mi">1</span>
+    
+    <span class="k">def</span> <span class="nf">PILE_PLEINE</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">Queue</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">TaillePILE</span>
+    
+    <span class="k">def</span> <span class="nf">EMPILER</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">""</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">PILE_PLEINE</span><span class="p">():</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s1">'la pile est pleine'</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">PILE</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">Queue</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">Queue</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Queue</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">msg</span>
+        
+    <span class="k">def</span> <span class="nf">DEPILER</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">""</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">PILE_VIDE</span><span class="p">():</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s1">'la pile est vide'</span>
+            <span class="k">return</span> <span class="n">msg</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Queue</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Queue</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">PILE</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">Queue</span><span class="p">]</span>
+    
+    <span class="k">def</span> <span class="nf">AFFICHER_PILE</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"PILE :</span><span class="se">\n</span><span class="s2"> "</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Queue</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">PILE</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">"</span>
+        <span class="k">return</span> <span class="n">msg</span>    
+        
+<span class="c1"># zone de tests de la pile</span>
+<span class="n">MAPILE</span><span class="o">=</span><span class="n">Pile</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">EMPILER</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">AFFICHER_PILE</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">EMPILER</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">AFFICHER_PILE</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">EMPILER</span><span class="p">(</span><span class="mi">15</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">AFFICHER_PILE</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">EMPILER</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">AFFICHER_PILE</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">DEPILER</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">AFFICHER_PILE</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">EMPILER</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">AFFICHER_PILE</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">DEPILER</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">AFFICHER_PILE</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">DEPILER</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">AFFICHER_PILE</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">DEPILER</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">AFFICHER_PILE</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">DEPILER</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">AFFICHER_PILE</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">EMPILER</span><span class="p">(</span><span class="mi">25</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">AFFICHER_PILE</span><span class="p">())</span>
+</code></pre></div>
+<p>2) Implémenter ce programme sur Python et vérifier vos résultats de la question 1)</p>
+<div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_00000024" class="comment">###</span><div class="line" id="editor_00000024"></div><div id="term_editor_00000024" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_00000024","")'>            <img src="../../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000024","")'>            <img src="../../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000024').click()">            <img src="../../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000024" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000024")'>            <img src="../../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000024")'>            <img src="../../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+<p><span id="content_editor_00000024" class="py_mk_hide"></span><span id="corr_content_editor_00000024" class="py_mk_hide" data-strudel=""></span></p>
+<p><strong>Etape 2 :</strong></p>
+<p>On crée la classe FILE à partir de deux PILES a et b. La PILE a est une zone de remplissage de la FILE. La PILE b est une zone de suppression de la FILE. Lorsqu’on veut enfiler un élément dans la FILE, on l’empile dans la PILE a. Lorsqu’on veut défiler la FILE, il faut dépiler la PILE a dans la PILE b puis dépiler la PILE b.</p>
+<p>Soit par exemple deux PILES pouvant contenir 3 éléments chacune, et la FILE pourra en contenir 3. La FILE est initialement vide. On montre le fonctionnement ci-dessous.</p>
+<p><img alt="" class="center" src="../Images/tab9.JPG"></p>
+<div class="admonition note">
+<p class="admonition-title">Remarque</p>
+<p>Il faut dépiler complètement b avant de dépiler a dans b.</p>
+</div>
+<p><strong>Exercice 10</strong></p>
+<p>1) Parcourir le programme et indiquer ce qui est renvoyé lorsqu’on effectue les tests.</p>
+<p></p><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">File</span><span class="p">:</span>
+<span class="c1">#Definition d'une file a l'aide de deux piles</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_n</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_n</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">set_n</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nouveau_n</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n</span> <span class="o">=</span> <span class="n">nouveau_n</span>
+        
+    <span class="k">def</span> <span class="nf">get_n</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">n</span>
+    
+    <span class="k">def</span> <span class="nf">FILE_VIDE</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">PILE_VIDE</span><span class="p">()</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">PILE_VIDE</span><span class="p">()</span>
+    
+    <span class="k">def</span> <span class="nf">FILE_PLEINE</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">PILE_PLEINE</span><span class="p">()</span>
+    
+    <span class="k">def</span> <span class="nf">ENFILER</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">FILE_PLEINE</span><span class="p">():</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s1">'la file est pleine'</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">EMPILER</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"élément enfilé : </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">"</span>
+        <span class="k">return</span> <span class="n">msg</span>
+            
+    <span class="k">def</span> <span class="nf">DEFILER</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">FILE_VIDE</span><span class="p">():</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s1">'la file est vide'</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">PILE_VIDE</span><span class="p">():</span>
+                <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">PILE_VIDE</span><span class="p">():</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">EMPILER</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">DEPILER</span><span class="p">())</span>
+            <span class="n">elt_retire</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">DEPILER</span><span class="p">()</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"élément retiré : </span><span class="si">{</span><span class="n">elt_retire</span><span class="si">}</span><span class="s2">"</span>
+        <span class="k">return</span> <span class="n">msg</span>
+    
+    <span class="k">def</span> <span class="nf">AFFICHER_FILE</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'ZONE POUR EMPILAGE'</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">AFFICHER_PILE</span><span class="p">())</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'ZONE POUR DEPILAGE'</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">AFFICHER_PILE</span><span class="p">())</span> 
+        
+<span class="c1"># zone de tests de la file</span>
+<span class="n">MAFILE</span><span class="o">=</span><span class="n">File</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">ENFILER</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">AFFICHER_FILE</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">ENFILER</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">AFFICHER_FILE</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">ENFILER</span><span class="p">(</span><span class="mi">15</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">AFFICHER_FILE</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">ENFILER</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">AFFICHER_FILE</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">DEFILER</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">AFFICHER_FILE</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">DEFILER</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">AFFICHER_FILE</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">DEFILER</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">AFFICHER_FILE</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">DEFILER</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">AFFICHER_FILE</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">ENFILER</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">AFFICHER_FILE</span><span class="p">())</span>
+</code></pre></div>
+2) Implémenter ce programme sur Python et vérifier vos résultats de la question 1)
+<div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_00000025" class="comment">###</span><div class="line" id="editor_00000025"></div><div id="term_editor_00000025" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_00000025","")'>            <img src="../../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000025","")'>            <img src="../../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000025').click()">            <img src="../../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000025" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000025")'>            <img src="../../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000025")'>            <img src="../../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+<p><span id="content_editor_00000025" class="py_mk_hide"></span><span id="corr_content_editor_00000025" class="py_mk_hide" data-strudel=""></span></p>
+<p>On a donc implémenté différemment une même structure de données</p>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">⚓︎</a></h2>
+<p>Pour une même spécification, plusieurs implémentations concrètes peuvent exister. Cette notion de spécification et implémentation existe aussi pour les algorithmes en général, nous avons par exemple vu que plusieurs algorithmes de tri existent (leur spécification, « trier la liste qui leur est passée en argument », étant commune).</p>
+<p>En général, il existe plusieurs manières de représenter ces données et plusieurs implémentations de leur manipulation.
+De manière générale, on définit une interface, ou spécification, d’une structure de données.</p>
+<p>L'interface sera définie dans un type de données abstrait (TDA). Il spécifie précisément la nature et les propriétés des données à stocker et les modalités des opérations.</p>
+<p>En informatique, une structure de données est une manière d'organiser les données pour les traiter plus facilement. Une structure de données est une mise en œuvre concrète d'un type abstrait.</p>
+<p>Le type abstrait de données = représentation logique qui définit le comportement ; que l’on différencie de la réalisation concrète et physique avec utilisation de la mémoire, qu’on appelle implémentation.</p>
+<p>En Python, l’interface et l’implémentation sont en général mêlés dans le même fichier. L’interface est tout ce dont on  a besoin de connaître pour écrire un programme utilisant la classe. L’implémentation est nécessaire à l’ordinateur pour l’exécution du programme.</p></div>
+
+
+
+
+
+                
+<script src="../../../../pyodide-mkdocs/ide.js"></script> 
+
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Retour en haut de la page
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+        
+          
+          <a href="../../" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Structure des données" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                Structure des données
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../2_donnees_arbres/arbres/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Données en arbres" rel="next">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              <div class="md-ellipsis">
+                Données en arbres
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Réalisé par <a href="https://github.com/davy39" target="_blank">Davy COTTET</a>
+&copy; 2023 sous licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="_blank">CC BY-NC-SA 4.0</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Lycee-Experimental" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.tracking", "navigation.top", "navigation.footer", "toc.integrate", "navigation.indexes", "content.code.annotate", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.e4f9f9ed.min.js"></script>
+      
+        
+          <script src="../../../../xtra/javascripts/mathjax.js"></script>
+        
+      
+        
+          <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        
+      
+        
+          <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+      
+        
+          <script src="../../../../xtra/javascripts/logic-circuit-simulator.js"></script>
+        
+      
+        
+          <script src="../../../../xtra/javascripts/quizdown.js"></script>
+        
+      
+        
+          <script src="../../../../xtra/javascripts/quizdownHighlight.js"></script>
+        
+      
+        
+          <script src="../../../../xtra/javascripts/quizdownKatex.js"></script>
+        
+      
+        
+          <script src="../../../../xtra/v86/libv86.js"></script>
+        
+      
+        
+          <script src="../../../../xtra/javascripts/extra.js"></script>
+        
+      
+    
+  </body>
+</html>

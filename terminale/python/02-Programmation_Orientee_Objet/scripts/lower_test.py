@@ -1,0 +1,1 @@
+assert chaine_en_minuscule == "ne crie pas si fort"
