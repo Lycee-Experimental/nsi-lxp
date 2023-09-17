@@ -1,0 +1,518 @@
+Ranking;Name;Year;Minutes;Genres;Rating;Votes;Gross
+1;Citizen Kane;1941;119;Drama, Mystery;8.3;442770;1.59
+2;The Godfather;1972;175;Crime, Drama;9.2;1849989;134.97
+3;The Wizard of Oz;1939;102;Adventure, Family, Fantasy;8.1;400883;2.08
+4;The Shawshank Redemption;1994;142;Drama;9.3;2669409;28.34
+5;Pulp Fiction;1994;154;Crime, Drama;8.9;2044257;107.93
+6;Casablanca;1942;102;Drama, Romance, War;8.5;571769;1.02
+7;The Third Man;1949;104;Film-Noir, Mystery, Thriller;8.1;172546;0.45
+8;Star Wars: Episode V - The Empire Strikes Back;1980;124;Action, Adventure, Fantasy;8.7;1288916;290.48
+9;Schindler's List;1993;195;Biography, Drama, History;9;1351515;96.90
+10;Apocalypse Now;1979;147;Drama, Mystery, War;8.5;667041;83.47
+11;Goodfellas;1990;145;Biography, Crime, Drama;8.7;1157302;46.84
+12;Singin' in the Rain;1952;103;Comedy, Musical, Romance;8.3;243255;8.82
+13;Psycho;1960;109;Horror, Mystery, Thriller;8.5;671547;32.00
+14;2001: A Space Odyssey;1968;149;Adventure, Sci-Fi;8.3;668690;56.95
+15;Fight Club;1999;139;Drama;8.8;2114891;37.03
+16;Raging Bull;1980;129;Biography, Drama, Sport;8.2;355041;23.38
+17;Taxi Driver;1976;114;Crime, Drama;8.2;830974;28.26
+18;Seven Samurai;1954;207;Action, Drama;8.6;346255;0.27
+19;The 400 Blows;1959;99;Crime, Drama;8.1;118841;-1
+20;12 Angry Men;1957;96;Crime, Drama;9;788430;4.36
+21;Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb;1964;95;Comedy, War;8.4;491519;0.28
+22;Vertigo;1958;128;Mystery, Romance, Thriller;8.3;403060;3.20
+23;The Good, the Bad and the Ugly;1966;148;Adventure, Western;8.8;760586;6.10
+24;City Lights;1931;87;Comedy, Drama, Romance;8.5;185355;0.02
+25;Gone with the Wind;1939;238;Drama, Romance, War;8.2;316450;198.68
+26;On the Waterfront;1954;108;Crime, Drama, Thriller;8.1;156016;9.60
+27;The Godfather: Part II;1974;202;Crime, Drama;9;1266873;57.30
+28;The Dark Knight;2008;152;Action, Crime, Drama;9;2642297;534.86
+29;Blade Runner;1982;117;Action, Drama, Sci-Fi;8.1;769365;32.87
+30;Star Wars;1977;121;Action, Adventure, Fantasy;8.6;1361479;322.74
+31;All About Eve;1950;138;Drama;8.2;132080;0.01
+32;Raiders of the Lost Ark;1981;115;Action, Adventure;8.4;964502;248.16
+33;Back to the Future;1985;116;Adventure, Comedy, Sci-Fi;8.5;1201245;210.61
+34;Lawrence of Arabia;1962;218;Adventure, Biography, Drama;8.3;294655;44.82
+35;Jaws;1975;124;Adventure, Thriller;8.1;606727;260.00
+36;12 Years a Slave;2013;134;Biography, Drama, History;8.1;701099;56.67
+37;The Apartment;1960;125;Comedy, Drama, Romance;8.3;182403;18.60
+38;Chinatown;1974;130;Drama, Mystery, Thriller;8.2;327651;8.49
+39;Some Like It Hot;1959;121;Comedy, Music, Romance;8.2;268154;25.00
+40;The Cabinet of Dr. Caligari;1920;58;Horror, Mystery, Thriller;8;64769;-1
+41;The Great Dictator;1940;125;Comedy, Drama, War;8.4;224605;0.29
+42;The Lord of the Rings: The Fellowship of the Ring;2001;178;Action, Adventure, Drama;8.8;1869171;315.54
+43;Alien;1979;117;Horror, Sci-Fi;8.5;881122;78.90
+44;The Searchers;1956;119;Adventure, Drama, Western;7.9;90274;-1
+45;Andrei Rublev;1966;205;Biography, Drama, History;8.1;54114;0.10
+46;Spotlight;2015;129;Biography, Crime, Drama;8.1;470444;45.06
+47;Once Upon a Time in the West;1968;165;Western;8.5;329886;5.32
+48;Moonlight;2016;111;Drama;7.4;309111;27.85
+49;Metropolis;1927;153;Drama, Sci-Fi;8.3;175168;1.24
+50;The Lord of the Rings: The Return of the King;2003;201;Action, Adventure, Drama;9;1839981;377.85
+51;Modern Times;1936;87;Comedy, Drama, Romance;8.5;243087;0.16
+52;Aliens;1986;137;Action, Adventure, Sci-Fi;8.4;717340;85.16
+53;It Happened One Night;1934;105;Comedy, Romance;8.1;104792;4.36
+54;Laura;1944;88;Drama, Film-Noir, Mystery;7.9;48018;4.36
+55;Terminator 2: Judgment Day;1991;137;Action, Sci-Fi;8.6;1096602;204.84
+56;A Clockwork Orange;1971;136;Crime, Sci-Fi;8.3;829571;6.21
+57;E.T. the Extra-Terrestrial;1982;115;Adventure, Family, Sci-Fi;7.9;410768;435.11
+58;Nosferatu;1922;94;Fantasy, Horror;7.9;98586;-1
+59;Snow White and the Seven Dwarfs;1937;83;Animation, Adventure, Family;7.6;200855;184.93
+60;The Battle of Algiers;1966;121;Drama, War;8.1;60787;0.06
+61;La Grande Illusion;1937;113;Drama, War;8.1;37045;0.17
+62;North by Northwest;1959;136;Action, Adventure, Mystery;8.3;328876;13.28
+63;Butch Cassidy and the Sundance Kid;1969;110;Biography, Crime, Drama;8;216969;102.31
+64;Repulsion;1965;105;Drama, Horror, Thriller;7.6;53939;-1
+65;The Maltese Falcon;1941;100;Crime, Film-Noir, Mystery;8;159534;2.11
+66;Gravity;2013;91;Drama, Sci-Fi, Thriller;7.7;826295;274.09
+67;Sunset Blvd.;1950;110;Drama, Film-Noir;8.4;222690;-1
+68;King Kong;1933;100;Adventure, Horror, Sci-Fi;7.9;86311;10.00
+69;Toy Story;1995;81;Animation, Adventure, Comedy;8.3;991954;191.80
+70;Rear Window;1954;112;Mystery, Thriller;8.5;491937;36.76
+71;Rashomon;1950;88;Crime, Drama, Mystery;8.2;169440;0.10
+72;The Adventures of Robin Hood;1938;102;Action, Adventure, Romance;7.9;51609;3.98
+73;A Hard Day's Night;1964;87;Comedy, Musical;7.5;45672;13.78
+74;Bride of Frankenstein;1935;75;Drama, Horror, Sci-Fi;7.8;49517;4.36
+75;M;1931;117;Crime, Mystery, Thriller;8.3;158782;0.03
+76;The Philadelphia Story;1940;112;Comedy, Romance;7.9;69931;-1
+77;The Treasure of the Sierra Madre;1948;126;Adventure, Drama, Western;8.2;125705;5.01
+78;All Quiet on the Western Front;1930;152;Drama, War;8.1;63205;3.27
+79;Bicycle Thieves;1948;89;Drama;8.3;164351;0.33
+80;The Graduate;1967;106;Comedy, Drama, Romance;8;274457;104.95
+81;Army of Shadows;1969;145;Drama, War;8.1;23945;0.74
+82;A Streetcar Named Desire;1951;122;Drama;7.9;109083;8.00
+83;The Night of the Hunter;1955;92;Crime, Drama, Film-Noir;8;90277;0.65
+84;One Flew Over the Cuckoo's Nest;1975;133;Drama;8.7;1006194;112.00
+85;Rebecca;1940;130;Drama, Film-Noir, Mystery;8.1;138092;4.36
+86;Selma;2014;128;Biography, Drama, History;7.5;92112;52.08
+87;Rosemary's Baby;1968;137;Drama, Horror;8;218496;-1
+88;Frankenstein;1931;70;Drama, Horror, Sci-Fi;7.8;74068;-1
+89;The General;1926;67;Action, Adventure, Comedy;8.2;92157;1.03
+90;The Conformist;1970;113;Drama;7.9;31021;0.54
+91;Touch of Evil;1958;95;Crime, Drama, Film-Noir;8;105312;2.24
+92;Annie Hall;1977;93;Comedy, Romance;8;266637;39.20
+93;It's a Wonderful Life;1946;130;Drama, Family, Fantasy;8.6;456120;-1
+94;The Day the Earth Stood Still;1951;92;Drama, Sci-Fi;7.8;82531;-1
+95;The Hurt Locker;2008;131;Drama, Thriller, War;7.5;453147;17.02
+96;L.A. Confidential;1997;138;Crime, Drama, Mystery;8.2;583648;64.62
+97;Mad Max: Fury Road;2015;120;Action, Adventure, Sci-Fi;8.1;1000410;154.06
+98;Pinocchio;1940;88;Animation, Adventure, Comedy;7.5;148337;84.25
+99;The 39 Steps;1935;86;Crime, Mystery, Thriller;7.6;57755;-1
+100;Rome, Open City;1945;103;Drama, Thriller, War;8;26954;-1
+101;Tokyo Story;1953;136;Drama;8.2;62373;-1
+102;The Last Picture Show;1971;118;Drama, Romance;8;48916;29.13
+103;The Grapes of Wrath;1940;129;Drama;8.1;93962;0.06
+104;To Kill a Mockingbird;1962;129;Crime, Drama;8.3;317433;-1
+105;Mr. Smith Goes to Washington;1939;129;Comedy, Drama;8.1;116353;9.60
+106;The Wages of Fear;1953;131;Adventure, Drama, Thriller;8.2;61812;-1
+107;Patton;1970;172;Biography, Drama, War;7.9;102929;61.70
+108;Roman Holiday;1953;118;Comedy, Romance;8;139459;-1
+109;High Noon;1952;85;Drama, Thriller, Western;8;105103;9.45
+110;Double Indemnity;1944;107;Crime, Drama, Film-Noir;8.3;158194;5.72
+111;Forrest Gump;1994;142;Drama, Romance;8.8;2069583;330.25
+112;The Silence of the Lambs;1991;118;Crime, Drama, Thriller;8.6;1428301;130.74
+113;There Will Be Blood;2007;158;Drama;8.2;586906;40.22
+114;Die Hard;1988;132;Action, Thriller;8.2;876064;83.01
+115;Fargo;1996;98;Crime, Thriller;8.1;678339;24.61
+116;American Beauty;1999;122;Drama;8.4;1153783;130.10
+117;The Matrix;1999;136;Action, Sci-Fi;8.7;1906995;171.48
+118;The Bridge on the River Kwai;1957;161;Adventure, Drama, War;8.2;221719;44.91
+119;The Best Years of Our Lives;1946;170;Drama, Romance, War;8.1;65236;23.65
+120;Roma;2018;135;Drama;7.7;159179;-1
+121;White Heat;1949;114;Action, Crime, Drama;8.1;33420;-1
+122;The Sound of Music;1965;172;Biography, Drama, Family;8.1;235538;163.21
+123;Inception;2010;148;Action, Adventure, Sci-Fi;8.8;2341880;292.58
+124;Bonnie and Clyde;1967;111;Action, Biography, Crime;7.7;114067;-1
+125;Midnight Cowboy;1969;113;Drama;7.8;111988;44.79
+126;Shane;1953;118;Drama, Western;7.6;41363;20.00
+127;Intolerance: Love's Struggle Throughout the Ages;1916;163;Drama, History;7.7;15763;2.18
+128;Man on Wire;2008;94;Documentary, Biography, Crime;7.7;56386;2.96
+129;Battleship Potemkin;1925;75;Drama, History, Thriller;7.9;58318;0.05
+130;Anatomy of a Murder;1959;161;Drama, Mystery;8;66990;11.90
+131;The Leopard;1963;186;Drama, History;8;26364;-1
+132;The Lady Vanishes;1938;96;Mystery, Thriller;7.8;53304;-1
+133;Cool Hand Luke;1967;127;Crime, Drama;8.1;178240;16.22
+134;The Usual Suspects;1995;106;Crime, Drama, Mystery;8.5;1083575;23.34
+135;The Shining;1980;146;Drama, Horror;8.4;1020153;44.02
+136;City of God;2002;130;Crime, Drama;8.6;756103;7.56
+137;Heat;1995;170;Action, Crime, Drama;8.3;654489;67.44
+138;Kind Hearts and Coronets;1949;106;Comedy, Crime;8;37740;-1
+139;The Big Lebowski;1998;117;Comedy, Crime;8.1;808436;17.50
+140;La dolce vita;1960;174;Comedy, Drama;8;73902;19.52
+141;Fantasia;1940;125;Animation, Family, Fantasy;7.7;97471;76.41
+142;No Country for Old Men;2007;122;Crime, Drama, Thriller;8.2;971259;74.28
+143;This Is Spinal Tap;1984;82;Comedy, Music;7.9;140602;4.74
+144;Three Colours: Red;1994;99;Drama, Mystery, Romance;8.1;103968;4.04
+145;Good Will Hunting;1997;126;Drama, Romance;8.3;966109;138.43
+146;Federico Fellini's 8½;1963;138;Drama;8;118759;0.05
+147;Spirited Away;2001;125;Animation, Adventure, Family;8.6;761176;10.06
+148;La La Land;2016;128;Comedy, Drama, Music;8;587184;151.10
+149;West Side Story;1961;153;Crime, Drama, Musical;7.6;114844;43.66
+150;The Deer Hunter;1978;183;Drama, War;8.1;340348;48.98
+151;M*A*S*H;1970;116;Comedy, Drama, War;7.4;73810;81.60
+152;Beauty and the Beast;1991;84;Animation, Family, Fantasy;8;455543;218.97
+153;The Lives of Others;2006;137;Drama, Mystery, Thriller;8.4;390237;11.29
+154;The Artist;2011;100;Comedy, Drama, Romance;7.9;242170;44.67
+155;Whiplash;2014;106;Drama, Music;8.5;856136;13.09
+156;The King's Speech;2010;118;Biography, Drama, History;8;681472;138.80
+157;Invasion of the Body Snatchers;1956;80;Drama, Horror, Sci-Fi;7.7;50838;-1
+158;Birdman or (The Unexpected Virtue of Ignorance);2014;119;Comedy, Drama;7.7;630650;42.34
+159;Manchester by the Sea;2016;137;Drama;7.8;283606;47.70
+160;The Lord of the Rings: The Two Towers;2002;179;Action, Adventure, Drama;8.8;1661446;342.55
+161;Close Encounters of the Third Kind;1977;138;Drama, Sci-Fi;7.6;203386;132.09
+162;Brooklyn;2015;117;Drama, Romance;7.5;143322;38.32
+163;Million Dollar Baby;2004;132;Drama, Sport;8.1;687744;100.49
+164;Das Boot;1981;149;Drama, War;8.4;251779;11.49
+165;Hell or High Water;2016;102;Crime, Drama, Thriller;7.6;232399;26.86
+166;Ordinary People;1980;124;Drama;7.7;52920;54.80
+167;The Pianist;2002;150;Biography, Drama, Music;8.5;830232;32.57
+168;Come and See;1985;142;Drama, Thriller, War;8.4;80629;-1
+169;Cinema Paradiso;1988;155;Drama, Romance;8.5;261617;11.99
+170;His Girl Friday;1940;92;Comedy, Drama, Romance;7.8;59396;0.30
+171;Harold and Maude;1971;91;Comedy, Drama, Romance;7.9;78106;-1
+172;Witness for the Prosecution;1957;116;Crime, Drama, Mystery;8.4;126169;8.18
+173;Paths of Glory;1957;88;Drama, War;8.4;198126;-1
+174;Stand by Me;1986;89;Adventure, Drama;8.1;404764;52.29
+175;Eternal Sunshine of the Spotless Mind;2004;108;Drama, Romance, Sci-Fi;8.3;1006241;34.40
+176;Barry Lyndon;1975;185;Adventure, Drama, War;8.1;169044;-1
+177;Amadeus;1984;160;Biography, Drama, Music;8.4;401718;51.97
+178;Oldboy;2003;120;Action, Drama, Mystery;8.4;579178;0.71
+179;The Lion King;1994;88;Animation, Adventure, Drama;8.5;1055462;422.78
+180;Boyhood;2014;165;Drama;7.9;355435;25.38
+181;Argo;2012;120;Biography, Drama, Thriller;7.7;615720;136.03
+182;Thelma & Louise;1991;130;Adventure, Crime, Drama;7.5;156770;45.36
+183;A Matter of Life and Death;1946;104;Drama, Fantasy, Romance;8;22424;-1
+184;Manhattan;1979;96;Comedy, Drama, Romance;7.9;141108;45.70
+185;The Life and Death of Colonel Blimp;1943;163;Drama, Romance, War;8;15110;-1
+186;The Great Escape;1963;172;Adventure, Drama, History;8.2;245410;12.10
+187;Spartacus;1960;197;Adventure, Biography, Drama;7.9;135856;30.00
+188;Monty Python and the Holy Grail;1975;91;Adventure, Comedy, Fantasy;8.2;542235;1.23
+189;Brazil;1985;132;Drama, Sci-Fi;7.9;201917;9.93
+190;Magnolia;1999;188;Drama;8;313899;22.46
+191;Tootsie;1982;116;Comedy, Drama, Romance;7.4;108047;177.20
+192;The Departed;2006;151;Crime, Drama, Thriller;8.5;1321691;132.38
+193;Arrival;2016;116;Drama, Mystery, Sci-Fi;7.9;694323;100.55
+194;Casino Royale;2006;144;Action, Adventure, Thriller;8;658343;167.45
+195;When Harry Met Sally;1989;95;Comedy, Drama, Romance;7.7;222390;92.82
+196;Slumdog Millionaire;2008;120;Crime, Drama, Romance;8;845830;141.32
+197;Blue Velvet;1986;120;Crime, Drama, Mystery;7.7;200847;8.55
+198;The King of Comedy;1982;109;Comedy, Crime, Drama;7.8;105129;2.50
+199;The Breakfast Club;1985;97;Comedy, Drama;7.8;400039;45.88
+200;WALL·E;2008;98;Animation, Adventure, Family;8.4;1113514;223.81
+201;Inside Out;2015;95;Animation, Adventure, Comedy;8.2;712529;356.46
+202;Ferris Bueller's Day Off;1986;103;Comedy;7.8;360121;70.14
+203;Easy Rider;1969;95;Adventure, Drama;7.3;110981;41.73
+204;Young Frankenstein;1974;106;Comedy;8;159719;86.30
+205;Amélie;2001;122;Comedy, Romance;8.3;756828;33.23
+206;Seven;1995;127;Crime, Drama, Mystery;8.6;1645902;100.13
+207;All the President's Men;1976;138;Drama, History, Thriller;7.9;116830;70.60
+208;Leon;1994;110;Action, Crime, Drama;8.5;1158185;19.50
+209;The Kid;1921;68;Comedy, Drama, Family;8.3;127123;5.45
+210;The Passion of Joan of Arc;1928;110;Biography, Drama, History;8.2;55476;0.02
+211;Life Is Beautiful;1997;116;Comedy, Drama, Romance;8.6;693917;57.60
+212;Rocky;1976;120;Drama, Sport;8.1;576278;117.24
+213;Trainspotting;1996;93;Drama;8.1;687567;16.50
+214;Star Wars: Return of the Jedi;1983;131;Action, Adventure, Fantasy;8.3;1052027;309.13
+215;The Gold Rush;1925;95;Adventure, Comedy, Drama;8.2;112083;5.45
+216;Unforgiven;1992;130;Drama, Western;8.2;412970;101.16
+217;Memento;2000;113;Mystery, Thriller;8.4;1235654;25.54
+218;Sunrise: A Song of Two Humans;1927;94;Drama, Romance;8.1;51439;0.54
+219;Nashville;1975;160;Comedy, Drama, Music;7.7;26741;14.82
+220;Duck Soup;1933;69;Comedy, Musical;7.8;60513;-1
+221;Sullivan's Travels;1941;90;Adventure, Comedy, Drama;7.9;26734;-1
+222;Cabaret;1972;124;Drama, Music, Musical;7.8;55754;42.77
+223;Network;1976;121;Drama;8.1;160501;-1
+224;Saving Private Ryan;1998;169;Drama, War;8.6;1387433;216.54
+225;The African Queen;1951;105;Adventure, Drama, Romance;7.7;79452;0.54
+226;Who's Afraid of Virginia Woolf?;1966;131;Drama;8;75996;-1
+227;Red River;1948;133;Drama, Western;7.8;31743;-1
+228;In the Heat of the Night;1967;110;Drama, Mystery, Thriller;7.9;77132;24.38
+229;Dial M for Murder;1954;105;Crime, Thriller;8.2;176880;0.01
+230;The Wild Bunch;1969;145;Action, Adventure, Western;7.9;85399;12.06
+231;Titanic;1997;194;Drama, Romance;7.9;1170288;659.33
+232;A Night at the Opera;1935;96;Comedy, Music, Musical;7.8;33226;2.54
+233;Platoon;1986;120;Drama, War;8.1;415316;138.53
+234;Once Upon a Time in America;1984;229;Crime, Drama;8.3;352653;5.32
+235;The Spirit of the Beehive;1973;98;Drama, Fantasy;7.8;18878;-1
+236;A Separation;2011;123;Drama;8.3;245844;7.10
+237;Toy Story 3;2010;103;Animation, Adventure, Comedy;8.3;835282;415.00
+238;Bringing Up Baby;1938;102;Comedy;7.8;62161;-1
+239;The Sixth Sense;1999;107;Drama, Mystery, Thriller;8.2;991318;293.51
+240;Swing Time;1936;103;Comedy, Musical, Romance;7.5;13873;-1
+241;The Conversation;1974;113;Drama, Mystery, Thriller;7.8;113043;4.42
+242;Sophie's Choice;1982;150;Drama, Romance;7.5;48814;30.04
+243;The French Connection;1971;104;Action, Crime, Drama;7.7;124026;15.63
+244;Do the Right Thing;1989;120;Comedy, Drama;7.9;103157;27.55
+245;Yankee Doodle Dandy;1942;126;Biography, Drama, Family;7.6;15896;11.80
+246;Ben-Hur;1959;212;Adventure, Drama;8.1;240134;74.70
+247;Rebel Without a Cause;1955;111;Drama;7.6;91823;-1
+248;Almost Famous;2000;122;Adventure, Comedy, Drama;7.9;277681;32.53
+249;Brokeback Mountain;2005;134;Drama, Romance;7.7;358654;83.04
+250;Fitzcarraldo;1982;158;Adventure, Drama;8;35576;-1
+251;Stagecoach;1939;96;Adventure, Drama, Western;7.8;49733;-1
+252;The English Patient;1996;162;Drama, Romance, War;7.4;191457;78.65
+253;American History X;1998;119;Crime, Drama;8.5;1120669;6.72
+254;The Magnificent Ambersons;1942;88;Drama, Romance;7.6;25157;-1
+255;The Sting;1973;129;Comedy, Crime, Drama;8.3;263168;159.60
+256;A Man for All Seasons;1966;120;Biography, Drama, History;7.7;34987;28.35
+257;Lost in Translation;2003;102;Comedy, Drama;7.7;456338;44.59
+258;Reservoir Dogs;1992;99;Crime, Thriller;8.3;1016403;2.83
+259;Shakespeare in Love;1998;123;Comedy, Drama, History;7.1;226125;100.32
+260;Indiana Jones and the Last Crusade;1989;127;Action, Adventure;8.2;754454;197.17
+261;The Princess Bride;1987;98;Adventure, Family, Fantasy;8;428503;30.86
+262;Solaris;1972;167;Drama, Mystery, Sci-Fi;8;92144;-1
+263;A Woman Under the Influence;1974;155;Drama, Romance;8.1;25711;13.34
+264;Up;2009;96;Animation, Adventure, Comedy;8.3;1041976;293.00
+265;The Green Mile;1999;189;Crime, Drama, Fantasy;8.6;1297477;136.80
+266;Doctor Zhivago;1965;193;Drama, Romance, War;7.9;77524;111.72
+267;Pan's Labyrinth;2006;118;Drama, Fantasy, War;8.2;669552;37.63
+268;Goldfinger;1964;110;Action, Adventure, Thriller;7.7;191962;51.08
+269;Airplane!;1980;88;Comedy;7.7;240989;83.40
+270;Requiem for a Dream;2000;102;Drama;8.3;841316;3.64
+271;The Thing;1982;109;Horror, Mystery, Sci-Fi;8.2;426179;13.78
+272;Jurassic Park;1993;127;Action, Adventure, Sci-Fi;8.2;986758;402.45
+273;The Terminator;1984;107;Action, Sci-Fi;8.1;864476;38.40
+274;Blazing Saddles;1974;93;Comedy, Western;7.7;140895;119.50
+275;Finding Nemo;2003;100;Animation, Adventure, Comedy;8.2;1042137;380.84
+276;The Wrestler;2008;109;Drama, Sport;7.9;307450;26.24
+277;Before Sunset;2004;80;Drama, Romance;8.1;265170;5.82
+278;Downfall;2004;156;Biography, Drama, History;8.2;356654;5.51
+279;Full Metal Jacket;1987;116;Drama, War;8.3;742621;46.36
+280;The Thin Red Line;1998;170;Drama, History, War;7.6;189002;36.40
+281;Rio Bravo;1959;141;Western;8;63364;12.54
+282;Harvey;1950;104;Comedy, Drama, Fantasy;7.9;56021;-1
+283;Planet of the Apes;1968;112;Adventure, Sci-Fi;8;181315;33.40
+284;Grave of the Fireflies;1988;89;Animation, Drama, War;8.5;277636;-1
+285;La haine;1995;98;Crime, Drama;8.1;174830;0.31
+286;Three Colors: Blue;1993;94;Drama, Music, Mystery;7.9;103058;1.32
+287;Star Trek II: The Wrath of Khan;1982;113;Action, Adventure, Sci-Fi;7.7;122694;78.91
+288;The Man Who Would Be King;1975;129;Adventure, War;7.8;49518;-1
+289;The Red Shoes;1948;135;Drama, Music, Romance;8.1;35592;10.90
+290;Gladiator;2000;155;Action, Adventure, Drama;8.5;1495870;187.71
+291;Boogie Nights;1997;155;Drama;7.9;267181;26.40
+292;La Belle et la Bête;1946;96;Drama, Fantasy, Romance;7.9;26771;0.30
+293;Badlands;1973;94;Action, Crime, Drama;7.7;73759;-1
+294;My Father and My Son;2005;112;Drama, Family;8.2;87216;-1
+295;Miracle on 34th Street;1947;96;Comedy, Drama, Family;7.9;48634;2.65
+296;For a Few Dollars More;1965;132;Western;8.2;257636;15.00
+297;Superman;1978;143;Action, Adventure, Sci-Fi;7.4;176286;134.22
+298;Children of Heaven;1997;89;Drama, Family, Sport;8.2;75374;0.93
+299;Ran;1985;162;Action, Drama, War;8.2;126432;4.14
+300;The Hunt;2012;115;Drama;8.3;330746;0.69
+301;Days of Heaven;1978;94;Drama, Romance;7.8;58840;-1
+302;Braveheart;1995;178;Biography, Drama, History;8.4;1036814;75.60
+303;Harry Potter and the Deathly Hallows: Part 2;2011;130;Adventure, Family, Fantasy;8.1;873536;381.01
+304;Room;2015;118;Drama, Thriller;8.1;421340;14.68
+305;Django Unchained;2012;165;Drama, Western;8.4;1547398;162.81
+306;Rushmore;1998;93;Comedy, Drama, Romance;7.6;186791;17.11
+307;Get Out;2017;104;Horror, Mystery, Thriller;7.7;609305;176.04
+308;Scarface;1983;170;Crime, Drama;8.3;839821;45.60
+309;Inglourious Basterds;2009;153;Adventure, Drama, War;8.3;1443620;120.54
+310;Drive;2011;100;Action, Drama;7.8;640673;35.06
+311;Star Wars: Episode VII - The Force Awakens;2015;138;Action, Adventure, Sci-Fi;7.8;930209;936.66
+312;The Seventh Seal;1957;96;Drama, Fantasy;8.1;186140;-1
+313;The Handmaiden;2016;145;Drama, Romance, Thriller;8.1;148313;2.01
+314;The Truman Show;1998;103;Comedy, Drama;8.2;1078281;125.62
+315;Mulholland Drive;2001;147;Drama, Mystery, Thriller;7.9;357098;7.22
+316;Life of Brian;1979;94;Comedy;8;400746;20.05
+317;The Exorcist;1973;122;Horror;8.1;409325;232.91
+318;Aladdin;1992;90;Animation, Adventure, Comedy;8;420647;217.35
+319;The Wolf of Wall Street;2013;180;Biography, Comedy, Crime;8.2;1402646;116.90
+320;Donnie Darko;2001;113;Drama, Mystery, Sci-Fi;8;801973;1.48
+321;Before Sunrise;1995;101;Drama, Romance;8.1;309107;5.54
+322;Let the Right One In;2008;114;Drama, Fantasy, Horror;7.9;218770;2.12
+323;The Bourne Ultimatum;2007;115;Action, Mystery, Thriller;8;635908;227.47
+324;The Celebration;1998;105;Drama;8.1;87754;1.65
+325;Ratatouille;2007;111;Animation, Adventure, Comedy;8.1;735673;206.45
+326;JFK;1991;189;Drama, History, Thriller;8;157430;70.41
+327;The Jungle Book;1967;78;Animation, Adventure, Comedy;7.6;184439;141.84
+328;The Bandit;1996;128;Crime, Drama, Thriller;8.1;70326;-1
+329;Children of Men;2006;109;Action, Drama, Sci-Fi;7.9;501938;35.55
+330;The Social Network;2010;120;Biography, Drama;7.8;703339;96.96
+331;Princess Mononoke;1997;134;Animation, Action, Adventure;8.4;394931;2.38
+332;Ikiru;1952;143;Drama;8.3;79200;0.06
+333;The Incredibles;2004;115;Animation, Action, Adventure;8;736944;261.44
+334;Untouchable;2011;112;Biography, Comedy, Drama;8.5;856286;13.18
+335;The Elephant Man;1980;124;Biography, Drama;8.2;242292;-1
+336;In the Name of the Father;1993;133;Biography, Crime, Drama;8.1;176082;25.01
+337;Kill Bill: Vol. 1;2003;111;Action, Crime, Drama;8.2;1113629;70.10
+338;Blade Runner 2049;2017;164;Action, Drama, Mystery;8;571511;92.05
+339;Skyfall;2012;143;Action, Adventure, Thriller;7.8;697801;304.36
+340;The Blues Brothers;1980;133;Action, Adventure, Comedy;7.9;201021;57.23
+341;The Secret in Their Eyes;2009;129;Drama, Mystery, Romance;8.2;210579;6.39
+342;Groundhog Day;1993;101;Comedy, Drama, Fantasy;8.1;631712;70.91
+343;Yojimbo;1961;110;Action, Drama, Thriller;8.2;123683;-1
+344;American Graffiti;1973;110;Comedy, Drama;7.4;91289;115.00
+345;Crimes and Misdemeanors;1989;104;Comedy, Drama;7.8;58504;18.25
+346;Amores perros;2000;154;Drama, Thriller;8.1;241396;5.38
+347;Howl's Moving Castle;2004;119;Animation, Adventure, Family;8.2;395534;4.71
+348;Gandhi;1982;191;Biography, Drama, History;8.1;232543;52.77
+349;My Neighbour Totoro;1988;86;Animation, Comedy, Family;8.1;339903;1.11
+350;Notorious;1946;102;Drama, Film-Noir, Romance;7.9;101946;10.46
+351;Judgment at Nuremberg;1961;179;Drama, War;8.3;78270;-1
+352;Sweet Smell of Success;1957;96;Drama, Film-Noir;8;32789;-1
+353;Mary and Max;2009;92;Animation, Comedy, Drama;8.1;178003;-1
+354;Her;2013;126;Drama, Romance, Sci-Fi;8;613530;25.57
+355;Incendies;2010;131;Drama, Mystery;8.3;178491;6.86
+356;Strangers on a Train;1951;101;Crime, Drama, Film-Noir;7.9;134794;7.63
+357;Sin City;2005;124;Crime, Thriller;8;770348;74.10
+358;Lock, Stock and Two Smoking Barrels;1998;107;Action, Comedy, Crime;8.2;582843;3.90
+359;The Favourite;2018;119;Biography, Comedy, Drama;7.5;201498;34.37
+360;Before Midnight;2013;109;Drama, Romance;7.9;159423;8.11
+361;A Beautiful Mind;2001;135;Biography, Drama;8.2;931865;170.74
+362;Carlito's Way;1993;144;Crime, Drama, Thriller;7.9;219754;36.95
+363;The Untouchables;1987;119;Crime, Drama, Thriller;7.8;311328;76.27
+364;Casino;1995;178;Crime, Drama;8.2;520653;42.44
+365;Gran Torino;2008;116;Drama;8.1;776041;148.10
+366;Memories of Murder;2003;131;Crime, Drama, Mystery;8.1;185107;0.01
+367;Hacksaw Ridge;2016;139;Biography, Drama, History;8.1;525245;67.21
+368;Silver Linings Playbook;2012;122;Comedy, Drama, Romance;7.7;710481;132.09
+369;Little Miss Sunshine;2006;101;Comedy, Drama;7.8;482834;59.89
+370;Nights of Cabiria;1957;110;Drama;8.1;49494;0.75
+371;Into the Wild;2007;148;Adventure, Biography, Drama;8.1;623870;18.35
+372;Dunkirk;2017;106;Action, Drama, History;7.8;657797;188.37
+373;Shoplifters;2018;121;Crime, Drama, Thriller;7.9;77426;3.31
+374;Stalker;1979;162;Drama, Sci-Fi;8.1;135043;0.23
+375;Les Diaboliques;1955;117;Crime, Drama, Horror;8.1;66407;1.09
+376;Hot Fuzz;2007;121;Action, Comedy, Mystery;7.8;506999;23.64
+377;Gone Girl;2014;149;Drama, Mystery, Thriller;8.1;980649;167.77
+378;Hotel Rwanda;2004;121;Biography, Drama, History;8.1;356564;23.53
+379;Wild Tales;2014;122;Comedy, Drama, Thriller;8.1;199263;3.11
+380;The Grand Budapest Hotel;2014;99;Adventure, Comedy, Crime;8.1;808027;59.10
+381;Prisoners;2013;153;Crime, Drama, Mystery;8.1;710292;61.00
+382;Persona;1966;85;Drama, Thriller;8.1;119649;-1
+383;Toy Story 2;1999;92;Animation, Adventure, Comedy;7.9;581768;245.85
+384;Short Term 12;2013;96;Drama;7.9;88382;1.01
+385;The Martian;2015;144;Adventure, Drama, Sci-Fi;8;853065;228.43
+386;Rush;2013;123;Action, Biography, Drama;8.1;480578;26.95
+387;Hachi: A Dog's Tale;2009;93;Biography, Drama, Family;8.1;285952;-1
+388;Dawn of the Dead;1978;127;Horror, Thriller;7.8;122162;5.10
+389;Catch Me If You Can;2002;141;Biography, Crime, Drama;8.1;979510;164.62
+390;Akira;1988;124;Animation, Action, Drama;8;187724;0.55
+391;Paper Moon;1973;102;Comedy, Crime, Drama;8.1;48333;30.93
+392;Infernal Affairs;2002;101;Action, Crime, Drama;8;125488;0.17
+393;Mary Poppins;1964;139;Comedy, Family, Fantasy;7.8;173991;102.27
+394;Dog Day Afternoon;1975;125;Biography, Crime, Drama;8;258298;50.00
+395;The Triplets of Belleville;2003;80;Animation, Adventure, Comedy;7.7;54879;7.00
+396;Wings of Desire;1987;128;Drama, Fantasy, Romance;8;71812;3.33
+397;What Ever Happened to Baby Jane?;1962;134;Drama, Horror, Thriller;8;57249;4.05
+398;Anomalisa;2015;90;Animation, Comedy, Drama;7.2;72442;3.76
+399;Edward Scissorhands;1990;105;Drama, Fantasy, Romance;7.9;492709;56.36
+400;Ghostbusters;1984;105;Action, Comedy, Fantasy;7.8;416849;238.63
+401;Halloween;1978;91;Horror, Thriller;7.7;282519;47.00
+402;Fantastic Mr. Fox;2009;87;Animation, Adventure, Comedy;7.9;233687;21.00
+403;The Help;2011;146;Drama;8.1;460105;169.71
+404;Dazed and Confused;1993;103;Comedy;7.6;185433;7.99
+405;The Nightmare Before Christmas;1993;76;Animation, Family, Fantasy;7.9;341309;75.08
+406;In the Mood for Love;2000;98;Drama, Romance;8.1;150943;2.73
+407;The Iron Giant;1999;86;Animation, Action, Adventure;8.1;199248;23.16
+408;Avengers Assemble;2012;143;Action, Adventure, Sci-Fi;8;1388848;623.28
+409;Forbidden Planet;1956;98;Adventure, Sci-Fi;7.5;50062;3.00
+410;Wild Strawberries;1957;91;Drama, Romance;8.1;108101;-1
+411;The Man Who Shot Liberty Valance;1962;123;Drama, Western;8.1;76788;-1
+412;Andaz Apna Apna;1994;160;Action, Comedy, Romance;8;53678;-1
+413;Nausicaä of the Valley of the Wind;1984;117;Animation, Adventure, Sci-Fi;8;170193;0.50
+414;Letters from Iwo Jima;2006;141;Action, Adventure, Drama;7.9;163737;13.76
+415;Hero;2002;120;Action, Adventure, Drama;7.9;182204;53.71
+416;Paris, Texas;1984;145;Drama;8.1;107292;2.18
+417;Fanny and Alexander;1982;188;Drama;8.1;64189;4.97
+418;Mystic River;2003;138;Crime, Drama, Mystery;7.9;457859;90.14
+419;Baby Driver;2017;113;Action, Crime, Drama;7.6;538452;107.83
+420;Snatch;2000;104;Comedy, Crime;8.2;855662;30.33
+421;Warrior;2011;140;Action, Drama, Sport;8.2;473291;13.66
+422;Sling Blade;1996;135;Drama;8;94658;24.48
+423;Underground;1995;170;Comedy, Drama, Fantasy;8.1;58837;0.17
+424;Cat on a Hot Tin Roof;1958;108;Drama;7.9;50179;17.57
+425;Elite Squad;2007;115;Action, Crime, Drama;8;104858;0.01
+426;V for Vendetta;2005;132;Action, Drama, Sci-Fi;8.2;1121380;70.51
+427;Le Samouraï;1967;105;Crime, Drama;8;52231;0.04
+428;Spider-Man: Into the Spider-Verse;2018;117;Animation, Action, Adventure;8.4;526106;190.24
+429;Spring, Summer, Fall, Winter... And Spring;2003;103;Drama, Romance;8;83558;2.38
+430;The Legend of 1900;1998;169;Drama, Music, Romance;8;65014;0.26
+431;About Elly;2009;119;Drama, Mystery;7.9;53959;0.11
+432;Adaptation.;2002;115;Comedy, Drama;7.7;193912;22.25
+433;Lady Bird;2017;94;Comedy, Drama;7.4;291889;48.96
+434;Dances with Wolves;1990;181;Adventure, Drama, Western;8;266648;184.21
+435;The Message;1976;177;Biography, Drama, History;8.1;48113;-1
+436;Rififi;1955;118;Crime, Drama, Thriller;8.1;34770;0.06
+437;Logan;2017;137;Action, Drama, Sci-Fi;8.1;762000;226.28
+438;Elite Squad 2: The Enemy Within;2010;115;Action, Crime, Drama;8;83608;0.10
+439;3-Iron;2004;88;Crime, Drama, Romance;7.9;55655;0.24
+440;Sherlock Jr.;1924;45;Action, Comedy, Romance;8.2;50678;0.98
+441;Ace in the Hole;1951;111;Drama, Film-Noir;8.1;36484;3.97
+442;Edge of Tomorrow;2014;113;Action, Adventure, Sci-Fi;7.9;678972;100.21
+443;Star Trek;2009;127;Action, Adventure, Sci-Fi;7.9;604641;257.73
+444;Harry Potter and the Prisoner of Azkaban;2004;142;Adventure, Family, Fantasy;7.9;633987;249.36
+445;Bambi;1942;69;Animation, Adventure, Drama;7.3;144344;102.80
+446;The Thin Man;1934;91;Comedy, Crime, Mystery;7.9;30295;-1
+447;Moon;2009;97;Drama, Mystery, Sci-Fi;7.8;360546;5.01
+448;Freaks;1932;64;Drama, Horror;7.8;47143;0.63
+449;Twelve Monkeys;1995;129;Mystery, Sci-Fi, Thriller;8;619067;57.14
+450;Samsara;2011;102;Documentary, Music;8.4;36299;2.67
+451;Persepolis;2007;96;Animation, Biography, Drama;8;95532;4.45
+452;Neon Genesis Evangelion: The End of Evangelion;1997;87;Animation, Action, Drama;8;55686;-1
+453;Evil Dead II;1987;84;Comedy, Horror;7.7;166356;5.92
+454;Who Framed Roger Rabbit;1988;104;Animation, Adventure, Comedy;7.7;202880;156.45
+455;Serenity;2005;119;Action, Adventure, Sci-Fi;7.8;297163;25.51
+456;Throne of Blood;1957;110;Drama, History;8.1;52700;-1
+457;Monsters, Inc.;2001;92;Animation, Adventure, Comedy;8.1;907920;289.92
+458;La Strada;1954;108;Drama;8;63667;-1
+459;Pink Floyd: The Wall;1982;95;Drama, Fantasy, Music;8;81684;22.24
+460;Mad Max 2;1981;96;Action, Adventure, Sci-Fi;7.6;182138;12.47
+461;Dallas Buyers Club;2013;117;Biography, Drama;7.9;489614;27.30
+462;Winter Sleep;2014;196;Drama;8.1;52057;0.17
+463;Ex Machina;2014;108;Drama, Sci-Fi, Thriller;7.7;546194;25.44
+464;Isle of Dogs;2018;101;Animation, Adventure, Comedy;7.8;170040;32.02
+465;Pirates of the Caribbean: The Curse of the Black Pearl;2003;143;Action, Adventure, Fantasy;8.1;1125642;305.41
+466;Kill Bill: Vol. 2;2004;137;Action, Crime, Thriller;8;756702;66.21
+467;Hunt for the Wilderpeople;2016;101;Adventure, Comedy, Drama;7.8;131580;5.20
+468;Zootropolis;2016;108;Animation, Adventure, Comedy;8;499404;341.27
+469;Song of the Sea;2014;93;Animation, Adventure, Drama;8;59005;0.86
+470;District 9;2009;112;Action, Sci-Fi, Thriller;7.9;683122;115.65
+471;Night of the Living Dead;1968;96;Horror, Thriller;7.8;130548;0.09
+472;How to Train Your Dragon;2010;98;Animation, Action, Adventure;8.1;739804;217.58
+473;Mission: Impossible - Fallout;2018;147;Action, Adventure, Thriller;7.7;333537;220.16
+474;Mirror;1975;107;Biography, Drama;8;47459;0.18
+475;Shaun of the Dead;2004;99;Comedy, Horror;7.9;559816;13.54
+476;The Revenant;2015;156;Action, Adventure, Drama;8;803251;183.64
+477;Shrek;2001;90;Animation, Adventure, Comedy;7.9;677295;267.67
+478;Interstellar;2014;169;Adventure, Drama, Sci-Fi;8.6;1817609;188.02
+479;Minority Report;2002;145;Action, Crime, Mystery;7.6;553078;132.07
+480;Laputa: Castle in the Sky;1986;125;Animation, Adventure, Family;8;167517;-1
+481;The Big Sick;2017;120;Comedy, Drama, Romance;7.5;136487;42.87
+482;Cinderella;1950;74;Animation, Family, Fantasy;7.3;161897;85.00
+483;My Fair Lady;1964;170;Drama, Family, Musical;7.8;96280;72.00
+484;Waltz with Bashir;2008;90;Documentary, Animation, Biography;8;58289;2.28
+485;Brief Encounter;1945;86;Drama, Romance;8;40681;-1
+486;Ghost in the Shell;1995;83;Animation, Action, Crime;7.9;144208;0.52
+487;Chungking Express;1994;102;Comedy, Crime, Drama;8;83105;0.60
+488;Mommy;2014;139;Drama;8;57661;3.49
+489;The Prestige;2006;130;Drama, Mystery, Sci-Fi;8.5;1329348;53.09
+490;The Innocents;1961;100;Horror;7.8;31009;2.62
+491;Black Swan;2010;108;Drama, Thriller;8;767479;106.95
+492;The Hidden Fortress;1958;139;Action, Adventure, Drama;8.1;39553;-1
+493;Hereditary;2018;127;Drama, Horror, Mystery;7.3;317035;44.07
+494;Black Cat, White Cat;1998;127;Comedy, Crime, Romance;8;54330;0.35
+495;Sleuth;1972;138;Mystery, Thriller;8;48106;4.08
+496;Coco;2017;105;Animation, Adventure, Comedy;8.4;506237;209.73
+497;Predator;1987;107;Action, Adventure, Horror;7.8;424854;59.74
+498;My Sassy Girl;2001;137;Comedy, Drama, Romance;8;48573;-1
+499;Dead Poets Society;1989;128;Comedy, Drama;8.1;491235;95.86
+500;Breakfast at Tiffany's;1961;115;Comedy, Drama, Romance;7.6;181599;-1
+501;Hidden Figures;2016;127;Biography, Drama, History;7.8;231226;169.61
+502;The Imitation Game;2014;114;Biography, Drama, Thriller;8;769480;91.13
+503;Shutter Island;2010;138;Mystery, Thriller;8.2;1309105;128.01
+504;Lincoln;2012;150;Biography, Drama, History;7.3;261725;182.21
+505;The Perks of Being a Wallflower;2012;103;Drama;7.9;513039;17.74
+506;A Fistful of Dollars;1964;99;Action, Drama, Western;7.9;218637;14.50
+507;Zero Dark Thirty;2012;157;Drama, History, Thriller;7.4;302655;95.72
+508;A Place in the Sun;1951;122;Drama, Romance;7.7;23049;-1
+509;American Hustle;2013;138;Crime, Drama;7.2;480115;150.12
+510;Rain Man;1988;133;Drama;8;515371;178.80
+511;Giant;1956;201;Drama, Western;7.6;39658;-1
+512;Cinderella Man;2005;144;Biography, Drama, Romance;8;189036;61.65
+513;From Here to Eternity;1953;118;Drama, Romance, War;7.6;47598;30.50
+514;Walk the Line;2005;136;Biography, Drama, Music;7.8;252498;119.52
+515;The Last Emperor;1987;163;Biography, Drama, History;7.7;104338;43.98
+516;Mutiny on the Bounty;1935;132;Adventure, Biography, Drama;7.7;23353;-1
+517;The Longest Day;1962;178;Action, Drama, History;7.7;56464;39.10

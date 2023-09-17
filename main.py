@@ -129,8 +129,6 @@ $(document).ready(launchDebian());
 
 '''
 
-
-
     @env.macro
     def ext() -> str:
         return f'ext "Pour aller plus loin"'
@@ -166,12 +164,12 @@ $(document).ready(launchDebian());
         @details : The content of the file is hidden in the webpage. Replacing \n, _ and * by a string enables
         the integration in mkdocs admonitions.
         """
-        docs_path = f"""docs/"""
+        docs_path = f"""docs"""
 
         try:
             relative_path = "scripts" if path == "" else path
             with open(
-                f"""{docs_path}{relative_path}/{script_name}.{extension}"""
+                f"""{docs_path}/{relative_path}/{script_name}.{extension}"""
             ) as filename:
                 content = "".join(filename.readlines())
                 content = content + "\n"
@@ -197,14 +195,13 @@ $(document).ready(launchDebian());
 
     # TODO : this issue concerning the urls must be closed ASAP
     def get_filepath() -> str:
-        print("docs_dirs", env.conf["docs_dir"])
-        return ""
-    #    return "/"+"/".join(
-    #        filter(
-    #            lambda folder: folder != "",
-    #            convert_url_to_utf8(env.variables.page.abs_url).split("/")[2:-2],
-    #        )
-    #    )
+        path="/".join(
+            filter(
+                lambda folder: folder != "",
+                convert_url_to_utf8(env.variables.page.abs_url).split("/")[1:-2],
+            )
+        )
+        return path
 
     # TODO : handle the case where the same files are loaded on the same page.
     def generate_id_ide(content: str) -> str:
@@ -473,7 +470,7 @@ $(document).ready(launchDebian());
         Last span hides the code content of the IDE when loaded.
         """
         filepath = get_filepath()
-        ide_content = read_external_file('/'+script_name, filepath)
+        ide_content = read_external_file(script_name, filepath)
         id_ide = generate_id_ide(ide_content)
 
         if (max_from_file := get_max_from_file(ide_content)) != "":
@@ -552,10 +549,10 @@ $(document).ready(launchDebian());
     @env.macro
     def qcm(list_answers, list_correct, opts=None, shuffle=True, single=True):
         # single -> une seule question de QCM
-        print("opts", opts)
+        #print("opts", opts)
         if type(list_correct) == int:
             list_correct = [list_correct]
-        print("liste", list_correct, type(list_correct))
+        #print("liste", list_correct, type(list_correct))
         list_correct = list(
             map(lambda x: x - 1, list_correct)
         )  # back to 0 to n-1 indexing
@@ -585,7 +582,7 @@ $(document).ready(launchDebian());
         prefix = "data-var-"
         variable_part = ""
         if opts != None:
-            print("opts", opts, type(opts))
+            #print("opts", opts, type(opts))
             for clé in opts:
                 variable_part += f"""{prefix}{clé} = "{opts[clé]}" """
         html_element = f"""<div class="wrapper_qcm" id = "qcm_{id}" data-n-correct = {len(list_correct)} data-shuffle = {1 if shuffle else 0} {variable_part}>"""
@@ -628,7 +625,7 @@ $(document).ready(launchDebian());
             content = list(map(lambda x: x[:-1], f.readlines()))
             header = content.pop(0).split(sep)
             csv_file = []
-            print(header)
+            #print(header)
             for ligne in content:
                 split_ligne = ligne.split(sep)
                 dico = {
@@ -734,7 +731,7 @@ $(document).ready(launchDebian());
             list_correct = entry[2]
             dictionnaire_var = entry[3]
 
-            print(entry, dictionnaire_var)
+            #print(entry, dictionnaire_var)
 
             html_element += f"<div class = 'setQCM'>"
             html_element += f"<span class = 'questionQCM arithmatex' data-nq = {i+1}>{latexify(question)}</span>"

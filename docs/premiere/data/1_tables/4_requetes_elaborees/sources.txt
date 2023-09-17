@@ -1,0 +1,5 @@
+foot : https://www.kaggle.com/datasets/die9origephit/fifa-world-cup-2022-complete-dataset
+
+internet : https://www.kaggle.com/datasets/leoth9/internet-flow?select=internet.csv
+
+imdb : https://www.kaggle.com/datasets/faisaljanjua0555/top-500-movies-of-all-time

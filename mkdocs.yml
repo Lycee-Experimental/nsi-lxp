@@ -135,7 +135,7 @@ nav:
       - 1️⃣ Binaire et portes logiques: premiere/fondement/binaire.md
       - 1️⃣ Architecture matérielle: premiere/fondement/materiel.md
       - 1️⃣ Langage machine et assembleur: premiere/fondement/assembleur.md
-      - 🇹 Systèmes sur puces (SoC): terminale/soc.md
+      - 🇹 Systèmes sur puces (SoC): terminale/fondements/composants_integres_systeme_puce/composant.md
       - Quiz: outils/quiz/Architectures matérielles et systèmes d’exploitation (Première).md
   - Encodage: 
           - premiere/encodage/index.md
@@ -149,19 +149,7 @@ nav:
       - 1️⃣ Commandes Shell: premiere/linux/commande.md
       - 1️⃣ Arborescence des dossiers: premiere/linux/dossier.md
       - 1️⃣ Gestion des permissions: premiere/linux/permission.md
-      - 🇹 Gestion des processus: terminale/processus.md
-  - Réseaux:
-      - 1️⃣ Introduction: premiere/internet/index.md
-      - 1️⃣ Histoire d'internet: premiere/internet/histoire.md
-      - 1️⃣ Architecture réseau: premiere/internet/architecture.md
-      - 1️⃣ Protocoles de communication: premiere/internet/protocole.md
-      - 🇹 Protocoles de routage: terminale/routage.md
-  - Web:
-      - 1️⃣ Introduction: premiere/web/index.md
-      - 1️⃣ Langages web: premiere/web/langage.md
-      - 1️⃣ Protocole HTTP: premiere/web/http.md
-      - 1️⃣ Requêtes GET et POST et formulaires: premiere/web/requete.md
-      - 🇹 Sécurité des communications: terminale/chiffrement.md
+      - 🇹 Gestion des processus: terminale/os/gestion_processus/gestion_processus.md
 
   - Python:
       - 1️⃣ Introduction: premiere/python/index.md
@@ -174,23 +162,50 @@ nav:
       - 1️⃣ Tuples: premiere/python/tuple.md
       - 1️⃣ Dictionnaires: premiere/python/dict.md
       - 1️⃣ Chaînes de caractères: premiere/python/char.md
-      - 🇹 Bonnes pratiques de la progra: terminale/progra.md
-      - 🇹 Progra Orientée Objet: terminale/objet.md
-      - 🇹 Récursivité: terminale/crecursivite.md
-      - 🇹 Paradigmes de la progra: terminale/paradigme.md
-      - 🇹 Décidabilité et calculabilité: terminale/chidecidabilite.md
-
+      - 🇹 Bonnes pratiques de la progra: terminale/python/01-Bonnes_pratiques/Bonnes_pratiques.md
+      - 🇹 Progra Orientée Objet: terminale/python/02-Programmation_Orientee_Objet/Programmation_Orientee_Objet.md
+      - 🇹 Récursivité: terminale/python/03-Recursivite/recursivite.md
+      - 🇹 Paradigmes de la progra: terminale/python/4-Paradigmes_de_programmation/Paradigmes_de_programmation.md
+      - 🇹 Décidabilité et calculabilité: terminale/python/5-Decidabilite-Calculabilite/Decidabilite-Calculabilite.md
 
   - Bigdata:
-      - 1️⃣ Introduction: premiere/data/index.md
-      - 1️⃣ Fichiers csv: premiere/data/csv.md
-      - 1️⃣ Tri des données: premiere/data/tri.md
-      - 1️⃣ Module Pandas: premiere/data/pandas.md
-      - 🇹 Données linéaires: terminale/lineaire.md
-      - 🇹 Arbres binaires: terminale/arbre.md
-      - 🇹 Graphes: terminale/graphe.md
-      - 🇹 Bases de données: terminale/db.md
+      - premiere/data/index.md
+      - 1️⃣ Les données en tables: 
+          - premiere/data/1_tables/index.md
+          - Prendre un bon départ: 
+              - Listes: premiere/data/1_tables/1_depart/1_listes.md
+              - Listes en compréhension: premiere/data/1_tables/1_depart/2_comprehension.md
+              - Dictionnaires: premiere/data/1_tables/1_depart/3_dictionnaires.md
+              - Listes de listes/dictionnaires: premiere/data/1_tables/1_depart/4_imbriquees.md
+          - Les fichiers: 
+              - Lire un fichier: premiere/data/1_tables/2_fichiers_csv/1_manipulation.md
+              - Fichiers csv: premiere/data/1_tables/2_fichiers_csv/2_fichiers_csv.md
+              - Import vers listes: premiere/data/1_tables/2_fichiers_csv/3_import_listes.md
+              - Import vers dictionnaires: premiere/data/1_tables/2_fichiers_csv/4_import_dico.md        
+          - Requêtes simples:
+            - Prénoms: premiere/data/1_tables/3_requetes_simples/1_prenoms.md
+            - Communes: premiere/data/1_tables/3_requetes_simples/2_communes.md
+          - Requêtes élaborées: premiere/data/1_tables/4_requetes_elaborees/1_films.md
+          - Fusion de tables: premiere/data/1_tables/5_fusions/1_fusions.md
+      - 🇹 Structures de données:
+          - terminale/data/index.md
+          - Données linéaires: terminale/data/1_donnees_lineaires/structure_donnees_lineaires.md
+          - Données en arbres: terminale/data/2_donnees_arbres/arbres.md
+          - Données en graphes: terminale/data/3_donnees_graphes/Graphes.md
+      - 🇹 Bases de données: terminale/data/4_bases_de_donnees/bases_de_donnees.md
 
+  - Réseaux:
+      - 1️⃣ Introduction: premiere/internet/index.md
+      - 1️⃣ Histoire d'internet: premiere/internet/histoire.md
+      - 1️⃣ Architecture réseau: premiere/internet/architecture.md
+      - 1️⃣ Protocoles de communication: premiere/internet/protocole.md
+      - 🇹 Protocoles de routage: terminale/reseau/routage/protocole_routage.md
+  - Web:
+      - 1️⃣ Introduction: premiere/web/index.md
+      - 1️⃣ Langages web: premiere/web/langage.md
+      - 1️⃣ Protocole HTTP: premiere/web/http.md
+      - 1️⃣ Requêtes GET et POST et formulaires: premiere/web/requete.md
+      - 🇹 Sécurité des communications: terminale/web/securisation_des_communications/Securisation_des_communications.md
   - Algorithmes:
       - 1️⃣ Introduction: premiere/algo/index.md
       - 1️⃣ Extremums et moyennes: premiere/algo/moy.md
@@ -200,10 +215,9 @@ nav:
       - 1️⃣ Dichotomie: premiere/algo/dichotomie.md
       - 1️⃣ Algorithmes gloutons: premiere/algo/glouton.md
       - 1️⃣ Algorithme KNN: premiere/algo/knn.md
-      - 🇹 Diviser pour régner: terminale/diviser.md
-      - 🇹 Progra dynamique: terminale/dynamique.md
-      - 🇹 Recherche textuelle: terminale/textuel.md
-
+      - 🇹 Diviser pour régner: terminale/algorithmes/diviser.md
+      - 🇹 Progra dynamique: terminale/algorithmes/dynamique.md
+      - 🇹 Recherche textuelle: terminale/algorithmes/recherche_textuelle.md
 
   - Ressources: ressources/index.md
   - Projets:

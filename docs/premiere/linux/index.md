@@ -1,8 +1,9 @@
 # Systèmes d'exploitation
 
-|Notions|Compétences|Remarques|
-|--|--|--|
-Systèmes d’exploitation.|Identifier les fonctions d’un système d’exploitation.<br>Utiliser les commandes de base en ligne de commande.<br>Gérer les droits et permissions d’accès aux fichiers. | Les différences entre systèmes d’exploitation libres et propriétaires sont évoquées. Les élèves utilisent un système d’exploitation libre. Il ne s’agit pas d’une étude théorique des systèmes d’exploitation.
+??? conclu "Programme"
+    |Notions|Compétences|Remarques|
+    |--|--|--|
+    Systèmes d’exploitation.|Identifier les fonctions d’un système d’exploitation.<br>Utiliser les commandes de base en ligne de commande.<br>Gérer les droits et permissions d’accès aux fichiers. | Les différences entre systèmes d’exploitation libres et propriétaires sont évoquées. Les élèves utilisent un système d’exploitation libre. Il ne s’agit pas d’une étude théorique des systèmes d’exploitation.
 
 Un **système d'exploitation** - Operating System (**OS**) - est un ensemble de logiciels qui permettent de faire fonctionner d'autres logiciels en exploitant les ressources proposées par un ordinateur (RAM, CPU, disques...). Les logiciels n'ont pas vraiment à gérer les ressources matérielles, le système d'exploitation s'en charge pour eux.
 

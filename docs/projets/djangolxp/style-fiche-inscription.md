@@ -20,8 +20,10 @@ Le fichier modèle (template) de la fiche d'inscription (au format html comme pd
 Globalement, il est constitué de balises html (`<div>,<h1>,<p>`...) auxquelles on associe des classes css 
 (par ex. `<span class="float-right">`) pour mettre en forme le document (voir plus bas pour le css).
 
+{% raw %} 
 La valeur d'un champ de notre base est affichée avec une expression de type
-`{{ fiche.prenom }}` qui correspond aux champs de notre modèle BaseEleve.
+```{{ fiche.prenom }}``` qui correspond aux champs de notre modèle BaseEleve.
+ {% endraw %}
 
 ## Modifier l'apparence avec le CSS
 L'affichage de la fiche au **format PDF**, passe par Weasyprint qui ne permet pas l'utilisation de tout type de CSS
