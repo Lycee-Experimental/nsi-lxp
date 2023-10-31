@@ -3,10 +3,10 @@ nav:
     - index.md
     - Parcours de listes: 
         - 1️⃣ Extremums et moyennes: moy.md
+        - 1️⃣ Dichotomie: dichotomie.md
     - Algorithmes de tri :
-    - 1️⃣ Tri par insertion: insert.md
-    - 1️⃣ Tri par sélection: select.md
-    - 1️⃣ Dichotomie: dichotomie.md
+        - 1️⃣ Tri par insertion: insert.md
+        - 1️⃣ Tri par sélection: select.md
     - 1️⃣ Algorithmes gloutons: glouton.md
     - 1️⃣ Algorithme KNN: knn.md
     - 🇹 Diviser pour régner: diviser.md
