@@ -1,8 +1,9 @@
 title: Algorithmes
 nav:
-    - 1️⃣ Introduction: index.md
-    - 1️⃣ Extremums et moyennes: moy.md
-    - 1️⃣ Complexité: complex.md
+    - index.md
+    - Parcours de listes: 
+        - 1️⃣ Extremums et moyennes: moy.md
+    - Algorithmes de tri :
     - 1️⃣ Tri par insertion: insert.md
     - 1️⃣ Tri par sélection: select.md
     - 1️⃣ Dichotomie: dichotomie.md
