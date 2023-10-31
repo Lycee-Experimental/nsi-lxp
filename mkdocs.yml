@@ -105,8 +105,16 @@ extra:
 
 plugins:
   - search
-  - macros
   - mkdocs-video
+  - awesome-pages:
+      filename: .pages
+      collapse_single_pages: true
+      strict: false
+      order: asc
+      sort_type: natural
+      order_by: title
+  - macros
+
   #- inline-svg
 
 extra_javascript:
@@ -126,122 +134,4 @@ extra_javascript:
 extra_css:
   - xtra/stylesheets/ajustements.css # ajustements piodide
   - xtra/stylesheets/extra.css # mes ajustements
-
-nav:
-  - intro.md
-  - Fondements:
-      - premiere/fondement/index.md
-      - 1️⃣ Histoire de l'informatique: premiere/fondement/histoire.md
-      - 1️⃣ Binaire et portes logiques: premiere/fondement/binaire.md
-      - 1️⃣ Architecture matérielle: premiere/fondement/materiel.md
-      - 1️⃣ Langage machine et assembleur: premiere/fondement/assembleur.md
-      - 🇹 Systèmes sur puces (SoC): terminale/fondements/composants_integres_systeme_puce/composant.md
-      - Quiz: outils/quiz/Architectures matérielles et systèmes d’exploitation (Première).md
-  - Encodage: 
-          - premiere/encodage/index.md
-          - 1️⃣ Entiers positifs: premiere/encodage/entier-positif.md
-          - 1️⃣ Entiers signés: premiere/encodage/entier-negatif.md
-          - 1️⃣ Nombres réels: premiere/encodage/non-entier.md
-          - 1️⃣ Caractères: premiere/encodage/caractere.md    
-  - OS & Linux:
-      - 1️⃣ Systèmes d'exploitation: premiere/linux/index.md
-      - 1️⃣ Tester et installer Linux: premiere/linux/linux.md
-      - 1️⃣ Commandes Shell: premiere/linux/commande.md
-      - 1️⃣ Arborescence des dossiers: premiere/linux/dossier.md
-      - 1️⃣ Gestion des permissions: premiere/linux/permission.md
-      - 🇹 Gestion des processus: terminale/os/gestion_processus/gestion_processus.md
-
-  - Python:
-      - 1️⃣ Introduction: premiere/python/index.md
-      - 1️⃣ Variables: premiere/python/variable.md
-      - 1️⃣ Boucles for et while: premiere/python/boucle.md
-      - 1️⃣ Instruction conditionnelle If: premiere/python/condition.md
-      - 1️⃣ Booléens: premiere/python/bool.md
-      - 1️⃣ Fonctions: premiere/python/fonction.md
-      - 1️⃣ Listes: premiere/python/liste.md
-      - 1️⃣ Tuples: premiere/python/tuple.md
-      - 1️⃣ Dictionnaires: premiere/python/dict.md
-      - 1️⃣ Chaînes de caractères: premiere/python/char.md
-      - 🇹 Bonnes pratiques de la progra: terminale/python/01-Bonnes_pratiques/Bonnes_pratiques.md
-      - 🇹 Progra Orientée Objet: terminale/python/02-Programmation_Orientee_Objet/Programmation_Orientee_Objet.md
-      - 🇹 Récursivité: terminale/python/03-Recursivite/recursivite.md
-      - 🇹 Paradigmes de la progra: terminale/python/4-Paradigmes_de_programmation/Paradigmes_de_programmation.md
-      - 🇹 Décidabilité et calculabilité: terminale/python/5-Decidabilite-Calculabilite/Decidabilite-Calculabilite.md
-
-  - Bigdata:
-      - premiere/data/index.md
-      - 1️⃣ Les données en tables: 
-          - premiere/data/1_tables/index.md
-          - Prendre un bon départ: 
-              - Listes: premiere/data/1_tables/1_depart/1_listes.md
-              - Listes en compréhension: premiere/data/1_tables/1_depart/2_comprehension.md
-              - Dictionnaires: premiere/data/1_tables/1_depart/3_dictionnaires.md
-              - Listes de listes/dictionnaires: premiere/data/1_tables/1_depart/4_imbriquees.md
-          - Les fichiers: 
-              - Lire un fichier: premiere/data/1_tables/2_fichiers_csv/1_manipulation.md
-              - Fichiers csv: premiere/data/1_tables/2_fichiers_csv/2_fichiers_csv.md
-              - Import vers listes: premiere/data/1_tables/2_fichiers_csv/3_import_listes.md
-              - Import vers dictionnaires: premiere/data/1_tables/2_fichiers_csv/4_import_dico.md        
-          - Requêtes simples:
-            - Prénoms: premiere/data/1_tables/3_requetes_simples/1_prenoms.md
-            - Communes: premiere/data/1_tables/3_requetes_simples/2_communes.md
-          - Requêtes élaborées: premiere/data/1_tables/4_requetes_elaborees/1_films.md
-          - Fusion de tables: premiere/data/1_tables/5_fusions/1_fusions.md
-      - 🇹 Structures de données:
-          - terminale/data/index.md
-          - Données linéaires: terminale/data/1_donnees_lineaires/structure_donnees_lineaires.md
-          - Données en arbres: terminale/data/2_donnees_arbres/arbres.md
-          - Données en graphes: terminale/data/3_donnees_graphes/Graphes.md
-      - 🇹 Bases de données: terminale/data/4_bases_de_donnees/bases_de_donnees.md
-
-  - Réseaux:
-      - 1️⃣ Introduction: premiere/internet/index.md
-      - 1️⃣ Histoire d'internet: premiere/internet/histoire.md
-      - 1️⃣ Architecture réseau: premiere/internet/architecture.md
-      - 1️⃣ Protocoles de communication: premiere/internet/protocole.md
-      - 🇹 Protocoles de routage: terminale/reseau/routage/protocole_routage.md
-  - Web:
-      - 1️⃣ Introduction: premiere/web/index.md
-      - 1️⃣ Langages web: premiere/web/langage.md
-      - 1️⃣ Protocole HTTP: premiere/web/http.md
-      - 1️⃣ Requêtes GET et POST et formulaires: premiere/web/requete.md
-      - 🇹 Sécurité des communications: terminale/web/securisation_des_communications/Securisation_des_communications.md
-  - Algorithmes:
-      - 1️⃣ Introduction: premiere/algo/index.md
-      - 1️⃣ Extremums et moyennes: premiere/algo/moy.md
-      - 1️⃣ Complexité: premiere/algo/complex.md
-      - 1️⃣ Tri par insertion: premiere/algo/insert.md
-      - 1️⃣ Tri par sélection: premiere/algo/select.md
-      - 1️⃣ Dichotomie: premiere/algo/dichotomie.md
-      - 1️⃣ Algorithmes gloutons: premiere/algo/glouton.md
-      - 1️⃣ Algorithme KNN: premiere/algo/knn.md
-      - 🇹 Diviser pour régner: terminale/algorithmes/diviser.md
-      - 🇹 Progra dynamique: terminale/algorithmes/dynamique.md
-      - 🇹 Recherche textuelle: terminale/algorithmes/recherche_textuelle.md
-
-  - Ressources: ressources/index.md
-  - Projets:
-    - Introduction: projets/index.md
-    - Le dépot Git du LXP:
-      - Présentation: projets/git/presentation.md
-      - Utilisation: projets/git/utilisation.md
-      - Commandes: projets/git/commandes.md
-    - Django-LXP:
-      - Pycharm & Django-Lxp:
-        - Installation de Pycharm: projets/djangolxp/install-pycharm.md
-        - Déploiement Django-lxp: projets/djangolxp/deploiement-local.md
-        - Git avec pycharm: projets/djangolxp/Utilisation-github_pycharm.md
-      - Développement de Django-Lxp:
-        - Ajout de champs au formulaires: projets/djangolxp/ajout-champs.md
-        - Affichage de la fiche d'inscription: projets/djangolxp/style-fiche-inscription.md
-        - Afficher/filtrer les listes d'élèves: projets/djangolxp/tableau-filtre.md
-    - Renpy:
-      - Décompiler un jeu: projets/renpy/decompile.m
-    - Drum-LXP:
-      - Introduction: projets/drumxp/intro.md
-      - Électronique: projets/drumxp/elec.md
-      - Programmation: projets/drumxp/progra.md
-      - Logiciel: projets/drumxp/logiciels.md
-      - Structure: projets/drumxp/matos.md  
-  - Bac: bac/sujet.md
    

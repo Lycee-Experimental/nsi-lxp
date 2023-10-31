@@ -1,0 +1,9 @@
+nav:
+    - Pycharm & Django-Lxp:
+        - Installation de Pycharm: install-pycharm.md
+        - Déploiement Django-lxp: deploiement-local.md
+        - Git avec pycharm: Utilisation-github_pycharm.md
+    - Développement de Django-Lxp:
+        - Ajout de champs au formulaires: ajout-champs.md
+        - Affichage de la fiche d'inscription: style-fiche-inscription.md
+        - Afficher/filtrer les listes d'élèves: tableau-filtre.md

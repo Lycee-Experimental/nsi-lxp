@@ -3,3 +3,4 @@ mkdocs-video
 mkdocs-macros-plugin
 mkdocs-material-extensions
 mkdocs-material
+mkdocs-awesome-pages-plugin

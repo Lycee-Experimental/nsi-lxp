@@ -2,7 +2,7 @@
 hide:
   -navigation
 ---
-# Sujets bac de NSI
+# BAC
 
 ??? abstract "Première"
     Tous les sujets de la banque officielle des **QCM** sont ici :

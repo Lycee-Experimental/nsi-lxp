@@ -1,0 +1,13 @@
+title: Algorithmes
+nav:
+    - 1️⃣ Introduction: index.md
+    - 1️⃣ Extremums et moyennes: moy.md
+    - 1️⃣ Complexité: complex.md
+    - 1️⃣ Tri par insertion: insert.md
+    - 1️⃣ Tri par sélection: select.md
+    - 1️⃣ Dichotomie: dichotomie.md
+    - 1️⃣ Algorithmes gloutons: glouton.md
+    - 1️⃣ Algorithme KNN: knn.md
+    - 🇹 Diviser pour régner: diviser.md
+    - 🇹 Progra dynamique: dynamique.md
+    - 🇹 Recherche textuelle: recherche_textuelle.md

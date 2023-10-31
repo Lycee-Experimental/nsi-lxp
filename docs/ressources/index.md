@@ -3,7 +3,7 @@ hide:
   -navigation
 ---
 
-# Ressources pour la NSI
+# Ressources
 
 === "Sites de profs"
     !!! info "Signification des icones"

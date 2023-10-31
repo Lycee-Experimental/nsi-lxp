@@ -1,0 +1,8 @@
+nav:
+    - index.md
+    - 1️⃣ Les bases: bases.md
+    - 🇹 Bonnes pratiques de la progra: Bonnes_pratiques
+    - 🇹 Progra Orientée Objet: Programmation_Orientee_Objet
+    - 🇹 Récursivité: Recursivite
+    - 🇹 Paradigmes de la progra: Paradigmes_de_programmation
+    - 🇹 Décidabilité et calculabilité: Decidabilite-Calculabilite
