@@ -2,2422 +2,2437 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://nsi.lycee-experimental.org/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/a_propos/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/analyse-sites/</loc>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/intro/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/algo/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/algo/complex/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/algo/dichotomie/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/algo/diviser/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/algo/dynamique/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/algo/glouton/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/algo/insert/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/algo/knn/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/algo/moy/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/algo/recherche_textuelle/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/algo/select/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/algo/Corrections/Exercice1_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/algo/Corrections/Exercice2_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/algo/Corrections/Exercice3_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/algo/Corrections/Exercice4_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/algo/Corrections/Exercice5_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/algo/Corrections/Exercice6_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/01_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/01_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/01_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/01_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/02_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/02_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/02_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/02_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/03_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/03_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/03_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/03_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/04_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/04_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/04_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/04_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/05_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/05_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/05_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/05_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/06_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/06_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/06_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/06_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/07_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/07_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/07_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/07_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/08_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/08_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/08_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/08_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/09_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/09_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/09_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/09_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/10_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/10_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/10_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/10_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/11_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/11_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/11_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/11_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/12_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/12_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/12_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/12_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/13_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/13_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/13_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/13_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/14_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/14_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/14_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/14_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/15_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/15_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/15_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/15_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/16_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/16_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/16_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/16_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/17_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/17_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/17_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/17_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/18_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/18_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/18_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/18_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/19_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/19_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/19_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/19_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/20_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/20_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/20_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/20_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/21_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/21_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/21_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/21_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/22_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/22_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/22_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/22_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/23_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/23_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/23_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/23_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/24_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/24_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/24_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/24_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/25_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/25_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/25_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/25_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/26_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/26_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/26_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/26_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/27_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/27_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/27_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/27_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/28_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/28_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/28_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/28_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/29_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/29_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/29_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/29_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/30_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/30_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/30_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/30_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/31_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/31_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/31_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/31_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/32_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/32_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/32_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/32_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/33_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/33_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/33_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/33_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/34_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/34_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/34_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/34_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/35_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/35_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/35_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/35_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/36_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/36_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/36_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/36_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/37_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/37_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/37_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/37_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/38_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/38_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/38_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/38_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/39_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/39_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/39_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/39_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/40_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/40_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/40_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/40_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/41_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/41_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/41_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/41_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/42_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/42_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/42_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/42_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/43_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/43_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/43_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/43_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/44_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/44_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/44_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/44_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/45_1/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/45_1/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/45_2/correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/assets/sujets/term/pratique/45_2/enonce/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/bac/sujet/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/csv/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/pandas/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice10_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice11_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice12_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice13_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice14_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice15_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice16_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice17_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice18_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice19_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice20_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice21_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice22_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice23_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice24_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice25_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice26_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice27_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice28_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice29_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice30_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice31_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice32_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice33_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice34_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice35_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice36_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice37_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice38_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice6_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice7_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice8_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Exercice9_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Indexation_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/Corrections/Manipulation_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_arbres/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_arbres/Corrections/Exercice1_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_arbres/Corrections/Exercice2-3_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_arbres/Corrections/Exercice4_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_arbres/Corrections/Exercice5_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_arbres/Corrections/Exercice6_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_arbres/Corrections/Exercice7_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_arbres/Corrections/HuffmanPy_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_arbres/Corrections/Huffman_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_graphes/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_graphes/Corrections/Exercice10_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_graphes/Corrections/Exercice11_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_graphes/Corrections/Exercice12_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_graphes/Corrections/Exercice13a15_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_graphes/Corrections/Exercice17_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_graphes/Corrections/Exercice18et19_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_graphes/Corrections/Exercice1_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_graphes/Corrections/Exercice20_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_graphes/Corrections/Exercice21_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_graphes/Corrections/Exercice22_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_graphes/Corrections/Exercice23_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_graphes/Corrections/Exercice24_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_graphes/Corrections/Exercice25_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_graphes/Corrections/Exercice26_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_graphes/Corrections/Exercice27_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_graphes/Corrections/Exercice2_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_graphes/Corrections/Exercice3_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_graphes/Corrections/Exercice4_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_graphes/Corrections/Exercice5_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_graphes/Corrections/Exercice6_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_graphes/Corrections/Exercice7_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_graphes/Corrections/Exercice8_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_graphes/Corrections/Exercice9_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_lineaires/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_lineaires/Corrections/Exercice10_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_lineaires/Corrections/Exercice1_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_lineaires/Corrections/Exercice2_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_lineaires/Corrections/Exercice3_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_lineaires/Corrections/Exercice4_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_lineaires/Corrections/Exercice5_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_lineaires/Corrections/Exercice6_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_lineaires/Corrections/Exercice7_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_lineaires/Corrections/Exercice8_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/donnees_lineaires/Corrections/Exercice9_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/tables/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/tables/csv/fichiers_csv/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/tables/csv/import_dico/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/tables/csv/import_listes/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/tables/csv/manipulation/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/tables/csv/pythons/creation_csv/exo_REM/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/tables/csv/pythons/temperatures_import/exo_REM/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/tables/csv/pythons/temperatures_main/exo_REM/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/tables/depart/comprehension/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/tables/depart/dictionnaires/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/tables/depart/imbriquees/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/tables/depart/listes/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/tables/depart/pythons/gris/exo_REM/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/tables/fusions/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/tables/fusions/pythons/haiti/exo_REM/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/tables/fusions/pythons/langues/exo_REM/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/tables/requetes_elaborees/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/tables/requetes_elaborees/pythons/family_horror/exo_REM/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/tables/requetes_elaborees/pythons/film_annee/exo_REM/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/tables/requetes_elaborees/pythons/film_annee_max/exo_REM/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/tables/requetes_elaborees/pythons/film_somme/exo_REM/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/tables/requetes_simples/communes/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/tables/requetes_simples/prenoms/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/encodage/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/encodage/caractere/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/encodage/encodage-diapo/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/encodage/entier-negatif/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/encodage/entier-positif/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/encodage/non-entier/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/fondement/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/fondement/assembleur/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/fondement/binaire/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/fondement/histoire-diapo/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/fondement/histoire/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/fondement/materiel/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/fondement/composants_integres_systeme_puce/composant/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/internet/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/internet/architecture/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/internet/histoire/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/internet/protocole/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/internet/routage/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/internet/routage/Corrections/Exercice1_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/internet/routage/Corrections/Exercice2_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/internet/routage/Corrections/Exercice3_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/internet/routage/Corrections/Exercice4_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/internet/routage/Corrections/Exercice5_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/internet/routage/Corrections/Exercice6_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/internet/routage/Corrections/Exercice7_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/internet/routage/Corrections/Exercice8_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/internet/routage/Corrections/Exercice9_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/linux/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/linux/commande/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/linux/dossier/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/linux/linux/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/linux/permission/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/linux/gestion_processus/gestion_processus/</loc>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nsi.lycee-experimental.org/outils/quiz/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <loc>https://nsi.lycee-experimental.org/outils/blockly-game/</loc>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nsi.lycee-experimental.org/outils/v86/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <loc>https://nsi.lycee-experimental.org/outils/blockly/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/outils/codepen/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/outils/jupyterlite/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/outils/logic/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/outils/macro/</loc>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/pyodide/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/outils/qcm/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/outils/quiz/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/outils/reavealjs/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/outils/scratch/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/outils/terminus/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/outils/v86/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/outils/y86/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/outils/pyodide/</loc>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/pyodide/advanced/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/pyodide/install_ide/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/pyodide/install_term/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/pyodide/sandbox/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/outils/qcm/qcm/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/quiz/Algorithmique%20%28Premi%C3%A8re%29/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/quiz/Algorithmique%20%28Terminale%29/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/quiz/Architectures%20mat%C3%A9rielles%20et%20syst%C3%A8mes%20d%E2%80%99exploitation%20%28Premi%C3%A8re%29/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/quiz/Architectures%20mat%C3%A9rielles%2C%20syst%C3%A8mes%20d%E2%80%99exploitation%20et%20r%C3%A9seaux%20%28Terminale%29/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/quiz/Bases%20de%20donn%C3%A9es%20%28Terminale%29/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/quiz/Histoire%20de%20l%27informatique%20%28Premi%C3%A8re%29/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/quiz/Histoire%20de%20l%27informatique%20%28Terminale%29/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/quiz/Interactions%20entre%20l%E2%80%99homme%20et%20la%20machine%20sur%20le%20Web%20%28Premi%C3%A8re%29/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/quiz/Langages%20et%20programmation%20%28Premi%C3%A8re%29/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/quiz/Langages%20et%20programmation%20%28Terminale%29/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/quiz/Repr%C3%A9sentation%20de%20donn%C3%A9es%20%3A%20Types%20construits%20%28Premi%C3%A8re%29/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/quiz/Repr%C3%A9sentation%20de%20donn%C3%A9es%20%3A%20Types%20et%20valeurs%20de%20base%20%28Premi%C3%A8re%29/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/quiz/Structures%20de%20donn%C3%A9es%20%28Terminale%29/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/quiz/Traitement%20de%20donn%C3%A9es%20en%20tables%20%28Premi%C3%A8re%29/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/quiz/sources/Algorithmique%20%28Premi%C3%A8re%29/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/quiz/sources/Algorithmique%20%28Terminale%29/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/quiz/sources/Architectures%20mat%C3%A9rielles%20et%20syst%C3%A8mes%20d%E2%80%99exploitation%20%28Premi%C3%A8re%29/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/quiz/sources/Architectures%20mat%C3%A9rielles%2C%20syst%C3%A8mes%20d%E2%80%99exploitation%20et%20r%C3%A9seaux%20%28Terminale%29/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/quiz/sources/Bases%20de%20donn%C3%A9es%20%28Terminale%29/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/quiz/sources/Histoire%20de%20l%27informatique%20%28Premi%C3%A8re%29/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/quiz/sources/Histoire%20de%20l%27informatique%20%28Terminale%29/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/quiz/sources/Interactions%20entre%20l%E2%80%99homme%20et%20la%20machine%20sur%20le%20Web%20%28Premi%C3%A8re%29/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/quiz/sources/Langages%20et%20programmation%20%28Premi%C3%A8re%29/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/quiz/sources/Langages%20et%20programmation%20%28Terminale%29/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/quiz/sources/Repr%C3%A9sentation%20de%20donn%C3%A9es%20%3A%20Types%20construits%20%28Premi%C3%A8re%29/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/quiz/sources/Repr%C3%A9sentation%20de%20donn%C3%A9es%20%3A%20Types%20et%20valeurs%20de%20base%20%28Premi%C3%A8re%29/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/quiz/sources/Structures%20de%20donn%C3%A9es%20%28Terminale%29/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/quiz/sources/Traitement%20de%20donn%C3%A9es%20en%20tables%20%28Premi%C3%A8re%29/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/outils/reavealjs/test/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/analyse-sites/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/algo/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/algo/complex/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/algo/dichotomie/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/algo/glouton/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/algo/insert/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/algo/knn/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/algo/moy/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/algo/select/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/data/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/data/csv/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/data/pandas/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/data/tri/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/data/1_tables/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/data/1_tables/1_depart/1_listes/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/data/1_tables/1_depart/2_comprehension/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/data/1_tables/1_depart/3_dictionnaires/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/data/1_tables/1_depart/4_imbriquees/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/data/1_tables/1_depart/pythons/gris/exo_REM/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/data/1_tables/2_fichiers_csv/1_manipulation/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/data/1_tables/2_fichiers_csv/2_fichiers_csv/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/data/1_tables/2_fichiers_csv/3_import_listes/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/data/1_tables/2_fichiers_csv/4_import_dico/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/data/1_tables/2_fichiers_csv/pythons/creation_csv/exo_REM/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/data/1_tables/2_fichiers_csv/pythons/temperatures_import/exo_REM/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/data/1_tables/2_fichiers_csv/pythons/temperatures_main/exo_REM/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/data/1_tables/3_requetes_simples/1_prenoms/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/data/1_tables/3_requetes_simples/2_communes/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/data/1_tables/3_requetes_simples/todo/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/data/1_tables/4_requetes_elaborees/1_films/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/data/1_tables/4_requetes_elaborees/pythons/family_horror/exo_REM/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/data/1_tables/4_requetes_elaborees/pythons/film_annee/exo_REM/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/data/1_tables/4_requetes_elaborees/pythons/film_annee_max/exo_REM/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/data/1_tables/4_requetes_elaborees/pythons/film_somme/exo_REM/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/data/1_tables/5_fusions/1_fusions/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/data/1_tables/5_fusions/pythons/haiti/exo_REM/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/data/1_tables/5_fusions/pythons/langues/exo_REM/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/encodage/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/encodage/caractere/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/encodage/encodage-diapo/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/encodage/entier-negatif/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/encodage/entier-positif/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/encodage/non-entier/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/fondement/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/fondement/assembleur/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/fondement/binaire/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/fondement/histoire-diapo/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/fondement/histoire/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/fondement/materiel/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/internet/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/internet/architecture/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/internet/histoire/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/internet/protocole/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/linux/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/linux/commande/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/linux/dossier/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/linux/linux/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/linux/permission/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/python/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/python/bool/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/python/boucle/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/python/char/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/python/condition/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/python/dict/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/python/fonction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/python/liste/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/python/tuple/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/python/variable/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/web/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/web/http/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/web/langage/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/web/requete/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/projets/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/projets/ai/sdxl/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/projets/djangolxp/Utilisation-github_pycharm/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/projets/djangolxp/ajout-champs/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/projets/djangolxp/deploiement-local/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/projets/djangolxp/docker/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/projets/djangolxp/install-pycharm/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/projets/djangolxp/style-fiche-inscription/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/projets/djangolxp/tableau-filtre/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/projets/drumxp/</loc>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/projets/drumxp/elec/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/projets/drumxp/intro/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/projets/drumxp/logiciels/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/projets/drumxp/matos/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/projets/drumxp/progra/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/projets/git/commandes/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/projets/git/presentation/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/projets/git/utilisation/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nsi.lycee-experimental.org/projets/renpy/decompile/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <loc>https://nsi.lycee-experimental.org/projets/jeu-video/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/projets/jeu-video/jupylet/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/projets/jeu-video/renpy/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/bases/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Bonnes_pratiques/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Bonnes_pratiques/Corrections/Exercice1_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Bonnes_pratiques/Corrections/Exercice2_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Bonnes_pratiques/Corrections/Exercice3_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Bonnes_pratiques/Corrections/Exercice4_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Bonnes_pratiques/Corrections/Exercice5_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Bonnes_pratiques/Corrections/Exercice6_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Bonnes_pratiques/Corrections/Exercice7_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Bonnes_pratiques/Corrections/Exercice8_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Bonnes_pratiques/Corrections/Exercice9_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Decidabilite-Calculabilite/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Decidabilite-Calculabilite/Corrections/Exercice1_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Decidabilite-Calculabilite/Corrections/Exercice2_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Decidabilite-Calculabilite/Corrections/Exercice3_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Paradigmes_de_programmation/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Paradigmes_de_programmation/Corrections/Exercice10_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Paradigmes_de_programmation/Corrections/Exercice11_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Paradigmes_de_programmation/Corrections/Exercice12_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Paradigmes_de_programmation/Corrections/Exercice13_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Paradigmes_de_programmation/Corrections/Exercice14_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Paradigmes_de_programmation/Corrections/Exercice1_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Paradigmes_de_programmation/Corrections/Exercice2_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Paradigmes_de_programmation/Corrections/Exercice3_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Paradigmes_de_programmation/Corrections/Exercice4_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Paradigmes_de_programmation/Corrections/Exercice5_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Paradigmes_de_programmation/Corrections/Exercice6_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Paradigmes_de_programmation/Corrections/Exercice7_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Paradigmes_de_programmation/Corrections/Exercice8_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Paradigmes_de_programmation/Corrections/Exercice9_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Programmation_Orientee_Objet/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Programmation_Orientee_Objet/Corrections/Exercice1_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Programmation_Orientee_Objet/Corrections/Exercice2_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Programmation_Orientee_Objet/Corrections/Exercice3_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Programmation_Orientee_Objet/Corrections/Exercice4_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Programmation_Orientee_Objet/Corrections/Exercice5_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Programmation_Orientee_Objet/Corrections/Exercice6_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Programmation_Orientee_Objet/Corrections/Fractions_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Programmation_Orientee_Objet/scripts/lower_REM/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Recursivite/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Recursivite/Corrections/Exemples_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Recursivite/Corrections/Exercice10_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Recursivite/Corrections/Exercice11_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Recursivite/Corrections/Exercice12_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Recursivite/Corrections/Exercice1_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Recursivite/Corrections/Exercice2_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Recursivite/Corrections/Exercice3_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Recursivite/Corrections/Exercice4_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Recursivite/Corrections/Exercice5_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Recursivite/Corrections/Exercice6_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Recursivite/Corrections/Exercice7_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Recursivite/Corrections/Exercice8_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/python/Recursivite/Corrections/Exercice9_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/ressources/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/scripts/demo/algo_glouton_REM/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/scripts/demo/demo1_REM/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/scripts/demo/demo2_REM/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/scripts/demo/exo2_REM/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/scripts/demo/dentiste/exo_REM/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/scripts/demo/dentiste/sujet/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/scripts/demo/exo_test/exo_REM/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/scripts/demo/exo_test/sujet/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/scripts/demo/exo_test_HDR/exo_REM/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/scripts/demo/exo_test_HDR/sujet/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/db/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <loc>https://nsi.lycee-experimental.org/web/</loc>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/algorithmes/diviser/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <loc>https://nsi.lycee-experimental.org/web/http/</loc>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/algorithmes/dynamique/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <loc>https://nsi.lycee-experimental.org/web/langage/</loc>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/algorithmes/recherche_textuelle/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <loc>https://nsi.lycee-experimental.org/web/requete/</loc>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/algorithmes/Corrections/Exercice1_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <loc>https://nsi.lycee-experimental.org/web/secu/</loc>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/algorithmes/Corrections/Exercice2_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <loc>https://nsi.lycee-experimental.org/web/secu/Corrections/Exercice1_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/algorithmes/Corrections/Exercice3_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <loc>https://nsi.lycee-experimental.org/web/secu/Corrections/Exercice2_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/algorithmes/Corrections/Exercice4_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <loc>https://nsi.lycee-experimental.org/web/secu/Corrections/Exercice3_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/algorithmes/Corrections/Exercice5_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <loc>https://nsi.lycee-experimental.org/web/secu/Corrections/Exercice4_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/algorithmes/Corrections/Exercice6_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <loc>https://nsi.lycee-experimental.org/web/secu/Corrections/Exercice5_correction/</loc>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <loc>https://nsi.lycee-experimental.org/xtra/blockly-games/third-party/JS-Interpreter/CONTRIBUTING/</loc>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/1_donnees_lineaires/structure_donnees_lineaires/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/1_donnees_lineaires/Corrections/Exercice10_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/1_donnees_lineaires/Corrections/Exercice1_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/1_donnees_lineaires/Corrections/Exercice2_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/1_donnees_lineaires/Corrections/Exercice3_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/1_donnees_lineaires/Corrections/Exercice4_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/1_donnees_lineaires/Corrections/Exercice5_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/1_donnees_lineaires/Corrections/Exercice6_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/1_donnees_lineaires/Corrections/Exercice7_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/1_donnees_lineaires/Corrections/Exercice8_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/1_donnees_lineaires/Corrections/Exercice9_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/2_donnees_arbres/arbres/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/2_donnees_arbres/Corrections/Exercice1_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/2_donnees_arbres/Corrections/Exercice2-3_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/2_donnees_arbres/Corrections/Exercice4_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/2_donnees_arbres/Corrections/Exercice5_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/2_donnees_arbres/Corrections/Exercice6_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/2_donnees_arbres/Corrections/Exercice7_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/2_donnees_arbres/Corrections/HuffmanPy_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/2_donnees_arbres/Corrections/Huffman_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/3_donnees_graphes/Graphes/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/3_donnees_graphes/Corrections/Exercice10_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/3_donnees_graphes/Corrections/Exercice11_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/3_donnees_graphes/Corrections/Exercice12_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/3_donnees_graphes/Corrections/Exercice13a15_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/3_donnees_graphes/Corrections/Exercice17_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/3_donnees_graphes/Corrections/Exercice18et19_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/3_donnees_graphes/Corrections/Exercice1_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/3_donnees_graphes/Corrections/Exercice20_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/3_donnees_graphes/Corrections/Exercice21_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/3_donnees_graphes/Corrections/Exercice22_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/3_donnees_graphes/Corrections/Exercice23_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/3_donnees_graphes/Corrections/Exercice24_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/3_donnees_graphes/Corrections/Exercice25_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/3_donnees_graphes/Corrections/Exercice26_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/3_donnees_graphes/Corrections/Exercice27_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/3_donnees_graphes/Corrections/Exercice2_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/3_donnees_graphes/Corrections/Exercice3_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/3_donnees_graphes/Corrections/Exercice4_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/3_donnees_graphes/Corrections/Exercice5_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/3_donnees_graphes/Corrections/Exercice6_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/3_donnees_graphes/Corrections/Exercice7_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/3_donnees_graphes/Corrections/Exercice8_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/3_donnees_graphes/Corrections/Exercice9_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/bases_de_donnees/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice10_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice11_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice12_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice13_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice14_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice15_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice16_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice17_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice18_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice19_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice20_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice21_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice22_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice23_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice24_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice25_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice26_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice27_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice28_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice29_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice30_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice31_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice32_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice33_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice34_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice35_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice36_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice37_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice38_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice6_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice7_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice8_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Exercice9_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Indexation_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/data/4_bases_de_donnees/Corrections/Manipulation_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/fondements/composants_integres_systeme_puce/composant/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/os/gestion_processus/gestion_processus/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/01-Bonnes_pratiques/Bonnes_pratiques/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/01-Bonnes_pratiques/Corrections/Exercice1_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/01-Bonnes_pratiques/Corrections/Exercice2_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/01-Bonnes_pratiques/Corrections/Exercice3_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/01-Bonnes_pratiques/Corrections/Exercice4_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/01-Bonnes_pratiques/Corrections/Exercice5_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/01-Bonnes_pratiques/Corrections/Exercice6_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/01-Bonnes_pratiques/Corrections/Exercice7_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/01-Bonnes_pratiques/Corrections/Exercice8_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/01-Bonnes_pratiques/Corrections/Exercice9_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/02-Programmation_Orientee_Objet/Programmation_Orientee_Objet/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/02-Programmation_Orientee_Objet/Corrections/Exercice1_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/02-Programmation_Orientee_Objet/Corrections/Exercice2_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/02-Programmation_Orientee_Objet/Corrections/Exercice3_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/02-Programmation_Orientee_Objet/Corrections/Exercice4_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/02-Programmation_Orientee_Objet/Corrections/Exercice5_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/02-Programmation_Orientee_Objet/Corrections/Exercice6_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/02-Programmation_Orientee_Objet/Corrections/Fractions_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/02-Programmation_Orientee_Objet/scripts/lower_REM/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/03-Recursivite/recursivite/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/03-Recursivite/Corrections/Exemples_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/03-Recursivite/Corrections/Exercice10_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/03-Recursivite/Corrections/Exercice11_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/03-Recursivite/Corrections/Exercice12_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/03-Recursivite/Corrections/Exercice1_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/03-Recursivite/Corrections/Exercice2_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/03-Recursivite/Corrections/Exercice3_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/03-Recursivite/Corrections/Exercice4_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/03-Recursivite/Corrections/Exercice5_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/03-Recursivite/Corrections/Exercice6_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/03-Recursivite/Corrections/Exercice7_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/03-Recursivite/Corrections/Exercice8_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/03-Recursivite/Corrections/Exercice9_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/4-Paradigmes_de_programmation/Paradigmes_de_programmation/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/4-Paradigmes_de_programmation/Corrections/Exercice10_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/4-Paradigmes_de_programmation/Corrections/Exercice11_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/4-Paradigmes_de_programmation/Corrections/Exercice12_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/4-Paradigmes_de_programmation/Corrections/Exercice13_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/4-Paradigmes_de_programmation/Corrections/Exercice14_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/4-Paradigmes_de_programmation/Corrections/Exercice1_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/4-Paradigmes_de_programmation/Corrections/Exercice2_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/4-Paradigmes_de_programmation/Corrections/Exercice3_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/4-Paradigmes_de_programmation/Corrections/Exercice4_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/4-Paradigmes_de_programmation/Corrections/Exercice5_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/4-Paradigmes_de_programmation/Corrections/Exercice6_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/4-Paradigmes_de_programmation/Corrections/Exercice7_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/4-Paradigmes_de_programmation/Corrections/Exercice8_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/4-Paradigmes_de_programmation/Corrections/Exercice9_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/5-Decidabilite-Calculabilite/Decidabilite-Calculabilite/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/5-Decidabilite-Calculabilite/Corrections/Exercice1_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/5-Decidabilite-Calculabilite/Corrections/Exercice2_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/python/5-Decidabilite-Calculabilite/Corrections/Exercice3_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/reseau/routage/protocole_routage/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/reseau/routage/Corrections/Exercice1_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/reseau/routage/Corrections/Exercice2_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/reseau/routage/Corrections/Exercice3_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/reseau/routage/Corrections/Exercice4_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/reseau/routage/Corrections/Exercice5_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/reseau/routage/Corrections/Exercice6_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/reseau/routage/Corrections/Exercice7_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/reseau/routage/Corrections/Exercice8_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/reseau/routage/Corrections/Exercice9_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/web/securisation_des_communications/Securisation_des_communications/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/web/securisation_des_communications/Corrections/Exercice1_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/web/securisation_des_communications/Corrections/Exercice2_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/web/securisation_des_communications/Corrections/Exercice3_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/web/securisation_des_communications/Corrections/Exercice4_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/terminale/web/securisation_des_communications/Corrections/Exercice5_correction/</loc>
-         <lastmod>2023-09-17</lastmod>
+         <loc>https://nsi.lycee-experimental.org/xtra/blockly-games/third-party/SoundJS/</loc>
+         <lastmod>2023-10-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
