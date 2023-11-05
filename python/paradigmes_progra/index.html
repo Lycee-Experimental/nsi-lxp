@@ -1615,13 +1615,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#a-vous-de-chercher" class="md-nav__link">
-    A vous de chercher
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1631,33 +1624,6 @@
   <a href="#programmation-logique" class="md-nav__link">
     Programmation logique
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#principe-de-la-programmation-logique" class="md-nav__link">
-    Principe de la programmation logique
-  </a>
-  
-    <nav class="md-nav" aria-label="Principe de la programmation logique">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mise-en-pratique-de-la-programmation-logique" class="md-nav__link">
-    Mise en pratique de la programmation logique
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#listes-en-prolog" class="md-nav__link">
-    Listes en Prolog
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -4005,7 +3971,7 @@
 <tbody>
 <tr>
 <td>Paradigmes de programmation.</td>
-<td>Distinguer sur des exemples les paradigmes impératif, fonctionnel et objet.<br> Choisir le paradigme de programmation selon le champ  d’application d’un programme.</td>
+<td>Distinguer sur des exemples les paradigmes impératif, fonctionnel et objet.   Choisir le paradigme de programmation selon le champ  d’application d’un programme.</td>
 <td>Avec un même langage de programmation, on peut utiliser des paradigmes différents. Dans un même programme, on peut utiliser des paradigmes différents.</td>
 </tr>
 </tbody>
@@ -4066,8 +4032,8 @@ g 5
 </code></pre></div>
 -->
 
-<h4 id="definition-et-application-dune-fonction">Définition et application d'une fonction<a class="headerlink" href="#definition-et-application-dune-fonction" title="Permanent link">⚓︎</a></h4>
-<p><strong>Exercice 1</strong></p>
+<details class="question">
+<summary>Activité 1 - Une première fonction</summary>
 <ol>
 <li>Testez le programme suivant :
     <div class="highlight"><pre><span></span><code>somme x y = x + y
@@ -4107,7 +4073,9 @@ somme 2 3
 <li>On obtient bien 5 : somme 2 3</li>
 </ol>
 </details>
-<p><strong>Exercice 2</strong></p>
+</details>
+<details class="question">
+<summary>Activité 2 - Composition de fonction</summary>
 <p>On peut aussi composer les fonctions :</p>
 <ol>
 <li>Testez le programme suivant :
@@ -4130,7 +4098,11 @@ myst 2 4
 <li>On effectue : (2+1) + (4+1) = 8</li>
 </ol>
 </details>
-<h4 id="conditionnel">Conditionnel<a class="headerlink" href="#conditionnel" title="Permanent link">⚓︎</a></h4>
+</details>
+<details class="question">
+<summary>Activité 3 - Fonction conditionnelle</summary>
+<div class="admonition info">
+<p class="admonition-title">Conditionnel</p>
 <p>Dans les langages fonctionnels, tout est fonction. C'est notamment le cas du <code>if ... then ... else ...</code> : c'est en fait une fonction d'arité 3 :</p>
 <ul>
 <li>le premier paramètre est la fonction de test</li>
@@ -4138,7 +4110,7 @@ myst 2 4
 <li>le troisième paramètre la fonction calculant la valeur dans le cas où le test est faux</li>
 </ul>
 <p>Ainsi, <code>if t then g else h</code> renvoie une valeur (celle renvoyée par <code>g</code> ou <code>h</code> suivant que <code>t</code> renvoie <code>vrai</code> ou <code>faux</code>).</p>
-<p><strong>Exercice 3</strong></p>
+</div>
 <ol>
 <li>Testez le programme suivant :
     <div class="highlight"><pre><span></span><code>f x = if (mod x 3 == 0) then (div x 3) else 4 * x - 1
@@ -4155,9 +4127,10 @@ f 6
 Pour f 6 : on fait la DE de 6 par 3 : le reste est égale à 0, on fait donc l’opération : 6/3 = 2</li>
 </ol>
 </details>
-<h4 id="recursivite">Récursivité<a class="headerlink" href="#recursivite" title="Permanent link">⚓︎</a></h4>
+</details>
+<details class="question">
+<summary>Activité 4 - Récursivité</summary>
 <p>Comme les langages fonctionnels ne connaissent que la composition de fonctions, il n'y a pas de boucle, et la répétition s'effectue donc par récursivité. Voici par exemple une définition de la suite de Fibonacci en Haskell :</p>
-<p><strong>Exercice 4</strong></p>
 <ol>
 <li>Testez le programme suivant :
     <div class="highlight"><pre><span></span><code>fibo n = if (n &lt; 2) then 1 else fibo(n-1) + fibo(n-2)
@@ -4172,9 +4145,10 @@ fibo 6
 <li>On obtient le terme d’indice 6 de la suite de fibonacci : 13</li>
 </ol>
 </details>
-<h4 id="les-listes">Les listes<a class="headerlink" href="#les-listes" title="Permanent link">⚓︎</a></h4>
+</details>
+<details class="question">
+<summary>Activité 5 - Les listes</summary>
 <p>Les listes sont un élément essentiel des langages fonctionnels. Elles ressemblent aux listes que vous connaissez en Python. Voici un exemple de fonction construisants les termes de la suite de Fibonacci jusqu'à un indice donné :</p>
-<p><strong>Exercice 5</strong></p>
 <ol>
 <li>Testez le programme suivant :
     <div class="highlight"><pre><span></span><code>fibo n = if (n &lt; 2) then 1 else fibo(n-1) + fibo(n-2)
@@ -4202,9 +4176,10 @@ termesFibo 6
 <li>La liste des entiers de 2 à 10.</li>
 </ol>
 </details>
-<h4 id="mapping">Mapping<a class="headerlink" href="#mapping" title="Permanent link">⚓︎</a></h4>
+</details>
+<details class="question">
+<summary>Activité 6 - Mapping</summary>
 <p>Ce type d'opération consiste à appliquer une fonction à tous les éléments d'une liste, et à renvoyer la liste des résultats.</p>
-<p><strong>Exercice 6</strong></p>
 <ol>
 <li>Testez le programme suivant :
     <div class="highlight"><pre><span></span><code>doubler x = x + x
@@ -4219,9 +4194,10 @@ map doubler [1,2,3]
 <li>Chaque élément de la liste a été doublé : map parcours la liste et applique une régle à chaque élément, ici multiplier par 2.</li>
 </ol>
 </details>
-<h4 id="filtrage">Filtrage<a class="headerlink" href="#filtrage" title="Permanent link">⚓︎</a></h4>
+</details>
+<details class="question">
+<summary>Activité 7 - Filtrage</summary>
 <p>Ce type d'opération consiste à renvoyer une liste constituée des éléments de la liste passée en paramètre qui vérifient un certain critère.</p>
-<p><strong>Exercice 7</strong></p>
 <ol>
 <li>Testez le programme suivant :
     <div class="highlight"><pre><span></span><code>pair x = (mod x 2) == 0
@@ -4236,8 +4212,9 @@ filter pair [1,2,3,4,5,6]
 <li>filter « filtre » chaque élément d’une liste à l’aide d’une règle : ici ne prendre que les nombres pairs.</li>
 </ol>
 </details>
-<h3 id="a-vous-de-chercher">A vous de chercher<a class="headerlink" href="#a-vous-de-chercher" title="Permanent link">⚓︎</a></h3>
-<p><strong>Exercice 8</strong></p>
+</details>
+<details class="question">
+<summary>Activité 8 - Travail sur une liste</summary>
 <p>En Haskell, il est possible de définir des fonctions sur les listes par filtrage. Pour ce faire, on pourra définir la
 fonction en utilisant différents motifs :</p>
 <ul>
@@ -4293,10 +4270,15 @@ filtre p (x:xs) = if (p x) then x:(filtre p xs) else fonc p xs
 sommeT (x:xs) (y:ys) = x+y:(sommeT xs ys)
 </code></pre></div>
 </details>
+</details>
 <h2 id="programmation-logique">Programmation logique<a class="headerlink" href="#programmation-logique" title="Permanent link">⚓︎</a></h2>
-<h2 id="principe-de-la-programmation-logique">Principe de la programmation logique<a class="headerlink" href="#principe-de-la-programmation-logique" title="Permanent link">⚓︎</a></h2>
+<details class="info">
+<summary>Principe de la programmation logique</summary>
 <p>Certains langages sont spécialement conçus pour traiter des problèmes logiques, voire faire des preuves mathématiques. On peut citer Prolog ou Coq pour les preuves.</p>
 <p>Développons le langage Prolog : ce langage a été créé en 1972 par un Français : Alain Colmerauer. Il est surtout utilisé dans le domaine de l'intelligence artificielle, mais aussi dans le traitement du langage. Dans Prolog, un programme est en fait une base de faits et règles, et le programme est en quelque sorte exécuté en posant une question dans l'interpréteur.</p>
+</details>
+<details class="example">
+<summary>Exemple</summary>
 <p>Sans faire un tutoriel, regardons juste un exemple qui montre le fonctionnement totalement différent de ce langage très spécial :</p>
 <p>**Le problème à résoudre : **</p>
 <p>Les données du problèmes sont :</p>
@@ -4348,7 +4330,8 @@ sommeT (x:xs) (y:ys) = x+y:(sommeT xs ys)
             relation(luc,studio,AL),
             different(AE,AL,chat).
 </code></pre></div>
-<p><strong>La solution</strong></p>
+<details class="success">
+<summary>Solution</summary>
 <p>Pour résoudre le problème, on tape <code>resoudre(MM,ME,AE,AL)</code> ce qui donne :</p>
 <div class="highlight"><pre><span></span><code>MM = pavillon,
 ME = chateau,
@@ -4363,40 +4346,46 @@ AL = poisson .
 <li>l'animal de Luc (AL) est le poisson</li>
 </ul>
 <p>Sans chercher à rentrer dans les détails, un survol de cet exemple vous montre comment à partir de faits et de règles, le langage trouve une solution à un problème. Il utilise pour cela un moteur d'inférence qui simule des raisonnements déductifs.</p>
-<h3 id="mise-en-pratique-de-la-programmation-logique">Mise en pratique de la programmation logique<a class="headerlink" href="#mise-en-pratique-de-la-programmation-logique" title="Permanent link">⚓︎</a></h3>
-<p><strong>Exercice 9 : Un arbre généalogique</strong></p>
-<p>Nous allons d'abord créer les faits à partir d'un arbre généalogique, puis créer les régles décrivant les liens de parenté.</p>
+</details>
+</details>
+<details class="question">
+<summary>Activité 9 - Arbre généalogique</summary>
+<p>Nous allons d'abord créer les faits à partir d'un arbre généalogique, puis créer les règles décrivant les liens de parenté.</p>
 <ol>
-<li><strong>Ecriture des faits</strong><br>
-   Nous allons utiliser les faits suivants : <code>homme</code>, <code>femme</code>, <code>parent</code> comme point de départ.<br>
-   Nous définirons ensuite des règles permettant d'établir d'autres relations de parentés, pour les tester ensuite avec des requêtes.<br>
-   Nous utiliserons l'arbre généalogique de la figure suivante :
-   <img alt="" class="center" src="images/arbre.PNG" width="70%"></li>
+<li><strong>Écriture des faits</strong><br>
+Nous allons utiliser les faits suivants : <code>homme</code>, <code>femme</code>, <code>parent</code> comme point de départ.<br>
+Nous définirons ensuite des règles permettant d'établir d'autres relations de parentés, pour les tester ensuite avec des requêtes.<br>
+Nous utiliserons l'arbre généalogique de la figure suivante :
+<img alt="" class="center" src="images/arbre.PNG" width="70%"></li>
 </ol>
 <p>a. <strong>Faits de genre</strong></p>
 <p>Commencez pas saisir les faits concernant le genre de la personne considérée. Attention, n'utilisez pas les majuscules, car en Prolog, elles indiquent une variable et non une constante.<br>
-   Par exemple :
-   </p><div class="highlight"><pre><span></span><code>homme(armand).
+Par exemple :
+</p><div class="highlight"><pre><span></span><code>homme(armand).
 femme(gisele).
 </code></pre></div>
-   Complétez les faits de genre.
+Complétez les faits de genre.
 <p>b. <strong>Faits de liens de parenté</strong></p>
 <p>On choisit pour <code>parent</code> la syntaxe : <code>"Si A est un parent de B, alors parent(A,B)"</code>.
-   </p><div class="highlight"><pre><span></span><code>parent(armand,robert).
+</p><div class="highlight"><pre><span></span><code>parent(armand,robert).
 parent(gisele,robert).
 </code></pre></div>
-   Complétez les faits de parenté.<br>
-2. <strong>Ecriture de règles</strong><br>
-   Nous allons maintenant établir des règles plus précises, en commençant par la notion de père et mère.<br>
-   A est le père de B si A est un homme et si A est un parent de B.<br>
-   Pour celà, on écrit :
-   <div class="highlight"><pre><span></span><code>pere(X,Y):-homme(X),parent(X,Y).
+Complétez les faits de parenté.  
+<ol>
+<li>
+<p><strong>Ecriture de règles</strong><br>
+Nous allons maintenant établir des règles plus précises, en commençant par la notion de père et mère.<br>
+A est le père de B si A est un homme et si A est un parent de B.<br>
+Pour celà, on écrit :
+</p><div class="highlight"><pre><span></span><code>pere(X,Y):-homme(X),parent(X,Y).
 </code></pre></div>
-   On peut ensuite tester dans l'interpréteur avec une requête, par exemple <code>pere(armand,robert)</code> qui doit retourner <code>true</code>.<br>
-   On peut aussi tester les unifications, en demandant <code>pere(armand,X).</code>, qui donnera toutes les possibilités pour unifier X.<br>
-   Complétez avec les règles suivantes :
-<ul>
-<li>mere</li>
+On peut ensuite tester dans l'interpréteur avec une requête, par exemple <code>pere(armand,robert)</code> qui doit retourner <code>true</code>.<br>
+On peut aussi tester les unifications, en demandant <code>pere(armand,X).</code>, qui donnera toutes les possibilités pour unifier X.<br>
+Complétez avec les règles suivantes :
+</li>
+<li>
+<p>mere</p>
+</li>
 <li>enfant</li>
 <li>fils</li>
 <li>fille</li>
@@ -4412,19 +4401,19 @@ parent(gisele,robert).
 <li>
 <p>Elaborez un jeu de tests à partir de la base de faits établie pour vérifier que ces règles fonctionnent correctement.</p>
 </li>
-</ul>
+</ol>
 <p><strong>Compléments de Prolog</strong></p>
 <ol>
 <li>
 <p>Il est possible d'imposer une utilisation précise des règles que l'on écrit en Prolog. On peut par exemple obliger d'utiliser une variable dans un paramètre, ou pas.<br>
-   Pour celà, on précède dans la définition de la règle les paramètres par les caractères suivants :</p>
+Pour celà, on précède dans la définition de la règle les paramètres par les caractères suivants :</p>
 </li>
 <li>
 <p><span class="arithmatex">\(+\)</span> : l'argument doit être connu</p>
 </li>
 <li><span class="arithmatex">\(-\)</span> : l'argument doit être inconnu</li>
 <li>? : libre
-   Si on définit une règle <code>toto(?X,+Y)</code>, il faut donc que Y soit un élément connu.</li>
+Si on définit une règle <code>toto(?X,+Y)</code>, il faut donc que Y soit un élément connu.</li>
 <li>En Prolog, le symbole <code>=</code> ne permet pas une affectation, mais demande une unification. Il permet donc d'avoir la liste de toutes les possibilités d'instanciation d'une variable.</li>
 <li>Même si cela n'est pas forcément naturel en Prolog, on peut avoir besoin d'affecter directement une variable dans certains cas. Cela est réalisé avec l'opérateur <code>is</code>.</li>
 <li>Si l'unification d'une variable intermédiaire n'est pas utile, on peut utiliser le symbole <code>_</code> à la place du nom de variable.</li>
@@ -4501,7 +4490,9 @@ oncle(X,Y) :- parent(P,Y),frere(X,P). % X est l’oncle de Y
 tante(X,Y) :- parent(P,Y),soeur(X,P). % X est la tante de Y
 </code></pre></div>
 </details>
-<p><strong>Exercice 10</strong></p>
+</details>
+<details class="question">
+<summary>Activité 10 - Trafic aérien</summary>
 <p>On considère une base de faits décrivant des vols de la compagnie Air-Gonomie sous la forme : <code>vol(numero du vol,ville de depart,ville d'arrivee,heure de depart,heure d'arrivee,nombre de passagers)</code></p>
 <p>Un certain nombre de faits sont fournis dans le document <a href="Documents/Exo10-Regles.txt" target="_blank">Exo10-Regles.txt</a></p>
 <p>Pour les requêtes, on pourra utiliser le caractère <code>_</code> en variable muette, comme expliqué dans les compléments ci-dessus.</p>
@@ -4527,8 +4518,9 @@ tante(X,Y) :- parent(P,Y),soeur(X,P). % X est la tante de Y
 7) <code>vol(N,_,_,D,A,_), A-D &gt; 0200.</code></li>
 </ol>
 </details>
-<p><strong>Exercice 11</strong></p>
-<p>Cet exercice considère des graphes et leur traitement en Prolog.</p>
+</details>
+<details class="question">
+<summary>Activité 11 - Traitement des graphes</summary>
 <p>On va définir un réseau routier minimal, et demander à Prolog l'existence, ou non, d'une route entre deux points.</p>
 <p>On considère le réseau suivant :</p>
 <p><img alt="" class="center" src="images/graphe.PNG"></p>
@@ -4557,13 +4549,15 @@ route(e,b).
 voisines(X,Y):-route(X,Y).
 </code></pre></div>
 </details>
-<p><strong>Exercice 12</strong></p>
+</details>
+<details class="question">
+<summary>Activité 12 - Coloriage</summary>
 <p>On dispose de 4 couleurs pour colorier la carte suivante :</p>
 <p><img alt="" class="center" src="images/couleur.PNG"></p>
-<p>Ecrire un programme Prolog permettant d'associer une couleur (rouge, jaune, vert, bleu) à une région (1,2,3,4,5,6) de telle manière que deux régions adjacentes ne soient pas de la même couleur.</p>
+<p>Écrire un programme Prolog permettant d'associer une couleur (rouge, jaune, vert, bleu) à une région (1,2,3,4,5,6) de telle manière que deux régions adjacentes ne soient pas de la même couleur.</p>
 <p><em>Indication :</em></p>
 <p>Commencer par définir les faits de couleurs : <code>couleur(vert).</code>, etc...</p>
-<p>Ecrire ensuite une règle <code>carte(C1,C2,C3,C4,C5,C6)</code> qui affectera une couleur en tenant compte des contraintes du schéma.</p>
+<p>Écrire ensuite une règle <code>carte(C1,C2,C3,C4,C5,C6)</code> qui affectera une couleur en tenant compte des contraintes du schéma.</p>
 <details class="note">
 <summary>Correction</summary>
 <div class="highlight"><pre><span></span><code>couleur(rouge).
@@ -4578,7 +4572,6 @@ carte(C1,C2,C3,C4,C5,C6):-couleur(C1),couleur(C2),couleur(C3),
                         C3\==C4,C3\==C6,
                         C5\==C6.
 </code></pre></div>
-</details>
 <p><em>Exemple plus simple :</em></p>
 <p>Si on cherche à colorier avec 3 couleurs un découpage de cercle entre 3 parts égales, on pourrait écrire le code suivant :</p>
 <div class="highlight"><pre><span></span><code>couleur(rouge).
@@ -4587,8 +4580,10 @@ couleur(bleu).
 carte(C1,C2,C3): −couleur(C1),couleur(C2),couleur(C3),C1\==C2,C2\==C3,C3\==C1.
 </code></pre></div>
 <p>La requête <code>carte(X,Y,Z).</code> va ainsi lister toutes les possibilités de coloration</p>
-<h3 id="listes-en-prolog">Listes en Prolog<a class="headerlink" href="#listes-en-prolog" title="Permanent link">⚓︎</a></h3>
-<h4 id="definition-et-operateurs">Définition et opérateurs<a class="headerlink" href="#definition-et-operateurs" title="Permanent link">⚓︎</a></h4>
+</details>
+</details>
+<details class="info">
+<summary>Listes en Prolog</summary>
 <p>Les listes se définissent comme en Python, entre crochets et en séparant par une virgule.</p>
 <p>L'opérateur '|' permet lui de couper une liste, en unifiant l'élément qui est avant, et en laissant ce qui est après dans une liste.</p>
 <p>Exemples :</p>
@@ -4597,10 +4592,11 @@ carte(C1,C2,C3): −couleur(C1),couleur(C2),couleur(C3),C1\==C2,C2\==C3,C3\==C1.
 <li><code>[X,Y]=[1,2,3]</code> va renvoyer <code>false</code> car il n'est pas possible d'unifier X et Y.</li>
 <li><code>[X|Y]=[1,2,3]</code> va renvoyer X=1 et Y=[2,3].</li>
 </ul>
-<h4 id="exemples-complexes">Exemples complexes<a class="headerlink" href="#exemples-complexes" title="Permanent link">⚓︎</a></h4>
-<p><strong>Exercice 13</strong></p>
+</details>
+<details class="question">
+<summary>Activité 13 - Travail plus complexe sur une liste</summary>
 <ol>
-<li>Testez si un nombre est le premier d'une liste : <code>premier(X,[X|_]).</code> On utilise icie directement le résultat de l'unification pour répondre. Si on demande <code>?-premier(1,[1,2,3]).</code>, on obtient bien <code>true</code>.</li>
+<li>Testez si un nombre est le premier d'une liste : <code>premier(X,[X|_]).</code> On utilise ici directement le résultat de l'unification pour répondre. Si on demande <code>?-premier(1,[1,2,3]).</code>, on obtient bien <code>true</code>.</li>
 <li>Testez si un nombre est le dernier d'une liste : On commence par traiter le cas où la liste est composée de l'élément seul : <code>dernier(X,[X]).</code>, puis on fait une récursivité : <code>dernier(X,[_|Q]):-dernier(X,Q).</code></li>
 <li>Calculez la longueur d'une liste : On traite le cas d'une liste vide : <code>longueur(0,[]).</code>, puis on utilise la récursivité pour calculer une liste plus longue : <code>longueur(N,[_|Q]):-longueur(M,Q),N is M+1.</code></li>
 </ol>
@@ -4621,8 +4617,9 @@ longueur(N,[_|Q]):-longueur(M,Q),N is M+1.
 Et on teste avec : longueur(N,[1,2,3,4]). Qui donne bien 4</li>
 </ol>
 </details>
-<h4 id="exercices-dapprofondissement">Exercices d'approfondissement<a class="headerlink" href="#exercices-dapprofondissement" title="Permanent link">⚓︎</a></h4>
-<p><strong>Exercice 14</strong></p>
+</details>
+<details class="question">
+<summary>Activité 14 - Pour aller encore plus loin</summary>
 <p>Définir des règles répondant aux questions suivantes :</p>
 <ul>
 <li><code>dans (?X,+L)</code> doit renvoyer si X est dans la liste L.</li>
@@ -4630,8 +4627,6 @@ Et on teste avec : longueur(N,[1,2,3,4]). Qui donne bien 4</li>
 <li><code>unique(?X,+L)</code> doit renvoyer si X n'apparaît qu'une seule fois dans L.</li>
 <li><code>occurences(?X,+L)</code> doit renvoyer le nombre d'occurences de X dans L.</li>
 </ul>
-<details class="note">
-<summary>Correction</summary>
 </details></div>
 
 

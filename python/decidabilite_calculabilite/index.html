@@ -3992,8 +3992,8 @@
 </table>
 </details>
 <h2 id="programme-en-tant-que-donnee">Programme en tant que donnée<a class="headerlink" href="#programme-en-tant-que-donnee" title="Permanent link">⚓︎</a></h2>
-<p>Les théories de la calculabilité et de la complexité sont deux pans de la théorie du calcul :</p>
-<p>qu’est-ce que veut dire calculer ? un ordinateur peut-il tout calculer ?</p>
+<p>Les théories de la <strong>calculabilité</strong> et de la <strong>complexité</strong> sont deux pans de la théorie du calcul :</p>
+<p>Que veut dire calculer ? Un ordinateur peut-il tout calculer ?</p>
 <p>C'est en 1936 que <em>Allan Turing (1912-1954)</em> a apporté des réponses à ces questions, et la conclusion de ses travaux... va vous étonner :)</p>
 <p>Nous allons tout d'abord expliciter un point important qui sera le fondement de la théorie de la calculabilité : <strong>un programme est aussi une donnée</strong>.</p>
 <p>Cela peut paraître étonnant à première vue puisqu'on est habitué à traiter :</p>
@@ -4037,7 +4037,8 @@
 <p class="admonition-title">En conclusion</p>
 <p>Un programme est aussi une donnée.</p>
 </div>
-<p><strong>Exercice 1</strong></p>
+<details class="question">
+<summary>Activité 1 - Le programme comme donnée</summary>
 <p>Citez d'autres exemples où un programme est considéré comme une donnée?</p>
 <details class="note">
 <summary>Correction</summary>
@@ -4050,15 +4051,16 @@
 <li>Le navigateur internet en est un autre exemple : il reçoit un lot de données d'internet via le protocole http et interprète certaines d'entre elles comme programme (javascript) et d'autres comme données (html) etc... </li>
 </ul>
 </details>
+</details>
 <h2 id="decidabilite">Décidabilité<a class="headerlink" href="#decidabilite" title="Permanent link">⚓︎</a></h2>
-<p>Une propriété est décidable si l'on peut déterminer en un nombre fini d'étapes si elle est vraie ou fausse quel que soit le contexte de départ. (On parle de problème de décision, à réponse oui ou non) Attention, cela ne veut pas dire que la propriété doit être toujours fausse ou vraie. Donnons, pour illustrer la définition, des probèmes décidables.</p>
+<p>Une propriété est décidable si l'on peut déterminer en un nombre fini d'étapes si elle est vraie ou fausse quel que soit le contexte de départ. (On parle de problème de décision, à réponse oui ou non) Attention, cela ne veut pas dire que la propriété doit être toujours fausse ou vraie. Donnons, pour illustrer la définition, des problèmes décidables.</p>
 <ul>
 <li>Savoir si un nombre est premier est décidable. La réponse sera soit 'vrai', soit 'faux' et un algorithme simple est de diviser ce nombre par les entiers inférieurs à lui même. Il y a donc un nombre fini d'étapes et une réponse qui est soit vrai soit faux.</li>
 <li>Dire si un nombre est pair (on regarde le reste de la division Euclidienne par 2)</li>
 </ul>
 <p>Les exemples ne manquent pas. On peut alors se poser la question: "tout est-il décidable?". La réponse est non. Si c'était le cas, cela voudrait dire que l'on pourrait prouver qu'une propriété mathématique est vraie ou fausse avec un algorithme !</p>
 <p>Donnons des exemples de problèmes non décidables. Je parcours un réseau aléatoirement, est-ce que je vais atteindre une cible données en un nombre fini d'étapes? Pas forcément, même si la probabilité d'arriver à destination tend vers 1 quand le nombre d'étapes tend vers l'infini!</p>
-<p>Un autre exemple plus connu: le problème de l'arrêt d'un programme est-il décidable? Est-ce que je peux écrire un programme qui me dira si un programme va s'arrêter ou non (selon les valeurs d'entrées)? Nous verrons que l'on peut prouver que ce problème n'est pas décidable: il n'existe pas d'algorihtme capable de prédire si n'importe quel programme va s'arrêter ou non. Cela vous plairez bien...n'avez vous jamais fait de boucle infinie?</p>
+<p>Un autre exemple plus connu: le problème de l'arrêt d'un programme est-il décidable? Est-ce que je peux écrire un programme qui me dira si un programme va s'arrêter ou non (selon les valeurs d'entrées)? Nous verrons que l'on peut prouver que ce problème n'est pas décidable: il n'existe pas d’algorithme capable de prédire si n'importe quel programme va s'arrêter ou non. Cela vous plairez bien...n'avez vous jamais fait de boucle infinie?</p>
 <p>Je rebondis aussi sur la phrase "écrire un programme qui me dira si un programme va s'arrêter ou non". Cela signifie que je considère que le programme à tester est une donnée du programme testeur. Est-ce choquant? Non, lorsque vous utilisez l'idle de python, vous tapez un programme, qui va s'executer grace au programme de Python (votre programme est déjà une donnée puisque vous l'enregistrez), qui lui même est écrit en C et un programme sert à compiler le C en langage assembleur puis va l'écrire en pur code binaire (suite de 0 et de 1). Autre remarque lorsque qu'un compilateur s'arrête pour vous indiquer une erreur, ou qu'un éditeur de texte destiné à la programmation vous indique qu'il y a une erreur dans votre programme....c'est bien un programme qui vérifié votre programme. Bref des programmes qui ont pour donné des programmes c'est très fréquent !</p>
 <h2 id="calculabilite">Calculabilité<a class="headerlink" href="#calculabilite" title="Permanent link">⚓︎</a></h2>
 <p>La calculabilité est la branche de l'algorithmique qui s'intéresse aux questions suivantes</p>
@@ -4097,7 +4099,8 @@
 <p>Les derniers termes sont 4, 2, 1. On s'arrête ici dans l'énumération des termes car cela constitue un cycle. En effet 1 est impair donc on fait <span class="arithmatex">\(3 \times 1+1=4\)</span> ce qui tourne en boucle.</p>
 <p>A ce jour, tous les nombres essayés conduisent inévitablement à ce cycle 4, 2, 1 mais nul n'a été capable de le démontrer.</p>
 <p>S'il existait une solution au problème de l'arrêt, alors la conjecture de Syracuse serait résolue car on saurait prédire l'arrêt de l'algorithme. Ce n'est pas le cas.</p>
-<p><strong>Exercice 2</strong></p>
+<details class="question">
+<summary>Activité 2 - Fonction Syracuse</summary>
 <p>Programmez cet algorithme en Python. Vous écrirez une fonction <em>syracuse</em> prenant en paramètre un nombre et renvoyant la liste des termes de la suite jusqu'à ce qu'elle atteigne 1.</p>
 <details class="success">
 <summary>Correction</summary>
@@ -4114,9 +4117,10 @@
 <span class="n">syracuse</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 </code></pre></div>
 </details>
+</details>
 <h3 id="preuve-de-turing">Preuve de Turing<a class="headerlink" href="#preuve-de-turing" title="Permanent link">⚓︎</a></h3>
 <p>Pour prouver que le problème de l'arrêt n'est pas calculable, Turing en 1936 a fait ce raisonnement :</p>
-<p>On raisonne par l'absurde et on suppose qu'il existe une fonction arrêt qui prend en paramètres un algorithme <em>A</em> et des arguments <em>m</em> (on se rapelle qu'un algorithme est une donnée). Cela pourraît prendre cette forme en Python :</p>
+<p>On raisonne par l'absurde et on suppose qu'il existe une fonction arrêt qui prend en paramètres un algorithme <em>A</em> et des arguments <em>m</em> (on se rappelle qu'un algorithme est une donnée). Cela pourrait prendre cette forme en Python :</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">arret</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
    <span class="o">...</span> <span class="c1"># Tout est ici !</span>
    <span class="k">if</span> <span class="o">...</span><span class="p">:</span>
@@ -4124,7 +4128,7 @@
    <span class="k">else</span><span class="p">:</span>
       <span class="k">return</span> <span class="kc">False</span>
 </code></pre></div>
-<p>Le vrai problème est bien sûr de compléter les ... mais on suppose ici que quelqun a su le faire.</p>
+<p>Le vrai problème est bien sûr de compléter les ... mais on suppose ici que quelqu’un a su le faire.</p>
 <p>On peut alors créer un paradoxe à l'aide de l'algorithme suivant (écrit en pseudo python approximatif...):</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">paradoxe</span><span class="p">():</span>
    <span class="k">if</span> <span class="n">arret</span><span class="p">(</span><span class="n">paradoxe</span><span class="p">):</span> <span class="c1"># paradoxe est une donnée passée en paramètre à arrêt</span>
@@ -4143,7 +4147,8 @@
 <p>Retrouvez cette preuve dans cette vidéo (en anglais, facile à comprendre) :</p>
 <iframe title="Preuve_probleme_arret" src="https://tube-sciences-technologies.apps.education.fr/videos/embed/08577162-a889-4591-b9f9-3f03389cb0a1" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" width="560" height="315" frameborder="0"></iframe>
 
-<p><strong>Exercice 3</strong></p>
+<details class="question">
+<summary>Activité 3 - Division par 0</summary>
 <p>Démontrez qu'il est impossible de créer une fonction <code>div0</code> qui détecte les divisions par 0 dans une fonction.</p>
 <details class="note">
 <summary>Correction</summary>
@@ -4157,11 +4162,12 @@
 </code></pre></div>
 <p>Au moment d’exécuter ce programme, il faut passer la ligne if  division par zero existe   , et donc tester dans le programme A  un calcul menant à une division par 0, ce qui mathématiquement renvoie forcément une erreur, et donc interrompt le programme div0.</p>
 </details>
+</details>
 <h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">⚓︎</a></h2>
 <p>La détection de bugs (comme des boucles infinies par exemple) est une activité cruciale en informatique. Il existe des programmes capables de détecter des erreurs dans d'autres programmes : les environnements de développement modernes comme VScode ou PyCharm sont capable de souligner vos erreurs en python alors même que vous tapez le programme, et cela constitue un grand gain de temps pour le développeur.</p>
 <p>En France, depuis l'accident du vol 501 d'Ariane 5 en 1996 dû à une erreur de programmation, le développement de programmes de preuves de correction a connu une forte croissance.</p>
 <p>Un bel exemple de progrès réalisé grâce à ces programmes est le logiciel de la ligne de métro automatique 14 (Météor) à Paris: cette ligne a été mise en service sans test en condition réelles : son programme a été mathématiquement prouvé sans faute. Depuis sa mise en service, aucun bugs n'a été à déplorer.</p>
-<p>Malheureusement, un algorithme général permettant de prouver qu'un programme fonctionne n'existe pas, cela fait partie des très nombreux problèmes indécidables. Il n'y aura donc jamais de système permettant de s'assurer que n'importe quel programme est fiable, même si c'est réalisable pour quelques exemples particiuliers comme le Météor.</p></div>
+<p>Malheureusement, un algorithme général permettant de prouver qu'un programme fonctionne n'existe pas, cela fait partie des très nombreux problèmes indécidables. Il n'y aura donc jamais de système permettant de s'assurer que n'importe quel programme est fiable, même si c'est réalisable pour quelques exemples particuliers comme le Météor.</p></div>
 
 
 
