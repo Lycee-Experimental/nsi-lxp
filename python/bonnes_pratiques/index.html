@@ -1,0 +1,4920 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Les sciences du numériques au Lycée Expérimental">
+      
+      
+      
+        <link rel="canonical" href="https://nsi.lycee-experimental.org/python/bonnes_pratiques/">
+      
+      
+        <link rel="prev" href="../bases/">
+      
+      
+        <link rel="next" href="../progra_orientee_objet/">
+      
+      
+      <link rel="icon" href="../../assets/images/logo-lxp-noir.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.7">
+    
+    
+      
+        <title>🇹 Bonnes pratiques de la progra - NSI-LXP</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4b4a2bd9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+
+      
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-light.min.css">
+<!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.12.5/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.12.5/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.asm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-md5"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
+<script src="../../pyodide-mkdocs/utils.js"></script> 
+<script src="../../pyodide-mkdocs/interpreter.js"></script> 
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../xtra/stylesheets/ajustements.css">
+    
+      <link rel="stylesheet" href="../../xtra/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+<link rel="stylesheet" href="../../assets/stylesheets/custom.f7ec4df2.min.css">
+<link rel="stylesheet" href="../../pyodide-mkdocs/pyoditeur.css">
+<link rel="stylesheet" href="../../qcm/qcm.css">
+
+
+
+<input id="ace_palette" autocomplete="off" class="md-toggle" data-ace-dark-mode="tomorrow_night_bright" data-ace-light-mode="crimson_editor" type="checkbox"></input>
+
+
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="deep-orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bonnes-pratiques-logicielles" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="NSI-LXP" class="md-header__button md-logo" aria-label="NSI-LXP" data-md-component="logo">
+      
+  <img src="../../assets/images/logo-lxp-transparent.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NSI-LXP
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              🇹 Bonnes pratiques de la progra
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="deep-orange"  aria-label="Passer au mode nuit"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer au mode nuit" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="deep-orange"  aria-label="Passer au mode jour"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Passer au mode jour" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lycee-experimental/nsi-lxp" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../intro/" class="md-tabs__link">
+        
+  
+    
+  
+  Introduction
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fondement/" class="md-tabs__link">
+          
+  
+    
+  
+  Fondements
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../encodage/" class="md-tabs__link">
+          
+  
+    
+  
+  Encodage
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../linux/" class="md-tabs__link">
+          
+  
+    
+  
+  Linux
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../internet/" class="md-tabs__link">
+          
+  
+    
+  
+  Réseaux
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../web/" class="md-tabs__link">
+          
+  
+    
+  
+  Web
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+    
+  
+  Python
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../data/" class="md-tabs__link">
+          
+  
+    
+  
+  Bigdata
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../algo/" class="md-tabs__link">
+          
+  
+    
+  
+  Algorithmes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../outils/blockly/" class="md-tabs__link">
+          
+  
+    
+  
+  Outils
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ressources/" class="md-tabs__link">
+        
+  
+    
+  
+  Ressources
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../projets/" class="md-tabs__link">
+          
+  
+    
+  
+  Projets
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../bac/sujet/" class="md-tabs__link">
+        
+  
+    
+  
+  BAC
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="NSI-LXP" class="md-nav__button md-logo" aria-label="NSI-LXP" data-md-component="logo">
+      
+  <img src="../../assets/images/logo-lxp-transparent.svg" alt="logo">
+
+    </a>
+    NSI-LXP
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lycee-experimental/nsi-lxp" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../fondement/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Fondements
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Fondements
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fondement/histoire/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Histoire de l'informatique
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fondement/binaire/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Binaire et portes logiques
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fondement/materiel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Architecture matérielle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fondement/assembleur/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Langage machine et assembleur
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fondement/ihm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Interfaces Homme/Machine
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fondement/composants_integres_systeme_puce/composant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🇹 Systèmes sur puces (SoC)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../outils/quiz/Architectures matérielles et systèmes d’exploitation (Première)" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../encodage/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Encodage
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Encodage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../encodage/entier-positif/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Entiers positifs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../encodage/entier-negatif/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Entiers signés
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../encodage/non-entier/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Nombres réels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../encodage/caractere/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Caractères
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../linux/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Linux
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Linux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Tester et installer Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/commande/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Commandes Shell
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/dossier/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Arborescence des dossiers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/permission/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Gestion des permissions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/gestion_processus/gestion_processus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🇹 Gestion des processus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../internet/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Réseaux
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Réseaux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../internet/histoire/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Histoire d'internet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../internet/architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Architecture réseau
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../internet/protocole/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Protocoles de communication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../internet/routage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🇹Protocoles de routage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../internet/secu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🇹 Sécurité des communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../web/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Web
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Web
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../web/langage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Langages web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../web/http/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Protocole HTTP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../web/requete/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Requêtes GET et POST et formulaires
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Les bases de Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    🇹 Bonnes pratiques de la progra
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    🇹 Bonnes pratiques de la progra
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syntaxe-pythonesque" class="md-nav__link">
+    Syntaxe pythonesque !
+  </a>
+  
+    <nav class="md-nav" aria-label="Syntaxe pythonesque !">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regles-explicites-du-pep8" class="md-nav__link">
+    Règles explicites du PEP8
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regles-implicites" class="md-nav__link">
+    Règles implicites
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modularite" class="md-nav__link">
+    Modularité
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-des-erreurs" class="md-nav__link">
+    Gestion des erreurs
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestion des erreurs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#erreurs-classiques" class="md-nav__link">
+    Erreurs classiques
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debordement" class="md-nav__link">
+    Débordement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-exceptions" class="md-nav__link">
+    Les exceptions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jeux-de-tests" class="md-nav__link">
+    Jeux de tests
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../progra_orientee_objet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🇹 Progra Orientée Objet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../paradigmes_progra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🇹 Paradigmes de la progra
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../decidabilite_calculabilite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🇹 Décidabilité et calculabilité
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../data/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Bigdata
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Bigdata
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/types_construits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Types construits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../data/tables/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    1️⃣ Données en tables
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8_3" id="__nav_8_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            1️⃣ Données en tables
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_3_2" id="__nav_8_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Prendre un bon départ
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Prendre un bon départ
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/tables/depart/listes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Listes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/tables/depart/comprehension/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Listes en compréhension
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/tables/depart/dictionnaires/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dictionnaires
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/tables/depart/imbriquees/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Listes de listes/dictionnaires
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_3_3" id="__nav_8_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Les fichiers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Les fichiers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/tables/csv/manipulation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lire un fichier
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/tables/csv/fichiers_csv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fichiers csv
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/tables/csv/import_listes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Import vers listes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/tables/csv/import_dico/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Import vers dictionnaires
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_3_4" id="__nav_8_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Requêtes simples
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Requêtes simples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/tables/requetes_simples/prenoms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prénoms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/tables/requetes_simples/communes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Communes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/tables/requetes_elaborees/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requêtes élaborées
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/tables/fusions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fusions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../data/structure/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    🇹 Structures de données
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8_4" id="__nav_8_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_4">
+            <span class="md-nav__icon md-icon"></span>
+            🇹 Structures de données
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/structure/donnees_lineaires/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Structure de données linéaires
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/structure/donnees_arbres/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les arbres binaires
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/structure/donnees_graphes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les Graphes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/bases_de_donnees/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🇹 Bases de données
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../algo/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Algorithmes
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Algorithmes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algo/parcours/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Parcours d'un tableau
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algo/dichotomie/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Recherche par dichotomie
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algo/tris/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Algorithmes de tri
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algo/glouton/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Algorithmes gloutons
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algo/knn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Algorithmes KKN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algo/diviser/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🇹 Diviser pour régner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algo/Recursivite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🇹 Récursivité
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algo/dynamique/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🇹 Progra dynamique
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algo/recherche_textuelle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🇹 Recherche textuelle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../outils/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Outils
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Outils
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../outils/blockly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blockly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../outils/blockly-game/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blockly-games
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../outils/codepen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Codepen pour le développement Web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../outils/reavealjs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diaporama avec Reavealjs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../outils/jupyterlite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jupyterlite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../outils/v86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L'émulateur Linux V86
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../outils/pyodide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pyodide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../outils/pyodide/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Pyodide
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10_8" id="__nav_10_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_8">
+            <span class="md-nav__icon md-icon"></span>
+            Pyodide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../outils/pyodide/sandbox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bac à sable
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../outils/pyodide/install_ide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guide de l'IDE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../outils/pyodide/install_term/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guide du Terminal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../outils/pyodide/advanced/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Options avancées
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../outils/qcm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    QCM et multi QCM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../outils/macro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quelques macro pour Mkdocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../outils/quiz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../outils/scratch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scratch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../outils/y86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Simulateur assembleur Y86"
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../outils/logic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Simulateur de portes logiques
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../outils/terminus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Terminus pour apprendre les commandes Linux"
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ressources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ressources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../projets/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Projets
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_12" id="__nav_12_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Projets
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_12_2" id="__nav_12_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Le dépot Git du LXP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_2">
+            <span class="md-nav__icon md-icon"></span>
+            Le dépot Git du LXP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projets/git/commandes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Commandes de base
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projets/git/presentation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projets/git/utilisation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utilisation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_12_3" id="__nav_12_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Django-LXP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_3">
+            <span class="md-nav__icon md-icon"></span>
+            Django-LXP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_12_3_1" id="__nav_12_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pycharm & Django-Lxp
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_12_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Pycharm & Django-Lxp
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projets/djangolxp/install-pycharm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation de Pycharm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projets/djangolxp/deploiement-local/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Déploiement Django-lxp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projets/djangolxp/Utilisation-github_pycharm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git avec pycharm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_12_3_2" id="__nav_12_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Développement de Django-Lxp
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_12_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Développement de Django-Lxp
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projets/djangolxp/ajout-champs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ajout de champs au formulaires
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projets/djangolxp/style-fiche-inscription/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Affichage de la fiche d'inscription
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projets/djangolxp/tableau-filtre/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Afficher/filtrer les listes d'élèves
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../projets/jeu-video/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Jeux vidéos
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_12_4" id="__nav_12_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_4">
+            <span class="md-nav__icon md-icon"></span>
+            Jeux vidéos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projets/jeu-video/jupylet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jupylet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projets/jeu-video/renpy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ren'Py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../projets/drumxp/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Drum-LXP
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_12_5" id="__nav_12_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_5">
+            <span class="md-nav__icon md-icon"></span>
+            Drum-LXP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projets/drumxp/elec/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Électronique
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projets/drumxp/progra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programmation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projets/drumxp/logiciels/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logiciel
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projets/drumxp/matos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bac/sujet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BAC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+
+  
+  
+
+
+<div><h1 id="bonnes-pratiques-logicielles">Bonnes pratiques Logicielles<a class="headerlink" href="#bonnes-pratiques-logicielles" title="Permanent link">⚓︎</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">⚓︎</a></h2>
+<p>Le respect de certaines règles plus ou moins explicites permettent à tout programmeur de lire, comprendre et modifier le programme écrit par un autre. Nous allons voir ici quelques unes de ces règles.</p>
+<h2 id="syntaxe-pythonesque">Syntaxe pythonesque !<a class="headerlink" href="#syntaxe-pythonesque" title="Permanent link">⚓︎</a></h2>
+<h3 id="regles-explicites-du-pep8">Règles explicites du PEP8<a class="headerlink" href="#regles-explicites-du-pep8" title="Permanent link">⚓︎</a></h3>
+<p>Les règles de syntaxe de Python sont définies dans le document PEP8 (Python Enhancement Proposal) rédigé entre autres par <strong>Guido van Rossum</strong> lui-même.</p>
+<p>A consulter sur <a href="https://www.python.org/dev/peps/pep-0008/" target="_blank">https://www.python.org/dev/peps/pep-0008/</a></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><input id="__tabbed_1_5" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Nommage</label><label for="__tabbed_1_2">Espaces</label><label for="__tabbed_1_3">Longueur des lignes</label><label for="__tabbed_1_4">Indentation</label><label for="__tabbed_1_5">Saut de ligne</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>Le nom des variables, fonctions et méthodes s'écrit toujours en snake_case (ex : <code>vitesse_voiture</code>)</li>
+<li>Le nom des classes (voir séquence 2) s'écrit toujours en CamelCase (ex : <code>VoitureSport</code>)</li>
+<li>Le nom des constantes s'écrit toujours en lettres capitales (ex : <code>VLUMIERE</code>)</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>Les opérateurs sont censés être entourés d'un espace (sauf pour le passage de paramètres à une fonction ou pour des questions de lisibilité de grandes expressions mathématiques)</li>
+<li>Pas d'espace à l'intérieur de <code>()</code>, <code>[]</code> ou <code>{}</code></li>
+<li>Pas d'espace avant <code>:</code> et <code>,</code> mais on en met <strong>après</strong>.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">*</span><span class="n">y</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">puis</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="n">puis</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">puissance</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>La longueur des lignes est limitée en principe à 79 caractères. on peut raccourcir une longue ligne grâce à :</p>
+<ul>
+<li>L'indentation</li>
+<li>Des parenthèses</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">dico</span> <span class="p">{</span>
+    <span class="mi">0</span><span class="p">:</span> <span class="s1">'zero'</span><span class="p">,</span>
+    <span class="mi">1</span><span class="p">:</span> <span class="s1">'un'</span><span class="p">,</span>
+    <span class="mi">2</span><span class="p">:</span> <span class="s1">'deux'</span>
+<span class="p">}</span>
+
+<span class="kn">from</span> <span class="nn">module</span> <span class="kn">import</span> <span class="p">(</span><span class="n">package1</span><span class="p">,</span> <span class="n">package2</span><span class="p">,</span> <span class="n">package3</span><span class="p">,</span>
+                    <span class="n">package4</span><span class="p">,</span> <span class="n">package5</span><span class="p">,</span> <span class="n">package6</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>4 espaces (ou une tabulation)</p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>2 lignes entre les imports et les fonctions, puis entre chaque définition de fonction</li>
+<li>Mais une seule ligne entre chaque méthode d'une classe (voir Chapitre 2)</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">math</span>
+
+
+<span class="k">def</span> <span class="nf">f1</span><span class="p">():</span>
+    <span class="k">pass</span>
+
+
+<span class="k">def</span> <span class="nf">f2</span><span class="p">():</span>
+    <span class="k">pass</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Linter</p>
+<p>Un <strong>linter</strong> (flake8 ou pylint) est un <strong>analyseur de code</strong> vérifiant la conformité de la syntaxe. Le site 
+<a href="http://pep8online.com" target="_blank">pep8online.com</a> par exemple est très simple d'utilisation. On copie/colle le code à évaluer puis on clique sur le bouton <code>Check code</code>.</p>
+</div>
+<h3 id="regles-implicites">Règles implicites<a class="headerlink" href="#regles-implicites" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>
+<p><strong>Choisir</strong> judicieusement le nom de ses variables : <code class="highlight"><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">y</span><span class="p">:</span></code> ou <code class="highlight"><span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">chaine</span><span class="p">:</span></code> ?</p>
+</li>
+<li>
+<p><strong>Documenter</strong> chaque fonction avec un prototype (<em>docstring</em>). Ne pas hésiter à inclure un exemple simple et concret pour les fonctions compliquées</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">calcul_moyenne</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<span class="w">  </span><span class="sd">"""</span>
+<span class="sd">  Calcul de la moyenne de x et y</span>
+<span class="sd">  </span>
+<span class="sd">  param x: première valeur (int ou float)</span>
+<span class="sd">  param y: seconde valeur (int ou float)</span>
+<span class="sd">  return: moyenne de x et y</span>
+<span class="sd">  </span>
+<span class="sd">  Exemple:</span>
+<span class="sd">  </span>
+<span class="sd">  &gt;&gt;&gt; calcul_moyenne(4, 7)</span>
+<span class="sd">  5.5</span>
+<span class="sd">  """</span>
+</code></pre></div>
+<ul>
+<li><strong>Anticiper et gérer les bugs</strong> en levant des exceptions et en incluant des test les plus complets possibles de manière à avoir la meilleur couverture de code (pourcentage de code couvert par les tests) possible</li>
+<li>Chercher à <strong>optimiser le temps d'exécution</strong> du programme</li>
+<li>Assurer la mise à jour de son programme</li>
+</ul>
+<details class="note">
+<summary>The zen of Python</summary>
+<p>Le poème "The zen of Python" écrit par Timp Peters résume la philosopie d'un bon programmeur en Python et est accessible par un simple import (surnommé <em>oeuf de Pâques</em>)</p>
+<div class="highlight"><pre><span></span><code><span class="go">&gt;&gt;&gt; import this</span>
+
+<span class="go">The Zen of Python, by Tim Peters</span>
+
+<span class="go">Beautiful is better than ugly.</span>
+<span class="go">Explicit is better than implicit.</span>
+<span class="go">Simple is better than complex.</span>
+<span class="go">Complex is better than complicated.</span>
+<span class="go">Flat is better than nested.</span>
+<span class="go">Sparse is better than dense.</span>
+<span class="go">Readability counts.</span>
+<span class="go">Special cases aren't special enough to break the rules.</span>
+<span class="go">Although practicality beats purity.</span>
+<span class="go">Errors should never pass silently.</span>
+<span class="go">Unless explicitly silenced.</span>
+<span class="go">In the face of ambiguity, refuse the temptation to guess.</span>
+<span class="go">There should be one-- and preferably only one --obvious way to do it.</span>
+<span class="go">Although that way may not be obvious at first unless you're Dutch.</span>
+<span class="go">Now is better than never.</span>
+<span class="go">Although never is often better than *right* now.</span>
+<span class="go">If the implementation is hard to explain, it's a bad idea.</span>
+<span class="go">If the implementation is easy to explain, it may be a good idea.</span>
+<span class="go">Namespaces are one honking great idea -- let's do more of those!</span>
+</code></pre></div>
+<p>Et la version française pour les non-anglophones :</p>
+<p><a href="https://fr.wikipedia.org/wiki/Zen_de_Python" target="_blank">https://fr.wikipedia.org/wiki/Zen_de_Python</a></p>
+</details>
+<h2 id="modularite">Modularité<a class="headerlink" href="#modularite" title="Permanent link">⚓︎</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Définition</p>
+<p>La modularité est le fait qu'un programme est <strong>découpé en modules logiciels</strong> afin de favoriser leur maintenance ou leur réutilisation dans d'autres contextes.</p>
+<ul>
+<li>Un <strong>module</strong> est un ensemble de fonctions prédéfinies</li>
+<li>Une <strong>bibliothèque</strong> correspond à un ensemble plus complet puisqu'elle comprend des fonctions, des constantes ET des modules</li>
+</ul>
+<p>Encore faut-il savoir utiliser le module désiré... D'où la nécessité de lire la documentation de ce module en utilisant l'instruction <code>help()</code> !</p>
+</div>
+<details class="python">
+<summary>Instruction <code>help()</code></summary>
+<p>L'instruction <code>help(nom_de_la_fonction)</code> ou <code>help(module)</code> premet d'obtenir la liste des fonctions contenues dans ce module.</p>
+<p>Testez dans la cellule ci-dessous, les lignes suivantes et analysez-les:</p>
+<p></p><div onclick='start_term("id12")' id="fake_id12" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id12" class="py_mk_hide"></div>
+<div class="highlight"><pre><span></span><code><span class="n">help</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">help</span><span class="p">(</span><span class="n">math</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<details class="python">
+<summary>Instruction <code>dir()</code></summary>
+<p>Cette instruction permet de lister les attributs d'un objet (liste, tuple, dictionnaire, classe...).</p>
+<div class="highlight"><pre><span></span><code><span class="n">number1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">number1</span><span class="p">))</span>
+</code></pre></div>
+<p></p><div onclick='start_term("id13")' id="fake_id13" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id13" class="py_mk_hide"></div>
+<p>Ici, une longue liste d'attributs apparaît.</p>
+<p>On s'aperçoit ainsi que l'on peut, entre autres :</p>
+<ul>
+<li>Ajouter un terme à la liste avec la méthode <code>append</code></li>
+<li>Trier une liste avec la méthode <code>sort</code></li>
+</ul>
+<p>Vérifiez tout cela avec :</p>
+<div class="highlight"><pre><span></span><code><span class="n">number1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">number1</span><span class="p">)</span>
+<span class="n">number1</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">number1</span><span class="p">)</span>
+</code></pre></div>
+<p></p><div onclick='start_term("id14")' id="fake_id14" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id14" class="py_mk_hide"></div>
+</details>
+<div class="admonition info">
+<p class="admonition-title"><code>help()</code> et <code>dir()</code> en résumé</p>
+<ul>
+<li>L'instruction <code>help()</code> permet de se documenter sur des instructions, fonctions, modules...</li>
+<li>L'instruction <code>dir()</code> permet de lister les attributs et méthodes d'un objet.</li>
+</ul>
+</div>
+<details class="question">
+<summary>Activité 1 - Module de gestion de listes</summary>
+<ol>
+<li>
+<p>Créez un module personnalisé nommé <code>algos_classiques_listes.py</code> dans lequel vous mettrez toutes les fonctions concernant les listes. A savoir :</p>
+<ul>
+<li>Recherche de la présence d'un élément <span class="arithmatex">\(e\)</span> dans la liste <span class="arithmatex">\(L\)</span>: <code>dans_liste(e, L)</code> </li>
+<li>Recherche de la valeur maximale (et/ou minimale) des élément d'une liste <span class="arithmatex">\(L\)</span>: <code>max_liste(L)</code></li>
+<li>Calcul de la moyenne des éléments d'une liste <span class="arithmatex">\(L\)</span>: <code>moy_liste(L)</code></li>
+<li>Recherche de l'indice de l'élément minimum: <code>indice_min_liste(L)</code> </li>
+<li>Recherche du nb d'occurrences d'une valeur: <code>card_val_liste(e, L)</code></li>
+<li>Suppression de la première occurrence d'un élément: <code>supp_liste(e, L)</code></li>
+<li><strong>Vous veillerez à respecter dans la mesure du possible les recommandations de PEP8.</strong></li>
+</ul>
+</li>
+<li>
+<p>Créez un nouveau Notebook.</p>
+</li>
+</ol>
+<p>Dans des nouvelles cellules, copiez/coller le code ci-dessous et testez-le :</p>
+<details class="python">
+<summary>Notebook Jupyter</summary>
+<p><iframe src="/xtra/jupyterlite/lab/index.html" frameborder="0" scrolling="auto" style="width: 100%; height: 700px;"></iframe></p>
+</details>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">algos_classiques_listes</span> <span class="k">as</span> <span class="nn">al</span>
+
+<span class="n">help</span><span class="p">(</span><span class="n">al</span><span class="o">.</span><span class="n">dans_liste</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">al</span><span class="o">.</span><span class="n">dans_liste</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">al</span><span class="o">.</span><span class="n">max_liste</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">al</span><span class="o">.</span><span class="n">moy_liste</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">al</span><span class="o">.</span><span class="n">indice_min_liste</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">al</span><span class="o">.</span><span class="n">card_val_liste</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">al</span><span class="o">.</span><span class="n">supp_liste</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>
+</code></pre></div>
+<p><a class="md-button" href="/xtra/jupyterlite/lab/index.html?fromURL=/notebooks/algos_classiques_listes.ipynb&amp;fromURL=/scripts/algos_classiques_listes.py" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span> Corrigé <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span></a></p>
+</details>
+<h2 id="gestion-des-erreurs">Gestion des erreurs<a class="headerlink" href="#gestion-des-erreurs" title="Permanent link">⚓︎</a></h2>
+<p>L'erreur étant humaine, même les meilleurs programmeurs en commettent. Ce qui peut avoir de grosses conséquences, tant au niveau humain (crash de navette spatiale...), économique (retour de produits défectueux...) ou encore en terme d'image et/ou de crédibilité.</p>
+<p>Pour valider un code, il existe deux moments stratégiques :</p>
+<ul>
+<li>à l'écriture : il faut documenter proprement son code</li>
+<li>à l'exécution</li>
+</ul>
+<p>C'est ce second point que nous allons développer.</p>
+<h3 id="erreurs-classiques">Erreurs classiques<a class="headerlink" href="#erreurs-classiques" title="Permanent link">⚓︎</a></h3>
+<h4 id="typage-dynamique">Typage dynamique<a class="headerlink" href="#typage-dynamique" title="Permanent link">⚓︎</a></h4>
+<p>Python est un langage à typage dynamique: il n'impose pas que le type des variables soit défini. Le type est alors déterminé à la volée au moment de l'interprétation du code. On peut donc à loisir changer le type de données d'une variable. Cela peut poser problème si on n'est pas prudent. D'autres langages, tels le C, Java ou Pascal sont à typage statique, donc nettement moins permissifs que Python.</p>
+<p>Testez et analysez ce programme :</p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="s2">"Hello World"</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+</code></pre></div>
+<div onclick='start_term("id15")' id="fake_id15" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div>
+<div id="id15" class="py_mk_hide"></div>
+
+<details class="question">
+<summary>Activité 2 - Typage dynamique</summary>
+<p>Python est un langage à typage dynamique : il n'impose pas que le type des variables soit défini. Le type est
+alors déterminé à la volée au moment de l'interprétation du code. On peut donc à loisir changer le type de donnée d'une variable. Cela peut poser problème si on n'est pas prudent.</p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="s1">'Hello world'</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+</code></pre></div>
+<p>D'autres langages, tels le C, Java ou Pascal sont à typage statique, donc nettement moins permissifs que Python.</p>
+<p>Corriger le programme ci-dessous :</p>
+<p></p><div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_2651410e10f2c751be2b0094529fd02d4d63b048" class="comment">###</span><div class="line" id="editor_2651410e10f2c751be2b0094529fd02d4d63b048"></div><div id="term_editor_2651410e10f2c751be2b0094529fd02d4d63b048" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_2651410e10f2c751be2b0094529fd02d4d63b048","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_2651410e10f2c751be2b0094529fd02d4d63b048","scripts/typage")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_2651410e10f2c751be2b0094529fd02d4d63b048').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_2651410e10f2c751be2b0094529fd02d4d63b048" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_2651410e10f2c751be2b0094529fd02d4d63b048")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_2651410e10f2c751be2b0094529fd02d4d63b048")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_2651410e10f2c751be2b0094529fd02d4d63b048" class="py_mk_hide">from random import randintbksl-nlbksl-nlbksl-nldef fonc(n, listepy-undnotes):bksl-nl    somme = 0bksl-nl    for elt in listepy-undnotes :bksl-nl        somme = somme + eltbksl-nl    return somme/nbksl-nlbksl-nlnombre = 10bksl-nlx="Anatole"bksl-nllistepy-undnotes = []bksl-nllistepy-undnotes = [randint(0, 20) for i in range(nombre)]bksl-nlprint(listepy-undnotes, "\t", fonc(x, listepy-undnotes))bksl-nl</span><span id="corr_content_editor_2651410e10f2c751be2b0094529fd02d4d63b048" class="py_mk_hide" data-strudel=""></span>
+<p><strong>A</strong></p>
+<p><strong>Z</strong></p>
+<details class="success">
+<summary>Corrigé</summary>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+
+
+<span class="k">def</span> <span class="nf">fonc</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">liste_notes</span><span class="p">):</span>
+    <span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">liste_notes</span> <span class="p">:</span>
+        <span class="n">somme</span> <span class="o">=</span> <span class="n">somme</span> <span class="o">+</span> <span class="n">elt</span>
+    <span class="k">return</span> <span class="n">somme</span><span class="o">/</span><span class="n">n</span>
+
+<span class="n">nombre</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">x</span><span class="o">=</span><span class="s2">"Anatole"</span>
+<span class="n">liste_notes</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">liste_notes</span> <span class="o">=</span> <span class="p">[</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nombre</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">liste_notes</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="n">fonc</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">liste_notes</span><span class="p">))</span>
+</code></pre></div>
+</details>
+</details>
+<h4 id="effet-de-bord">Effet de bord<a class="headerlink" href="#effet-de-bord" title="Permanent link">⚓︎</a></h4>
+<p>On appelle effet de bord la modification de valeurs référencées par des variables. Cela peut poser problème dans le cas de variables mutables, notamment lors de la copie d'une variable par affectation. En effet, lors d'une affectation du type <code>b = a</code>, ce n'est pas la valeur de <span class="arithmatex">\(a\)</span> qui est recopiée, mais son <strong>identifiant</strong>!</p>
+<ul>
+<li>Cas des variables <strong>non mutables</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">1961</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1935</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</code></pre></div>
+<div onclick='start_term("id16")' id="fake_id16" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div>
+<div id="id16" class="py_mk_hide"></div>
+
+<p>Comme les identifiants de <code>a</code> et <code>b</code> sont identiques, ils définissent la même plage mémoire pour les valeurs de ces deux variables. Autrement dit <code>a</code> et <code>b</code> ont la même valeur.</p>
+<p>Cependant, toute modification de la variable <code>a</code> via une affectation créera une autre plage mémoire avec un nouvel identifiant : la variable <code>b</code> ne sera donc pas modifiée !</p>
+<ul>
+<li>Cas des variables <strong>mutables</strong></li>
+</ul>
+<p>Les variables mutables peuvent être modifiées par d'autres opérations qu'une affectation. or cela conserve l'identifiant ! Par conséquent, pour une variable de type mutable, l'identifiant ainsi que la plage mémoire allouée à la valeur de cette variable peuvent rester inchangés, même lorsque l'on change la valeur de cette variable.</p>
+<div class="highlight"><pre><span></span><code><span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">L2</span> <span class="o">=</span> <span class="n">L1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>
+<span class="n">L1</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span> <span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>
+</code></pre></div>
+<div onclick='start_term("id17")' id="fake_id17" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div>
+<div id="id17" class="py_mk_hide"></div>
+
+<p>Cette manière de procéder permet un gain de temps (copie rapide) et de mémoire(une seule plage mémoire pour deux variables). Mais elle pose un problème technique : si le contenu de la plage mémoire de la valeur de <code>L1</code> est modifié, cela entraîne automatiquement la modification de la valeur de <code>L2</code> puisqu'ils sont référencés par le même identifiant!</p>
+<p>Pour le programmeur Python non averti, cet <strong>effet de bord</strong> peut provoquer une erreur de programmation difficile à élucider.</p>
+<p>On peut néanmoins copier une liste sans provoquer d'effet de bord en utilisant une <code>deepcopy</code> :</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
+
+
+<span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">L2</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">L1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>
+<span class="n">L1</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span> <span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>
+</code></pre></div>
+<div onclick='start_term("id18")' id="fake_id18" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div>
+<div id="id18" class="py_mk_hide"></div>
+
+<p>Un programme écrit selon le <strong>paradigme fonctionnel</strong> utilise des fonctions dites fonctionnelles (!) et se caractérise essentiellement par une chose : l'absence d'effets de bord. Le code ne dépend pas de données se trouvant à l'extérieur de la fonction courante et il ne modifie pas des données à l'extérieur de cette fonction. Il évite donc l'utilisation de variables globales.</p>
+<p>Comparez les deux exemples ci-dessous :</p>
+<div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_84802934a657542d5f0460bb901872d863aea005" class="comment">###</span><div class="line" id="editor_84802934a657542d5f0460bb901872d863aea005"></div><div id="term_editor_84802934a657542d5f0460bb901872d863aea005" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_84802934a657542d5f0460bb901872d863aea005","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_84802934a657542d5f0460bb901872d863aea005","scripts/increment_non_fonctionnel")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_84802934a657542d5f0460bb901872d863aea005').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_84802934a657542d5f0460bb901872d863aea005" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_84802934a657542d5f0460bb901872d863aea005")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_84802934a657542d5f0460bb901872d863aea005")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+<p><span id="content_editor_84802934a657542d5f0460bb901872d863aea005" class="py_mk_hide">a = 0bksl-nlbksl-nldef incrementpy-undnonpy-undfonctionnel():bksl-nl  global abksl-nl  a = a + 1bksl-nl  return abksl-nlbksl-nlprint(incrementpy-undnonpy-undfonctionnel())bksl-nlprint(incrementpy-undnonpy-undfonctionnel())bksl-nl</span><span id="corr_content_editor_84802934a657542d5f0460bb901872d863aea005" class="py_mk_hide" data-strudel=""></span></p>
+<p><strong>A</strong></p>
+<p><strong>Z</strong></p>
+<div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_89bb6052a48b72e75fa0a859b3a83c5de1954550" class="comment">###</span><div class="line" id="editor_89bb6052a48b72e75fa0a859b3a83c5de1954550"></div><div id="term_editor_89bb6052a48b72e75fa0a859b3a83c5de1954550" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_89bb6052a48b72e75fa0a859b3a83c5de1954550","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_89bb6052a48b72e75fa0a859b3a83c5de1954550","scripts/increment_fonctionnel")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_89bb6052a48b72e75fa0a859b3a83c5de1954550').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_89bb6052a48b72e75fa0a859b3a83c5de1954550" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_89bb6052a48b72e75fa0a859b3a83c5de1954550")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_89bb6052a48b72e75fa0a859b3a83c5de1954550")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+<p><span id="content_editor_89bb6052a48b72e75fa0a859b3a83c5de1954550" class="py_mk_hide">a = 0bksl-nlbksl-nldef incrementpy-undfonctionnel(a):bksl-nl  return a + 1bksl-nl  bksl-nlprint(incrementpy-undfonctionnel(a))bksl-nlprint(incrementpy-undfonctionnel(a))bksl-nl</span><span id="corr_content_editor_89bb6052a48b72e75fa0a859b3a83c5de1954550" class="py_mk_hide" data-strudel=""></span></p>
+<p><strong>A</strong></p>
+<p><strong>Z</strong></p>
+<div class="admonition info">
+<p class="admonition-title">Rappel</p>
+<p>La <strong>portée</strong> d'une variable correspond aux parties du programme pour lesquelles la variable est définie.
+- Une variable définie à l'intérieur d'une fonction est une variable <strong>locale</strong>. Elle ne sera pas reconnue au sein d'une autre fonction ni au sein du programme principal.
+- Une variable définie au niveau du programme principal est une variable <strong>globale</strong>. Elle est reconnue partour dans le programme, même au sein des fonctions.
+On peut faire en sorte qu'une variable déclarée au sein d'une fonction soit malgré tout une variable globale en utilisant l'instruction <strong>global</strong>. Mais c'est à éviter pour cause de confusion.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">En résumé</p>
+<p>On appelle effet de bord la modification de valeurs référencées par des variables. Pour les éviter, le code intérieur d'une fonction ne doit pas modifier le code extérieur.
+La copie de variables immutables ne pose pas de souci. Mais la copie de variables mutables (listes, dictionnaires...) provoque un effet de bord. Il faut alors utiliser une copie "profonde".</p>
+</div>
+<details class="question">
+<summary>Activité 3 - Effets de bord</summary>
+<p>On appelle effet de bord la modification de valeurs référencées par des variables. Pour les éviter, le code intérieur d’une fonction ne doit pas modifier le code extérieur. </p>
+<p>La copie de variables immutables ne pose pas de souci ! Mais la copie de variables mutables (listes, dictionnaires..) provoque un effet de bord. Il faut alors utiliser une copie « profonde »</p>
+<p>Ex 1:</p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">1961</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1935</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</code></pre></div>
+<p>Ex 2:</p>
+<div class="highlight"><pre><span></span><code><span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">L2</span> <span class="o">=</span> <span class="n">L1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>
+<span class="n">L1</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span> <span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>
+</code></pre></div>
+<p>Ex 3:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
+
+
+<span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">L2</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">L1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>
+<span class="n">L1</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span> <span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>
+</code></pre></div>
+<p>Ex 3:</p>
+<p></p><div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">increment_non_fonctionnel</span><span class="p">():</span>
+<span class="k">global</span> <span class="n">a</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="k">return</span> <span class="n">a</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">increment_non_fonctionnel</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">increment_non_fonctionnel</span><span class="p">())</span>
+</code></pre></div>
+et
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">increment_fonctionnel</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">increment_fonctionnel</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">increment_fonctionnel</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+</code></pre></div>
+<p>Modifiez le programme ci-dessous pour que la fonction ne provoque pas d'effets de bord :</p>
+</details>
+<div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_34bbd4aaf49109af323e092f55992bb3c820475b" class="comment">###</span><div class="line" id="editor_34bbd4aaf49109af323e092f55992bb3c820475b"></div><div id="term_editor_34bbd4aaf49109af323e092f55992bb3c820475b" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_34bbd4aaf49109af323e092f55992bb3c820475b","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_34bbd4aaf49109af323e092f55992bb3c820475b" class="py_mk_hide"># Testsbksl-nlassert entrees == {'A': 12, 'B': 21, 'C': -2, 'D': 37, 'E': -99, 'F': 6}bksl-nlbksl-nl</span>            <button class="tooltip" onclick='check("editor_34bbd4aaf49109af323e092f55992bb3c820475b","")'>            <img src="../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_34bbd4aaf49109af323e092f55992bb3c820475b","scripts/effet_bord")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_34bbd4aaf49109af323e092f55992bb3c820475b').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_34bbd4aaf49109af323e092f55992bb3c820475b" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_34bbd4aaf49109af323e092f55992bb3c820475b")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_34bbd4aaf49109af323e092f55992bb3c820475b")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+<p><span id="content_editor_34bbd4aaf49109af323e092f55992bb3c820475b" class="py_mk_hide">def plancher(dictionnaire): bksl-nl    for cle, valeur in dictionnaire.items():bksl-nl        if valeur &lt; 0:bksl-nl            dictionnaire[cle] = 0bksl-nl    return dictionnairebksl-nlbksl-nlentrees = {'A': 12, 'B': 21, 'C': -2, 'D': 37, 'E': -99, 'F': 6}bksl-nlprint(entrees)bksl-nlprint(plancher(entrees))bksl-nlprint(entrees)bksl-nlbksl-nlbksl-nl</span><span id="corr_content_editor_34bbd4aaf49109af323e092f55992bb3c820475b" class="py_mk_hide" data-strudel="">from copy import deepcopybksl-nlbksl-nldef plancher(dictionnaire): bksl-nl    dictionnaire2 = deepcopy(dictionnaire)bksl-nl    for cle, valeur in dictionnaire.items():bksl-nl        if valeur &lt; 0:bksl-nl            dictionnaire2[cle] = 0bksl-nl    return dictionnaire2bksl-nlbksl-nlentrees= {'A': 12, 'B': 21, 'C': -2, 'D': 37, 'E': -99, 'F': 6}bksl-nlprint(entrees)bksl-nlprint(plancher(entrees))bksl-nlbksl-nl</span></p>
+<p><strong>A</strong></p>
+<p><strong>Z</strong></p>
+<p>test</p>
+<h3 id="debordement">Débordement<a class="headerlink" href="#debordement" title="Permanent link">⚓︎</a></h3>
+<p>Il existe deux sortes de débordement:</p>
+<ul>
+<li>
+<p>On peut constater un <strong>débordement négatif</strong> sur une liste si on appelle la méthode <code>.pop()</code> sans s'assurer au préalable que la liste contient au moins un élément. </p>
+</li>
+<li>
+<p>On sera confronté à un <strong>débordement positif</strong> lorsqu'on parcourt une liste au-delà de son dernier élément.</p>
+</li>
+</ul>
+<p>En général, la notion de débordement est associée à la notion de pile (voir chapitre 3).</p>
+<p>Une pile est un conteneur dans lequel il est possible d'ajouter (empiler) et de retirer (dépiler) des éléments.</p>
+<details class="question">
+<summary>Activité 4 - Débordements</summary>
+<p>Modifiez les programmes ci-dessous pour empêcher tout débordement.
+<strong>Programme 1 :</strong></p>
+<p></p><div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1" class="comment">###</span><div class="line" id="editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1"></div><div id="term_editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1" class="py_mk_hide">assert L1 == []bksl-nl</span>            <button class="tooltip" onclick='check("editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1","")'>            <img src="../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1","scripts/debordement1")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1" class="py_mk_hide">L1 = [2, 3, 4]bksl-nlprint(L1)bksl-nlfor i in range(4):bksl-nl    L1.pop()bksl-nlprint(L1)bksl-nl</span><span id="corr_content_editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1" class="py_mk_hide" data-strudel="">L1 = [2, 3, 4]bksl-nlprint(L1)bksl-nlfor i in range(3):bksl-nl    L1.pop()bksl-nlprint(L1)bksl-nl</span>
+<p><strong>A</strong></p>
+<p><strong>Z</strong></p>
+<p><strong>Programme 2 :</strong></p>
+<p></p><div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_2daa74829347b784520ed82e3d1dfb8b658224f7" class="comment">###</span><div class="line" id="editor_2daa74829347b784520ed82e3d1dfb8b658224f7"></div><div id="term_editor_2daa74829347b784520ed82e3d1dfb8b658224f7" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_2daa74829347b784520ed82e3d1dfb8b658224f7","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_2daa74829347b784520ed82e3d1dfb8b658224f7" class="py_mk_hide">assert L2 == [2, 3, 4, 5, 6]bksl-nl</span>            <button class="tooltip" onclick='check("editor_2daa74829347b784520ed82e3d1dfb8b658224f7","")'>            <img src="../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_2daa74829347b784520ed82e3d1dfb8b658224f7","scripts/debordement2")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_2daa74829347b784520ed82e3d1dfb8b658224f7').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_2daa74829347b784520ed82e3d1dfb8b658224f7" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_2daa74829347b784520ed82e3d1dfb8b658224f7")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_2daa74829347b784520ed82e3d1dfb8b658224f7")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_2daa74829347b784520ed82e3d1dfb8b658224f7" class="py_mk_hide">L1 = [2, 3, 4, 5, 6]bksl-nlL2 = []bksl-nlfor i in range(6):bksl-nl    L2.append(L1[i])bksl-nl    print(L1[i], end=' , ')bksl-nl</span><span id="corr_content_editor_2daa74829347b784520ed82e3d1dfb8b658224f7" class="py_mk_hide" data-strudel="">L1 = [2, 3, 4, 5, 6]bksl-nlL2 = []bksl-nlfor i in range(5):bksl-nl    L2.append(L1[i])bksl-nl    print(L1[i], end=' , ')bksl-nl</span>
+<p><strong>A</strong></p>
+<p><strong>Z</strong></p>
+</details>
+<details class="question">
+<summary>Activité 5 - Instruction conditionnelle non exhaustive ou contenant un mauvais choix des inégalités</summary>
+<p>Une séquence de <code>if</code>, <code>elif</code> et <code>else</code> peut être incomplète, complète mais construite avec un ordre incorrect des conditions, ou encore contenir un traitement conditionnel d'égalité conduisant à des erreurs.</p>
+<p>Dans les différents programmes ci-dessous, traquez l'erreur et corrigez-là !</p>
+<p>ensuite, vous attribuerez à chacun de ces programmes le type d'erreur adéquat parmi :
+- séquence incomplète
+- séquence complète mais construite avec un ordre incorrect des conditions
+- séquence contenant un traitement conditionnel d’égalité conduisant à des erreurs</p>
+<p><a class="md-button md-button--primary" href="/xtra/jupyterlite/lab/index.html?fromURL=/notebooks/instructions_conditionnelles.ipynb" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span> Notebook <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span></a></p>
+<p><a class="md-button" href="/xtra/jupyterlite/lab/index.html?fromURL=/notebooks/instructions_conditionnelles_corr.ipynb" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span> Corrigé <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span></a></p>
+</details>
+<h4 id="comparaisons">Comparaisons<a class="headerlink" href="#comparaisons" title="Permanent link">⚓︎</a></h4>
+<details class="question">
+<summary>Activité 6 - Comparaisons et calculs entre flottants</summary>
+<p>De nombreux algorithmes nécessitent de comparer des valeurs entre elles. Il est important de prévoir tous les cas de figure de manière exhaustive et sans commettre d'erreur dans l'ordre des évaluations pour les inégalités. Si l'ordre n'a pas d'importance pour les égalités simples, la notion même d'égalité doit être nuancée.</p>
+<details class="warning">
+<summary>Difficile comparaison des réels</summary>
+<p>La comparaison d'entier (type <code>int</code>) ne pose pas de problèmes particuliers. Il n'en va pas de même avec les réels (type <code>float</code>).</p>
+<p>En effet, certaines valeurs sont seulement des valeurs approchées. Exemple pour la valeur 0.3 affichée avec un très grand nombre de décimales:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{:.80f}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">0.3</span><span class="p">))</span>
+</code></pre></div>
+<p></p><div onclick='start_term("id19")' id="fake_id19" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id19" class="py_mk_hide"></div>
+<p>Les tests d'égalité stricte sont donc à éviter entre réels. Il faudra privilégier des comparaisons de valeurs arrondies (instruction <code>round</code>) ou tolérer un faible écart.
+Certaines valeurs réelles sont seulement des valeurs approchées. </p>
+<p>Exemple pour la valeur 0.3 affichée avec un très grand nombre de décimales : </p>
+<p></p><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{:.80f}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">0.3</span><span class="p">))</span>
+</code></pre></div>
+<em>donne : 0.29999999999999998889776975374843459576368331909179687500000000000000000000000000</em>
+<p>Les tests d’égalité stricte sont donc à éviter entre réels. Il faudra privilégier des comparaisons de valeurs arrondies (instruction round) ou tolérer un faible écart.</p>
+</details>
+<ul>
+<li>Afficher les deux nombres x et y avec une cinquantaine de décimales puis transformer le test d'égalité stricte en un test de comparaison d'arrondis en utilisant la fonction round (help() est votre amie...). </li>
+<li>Ensuite, vous écrirez un test de comparaison tolérant un faible écart (ex : ecart_tolere = 0.01)</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.1</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mf">0.3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span>
+</code></pre></div>
+<p></p><div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_00000048" class="comment">###</span><div class="line" id="editor_00000048"></div><div id="term_editor_00000048" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_00000048","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000048","")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000048').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000048" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000048")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000048")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000048" class="py_mk_hide"></span><span id="corr_content_editor_00000048" class="py_mk_hide" data-strudel=""></span>
+<details class="success">
+<summary>Corrigé</summary>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.1</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mf">0.3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{:.50f}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{:.50f}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="nb">round</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="n">ecart_tolere</span> <span class="o">=</span> <span class="mf">0.01</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">y</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">ecart_tolere</span><span class="p">)</span>
+</code></pre></div>
+</details>
+</details>
+<details class="question">
+<summary>Activité 7 - Comparaison physique entre variables</summary>
+<p>Toute variable peut être considérée comme un objet, défini par différentes caractéristiques telle que leur adresse en mémoire. Des copies simple peuvent alors poser problèmes pour des variables mutables.</p>
+<p>Exécutez le programme suivant puis expliquer les résultats obtenus.</p>
+<p><em>Remarque : la fonction id() renvoie l'identifiant d'une variable.</em></p>
+<p></p><div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_80f5d29cf2b895360adb79755019d48589d8d7de" class="comment">###</span><div class="line" id="editor_80f5d29cf2b895360adb79755019d48589d8d7de"></div><div id="term_editor_80f5d29cf2b895360adb79755019d48589d8d7de" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_80f5d29cf2b895360adb79755019d48589d8d7de","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_80f5d29cf2b895360adb79755019d48589d8d7de","scripts/variable")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_80f5d29cf2b895360adb79755019d48589d8d7de').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_80f5d29cf2b895360adb79755019d48589d8d7de" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_80f5d29cf2b895360adb79755019d48589d8d7de")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_80f5d29cf2b895360adb79755019d48589d8d7de")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_80f5d29cf2b895360adb79755019d48589d8d7de" class="py_mk_hide">liste1 = ['a', 'b', 'c']bksl-nlliste2 = liste1bksl-nlliste3 = ['a', 'b', 'c']bksl-nlbksl-nlprint(liste1 == liste2)bksl-nlprint(liste1 == liste3)bksl-nlbksl-nlprint(liste1 is liste2)bksl-nlprint(liste1 is liste3)bksl-nlbksl-nlprint(id(liste1))bksl-nlprint(id(liste2))bksl-nlprint(id(liste3))bksl-nl</span><span id="corr_content_editor_80f5d29cf2b895360adb79755019d48589d8d7de" class="py_mk_hide" data-strudel=""></span>
+<p><strong>A</strong></p>
+<p><strong>Z</strong></p>
+<details class="success">
+<summary>Corrigé</summary>
+<p>En affectant l1 à l2, on octroie la même adresse mémoire aux deux listes, donc le == ou le is pointe vers le même endroit.</p>
+<p>Par contre, en créant l3 "manuellement", on le crée à une nouvelle adresse. Donc les valeurs de l1 et l3 sont les mêmes, mais les listes ne pointent pas à la même adresse.</p>
+</details>
+</details>
+<h3 id="les-exceptions">Les exceptions<a class="headerlink" href="#les-exceptions" title="Permanent link">⚓︎</a></h3>
+<p>Même si un code est syntaxiquement correct, il peut générer des erreurs. Quand Python rencontre une erreur lors de l'exécution d'un code, on dit qu'il <strong>lève une exception</strong>.</p>
+<p>Cela génère l'affichage d'un message explicite et l'arrêt du programme si ces exceptions ne sont pas gérées.</p>
+<p><strong>Gérer les exceptions</strong> consiste à <strong>anticiper les erreurs</strong> (hors de contrôle du concepteur) de manière à ce que le programme ne s'arrête pas. Contrairement aux assertions, les exceptions permettent ainsi de ne pas planter le programme en proposant une alternative de traitement des cas problématiques avec les instructions <code>try/except/else/finally</code>. Elles doivent <strong>demeurer dans le code final</strong>.</p>
+<p>En effet, la plupart des programmes ont vocation à être utilisés par d'autres utilisateurs que leur concepteur, et ceux-ci peuvent entrer des valeurs de variables provoquant des erreurs lors de l'exécution, même si le code du concepteur est initialement correct. Le concepteur doit anticiper ces erreurs dues à l'utilisateur.</p>
+<h4 id="liste-non-exhaustive-dexceptions">Liste non exhaustive d'exceptions<a class="headerlink" href="#liste-non-exhaustive-dexceptions" title="Permanent link">⚓︎</a></h4>
+<p>Il existe un certain nombre de catégories d'exceptions clairement identifiées et repérées par un nom adéquat.</p>
+<p><strong>Exercice 8</strong></p>
+<p>Dans les lignes ci-dessous, un certain nombre de codes erronés sont écrits. Identifier l'exception correspondante parmi celles proposées ci-dessous et associées les au code.</p>
+<div class="highlight"><pre><span></span><code>a) SyntaxError: invalid syntax
+b) ZeroDivisionError: division by zero
+c) FileNotFoundError: [Errno 2] No such file or directory: 'mon_fichier'
+d) IndexError: list index out of range
+e) ValueError: invalid literal for int() with base 10: 'seize'
+f) TypeError: unsupported operand type(s) for +: 'int' and 'str'
+g) NameError: name 'z' is not defined
+</code></pre></div>
+<p>Cette liste est non exhaustive...</p>
+<ol>
+<li><div class="highlight"><pre><span></span><code><span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">'6'</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">L</span><span class="p">:</span>
+    <span class="n">somme</span> <span class="o">=</span> <span class="n">somme</span> <span class="o">+</span> <span class="n">element</span>
+</code></pre></div></li>
+<li><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">div</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">/</span><span class="n">y</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">div</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
+</code></pre></div></li>
+<li><div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">z</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</code></pre></div></li>
+<li><div class="highlight"><pre><span></span><code><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</code></pre></div></li>
+<li><div class="highlight"><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="s2">"seize"</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">))</span>
+</code></pre></div></li>
+<li><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div></li>
+<li><div class="highlight"><pre><span></span><code><span class="nb">open</span><span class="p">(</span><span class="s1">'mon_fichier'</span><span class="p">)</span>
+</code></pre></div></li>
+</ol>
+<details class="note">
+<summary>Correction</summary>
+<ul>
+<li>a → 6</li>
+<li>b → 2</li>
+<li>c → 7</li>
+<li>d → 4</li>
+<li>e → 5</li>
+<li>f → 1</li>
+<li>g → 3</li>
+</ul>
+</details>
+<p>Au-dessus du type d'exception (ValueError, IndexError, etc...) se trouve une description de ce qui a causé l'erreur. C'est ce qu'on appelle une stack trace, et ça représente la pile d'appels qui ont amené à cette erreur. Pour comprendre votre erreur, il faut lire ce texte à l'envers, de bas en haut.</p>
+<p>Testez et analysez le programme suivant :</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">une_fonction</span><span class="p">():</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="o">/</span><span class="mi">0</span>
+  
+
+<span class="k">def</span> <span class="nf">une_autre_fonction</span><span class="p">():</span>
+    <span class="n">une_fonction</span><span class="p">()</span>
+
+
+<span class="n">une_autre_fonction</span><span class="p">()</span>
+</code></pre></div>
+<div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_00000049" class="comment">###</span><div class="line" id="editor_00000049"></div><div id="term_editor_00000049" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_00000049","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000049","")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000049').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000049" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000049")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000049")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+<p><span id="content_editor_00000049" class="py_mk_hide"></span><span id="corr_content_editor_00000049" class="py_mk_hide" data-strudel=""></span></p>
+<h4 id="comment-gerer-les-exceptions">Comment gérer les exceptions?<a class="headerlink" href="#comment-gerer-les-exceptions" title="Permanent link">⚓︎</a></h4>
+<p>Il suffit pour cela d'utiliser les instructions <code>try/except</code> et éventuellement <code>else</code> et <code>finally</code>.</p>
+<ul>
+<li><strong>Le bloc <code>try</code></strong> permet de tester un bloc de code et ne l'exécute que s'il ne contient aucune erreur. Dans le cas contraire, le programme ignore la totalité du code dans ce bloc et passe au bloc suivant <code>except</code></li>
+<li><strong>Le bloc <code>except</code></strong> sera exécuté en cas d'erreur</li>
+<li><strong>Le bloc <code>else</code></strong> permet d'exécuter une action si aucune erreur ne survient dans le bloc <code>try</code></li>
+<li><strong>Le bloc <code>finally</code></strong> vous permet d'exécuter du code, quel que soit le résultat des blocs <code>try</code> et <code>except</code>.</li>
+</ul>
+<p><em>Exemple</em> : structure complète possible</p>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
+  <span class="n">resultat</span> <span class="o">=</span> <span class="n">numerateur</span><span class="o">/</span><span class="n">denominateur</span>
+<span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">"La variable numerateur ou denominateur n'a pas été définie."</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">"La variable numerateur ou denomniateur possède un type incompatible avec la division"</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">"La variable denominateur est égale à 0."</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">"Le résultat est : "</span><span class="p">,</span> <span class="n">resultat</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">"Vous venez de calculer une division"</span><span class="p">)</span>
+</code></pre></div>
+<div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_00000050" class="comment">###</span><div class="line" id="editor_00000050"></div><div id="term_editor_00000050" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_00000050","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000050","")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000050').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000050" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000050")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000050")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+<p><span id="content_editor_00000050" class="py_mk_hide"></span><span id="corr_content_editor_00000050" class="py_mk_hide" data-strudel=""></span></p>
+<h2 id="jeux-de-tests">Jeux de tests<a class="headerlink" href="#jeux-de-tests" title="Permanent link">⚓︎</a></h2>
+<p>Afin de vérifier le bon fonctionnement d'un algorithme, il faut aussi tester son programme avec un jeu de tests judicieusement choisi.</p>
+<p>Pour cela, on peut:</p>
+<ul>
+<li>Utiliser des assertions dans le programme principal</li>
+<li>Insérer des tests dans le prototype même de la fonction. Cela présente de gros avantages : la fonction peut être transférée à un autre programme, ou données à un autre programmeur : celui-ci aura tous les renseignements nécessaires.</li>
+</ul>
+<p>Voyons un exemple de test inséré dans le prototype d'une fonction :</p>
+<p></p><div class="highlight"><pre><span></span><code><span class="sd">"""</span>
+<span class="sd">...</span>
+
+<span class="sd">Exemples :</span>
+<span class="sd">&gt;&gt;&gt; indice_maximum_liste([2, 0, 8, -3, 9, 6])</span>
+<span class="sd">4</span>
+<span class="sd">"""</span>
+</code></pre></div>
+Pour que ce test tapé dans le prototype de la fonction soit reconnu, exécuté et comparé au résultat souhaité, il faudra toutefois ajouter les trois lignes de code suivantes dans votre prorgamme principal :
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+  <span class="kn">import</span> <span class="nn">doctest</span>
+  
+  
+  <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
+</code></pre></div>
+<p><strong>Exercice 9</strong></p>
+<p>Faire la docstring complète de ce module (général et pour chaque fonction), en incluant des exemples à tester avec le module Doctest.
+Ne pas oublier de respecter le PEP8</p>
+<div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_00000051" class="comment">###</span><div class="line" id="editor_00000051"></div><div id="term_editor_00000051" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_00000051","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000051","scripts/module_liste.py")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000051').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000051" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000051")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000051")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+<p><span id="content_editor_00000051" class="py_mk_hide"></span><span id="corr_content_editor_00000051" class="py_mk_hide" data-strudel=""></span></p>
+<p><strong>A</strong></p>
+<p><strong>Z</strong></p>
+<details class="success">
+<summary>Corrigé</summary>
+<div class="highlight"><pre><span></span><code><span class="c1"># module sur les listes</span>
+
+<span class="sd">"""</span>
+<span class="sd">Ce module contient les différentes fonctions sur les listes suivantes:</span>
+
+<span class="sd">    - dans_liste: Recherche de la présence d'un élément dans la liste</span>
+<span class="sd">    - max_liste: Recherche de la valeur maximale (et/ou minimale) des élément d'une liste</span>
+<span class="sd">    - moy_liste: Calcul de la moyenne des élément d'une liste</span>
+<span class="sd">    - indice_min_liste: Recherche de l'indice de l'élément minimum </span>
+<span class="sd">    - card_val_liste: Recherche du nb d'occurrences d'une valeur </span>
+<span class="sd">    - supp_liste: Suppression de la première occurrence d'un élément </span>
+<span class="sd">"""</span>
+
+
+<span class="k">def</span> <span class="nf">dans_liste</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">L</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Cette fonction permet de rechercher si un élément est dans une liste ou non.</span>
+<span class="sd">    </span>
+<span class="sd">    param x : Elément recherché (float)</span>
+<span class="sd">    param L : Liste pour la recherche (list)</span>
+<span class="sd">    return : présence ou non (bool)</span>
+<span class="sd">    </span>
+<span class="sd">    Exemple :</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; dans_liste(2, [1, 2, 3])</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; dans_liste(4, [1, 2, 3])</span>
+<span class="sd">    False</span>
+<span class="sd">    """</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="kc">False</span>
+    
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">L</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">e</span> <span class="o">==</span> <span class="n">x</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="kc">True</span>
+    
+    <span class="k">return</span> <span class="n">msg</span>
+
+
+<span class="k">def</span> <span class="nf">max_liste</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Cette fonction permet de rechercher le plus grand élément d'une liste.</span>
+<span class="sd">    </span>
+<span class="sd">    param L : Liste (list)</span>
+<span class="sd">    return : valeur max (float)</span>
+<span class="sd">    </span>
+<span class="sd">    Exemple :</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; max_liste([1, 2, 3])</span>
+<span class="sd">    3</span>
+<span class="sd">    &gt;&gt;&gt; max_liste([4, 1, 2])</span>
+<span class="sd">    4</span>
+<span class="sd">    """</span>
+    
+    <span class="n">maxi</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">maxi</span><span class="p">:</span>
+            <span class="n">maxi</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            
+    <span class="k">return</span> <span class="n">maxi</span>
+
+
+<span class="k">def</span> <span class="nf">moy_liste</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Cette fonction permet de calculer la moyenne des valeurs d'une liste.</span>
+<span class="sd">    </span>
+<span class="sd">    param L : Liste dont on cherche la moyenne (list)</span>
+<span class="sd">    return : valeur moyenne (float)</span>
+<span class="sd">    </span>
+<span class="sd">    Exemple :</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; moy_liste([1, 2, 3])</span>
+<span class="sd">    2</span>
+<span class="sd">    """</span> 
+    
+    <span class="n">Somme</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">L</span><span class="p">:</span>
+        <span class="n">Somme</span> <span class="o">=</span> <span class="n">Somme</span> <span class="o">+</span> <span class="n">e</span>
+        
+    <span class="n">moyenne</span> <span class="o">=</span> <span class="n">Somme</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">moyenne</span>
+
+
+<span class="k">def</span> <span class="nf">indice_min_liste</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Cette fonction permet d'avoir l'indice de la valeur minimum d'une liste.</span>
+<span class="sd">    </span>
+<span class="sd">    param L : Liste dont on cherche l'indice du min (list)</span>
+<span class="sd">    return : indice du min (int)</span>
+<span class="sd">    </span>
+<span class="sd">    Exemple :</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; indice_min_liste([1, 2, 3])</span>
+<span class="sd">    0</span>
+<span class="sd">    &gt;&gt;&gt; indice_min_liste([4, 2, 1])</span>
+<span class="sd">    2</span>
+<span class="sd">    """</span> 
+    
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">indice</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">mini</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">L</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">mini</span><span class="p">:</span>
+            <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">mini</span>
+            <span class="n">indice</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+        
+    <span class="k">return</span> <span class="n">indice</span>
+
+
+<span class="k">def</span> <span class="nf">card_val_liste</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">L</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Cette fonction permet d'avoir le nombre de fois où apparaît une occurence dans une liste.</span>
+<span class="sd">    </span>
+<span class="sd">    param x : occurence à compter (float ou str)</span>
+<span class="sd">    param L : Liste où on compte (list)</span>
+<span class="sd">    return : nombre d'occurence (int)</span>
+<span class="sd">    </span>
+<span class="sd">    Exemple :</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; card_val_liste(2, [1, 2, 3])</span>
+<span class="sd">    1</span>
+<span class="sd">    &gt;&gt;&gt; card_val_liste(2, [2, 2, 2])</span>
+<span class="sd">    3</span>
+<span class="sd">    """</span>
+    
+    <span class="n">nb</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">L</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">e</span> <span class="o">==</span> <span class="n">x</span><span class="p">:</span>
+            <span class="n">nb</span> <span class="o">=</span> <span class="n">nb</span> <span class="o">+</span> <span class="mi">1</span>
+    
+    <span class="k">return</span> <span class="n">nb</span>
+
+
+<span class="k">def</span> <span class="nf">supp_liste</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">L</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Cette fonction permet de supprimer la première occurence d'un élément d'une liste.</span>
+<span class="sd">    </span>
+<span class="sd">    param x : élément à supprimer</span>
+<span class="sd">    param L : Liste de départ(list)</span>
+<span class="sd">    return : Liste sans l'occurence de l'élément (list)</span>
+<span class="sd">    </span>
+<span class="sd">    Exemple :</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; supp_liste(1, [2, 1, 4, 1, 3])</span>
+<span class="sd">    [2, 4, 1, 3]</span>
+<span class="sd">    """</span>
+    <span class="n">arret</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">L</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">e</span> <span class="o">==</span> <span class="n">x</span> <span class="ow">and</span> <span class="n">arret</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="n">indice</span><span class="o">=</span><span class="n">L</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+            <span class="k">del</span> <span class="n">L</span><span class="p">[</span><span class="n">indice</span><span class="p">]</span>
+            <span class="n">arret</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="n">L</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">doctest</span>
+  
+  
+    <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
+</code></pre></div>
+</details></div>
+
+
+
+
+
+                
+<script src="../../pyodide-mkdocs/ide.js"></script> 
+
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+        
+          
+          <a href="../bases/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: 1️⃣ Les bases de Python">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                1️⃣ Les bases de Python
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../progra_orientee_objet/" class="md-footer__link md-footer__link--next" aria-label="Suivant: 🇹 Progra Orientée Objet">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              <div class="md-ellipsis">
+                🇹 Progra Orientée Objet
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Réalisé par <a href="https://github.com/davy39" target="_blank">Davy COTTET</a>
+&copy; 2023 sous licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="_blank">CC BY-NC-SA 4.0</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Lycee-Experimental" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.tracking", "navigation.top", "navigation.footer", "toc.integrate", "navigation.indexes", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      
+        <script src="../../xtra/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../xtra/javascripts/logic-circuit-simulator.js"></script>
+      
+        <script src="../../xtra/javascripts/quizdown.js"></script>
+      
+        <script src="../../xtra/javascripts/quizdownHighlight.js"></script>
+      
+        <script src="../../xtra/javascripts/quizdownKatex.js"></script>
+      
+        <script src="../../xtra/v86/libv86.js"></script>
+      
+        <script src="../../xtra/javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

@@ -13,10 +13,10 @@
         <link rel="canonical" href="https://nsi.lycee-experimental.org/algo/dichotomie/">
       
       
-        <link rel="prev" href="../moy/">
+        <link rel="prev" href="../parcours/">
       
       
-        <link rel="next" href="../insert/">
+        <link rel="next" href="../tris/">
       
       
       <link rel="icon" href="../../assets/images/logo-lxp-noir.svg">
@@ -24,7 +24,7 @@
     
     
       
-        <title>1️⃣ Dichotomie - NSI-LXP</title>
+        <title>1️⃣ Recherche par dichotomie - NSI-LXP</title>
       
     
     
@@ -41,17 +41,17 @@
 
       
     
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-light.min.css">
 <!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>    
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.26.0/ace.js" type="text/javascript" charset="utf-8"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.26.0/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="https://cdn.jsdelivr.net/pyodide/v0.24.0/full/pyodide.js"></script>
-<script src="https://cdn.jsdelivr.net/pyodide/v0.24.0/full/pyodide.asm.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.12.5/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.12.5/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.asm.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/js-md5"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.37.2/js/jquery.terminal.min.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.37.2/css/jquery.terminal.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
 <script src="../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../pyodide-mkdocs/interpreter.js"></script> 
 
@@ -107,6 +107,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#algorithmes-de-recherche-dichotomique" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -136,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1️⃣ Dichotomie
+              1️⃣ Recherche par dichotomie
             
           </span>
         </div>
@@ -339,6 +344,26 @@
     
     
       <li class="md-tabs__item">
+        <a href="../../web/" class="md-tabs__link">
+          
+  
+    
+  
+  Web
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
         <a href="../../python/" class="md-tabs__link">
           
   
@@ -365,26 +390,6 @@
     
   
   Bigdata
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../web/" class="md-tabs__link">
-          
-  
-    
-  
-  Web
 
         </a>
       </li>
@@ -577,6 +582,8 @@
       
         
       
+        
+      
     
     
     
@@ -691,6 +698,26 @@
   
   <span class="md-ellipsis">
     1️⃣ Langage machine et assembleur
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fondement/ihm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Interfaces Homme/Machine
   </span>
   
 
@@ -1088,6 +1115,12 @@
         
       
         
+          
+        
+      
+        
+          
+        
       
     
     
@@ -1197,123 +1230,12 @@
   
   
   
-    
-    
-      
-        
-      
-        
-          
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../internet/routage/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    🇹 Protocoles de routage
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5_5" id="__nav_5_5_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_5">
-            <span class="md-nav__icon md-icon"></span>
-            🇹 Protocoles de routage
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_5_5_1" id="__nav_5_5_1_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Corrections
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_5_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_5_1">
-            <span class="md-nav__icon md-icon"></span>
-            Corrections
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
     <li class="md-nav__item">
-      <a href="../../internet/routage/Corrections/Exercice1_correction/" class="md-nav__link">
+      <a href="../../internet/routage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Exercice1 correction
+    🇹Protocoles de routage
   </span>
   
 
@@ -1329,151 +1251,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../internet/routage/Corrections/Exercice2_correction/" class="md-nav__link">
+      <a href="../../internet/secu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Exercice2 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../internet/routage/Corrections/Exercice3_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice3 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../internet/routage/Corrections/Exercice4_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice4 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../internet/routage/Corrections/Exercice5_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice5 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../internet/routage/Corrections/Exercice6_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice6 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../internet/routage/Corrections/Exercice7_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice7 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../internet/routage/Corrections/Exercice8_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice8 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../internet/routage/Corrections/Exercice9_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice9 correction
+    🇹 Sécurité des communications
   </span>
   
 
@@ -1489,24 +1271,6 @@
     </li>
   
 
-              
-            
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
     
       
       
@@ -1518,12 +1282,6 @@
       
         
           
-        
-      
-        
-      
-        
-      
         
       
         
@@ -1549,11 +1307,11 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../python/" class="md-nav__link ">
+            <a href="../../web/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
-    Python
+    Web
   </span>
   
 
@@ -1569,7 +1327,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            Python
+            Web
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1581,144 +1339,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/bases/" class="md-nav__link">
+      <a href="../../web/langage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    1️⃣ Les bases
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../python/Bonnes_pratiques/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    🇹 Bonnes pratiques de la progra
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_3">
-            <span class="md-nav__icon md-icon"></span>
-            🇹 Bonnes pratiques de la progra
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_6_3_2" id="__nav_6_3_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Corrections
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_3_2">
-            <span class="md-nav__icon md-icon"></span>
-            Corrections
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Bonnes_pratiques/Corrections/Exercice1_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice1 correction
+    1️⃣ Langages web
   </span>
   
 
@@ -1734,11 +1359,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/Bonnes_pratiques/Corrections/Exercice2_correction/" class="md-nav__link">
+      <a href="../../web/http/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Exercice2 correction
+    1️⃣ Protocole HTTP
   </span>
   
 
@@ -1754,1431 +1379,15 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/Bonnes_pratiques/Corrections/Exercice3_correction/" class="md-nav__link">
+      <a href="../../web/requete/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Exercice3 correction
+    1️⃣ Requêtes GET et POST et formulaires
   </span>
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Bonnes_pratiques/Corrections/Exercice4_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice4 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Bonnes_pratiques/Corrections/Exercice5_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice5 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Bonnes_pratiques/Corrections/Exercice6_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice6 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Bonnes_pratiques/Corrections/Exercice7_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice7 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Bonnes_pratiques/Corrections/Exercice8_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice8 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Bonnes_pratiques/Corrections/Exercice9_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice9 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-      
-        
-          
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../python/Programmation_Orientee_Objet/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    🇹 Progra Orientée Objet
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_4" id="__nav_6_4_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_4">
-            <span class="md-nav__icon md-icon"></span>
-            🇹 Progra Orientée Objet
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_6_4_1" id="__nav_6_4_1_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Corrections
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_4_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_4_1">
-            <span class="md-nav__icon md-icon"></span>
-            Corrections
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Programmation_Orientee_Objet/Corrections/Exercice1_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice1 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Programmation_Orientee_Objet/Corrections/Exercice2_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice2 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Programmation_Orientee_Objet/Corrections/Exercice3_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice3 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Programmation_Orientee_Objet/Corrections/Exercice4_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice4 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Programmation_Orientee_Objet/Corrections/Exercice5_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice5 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Programmation_Orientee_Objet/Corrections/Exercice6_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice6 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Programmation_Orientee_Objet/Corrections/Fractions_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fractions correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Programmation_Orientee_Objet/scripts/lower_REM/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    lower REM
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-      
-        
-          
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../python/Recursivite/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    🇹 Récursivité
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_5" id="__nav_6_5_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_5">
-            <span class="md-nav__icon md-icon"></span>
-            🇹 Récursivité
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_6_5_1" id="__nav_6_5_1_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Corrections
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_5_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_5_1">
-            <span class="md-nav__icon md-icon"></span>
-            Corrections
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Recursivite/Corrections/Exemples_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exemples correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Recursivite/Corrections/Exercice1_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice1 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Recursivite/Corrections/Exercice2_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice2 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Recursivite/Corrections/Exercice3_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice3 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Recursivite/Corrections/Exercice4_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice4 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Recursivite/Corrections/Exercice5_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice5 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Recursivite/Corrections/Exercice6_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice6 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Recursivite/Corrections/Exercice7_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice7 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Recursivite/Corrections/Exercice8_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice8 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Recursivite/Corrections/Exercice9_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice9 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Recursivite/Corrections/Exercice10_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice10 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Recursivite/Corrections/Exercice11_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice11 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Recursivite/Corrections/Exercice12_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice12 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-      
-        
-          
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../python/Paradigmes_de_programmation/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    🇹 Paradigmes de la progra
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_6">
-            <span class="md-nav__icon md-icon"></span>
-            🇹 Paradigmes de la progra
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_6_6_1" id="__nav_6_6_1_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Corrections
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_6_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_6_1">
-            <span class="md-nav__icon md-icon"></span>
-            Corrections
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Paradigmes_de_programmation/Corrections/Exercice1_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice1 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Paradigmes_de_programmation/Corrections/Exercice2_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice2 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Paradigmes_de_programmation/Corrections/Exercice3_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice3 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Paradigmes_de_programmation/Corrections/Exercice4_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice4 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Paradigmes_de_programmation/Corrections/Exercice5_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice5 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Paradigmes_de_programmation/Corrections/Exercice6_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice6 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Paradigmes_de_programmation/Corrections/Exercice7_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice7 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Paradigmes_de_programmation/Corrections/Exercice8_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice8 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Paradigmes_de_programmation/Corrections/Exercice9_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice9 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Paradigmes_de_programmation/Corrections/Exercice10_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice10 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Paradigmes_de_programmation/Corrections/Exercice11_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice11 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Paradigmes_de_programmation/Corrections/Exercice12_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice12 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Paradigmes_de_programmation/Corrections/Exercice13_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice13 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Paradigmes_de_programmation/Corrections/Exercice14_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice14 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-      
-        
-          
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_7" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../python/Decidabilite-Calculabilite/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    🇹 Décidabilité et calculabilité
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6_7" id="__nav_6_7_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_7">
-            <span class="md-nav__icon md-icon"></span>
-            🇹 Décidabilité et calculabilité
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_7_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_6_7_1" id="__nav_6_7_1_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Corrections
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_7_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_7_1">
-            <span class="md-nav__icon md-icon"></span>
-            Corrections
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Decidabilite-Calculabilite/Corrections/Exercice1_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice1 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Decidabilite-Calculabilite/Corrections/Exercice2_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice2 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/Decidabilite-Calculabilite/Corrections/Exercice3_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice3 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -3206,7 +1415,19 @@
         
       
         
+          
+        
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
         
       
     
@@ -3226,11 +1447,11 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../data/" class="md-nav__link ">
+            <a href="../../python/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
-    Bigdata
+    Python
   </span>
   
 
@@ -3246,10 +1467,202 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/bases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Les bases de Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/bonnes_pratiques/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🇹 Bonnes pratiques de la progra
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/progra_orientee_objet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🇹 Progra Orientée Objet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/paradigmes_progra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🇹 Paradigmes de la progra
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/decidabilite_calculabilite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🇹 Décidabilité et calculabilité
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../data/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Bigdata
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
             Bigdata
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/types_construits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Types construits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -3290,7 +1703,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" >
         
           
           
@@ -3299,23 +1712,23 @@
               
   
   <span class="md-ellipsis">
-    1️⃣ Les données en tables
+    1️⃣ Données en tables
   </span>
   
 
             </a>
             
               
-              <label class="md-nav__link " for="__nav_7_2" id="__nav_7_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_8_3" id="__nav_8_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3">
             <span class="md-nav__icon md-icon"></span>
-            1️⃣ Les données en tables
+            1️⃣ Données en tables
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3346,10 +1759,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3_2" >
         
           
-          <label class="md-nav__link" for="__nav_7_2_2" id="__nav_7_2_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8_3_2" id="__nav_8_3_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3360,8 +1773,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_2_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3_2">
             <span class="md-nav__icon md-icon"></span>
             Prendre un bon départ
           </label>
@@ -3480,10 +1893,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3_3" >
         
           
-          <label class="md-nav__link" for="__nav_7_2_3" id="__nav_7_2_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8_3_3" id="__nav_8_3_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3494,8 +1907,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_2_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_2_3">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3_3">
             <span class="md-nav__icon md-icon"></span>
             Les fichiers
           </label>
@@ -3610,10 +2023,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3_4" >
         
           
-          <label class="md-nav__link" for="__nav_7_2_4" id="__nav_7_2_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8_3_4" id="__nav_8_3_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3624,8 +2037,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_2_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_2_4">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3_4">
             <span class="md-nav__icon md-icon"></span>
             Requêtes simples
           </label>
@@ -3740,9 +2153,15 @@
         
       
         
-      
+          
         
       
+        
+          
+        
+      
+        
+          
         
       
     
@@ -3757,7 +2176,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" >
         
           
           
@@ -3773,14 +2192,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_7_3" id="__nav_7_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_8_4" id="__nav_8_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_4">
             <span class="md-nav__icon md-icon"></span>
             🇹 Structures de données
           </label>
@@ -3793,122 +2212,12 @@
   
   
   
-    
-    
-      
-        
-      
-        
-          
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3_2" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../data/structure/donnees_lineaires/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Données linéaires
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_7_3_2" id="__nav_7_3_2_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_3_2">
-            <span class="md-nav__icon md-icon"></span>
-            Données linéaires
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3_2_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_7_3_2_1" id="__nav_7_3_2_1_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Corrections
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_7_3_2_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_3_2_1">
-            <span class="md-nav__icon md-icon"></span>
-            Corrections
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
     <li class="md-nav__item">
-      <a href="../../data/structure/donnees_lineaires/Corrections/Exercice1_correction/" class="md-nav__link">
+      <a href="../../data/structure/donnees_lineaires/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Exercice1 correction
+    Structure de données linéaires
   </span>
   
 
@@ -3924,11 +2233,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data/structure/donnees_lineaires/Corrections/Exercice2_correction/" class="md-nav__link">
+      <a href="../../data/structure/donnees_arbres/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Exercice2 correction
+    Les arbres binaires
   </span>
   
 
@@ -3944,151 +2253,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data/structure/donnees_lineaires/Corrections/Exercice3_correction/" class="md-nav__link">
+      <a href="../../data/structure/donnees_graphes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Exercice3 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_lineaires/Corrections/Exercice4_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice4 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_lineaires/Corrections/Exercice5_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice5 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_lineaires/Corrections/Exercice6_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice6 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_lineaires/Corrections/Exercice7_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice7 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_lineaires/Corrections/Exercice8_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice8 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_lineaires/Corrections/Exercice9_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice9 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_lineaires/Corrections/Exercice10_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice10 correction
+    Les Graphes
   </span>
   
 
@@ -4107,1948 +2276,19 @@
               
             
               
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-      
-        
-          
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3_3" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../data/structure/donnees_arbres/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Données en arbres
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_7_3_3" id="__nav_7_3_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_3_3">
-            <span class="md-nav__icon md-icon"></span>
-            Données en arbres
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3_3_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_7_3_3_1" id="__nav_7_3_3_1_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Corrections
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_7_3_3_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_3_3_1">
-            <span class="md-nav__icon md-icon"></span>
-            Corrections
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
                 
   
   
   
     <li class="md-nav__item">
-      <a href="../../data/structure/donnees_arbres/Corrections/Exercice1_correction/" class="md-nav__link">
+      <a href="../../data/bases_de_donnees/" class="md-nav__link">
         
-  
-  <span class="md-ellipsis">
-    Exercice1 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_arbres/Corrections/Exercice2-3_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice2 3 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_arbres/Corrections/Exercice4_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice4 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_arbres/Corrections/Exercice5_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice5 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_arbres/Corrections/Exercice6_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice6 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_arbres/Corrections/Exercice7_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice7 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_arbres/Corrections/Huffman_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Huffman correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_arbres/Corrections/HuffmanPy_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    HuffmanPy correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-      
-        
-          
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3_4" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../data/structure/donnees_graphes/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Données en graphes
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_7_3_4" id="__nav_7_3_4_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_3_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_3_4">
-            <span class="md-nav__icon md-icon"></span>
-            Données en graphes
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3_4_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_7_3_4_1" id="__nav_7_3_4_1_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Corrections
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_7_3_4_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_3_4_1">
-            <span class="md-nav__icon md-icon"></span>
-            Corrections
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_graphes/Corrections/Exercice1_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice1 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_graphes/Corrections/Exercice2_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice2 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_graphes/Corrections/Exercice3_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice3 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_graphes/Corrections/Exercice4_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice4 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_graphes/Corrections/Exercice5_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice5 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_graphes/Corrections/Exercice6_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice6 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_graphes/Corrections/Exercice7_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice7 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_graphes/Corrections/Exercice8_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice8 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_graphes/Corrections/Exercice9_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice9 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_graphes/Corrections/Exercice10_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice10 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_graphes/Corrections/Exercice11_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice11 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_graphes/Corrections/Exercice12_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice12 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_graphes/Corrections/Exercice13a15_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice13a15 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_graphes/Corrections/Exercice17_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice17 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_graphes/Corrections/Exercice18et19_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice18et19 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_graphes/Corrections/Exercice20_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice20 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_graphes/Corrections/Exercice21_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice21 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_graphes/Corrections/Exercice22_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice22 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_graphes/Corrections/Exercice23_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice23 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_graphes/Corrections/Exercice24_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice24 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_graphes/Corrections/Exercice25_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice25 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_graphes/Corrections/Exercice26_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice26 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/structure/donnees_graphes/Corrections/Exercice27_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice27 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-      
-        
-          
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../data/bases_de_donnees/" class="md-nav__link ">
-              
   
   <span class="md-ellipsis">
     🇹 Bases de données
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_7_4" id="__nav_7_4_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_4">
-            <span class="md-nav__icon md-icon"></span>
-            🇹 Bases de données
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_7_4_1" id="__nav_7_4_1_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Corrections
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_4_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_4_1">
-            <span class="md-nav__icon md-icon"></span>
-            Corrections
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice6_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice6 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice7_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice7 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice8_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice8 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice9_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice9 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice10_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice10 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice11_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice11 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice12_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice12 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice13_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice13 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice14_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice14 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice15_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice15 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice16_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice16 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice17_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice17 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice18_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice18 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice19_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice19 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice20_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice20 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice21_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice21 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice22_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice22 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice23_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice23 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice24_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice24 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice25_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice25 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice26_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice26 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice27_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice27 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice28_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice28 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice29_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice29 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice30_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice30 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice31_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice31 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice32_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice32 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice33_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice33 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice34_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice34 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice35_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice35 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice36_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice36 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice37_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice37 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Exercice38_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice38 correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Indexation_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Indexation correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../data/bases_de_donnees/Corrections/Manipulation_correction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Manipulation correction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-          
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../web/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Web
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
-            <span class="md-nav__icon md-icon"></span>
-            Web
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../web/langage/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    1️⃣ Langages web
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../web/http/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    1️⃣ Protocole HTTP
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../web/requete/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    1️⃣ Requêtes GET et POST et formulaires
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../web/secu/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    🇹 Sécurité des communications
-  </span>
-  
-
       </a>
     </li>
   
@@ -6081,9 +2321,21 @@
         
       
         
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
       
         
       
+        
+          
         
       
         
@@ -6137,60 +2389,13 @@
                 
   
   
-    
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="">
-            
-  
-  <span class="md-ellipsis">
-    Parcours de listes
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_9_2">
-            <span class="md-nav__icon md-icon"></span>
-            Parcours de listes
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
   
     <li class="md-nav__item">
-      <a href="../moy/" class="md-nav__link">
+      <a href="../parcours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    1️⃣ Extremums et moyennes
+    1️⃣ Parcours d'un tableau
   </span>
   
 
@@ -6212,90 +2417,19 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    1️⃣ Dichotomie
+    1️⃣ Recherche par dichotomie
   </span>
   
 
       </a>
       
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_9_3" id="__nav_9_3_label" tabindex="">
-            
-  
-  <span class="md-ellipsis">
-    Algorithmes de tri
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9_3">
-            <span class="md-nav__icon md-icon"></span>
-            Algorithmes de tri
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../insert/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    1️⃣ Tri par insertion
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -6307,23 +2441,15 @@
   
   
     <li class="md-nav__item">
-      <a href="../select/" class="md-nav__link">
+      <a href="../tris/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    1️⃣ Tri par sélection
+    1️⃣ Algorithmes de tri
   </span>
   
 
       </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -6359,7 +2485,7 @@
         
   
   <span class="md-ellipsis">
-    1️⃣ Algorithme KNN
+    1️⃣ Algorithmes KKN
   </span>
   
 
@@ -6380,6 +2506,26 @@
   
   <span class="md-ellipsis">
     🇹 Diviser pour régner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Recursivite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🇹 Récursivité
   </span>
   
 
@@ -7740,12 +3886,622 @@
   
 
 
-  <h1>1️⃣ Dichotomie</h1>
-
-<div class="admonition warning">
-<p class="admonition-title">En construction</p>
-<p>Cette section de <strong>cours de spécialité Numérique et Sciences de l'Informatique (NSI)</strong> est en construction.</p>
+<div><h1 id="algorithmes-de-recherche-dichotomique">Algorithmes de recherche dichotomique 🔪<a class="headerlink" href="#algorithmes-de-recherche-dichotomique" title="Permanent link">⚓︎</a></h1>
+<details class="conclu">
+<summary>Programme</summary>
+<table>
+<thead>
+<tr>
+<th>Notions</th>
+<th>Compétences</th>
+<th>Remarques</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Recherche dichotomique dans un tableau trié</td>
+<td>Montrer la terminaison de la recherche dichotomique à l’aide d’un variant de boucle.</td>
+<td>Des assertions peuvent être utilisées.<br>La preuve de la correction peut être présentée par le professeur.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<details class="question">
+<summary>Activité 1 - Je joue contre l'ordinateur</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Question 1</label><label for="__tabbed_1_2">Question 2</label><label for="__tabbed_1_3">Question 3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Exécuter le programme du jeu du nombre mystère.
+Faire quelques parties, expliquer la stratégie de l'ordinateur pour trouver le nombre mystère.</p>
+<p></p><div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_92fefaad907a015adf792accde64f81bcf9bbace" class="comment">###</span><div class="line" id="editor_92fefaad907a015adf792accde64f81bcf9bbace"></div><div id="term_editor_92fefaad907a015adf792accde64f81bcf9bbace" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_92fefaad907a015adf792accde64f81bcf9bbace","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_92fefaad907a015adf792accde64f81bcf9bbace","scripts/mystere")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_92fefaad907a015adf792accde64f81bcf9bbace').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_92fefaad907a015adf792accde64f81bcf9bbace" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_92fefaad907a015adf792accde64f81bcf9bbace")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_92fefaad907a015adf792accde64f81bcf9bbace")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_92fefaad907a015adf792accde64f81bcf9bbace" class="py_mk_hide">#--- HDR ---#bksl-nlbksl-nldef devine(reponse = None):bksl-nl    debut = NBpy-undMINbksl-nl    fin = NBpy-undMAXbksl-nl    reussi = Falsebksl-nl    while (fin-debut &gt;= 0 or erreur or reponse == None) and not reussi:bksl-nl        reussi = Falsebksl-nl        erreur = Falsebksl-nl        milieu = (fin + debut)//2bksl-nl        reponse = input(f"Si le nombre est strictement plus grand que {milieu} appuyer sur +, s'il est strictement plus petit appuyer sur - ,si c'est le bon appuyer sur =")bksl-nl        if reponse == '+':bksl-nl            debut=milieu + 1bksl-nl        elif reponse == '-':bksl-nl            fin = milieu - 1bksl-nl        elif reponse == '=':bksl-nl            print("Le nombre que vous avez choisi est : ", milieu)bksl-nl            reussi = Truebksl-nl        else :bksl-nl            print("Erreur de saisie. Il faut saisir + ou - ou =")bksl-nl            erreur = Truebksl-nlbksl-nl#--- HDR ---#bksl-nlbksl-nl"""Vous jouez contre l'ordinateur. Le code de la fonction devine est caché.bksl-nlVous devez penser à un nombre compris entre NBpy-undMIN et NBpy-undMAX.bksl-nlL'ordinateur va tenter de le deviner en vous posant des questions.bksl-nlIl faut juste cliquer pour exécuter."""bksl-nlbksl-nlNBpy-undMIN = 1bksl-nlNBpy-undMAX = 100bksl-nldevine()bksl-nlbksl-nlbksl-nlbksl-nlbksl-nlbksl-nlbksl-nlbksl-nlbksl-nlbksl-nl</span><span id="corr_content_editor_92fefaad907a015adf792accde64f81bcf9bbace" class="py_mk_hide" data-strudel=""></span>
+<p><strong>A</strong></p>
+<p><strong>Z</strong></p>
+<details class="success">
+<summary>Solution</summary>
+<div class="highlight"><pre><span></span><code>A chaque fois, il se place au milieu.
+</code></pre></div>
+</details>
 </div>
+<div class="tabbed-block">
+<p>Lorsque le nombre est compris entre 1 et 100, en combien d'essais au maximum l'ordinateur trouve-t-il la solution ?</p>
+<details class="success">
+<summary>Solution</summary>
+<p>En 7 essais.</p>
+</details>
+</div>
+<div class="tabbed-block">
+<p>Et si le nombre mystère est compris entre 1 et 200 ?</p>
+<details class="success">
+<summary>Solution</summary>
+<p>En 8 essais.</p>
+</details>
+</div>
+</div>
+</div>
+</details>
+<details class="info">
+<summary>Définition et principe de la dichotomie</summary>
+<p>Le mot dichotomie vient du grec ancien διχοτομία, dikhotomia (« division en deux parties »).</p>
+<p>La méthode de dichotomie fait partie des méthodes dites <em>«diviser pour régner»</em>. </p>
+<p>«dichotomie» se dit en anglais <em>binary search</em>.</p>
+<div class="admonition note">
+<p class="admonition-title">Dichotomie, déroulement intuitif</p>
+<ul>
+<li>on se place <em>au milieu</em> de la liste.</li>
+<li>on regarde si la valeur sur laquelle on est placée est inférieure ou supérieure à la valeur cherchée.</li>
+<li>on ne considère maintenant que la bonne moitié de la liste qui nous intéresse.</li>
+<li>on continue jusqu'à trouver la valeur cherchée (ou pas)</li>
+</ul>
+</div>
+<p>Comprendre la méthode de dichotomie est relativement simple, mais savoir la programmer est plus difficile.</p>
+<p>Pour des raisons d'efficacité, nous allons garder <em>intacte</em> notre liste de travail et simplement faire évoluer les indices qui déterminent le début et la fin de notre liste.</p>
+<p>Une autre méthode pourrait être d'extraire à chaque étape une nouvelle liste (dont on espère qu'elle contient la valeur cherchée), mais la technique utilisée (le <em>slicing</em> de liste) consomme beaucoup trop de ressources.</p>
+<p>Nous allons donc travailler avec trois variables :</p>
+<ul>
+<li><code>indice_debut</code> (en bleu sur le schéma)</li>
+<li><code>indice_fin</code> (en bleu sur le schéma)</li>
+<li><code>indice_central</code>, qui est égale à <code>(indice_debut + indice_fin) // 2</code> (en rouge sur le schéma)</li>
+</ul>
+<p>Dans cet exemple nous cherchons <code>14</code> dans la liste <strong>triée</strong> <code>[2, 3, 6, 7, 11, 14, 18, 19, 24]</code>.</p>
+<p><img alt="indices dichotomie" class="center" src="../images/fig4.png"></p>
+<p>Nous allons faire <em>se rapprocher</em> les indices <code>indice_debut</code> et <code>indice_fin</code> <strong>tant que</strong> <code>indice_debut &lt;= indice_fin</code></p>
+</details>
+<details class="question">
+<summary>Activité 2 - Recherche d'appartenance</summary>
+<p>Compléter la fonction <code>appartient_dichotomique</code> qui prend en paramètre une liste Python <code>ma_liste</code> et un valeur <code>valeur</code>. Cette fonction renvoie <code>True</code> si <code>valeur</code> est dans <code>ma_liste</code> et <code>False</code> sinon.</p>
+<p></p><div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_d3abc4470e7849e9b2af0115c25c11954643d74e" class="comment">###</span><div class="line" id="editor_d3abc4470e7849e9b2af0115c25c11954643d74e"></div><div id="term_editor_d3abc4470e7849e9b2af0115c25c11954643d74e" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_d3abc4470e7849e9b2af0115c25c11954643d74e","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_d3abc4470e7849e9b2af0115c25c11954643d74e" class="py_mk_hide">from random import randintbksl-nlbksl-nl# Testsbksl-nlvaleurs = [2, 3, 6, 7, 11, 14, 18, 19, 24]bksl-nlassert appartientpy-unddichotomique(valeurs, 14)bksl-nlassert appartientpy-unddichotomique(valeurs, 2)bksl-nlassert appartientpy-unddichotomique(valeurs, 24)bksl-nlassert appartientpy-unddichotomique([1, 3, 6, 9, 10], 7) is Falsebksl-nlassert appartientpy-unddichotomique(valeurs, 2000) is Falsebksl-nlbksl-nl# Autres testsbksl-nlassert appartientpy-unddichotomique([], 24) is Falsebksl-nllistepy-und2 = [randint(1, 1000) for i in range(2000)]bksl-nlassert appartientpy-unddichotomique(listepy-und2, 1500) is Falsebksl-nllistepy-und3 = [i for i in range(500)]bksl-nlassert appartientpy-unddichotomique(listepy-und3, 100)bksl-nlbksl-nlbksl-nlbksl-nlbksl-nl</span>            <button class="tooltip" onclick='check("editor_d3abc4470e7849e9b2af0115c25c11954643d74e","")'>            <img src="../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_d3abc4470e7849e9b2af0115c25c11954643d74e","scripts/appartient_dicho")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_d3abc4470e7849e9b2af0115c25c11954643d74e').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_d3abc4470e7849e9b2af0115c25c11954643d74e" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_d3abc4470e7849e9b2af0115c25c11954643d74e")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_d3abc4470e7849e9b2af0115c25c11954643d74e")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_d3abc4470e7849e9b2af0115c25c11954643d74e" class="py_mk_hide">def appartientpy-unddichotomique(mapy-undliste, valeur) :bksl-nl    indicepy-unddebut = 0bksl-nl    indicepy-undfin = ...bksl-nl    while indicepy-unddebut ... indicepy-undfin :bksl-nl        indicepy-undcentre = ...bksl-nl        valeurpy-undcentrale = ...bksl-nl        if valeurpy-undcentrale == valeur :bksl-nl            return ...bksl-nl        if ...bksl-nlbksl-nl        else :bksl-nl            ...bksl-nl    return ...bksl-nlbksl-nl# Testsbksl-nlvaleurs = [2, 3, 6, 7, 11, 14, 18, 19, 24]bksl-nlassert appartientpy-unddichotomique(valeurs, 14)bksl-nlassert appartientpy-unddichotomique(valeurs, 2)bksl-nlassert appartientpy-unddichotomique(valeurs, 24)bksl-nlassert not appartientpy-unddichotomique([1, 3, 6, 9, 10], 7)bksl-nlassert not appartientpy-unddichotomique(valeurs, 2000)bksl-nlbksl-nlbksl-nlbksl-nlbksl-nlbksl-nl</span><span id="corr_content_editor_d3abc4470e7849e9b2af0115c25c11954643d74e" class="py_mk_hide" data-strudel="">def appartientpy-unddichotomique(mapy-undliste, valeur) :bksl-nl    indicepy-unddebut = 0bksl-nl    indicepy-undfin = len(mapy-undliste) - 1bksl-nl    while indicepy-unddebut &lt;= indicepy-undfin :bksl-nl        indicepy-undcentre = (indicepy-unddebut + indicepy-undfin) // 2bksl-nl        valeurpy-undcentrale = mapy-undliste[indicepy-undcentre]bksl-nl        if valeurpy-undcentrale == valeur :bksl-nl            return Truebksl-nl        if valeurpy-undcentrale &lt; valeur :bksl-nl            indicepy-unddebut = indicepy-undcentre + 1bksl-nl        else :bksl-nl            indicepy-undfin = indicepy-undcentre - 1bksl-nl    return Falsebksl-nlbksl-nlbksl-nlbksl-nlbksl-nlbksl-nlbksl-nlbksl-nl</span>
+<p><strong>A</strong></p>
+<p><strong>Z</strong></p>
+</details>
+<details class="question">
+<summary>Activité 3 - Déroulé à la main : <code>v = 9</code> est-il dans <code>t = [1, 3, 6, 9]</code> ?</summary>
+<p>Écrire le déroulé à la main. Voici le début à poursuivre de façon analogue : </p>
+<ul>
+<li>indice_debut = <font color="#cc7777"><b>0</b></font></li>
+<li>indice_fin = <font color="#cc7777"><b>3</b></font></li>
+<li>condition du while : <font color="#cc7777"><b>True</b></font></li>
+<li>indice_centre =  <font color="#cc7777"><strong>(0+3)//2 = 1</strong></font></li>
+<li>valeur_centrale = ma_liste[indice_centre]  = <font color="#cc7777"><b>3</b></font></li>
+<li>v == valeur_centrale → <code>False</code></li>
+<li>valeur_centrale &lt; v → <code>True</code></li>
+<li>indice_debut =  <font color="#cc7777"><strong>2</strong></font></li>
+<li>condition du while : <font color="#cc7777"><b>True</b></font></li>
+<li>...</li>
+</ul>
+<details class="success">
+<summary>Solution</summary>
+<ul>
+<li>indice_debut = <font color="#cc7777"><b>0</b></font></li>
+<li>indice_fin = <font color="#cc7777"><b>3</b></font></li>
+<li>condition du while : <font color="#cc7777"><b>True</b></font></li>
+<li>indice_centre =  <font color="#cc7777"><strong>(0+3)//2 = 1</strong></font></li>
+<li>valeur_centrale = ma_liste[indice_centre]  = <font color="#cc7777"><b>3</b></font></li>
+<li>v == valeur_centrale → <code>False</code></li>
+<li>valeur_centrale &lt; v → <code>True</code></li>
+<li>indice_debut =  <font color="#cc7777"><strong>2</strong></font></li>
+<li>condition du while : <font color="#cc7777"><b>True</b></font></li>
+<li>indice_centre =  <font color="#cc7777"><strong>(2+3)//2 = 2</strong></font></li>
+<li>valeur_centrale = ma_liste[indice_centre]  = <font color="#cc7777"><b>6</b></font></li>
+<li>v == valeur_centrale → <code>False</code></li>
+<li>valeur_centrale &lt; v → <code>True</code></li>
+<li>valeur_debut =  <font color="#cc7777"><strong>3</strong></font></li>
+<li>condition du while : <font color="#cc7777"><b>True</b></font></li>
+<li>indice_centre =  <font color="#cc7777"><strong>(3+3)//2 = 3</strong></font></li>
+<li>valeur_centrale = ma_liste[indice_centre]  = <font color="#cc7777"><b>9</b></font></li>
+<li>v == valeur_centrale → <code>True</code></li>
+<li>la fonction renvoie <code>True</code></li>
+</ul>
+</details>
+</details>
+<details class="question">
+<summary>Activité 4 - Déroulé à la main : <code>v = 7</code> est-il dans <code>t = [1, 3, 6, 9, 10]</code> ?</summary>
+<p>Écrire le déroulé à la main, comme dans l'exercice précédent</p>
+<details class="success">
+<summary>Solution</summary>
+<ul>
+<li>indice_debut = <font color="#cc7777"><b>0</b></font></li>
+<li>indice_fin = <font color="#cc7777"><b>4</b></font></li>
+<li>condition du while : <font color="#cc7777"><b>True</b></font></li>
+<li>indice_centre =  <font color="#cc7777"><strong>(0+4)//2 = 2</strong></font></li>
+<li>valeur_centrale = ma_liste[indice_centre]  = <font color="#cc7777"><b>6</b></font></li>
+<li>v == valeur_centrale → <code>False</code></li>
+<li>valeur_centrale &lt; v → <code>True</code></li>
+<li>indice_debut =  <font color="#cc7777"><strong>3</strong></font></li>
+<li>condition du while : <font color="#cc7777"><b>True</b></font></li>
+<li>indice_centre =  <font color="#cc7777"><strong>(3+4)//2 = 3</strong></font></li>
+<li>valeur_centrale = ma_liste[indice_centre]  = <font color="#cc7777"><b>9</b></font></li>
+<li>v == valeur_centrale → <code>False</code></li>
+<li>valeur_centrale &lt; v → <code>False</code></li>
+<li>indice_fin =  <font color="#cc7777"><strong>2</strong></font></li>
+<li>condition du while : <font color="#cc7777"><b>False</b></font></li>
+<li>la fonction renvoie <code>False</code></li>
+</ul>
+<p>👉 On voit dans cet exemple pourquoi l'instruction <code>while indice_debut &lt;= indice_fin :</code> est <strong>absolument nécessaire</strong>.</p>
+</details>
+</details>
+<details class="question">
+<summary>Activité 5 - Recherche d'indice</summary>
+<p>Compléter la fonction <code>recherche_dichotomique</code> qui prend en paramètre une liste Python <code>ma_liste</code> et un valeur <code>valeur</code>. Cette fonction renvoie son indice si <code>valeur</code> est dans <code>ma_liste</code> et <code>None</code> sinon.</p>
+<p></p><div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_de83cf07c748419419a17d835200d78dc8c58e8b" class="comment">###</span><div class="line" id="editor_de83cf07c748419419a17d835200d78dc8c58e8b"></div><div id="term_editor_de83cf07c748419419a17d835200d78dc8c58e8b" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_de83cf07c748419419a17d835200d78dc8c58e8b","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_de83cf07c748419419a17d835200d78dc8c58e8b" class="py_mk_hide">from random import randintbksl-nlbksl-nl# Testsbksl-nlvaleurs = [2, 3, 6, 7, 11, 14, 18, 19, 24]bksl-nlassert recherchepy-unddichotomique(valeurs, 14) == 5bksl-nlassert recherchepy-unddichotomique(valeurs, 2) == 0bksl-nlassert recherchepy-unddichotomique(valeurs, 24) == 8bksl-nlassert recherchepy-unddichotomique([1, 3, 6, 9, 10], 7) is Nonebksl-nlassert recherchepy-unddichotomique(valeurs, 2000) is Nonebksl-nlbksl-nl# Autres testsbksl-nlassert recherchepy-unddichotomique([], 24) is Nonebksl-nllistepy-und2 = [randint(1, 1000) for i in range(2000)]bksl-nlassert recherchepy-unddichotomique(listepy-und2, 1500) is Nonebksl-nllistepy-und3 = [i for i in range(500)]bksl-nlassert recherchepy-unddichotomique(listepy-und3, 100) == 100bksl-nlbksl-nlbksl-nlbksl-nlbksl-nl</span>            <button class="tooltip" onclick='check("editor_de83cf07c748419419a17d835200d78dc8c58e8b","")'>            <img src="../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_de83cf07c748419419a17d835200d78dc8c58e8b","scripts/recherche_dicho")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_de83cf07c748419419a17d835200d78dc8c58e8b').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_de83cf07c748419419a17d835200d78dc8c58e8b" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_de83cf07c748419419a17d835200d78dc8c58e8b")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_de83cf07c748419419a17d835200d78dc8c58e8b")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_de83cf07c748419419a17d835200d78dc8c58e8b" class="py_mk_hide">def recherchepy-unddichotomique(mapy-undliste, valeur) :bksl-nl    ...bksl-nlbksl-nlbksl-nlbksl-nl# Testsbksl-nlvaleurs = [2, 3, 6, 7, 11, 14, 18, 19, 24]bksl-nlassert recherchepy-unddichotomique(valeurs, 14) == 5bksl-nlassert recherchepy-unddichotomique(valeurs, 2) == 0bksl-nlassert recherchepy-unddichotomique(valeurs, 24) == 8bksl-nlassert recherchepy-unddichotomique([1, 3, 6, 9, 10], 7) is Nonebksl-nlassert recherchepy-unddichotomique(valeurs, 2000) is Nonebksl-nlbksl-nlbksl-nlbksl-nlbksl-nlbksl-nlbksl-nlbksl-nlbksl-nl</span><span id="corr_content_editor_de83cf07c748419419a17d835200d78dc8c58e8b" class="py_mk_hide" data-strudel="">def recherchepy-unddichotomique(mapy-undliste, valeur) :bksl-nl    indicepy-unddebut = 0bksl-nl    indicepy-undfin = len(mapy-undliste) - 1bksl-nl    while indicepy-unddebut &lt;= indicepy-undfin :bksl-nl        indicepy-undcentre = (indicepy-unddebut + indicepy-undfin) // 2bksl-nl        valeurpy-undcentrale = mapy-undliste[indicepy-undcentre]bksl-nl        if valeurpy-undcentrale == valeur :bksl-nl            return indicepy-undcentrebksl-nl        if valeurpy-undcentrale &lt; valeur :bksl-nl            indicepy-unddebut = indicepy-undcentre + 1bksl-nl        else :bksl-nl            indicepy-undfin = indicepy-undcentre - 1bksl-nl    return Nonebksl-nlbksl-nlbksl-nlbksl-nlbksl-nlbksl-nlbksl-nl</span>
+<p><strong>A</strong></p>
+<p><strong>Z</strong></p>
+</details>
+<details class="question">
+<summary>Activité 6 - Une fête</summary>
+<p>Nicolas organise une fête, et demande à ses amis s'ils viendront. Dès qu'un ami lui répond favorablement, il l'ajoute dans <code>liste_amis</code>.
+Compléter le code ci-dessous afin de pouvoir déterminer si Vincent, Romain et Valérie ont décidé de venir (bien respecter les majuscules, minuscules et accents). La liste <code>liste_amis</code> est dans du code caché.</p>
+<p>Vous devez <strong>absolument</strong> réaliser une recherche <strong>dichotomique</strong> et pas une recherche naïve. Attention, c'est à vous de créer <code>ma_liste_amis</code> qui est utilisée dans les tests. (Vous pouvez regader l'astuce plus bas, en cas de besoin)</p>
+<p></p><div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_ce2ba9b0471648fe9897c71f0d9b7da492c96ecd" class="comment">###</span><div class="line" id="editor_ce2ba9b0471648fe9897c71f0d9b7da492c96ecd"></div><div id="term_editor_ce2ba9b0471648fe9897c71f0d9b7da492c96ecd" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_ce2ba9b0471648fe9897c71f0d9b7da492c96ecd","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_ce2ba9b0471648fe9897c71f0d9b7da492c96ecd" class="py_mk_hide">mapy-undlistepy-undamis = sorted(listepy-undamis)bksl-nlbksl-nl# Testbksl-nlassert appartientpy-unddichotomique(mapy-undlistepy-undamis, "Bob")bksl-nlassert appartientpy-unddichotomique(mapy-undlistepy-undamis, "Alice")bksl-nlassert not appartientpy-unddichotomique(mapy-undlistepy-undamis, "Gaston")bksl-nlbksl-nl# Autres testsbksl-nlfor nom in listepy-undamis :bksl-nl    assert appartientpy-unddichotomique(mapy-undlistepy-undamis, nom)bksl-nlassert not appartientpy-unddichotomique(mapy-undlistepy-undamis, "Gustave")bksl-nlbksl-nl</span>            <button class="tooltip" onclick='check("editor_ce2ba9b0471648fe9897c71f0d9b7da492c96ecd","")'>            <img src="../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_ce2ba9b0471648fe9897c71f0d9b7da492c96ecd","scripts/exo_dicho")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_ce2ba9b0471648fe9897c71f0d9b7da492c96ecd').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_ce2ba9b0471648fe9897c71f0d9b7da492c96ecd" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_ce2ba9b0471648fe9897c71f0d9b7da492c96ecd")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_ce2ba9b0471648fe9897c71f0d9b7da492c96ecd")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_ce2ba9b0471648fe9897c71f0d9b7da492c96ecd" class="py_mk_hide">#--- HDR ---#bksl-nllistepy-undamis = ['Ariel', 'Benjamin','Amir','Melvina','Hector','Zoé','Yasmine','Ursula',\bksl-nl              'Andréa','Marie-Claire','Marc-Aurèle','Jim','Paula','Pietro','Xavier','Eléonore',\bksl-nl              'Arthur','Firmin','Valérie','Alice','Bob','Firdaous','Olga','Shinzo','Li','Mathéo','Rachel',\bksl-nl              'Philippine','Tao']bksl-nl#--- HDR ---#bksl-nlbksl-nlbksl-nldef appartientpy-unddichotomique(mapy-undliste, valeur):bksl-nl    ...bksl-nlbksl-nlbksl-nl# Testbksl-nlassert appartientpy-unddichotomique(mapy-undlistepy-undamis, "Bob")bksl-nlassert appartientpy-unddichotomique(mapy-undlistepy-undamis, "Alice")bksl-nlassert not appartientpy-unddichotomique(mapy-undlistepy-undamis, "Gaston")bksl-nlbksl-nl</span><span id="corr_content_editor_ce2ba9b0471648fe9897c71f0d9b7da492c96ecd" class="py_mk_hide" data-strudel="">mapy-undlistepy-undamis = sorted(listepy-undamis)bksl-nlbksl-nlbksl-nldef appartientpy-unddichotomique(mapy-undliste, valeur) :bksl-nl    indicepy-unddebut = 0bksl-nl    indicepy-undfin = len(mapy-undliste) - 1bksl-nl    while indicepy-unddebut &lt;= indicepy-undfin :bksl-nl        indicepy-undcentre = (indicepy-unddebut + indicepy-undfin) // 2bksl-nl        valeurpy-undcentrale = mapy-undliste[indicepy-undcentre]bksl-nl        if valeurpy-undcentrale == valeur :bksl-nl            return Truebksl-nl        if valeurpy-undcentrale &lt; valeur :bksl-nl            indicepy-unddebut = indicepy-undcentre + 1bksl-nl        else :bksl-nl            indicepy-undfin = indicepy-undcentre - 1bksl-nl    return Falsebksl-nlbksl-nlbksl-nlbksl-nl</span>
+<p><strong>A</strong></p>
+<p><strong>Z</strong></p>
+<details class="tip">
+<summary>Astuce</summary>
+<p>N'y-a-t-il pas une condition sur la liste dans laquelle on réalise la recherche dichotomique ?</p>
+</details>
+<details class="success">
+<summary>Solution pour Vincent, Romain et Valérie</summary>
+<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">appartient_dichotomique</span><span class="p">(</span><span class="n">ma_liste_amis</span><span class="p">,</span> <span class="s2">"Vincent"</span><span class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">appartient_dichotomique</span><span class="p">(</span><span class="n">ma_liste_amis</span><span class="p">,</span> <span class="s2">"Romain"</span><span class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">appartient_dichotomique</span><span class="p">(</span><span class="n">ma_liste_amis</span><span class="p">,</span> <span class="s2">"Valérie"</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span>
+</code></pre></div>
+</details>
+</details>
+<details class="python">
+<summary>Logarithme de recherche par dichotomie : à savoir refaire 💚</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_dichotomique</span><span class="p">(</span><span class="n">ma_liste</span><span class="p">,</span> <span class="n">valeur</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">indice_debut</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">indice_fin</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ma_liste</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">indice_debut</span> <span class="o">&lt;=</span> <span class="n">indice_fin</span> <span class="p">:</span>  <span class="c1"># (1)</span>
+        <span class="n">indice_centre</span> <span class="o">=</span> <span class="p">(</span><span class="n">indice_debut</span> <span class="o">+</span> <span class="n">indice_fin</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>  <span class="c1"># (2)</span>
+        <span class="n">valeur_centrale</span> <span class="o">=</span> <span class="n">ma_liste</span><span class="p">[</span><span class="n">indice_centre</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">valeur_centrale</span> <span class="o">==</span> <span class="n">valeur</span> <span class="p">:</span>
+            <span class="k">return</span> <span class="n">indice_centre</span>
+        <span class="k">if</span> <span class="n">valeur_centrale</span> <span class="o">&lt;</span> <span class="n">valeur</span> <span class="p">:</span>
+            <span class="n">indice_debut</span> <span class="o">=</span> <span class="n">indice_centre</span> <span class="o">+</span> <span class="mi">1</span>  <span class="c1"># (3)</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="n">indice_fin</span> <span class="o">=</span> <span class="n">indice_centre</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c1"># (4)</span>
+    <span class="k">return</span> <span class="kc">None</span>
+</code></pre></div>
+<ol>
+<li><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/26a0.svg" title=":warning:"> Il faut bien <code>&lt;=</code> et pas <code>&lt;</code> </li>
+<li><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/26a0.svg" title=":warning:"> Il faut une division <strong>entière</strong> donc <code>//</code> et pas <code>/</code></li>
+<li>👉 On cherche à droite</li>
+<li>👈 On cherche à gauche</li>
+</ol>
+<div class="admonition attention">
+<p class="admonition-title">Prenez le temps de lire les commentaires (cliquez sur les +)</p>
+</div>
+</details>
+<details class="abstract">
+<summary>Terminaison de l'algorithme de recherche dichotomique</summary>
+<p>Est-on sûr que l'algorithme va se terminer ?<br>
+La boucle <code>while</code> qui est utilisée doit nous inciter à la prudence.<br>
+Il y a en effet le risque de rentrer dans une boucle infinie.<br>
+Pourquoi n'est-ce pas le cas ?</p>
+<p><strong>Aide :</strong> observer la position des deux flèches bleues lors de l'exécution de l'algorithme 
+<img alt="image" class="center" src="../images/fig4.png"></p>
+<p>La condition de la boucle <code>while</code> est <code>indice_debut &lt;= indice_fin</code>, qui pourrait aussi s'écrire <code>indice_fin &gt;= indice_debut</code>.<br>
+Au démarrage de la boucle, on a :</p>
+<div class="highlight"><pre><span></span><code>    <span class="n">indice_debut</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">indice_fin</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+</code></pre></div>
+<p>Ceci qui nous assure donc de bien rentrer dans la boucle. </p>
+<p>Ensuite, à chaque étape, les deux variables <code>indice_debut</code> et <code>indice_fin</code> vont se <strong>rapprocher</strong> jusqu'à ce que le programme rencontre un <code>return</code> ou bien jusqu'à ce que <code>indice_fin</code> devienne inférieur à <code>indice_debut</code>.  </p>
+<p>Ceci nous assure donc que le programme va bien se terminer.</p>
+<details class="note">
+<summary>Variant de boucle</summary>
+<p>On dit que la valeur <code>indice_fin - indice_debut</code> représente le <strong>variant de boucle</strong> de cet algorithme. 
+Ce variant est un nombre entier, d'abord strictement positif, puis qui va décroître jusqu'à la valeur 0.</p>
+</details>
+</details>
+<details class="question">
+<summary>Activité 7 - Complexité de l'algorithme de recherche dichotomique</summary>
+<p>Nous allons considérer que la complexité est due au nombre d'étapes nécessaires pour obtenir le résultat. </p>
+<details class="question">
+<summary>Quel est le pire des cas de recherche dichotomique d'une valeur dans une liste triée ?</summary>
+<p>Le pire des cas est lorsque l'élément n'est pas présent dans la liste.</p>
+</details>
+<details class="question">
+<summary>Combien d'étapes (au maximum) sont-elles nécessaires pour arriver à la fin de l'algorithme ?</summary>
+<p>Imaginons que la liste initiale possède 8 valeurs. 
+Après une étape, il ne reste que 4 valeurs à traiter. 
+Puis 2 valeurs.<br>
+Puis une seule valeur.<br>
+Il y a donc 3 étapes avant de trouver la valeur cherchée.</p>
+</details>
+<details class="question">
+<summary>Combien d'étapes en fonction de la taille de la liste ?</summary>
+<p><strong>1.</strong> Remplissez le tableau ci-dessous :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">taille de la liste</th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">8</th>
+<th style="text-align: center;">16</th>
+<th style="text-align: center;">32</th>
+<th style="text-align: center;">64</th>
+<th style="text-align: center;">128</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">nombre d'étapes</td>
+<td style="text-align: center;">_</td>
+<td style="text-align: center;">_</td>
+<td style="text-align: center;">_</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">_</td>
+<td style="text-align: center;">_</td>
+<td style="text-align: center;">_</td>
+<td style="text-align: center;">_</td>
+</tr>
+</tbody>
+</table>
+<details class="success">
+<summary>Solution</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">taille de la liste</th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">8</th>
+<th style="text-align: center;">16</th>
+<th style="text-align: center;">32</th>
+<th style="text-align: center;">64</th>
+<th style="text-align: center;">128</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">nombre d'étapes</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">7</td>
+</tr>
+</tbody>
+</table>
+</details>
+<p><strong>2.</strong> Pouvez-vous deviner le nombre d'étapes nécessaires pour une liste de 4096 termes ?</p>
+<details class="success">
+<summary>Solution</summary>
+<p>12 étapes</p>
+</details>
+<p><strong>3.</strong> Pour une liste de <span class="arithmatex">\(2^n\)</span> termes, quel est le nombre d'étapes ?</p>
+<details class="success">
+<summary>Solution</summary>
+<p><span class="arithmatex">\(n\)</span> étapes</p>
+</details>
+</details>
+<div class="admonition info">
+<p class="admonition-title">Nombres d'étapes pour une liste de taille <span class="arithmatex">\(n\)</span></p>
+<p>Sachant qu'à chaque itération de la boucle on divise à peu près (division entière) le tableau en <span class="arithmatex">\(2\)</span>, cela revient donc à se demander combien de fois faut-il diviser le tableau en <span class="arithmatex">\(2\)</span> pour obtenir, à la fin, un tableau comportant un seul élément ? <br>
+🙃 Autrement dit, combien de fois faut-il diviser <code>n</code> par <code>2</code> pour obtenir <code>1</code> ?</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Le logarithme en base 2</p>
+<p>Une mesure de la complexité est donc le nombre <span class="arithmatex">\(k\)</span> tel que  <span class="arithmatex">\(2^k=n\)</span>.</p>
+<p>Nous n'allons pas rentrer dans les détails, mais il faut savoir qu'il existe une fonction mathématique (réciproque de la fonction qui à <span class="arithmatex">\(x\)</span> associe <span class="arithmatex">\(2^x\)</span>) qui permet de résoudre ce problème : <br>
+la fonction "logarithme en base 2" notée <span class="arithmatex">\(\text{log}_2\)</span>  </p>
+<p><span class="arithmatex">\(k=\text{log}_2(n)\)</span>      </p>
+<p><img alt="log2" src="../images/log2.png" width="60%"></p>
+<p>La courbe en rouge correspond à la complexité de la recherche dichotomique (logarithmique en base 2), et la droite verte à celle de la recherche séquentielle (linéaire).</p>
+</div>
+<details class="danger">
+<summary>Attention calculatrices</summary>
+<p>les calculatrices ont une touche <kbd>log</kbd> et une touche <kbd>ln</kbd> qui donnent respectivement le logaritme en base 10, et le logarithme en base <span class="arithmatex">\(\text{e}\)</span>.<br>
+On peut obtenir le résultat du logarithme en base 2 d'un nombre de la façon suivante, par exemple pour calculer <span class="arithmatex">\(\text{log}_2(1024)\)</span> :<br>
+<kbd>(</kbd> <kbd>log</kbd> <kbd>1024</kbd> <kbd>)</kbd> <kbd><span class="arithmatex">\(\div\)</span></kbd> <kbd>log</kbd> <kbd>2</kbd><br>
+ou bien<br>
+<kbd>(</kbd> <kbd>ln</kbd> <kbd>1024</kbd> <kbd>)</kbd> <kbd><span class="arithmatex">\(\div\)</span></kbd> <kbd>ln</kbd> <kbd>2</kbd>  </p>
+</details>
+<details class="note">
+<summary>Complément sur les fonctions logarithme</summary>
+<ul>
+<li>La fonction <span class="arithmatex">\(\text{log}_2\)</span> est la fonction réciproque de celle qui à tout réel <span class="arithmatex">\(x\)</span> associe <span class="arithmatex">\(2^x\)</span></li>
+<li>La fonction <span class="arithmatex">\(\text{log}\)</span> est la fonction réciproque de celle qui à tout réel <span class="arithmatex">\(x\)</span> associe <span class="arithmatex">\(10^x\)</span></li>
+<li>La fonction <span class="arithmatex">\(\text{ln}\)</span> est la fonction réciproque de celle qui à tout réel <span class="arithmatex">\(x\)</span> associe <span class="arithmatex">\(\text{e}^x\)</span></li>
+</ul>
+</details>
+<details class="python">
+<summary>Le logarithme en base 2 en Python</summary>
+<p>En Python, il suffit d'importer la fonction <code>log2</code></p>
+<p>Tester le script ci-dessous :</p>
+<p></p><div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_c5d1e70660f797bea8c081a1858d7b04937dd1d4" class="comment">###</span><div class="line" id="editor_c5d1e70660f797bea8c081a1858d7b04937dd1d4"></div><div id="term_editor_c5d1e70660f797bea8c081a1858d7b04937dd1d4" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_c5d1e70660f797bea8c081a1858d7b04937dd1d4","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_c5d1e70660f797bea8c081a1858d7b04937dd1d4","scripts/log2_python")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_c5d1e70660f797bea8c081a1858d7b04937dd1d4').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_c5d1e70660f797bea8c081a1858d7b04937dd1d4" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_c5d1e70660f797bea8c081a1858d7b04937dd1d4")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_c5d1e70660f797bea8c081a1858d7b04937dd1d4")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_c5d1e70660f797bea8c081a1858d7b04937dd1d4" class="py_mk_hide">from math import log2bksl-nlprint(log2(1024))bksl-nlprint(log2(7000000000))bksl-nlbksl-nl# Vos essais ci-dessousbksl-nlbksl-nlbksl-nl</span><span id="corr_content_editor_c5d1e70660f797bea8c081a1858d7b04937dd1d4" class="py_mk_hide" data-strudel=""></span>
+<p><strong>A</strong></p>
+<p><strong>Z</strong></p>
+</details>
+</details>
+<details class="abstract">
+<summary>Complexité logarithmique de la recherche dichotomique 💚 A retenir</summary>
+<p>La recherche dichotomique se fait avec une <strong>complexité logarithmique</strong>.</p>
+<p>On rencontrera parfois la notation <span class="arithmatex">\(O(\log_2(n))\)</span>.</p>
+<p>Le <span class="arithmatex">\(O\)</span> se prononce "grand O" (la lettre)</p>
+<p>Cette complexité est bien meilleure qu'une complexité linéaire. Le nombre d'opérations à effectuer est très peu sensible à la taille des données d'entrée, ce qui en fait un algorithme très efficace.</p>
+<div class="admonition warning">
+<p class="admonition-title">N'oubliez pas que dans le cas de la recherche dichotomique, <strong>le tableau doit être trié !</strong></p>
+</div>
+</details>
+<details class="question">
+<summary>Activité 8 - Temps de calcul</summary>
+<p>Recopier et exécuter le code suivant dans votre éditeur python local (pas en ligne)</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">timeit</span> <span class="kn">import</span> <span class="n">timeit</span>
+
+<span class="k">def</span> <span class="nf">dicho</span><span class="p">(</span><span class="n">tableau</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span> <span class="p">:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    :param tableau: une liste d'entiers triés par ordre croissant</span>
+<span class="sd">    :param x: de type int</span>
+<span class="sd">    :returns: bool : True si x est dans tableau, False sinon</span>
+
+<span class="sd">    &gt;&gt;&gt; dicho([1, 3, 4, 9], 4)</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; dicho([1, 3, 4, 9], 11)</span>
+<span class="sd">    False</span>
+<span class="sd">    """</span>
+    <span class="n">deb</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">fin</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tableau</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">mil</span> <span class="o">=</span> <span class="p">(</span><span class="n">deb</span> <span class="o">+</span> <span class="n">fin</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+
+    <span class="k">while</span> <span class="n">deb</span> <span class="o">&lt;=</span> <span class="n">fin</span> <span class="p">:</span>
+
+        <span class="k">if</span> <span class="n">tableau</span><span class="p">[</span><span class="n">mil</span><span class="p">]</span> <span class="o">==</span>  <span class="n">x</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="n">tableau</span><span class="p">[</span><span class="n">mil</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">:</span>
+            <span class="n">deb</span> <span class="o">=</span> <span class="n">mil</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="n">fin</span> <span class="o">=</span> <span class="n">mil</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="n">mil</span> <span class="o">=</span> <span class="p">(</span><span class="n">deb</span> <span class="o">+</span> <span class="n">fin</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="kc">False</span>
+
+<span class="n">tailles</span> <span class="o">=</span> <span class="p">[</span><span class="mi">500</span><span class="p">,</span> <span class="mi">2500</span><span class="p">,</span> <span class="mi">12500</span><span class="p">,</span> <span class="mi">62500</span><span class="p">]</span>
+
+<span class="c1"># tref est le temps de calcul pour une liste de taille 100</span>
+<span class="n">liste_ref</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
+<span class="n">tref</span> <span class="o">=</span> <span class="n">timeit</span><span class="p">(</span><span class="s2">"dicho(liste_ref, -1)"</span><span class="p">,</span> <span class="n">number</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span> <span class="nb">globals</span> <span class="o">=</span> <span class="nb">globals</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"n = 100 -&gt; tref = "</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">tref</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">tailles</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"n ="</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">''</span><span class="p">)</span>
+    <span class="n">tab</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+    <span class="c1"># Calcul du temps pour des listes triées de tailles n</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">timeit</span><span class="p">(</span><span class="s2">"dicho(tab, -1)"</span><span class="p">,</span> <span class="n">number</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span> <span class="nb">globals</span> <span class="o">=</span> <span class="nb">globals</span><span class="p">())</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'</span><span class="se">\t</span><span class="s1">-&gt; temps = '</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="s1">'</span><span class="se">\t</span><span class="s1"> x'</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">t</span><span class="o">/</span><span class="n">tref</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="p">)</span>
+    <span class="n">tref</span> <span class="o">=</span> <span class="n">t</span>
+</code></pre></div>
+<details class="note pliée">
+<summary>Que remarque-t-on?</summary>
+<p>A chaque étape, n est multilié par 5, et on voit dans le tableau que le temps est multiplié par un nombre très inférieur à 5.  </p>
+</details>
+</details>
+<details class="example">
+<summary>Un exemple spectaculaire de l'efficacité de la recherche par dichotomie</summary>
+<p><img :=":" alt="terre" class="center" src="../images/Terre.png" width="20%;"></p>
+<p>Imaginons un annuaire qui contienne les noms, prénoms, adresses.....des 7 milliards d'êtres humains vivant sur la terre.</p>
+<p>🤔 Quel est le nombre maximum d'étapes pour trouver un individu ? </p>
+<p>Plaçons nous dans le pire des cas.</p>
+<p>Comme à chaque étape on divise le nombre de personne par 2, la question revient à : <strong>combien de fois faut-il que je divise 7 milliards par 2 pour qu'il n'en reste qu'un ?</strong></p>
+<p>Cela revient à trouver <span class="arithmatex">\(n\)</span>  tel que <span class="arithmatex">\(\dfrac{7000000000}{2^n}=1\)</span>  , c’est à dire <span class="arithmatex">\(2^n=7000000000\)</span> .</p>
+<p>A la calculatrice on voit que  <span class="arithmatex">\(2^{32}=4294967296\)</span> et que <span class="arithmatex">\(2^{33}=8589934592\)</span>.</p>
+<p>Il faut donc au maximum 33 étapes</p>
+<p>🌵 Un algorithme qui balaye la liste du début à la fin aurait fait 1 étape pour la première personne et 7 milliards d'étapes pour la dernière !</p>
+<p>Un algorithme par parcours séquentiel de liste aurait nécessité, dans le pire des cas 7 milliards d’étapes. L’algorithme par dichotomie qui n'en nécessite que 33 est donc énormément plus efficace.  </p>
+<div class="admonition warning">
+<p class="admonition-title">Cependant</p>
+<p>Cependant, il ne faut pas perdre de vue que dans le cas de la recherche dichotomique, <strong>il est nécessaire d'avoir un tableau trié</strong>. </p>
+<div class="admonition danger">
+<p class="admonition-title">Attention</p>
+<p>Si au départ le tableau n'est pas trié, il faut rajouter la durée du tri.  </p>
+</div>
+</div>
+</details>
+<details class="question">
+<summary>Activité 9 - Compléter la fonction <code>dichotomie</code></summary>
+<ul>
+<li>
+<p>prenant en paramètre un tableau de nombres triés dans l'ordre croissant <code>nombres</code> et une valeur <code>cible</code></p>
+</li>
+<li>
+<p>renvoyant <code>True</code> si <code>cible</code> est une valeur de <code>nombres</code>, <code>False</code> dans le cas contraire.</p>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Exemples</p>
+<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">dichotomie</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dichotomie</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dichotomie</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="mi">4</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dichotomie</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="mi">5</span><span class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dichotomie</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dichotomie</span><span class="p">([</span><span class="mi">1</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dichotomie</span><span class="p">([</span><span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dichotomie</span><span class="p">([],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="go">False</span>
+</code></pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Remarque</p>
+<p>Vous utiliserez obligatoirement un algorithme de <strong>recherche dichotomique</strong>.</p>
+</div>
+<details class="question" open="open">
+<summary>Compléter ci-dessous</summary>
+<p></p><div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_a77832d13034ce84742559410f42ef4a4211c558" class="comment">###</span><div class="line" id="editor_a77832d13034ce84742559410f42ef4a4211c558"></div><div id="term_editor_a77832d13034ce84742559410f42ef4a4211c558" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_a77832d13034ce84742559410f42ef4a4211c558","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_a77832d13034ce84742559410f42ef4a4211c558" class="py_mk_hide"># Testsbksl-nlassert dichotomie([1, 2, 3, 4], 2)bksl-nlassert dichotomie([1, 2, 3, 4], 1)bksl-nlassert dichotomie([1, 2, 3, 4], 4)bksl-nlassert dichotomie([1, 2, 3, 4], 5) is Falsebksl-nlassert dichotomie([1, 2, 3, 4], 0) is Falsebksl-nlassert dichotomie([1, 2, 5, 6], 4) is Falsebksl-nlassert dichotomie([1], 1)bksl-nlassert dichotomie([1], 0) is Falsebksl-nlassert dichotomie([], 1) is Falsebksl-nlbksl-nlbksl-nl# Tests supplémentairesbksl-nlnombres = list(range(0, 101, 2))bksl-nlfor cible in range(101):bksl-nl    assert dichotomie(nombres, cible) == (cible % 2 == 0)bksl-nlbksl-nlnombres = list(range(-100, 0, 2))bksl-nlfor cible in range(-100, 0):bksl-nl    assert dichotomie(nombres, cible) == (cible % 2 == 0)bksl-nlbksl-nlnombres = list(range(-12, 10, 3))bksl-nlfor cible in range(-12, 10):bksl-nl    assert dichotomie(nombres, cible) == (cible % 3 == 0)bksl-nlbksl-nl</span>            <button class="tooltip" onclick='check("editor_a77832d13034ce84742559410f42ef4a4211c558","")'>            <img src="../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_a77832d13034ce84742559410f42ef4a4211c558","scripts/dicho_1")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_a77832d13034ce84742559410f42ef4a4211c558').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_a77832d13034ce84742559410f42ef4a4211c558" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_a77832d13034ce84742559410f42ef4a4211c558")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_a77832d13034ce84742559410f42ef4a4211c558")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_a77832d13034ce84742559410f42ef4a4211c558" class="py_mk_hide">def dichotomie(nombres, cible):bksl-nl    debut = ...bksl-nl    fin = ...bksl-nl    while debut &lt;= fin:bksl-nl        milieu = ...bksl-nl        if cible == ...:bksl-nl            return ...bksl-nl        elif cible &gt; ...:bksl-nl            ...bksl-nl        else:bksl-nl            ...bksl-nl    return ...bksl-nlbksl-nlbksl-nl# Testsbksl-nlassert dichotomie([1, 2, 3, 4], 2)bksl-nlassert dichotomie([1, 2, 3, 4], 1)bksl-nlassert dichotomie([1, 2, 3, 4], 4)bksl-nlassert not dichotomie([1, 2, 3, 4], 5)bksl-nlassert not dichotomie([1, 2, 3, 4], 0)bksl-nlassert not dichotomie([1, 2, 5, 6], 4)bksl-nlassert dichotomie([1], 1)bksl-nlassert not dichotomie([1], 0)bksl-nlassert not dichotomie([], 1)bksl-nlbksl-nl</span><span id="corr_content_editor_a77832d13034ce84742559410f42ef4a4211c558" class="py_mk_hide" data-strudel="">def dichotomie(nombres, cible):bksl-nl    debut = 0bksl-nl    fin = len(nombres) - 1bksl-nl    while debut &lt;= fin:bksl-nl        milieu = (fin + debut)//2bksl-nl        if cible == nombres[milieu]:bksl-nl            return Truebksl-nl        elif cible &gt; nombres[milieu]:bksl-nl            debut = milieu + 1bksl-nl        else:bksl-nl            fin = milieu - 1bksl-nl    return Falsebksl-nlbksl-nl</span>
+<p><strong>A</strong></p>
+<div class="admonition info">
+<p class="admonition-title">Recherche par dichotomie</p>
+<p>Il s'agit d'un algorithme classique. Le tableau pris en paramètre doit <strong>obligatoirement être trié</strong>.</p>
+<p>À chaque itération, on se demande si la valeur centrale est égale à la <code>cible</code> :</p>
+<ul>
+<li>si oui, on renvoie immédiatement <code>True</code></li>
+<li>si non, cette cible est soit :<ul>
+<li>supérieure à la valeur centrale : il faut chercher dans la partie droite du tableau (<code>debut = milieu + 1</code>)</li>
+<li>inférieure à la valeur centrale : il faut chercher dans la partie gauche du tableau (<code>fin = milieu - 1</code>)</li>
+</ul>
+</li>
+</ul>
+<p>La zone de recherche (l'écart entre <code>fin</code> et <code>debut</code>) se réduit à chaque itération : si on finit par avoir <code>fin &lt; debut</code>, c'est que la <code>cible</code> n'est pas dans le tableau. On sort de la boucle et renvoie <code>False</code>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Nombre maximal de tours de boucles</p>
+<p>Prenons un écart d'indice initial <code>fin - debut</code> égal à <span class="arithmatex">\(10^9\)</span>, (ce qui est très grand).</p>
+<p>Dans le pire des cas, où la cible n'est pas présente, on réalise tous les tours de boucles possibles.</p>
+<ul>
+<li>Au premier tour, on a un écart environ de <span class="arithmatex">\(\frac{10^9}{2}\)</span>, c'est à dire de <span class="arithmatex">\(5 \times 10^8\)</span></li>
+<li>Au deuxième tour, on a un écart environ de <span class="arithmatex">\(\frac{5 \times 10^8}{2}\)</span> c'est à dire <span class="arithmatex">\(25 \times 10^7\)</span></li>
+<li>Ainsi de suite ...</li>
+<li>Au trentième tour, on a un écart d'environ <span class="arithmatex">\(\frac{10^9}{2^{30}}\)</span> c'est à dire d'environ 1.</li>
+</ul>
+<p>Ainsi, dans une liste de taille <span class="arithmatex">\(10^9\)</span>, en au plus environ 30 tours on sait si l'élément <code>cible</code> est présent.</p>
+</div>
+<p><strong>Z</strong></p>
+</details>
+</details>
+<details class="question">
+<summary>Activité 10 - Déterminer l'indice d'un nombre dans une liste</summary>
+<p>On considère dans cet exercice des tableaux non vides contenant des nombres entiers, tous distincts, triés dans l'ordre croissant.</p>
+<p>On cherche à déterminer l'indice d'une valeur <code class="highlight"><span class="n">cible</span></code> dans ce tableau à l'aide d'une <strong>recherche dichotomique</strong> dans sa version itérative.</p>
+<p>Écrire la fonction <code class="highlight"><span class="n">indice</span></code> qui prend en paramètres le tableau de nombres <code class="highlight"><span class="n">tableau</span></code> et la valeur cherchée <code class="highlight"><span class="n">cible</span></code>.</p>
+<p>Si la <code class="highlight"><span class="n">cible</span></code> est dans le tableau, la fonction renverra son indice. Dans le cas contraire, la fonction renverra <code>None</code>.</p>
+<details class="danger" open="open">
+<summary>Attention</summary>
+<p>Les tableaux des tests secrets peuvent être très grands. Une recherche linéaire naïve prendrait trop de temps lors de l'exécution.</p>
+<p>Les tests secrets limitent le nombre de lectures dans le tableau à 100. Si votre code accède à plus de 100 valeurs dans le tableau, une erreur sera levée.</p>
+</details>
+<details class="example" open="open">
+<summary>Exemples</summary>
+<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">tableau</span> <span class="o">=</span> <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">37</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">indice</span><span class="p">(</span><span class="n">tableau</span><span class="p">,</span> <span class="mi">23</span><span class="p">)</span>
+<span class="go">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">indice</span><span class="p">(</span><span class="n">tableau</span><span class="p">,</span> <span class="mi">29</span><span class="p">)</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">indice</span><span class="p">(</span><span class="n">tableau</span><span class="p">,</span> <span class="mi">37</span><span class="p">)</span>
+<span class="go">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">indice</span><span class="p">(</span><span class="n">tableau</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="go">None</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">indice</span><span class="p">(</span><span class="n">tableau</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="go">None</span>
+</code></pre></div>
+</details>
+<details class="question" open="open">
+<summary>Question</summary>
+<p>Compléter le script ci-dessous :</p>
+<p></p><div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_b292f182050b65c9025cabef4974995a270c369a" class="comment">###</span><div class="line" id="editor_b292f182050b65c9025cabef4974995a270c369a"></div><div id="term_editor_b292f182050b65c9025cabef4974995a270c369a" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_b292f182050b65c9025cabef4974995a270c369a","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_b292f182050b65c9025cabef4974995a270c369a" class="py_mk_hide">tableau = [23, 28, 29, 35, 37]bksl-nlbksl-nl# Testsbksl-nlassert indice(tableau, 23) == 0, "Erreur dans la recherche de 23"bksl-nlassert indice(tableau, 29) == 2, "Erreur dans la recherche de 29"bksl-nlassert indice(tableau, 37) == 4, "Erreur dans la recherche de 37"bksl-nlassert indice(tableau, 10) is None, "Erreur dans la recherche de 10"bksl-nlassert indice(tableau, 100) is None, "Erreur dans la recherche de 100"bksl-nlbksl-nl# Tests supplémentairesbksl-nlclass Tableau(list):bksl-nl    def py-undpy-undinitpy-undpy-und(self, longueur, fonction):bksl-nl        assert longueur &gt; 1py-und000, "La longueur doit être supérieure à 1000"bksl-nl        self.py-undlongueur = longueurbksl-nl        self.py-undfonction = fonctionbksl-nl        self.py-undcompteurpy-undlectures = 0bksl-nl        self.py-undlecturespy-undmax = 100bksl-nlbksl-nl    def py-undpy-undlenpy-undpy-und(self):bksl-nl        return self.py-undlongueurbksl-nlbksl-nl    def py-undpy-undgetitempy-undpy-und(self, i):bksl-nl        if type(i) is slice:bksl-nl            indices = range(py-stri.indices(self.py-undlongueur))bksl-nl            return [self.py-undpy-undgetitempy-undpy-und(k) for k in indices]bksl-nl        self.py-undcompteurpy-undlectures += 1bksl-nl        if self.py-undcompteurpy-undlectures &gt; self.py-undlecturespy-undmax:bksl-nl            raise LookupError(f"Il faut réaliser strictement moins de {self.py-undlecturespy-undmax} lectures dans le tableau")bksl-nl        return self.py-undfonction(i)bksl-nlbksl-nl    def py-undpy-undsetitempy-undpy-und(self, i, x):bksl-nl        raise NotImplementedError("Il est interdit de modifier les valeurs")bksl-nlbksl-nl    def py-undpy-undstrpy-undpy-und(self):bksl-nl        return f"[{self.py-undfonction(0)}, {self.py-undfonction(1)}, ..., {self.py-undfonction(self.py-undlongueur - 1)}]"bksl-nlbksl-nl    def py-undpy-undreprpy-undpy-und(self):bksl-nl        return self.py-undpy-undstrpy-undpy-und()bksl-nlbksl-nl    def py-undpy-unditerpy-undpy-und(self):bksl-nl        for i in range(self.py-undlongueur):bksl-nl            yield self.py-undpy-undgetitempy-undpy-und(i)bksl-nlbksl-nlbksl-nlfrom random import randrangebksl-nlbksl-nlfor test in range(10):bksl-nl    # Création du grand tableaubksl-nl    exposant = randrange(6, 10)bksl-nl    N = 10py-strpy-strexposantbksl-nl    a = randrange(2, 50)bksl-nl    b = randrange(-1000, 1001)bksl-nl    fonction = lambda i: a py-str i + bbksl-nl    # Recherche du dernier élémentbksl-nl    tableau = Tableau(N, fonction)bksl-nl    attendu = N - 1bksl-nl    cible = fonction(attendu)bksl-nl    assert (bksl-nl        indice(tableau, cible) == attendubksl-nl    ), f"Erreur lors de la recherche de {cible} dans un tableau de 10py-strpy-str{exposant} valeurs"bksl-nl    # Recherche d'un élément aléatoirebksl-nl    tableau = Tableau(N, fonction)bksl-nl    attendu = randrange(0, N - 1)bksl-nl    cible = fonction(attendu)bksl-nl    assert (bksl-nl        indice(tableau, cible) == attendubksl-nl    ), f"Erreur lors de la recherche de {cible} dans un tableau de 10py-strpy-str{exposant} valeurs"bksl-nlbksl-nl    # Recherche d'un élément absentbksl-nl    # à gauchebksl-nl    tableau = Tableau(N, fonction)bksl-nl    cible = fonction(0) - 1bksl-nl    assert indice(tableau, cible) is Nonebksl-nl    # au centrebksl-nl    tableau = Tableau(N, fonction)bksl-nl    cible = fonction(randrange(0, N - 1)) + (a - 1)bksl-nl    assert indice(tableau, cible) is Nonebksl-nl    # à droitebksl-nl    tableau = Tableau(N, fonction)bksl-nl    cible = tableau[N + 1]bksl-nl    assert indice(tableau, cible) is Nonebksl-nlbksl-nlbksl-nlbksl-nl</span>            <button class="tooltip" onclick='check("editor_b292f182050b65c9025cabef4974995a270c369a","")'>            <img src="../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_b292f182050b65c9025cabef4974995a270c369a","scripts/dicho_2")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_b292f182050b65c9025cabef4974995a270c369a').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_b292f182050b65c9025cabef4974995a270c369a" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_b292f182050b65c9025cabef4974995a270c369a")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_b292f182050b65c9025cabef4974995a270c369a")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_b292f182050b65c9025cabef4974995a270c369a" class="py_mk_hide">def indice(tableau, cible):bksl-nl    ...bksl-nlbksl-nlbksl-nlbksl-nlbksl-nl# Testsbksl-nltableau = [23, 28, 29, 35, 37]bksl-nlassert indice(tableau, 23) == 0, "Erreur dans la recherche de 23"bksl-nlassert indice(tableau, 29) == 2, "Erreur dans la recherche de 29"bksl-nlassert indice(tableau, 37) == 4, "Erreur dans la recherche de 37"bksl-nlassert indice(tableau, 10) is None, "Erreur dans la recherche de 10"bksl-nlassert indice(tableau, 100) is None, "Erreur dans la recherche de 100"bksl-nlbksl-nl</span><span id="corr_content_editor_b292f182050b65c9025cabef4974995a270c369a" class="py_mk_hide" data-strudel="">def indice(tableau, cible):bksl-nl    debut = 0bksl-nl    fin = len(tableau) - 1bksl-nl    while debut &lt;= fin:bksl-nl        milieu = (debut + fin) // 2bksl-nl        if cible &lt; tableau[milieu]:bksl-nl            fin = milieu - 1bksl-nl        elif cible == tableau[milieu]:bksl-nl            return milieubksl-nl        else:bksl-nl            debut = milieu + 1bksl-nl    return Nonebksl-nlbksl-nlbksl-nlbksl-nl</span>
+<p><strong>A</strong></p>
+<div class="admonition info">
+<p class="admonition-title">Recherche dichotomique itérative : à connaître</p>
+<p>Il s'agit de l'algorithme de recherche dichotomique classique.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">La recherche de l'indice du milieu</p>
+<p>Le calcul de l'indice du milieu mérite toutefois quelques commentaires. Ici on propose <code class="highlight"><span class="n">milieu</span> <span class="o">=</span> <span class="p">(</span><span class="n">debut</span> <span class="o">+</span> <span class="n">fin</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span></code>.</p>
+<p>Or, dans certains langages de programmation comme le C, la taille des entiers est limitée. Ce calcul <code class="highlight"><span class="n">milieu</span> <span class="o">=</span> <span class="p">(</span><span class="n">debut</span> <span class="o">+</span> <span class="n">fin</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span></code> peut parfois excéder cette taille limite. En effet, si les deux indices <code class="highlight"><span class="n">debut</span></code> et <code class="highlight"><span class="n">fin</span></code> sont grands, leur somme <code class="highlight"><span class="n">debut</span> <span class="o">+</span> <span class="n">fin</span></code> peut dépasser la valeur limite.</p>
+<p>Dans ce cas on calcule l'indice du milieu en utilisant la largeur de l'intervalle : <code class="highlight"><span class="n">milieu</span> <span class="o">=</span> <span class="n">debut</span> <span class="o">+</span> <span class="p">(</span><span class="n">fin</span> <span class="o">-</span> <span class="n">debut</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span></code>.</p>
+<p>Dans le cas présent, le problème ne se pose pas car, en Python, les entiers n'ont pas de taille limite. Toutefois, Si l'on avait manipulé des nombres flottants le problème serait apparu :</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">debut</span> <span class="o">=</span> <span class="mf">2.0</span> <span class="o">**</span> <span class="mi">1023</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fin</span>   <span class="o">=</span> <span class="mf">2.0</span> <span class="o">**</span> <span class="mi">1023</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">debut</span> <span class="o">+</span> <span class="n">fin</span>  <span class="c1"># dépassement de capacité</span>
+<span class="go">inf</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="n">debut</span> <span class="o">+</span> <span class="n">fin</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>  <span class="c1"># dépassement de capacité lors de la somme</span>
+<span class="go">inf</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">debut</span> <span class="o">+</span> <span class="p">(</span><span class="n">fin</span> <span class="o">-</span> <span class="n">debut</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="go">8.98846567431158e+307</span>
+</code></pre></div>
+</div>
+</div>
+<p><strong>Z</strong></p>
+</details>
+</details>
+<details class="question">
+<summary>Activité 11 - Étude d'une panne</summary>
+<p>Une sonde interroge à intervalles réguliers l'état de fonctionnement d'un système électronique. Celui-ci peut être en marche ou en panne.</p>
+<p>La sonde est programmée pour enregistrer les résultats de ses requêtes dans un <em>log</em>. Il s'agit d'un tableau de booléens (une <code class="highlight"><span class="nb">list</span></code> Python) dans lequel les valeurs <code class="highlight"><span class="kc">True</span></code> précèdent les <code class="highlight"><span class="kc">False</span></code>. La valeur <code class="highlight"><span class="kc">True</span></code> indique que le système est en marche, <code class="highlight"><span class="kc">False</span></code> qu'il est en panne.</p>
+<p>Une panne nécessite une intervention humaine et ne peut donc pas disparaître seule : elle persiste jusqu'à la fin de l'enregistrement.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">#         0     1      2      3      4</span>
+<span class="n">log</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+</code></pre></div>
+<p>Lors d'une vérification on constate que le système est en panne : le <em>log</em> contient au moins une valeur <code class="highlight"><span class="kc">False</span></code> en dernière position. On se demande à quel moment a débuté cette panne.</p>
+<p>Dans l'exemple précédent, le premier <code class="highlight"><span class="kc">False</span></code> est à l'indice <code class="highlight"><span class="mi">2</span></code> : la panne a débuté à l'instant <code class="highlight"><span class="mi">2</span></code>.</p>
+<p>Écrire la fonction <code class="highlight"><span class="n">indice_panne</span></code> qui prend en paramètre le tableau de booléens <code class="highlight"><span class="n">log</span></code> et renvoie l'instant du démarrage de la panne.</p>
+<p>On garantit que le <em>log</em> n'est pas vide et que, au moment de la vérification, le système est en panne (la dernière valeur du tableau est <code>False</code>).</p>
+<details class="danger" open="open">
+<summary>Attention</summary>
+<p>La panne du système a aussi corrompu le fichier de <em>log</em>. Vous ne pouvez pas lire plus de 500 valeurs dans celui-ci. Passé ce nombre de lectures, tout nouvel accès lèvera une erreur.</p>
+<p>Il est donc important de bien concevoir votre algorithme car les <em>logs</em> utilisés dans les tests secrets peuvent être très longs : un milliard de valeurs !</p>
+</details>
+<details class="example" open="open">
+<summary>Exemples</summary>
+<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">indice_panne</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">indice_panne</span><span class="p">([</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span>
+<span class="go">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">indice_panne</span><span class="p">([</span><span class="kc">True</span><span class="p">]</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="p">[</span><span class="kc">False</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
+<span class="go">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">indice_panne</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span>
+<span class="go">2</span>
+</code></pre></div>
+</details>
+<details class="question" open="open">
+<summary>Question</summary>
+<p>Compléter le script ci-dessous :   </p>
+<p></p><div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_53cee2c7554c585b18eae94f5d815d12b079822c" class="comment">###</span><div class="line" id="editor_53cee2c7554c585b18eae94f5d815d12b079822c"></div><div id="term_editor_53cee2c7554c585b18eae94f5d815d12b079822c" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_53cee2c7554c585b18eae94f5d815d12b079822c","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_53cee2c7554c585b18eae94f5d815d12b079822c" class="py_mk_hide"># Testsbksl-nlassert indicepy-undpanne([True, False]) == 1bksl-nlassert indicepy-undpanne([False, False, False]) == 0bksl-nlassert indicepy-undpanne([True] py-str 10 + [False] py-str 100) == 10bksl-nlassert indicepy-undpanne([True, True, False, False, False]) == 2bksl-nlbksl-nl# Tests supplémentairesbksl-nlfrom random import randrangebksl-nlbksl-nlbksl-nlclass Log(list):bksl-nl    def py-undpy-undinitpy-undpy-und(self, longueur, premierpy-undfaux):bksl-nl        assert longueur &gt; 1py-und000, "La longueur doit être supérieure à 1000"bksl-nl        self.py-undlongueur = longueurbksl-nl        self.py-undpremierpy-undfaux = premierpy-undfauxbksl-nl        self.py-undcompteurpy-undlectures = 0bksl-nl        self.py-undlecturespy-undmax = 500bksl-nlbksl-nl    def py-undpy-undlenpy-undpy-und(self):bksl-nl        return self.py-undlongueurbksl-nlbksl-nl    def py-undpy-undgetitempy-undpy-und(self, i):bksl-nl        if type(i) is slice:bksl-nl            indices = range(py-stri.indices(self.py-undlongueur))bksl-nl            return [self.py-undpy-undgetitempy-undpy-und(k) for k in indices]bksl-nl        self.py-undcompteurpy-undlectures += 1bksl-nl        if self.py-undcompteurpy-undlectures &gt; self.py-undlecturespy-undmax:bksl-nl            raise LookupError(f"Il faut réaliser strictement moins de {self.py-undlecturespy-undmax} lectures dans le tableau")bksl-nl        return True if i &lt; self.py-undpremierpy-undfaux else Falsebksl-nlbksl-nl    def py-undpy-undsetitempy-undpy-und(self, i, x):bksl-nl        raise NotImplementedError("Il est interdit de modifier les valeurs")bksl-nlbksl-nl    def py-undpy-undstrpy-undpy-und(self):bksl-nl        return f"[{self.py-undpy-undgetitempy-undpy-und(0)}, {self.py-undpy-undgetitempy-undpy-und(1)}, ..., {self.py-undpy-undgetitempy-undpy-und(self.py-undlongueur - 1)}]"bksl-nlbksl-nl    def py-undpy-undreprpy-undpy-und(self):bksl-nl        return self.py-undpy-undstrpy-undpy-und()bksl-nlbksl-nl    def py-undpy-unditerpy-undpy-und(self):bksl-nl        for i in range(self.py-undlongueur):bksl-nl            yield self.py-undpy-undgetitempy-undpy-und(i)bksl-nlbksl-nlbksl-nlfor test in range(20):bksl-nl    attendu = randrange(0, 100)bksl-nl    faux = randrange(1, 100)bksl-nl    log = [True] py-str attendu + [False] py-str fauxbksl-nl    assert indicepy-undpanne(log) == attendu, f"Erreur avec {log}"bksl-nlbksl-nl    exposant = randrange(6, 10)bksl-nl    N = 10py-strpy-strexposantbksl-nl    attendu = randrange(1, N)bksl-nl    grandpy-undlog = Log(N, attendu)bksl-nl    assert (bksl-nl        indicepy-undpanne(grandpy-undlog) == attendubksl-nl    ), f"Erreur lors de la recherche dans un tableau de 10py-strpy-str{exposant} valeurs"bksl-nl    bksl-nlbksl-nl</span>            <button class="tooltip" onclick='check("editor_53cee2c7554c585b18eae94f5d815d12b079822c","")'>            <img src="../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_53cee2c7554c585b18eae94f5d815d12b079822c","scripts/panne")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_53cee2c7554c585b18eae94f5d815d12b079822c').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_53cee2c7554c585b18eae94f5d815d12b079822c" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_53cee2c7554c585b18eae94f5d815d12b079822c")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_53cee2c7554c585b18eae94f5d815d12b079822c")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_53cee2c7554c585b18eae94f5d815d12b079822c" class="py_mk_hide">def indicepy-undpanne(log):bksl-nl    ...bksl-nlbksl-nlbksl-nl# Testsbksl-nlassert indicepy-undpanne([True, False]) == 1bksl-nlassert indicepy-undpanne([False, False, False]) == 0bksl-nlassert indicepy-undpanne([True] py-str 10 + [False] py-str 100) == 10bksl-nlassert indicepy-undpanne([True, True, False, False, False]) == 2bksl-nlbksl-nl</span><span id="corr_content_editor_53cee2c7554c585b18eae94f5d815d12b079822c" class="py_mk_hide" data-strudel="">def indicepy-undpanne(log):bksl-nl    if not log[0]:bksl-nl        return 0bksl-nl    bksl-nl    debut = 0bksl-nl    fin = len(log) - 1bksl-nlbksl-nl    while debut &lt;= fin:bksl-nl        milieu = (debut + fin) // 2bksl-nl        if log[milieu - 1] and not log[milieu]:bksl-nl            return milieubksl-nl        elif not log[milieu]:bksl-nl            fin = milieu - 1bksl-nl        else:bksl-nl            debut = milieu + 1bksl-nlbksl-nl            bksl-nl</span>
+<p><strong>A</strong></p>
+<div class="admonition info">
+<p class="admonition-title">Mon info</p>
+<p>La liste passée en paramètre est une liste triée. Dans ce cas-là, c'est judicieux de penser à une recherche dichotomique.</p>
+</div>
+<p><strong>Z</strong></p>
+</details>
+<details class="tip">
+<summary>Astuce (1)</summary>
+<p>Il s'agit d'une recherche dans un tableau trié : les valeurs <code class="highlight"><span class="kc">True</span></code> sont au début, les <code class="highlight"><span class="kc">False</span></code> à la fin.</p>
+</details>
+<details class="tip">
+<summary>Astuce (2)</summary>
+<p>Si le <em>log</em> ne contient que des valeurs <code class="highlight"><span class="kc">False</span></code>, il faut renvoyer <code class="highlight"><span class="mi">0</span></code>. </p>
+<p>Dans le cas contraire, l'indice cherché est l'unique indice <code class="highlight"><span class="n">i</span></code> qui vérifie <code class="highlight"><span class="n">log</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">log</span><span class="p">[</span><span class="n">i</span><span class="p">]</span></code>.</p>
+</details>
+</details></div>
 
 
 
@@ -7775,7 +4531,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
         
           
-          <a href="../moy/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: 1️⃣ Extremums et moyennes">
+          <a href="../parcours/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: 1️⃣ Parcours d&#39;un tableau">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -7785,20 +4541,20 @@
                 Précédent
               </span>
               <div class="md-ellipsis">
-                1️⃣ Extremums et moyennes
+                1️⃣ Parcours d'un tableau
               </div>
             </div>
           </a>
         
         
           
-          <a href="../insert/" class="md-footer__link md-footer__link--next" aria-label="Suivant: 1️⃣ Tri par insertion">
+          <a href="../tris/" class="md-footer__link md-footer__link--next" aria-label="Suivant: 1️⃣ Algorithmes de tri">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Suivant
               </span>
               <div class="md-ellipsis">
-                1️⃣ Tri par insertion
+                1️⃣ Algorithmes de tri
               </div>
             </div>
             <div class="md-footer__button md-icon">
