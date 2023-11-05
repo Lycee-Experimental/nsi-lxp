@@ -28,12 +28,12 @@ Un paquet de données qui doit traverser un réseau n'a a priori aucune idée du
 La box que vous avez chez vous est un routeur également qui possède plusieurs interfaces réseau :
 
 - une interface est connectée au réseau de votre opérateur (FAI).
-- une interface filaire (ethernet) connectée à votre réseau local
+- une interface filaire (Ethernet) connectée à votre réseau local
 - une interface Wifi
 
 Un routeur sur internet est un peu plus sophistiqué, possède souvent plus de ports et ressemble d'extérieur à un switch. Il dispose d'un logiciel interne bien plus sophistiqué afin de lui permettre de communiquer avec ses routeurs voisins pour l'aider à déterminer les meilleures routes à emprunter pour acheminer ses paquets.
 
-![](Images/routeur.jpg){: .center}
+![](images/routeur.jpg){: .center}
 
 Le routeur reçoit un paquet sur l'un de ses ports et sa mission consiste essentiellement à déterminer sur lequel de ses autres ports il doit réacheminer le paquet. Il doit le faire très vite et s'adapter à un environnement qui change (routes qui apparaissent et disparaissent).
 
@@ -41,7 +41,7 @@ Le routeur reçoit un paquet sur l'un de ses ports et sa mission consiste essent
 
 Voici le schéma d'un réseau :
 
-![](Images/DiagRes.png){: .center}
+![](images/DiagRes.png){: .center}
 
 Nous avons sur ce schéma les éléments suivants :
 
@@ -60,7 +60,11 @@ Les ordinateurs M1, M2 et M3 appartiennent au réseau local 1. Les ordinateurs M
 
 Complétez la liste ci-dessus avec les réseaux locaux 3, 4, 5 et 6
 
---8<-- "docs/08-Protocole_Routage/Corrections/Exercice1_correction.md"
+??? success "Correction"
+    - réseau local 3 : M7, M8
+    - réseau local 4 : M9, M10
+    - réseau local 5 : M11, M12
+    - réseau local 6 : M13, M14, M15
 
 Voici quelques exemples de communications entre 2 ordinateurs :
 
@@ -98,7 +102,8 @@ On pourrait penser que le chemin "Routeur F → Routeur E" est plus rapide et do
 
 Déterminer un chemin possible permettant d’établir une connexion entre la machine M4 et M14.
 
---8<-- "docs/08-Protocole_Routage/Corrections/Exercice2_correction.md"
+??? note "Correction"
+    M4 → R2 → Routeur B → Routeur A → Routeur H → Routeur F → Routeur G → R6  → M14
 
 On peut se poser la question : comment les switchs ou les routeurs procèdent pour amener les paquets à bon port.
 
@@ -119,11 +124,17 @@ Avec le schéma ci-dessous, on a la table de routage simplifiée de A suivante :
 |172.169.0.0/16| 	eth2|
 |10.0.0.0/8 |	192.168.7.2/24|
 
-![](Images/nsi_term_archi_rout_1.png){: .center}
+![](images/nsi_term_archi_rout_1.png){: .center}
 
 Déterminez la table de routage du routeur G
 
---8<-- "docs/08-Protocole_Routage/Corrections/Exercice3_correction.md"
+??? note "Correction"
+    |Réseau|Moyen de l’atteindre|
+    |:--:|:--:|
+    |10.0.0.0/8|eth0|
+    |192.168.7.0/24|eth1|
+    |172.168.0.0/16|192.168.7.1/24|
+    |172.169.0.0/16|192.168.7.1/24|
 
 Dans des réseaux très complexes, chaque routeur aura une table de routage qui comportera de très nombreuses lignes (des dizaines voir des centaines...). En effet chaque routeur devra savoir vers quelle interface réseau il faudra envoyer un paquet afin qu'il puisse atteindre sa destination. On peut trouver dans une table de routage plusieurs lignes pour une même destination, il peut en effet, à partir d'un routeur donné, exister plusieurs chemins possibles pour atteindre la destination. Dans le cas où il existe plusieurs chemins possibles pour atteindre la même destination, le routeur va choisir le "chemin le plus court". Pour choisir ce chemin le plus court, le routeur va utiliser la métrique : plus la valeur de la métrique est petite, plus le chemin pour atteindre le réseau est "court". Un réseau directement lié à un routeur aura une métrique de 0. 
 
@@ -152,13 +163,15 @@ Le routeur sait ainsi que pour atteindre la machine 137.194.2.21, il doit s'adre
 1. Comment atteindre la machine 137.194.6.37?
 2. Comment atteindre la machine 137.194.16.101?
 
---8<-- "docs/08-Protocole_Routage/Corrections/Exercice4_correction.md"
+??? note "Correction"
+    1. Pour atteindre la machine 137.194.6.37, le routeur doit s’adresser au réseau 137.194.6.0/23 en redirigeant le paquet au routeur 137.194.4.254 qui est joignable sur l’interface v10.
+    2. Pour atteindre la machine 137.194.16.101, le routeur doit s’adresser au réseau 137.194.16.0/28 en redirigeant le paquet au routeur 137.194.160.230 qui est joignable sur l’interface v160.
 
 ### Protocoles de routage
 
 Imaginons le petit réseau suivant : 
 
-![](Images/exemple.png){: .center}
+![](images/exemple.png){: .center}
 
 Aller du réseau 5 (R5) au réseau 2 (R2) revient à trouver son chemin dans un graphe :
 
@@ -210,7 +223,7 @@ Regardez cette video de Claude Chaudet (Institut Mines-Télécom) qui expose le 
 
 Considérons le réseau suivant :
 
-![](Images/exemple2.png){: .center}
+![](images/exemple2.png){: .center}
 
 Il est composé de :
 
@@ -316,31 +329,44 @@ RIP implémente d'autres mécanismes pour empêcher que se forment des boucles d
 
 Tracer sur le schéma ci-dessous le chemin d'un ping de la machine 192.168.0.10 vers le serveur 172.16.0.30 en tenant compte des tables de routages suivantes (la ligne 0.0.0.0 est le trajet par défaut si l'IP de destination n'est pas écrite):
 
-![](Images/exemple2d.png){: .center}
+![](images/exemple2d.png){: .center}
 
-![](Images/exemple2b.png){: .center}
+![](images/exemple2b.png){: .center}
 
---8<-- "docs/08-Protocole_Routage/Corrections/Exercice5_correction.md"
+??? note "Correction"
+    ![](images/Exercice5_Correction.png)
 
 **Exercice 6**
 
 Modifier les tables de routages des routeurs du schéma "routage_manuel" de façon à obtenir le cheminement suivant lors d'un "ping" de la machine 192.168.0.10 vers le serveur 172.16.0.30.
 
-![](Images/exemple2c.png){: .center}
+![](images/exemple2c.png){: .center}
 
---8<-- "docs/08-Protocole_Routage/Corrections/Exercice6_correction.md"
-
+??? note "Correction"
+    ![](images/Exercice6_Correction.png)
 
 **Exercice 7**
 
 Soit le réseau suivant :
 
-![](Images/exo7.png){: .center}
+![](images/exo7.png){: .center}
 
 1. En vous basant sur le protocole RIP (métrique = nombre de sauts), déterminez la table de routage du routeur A
 2. Quel est, d'après la table de routage construite ci-dessus, le chemin qui sera emprunté par un paquet pour aller d'une machine ayant pour adresse IP 172.18.1.1/16 à une machine ayant pour adresse IP 172.16.5.3/16 ? 
 
---8<-- "docs/08-Protocole_Routage/Corrections/Exercice7_correction.md"
+??? note "Correction"
+    1)
+
+    |Routeur A|Ip de destination|Masque|Passerelle suivante|Interface|Nb Saut|
+    |:--:|:--:|:--:|:--:|:--:|:--:|
+    ||172.18.0.0|255.255.0.0||eth0|1|
+    ||192.168.1.0|255.255.255.0||eth1|1|
+    ||192.168.2.0|255.255.255.0||eth2|1|
+    ||192.168.3.0|255.255.255.0|192.168.2.2|eth2|2|
+    ||172.17.0.0|255.255.0.0|192.168.2.2|eth2|2|
+    ||172.16.0.0|255.255.0.0|192.168.1.2|eth1|2|
+
+    2) Chemin : Portable à Gauche, Routeur A, Routeur B, Portable à droite
 
 ### Conclusion sur le protocole RIP
 
@@ -374,7 +400,7 @@ Cette video de Claude Chaudet (Institut Mines-Télécom) expose le principe du r
 
 OSPF a besoin de connaître la topologie du réseau ainsi que la qualité de chaque lien en terme de bande passante. Pour cela, chaque routeur va fabriquer une table de voisinage : il s'agit d'un tableau permettant d'identifier tous les routeurs qui lui sont connectés ainsi que le débit associé à chaque lien. Pour obtenir ces information, le routeur échange périodiquement des messages (appelés messages hello) avec ses voisins.
 
-![](Images/hello.png){: .center}
+![](images/hello.png){: .center}
 
 |Voisin |	qualité du lien|
 |:--:|:--:|
@@ -385,7 +411,7 @@ Une fois tous ses voisins directs identifiés, le routeur va envoyer sa table de
 
 **Exercice 8**
 
-![](Images/exo8.png){: .center}
+![](images/exo8.png){: .center}
 
 1. En vous basant sur le protocole OSPF (métrique = somme des coûts), déterminez la table de routage du routeur A.
 <br>
@@ -401,7 +427,19 @@ On prendra comme débit maximal de référence 1 Mbps.
 Le coût est alors calculé de la façon suivante : $cout=\dfrac{debit~maximal~de~reference}{debit~du~reseau~concerne}$.
 2. Quel est, d'après la table de routage construite ci-dessus, le chemin qui sera emprunté par un paquet pour aller d'une machine ayant pour adresse IP 172.18.1.1/16 à une machine ayant pour adresse IP 172.16.5.3/16 ? 
 
---8<-- "docs/08-Protocole_Routage/Corrections/Exercice8_correction.md"
+??? note "Correction"
+    1) En supposant que les liens Routeur/portable soit de 1 Mbps
+
+    |Routeur A|Ip de destination|Masque|Passerelle suivante|Interface|Somme des coûts|
+    |:--:|:--:|:--:|:--:|:--:|:--:|
+    ||172.18.0.0|255.255.0.0||eth0|1|
+    ||192.168.1.0|255.255.255.0|192.168.2.2|eth2|0,2|
+    ||192.168.2.0|255.255.255.0||eth2|0,1|
+    ||192.168.3.0|255.255.255.0|192.168.2.2|eth2|0,2|
+    ||172.17.0.0|255.255.0.0|192.168.2.2|eth2|1,1|
+    ||172.16.0.0|255.255.0.0|192.168.2.2|eth2|1,2|
+
+    2) Chemin : Portable à Gauche, Routeur A, Routeur C, Routeur B, Portable à droite
 
 ### L'algorithme de Djikstra
 
@@ -411,11 +449,11 @@ L'algorithme de Djikstra datant de 1959 permet de trouver le chemin le plus cour
 
 Considérons le [réseau suivant](https://graphonline.ru/fr?graph=BPTnrZPMWqlGXaGe). Après échanges de messages hello, la cartographie suivante du réseau a été constituée :
 
-![](Images/exemple3.png){: .center}
+![](images/exemple3.png){: .center}
 
 Nous cherchons à déterminer le chemin le plus rapide entre R1 et R7. L'outil [graphonline](https://graphonline.ru/fr?graph=BPTnrZPMWqlGXaGe) vous permet de le faire visuellement via le menu *Algorithmes / plus court chemin avec l'algorithme de Djisktra*.
 
-![](Images/exemple4.png){: .center}
+![](images/exemple4.png){: .center}
 
 Contrairement à RIP, le chemin qu'OSPF nous indiquera sera R1 → R2 → R3 → R5 → R4 → R6 → R7. Ce chemin n'est clairement pas le plus efficace en termes de sauts mais est le plus rapide en termes de débit car il n'exploite pratiquement que des liaisons à 10 Gb/s. 
 
@@ -456,8 +494,25 @@ R1 → R2 → R3 → R5 → R4 → R6 → R7 avec un poids total minimum de 1,5.
 
 On supprime la liaison R4-R5. Réappliquez l'algorithme de Djikstra pour déterminer un chemin optimal entre R1 et R7.
 
---8<-- "docs/08-Protocole_Routage/Corrections/Exercice9_correction.md"
+??? note "Correction"
 
+    |R1|R2|R3|R4|R5|R6|R7|
+    |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+    |0 - R1|||||||
+    |0 - R1|0,1 - R1|1 - R1|||||
+    |x|**0,1 - R1**|0,2 - R2|<mark>1,1 - R2</mark>||||
+    |x|x|**0,2 - R2**||0,3 - R3|||
+    |x|x|x||**0,3 - R3**|1,3 - R5|10,3 - R5|
+    |x|x|x|<mark style="background: red"> 1,4 - R6</mark>||1,3 - R5|10,3 - R5|
+    |x|x|x|**1,1 - R2**|x|1,2 - R4||
+    |x|x|x|x|1,3 - R6|**1,2 - R4**|2,2 - R6|
+    |x|x|x|x|x|x|**2,2 - R6**|
+    
+    On revient sur R4 avec un chemin plus long (<mark style="background: red"> 1,4 – R6 </mark>  > <mark> 1,1 - R2 </mark> ),  on reprend donc à partir de R4 mais avec le nouveau poids le plus petit.
+
+    R1 ; R2 ; R4 ; R6 ; R7
+
+    
 ### Conclusion sur le protocole OSPF
 
 !!! attention "En conclusion"

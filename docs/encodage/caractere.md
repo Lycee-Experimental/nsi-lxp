@@ -1,9 +1,11 @@
 # Codage des caractères
-Tout pour comprendre et Ã©viter les erreurs d'encodage
 
-|Notions|Compétences|Remarques|
-|--|--|--| 
-|Représentation d'un texte en machine.<br>Exemples des encodages ASCII, ISO-8859-1, Unicode |Identifier l'intéret des différents systèmes d'encodage.<br>Convertir un fichier texte dans différents formats d'encodage | Aucune connaissance précise des normes d'encodage n'est exigible|
+Comment Ã©viter les erreurs d'encodage ?
+
+??? conclu "Programme"
+    |Notions|Compétences|Remarques|
+    |--|--|--| 
+    |Représentation d'un texte en machine.<br>Exemples des encodages ASCII, ISO-8859-1, Unicode |Identifier l’intérêt des différents systèmes d'encodage.<br>Convertir un fichier texte dans différents formats d'encodage | Aucune connaissance précise des normes d'encodage n'est exigible|
 
 ??? debian "Terminal Linux"
     {{debian()}}

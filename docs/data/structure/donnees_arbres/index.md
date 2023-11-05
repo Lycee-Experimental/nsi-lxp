@@ -18,8 +18,41 @@ N'oubliez pas d'indiquer pour chaque arbre le nombre total de trajets fait pour 
 2. Comparez avec les autres élèves de la classe les différents terriers créés. Caractérisez les arbres qui répondent le mieux à la question.
 3. Déterminez un algorithme de construction de terrier qui minimise le nombre de trajets.
 
---8<-- "docs/09-Arbres/Corrections/Exercice1_correction.md"
+??? note "Correction"
+    1. <br>
+    ```mermaid
+    flowchart TD
+            A(( )) --- B(( ))
+            A --- C(( ))
+            B --- D(( ))
+            B --- E((5))
+            C --- F((7))
+            C --- G((8))
+            D --- H((2))
+            D --- I((3))
+    ```
+    2. Nombre de trajets: 2 x 6 + 3 x 6 + 5 x 4 + 7 x 4 + 8 x 4 = 110
 
+    3. Par exemple, si on a les réveils des marmottes suivants : 7; 3; 5; 9; 2; 4; 6
+    <br>
+        - on créé des terriers en les séparant en deux au bout de chacun, jusqu’à ce qu’il y ait autant de terrier que de marmottes (ici 7)<br>
+        ```mermaid
+        flowchart TD
+            A(( )) --- B(( ))
+            A --- C(( ))
+            B --- D(( ))
+            B --- E(( ))
+            C --- F(( ))
+            C --- G((9))
+            D --- H((2))
+            D --- I((3))
+            E --- K((4))
+            E --- L((5))
+            F --- M((6))
+            F --- N((7))
+        ```
+        - On place les marmottes le plus en haut suivant le nombre de réveil le plus haut, puis on descend au niveau inférieur et on recommence…
+        (ici, le nombre de trajet est : 2  x 6 +  3 x 6 + 4 x 6 + 5 x 6 + 6 x 6 + 7 x 6 + 9 x 4 = 198
 ## Les arbres binaires
 
 
@@ -43,7 +76,7 @@ Avec l'exercice 1 est introduite la structure de donnée nommée **arbre binaire
 
 Dans la figure ci-dessous, tous les arbres dessinés sont deux à deux distincts, ce qui confirme qu'il faut distinguer sous-arbre droit et gauche, et qu'un des sous-arbres peut être vide :
 
-![](Images/arbre1.PNG){: .center}
+![](images/arbre1.PNG){: .center}
 
 **Exercice 2**
 
@@ -58,7 +91,7 @@ Dans la figure ci-dessous, tous les arbres dessinés sont deux à deux distincts
 
     **Profondeur** : 
     
-    ![](Images/profondeur.PNG){: .center}
+    ![](images/profondeur.PNG){: .center}
 
     **Hauteur** : Profondeur maximale d'un arbre
 
@@ -69,11 +102,274 @@ Dans la figure ci-dessous, tous les arbres dessinés sont deux à deux distincts
 
 Déterminer les taille et hauteur de chaque arbre de l'exercice 2.
 
---8<-- "docs/09-Arbres/Corrections/Exercice2-3_correction.md"
+??? note "Correction"
+    Avec 3 noeuds :
+
+    ```mermaid
+    flowchart LR
+
+        subgraph a [Hauteur 2]
+            direction TB
+            A(( )) --- B(( ))
+            A --- C(( ))
+
+        end
+
+        subgraph b [Hauteur 3]
+            direction TB
+            D(( )) --- E(( ))
+            D --- F(( ))
+            E --- G(( ))
+            E --- H(( ))
+            style F opacity:0
+            linkStyle 3 stroke-width:0px
+            style H opacity:0
+            linkStyle 5 stroke-width:0px
+
+        end
+
+        subgraph c [Hauteur 3]
+            direction TB
+            I(( )) --- J(( ))
+            I --- K(( ))
+            K --- M(( ))
+            K --- L(( ))
+            style J opacity:0
+            linkStyle 6 stroke-width:0px
+            style M opacity:0
+            linkStyle 8 stroke-width:0px
+
+        end
+
+        subgraph d [Hauteur 3]
+            direction TB
+            N(( )) --- O(( ))
+            N --- P(( ))
+            O --- Q(( ))
+            O --- R(( ))
+            style P opacity:0
+            linkStyle 11 stroke-width:0px
+            style Q opacity:0
+            linkStyle 12 stroke-width:0px
+
+        end
+
+        subgraph e [Hauteur 3]
+            direction TB
+            S(( )) --- T(( ))
+            S --- U(( ))
+            U --- V(( ))
+            U --- W(( ))
+            style T opacity:0
+            linkStyle 14 stroke-width:0px
+            style W opacity:0
+            linkStyle 17 stroke-width:0px
+
+        end
+
+        a x--x | | b x--x | | c x--x | | d x--x | | e
+
+    ```
+
+    Avec 4 noeuds :
+
+    ```mermaid
+    flowchart LR
+
+        subgraph a [Hauteur 4]
+            direction TB
+            A(( )) --- B(( ))
+            A --- C(( ))
+            B --- D(( ))
+            B --- E(( ))
+            D --- F(( ))
+            D --- G(( ))
+
+            style C opacity:0
+            linkStyle 1 stroke-width:0px
+            style E opacity:0
+            linkStyle 3 stroke-width:0px
+            style G opacity:0
+            linkStyle 5 stroke-width:0px
+
+        end
+
+        subgraph b [Hauteur 4]
+            direction TB
+            A1(( )) --- B1(( ))
+            A1 --- C1(( ))
+            C1 --- D1(( ))
+            C1 --- E1(( ))
+            E1 --- F1(( ))
+            E1 --- G1(( ))
+
+            style B1 opacity:0
+            linkStyle 6 stroke-width:0px
+            style D1 opacity:0
+            linkStyle 8 stroke-width:0px
+            style F1 opacity:0
+            linkStyle 10 stroke-width:0px
+
+        end
+
+        subgraph c [Hauteur 4]
+            direction TB
+            A2(( )) --- B2(( ))
+            A2 --- C2(( ))
+            B2 --- D2(( ))
+            B2 --- E2(( ))
+            E2 --- F2(( ))
+            E2 --- G2(( ))
+
+            style C2 opacity:0
+            linkStyle 13 stroke-width:0px
+            style D2 opacity:0
+            linkStyle 14 stroke-width:0px
+            style G2 opacity:0
+            linkStyle 17 stroke-width:0px
+
+        end
+
+        subgraph d [Hauteur 4]
+            direction TB
+            A3(( )) --- B3(( ))
+            A3 --- C3(( ))
+            C3 --- D3(( ))
+            C3 --- E3(( ))
+            D3 --- F3(( ))
+            D3 --- G3(( ))
+
+            style B3 opacity:0
+            linkStyle 18 stroke-width:0px
+            style E3 opacity:0
+            linkStyle 21 stroke-width:0px
+            style F3 opacity:0
+            linkStyle 22 stroke-width:0px
+
+        end
+
+        subgraph e [Hauteur 4]
+            direction TB
+            A4(( )) --- B4(( ))
+            A4 --- C4(( ))
+            C4 --- D4(( ))
+            C4 --- E4(( ))
+            D4 --- F4(( ))
+            D4 --- G4(( ))
+
+            style B4 opacity:0
+            linkStyle 24 stroke-width:0px
+            style E4 opacity:0
+            linkStyle 27 stroke-width:0px
+            style G4 opacity:0
+            linkStyle 29 stroke-width:0px
+
+        end
+
+        subgraph f [Hauteur 4]
+            direction TB
+            A5(( )) --- B5(( ))
+            A5 --- C5(( ))
+            B5 --- D5(( ))
+            B5 --- E5(( ))
+            E5 --- F5(( ))
+            E5 --- G5(( ))
+
+            style C5 opacity:0
+            linkStyle 31 stroke-width:0px
+            style D5 opacity:0
+            linkStyle 32 stroke-width:0px
+            style F5 opacity:0
+            linkStyle 34 stroke-width:0px
+
+        end
+
+        a x--x | | b x--x | | c x--x | | d x--x | | e x--x | | f
+
+    ```
+
+    ```mermaid
+    flowchart LR
+
+        subgraph a [Hauteur 3]
+            direction TB
+            A(( )) --- B(( ))
+            A --- C(( ))
+            B --- D(( ))
+            B --- E(( ))
+
+            style C opacity:0
+            linkStyle 1 stroke-width:0px
+
+        end
+
+        subgraph b [Hauteur 3]
+            direction TB
+            A1(( )) --- B1(( ))
+            A1 --- C1(( ))
+            C1 --- D1(( ))
+            C1 --- E1(( ))
+
+            style B1 opacity:0
+            linkStyle 4 stroke-width:0px
+
+        end
+
+        subgraph c [Hauteur 3]
+            direction TB
+            A4(( )) --- B4(( ))
+            A4 --- C4(( ))
+            B4 --- F4(( ))
+            B4 --- G4(( ))
+
+            style F4 opacity:0
+            linkStyle 10 stroke-width:0px
+
+        end
+
+        subgraph d [Hauteur 3]
+            direction TB
+            A3(( )) --- B3(( ))
+            A3 --- C3(( ))
+            C3 --- D3(( ))
+            C3 --- E3(( ))
+
+            style E3 opacity:0
+            linkStyle 15 stroke-width:0px
+
+        end
+
+        subgraph e [Hauteur 3]
+            direction TB
+            A2(( )) --- B2(( ))
+            A2 --- C2(( ))
+            B2 --- D2(( ))
+            B2 --- E2(( ))
+
+            style E2 opacity:0
+            linkStyle 19 stroke-width:0px
+
+        end
+
+        subgraph f [Hauteur 3]
+            direction TB
+            A5(( )) --- B5(( ))
+            A5 --- C5(( ))
+            C5 --- D5(( ))
+            C5 --- E5(( ))
+
+            style D5 opacity:0
+            linkStyle 22 stroke-width:0px
+
+        end
+
+        a x--x | | b x--x | | c x--x | | d x--x | | e x--x | | f
+
+    ```
 
 ### Arbres particuliers
 
-![](Images/arbre2.PNG){: .center}
+![](images/arbre2.PNG){: .center}
 
 
 ### TP 1
@@ -114,15 +410,16 @@ Le noeud contient 3 attributs : sa valeur, ses fils droit et gauche. On peut y a
 
 #### Utilisation de la classe Noeud
 
-![](Images/tab1.PNG){: .center}
+![](images/tab1.PNG){: .center}
 
 **Exercice 4**
 
 Créer l'arbre suivant dans Capytale avec le code suivant : `3213-1144872`
 
-![](Images/arbre3.PNG){: .center}
+![](images/arbre3.PNG){: .center}
 
---8<-- "docs/09-Arbres/Corrections/Exercice4_correction.md"
+??? note "Correction"
+    Code Capytale : `15aa-1144869`
 
 #### Création de la fonction `taille`
 
@@ -159,7 +456,7 @@ Completez le notebook de l'exercice 4 avec cet algorithme codé en Python, et te
 
 On parcours un arbre pour "afficher" ou tester toutes les valeurs d'un arbres. Il existe 4 type de parcours :
 
-![](Images/parcours.PNG){: .center}
+![](images/parcours.PNG){: .center}
 
 **Exercice 5**
 
@@ -223,12 +520,16 @@ Fonction parcours_largeur(arbre):
 
 Appliquez les 4 algorithmes "à la main" sur l'abre binaire suivant et donner les valeurs dans l'ordre :
 
-1. ![](Images/arbre4.PNG){: .center}
-2. ![](Images/arbre4.PNG){: .center}
-3. ![](Images/arbre4.PNG){: .center}
-4. ![](Images/arbre4.PNG){: .center}
+1. ![](images/arbre4.PNG){: .center}
+2. ![](images/arbre4.PNG){: .center}
+3. ![](images/arbre4.PNG){: .center}
+4. ![](images/arbre4.PNG){: .center}
 
---8<-- "docs/09-Arbres/Corrections/Exercice5_correction.md"
+??? note "Correction"
+    - Préfixe : A B C E D F G I H J
+    - Indixe : C E B D A I G F H J
+    - Suffixe : E C D B I G J H F A
+    - Largeur : A B F C D G H E I J
 
 ### TP 2
 
@@ -236,7 +537,8 @@ Appliquez les 4 algorithmes "à la main" sur l'abre binaire suivant et donner le
 
 Faire le TP dans Capytale dont le code est : `1f75-1144892`
 
---8<-- "docs/09-Arbres/Corrections/Exercice6_correction.md"
+??? note "Correction"
+    Code Capytale : `df62-1144888`
 
 ## Arbre binaire de recherche (ABR)
 
@@ -248,7 +550,7 @@ Faire le TP dans Capytale dont le code est : `1f75-1144892`
     - Toutes les valeurs situées dans le **sous-arbre gauche** sont plus **petites** que la valeur du noeud.
     - Toutes les valeurs situées dans le **sous-arbre droit** sont plus **grandes** que la valeur du noeud.
 
-    ![](Images/ABR.PNG){: .center}
+    ![](images/ABR.PNG){: .center}
 
 ### TP3
 
@@ -257,7 +559,8 @@ Faire le TP dans Capytale dont le code est : `1f75-1144892`
 1. Faire le TP Capytale dont le code est `f200-1144899`
 2. Complétez l'exercice 7 avec les autres algorithmes de recherches.
 
---8<-- "docs/09-Arbres/Corrections/Exercice7_correction.md"
+??? note "Correction"
+    Code Capytale : `8daa-1144896`
 
 ## Une application : l'algorithme de Huffman
 
@@ -282,43 +585,43 @@ Prenons toujours l’exemple du mot Anticonstitutionnel.
 
 On indique pour chaque caractère du mot le nombre d’occurrence de ce caractère dans le mot. (on pourra mettre les résultats sous forme d’un tableau, d’un dictionnaire…)
 
-![](Images/huff1.PNG){: .center}
+![](images/huff1.PNG){: .center}
 
 #### Tri par ordre croissant
 
 On range cette « liste » dans l’ordre **croissant** (ou décroissant) des nombres d’ occurrences.
 
-![](Images/huff2.PNG){: .center}
+![](images/huff2.PNG){: .center}
 
 #### Construction de l’arbre binaire « de Huffman »
 
 On crée des **feuilles** pour chaque élément de la « liste », chacune **étiquetée** par un couple (caractère, nombre d’occurrence).
 
-![](Images/huff3.PNG){: .center}
+![](images/huff3.PNG){: .center}
 
 On sélectionne les **2 feuilles** dont le nombre d’occurrence est **le plus petit**.
 
-![](Images/huff4.PNG){: .center}
+![](images/huff4.PNG){: .center}
 
 On fusionne ces 2 feuilles dans un nouvel arbre. L’étiquette de ce nouvel arbre sera (’’,**somme des poids des deux feuilles**)
 
-![](Images/huff5.PNG){: .center}
+![](images/huff5.PNG){: .center}
 
 On supprime les 2 feuilles de la « liste » et on insère, **à la bonne place**, le nouvel arbre dans cette liste.
 
-![](Images/huff6.PNG){: .center}
+![](images/huff6.PNG){: .center}
 
 Par **récurrence**, on « vide » la liste et l’ensemble des feuilles et des arbres qui s’y trouve. Au final, on obtient un arbre unique : **l’arbre d’Huffman**.
 
-![](Images/huff7.PNG){: .center}
+![](images/huff7.PNG){: .center}
 
 ### Mise en application : Codage
 
 On peut maintenant utiliser cet arbre pour coder chaque caractère : en parcourant l’arbre de la racine à une feuille, on notera **0 si on part à gauche ou 1 si on part à droite**. On obtient ainsi la **table de codage**.
 
-![](Images/huff9.PNG){: .center} 
+![](images/huff9.PNG){: .center} 
 
-![](Images/huff8.PNG){: .center}
+![](images/huff8.PNG){: .center}
 
 On obtient ainsi le codage d'**Anticonstitutionnel** :
 
@@ -343,20 +646,33 @@ On vous donne la série binaire et l’arbre de Huffman suivants :
 <br>
 110101101101001001111000010110011001111010101111111100100111010111011101110101000010011001100000001
 <br>
-![](Images/huff10.PNG){: .center}
+![](images/huff10.PNG){: .center}
 <br>
 Décoder la série binaire et donner le texte en clair.
 
---8<-- "docs/09-Arbres/Corrections/Huffman_correction.md"
-
+??? note "Correction"
+    1. Codage
+    <br>
+    En suivant l’algorithme de Huffman, Dessiner les arbres des Huffman, et donner les tables de codages des mots suivants : 
+        - Attention<br>
+        ![](../Corrections/huffman1.png)
+        - Institutionnalisation<br>
+        ![](../Corrections/huffman2.png)
+    2. Décodage
+    <br>
+    On vous donne la série binaire et l’arbre de Huffman suivants :<br>
+    110101101101001001111000010110011001111010101111111100100111010111011101110101000010011001100000001<br>
+    ![](../Corrections/huffman3.png)<br>
+    Décoder la série binaire et donner le texte en clair. <br>
+    'Warriors deux mille vingt'
 ### Mise en pratique sur Python
 
 Faire le TP Capytale dont le code est `082a-1144905`
 
 Une version "à trou" est disponible avec ce code : `36ea-1144909`
 
---8<-- "docs/09-Arbres/Corrections/HuffmanPy_correction.md"
-
+??? note "Correction"
+    Code Capytale : `309d-1144902`
 
   
 

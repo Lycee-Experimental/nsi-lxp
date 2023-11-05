@@ -59,10 +59,10 @@ hide:
 
         ??? example "Exercice 01.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/01_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/01_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/01_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/01_1/correction.md"
 
 
             
@@ -70,19 +70,19 @@ hide:
 
         ??? example "Exercice 01.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/01_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/01_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/01_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/01_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-01.py){. target="_blank"}
             
         ??? example "Exercice 02.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/02_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/02_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/02_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/02_1/correction.md"
 
 
             
@@ -90,19 +90,19 @@ hide:
 
         ??? example "Exercice 02.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/02_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/02_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/02_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/02_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-02.py){. target="_blank"}
             
         ??? example "Exercice 03.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/03_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/03_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/03_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/03_1/correction.md"
 
 
             
@@ -110,20 +110,20 @@ hide:
 
         ??? example "Exercice 03.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/03_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/03_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/03_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/03_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-03.py){. target="_blank"}
             
 
         ??? example "Exercice 04.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/04_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/04_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/04_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/04_1/correction.md"
 
 
             
@@ -131,20 +131,20 @@ hide:
 
         ??? example "Exercice 04.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/04_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/04_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/04_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/04_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-04.py){. target="_blank"}
             
 
         ??? example "Exercice 05.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/05_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/05_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/05_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/05_1/correction.md"
 
 
             
@@ -152,19 +152,19 @@ hide:
 
         ??? example "Exercice 05.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/05_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/05_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/05_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/05_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-05.py){. target="_blank"}
             
         ??? example "Exercice 06.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/06_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/06_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/06_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/06_1/correction.md"
 
 
             
@@ -173,19 +173,19 @@ hide:
 
         ??? example "Exercice 06.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/06_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/06_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/06_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/06_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-06.py){. target="_blank"}
             
         ??? example "Exercice 07.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/07_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/07_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/07_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/07_1/correction.md"
 
 
             
@@ -193,19 +193,19 @@ hide:
 
         ??? example "Exercice 07.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/07_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/07_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/07_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/07_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-07.py){. target="_blank"}
 
         ??? example "Exercice 08.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/08_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/08_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/08_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/08_1/correction.md"
 
 
             
@@ -213,19 +213,19 @@ hide:
 
         ??? example "Exercice 08.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/08_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/08_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/08_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/08_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-08.py){. target="_blank"}
             
         ??? example "Exercice 09.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/09_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/09_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/09_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/09_1/correction.md"
 
 
             
@@ -233,19 +233,19 @@ hide:
 
         ??? example "Exercice 09.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/09_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/09_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/09_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/09_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-09.py){. target="_blank"}
 
         ??? example "Exercice 10.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/10_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/10_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/10_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/10_1/correction.md"
 
 
             
@@ -253,19 +253,19 @@ hide:
 
         ??? example "Exercice 10.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/10_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/10_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/10_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/10_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-10.py){. target="_blank"}
             
         ??? example "Exercice 11.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/11_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/11_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/11_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/11_1/correction.md"
 
 
             
@@ -274,19 +274,19 @@ hide:
 
         ??? example "Exercice 11.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/11_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/11_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/11_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/11_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-11.py){. target="_blank"}
             
         ??? example "Exercice 12.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/12_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/12_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/12_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/12_1/correction.md"
 
 
             
@@ -294,19 +294,19 @@ hide:
 
         ??? example "Exercice 12.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/12_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/12_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/12_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/12_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-12.py){. target="_blank"}
             
         ??? example "Exercice 13.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/13_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/13_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/13_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/13_1/correction.md"
 
 
             
@@ -314,19 +314,19 @@ hide:
 
         ??? example "Exercice 13.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/13_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/13_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/13_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/13_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-13.py){. target="_blank"}
             
         ??? example "Exercice 14.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/14_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/14_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/14_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/14_1/correction.md"
 
 
             
@@ -334,19 +334,19 @@ hide:
 
         ??? example "Exercice 14.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/14_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/14_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/14_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/14_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-14.py){. target="_blank"}
             
         ??? example "Exercice 15.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/15_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/15_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/15_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/15_1/correction.md"
 
 
             
@@ -354,19 +354,19 @@ hide:
 
         ??? example "Exercice 15.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/15_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/15_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/15_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/15_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-15.py){. target="_blank"}
             
         ??? example "Exercice 16.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/16_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/16_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/16_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/16_1/correction.md"
 
 
             
@@ -374,19 +374,19 @@ hide:
 
         ??? example "Exercice 16.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/16_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/16_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/16_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/16_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-16.py){. target="_blank"}
             
         ??? example "Exercice 17.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/17_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/17_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/17_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/17_1/correction.md"
 
 
             
@@ -394,19 +394,19 @@ hide:
 
         ??? example "Exercice 17.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/17_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/17_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/17_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/17_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-17.py){. target="_blank"}
             
         ??? example "Exercice 18.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/18_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/18_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/18_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/18_1/correction.md"
 
 
             
@@ -415,19 +415,19 @@ hide:
 
         ??? example "Exercice 18.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/18_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/18_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/18_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/18_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-18.py){. target="_blank"}
             
         ??? example "Exercice 19.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/19_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/19_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/19_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/19_1/correction.md"
 
 
             
@@ -435,19 +435,19 @@ hide:
 
         ??? example "Exercice 19.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/19_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/19_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/19_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/19_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-19.py){. target="_blank"}
 
         ??? example "Exercice 20.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/20_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/20_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/20_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/20_1/correction.md"
 
 
             
@@ -456,19 +456,19 @@ hide:
 
         ??? example "Exercice 20.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/20_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/20_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/20_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/20_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-20.py){. target="_blank"}
             
         ??? example "Exercice 21.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/21_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/21_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/21_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/21_1/correction.md"
 
 
             
@@ -476,19 +476,19 @@ hide:
 
         ??? example "Exercice 21.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/21_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/21_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/21_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/21_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-21.py){. target="_blank"}
             
         ??? example "Exercice 22.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/22_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/22_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/22_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/22_1/correction.md"
 
 
             
@@ -496,19 +496,19 @@ hide:
 
         ??? example "Exercice 22.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/22_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/22_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/22_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/22_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-22.py){. target="_blank"}
         
         ??? example "Exercice 23.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/23_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/23_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/23_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/23_1/correction.md"
 
 
             
@@ -516,19 +516,19 @@ hide:
 
         ??? example "Exercice 23.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/23_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/23_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/23_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/23_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-23.py){. target="_blank"}
 
         ??? example "Exercice 24.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/24_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/24_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/24_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/24_1/correction.md"
 
 
             
@@ -536,19 +536,19 @@ hide:
 
         ??? example "Exercice 24.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/24_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/24_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/24_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/24_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-24.py){. target="_blank"}
             
         ??? example "Exercice 25.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/25_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/25_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/25_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/25_1/correction.md"
 
 
             
@@ -556,19 +556,19 @@ hide:
 
         ??? example "Exercice 25.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/25_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/25_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/25_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/25_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-25.py){. target="_blank"}
             
         ??? example "Exercice 26.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/26_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/26_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/26_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/26_1/correction.md"
 
 
             
@@ -576,19 +576,19 @@ hide:
 
         ??? example "Exercice 26.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/26_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/26_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/26_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/26_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-26.py){. target="_blank"}
             
         ??? example "Exercice 27.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/27_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/27_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/27_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/27_1/correction.md"
 
 
             
@@ -596,19 +596,19 @@ hide:
 
         ??? example "Exercice 27.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/27_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/27_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/27_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/27_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-27.py){. target="_blank"}
             
         ??? example "Exercice 28.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/28_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/28_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/28_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/28_1/correction.md"
 
 
             
@@ -616,19 +616,19 @@ hide:
 
         ??? example "Exercice 28.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/28_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/28_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/28_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/28_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-28.py){. target="_blank"}
 
         ??? example "Exercice 29.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/29_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/29_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/29_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/29_1/correction.md"
 
 
             
@@ -636,19 +636,19 @@ hide:
 
         ??? example "Exercice 29.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/29_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/29_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/29_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/29_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-29.py){. target="_blank"}
 
         ??? example "Exercice 30.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/30_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/30_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/30_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/30_1/correction.md"
 
 
             
@@ -656,19 +656,19 @@ hide:
 
         ??? example "Exercice 30.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/30_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/30_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/30_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/30_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-30.py){. target="_blank"}
             
         ??? example "Exercice 31.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/31_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/31_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/31_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/31_1/correction.md"
 
 
             
@@ -676,19 +676,19 @@ hide:
 
         ??? example "Exercice 31.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/31_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/31_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/31_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/31_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-31.py){. target="_blank"}
             
         ??? example "Exercice 32.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/32_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/32_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/32_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/32_1/correction.md"
 
 
             
@@ -696,19 +696,19 @@ hide:
 
         ??? example "Exercice 32.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/32_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/32_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/32_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/32_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-32.py){. target="_blank"}
             
         ??? example "Exercice 33.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/33_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/33_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/33_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/33_1/correction.md"
 
 
             
@@ -716,19 +716,19 @@ hide:
 
         ??? example "Exercice 33.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/33_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/33_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/33_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/33_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-33.py){. target="_blank"}
             
         ??? example "Exercice 34.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/34_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/34_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/34_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/34_1/correction.md"
 
 
             
@@ -736,19 +736,19 @@ hide:
 
         ??? example "Exercice 34.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/34_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/34_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/34_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/34_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-34.py){. target="_blank"}
             
         ??? example "Exercice 35.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/35_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/35_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/35_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/35_1/correction.md"
 
 
             
@@ -757,19 +757,19 @@ hide:
 
         ??? example "Exercice 35.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/35_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/35_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/35_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/35_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-35.py){. target="_blank"}
             
         ??? example "Exercice 36.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/36_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/36_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/36_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/36_1/correction.md"
 
 
             
@@ -778,19 +778,19 @@ hide:
 
         ??? example "Exercice 36.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/36_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/36_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/36_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/36_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-36.py){. target="_blank"}
             
         ??? example "Exercice 37.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/37_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/37_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/37_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/37_1/correction.md"
 
 
             
@@ -799,19 +799,19 @@ hide:
 
         ??? example "Exercice 37.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/37_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/37_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/37_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/37_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-37.py){. target="_blank"}
             
         ??? example "Exercice 38.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/38_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/38_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/38_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/38_1/correction.md"
 
 
             
@@ -820,19 +820,19 @@ hide:
 
         ??? example "Exercice 38.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/38_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/38_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/38_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/38_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-38.py){. target="_blank"}
             
         ??? example "Exercice 39.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/39_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/39_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/39_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/39_1/correction.md"
 
 
             
@@ -841,19 +841,19 @@ hide:
 
         ??? example "Exercice 39.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/39_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/39_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/39_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/39_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-39.py){. target="_blank"}
         
         ??? example "Exercice 40.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/40_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/40_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/40_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/40_1/correction.md"
 
 
             
@@ -862,19 +862,19 @@ hide:
 
         ??? example "Exercice 40.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/40_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/40_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/40_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/40_2/correction.md"
             
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-40.py){. target="_blank"}
             
         ??? example "Exercice 41.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/41_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/41_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/41_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/41_1/correction.md"
 
 
             
@@ -882,30 +882,30 @@ hide:
 
         ??? example "Exercice 41.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/41_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/41_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/41_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/41_2/correction.md"
 
 
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-41.py){. target="_blank"}
             
         ??? example "Exercice 42.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/42_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/42_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/42_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/42_1/correction.md"
 
 
             :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/vide.py){. target="_blank"}
 
         ??? example "Exercice 42.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/42_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/42_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/42_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/42_2/correction.md"
 
             
                 
@@ -913,10 +913,10 @@ hide:
             
         ??? example "Exercice 43.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/43_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/43_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/43_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/43_1/correction.md"
 
 
             :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/vide.py){. target="_blank"}
@@ -924,10 +924,10 @@ hide:
 
         ??? example "Exercice 43.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/43_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/43_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/43_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/43_2/correction.md"
 
         
                 
@@ -935,39 +935,39 @@ hide:
             
         ??? example "Exercice 44.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/44_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/44_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/44_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/44_1/correction.md"
 
             :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/vide.py){. target="_blank"}
 
 
         ??? example "Exercice 44.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/44_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/44_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/44_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/44_2/correction.md"
 
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-44.py){. target="_blank"}
             
         ??? example "Exercice 45.1"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/45_1/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/45_1/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/45_1/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/45_1/correction.md"
 
             
             :arrow_right: [Rédigez votre code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/vide.py){. target="_blank"}
 
         ??? example "Exercice 45.2"
             === "Énoncé" 
-                --8<-- "assets/sujets/term/pratique/45_2/enonce.md"
+                --8<-- "docs/assets/sujets/term/pratique/45_2/enonce.md"
 
             === "Correction"
-                --8<-- "assets/sujets/term/pratique/45_2/correction.md"
+                --8<-- "docs/assets/sujets/term/pratique/45_2/correction.md"
                 
             :arrow_right: [Complétez le code sur Basthon](https://console.basthon.fr/?from=https://raw.githubusercontent.com/Lycee-Experimental/Lycee-Experimental.github.io/master/docs/assets/sujets/term/pratique/scripts/23-NSI-45.py){. target="_blank"}
 

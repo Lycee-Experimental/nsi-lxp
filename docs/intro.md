@@ -23,3 +23,4 @@ hide:
     - Ce site a été conçu en mobilisant de nombreux [outils web](/outils/), un grand merci à tou·te·s leurs contributeur·ices !
 
     - Je me suis grandement inspiré de sites de collègues, un grand merci à ell·eux de partager leur travail ! Qu'iels se sentent libres d'utiliser le mien comme iels le souhaitent, dès lors qu'il n'en est pas fait d'utilisation commerciale. Une liste de sites est accessible [ici](/ressources/).
+

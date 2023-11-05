@@ -4,8 +4,7 @@
     |Notions|Compétences|Remarques|
     |--|--|--| 
     Structures de données, interface et implémentation.<br> Listes, piles, files : structures linéaires. <br> Dictionnaires, index et clé. | Spécifier une structure de données par son interface.<br> Distinguer interface et implémentation. <br> Écrire plusieurs implémentations d'une même structure de données.<br> Distinguer des structures par le jeu des méthodes qui  caractérisent. <br> Choisir une structure de données adaptée à la situation à modéliser. <br> Distinguer la recherche d’une valeur dans une liste et dans un dictionnaire. | L’abstraction des structures de données est introduite après plusieurs implémentations d’une structure simple comme la file (avec un tableau ou avec deux piles). <br> On distingue les modes FIFO (first in first out) et LIFO (last in first out) des piles et des files.
-
-
+    Algorithmes sur les arbres binaires et sur les arbres binaires de recherche. | Calculer la taille et la hauteur d’un arbre. <br> Parcourir un arbre de différentes façons (ordres infixe, préfixe ou suffixe ; ordre en largeur d’abord). <br>Rechercher une clé dans un arbre de recherche, insérer une clé. | Une structure de données récursive adaptée est utilisée. <br> L’exemple des arbres permet d’illustrer la programmation par classe. <br> La recherche dans un arbre de recherche équilibré est de coût logarithmique.
 
 Une **structure linéaire** relie les données en **séquences**. C'est à dire qu'on peut numéroter les données, et que chaque élément a un rang.
 
@@ -89,7 +88,7 @@ Le nombre d’éléments contenus dans la liste indique la dernière position oc
 
 Supposons un tableau de 11 cases. Alors ce tableau pourra représenter une liste de $n=10$ éléments au maximum. On grise l’espace où l’insertion est possible.
 
-![](Images/tab1.JPG){: .center}
+![](images/tab1.JPG){: .center}
 
 Les espaces libres sont alloués au fur et à mesure, tant qu’il reste de l’espace. Ci-dessous, on rend compte de l’évolution du remplissage du tableau qui représente cette liste, pour différentes insertions
 
@@ -97,9 +96,10 @@ Les espaces libres sont alloués au fur et à mesure, tant qu’il reste de l’
 
 On vous donne les deux premières allocations, à vous de compléter pour les suivantes.
 
-![](Images/tab2.JPG){: .center}
+![](images/tab2.JPG){: .center}
 
---8<-- "docs/03-Structure_donnees_lineaires/Corrections/Exercice1_correction.md"
+??? note "Correction"
+    ![](images/Exercice1_correction.JPG)
 
 
 !!! note "Remarques"
@@ -130,7 +130,8 @@ Pour cette activité, on part de la liste suivante (un tableau pouvant accueilli
 
 2) Testez ce programme avec un doctest, et éventuellement, corrigez-le.
 
---8<-- "docs/03-Structure_donnees_lineaires/Corrections/Exercice2_correction.md"
+??? note "Correction"
+    Code Capytale : `2a5b-774982`
 
 ## Les PILES et les FILES
 
@@ -153,7 +154,15 @@ Pour cette activité, on part de la liste suivante (un tableau pouvant accueilli
     |Ce qu'on peut faire avec? (méthodes)|||
     |A quoi cela sert?|||
 
---8<-- "docs/03-Structure_donnees_lineaires/Corrections/Exercice3_correction.md"
+??? note "Correction"
+    ||La PILE|La FILE|
+    |:--:|:--:|:--:|
+    |Une image du quotidien qui l’illustre|La pile d’assiettes (collection verticale)| La file d’attente (collection horizontale)|
+    |Qu’est-ce que c’est (principe) ?|Structure où le dernier élément ajouté sera le premier à être retiré.|Structure dans laquelle les  éléments sont récupérés dans l’ordre dans lequel ils ont été ajoutés. Les premiers ajoutés sont les premiers à  être récupérés.|
+    |Acronyme du mode associé et signification|LIFO (last in first out)|FIFO (first in first out)|
+    |Ce qu’on peut faire avec (méthode)?|On peut empiler, consulter sommet de la  pile, dépiler, vérifier si la pile est vide.|On enfile un élément par la gauche. On défile un élément par la droite. On peut vérifier si la file est vide.|
+    |A quoi cela sert ?|Les  processeurs dans les ordinateurs gèrent un système de piles. Une pile est utilisée pour mémoriser les pages visitées dans un navigateur web ;on utilise une pile pour évaluer les expressions mathématiques en notation  polonaise  inverse  (notation sans parenthèses) ; la fonction annuler la  frappe  (`ctrl+Z`); les algorithmes de recherche en profondeur et algorithmes récursifs utilisent une pile.|Elle sert à traiter les données dans l’ordre dans lequel elles arrivent. Utilisés dans les mécanismes d’attente (système d’impression pour traiter les requêtes dans l’ordre dans lequel elles arrivent)dans les systèmes d’exploitation dans mécanismes d’ordonnancement afin de gérer l’ordre d’exécution des processus; pour gérer les mémoires tampons. Dans les algorithmes de parcours en largeur.|
+
 
 La vidéo évoque le type abstrait (reporté en fin de chapitre). La fin de la vidéo constitue une ouverture sur le type abstrait et des listes chainées et doublement chainées qui sont hors programme.
 
@@ -211,15 +220,16 @@ Un exemple pour fixer les idées :
 
 On part d’un tableau de 11 cases donc qui pourra accueillir les $n=10$ éléments d’une PILE :
 
-![](Images/tab3.JPG){: .center}
+![](images/tab3.JPG){: .center}
 
 **Exercice 4**
 
 Remplir les tableaux suivants. On grise les cases où l’empilement est possible.
 
-![](Images/tab4.JPG){: .center}
+![](images/tab4.JPG){: .center}
 
---8<-- "docs/03-Structure_donnees_lineaires/Corrections/Exercice4_correction.md"
+??? note "Correction"
+    ![](images/Exercice4_Correction.JPG)
 
 **Remarque** : on voit qu’il est inutile de « vider » la case lorsqu’on dépile, la valeur dépilée sera écrasée à l’empilement suivant.
 
@@ -239,7 +249,8 @@ On part d’une PILE vide, à 4 cases donc pouvant accueillir 3 éléments :
 
 2) Testez ce programme avec Doctest.
 
---8<-- "docs/03-Structure_donnees_lineaires/Corrections/Exercice5_correction.md"
+??? note "Correction"
+    Code Capytale : `cdcd-775263`
 
 **Etape 3 : des méthodes de la FILE à son implémentation sous forme d’un tableau.**
 
@@ -288,7 +299,7 @@ Un exemple pour fixer les idées :
 
 On part d’un tableau de 11 cases donc qui pourra accueillir les n=8 éléments d’une FILE :
 
-![](Images/tab5.JPG){: .center}
+![](images/tab5.JPG){: .center}
 
 Chaque fois qu’un élément est enfilé, la queue et la taille augmente chacune d’une unité.
 
@@ -300,9 +311,10 @@ Lorsque la tête ou la queue dépasse la longueur du tableau, on repart au débu
 
 Pour comprendre, remplir les tableaux suivants. On grise les espaces dans lesquelles les valeurs pourront être enfilées.
 
-![](Images/tab6.JPG){: .center}
+![](images/tab6.JPG){: .center}
 
---8<-- "docs/03-Structure_donnees_lineaires/Corrections/Exercice6_correction.md"
+??? note "Correction"
+    ![](images/Exercice6_Correction.JPG)
 
 **Remarque :** lorsqu’on défile, la case n’est pas vidée. Son contenu sera écrasé lorsqu’un prochain élément sera enfilé.
 
@@ -322,7 +334,8 @@ On part d’une FILE vide, soit un tableau à 6 cases donc pouvant accueillir 3 
 
 2) Testez-le.
 
---8<-- "docs/03-Structure_donnees_lineaires/Corrections/Exercice7_correction.md"
+??? note "Correction"
+    Code Capytale : `5ee6-775379`
  
 ## Les dictionnaires
 
@@ -348,7 +361,11 @@ Nommer la structure de données qui convient pour chaque situation ci-dessous :
 2.	Stocker l’historique des actions effectuées dans un logiciel et disposer d’une commande Annuler (ou Undo).
 3.	Envoyer des fichiers au serveur d’impression.
 
---8<-- "docs/03-Structure_donnees_lineaires/Corrections/Exercice8_correction.md"
+??? note "Correction"
+        a. dictionnaire
+        b. pile
+        c. file
+
 
 !!! note "A Noter"
     Il est aisé de reconnaître l’outil adapté mais pourquoi est-il le mieux adapté?
@@ -373,11 +390,11 @@ Nommer la structure de données qui convient pour chaque situation ci-dessous :
 
 Les complexités et leur représentation graphique :
 
-![](Images/tab7.JPG){: .center}
+![](images/tab7.JPG){: .center}
 
 Tableau résumé des complexités pour les différentes structures abordées :
 
-![](Images/tab8.JPG){: .center}
+![](images/tab8.JPG){: .center}
  
 ## Comment distinguer les structures ? … par le jeu des méthodes qui les caractérisent
 
@@ -489,7 +506,8 @@ print(MAPILE.AFFICHER_PILE())
 
 {{IDE()}}
 
---8<-- "docs/03-Structure_donnees_lineaires/Corrections/Exercice9_correction.md"
+??? note "Correction"
+    Code Capytale : `7407-775471`
 
 **Etape 2 :**
 
@@ -497,7 +515,7 @@ On crée la classe FILE à partir de deux PILES a et b. La PILE a est une zone d
 
 Soit par exemple deux PILES pouvant contenir 3 éléments chacune, et la FILE pourra en contenir 3. La FILE est initialement vide. On montre le fonctionnement ci-dessous.
 
-![](Images/tab9.JPG){: .center}
+![](images/tab9.JPG){: .center}
 
  
 !!! note "Remarque"
@@ -578,7 +596,8 @@ print(MAFILE.AFFICHER_FILE())
 
 {{IDE()}}
 
---8<-- "docs/03-Structure_donnees_lineaires/Corrections/Exercice10_correction.md"
+??? note "Correction"
+    Code Capytale : `b04c-775506`
 
 On a donc implémenté différemment une même structure de données
 

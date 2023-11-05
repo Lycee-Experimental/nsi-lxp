@@ -12,7 +12,7 @@ Quelques facteurs à prendre en compte lors du choix d’une structure de donné
 
 Une **structure de données** est une méthode de stockage et d'organisation des données pour en faciliter l'accès et la modification. Elle regroupe des données à gérer et un ensemble d'opérations qu'on peut leur appliquer (ou d’algorithmes pour les manipuler). 
 
-On appelle **interface** d'une structure de donnée l'ensemble de ces oipérations propre à la structure de donnée : créer, lire, modifier, supprimer, rechercher...
+On appelle **interface** d'une structure de donnée l'ensemble de ces opérations propre à la structure de donnée : créer, lire, modifier, supprimer, rechercher...
 
 On a appris à reconnaître différents types construits par leur **aspect** (tuple, liste...), on abordera dans ce chapitre les structures de données non pas par ce qu’elles sont, mais par ce qu’elles permettent de faire grâce à leur interface. C’est ce que l’on appelle une **structure abstraite**.
 
@@ -23,3 +23,19 @@ On parlera de **structure linéaire** lorsqu'un seul et unique indice nous perme
 A contrario, une **structure non linéaire** permet de relier un élément à plusieurs autres éléments : arbres et graphes (voir chapitres ultérieurs)
 
 Python propose une large collection de structures de données (ensembles, tableaux, piles, etc.), mais pas les listes, qui n’existent pas de façon native en Python. Il faudra les implémenter.
+
+!!! abstract "Plan du cours"
+    {% set parent_page = page.parent %}
+    {% set child_pages = parent_page.children if parent_page else [] %}
+    {% if child_pages %}
+    <div class="toc">
+    <h2>Au programme</h2>
+    <ul>
+    {% for child_page in child_pages %}
+        {% if child_page != page %}
+        <li><a href="/{{ child_page.url }}">Chapitre {{ loop.index - 1 }}: {{ child_page.title }}</a></li>
+    {% endif %}
+    {% endfor %}
+    </ul>
+    </div>
+    {% endif %}

@@ -4,6 +4,9 @@
     |Notions|Compétences|Remarques|
     |--|--|--| 
     Graphes : structures relationnelles.<br>Sommets, arcs, arêtes, graphes orientés ou non orientés. | Modéliser des situations sous forme de graphes.<br>Écrire les implémentations correspondantes d’un graphe : matrice d’adjacence, liste de successeurs/de prédécesseurs.<br> Passer d’une représentation à une autre. | On s’appuie sur des exemples comme le réseau routier, le réseau électrique, Internet, les réseaux sociaux.<br> Le choix de la représentation dépend du traitement qu’on veut mettre en place : on fait le lien avec la rubrique « algorithmique ».
+    Algorithmes sur les graphes. | Parcourir un graphe en profondeur d’abord, en largeur d’abord.<br> Repérer la présence d’un cycle dans un graphe.<br> Chercher un chemin dans un graphe. | Le parcours d’un labyrinthe et le routage dans Internet sont des exemples d’algorithme sur les graphes.<br> L’exemple des graphes permet d’illustrer l’utilisation des classes en programmation.
+
+
   
 ## Intro : les graphes
 
@@ -24,7 +27,7 @@ Il existe un moyen plus "visuel" pour représenter ce réseau social : on peut r
 
 Voici ce que cela donne avec le réseau social décrit ci-dessus : 
 
-![](Images/graph1.PNG){: .center}
+![](images/graph1.PNG){: .center}
 
 Ce genre de figure s'appelle un **graphe**. Les graphes sont des objets mathématiques très utilisés, notamment en informatique.
 
@@ -43,8 +46,19 @@ Construisez un graphe de réseau social à partir des informations suivantes :
 - E est ami avec A,D et F 
 - F est ami avec C, D et E 
 
---8<-- "docs/11-Graphes/Corrections/Exercice1_correction.md"
-
+??? note "Correction"
+    
+    ```mermaid
+    graph
+            A((A)) --- B((B))
+            A --- E((E))
+            B --- C((C))
+            E --- F((F))
+            E --- D((D))
+            C --- F
+            C --- D
+            F --- D
+    ```
 
 ### Vocabulaire sur les graphes
 
@@ -53,9 +67,9 @@ Construisez un graphe de réseau social à partir des informations suivantes :
 
     Vous trouverez aussi des ouvrages où pour ces graphes on parle de **noeuds** ( sommets ) et d’**arêtes** (arcs) .
 
-    ![](Images/graph2.PNG){: .center}
+    ![](images/graph2.PNG){: .center}
 
-    ![](Images/graph3.PNG){: .center}
+    ![](images/graph3.PNG){: .center}
 
     Un **chemin** ( chaine ) est une suite d'arcs (arêtes) consécutifs dans un graphe, un peu comme si on se promenait sur le graphe. On le désigne par les lettres des sommets qu'il comporte.
 
@@ -67,13 +81,13 @@ Construisez un graphe de réseau social à partir des informations suivantes :
 
     Un graphe est **connexe** s’il existe un chemin (une chaine) pour toute paire de sommets (intuitivement, un graphe connexe comporte un seul « morceau »)
 
-    ![](Images/graph4.PNG){: .center}
+    ![](images/graph4.PNG){: .center}
 
 **Exercice 2**
 
 Soit le graphe G ci-dessous :
 
-![](Images/graph5.PNG){: .center}
+![](images/graph5.PNG){: .center}
 
 1. Combien G possède-t-il de sommets ?
 2. Combien G possède-t-il d’arcs ?
@@ -85,8 +99,17 @@ Soit le graphe G ci-dessous :
 8. Combien existe-t-il de chemins élémentaires entre le sommet 2 et le sommet 4 ?
 9. Combien existe-t-il de chemins élémentaires entre le sommet 2 et le sommet 6 ?
 
---8<-- "docs/11-Graphes/Corrections/Exercice2_correction.md"
+??? note "Correction"
 
+    1. G a 6 sommets.
+    2. G a 6 arcs.
+    3. G est connexe.
+    4. 1 possède 2 sommets adjacents (2 et 5).
+    5. 4 possède 2 sommets adjacents (3 et 5).
+    6. Il existe 2 chemins simples entre 2 et 4.
+    7. Il existe 3 chemins simples entre 2 et 6.
+    8. Il existe 2 chemins élémentaires entre 2 et 4.
+    9. Il existe 1 chemin élémentaire entre 2 et 6.
 ## Graphes Orientés
 
 ### La notion de graphe orienté
@@ -110,7 +133,7 @@ Les différents lieux sont reliés par les routes suivantes :
 
 Ici aussi, la représentation sous forme de graphe s'impose :
 
-![](Images/graph6.PNG){: .center}
+![](images/graph6.PNG){: .center}
 
 Problème : avec cette représentation du réseau routier sous forme de graphe, il est impossible de prendre en compte des routes à sens unique. Pour que cela puisse se faire, il va falloir orienter les arcs.
 
@@ -127,7 +150,7 @@ Voici de nouvelles contraintes :
 
 Pour tenir compte de ces nouvelles contraintes, on utilisera un graphe orienté :
 
-![](Images/graph7.PNG){: .center}
+![](images/graph7.PNG){: .center}
 
 Dans un graphe orienté, les arcs possèdent une orientation. On dira qu'un graphe orienté G est un couple G = (V, A) avec V un ensemble de sommets et A un ensemble d'arcs orientés. 
 
@@ -142,7 +165,7 @@ Dans un graphe orienté, les arcs possèdent une orientation. On dira qu'un grap
     Par contre s’il n’existe pas d’arc du sommet 2 vers le sommet 1, 
     le sommet 1 n’est pas adjacent au sommet 2 ( voir schéma ).
 
-    ![](Images/graph8.PNG){: .center}
+    ![](images/graph8.PNG){: .center}
 
     On note 1 → 2 l’arc (1, 2) où 1 est son extrémité initiale et 2 son extrémité finale.\
     2 est le successeur de 1 et 1 est le prédécesseur de 2.
@@ -160,13 +183,13 @@ Dans un graphe orienté, les arcs possèdent une orientation. On dira qu'un grap
 
     Un graphe orienté est **fortement connexe** lorsque pour toute paire de sommets distincts ( u, v ) il existe un chemin de u vers v et un chemin  de v vers u .
 
-    ![](Images/graph9.PNG){: .center}
+    ![](images/graph9.PNG){: .center}
 
 **Exercice 3**
 
 Soit le graphe G ci-dessous :
 
-![](Images/graph10.PNG){: .center}
+![](images/graph10.PNG){: .center}
 
 1. Combien G possède-t-il de sommets ?
 2. Combien G possède-t-il d’arcs ?
@@ -179,36 +202,46 @@ Soit le graphe G ci-dessous :
 9. Combien existe-t-il de chemins élémentaires entre le sommet 2 et le sommet 4 ?
 10. Combien existe-t-il de chemins élémentaires entre le sommet 2 et le sommet 7 ?
 
---8<-- "docs/11-Graphes/Corrections/Exercice3_correction.md"
+??? note "Correction"
 
+    1. G possède 7 sommets.
+    2. G possède 10 arcs.
+    3. G est connexe.
+    4. G est fortement connexe.
+    5. 1 possède 1 sommet adjacent (2).
+    6. 4 possède 2 sommets adjacents (1 et 7).
+    7. Il existe 2 chemins simples entre 2 et 4.
+    8. Il existe 4 chemins simples entre 2 et 7.
+    9. Il existe 2 chemins élémentaires entre 2 et 4.
+    10. Il existe 2 chemins élémentaires entre 2 et 7.
 **Exercice 4**
 
 Les deux graphes suivants sont-ils identiques?
 
-![](Images/graph11.PNG){: .center}
+![](images/graph11.PNG){: .center}
 
---8<-- "docs/11-Graphes/Corrections/Exercice4_correction.md"
-
+??? note "Correction"
+    Oui, ils sont identiques.
 **Exercice 5**
 
 Les deux graphes suivants sont-ils identiques?
 
-![](Images/graph12.PNG){: .center}
+![](images/graph12.PNG){: .center}
 
---8<-- "docs/11-Graphes/Corrections/Exercice5_correction.md"
-
+??? note "Correction"
+    Non, ils ne sont pas identiques (voir voisins de 3).
 
 ## Graphes pondérés
 
 Parfois il est intéressant d'associer aux arcs des valeurs, on parle alors de **graphes pondérés**. Si nous revenons à notre "graphe cartographie", il est possible d'associer à chaque arc la distance en km entre les 2 lieux : 
 
-![](Images/graph13.PNG){: .center}
+![](images/graph13.PNG){: .center}
 
 
 Il est aussi possible d'associer à chaque arc la durée du trajet 
 entre 2 points : 
 
-![](Images/graph14.PNG){: .center}
+![](images/graph14.PNG){: .center}
 
 En fonction du choix fait par le conducteur (trajet le plus court "en distance" ou trajet le plus court "en temps"), l'algorithme permettant de déterminer le "chemin le plus court entre 2 points" 
 travaillera sur le graphe "graphe pondéré (km) cartographie" ou sur le graphe "graphe pondéré (minutes) cartographie". À noter que le "graphe pondéré (minutes) cartographie" peut évoluer au cours du temps en fonction du trafic routier : une application comme Waze utilise les données en provenance des utilisateurs de l'application afin de mettre à jour en temps réel leur "graphe pondéré (minutes) cartographie". 
@@ -219,7 +252,7 @@ travaillera sur le graphe "graphe pondéré (km) cartographie" ou sur le graphe 
 
 Une matrice est un tableau à double entrée : 
 
-![](Images/mat1.PNG){: .center}
+![](images/mat1.PNG){: .center}
 
 La matrice A ci-dessus est constitué de 5 lignes et 4 colonnes. 
 
@@ -229,7 +262,7 @@ Les matrices d'adjacences sont des matrices carrées.
 
 Reprenons l'exemple du "graphe cartographie" précédent :
 
-![](Images/mat2.PNG){: .center}
+![](images/mat2.PNG){: .center}
 
 On peut observer que pour un graphe non orienté, la matrice d’adjacence sera symétrique.
 
@@ -243,79 +276,127 @@ Il n'existe pas d'arête entre le sommet D et le sommet C, nous avons donc plac�
 
 Vérifiez que la matrice d'adjacence proposée ci-dessous correspond bien au graphe "cartographie". 
 
-![](Images/mat3.PNG){: .center}
+![](images/mat3.PNG){: .center}
 
 Il est aussi possible d'établir une matrice d'adjacence pour un graphe orienté. Le principe reste le même : si le sommet i (ligne) est lié au sommet j (colonne), nous avons un 1 à l'intersection 
 (0 dans le cas contraire). 
 
 
-![](Images/mat4.PNG){: .center}
+![](images/mat4.PNG){: .center}
 
 Il est aussi possible d'utiliser une matrice d'adjacence pour implémenter un graphe pondéré : on remplace les 1 par les valeurs liées à chaque arc.
 
-![](Images/mat5.PNG){: .center}
+![](images/mat5.PNG){: .center}
 
 **Exercice 6**
 
 Établissez la matrice d'adjacence du graphe ci-dessous :
 
-![](Images/mat6.PNG){: .center}
+![](images/mat6.PNG){: .center}
 
---8<-- "docs/11-Graphes/Corrections/Exercice6_correction.md"
-
+??? note "Correction"
+    \begin{pmatrix}
+    0 & 1 & 1 & 1 & 0 & 0\\
+    1 & 0 & 0 & 1 & 0 & 0\\
+    1 & 0 & 0 & 1 & 1 & 0\\
+    1 & 1 & 1 & 0 & 1 & 1\\
+    0 & 0 & 1 & 1 & 0 & 1\\
+    0 & 0 & 0 & 1 & 1 & 0
+    \end{pmatrix}
 **Exercice 7**
 
 Établissez la matrice d'adjacence du graphe ci-dessous :
 
-![](Images/mat7.PNG){: .center}
+![](images/mat7.PNG){: .center}
 
---8<-- "docs/11-Graphes/Corrections/Exercice7_correction.md"
-
+??? note "Correction"
+    \begin{pmatrix}
+    0 & 1 & 1 & 0\\
+    0 & 0 & 0 & 0\\
+    0 & 1 & 0 & 1\\
+    0 & 0 & 1 & 0
+    \end{pmatrix}
 
 **Exercice 8**
 
 Établissez la matrice d'adjacence du graphe ci-dessous :
 
-![](Images/mat8.PNG){: .center}
+![](images/mat8.PNG){: .center}
 
---8<-- "docs/11-Graphes/Corrections/Exercice8_correction.md"
-
+??? note "Correction"
+    \begin{pmatrix}
+    0 & 1 & 0 & 0 & 0 & 0 & 0\\
+    0 & 0 & 1 & 1 & 0 & 0 & 0\\
+    0 & 0 & 0 & 1 & 0 & 0 & 0\\
+    1 & 0 & 0 & 0 & 0 & 0 & 0\\
+    0 & 1 & 0 & 0 & 0 & 1 & 0\\
+    0 & 0 & 0 & 0 & 0 & 0 & 1\\
+    0 & 0 & 0 & 0 & 1 & 0  & 0 
+    \end{pmatrix}
 
 **Exercice 9**
 
 Établissez la matrice d'adjacence du graphe ci-dessous :
 
-![](Images/mat9.PNG){: .center}
+![](images/mat9.PNG){: .center}
 
---8<-- "docs/11-Graphes/Corrections/Exercice9_correction.md"
-
+??? note "Correction"
+    \begin{pmatrix}
+    0 & 2 & 0 & 0 & 0\\
+    2 & 0 & 4 & 5 & 0\\
+    0 & 4 & 0 & 1 & 1\\
+    0 & 5 & 1 & 0 & 3\\
+    0 & 0 & 1 & 3 & 0
+    \end{pmatrix}
 
 **Exercice 10**
 
 Dessinez le graphe dont la matrice d'adjacences est la suivante :
 
-![](Images/mat10.PNG){: .center}
+![](images/mat10.PNG){: .center}
 
---8<-- "docs/11-Graphes/Corrections/Exercice10_correction.md"
-
+??? note "Correction"
+    
+    ```mermaid
+    graph
+            A((A)) --- B((B))
+            A --- D((D))
+            A --- C((C))
+            B --- C
+            B --- D
+            D --- C
+            B --- E
+            D --- E
+    ```
 
 **Exercice 11**
 
 Expliquez la raison pour laquelle un graphe non orienté aura toujours une matrice d’adjacences symétrique par rapport à la diagonale qui part d’en haut à gauche pour arriver en bas à droite.
 
---8<-- "docs/11-Graphes/Corrections/Exercice11_correction.md"
-
+??? note "Correction"
+    Un graphe non orienté aura une matrice d’adjacence symétrique car l’arête (u,v) est équivalente à l’arête (v,u);
 **Exercice 12**
 
 Soit la matrice d’adjacence suivante : 
 
-![](Images/mat11.PNG){: .center}
+![](images/mat11.PNG){: .center}
 
 1.  Cette matrice d’adjacence permet-elle de savoir, sans le construire, si le graphe correspondant est orienté ? 
 2. Tracez le graphe correspondant à cette matrice d’adjacences.
 3. Que pouvez-vous déduire, concernant le sommet 3, du 1 entouré en vert qui est sur la diagonale ?
 
---8<-- "docs/11-Graphes/Corrections/Exercice12_correction.md"
+??? note "Correction"
+    1. Le graphe est orienté car la matrice n’est pas symétrique.
+    2. 
+        ```mermaid
+        graph
+                A((A)) --> B((B))
+                A --- C((C))
+                C --> C
+                D --> C
+                B --> D
+        ```
+
 
 ### Matrice d'adjacence et Python
 
@@ -453,7 +534,7 @@ class Graphe_Mat:
 A l’aide de la classe Graphe présentée ci-dessus, écrivez un programme qui permet d’implémenter le graphe ci-contre avec une
 matrice d’adjacence.
 
-![](Images/mat12.PNG){: .center}
+![](images/mat12.PNG){: .center}
 
 {{IDE()}}
 
@@ -469,7 +550,9 @@ Appliquez la méthode  `taille` sur l’objet créé dans l'exercice précédent
 
 {{IDE()}}
 
---8<-- "docs/11-Graphes/Corrections/Exercice13a15_correction.md"
+??? note "Correction"
+    Code Capytale : `b876-1145767`
+
 
 **Exercice 16**
 
@@ -511,18 +594,18 @@ Le dictionnaire d’adjacence du graphe ci-dessous est créé de la manière sui
 - chaque sommet du graphe définit une clé du dictionnaire
 - la liste des voisins de chaque sommet définit la valeur associée à chaque sommet.
 
-![](Images/dic1.PNG){: .center}
+![](images/dic1.PNG){: .center}
 
 Voici les clés ( sommets ) et les valeurs ( listes ) associées à 
 chacune de ces clés dans l’exemple étudié :
 
-![](Images/dic2.PNG){: .center}
+![](images/dic2.PNG){: .center}
 
 **Exercice 17**
 
 Soit le graphe orienté ci-dessous :
 
-![](Images/dic3.PNG){: .center}
+![](images/dic3.PNG){: .center}
 
 Le dictionnaire d’adjacence du graphe ci-dessus est créé de la manière suivante :
 
@@ -532,9 +615,25 @@ Le dictionnaire d’adjacence du graphe ci-dessus est créé de la manière suiv
 Écrivez la liste des successeurs associés à chacun des sommets du 
 graphe orienté ci-dessus.
 
-![](Images/dic4.PNG){: .center}
+![](images/dic4.PNG){: .center}
 
---8<-- "docs/11-Graphes/Corrections/Exercice17_correction.md"
+??? note "Correction"
+    A → C, D
+
+    B → A, F, G
+
+    C → A
+
+    D → G
+
+    E → B, F
+
+    F → E
+
+    G → B, D
+    
+
+    dic = {A: [C, D], ...}
 
 
 ### Dictionnaire d'adjacence et Python
@@ -647,7 +746,7 @@ class Graphe_Dico:
 
 Soit le graphe ci-dessous :
 
-![](Images/graph1.PNG){: .center}
+![](images/graph1.PNG){: .center}
 
 1.  Créez un objet `g1` qui représente le graphe ci-dessus à l’aide de la classe `Graphe_Dico`.
 2.  Affichez la liste des sommets de l’objet `g1` .
@@ -659,14 +758,16 @@ Soit le graphe ci-dessous :
 
 Soit le graphe ci-dessous :
 
-![](Images/graph8.PNG){: .center}
+![](images/graph8.PNG){: .center}
 
 
 1.  Créez un objet `g2` qui représente le graphe ci-dessus à l’aide de la classe `Graphe_Dico`.
 2.  Affichez la liste des sommets de l’objet `g2`.
 3.  Ajoutez une méthode `affiche2` qui permet d’afficher pour chaque sommet la liste de ses successeurs. L’application de cette méthode sur l’objet `g2` vous permettra de vérifier si la création de votre objet `g2` correspond bien à ce que vous souhaitiez.
 
---8<-- "docs/11-Graphes/Corrections/Exercice18et19_correction.md"
+??? note "Correction"
+    Code Capytale: `c4ec-1145768`
+
 
 ## Algorithme de parcours d'un graphe
 
@@ -716,10 +817,102 @@ Il existe 2 méthodes pour parcourir un graphe :
     ```
 2. Appliquez l'algorithme du parcours en largeur d'abord au graphe ci-dessous. Le 'point de départ' de notre parcours (le sommet s dans l'algorithme), sera le sommet A. Vous noterez les sommets atteints à chaque étape ainsi que les sommets présents dans la file f. Vous pourrez aussi, à chaque étape, donner les changements de couleur des sommets. 
 
-![](Images/parc1.PNG){: .center}
+![](images/parc1.PNG){: .center}
 
---8<-- "docs/11-Graphes/Corrections/Exercice20_correction.md"
+??? note "Correction"
+    2) En partant de A :
+        ```
+        s = A(blanc)
+        f = []
 
+        A(noir)
+        f = [A]
+
+        Debut Tant que:
+            u = A
+            f = []
+
+            Début pour:
+                v = B(blanc) ou F(blanc)
+
+                B(noir)
+                f = [B]
+
+                F(noir)
+                f = [B, F]
+
+            u = B
+            f = [F]
+
+            Début pour:
+                v = A(noir), C(blanc), D(blanc), G(blanc)
+                
+                
+                C(noir)
+                f = [F, C]
+
+                D(noir)
+                f = [F, C, D]
+
+                G(noir)
+                f = [F, C, D, G]
+
+            u = F
+            f = [C, D, G]
+
+            Début pour:
+                v = A(noir), G(noir), h(blanc)
+
+                H(noir)
+                f = [C, D, G, H]
+
+            u = C
+            f = [D, G, H]
+
+            Début pour:
+                v = B(noir), E(blanc)
+
+                E(noir)
+                f = [D, G, H, E]
+
+            u = D
+            f = [G, H, E]
+
+            Début pour:
+                v = B(noir), I(blanc)
+
+                I(noir)
+                f = [G, H, E, I]
+
+            u = G
+            f = [H, E, I]
+
+            Début pour:
+                v = B(noir), F(noir), I(noir)
+
+            u = H
+            f = [E, I]
+
+            Début pour:
+                v = F(noir), I(noir)
+
+            u = E
+            f = [I]
+            
+            Début pour:
+                v = C(noir), I(noir)
+
+            u = I
+            f = []
+
+            Début pour:
+                v = E(noir), D(noir), G(noir), H(noir)
+
+        Fin Tant que
+        ```
+
+
+        Le parcours en largeur à partir de A est donc :  A, B, F, C, D, G, H, E, I.
  Vous avez sans doute remarqué que dans le cas d'un parcours en largeur d'abord, on "découvre" d'abord tous les sommets situés à une distance k du sommet "origine" (sommet s) avant de commencer la découverte des sommets situés à une distance k+1 (on définit la distance comme étant le nombre d'arêtes à parcourir depuis A pour arriver à destination):
 
 En effet, pour cet exercice, nous avons bien : 
@@ -765,10 +958,41 @@ On va ici retrouver le même système de couleur (blanc : sommet non visité, no
 Vous avez dû remarquer que le parcours en profondeur utilise une fonction récursive. J'attire votre attention sur l'extrême simplicité de cet algorithme (au niveau de sa conception), c'est souvent le cas avec les algorithmes récursifs.
 2. Appliquez l'algorithme du parcours en profondeur d'abord au graphe ci-dessous.
 
-![](Images/parc2.PNG){: .center}
+![](images/parc2.PNG){: .center}
 
---8<-- "docs/11-Graphes/Corrections/Exercice21_correction.md"
+??? note "Correction"
+    2) En partant de A :
+    ```
+    u = A(noir)
 
+    v = B(blanc), F(blanc)
+    parcours(G, B) :
+    u = B(noir)
+        v = A(noir), C(blanc), D(blanc), G(blanc)
+        parcours(G, C)
+        u = C(noir)
+            v = B(noir), E(blanc)
+            parcours(G, E)
+            u = E(noir)
+                v = C(noir), I(blanc)
+                parcours(G, I)
+                u = I(noir)
+                    v = E(noir), D(blanc), G(blanc), H(blanc)
+                    parcours(G, D)
+                    u = D(noir)
+                        v = B(noir), I(noir)
+                    parcours(G, G)
+                    u = G(noir)
+                        v = B(noir), I(noir), F(blanc)
+                        parcours(G, F)
+                        u = F(noir)
+                            v = A(noir), G(noir), H(blanc)
+                            parcours(G, H)
+                            u = H(noir)
+                                v = F(noir), I(noir)
+    ```
+
+    Parcours en profondeur à partir de A : A, B, C, E, I, D, G, F, H.
 **Exercice 22**
 
 Comparez le résultat obtenu avec le parcours en largeur (A, B, F, C, D, G, H, E et I) et le résultat obtenu avec le parcours en profondeur (A, B, C, E, I, D, G, F et H) 
@@ -776,7 +1000,8 @@ Comparez le résultat obtenu avec le parcours en largeur (A, B, F, C, D, G, H, E
 
  Dans le cas du parcours en largeur on "découvrait" tous les sommets situés à une distance k de l'origine avant de s'intéresser aux sommets situés à une distance $k+1$ de l'origine. Dans le cas du parcours en profondeur, on va chercher à aller "le plus loin possible" dans le graphe : A → B → C → E → I → D, quand on tombe sur "un cul-de-sac" (dans notre exemple, D est un "cul-de-sac", car une fois en D, on peut uniquement aller en B, or, B a déjà été découvert...), on revient "en arrière" (dans notre exemple, on repart de B pour aller explorer une autre branche : G → F → H)
 
---8<-- "docs/11-Graphes/Corrections/Exercice22_correction.md"
+??? note "Correction"
+    Dans le cas du parcours en largeur on “découvrait” tous les sommets situés à une distance k de l’origine avant de s’intéresser aux sommets situés à une distance k+1 de l’origine. Dans le cas du parcours en profondeur, on va chercher à aller “le plus loin possible” dans le graphe : A  B→ → C → E → I → D, quand on tombe sur “un cul-de-sac” (dans notre exemple, D est un “cul-de-sac”, car une fois en D, on peut uniquement aller en B, or, B a déjà été découvert…), on revient “en arrière” (dans notre exemple, on repart de B pour aller explorer une autre branche : G → F → H) 
 
 À noter que l'utilisation d'un algorithme récursif n'est pas une obligation pour le parcours en profondeur : 
 
@@ -812,10 +1037,105 @@ Comparez le résultat obtenu avec le parcours en largeur (A, B, F, C, D, G, H, E
 Vous avez sans doute remarqué que la version "non récursive" (on dit "itérative") de l'algorithme du parcours en profondeur ressemble beaucoup à l'algorithme du parcours en largeur, on a juste remplacé la file par une pile. 
 2. Appliquez cet algorithme au graphe ci-dessous. Vérifiez que l'on obtient bien un parcours en profondeur. 
 
-![](Images/parc3.PNG){: .center}
+![](images/parc3.PNG){: .center}
 
---8<-- "docs/11-Graphes/Corrections/Exercice23_correction.md"
+??? note "Correction"
+    2) En partant de A :
+    ```
+    s = A(blanc)
+    p = []
+    parcours = []
 
+    A(noir)
+    p = [A]
+
+    Debut Tant que:
+        u = A
+        p = []
+        parcours = [A]
+
+        Début pour:
+            v = B(blanc) ou F(blanc)
+
+            B(noir)
+            p = [B]
+
+            F(noir)
+            p = [F, B]
+
+        u = F
+        p = [B]
+
+        Début pour:
+            v = A(noir), G(blanc), H(blanc)
+            
+            
+            G(noir)
+            p = [G, B]
+
+            H(noir)
+            p = [H, G, B]
+
+
+        u = H
+        p = [G, B]
+
+        Début pour:
+            v = F(noir), I(blanc)
+
+            I(noir)
+            p = [I, G, B]
+
+        u = I
+        p = [G, B]
+
+        Début pour:
+            v = E(blanc), D(blanc), G(noir), H(noir)
+
+            E(noir)
+            p = [E, G, B]
+
+            D(noir)
+            p = [D, E, G, B]
+
+        u = D
+        p = [E, G, B]
+
+        Début pour:
+            v = B(noir), I(noir)
+
+        u = E
+        p = [G, B]
+
+        Début pour:
+            v = C(blanc), I(noir)
+
+            C(noir)
+            p = [C, G, B]
+
+        u = C
+        p = [G, B]
+
+        Début pour:
+            v = B(noir), E(noir)
+
+        u = G
+        p = [B]
+
+        Début pour:
+            v = B(noir), I(noir), F(noir)
+
+        u = B
+        p = []
+        
+        Début pour:
+            v = A(noir), C(noir), D(noir), G(noir)
+
+
+    Fin Tant que
+    ```
+
+    Le parcours en largeur à partir de A est donc :  A, F, H, I, D, E, C, G, B.
 
 **Exercice 24**
 
@@ -824,8 +1144,8 @@ Vous avez sans doute remarqué que la version "non récursive" (on dit "itérati
 
 {{IDE()}}
 
---8<-- "docs/11-Graphes/Corrections/Exercice24_correction.md"
-
+??? note "Correction"
+    Code Capytale : `04cc-1145786`
 ## Algorithme de recherche
 
 ### Présence de cycle
@@ -873,21 +1193,117 @@ Nous allons étudier un algorithme qui permet de "détecter" la présence d'au m
     ```
 2. Appliquez l'algorithme de détection d'un cycle au graphe ci-dessous (vous partirez du sommet de votre choix). 
 <br>
-![](Images/cyc1.PNG){: .center}
+![](images/cyc1.PNG){: .center}
 3. Appliquez l'algorithme de détection d'un cycle au graphe ci-dessous (vous partirez du sommet de votre choix).
 <br>
-![](Images/cyc2.PNG){: .center}
+![](images/cyc2.PNG){: .center}
 
---8<-- "docs/11-Graphes/Corrections/Exercice25_correction.md"
+??? note "Correction"
+    1. Quand le graphe G contient au moins un cycle : l’algo renvoie vrai<br>
+    Quand le graphe G ne contient aucun cycle : l’algo renvoie faux
+    2. A partir de A :
 
+    ```
+    p = [A]
+
+    u = A(blanc)
+    p = []
+
+        v = B(blanc), C(blanc)
+        p = [B]
+        p = [C,B]
+        A(noir)
+
+    u = C
+    p = [B]
+
+        v = E(blanc), D(blanc)
+        p = [E, B]
+        p = [D, E, B]
+        C(noir)
+
+    u = D
+    p = [E, B]
+
+        v = C(noir)
+        D(noir)
+
+    u = E
+    p = [B]
+
+        v = C(noir)
+        E(noir)
+
+    u = B
+    p = []
+        
+        v = A(noir), F(blanc)
+        B(noir)
+
+    Renvoie Faux
+    ```
+    3. A partir de A :
+
+    ```
+    p = [A]
+
+    u = A(blanc)
+    p = []
+
+        v = B(blanc), C(blanc)
+        p = [B]
+        p = [C, B]
+        A(noir)
+
+    u = C(blanc)
+    p = [B]
+
+        v = E(blanc), D(blanc)
+        p = [E, B]
+        p = [D, E, B]
+        C(noir)
+
+    u = D(blanc)
+    p = [E, B]
+
+        v = C(noir), F(blanc)
+        p = [F, E, B]
+        D(noir)
+
+    u = F(blanc)
+    p = [E, B]
+
+        v = D(noir), B(blanc)
+        p = [B, E, B]
+        F(noir)
+
+    u = B(blanc)
+    p = [E, B]
+        
+        v = A(noir), F(noir)
+        B(noir)
+
+    u = E(blanc)
+    p = [B]
+
+        v = C(noir)
+        E(noir)
+
+    u = B(noir)
+    p = []
+
+        v = A(noir), F(noir)
+
+    Renvoie Vraie
+    ```
 **Exercice 26**
 
 Implémentez cet algorithme (pensez à recopier la classe Graph (matrice ou dictionnaire, comme bon vous semble...))
 
 {{IDE()}}
 
---8<-- "docs/11-Graphes/Corrections/Exercice26_correction.md"
-
+??? note "Correction"
+    Code Capytale : `5047-1145778`
 ### Chercher un chemin dans un graphe
 
 Nous allons maintenant nous intéresser à un algorithme qui permet de trouver une chaine entre 2 sommets (sommet de départ et sommet d'arrivée). Les algorithmes de ce type ont une grande importance et sont très souvent utilisés. 
@@ -916,7 +1332,7 @@ Nous allons maintenant nous intéresser à un algorithme qui permet de trouver u
 Vous noterez que l'algorithme ci-dessus est basé sur un parcours en profondeur d'abord.
 2. Appliquez l'algorithme permettant de trouver une chaine entre un noeud de départ et un noeud d'arrivée au graphe ci-dessous (vous choisirez les noeuds de départ et d'arrivée de votre choix). 
 <br>
-![](Images/parc4.PNG){: .center}
+![](images/parc4.PNG){: .center}
 <br>
 !!!note "A noter"
     Il est important de noter que dans la plupart des cas, les algorithmes de recherche de chaine (ou de chemin), travaillent sur des graphes pondérés (par exemple pour rechercher la route entre un point de départ et un point d'arrivée dans un logiciel de cartographie). Ces algorithmes recherchent aussi souvent les chemins les plus courts (logiciels de cartographie). On peut citer l'algorithme de Dijkstra ou encore l'algorithme de Bellman-Ford qui recherchent le chemin le plus court entre un noeud de départ et un noeud d'arrivée dans un graphe pondéré.
@@ -925,4 +1341,31 @@ Vous noterez que l'algorithme ci-dessus est basé sur un parcours en profondeur 
 
 {{IDE()}}
 
---8<-- "docs/11-Graphes/Corrections/Exercice27_correction.md"
+??? note "Correction"
+    1. Code Capytale : `62e8-1145789`
+    2. Départ A, Arrivée E
+
+    ```
+    chaine = [A]
+
+    A diff de E
+
+        u = B, F
+        E pas dans chaine
+            nchemin = TROUVER_CHAINE(G, B, E, chaine)
+            chaine = [A, B]
+            B diff de E
+
+                u = C, D, G
+                E pas dans chaine
+                    nchemin = TROUVER_CHAINE(G, C, E, chaine)
+                    chaine = [A, B, C]
+                    C diff de E
+
+                        u = E, B
+                        E pas dans chaine
+                            nchemin = TROUVER(G, E, E, chaine)
+                            chaine = [A, B, C, E]
+                            E = E
+                            On renvoie chaine [A, B, C, E]
+    ```

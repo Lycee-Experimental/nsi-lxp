@@ -13,6 +13,50 @@ def define_env(env):
 
 
     @env.macro
+    def jupy(nb) -> str:
+        path='/xtra/jupyterlite/lab/index.html'
+        notebook_dir='/notebooks/'
+        if nb !='':
+            path += f"?fromURL={notebook_dir}{nb}"
+        return f"""<a class="md-button md-button--primary" href="{path}" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span> Notebook <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span></a>"""
+
+    @env.macro
+    def jupy_cor(nb) -> str:
+        path='/xtra/jupyterlite/lab/index.html'
+        notebook_dir='/notebooks/'
+        if nb !='':
+            path += f"?fromURL={notebook_dir}{nb}"
+        return f"""<a class="md-button" href="{path}" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span> Corrigé <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span></a>"""
+
+
+
+    @env.macro
+    def plan():
+        parent_page = env.variables.page.parent
+        child_pages = parent_page.children if parent_page else []
+        if child_pages:
+            toc_html = '<div class="toc">\n<ul>\n'
+            for child_page in child_pages:
+                i=0
+                if child_page != env.variables.page:
+                    i+=1
+                    if child_page.children:
+                        toc_html += f'<li>{child_page.title}</li>\n<ul>\n'
+                        for child in child_page.children:
+                            if child != child_page:
+                                toc_html += f'<li><a href="/{child.url}">{child.title}</a></li>\n'           
+                        toc_html += '</ul>'
+                    else:
+                        toc_html += f'<li><a href="/{child_page.url}">{child_page.title}</a></li>\n'           
+            toc_html += '</ul>\n</div>'
+#                    toc_html += f'<li><a href="/{child_page.url}">Chapitre {i}: {child_page.title}</a></li>\n'           
+#            toc_html += '</ul>\n</div>'
+#            return toc_html
+        
+        return toc_html
+
+
+    @env.macro
     def jupyter(nb='') -> str:
         path='/xtra/jupyterlite/lab/index.html'
         if nb !='':
@@ -1062,7 +1106,6 @@ $(document).ready(launchDebian());
         the integration in mkdocs admonitions.
         """
         docs_path = f"""docs"""
-
         try:
             relative_path = "scripts" if path == "" else path
             with open(
@@ -1092,14 +1135,22 @@ $(document).ready(launchDebian());
 
     # TODO : this issue concerning the urls must be closed ASAP
     def get_filepath() -> str:
-        path="/".join(
-            filter(
-                lambda folder: folder != "",
-                convert_url_to_utf8(env.variables.page.abs_url).split("/")[1:-2],
+        if env.variables.page.is_index:
+            path = "/".join(
+                filter(
+                    lambda folder: folder != "",
+                    convert_url_to_utf8(env.variables.page.abs_url).split("/")[1:-1],
+                )
             )
-        )
+        else:
+            path = "/".join(
+                filter(
+                    lambda folder: folder != "",
+                    convert_url_to_utf8(env.variables.page.abs_url).split("/")[1:-2],
+                )
+            )
+        #print(path)
         return path
-
     # TODO : handle the case where the same files are loaded on the same page.
     def generate_id_ide(content: str) -> str:
         """
@@ -1345,6 +1396,7 @@ $(document).ready(launchDebian());
 """
         return block_remark
 
+
     def insert_content(editor_name: str, ide_content: str) -> str:
         return f"""<span id="content_{editor_name}" class="py_mk_hide">{ide_content}</span>"""
 
@@ -1403,7 +1455,6 @@ $(document).ready(launchDebian());
         )
         div_exercise += insert_corr_content(editor_name, ide_corr_content, key_ide)
         div_exercise += insert_remark_file(script_name, key_ide)
-
         return div_exercise
 
     @env.macro

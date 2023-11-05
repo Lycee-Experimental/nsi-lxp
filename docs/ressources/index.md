@@ -75,6 +75,8 @@ hide:
     - **Stéphan Van Zuijlen** : [:material-numeric-1-circle:](https://isn-icn-ljm.pagesperso-orange.fr/1-NSI/index.html) [:material-alpha-t-circle:](https://isn-icn-ljm.pagesperso-orange.fr/NSI-TLE/index.html)   
     - **Grégory Viateau** du lycée Louis de Foix : [:material-alpha-t-circle:](http://tnsi.free.fr/)
     - **Ludovic Sommerfeld** du lycée Faustin Fleret(Guadeloupe) [:material-numeric-2-circle: :material-numeric-1-circle: :material-alpha-t-circle:](http://nsinfo.yo.fr/index.html)
+    - **David Latreyte** du lycée Louis Massignon (Bouskoura, Maroc) [:material-numeric-1-circle:](https://dlatreyte.github.io/premieres-nsi/) [:material-alpha-t-circle:](https://dlatreyte.github.io/terminales-nsi/)
+    - Thomas Castanet [:material-numeric-2-circle: :material-numeric-1-circle: :material-alpha-t-circle:](http://chinginfo.fr/)
     - **Stéphan Van Zuijlen** du Lycée Jean Moulin (Draguignan): [:material-numeric-1-circle:](https://isn-icn-ljm.pagesperso-orange.fr/1-NSI/index.html) [:material-alpha-t-circle:](https://isn-icn-ljm.pagesperso-orange.fr/NSI-TLE/index.html)
     - Thomas Castanet [:material-numeric-2-circle: :material-numeric-1-circle: :material-alpha-t-circle:](http://chinginfo.fr/)
     - **Bruno Coffy** (lycée Langevin) : [STI2D SIN](http://tsin.langevin-la-seyne.fr/SIN/)

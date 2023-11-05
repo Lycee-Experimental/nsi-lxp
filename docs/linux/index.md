@@ -15,7 +15,7 @@ Le système d'exploitation **UNIX** voit le jour à la toute fin des années 60.
 
 Le système UNIX est un système dit "**propriétaire**" (certaines personnes disent "**privateur**"), c'est-à-dire un système non libre. Il est à la base de nombreux OS dont Apple MacOS, et à inspiré le système Linux.
 
---8<-- 'assets/images/unix.svg'
+--8<-- 'docs/assets/images/unix.svg'
 
 !!! info "Libres ou propriétaires ?"
     D'après Wikipédia : "Un **logiciel libre** est un logiciel dont l'utilisation, l'étude, la modification et la duplication par autrui en vue de sa diffusion sont permises, techniquement et légalement, ceci afin de garantir certaines libertés induites, dont le contrôle du programme par l'utilisateur et la possibilité de partage entre individus". 

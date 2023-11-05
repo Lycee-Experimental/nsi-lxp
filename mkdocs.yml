@@ -62,8 +62,7 @@ markdown_extensions:
   - pymdownx.tilde # Passage ~~barré~~ ou en ~indice~.
   - pymdownx.highlight # Coloration syntaxique du code
   - pymdownx.inlinehilite # pour  `#!python  <python en ligne>`
-  - pymdownx.snippets: # Inclusion de fichiers externe.
-      base_path: docs
+  - pymdownx.snippets
   - pymdownx.tasklist: # Cases à cocher  - [ ]  et - [x]
       custom_checkbox: false #   avec cases d'origine
       clickable_checkbox: true #   et cliquables.

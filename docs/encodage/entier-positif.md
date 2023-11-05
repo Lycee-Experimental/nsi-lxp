@@ -1,8 +1,9 @@
 # Représentation d'un entier positif dans différentes bases
 
-|Notions|Compétences|Remarques|
-|--|--|--|
-|Écriture d'un entier positif dans une base $b\geq2$|Passer de la représentation d'une base dans une autre.|Les bases 2, 10 et 16 sont privilégiées|
+??? conclu "Programme"
+    |Notions|Compétences|Remarques|
+    |--|--|--|
+    |Écriture d'un entier positif dans une base $b\geq2$|Passer de la représentation d'une base dans une autre.|Les bases 2, 10 et 16 sont privilégiées|
 
 En plus de la base 10 que nous utilisons habituellement, deux bases sont utilisées en informatique :
 

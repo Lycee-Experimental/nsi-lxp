@@ -1,4 +1,4 @@
-# Diviser pour regner
+# Diviser pour régner
 
 
 ??? conclu "Programme"
@@ -41,7 +41,7 @@ def recherche(tableau, element):
     return False
 ```
 
-Notons qu'il n'est pas possible de savoir si la valeur à rechercher est absente du tableau avant d'avoir examiné toutes les valeurs du tableau: à cause de cela, on en déduit immédiatemment que la complexité dans le pire des cas est proportionnelle à la taille du tableau $N$. On dit qu'il s'agit d'un algorithme de **complexité linéaire** : $O(n)$.
+Notons qu'il n'est pas possible de savoir si la valeur à rechercher est absente du tableau avant d'avoir examiné toutes les valeurs du tableau: à cause de cela, on en déduit immédiatement que la complexité dans le pire des cas est proportionnelle à la taille du tableau $N$. On dit qu'il s'agit d'un algorithme de **complexité linéaire** : $O(n)$.
 
 ### Recherche dans un tableau trié
 
@@ -72,21 +72,21 @@ Il est possible de faire bien mieux que cela avec un tableau trié, en s'inspira
 
 - On regarde l'élément au milieu du tableau: s'il est supérieur à la valeur recherchée, on sait que celle-ci ne pourra se trouver que dans la première moitié du tableau, et on réduit alors la recherche à cette première moitié. Si au contraire l'élément central est inférieur, on doit réduire la recherche à la deuxième moitié du tableau, car l'élément à rechercher ne peut se trouver que là.
 - On peut poursuivre ainsi, en subdivisant à chaque étape les sous-tableaux en deux moitiés à peu près égales (à un élément près), et en recommençant à l'étape précédente.
-- On finira par arriver à un tableau de longeur 1, contenant (ou pas) l'élément à rechercher.
+- On finira par arriver à un tableau de longueur 1, contenant (ou pas) l'élément à rechercher.
 
 Le fait de couper le tableau en deux parties donne son nom à l'algorithme : dichotomie signifie couper en deux.
 
 Plus précisément, on va utiliser deux indices $g$ et $d$ (pour *gauche* et *droite*) en indiquant l'intervalle dans lequel doit s'effectuer la recherche.
 
-Supposons que l'on dispose d'un tableau ordonnée *t* de longeur *N*.
+Supposons que l'on dispose d'un tableau ordonnée *t* de longueur *N*.
 
 1. Au départ, on aute $g=0$ et $d=N-1$.
 2. On calcule l'indice au milieu de l'intervalle de recherche : $m=(g+d)//2$. On utilise une division euclidienne afin de s'assurer que cet indice est bien un entier.<br>
 Trois cas peuvent se produire :
     - Si $t[m]==element$, on a trouvé la valeur à rechercher.
-    - Sinon, si $t[m] < element$, la valeur à rechercherse trouve (peut-être) dans la seconde moitié. On gardera la valeur actuelle de *d*, mais on prendra à présent $g=m+1$. Reprendre à l'étape 1.
+    - Sinon, si $t[m] < element$, la valeur à rechercher se trouve (peut-être) dans la seconde moitié. On gardera la valeur actuelle de *d*, mais on prendra à présent $g=m+1$. Reprendre à l'étape 1.
     - Sinon, on a nécessairement $t[m]>element$ et la valeur à rechercher est peut-être dans la première moitié. On gardera la valeur actuelle de *g* mais on posera $d=m-1$. Reprendre à l'étape 1.
-3. Si à un moment donné, on a $g>d$ (ce qui est possible avec les isntructions $g=m+1$ ou bien $d=m-1$), on sait que l'on peut interrompre la recherche car la valeur ne se trouve pas dans le tableau.
+3. Si à un moment donné, on a $g>d$ (ce qui est possible avec les instructions $g=m+1$ ou bien $d=m-1$), on sait que l'on peut interrompre la recherche car la valeur ne se trouve pas dans le tableau.
 
 On obtient ainsi le programme suivant de recherche dichotomique :
 
@@ -125,7 +125,7 @@ Voyons cela sur un exemple avec un tableau de taille $N=100$ :
 
 Comptons : nous aurons au maximum 7 étapes (il peut y en avoir moins si l'élément à trouver est l'un des pivot d'indice *m* examiné par une boucle), c'est qui est largement inférieur à la valeur initiale $N = 100$.
 
-Est-il possible de calculer à l'avance ce nombre 7 ? En fait oui: il suffit de remarquer que la plus petite puissance de 2 inférieure ou égale à 100 est $2^6 = 64$, la puissance de 2 immédiatemment supérieure étant $2^7 = 128$. C'est pour cela qu'il faut au maximum 7 étapes pour effectuer une recherche dichotomique.
+Est-il possible de calculer à l'avance ce nombre 7 ? En fait oui: il suffit de remarquer que la plus petite puissance de 2 inférieure ou égale à 100 est $2^6 = 64$, la puissance de 2 immédiatement supérieure étant $2^7 = 128$. C'est pour cela qu'il faut au maximum 7 étapes pour effectuer une recherche dichotomique.
 
 Le principe est donc très simple: il suffit de trouver la plus petite puissance de 2 strictement supérieure à *N*, c'est-à-dire le plus petit entier *k* tel que $N < 2^k$, le nombre d'étapes dans le pire des cas sera alors *k*.
 
@@ -176,15 +176,13 @@ La complexité de l'algorithme est exactement la même en version récursive qu'
 
 Est-il possible de dépasser la pile d'appel de python (en général 1000 appels maximum) ? Difficilement, car pour cela il faudrait que la taille du tableau *N* soit supérieure à $2^{1000}$, ce qui donne environ $10^{300}$, un nombre largement supérieur au nombre estimé d'atomes de l'univers (l'ordre de grandeur est d'environ $10^{80}$). Aucune chance d'avoir assez de mémoire dans un ordinateur pour ne serait-ce que stocker un tableau aussi grand.
 
-**Exercice 0**
 
-Ouvrez le fichier Capytale dont le code est `5b37-1145568` pour visualiser les différents temps d'exécutions des différents programmes de recherches dans un tableau trié.
+{{exercice(prem=1, titre="Temps d'execution")}}
+    {{jupy('temps_exec.ipynb')}}
 
-**Exercice 1**
-
-Faire le TP sur Capytale avec le code `2a78-1145578`.
-
---8<-- "docs/10-Algorithmes/Corrections/Exercice1_correction.md"
+{{exercice(titre="Recherche dichotomique")}}
+    {{jupy('recherche_dicho.ipynb')}}
+    {{jupy_cor('recherche_dicho_correction.ipynb')}}
 
 ## Le tri fusion
 
@@ -192,7 +190,7 @@ La méthodologie «diviser pour régner» peut être avantageusement utilisée p
 
 Le principe est schématisé ci-dessous :
 
-![](Images/fusion.png){: .center}
+![](images/fusion.png){: .center}
 
 - A chaque étape, on sépare la liste en deux sous-listes (flèches bleues sur le diagramme).
 - Lorsque toutes les sous-listes ont été décomposées, on les fusionne deux par deux (flèches rouges). L'opération de fusion prend 2 listes déjà triées (ce qui est notamment le cas pour les listes de longueur 1), et les combine en une unique liste elle aussi triée.
@@ -309,9 +307,8 @@ La complexité de l'algorithme de tri fusion est donc intermédiaire entre une c
 
 Prenons par exemple le cas d'une liste de taille $N = 1000$. Un tri de complexité quadratique aurait un nombre d'étapes proportionnel à $1000^2 = 1\,000\,000$, alors que le tri fusion ne prendrait que $1000\times \log_2(1000) \approx 9966$ étapes. La différence est considérable, et l'écart ne ferait que se creuser avec une liste plus longue.
 
-**Exercice 2**
 
-Faire le TP sur Capytale dont le code est `882c-1145628`.
-
---8<-- "docs/10-Algorithmes/Corrections/Exercice2_correction.md"
+{{exercice(titre='Le tri Fusion')}}
+    {{jupy('tri_fusion.ipynb')}}
+    {{jupy_cor('tri_fusion_correction.ipynb')}}
 

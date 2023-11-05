@@ -1,10 +1,9 @@
 # Opérateurs booléens et portes logiques
 
-## Programme 
-
-|Notions|Compétences|Remarques|
-|--|--|--|
-|Valeurs booléennes : 0, 1.<br> Opérateurs booléens : and, or, not.<br>Expressions booléennes| Dresser la table d'une expression booléenne.|Le ou exclusif (xor) est évoqué.<br>Quelques applications directes comme l'addition binaire sont présentées.<br>L'attention des élèves est attirée sur le caratctère séquentiel de certains opérateurs booléens. |
+??? conclu "Programme"
+	|Notions|Compétences|Remarques|
+	|--|--|--|
+	|Valeurs booléennes : 0, 1.<br> Opérateurs booléens : and, or, not.<br>Expressions booléennes| Dresser la table d'une expression booléenne.|Le ou exclusif (xor) est évoqué.<br>Quelques applications directes comme l'addition binaire sont présentées.<br>L'attention des élèves est attirée sur le caratctère séquentiel de certains opérateurs booléens. |
 
 <center>
 <img src="/assets/images/watergates.gif" speed="1" play></img>

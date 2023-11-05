@@ -11,12 +11,12 @@
 
 Faire l'activité **Indexation des ouvrages d'une bibliothèque** sur Capytale avec le code : `3793-623224`
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Indexation_correction.md"
-
+??? note "Correction"
+    Code Capytale : `4365-623221`
 Faire l'activité **Manipuler des données avec une table** sur Capytale avec le code : `1e7e-623230`
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Manipulation_correction.md"
-
+??? note "Correction"
+    Code Capytale : `ead9-623227`
 ## Le modèle relationnel
 
 ### Un peu d'histoire
@@ -41,7 +41,7 @@ Le modèle relationnel est une manière de modéliser les relations existantes e
 
 Prenons l’exemple d’une médiathèque. Elle souhaite recenser les ouvrages qu’elle possède. Voici le tableau qu’elle a réalisé.
 
-![](Images/tab1.JPG){: .center}
+![](images/tab1.JPG){: .center}
 
 **Exercice 6**
 
@@ -51,7 +51,20 @@ tableau avec ce nouvel ouvrage.
 - Existe-t-il un élément unique qui va référencer totalement l’ouvrage?
 - La médiathèque s’ouvre depuis peu à la bande dessinée. Elle souhaite enregistrer l’album de bande dessinée en langue française L’incal  noir , scénarisé par Alejandro  Jodorowsky , dessiné par Moebius et édité par Les humanoïdes associés en 1982 . Quel est (sont) le(s) problème(s) rencontré(s)?
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice6_correction.md"
+??? note "Correction"
+    1. Redondances :
+        - nom auteur (par ex : Bradbury)
+        - prenom auteur (par ex : George)
+        - editeur (par ex : Pocket)
+        - langue (par ex : anglais)
+        - annee publication (par ex : 1968)
+    Eléments uniques :
+        - titre
+        - reference
+    2. On rajouter la ligne :
+        Chroniques martiennes, Bradbury, Ray, Denoël, anglais, 1950, 236984
+    3. La référence est un élément unique qui référencera totalement un ouvrage.
+    4. Il n’y a pas qu’un seul auteur, alors qu’il n’y a qu’une colonne pour cela...
 
 #### Notion de base de données
 
@@ -74,8 +87,12 @@ Les données sont généralement regroupées selon leur appartenance à un objet
 On souhaite représenter les données issues de la carte nationale d’identité. À partir de votre carte personnelle, donnez le nom de l’entité correspondante, les attributs qui lui sont associés
 et les valeurs qui vous sont propres.
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice7_correction.md"
+??? note "Correction"
+    Entité : Français
 
+    Attributs : nom, prénom, sexe, date de naissance, lieu de naissance, taille, adresse, date de validité, date de livraison, prefecture
+
+    Valeurs : ...
 ### Le modèle relationnel
 
 Vous pourrez visionnez cette video :
@@ -100,7 +117,7 @@ La société Le Coin, située à Caen, a commandé des produits chimiques à la 
 
 Le bon de commande est indiqué ci-dessous :
 
-![](Images/tab2.JPG){: .center}
+![](images/tab2.JPG){: .center}
 
 À partir de ce bon de commande, on peut séparer les informations en 3 entités :
 
@@ -108,7 +125,7 @@ Le bon de commande est indiqué ci-dessous :
 - une entité client qui va regrouper les données du client;
 - une entité produits qui va regrouper les données d’un détail.
 
-![](Images/tab3.JPG){: .center}
+![](images/tab3.JPG){: .center}
 
 **Exercice 8**
 
@@ -119,14 +136,52 @@ Le bon de commande est indiqué ci-dessous :
 5. Construisez une quatrième table intitulé Details reprenant les attributs manquants.
 6. Comment éditera-t-on le bon de commande?
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice8_correction.md"
+??? note "Correction"
+    1)
+    Entité : Commande<br>
+    Attributs : numéro de commande, date
+
+    Entité : Client <br>
+    Attributs : numéro de client, nom, adresse, ville
+
+    Entité : Produits <br>
+    Attributs : référence, libellé, prix, quantité
+
+    2) Commandes
+
+    |Numéro de commande|Date|
+    |:--:|:--:|
+    |14010|24/09/2014|
+
+    Clients
+
+    |Numéro de client|Nom|Adresse|Ville|
+    |:--:|:--:|:--:|:--:|
+    |BD2014|LECOIN|24 RUE SAINT-JEAN|CAEN|
+
+    Produits
+
+    |Référence|Libellé|Prix|Quantité|
+    |:--:|:--:|:--:|:--:|
+    |190464K|Calcium chlorure 1 mol/l|77|10|
+    |31535.292|Sodium chlorure 1 mol/l|105|15|
+    |30024.290|Acide chlorhydrique 1 mol/l (1 N)|41|3|
+    |30917.320|Iode 0,05 mol/l (0,1 N)|117|8|
+
+    3) Non<br>
+    4) Référence, Libellé, et Pris<br>
+    5) Détails : Référence et Quantités<br>
+    6) Il faudra faire des liens entre les tables.<br>
+    Il y aura un problème du fait de l’absence de l’attribut numero commande
+    dans la table Details et de l’absence de l’attribut numero client dans la table Commande)
+
 
 #### Définition
 
 !!! example "Définition"
     Une **relation** (on parle aussi de table) est composée d’un en-tête (le libellé des attributs ) et d’un corps composé d’un ou plusieurs t-uplets (on parle aussi d’enregistrement).
     
-    ![](Images/tab4.JPG){: .center}
+    ![](images/tab4.JPG){: .center}
 
 
 #### Domaine de valeurs d'un attribut
@@ -150,7 +205,11 @@ Déterminez le domaine de valeurs des attributs de la relation Produits .
 |30024.290 |Acide chlorhydrique 1 mol/L (1N)|41|
 |30917.320 |Iode 0,05 mol/L (0,1 N) |936|
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice9_correction.md"
+??? note "Correction"
+    1. Domaine de valeur de :
+        - reference : toutes les chaînes de caractères
+        - libelle : toutes les chaînes de caractères
+        - prix : tout réel supérieur strict à 0
 
 #### Notion de clé primaire
 
@@ -182,7 +241,7 @@ Dans la relation **Livres** , on a rajouté un attribut **idAuteur** qui est la 
 !!! example "Définition"
     Une **clé étrangère** référence une clé primaire d’une autre table.
 
-    ![](Images/tab5.JPG){: .center}
+    ![](images/tab5.JPG){: .center}
 
 L’attribut **idAuteur** est ce que l’on nomme une **clé étrangère** de la relation **Livres** , elle permet de faire le lien entre les deux relations.
 
@@ -196,7 +255,14 @@ L’attribut **idAuteur** est ce que l’on nomme une **clé étrangère** de la
 3. Justiﬁez que dans la relation Details , le couple (reference, numero commande) constitue une clé primaire.
 4. Identiﬁez les clés étrangères.
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice10_correction.md"
+??? note "Correction"
+    1. **Commande** : Numéro de commande<br>
+    **Client** : Numéro de client<br>
+    **Produit** : Référence<br>
+    **Détail** : Référence, numero de commande
+    2. Pour une même quantité, il peut y avoir différentes références et différents numéros de commande
+    3. Pour avoir l’unicité du détail d’un produit, il faut connaître la référence ET le numéro de commande .
+    4. Clé étrangère : numéro client, référence et numéro de commande
 
 #### Représentation du modèle relationnel
 
@@ -217,20 +283,27 @@ L’ensemble des relations peut être représenté soit par un schéma, soit par
 
 *Exemple : schéma relationnel*
 
-![](Images/tab6.JPG){: .center}
+![](images/tab6.JPG){: .center}
 
 **Exercice 11**
 
 Les relations de l'exercice 8 sont représentées ci-dessous :
 
-![](Images/tab7.JPG){: .center}
+![](images/tab7.JPG){: .center}
 
 Les clés primaires et étrangères ont été déﬁnies à l’exercice 10.
 
 1. Écrivez la notation textuelle du modèle relationnel.
 2. Réalisez le schéma relationnel.
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice11_correction.md"
+??? note "Correction"
+    1. <br>
+    **Commande** : (<u>Numéro de commande</u>, # numéro client, date)<br>
+    **Client** : (<u>Numéro de client</u>, nom, adresse, ville)<br>
+    **Produit** : (<u>Référence</u>, libelle, prix)<br>
+    **Détail** : (<u># Référence, # numero de commande</u>, quantite)
+    2. <br>
+    ![](images/Exercice11.png)
 
 ### Les contraintes d'intégrité
 
@@ -268,7 +341,7 @@ Il est important d’assurer la cohérence et donc l’intégrité des données 
 
 Dans la ﬁgure ci-dessous, la valeur de la clé étrangère idAuteur ne peut pas être supérieure à 8.
 
-![](Images/tab8.JPG){: .center}
+![](images/tab8.JPG){: .center}
 
 ### Exercices
 
@@ -286,7 +359,18 @@ Dans l’exemple de la Médiathèque, on souhaite créer 3 relations :
 2. Pour chacune des relations, indiquez la clé primaire et éventuellement la ou les clé(s) étrangère(s).
 3. Représentez le schéma relationnel correspondant, ainsi que la notation textuelle qui lui est associée.
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice12_correction.md"
+??? note "Correction"
+    1) 2) 3)<br>
+    **Auteur**(<u>idAuteur</u>, nomAuteur, prenomAuteur,langue)
+    **Livre**(<u>idLivre</u>,titre,#idAuteur,annee)
+    **Ouvrage**(<u>#idLivre</u>,quantité)
+
+    Domaine de valeur :
+        - idAuteur, idLivre : nombre entier strictement positif
+        - nomAuteur, prenomAuteur, langue, titre, annee : toute chaîne de caractères
+        - quantité : nombre entier positif ou nul
+
+    3) ...
 
 **Exercice 13**
 
@@ -318,7 +402,33 @@ Ses contre-indications sont :
 1. Donnez la représentation sous forme de tables des relations Medicament et ContreIndication .
 2. Écrivez le schéma relationnel permettant de représenter une base de données pour ce laboratoire.
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice13_correction.md"
+??? note "Correction"
+    1) <br>
+    **Médicament**
+
+    |nomMedicament|descriptionCourte|descriptionLongue|quantite|
+    |:--:|:--:|:--:|:--:|
+    |Chourix|Médicament contre la chute des choux|Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare.|13|
+    |Tropas|Médicament contre les dysfonctionnements intellectuels|Suspendisse lectus leo, consectetur in tempor sit amet, placerat quis neque. Etiam luctus porttitor lorem, sed suscipit est rutrum non|42|
+
+    **ContreIndication** : 
+
+    |idCi|nomMedicament|descriptionCI|
+    |:--:|:--:|:--:|
+    |CI1|Chourix|Ne jamais prendre après minuit|
+    |CI2|Chourix|Ne jamais mettre en contact avec de l’eau|
+    |CI3|Tropas|Garder à l’abri de la lumière du soleil|
+
+    2)<br>
+    **Medicament**(<u>nomMedicament</u>, descriptionCourte, descriptionLongue, quantite)
+
+    **ContreIndication**(<u>idCI</u>, # nomMedicament, descriptionCI)
+
+
+    - Domaine de valeur :
+        - nomMedicament, descriptionsCI,descriptionCourte : chaine de caractère en français
+        - descriptionLongue : chaine de caractère en latin
+        - idCI , quantite : entier strictement positif
 
 ## Les systèmes de gestion de base de données (SGBD)
 
@@ -336,7 +446,7 @@ Ses contre-indications sont :
     Un Système de Gestion de Base de Données est un outil permettant aux utilisateurs de structurer, d’insérer, de modiﬁer et de rechercher de manière eﬃcace des données au sein d’une
     grande quantité d’informations stockées sur des mémoires partagées.
 
-    ![](Images/tab9.JPG){: .center}
+    ![](images/tab9.JPG){: .center}
 
 ### Propriétés
 
@@ -351,7 +461,7 @@ contenues dans une base de données soit maintenu, même en cas de panne matéri
 
 Ces problèmes d’accès concurrent sont aussi gérés par les SGBD.
 
-![](Images/tab10.JPG){: .center}
+![](images/tab10.JPG){: .center}
 
 L’utilisation des SGBD explique en partie la supériorité de l’utilisation des bases de données sur des solutions plus simples à mettre en oeuvre; mais aussi beaucoup plus limitées comme les ﬁchiers au format CSV.
 
@@ -389,11 +499,11 @@ Le langage SQL (Strutured Query Language) permet d’interroger les bases de don
 
 On considère la relation **LIVRES** ( <u>id</u> , titre, auteur, ann_publi)
 
-![](Images/tab11.JPG){: .center}
+![](images/tab11.JPG){: .center}
 
 Elle contient les éléments suivants :
 
-![](Images/tab12.JPG){: .center}
+![](images/tab12.JPG){: .center}
 
 - Affichage de tous les titres présents dans la relation LIVRES
 
@@ -528,15 +638,36 @@ Farenheit  451,  Bradbury
 
 On considère la relation COMMUNES dont une partie du contenu est représenté ci-dessous :
 
-![](Images/tab13.JPG){: .center}
+![](images/tab13.JPG){: .center}
 
 1. Quelle requête permet d’aﬃcher tous les noms de commune?
 2. Quelle requête permet d’aﬃcher tous les noms de commune et leur population?
 3. Quelle requête permet d’aﬃcher tous les noms de commune et leur population, classé par ordre croissant de population?
 4. Quelle requête permet d’aﬃcher tous les noms de commune et leur population, classé par ordre décroissant d’élus municipaux?
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice14_correction.md"
-
+??? note "Correction"
+    1.
+    ```sql
+    SELECT Nom_ville
+    FROM communes;
+    ```
+    2.
+    ```sql
+    SELECT Nom_ville,Population
+    FROM communes;
+    ```
+    3.
+    ```sql
+    SELECT Nom_ville,Population
+    FROM communes  
+    ORDER BY Population;
+    ```
+    4.
+    ```sql
+    SELECT Nom_ville,Population
+    FROM communes  
+    ORDER BY Nb_elus_municipaux DESC;
+    ```
 #### Construction d'une requête avec une ou plusieurs restrictions
 
 !!! example "Définition"
@@ -613,8 +744,25 @@ On reprend la relation COMMUNES de l’exercice 14.
 2. Quelle requête permet d’aﬃcher le nom des communes dont le nombre d’élus municipaux est strictement inférieur à 10 ET dont la population est inférieure ou égale à 100?
 3. Quelle requête permet d’aﬃcher le nombre d’élus municipaux et la population de la ville de « Cressin-Rochefort »? (NB : affranchissez vous de la casse)
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice15_correction.md"
-
+??? note "Correction"
+    1.
+    ```sql
+    SELECT Nom_ville
+    FROM communes 
+    WHERE Nb_elus_municipaux <10;
+    ```
+    2.
+    ```sql
+    SELECT Nom_ville
+    FROM communes 
+    WHERE Nb_elus_municipaux <10 AND Population<=100;
+    ```
+    3.
+    ```sql
+    SELECT Nb_elus_municipaux, Population
+    FROM communes 
+    WHERE LOWER(Nom_ville) = « cressin-rochefort »;
+    ```
 !!! example "Définition"
     Une donnée manquante en SQL est repérée par un NULL. Il y a plusieurs raisons, bonnes ou mauvaises, pour avoir des données manquantes, et il est parfois utile de tester leur
     présence. Pour cela, nous allons utiliser le terme `IS  NULL` comme condition.
@@ -648,8 +796,19 @@ On reprend la relation COMMUNES de l’exercice 14.
 1. Quelle requête permet d’afficher le nom des communes dans lesquelles il y a eu un deuxième tour?
 2. Quelle requête permet d’afficher le nom des communes dont la population est supérieure à 5 000 habitants et dans lesquelles il y a eu un deuxième tour?
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice16_correction.md"
-
+??? note "Correction"
+    1.
+    ```sql
+    SELECT Nom_villes
+    FROM communes 
+    WHERE exprime_deuxieme_tour IS NOT NULL ;
+    ```
+    2.
+    ```sql
+    SELECT Nom_villes
+    FROM communes 
+    WHERE Population > 5000 AND  exprime_deuxieme_tour IS NOT NULL;
+    ```
 !!! example "Définition"
     L’opérateur `LIKE` permet de rechercher les valeurs contenant une partie seulement de la chaîne de caractères. Le caractère $\%$ représente une suite de caractères, éventuellement nulle.
 
@@ -676,8 +835,19 @@ On reprend la relation COMMUNES de l’exercice 14.
 1. Quelle requête permet d’aﬃcher le nom des communes dont le nom commence par Roncherolles?
 2. Quelle requête permet d’aﬃcher le nom des communes dont le nom contient le mot « sur »?
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice17_correction.md"
-
+??? note "Correction"
+    1.
+    ```sql
+    SELECT Nom_villes
+    FROM communes 
+    WHERE Nom_villes LIKE "Roncherolles %";
+    ```
+    2.
+    ```sql
+    SELECT Nom_villes
+    FROM communes 
+    WHERE Nom_villes LIKE "%sur%";
+    ```
 #### Les fonctions d'agrégation
 
 
@@ -779,13 +949,28 @@ On reprend la relation COMMUNES de l’exercice 14.
 2. Quelle requête permet d’afficher la moyenne du nombre d’habitants dans les communes?
 3. Quelle requête permet d’afficher le nom de la ville avec la population la plus grande pour laquelle il n’y a pas de deuxième tour?
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice18_correction.md"
-
+??? note "Correction"
+    1.
+    ```sql
+    SELECT SUM(Nb_elus_municipaux)
+    FROM communes;
+    ```
+    2.
+    ```sql
+    SELECT AVG(Population)
+    FROM communes;
+    ```
+    3.
+    ```sql
+    SELECT Nom_villes, Max(Population)
+    FROM communes 
+    WHERE  exprime_deuxieme_tour IS NULL;
+    ```
 #### Les requêtes avec jointure
 
 On a vu dans la partie consacrée au modèle relationnel, qu’une clé étrangère référence une clé primaire venant d’une autre table, suivant l’exemple ci-dessous :
 
-![](Images/tab6.JPG){: .center}
+![](images/tab6.JPG){: .center}
 
 Pour représenter le lien entre la clé étrangère et la clé primaire, on réalise une **jointure** .
 
@@ -820,15 +1005,42 @@ JOIN  Auteurs  ON  livres.idAuteur  =  auteurs.id;
 
 On considère les deux relations représentés ci-dessous :
 
-![](Images/tab8.JPG){: .center}
+![](images/tab8.JPG){: .center}
 
 1. Quelle requête permet d’afficher l’auteur du livre dont le titre est « 1984 »?
 2. Quelle requête permet d’afficher tous les auteurs qui ont publié un livre avant 1960 (strictement)?
 3. Quelle requête permet d’afficher tous les titres des livres publiés par Pierre Boulle?
 4. Quelle requête permet d’afficher l’auteur et le titre de tous les livres publiés avant 1960 (strictement)?
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice19_correction.md"
-
+??? note "Correction"
+    1.
+    ```sql
+    SELECT nom
+    FROM livres
+    JOIN auteurs ON livres.idAuteur = auteurs.id 
+    WHERE titre = "1984";
+    ```
+    2.
+    ```sql
+    SELECT nom
+    FROM livres
+    JOIN auteurs ON livres.idAuteur = auteurs.id 
+    WHERE ann_publi <1960;
+    ```
+    3.
+    ```sql
+    SELECT titre
+    FROM livres
+    JOIN auteurs ON livres.idAuteur = auteurs.id 
+    WHERE UPPER(nom)= boulle;
+    ```
+    4.
+    ```sql
+    SELECT nom,titre
+    FROM livres
+    JOIN auteurs ON livres.idAuteur = auteurs.id 
+    WHERE ann_publi < 1960;
+    ```
 
 ### Les requêtes de manipulation de données
 
@@ -854,7 +1066,7 @@ On considère les deux relations représentés ci-dessous :
 INSERT  INTO  Livres VALUES  (4,  "Les  Furtifs",  "Damasio",  2019);
 ```
 
-![](Images/tab11.JPG){: .center}
+![](images/tab11.JPG){: .center}
 
 - On insère des valeurs dans la relation Livres ;
 - l’attribut id prend la valeur 4 ;
@@ -866,10 +1078,16 @@ INSERT  INTO  Livres VALUES  (4,  "Les  Furtifs",  "Damasio",  2019);
 
 Au vu du diagramme relationnel suivant, indiquez les deux requêtes pour insérer le livre d’Alain Damasio intitulé "La Horde du Contrevent", paru en 2004 et publié en langue française.
 
-![](Images/tab6.JPG){: .center}
+![](images/tab6.JPG){: .center}
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice20_correction.md"
-
+??? note "Correction"
+    ```sql
+    INSERT INTO auteurs VALUES (9, "Damasio", "Alain", français);
+    INSERT  INTO  livres VALUES  (15,  "La Horde du Contrevent",  9,  2004);
+    ```
+    
+    ATTENTION : l’ordre des requêtes est important !!!
+   
 #### Suppression de données
 
 !!! example "Définition"
@@ -887,8 +1105,22 @@ Au vu du diagramme relationnel suivant, indiquez les deux requêtes pour insére
 2. Indiquez la requête permettant de supprimer tous les livres d’Alain Damasio de la relation Livres .
 3. Indiquez la requête permettant de supprimer tous les livres écrits avant 1945 de la relation Livres .
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice21_correction.md"
-
+??? note "Correction"
+    1.
+    ```sql
+    DELETE FROM livres
+    WHERE titre= "Fondation";
+    ```
+    2.
+    ```sql
+    DELETE FROM livres
+    WHERE idAuteur = 9;
+    ```
+    3.
+    ```sql
+    DELETE FROM livres
+    WHERE annPubli ≤ 1945;
+    ```
 #### Modification de données
 
 !!! example "Définition"
@@ -911,8 +1143,17 @@ Au vu du diagramme relationnel suivant, indiquez les deux requêtes pour insére
 2. Le bibliothécaire de Gonneville-la-Mallet a inscrit par erreur que le livre d’Alain Damasio "La Zone du Dehors" a été publié en 2007, or sa première édition date de 1999. Indiquez la
 requête permettant de corriger cette erreur dans la relation Livres .
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice22_correction.md"
-
+??? note "Correction"
+    1.
+    ```sql
+    UPDATE livres SET titre = "Fondation – Tome 1"
+    WHERE titre = "Fondation";
+    ```
+    2.
+    ```sql
+    UPDATE livres SET annPubli = 1999
+    WHERE titre = "La Zone du Dehors";
+    ```
 ### Exercices
 
 **Exercice 23**
@@ -932,8 +1173,43 @@ Indiquez les requêtes qui permettent d’obtenir :
 5. Le nombre des musiciens qui participent à la représentations n°20.
 6. Les représentations et leurs dates dont le tarif ne dépasse pas 20 euros.
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice23_correction.md"
-
+??? note "Correction"
+    1.
+    ```sql
+    SELECT titreRep
+    FROM representation; 
+    ```
+    2.
+    ```sql
+    SELECT titreRep
+    FROM representation  
+    WHERE lieu = "théâtre allissa";
+    ```
+    3.
+    ```sql
+    SELECT nom, titreRep
+    FROM representation
+    JOIN musicien ON representation.numRep = musicien.numRep;
+    ```
+    4.
+    ```sql
+    SELECT titreRep, lieu, tarif
+    FROM representation
+    JOIN programmer ON representation.numRep = programmer.numRep 
+    WHERE date= "25/07/2008";
+    ```
+    5.
+    ```sql
+    SELECT COUNT(*)
+    FROM musicien where numRep = 20 ;
+    ```
+    6.
+    ```sql
+    SELECT titreRep, date
+    FROM representation
+    JOIN programmer ON  representation.numRep = programmer.numRep 
+    WHERE tarif ≤ 20;
+    ```
 **Exercice 24**
 
 Soit le modèle relationnel suivant relatif à la gestion des locations de ﬁlms :
@@ -949,8 +1225,27 @@ Indiquez les requêtes qui permettent d’obtenir :
 3. La suppression du ﬁlm "Dans la peau de John Malkovitch".
 4. Le renommage du ﬁlm "Boulevard de la Mort" en "Death Proof".
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice24_correction.md"
-
+??? note "Correction"
+    1.
+    ```sql
+    INSERT  INTO  films 
+    VALUES  (12, "The Raid");
+    ```
+    2.
+    ```sql
+    INSERT  INTO  clients 
+    VALUES  (124, "Jean", « Talu »,NULL,NULL,NULL);
+    ```
+    3.
+    ```sql
+    DELETE FROM films
+    WHERE nomfilm = "Dans la peau de John Malkovitch";
+    ```
+    4.
+    ```sql
+    UPDATE films SET nomfilm= « Death Proof »
+    WHERE nomfilm = "Boulevard de la Mort";
+    ```
 **Exercice 25**
 
 Soit la Base de données **hôtel** qui contient 3 relations :
@@ -961,7 +1256,7 @@ Soit la Base de données **hôtel** qui contient 3 relations :
 
 Le contenu de chaque relation est :
 
-![](Images/tab14.JPG){: .center}
+![](images/tab14.JPG){: .center}
 
 Indiquez les requêtes qui permettent d’obtenir :
 
@@ -975,8 +1270,60 @@ Indiquez les requêtes qui permettent d’obtenir :
 8. Le nombre de chambres dont le prix est entre 85 et 120 Euro.
 9. Les noms des clients n’ayant pas ﬁxé la date de départ.
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice25_correction.md"
-
+??? note "Correction"
+    1.
+    ```sql
+    SELECT numChambre
+    FROM chambre 
+    WHERE equipement = "TV";
+    ```
+    2.
+    ```sql
+    SELECT numChambre, nbrPers
+    FROM chambre;
+    ```
+    3.
+    ```sql
+    SELECT SUM(nbrPers)
+    FROM chambre;
+    ```
+    4.
+    ```sql
+    SELECT prix/nbrpers
+    FROM chambre 
+    WHERE equipement = "TV";
+    ```
+    5.
+    ```sql
+    SELECT numChambre, numClient
+    FROM reservation 
+    WHERE dateArr = "09/02/2004";
+    ```
+    6.
+    ```sql
+    SELECT numChambre
+    FROM chambre 
+    WHERE prix ≤ 80 OR (confort = "Bain" AND prix ≤ 120);
+    ```
+    7.
+    ```sql
+    SELECT nom, prenom, adresse
+    FROM client 
+    WHERE nom = "D%";
+    ```
+    8.
+    ```sql
+    SELECT COUNT(*)
+    FROM chambre 
+    WHERE 85 ≤ prix ≤ 120;
+    ```
+    9.
+    ```sql
+    SELECT nom
+    FROM client
+    JOIN reservation ON client.numcClient = reservation.numClient 
+    WHERE dateDep IS NULL;
+    ```
 ## Mise en pratique
 
 ### Base de données sur les prix Nobel
@@ -1005,8 +1352,26 @@ b) Combien d'attributs possède la relation **nobel**?
 
 c) Quel est le type de l'attribut **annee**?
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice26_correction.md"
-
+??? note "Correction"
+    1.
+    ```sql
+    SELECT * 
+    FROM sqlite_master 
+    WHERE TYPE ="table";
+    ```
+    2.
+        ```
+        CREATE TABLE nobel(
+        annee INT,
+        sujet VARCHAR(15),
+        laureat VARCHAR(50)
+        );
+        /* No STAT tables available */
+        ```
+    3. <br>
+        a. Il y a une seule relation : `nobel`<br>
+        b. Elle possède trois attributs : `annee`, `sujet`, `laureat`<br>
+        c. L’attribut `anneev est du type Entier 
 #### Les requêtes d'interrogation
 
 **Chaque requête devra se terminer par un `;` avant d'être exécutée.**
@@ -1027,8 +1392,71 @@ c) Quel est le type de l'attribut **annee**?
 10. Quels sont les lauréats distingués en Médecine en 1901 et 2001?
 11. Quels sont les lauréats des prix nobel de Physique et de Médecine en 2008?
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice27_correction.md"
-
+??? note "Correction"
+    1.
+    ```sql
+    SELECT laureat
+    FROM nobel;
+    ```
+    2.
+    ```sql
+    SELECT DISTINCT sujet
+    FROM nobel;
+    ```
+    3.
+    ```sql
+    SELECT sujet
+    FROM nobel 
+    WHERE laureat LIKE "Wilhelm Conrad R%ntgen";
+    ```
+    4.
+    ```sql
+    SELECT sujet
+    FROM nobel 
+    WHERE laureat = "Paul Krugman";
+    ```
+    5.
+    ```sql
+    SELECT annee
+    FROM nobel 
+    WHERE laureat = "Albert Fert";
+    ```
+    6.
+    ```sql
+    SELECT annee
+    FROM nobel 
+    WHERE laureat = "Pierre Curie";
+    ```
+    7.
+    ```sql
+    SELECT annee, sujet
+    FROM nobel 
+    WHERE laureat = "Bertha von Suttner";
+    ```
+    8.
+    ```sql
+    SELECT laureat
+    FROM nobel 
+    WHERE annee >= 2000;
+    ```
+    9.
+    ```sql
+    SELECT laureat
+    FROM nobel 
+    WHERE annee >= 1939 AND annee <= 1945 AND sujet = "Paix";
+    ```
+    10.
+    ```sql
+    SELECT laureat
+    FROM nobel 
+    WHERE (annee = 1901 OR annee = 2001) AND sujet LIKE "M%decine";
+    ```
+    11.
+    ```sql
+    SELECT laureat
+    FROM nobel 
+    WHERE (sujet = "Physique" OR sujet LIKE "M%decine") AND annee = 2008;
+    ```
 #### Les requêtes d'agrégation
 
 **Exercice 28**
@@ -1048,8 +1476,85 @@ c) Quel est le type de l'attribut **annee**?
 11. Combien y’a t’il eu de lauréats de Médecine et de littérature en 2000?
 12. Nombre de lauréats diﬀérents parmi les prix nobels de la paix?
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice28_correction.md"
-
+??? note "Correction"
+    1.
+    ```sql
+    SELECT count(*)
+    FROM nobel;
+    → 816 
+    ```
+    2.
+    ```sql
+    SELECT count(laureat)
+    FROM nobel 
+    WHERE sujet= "Paix";
+    → 119
+    ```
+    3.
+    ```sql
+    → 105
+    ```
+    4.
+    ```sql
+    → 0
+    ```
+    5.
+    ```sql
+    SELECT count(laureat)
+    FROM nobel 
+    WHERE annee = 1901;
+    → 6
+    ```
+    6.
+    ```sql
+    SELECT count(laureat)
+    FROM nobel 
+    WHERE annee = 1939 AND sujet = "Chimie";
+    → 2
+    ```
+    7.
+    ```sql
+    SELECT MIN(annee)
+    FROM nobel 
+    WHERE sujet = "Economie";
+    → 1969
+    ```
+    8.
+    ```sql
+    SELECT count(annee)
+    FROM nobel 
+    WHERE laureat LIKE "%Marie Curie %";
+    → 2
+    ```
+    9.
+    ```sql
+    SELECT laureat, sujet, annee
+    FROM nobel 
+    WHERE UPPER(laureat) LIKE "%COHEN %";
+    → Claude Cohen-Tannoudji|Physique|1997
+    Stanley Cohen|Médecine|1986
+    ```
+    10.
+    ```sql
+    SELECT count(DISTINCT laureat)
+    FROM nobel 
+    WHERE sujet = "Physique" OR sujet = "Chimie";
+    → 335
+    ```
+    11.
+    ```sql
+    SELECT count(DISTINCT laureat)
+    FROM nobel 
+    WHERE (sujet = "Literature" OR sujet LIKE "M%decine") AND annee = 2000;
+    → 4
+    ```
+    12.
+    ```sql
+    SELECT count(DISTINCT laureat)
+    FROM nobel 
+    WHERE sujet = "Paix";
+    → 116
+    ```
 #### Les requêtes d'insertion
 
 **Exercice 29**
@@ -1060,8 +1565,23 @@ c) Quel est le type de l'attribut **annee**?
 2. Quelle requête permet de modiﬁer l’enregistrement précédent pour accoler le nom d’époux (Banerjee) après celui de Duﬂo?
 3. De nombreuses pétitions circulent pour retirer le prix Nobel à Aung San Suu Kyi. Quelle requête permettrait cela?
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice29_correction.md"
-
+??? note "Correction"
+    1.
+    ```sql
+    INSERT INTO nobel
+    VALUES (2019, "Economie", "Esther Duflo");
+    ```
+    2.
+    ```sql
+    UPDATE nobel
+    SET laureat = "Esther Duflo Banerjee" 
+    WHERE laureat = "Esther Duflo";
+    ```
+    3.
+    ```sql
+    DELETE FROM nobel
+    WHERE laureat LIKE "Aung %";
+    ```
 ### Base de données collectivités
 
 #### Exploration de la base
@@ -1075,8 +1595,18 @@ Dans la cellule ci-dessous, on a chargé la base de donnée `Collectivites.db`.
 1. Combien de relation possède la base de données?
 2. Réalisez un schéma relationnel de cette base de données, sous la forme graphique, en précisant pour chaque attribut son type et s'il doit impérativement être rempli.
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice30_correction.md"
+??? note "Correction"
+    1. Deux relations : `Ville` et `Departement`
+    
+    2.
 
+    |Ville|Departement|
+    |:--:|:--:|
+    |<u>idVille</u> (entier non nul)|<u>idDepartement (entier non nul)</u>|
+    |nom (chaine non nulle)|numero (chaine non nulle)|
+    |codePostal (entier non nul)|nom (chaine non nulle)|
+    |nbHabitants (entier)||		
+    |#idDepartement(entier non nul)||
 #### Collecte des informations
 
 **Exercice 31**
@@ -1099,7 +1629,20 @@ La base **Collectivites** est vide. Il faut la remplir. Pour cela, en vous aidan
 ||Calvados||
 
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice31_correction.md"
+??? note "Correction"
+    |IdCommune|Commune|Code Postal|Département|Nombre d’habitants|
+    |:--:|:--:|:--:|:--:|:--:|
+    |1|Rouen|76000|Seine-Maritime|110169|
+    |2|Dieppe|76200|Seine-Maritime|29080|
+    |3|Envermeu|76630|Seine-Maritime|2097|
+    |4|Le Neubourg|27110|Eure|4166|
+    |5|Igoville|27460|Eure|1746|
+
+    |IdDepartement|Département|Code d’immatriculation|
+    |:--:|:--:|:--:|
+    |1|Seine-Maritime|76|
+    |2|Eure|27|
+    |3|Calvados|14|
 
 #### Insertion des enregistrements
 
@@ -1113,7 +1656,34 @@ La base **Collectivites** est vide. Il faut la remplir. Pour cela, en vous aidan
 4. Insérez la commune d’Igoville.
 5. Insérez la commune du Neubourg.
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice32_correction.md"
+??? note "Correction"
+    1.
+    ```sql
+    INSERT INTO Departement
+    VALUES (1, "76", "Seine-Maritime");
+    ```
+    2.
+    ```sql
+    INSERT INTO Ville
+    VALUES (1, "Rouen", 76000, 110169, 1);
+    ```
+    3.
+    ```sql
+    INSERT INTO Ville
+    VALUES (2, "Dieppe", 76200, 29080, 1), (3, "Envermeu", 76630, 2097, 1);
+    ```
+    4.
+    ```sql
+    INSERT INTO Departement
+    VALUES (2, "27", "Eure");
+    INSERT INTO Ville 
+    VALUES (5, "Igoville", 27460, 1746, 2);
+    ```
+    5.
+    ```sql
+    INSERT INTO Ville
+    VALUES (4, "Le Neubourg", 27110, 4166, 2);
+    ```
 
 **Exercice 33**
 
@@ -1125,8 +1695,29 @@ En recherchant éventuellement les informations manquantes, indiquez le code SQL
 2. Le vrai nom de Trouville est en fait Trouville-Sur-Mer.
 3. Médizon-Canon et Crèvecoeur-en-Auge n’existent plus. Elles ont fusionné pour donner une nouvelle commune : Mézidon-Vallée-d’Auge.
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice33_correction.md"
-
+??? note "Correction"
+    1.
+    ```sql
+    INSERT INTO Departement
+    VALUES (3, "14", "Calvados");
+    INSERT INTO Ville 
+    VALUES (6, "Trouville", 14360, 4675, 3),
+    (7, "Mezidon-Canon", 14270, 4838, 3),
+    (8, "Crevecoeur-en-Auge", 14240, 480, 3);
+    ```
+    2.
+    ```sql
+    UPDATE Ville
+    SET nom= "Trouville-sur-Mer"
+    WHERE nom= "Trouville";
+    ```
+    3.
+    ```sql
+    INSERT INTO Ville
+    VALUES (9, "Mezidon-Vallee-d’Auge", 14270, 9712) ;
+    DELETE  FROM  Ville 
+    WHERE  nom  =  "Mezidon-Canon"  OR  nom  =  "Crevecoeur-en-Auge";
+    ```
 #### Vérification des enregistrements
 
 **Exercice 34**
@@ -1141,8 +1732,35 @@ Indiquez le code SQL permettant de répondre aux consignes suivantes :
 4. Combien il y a-t-il de communes en Seine-Maritime enregistrées dans la base? (réponse : 3)
 5. Combien il y a-t-il de communes dans le Calvados enregistrées dans la base? (réponse : 2)
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice34_correction.md"
-
+??? note "Correction"
+    1.
+    ```sql
+    SELECT count(*)
+    FROM Departement;
+    ```
+    2.
+    ```sql
+    SELECT count(*)
+    FROM Ville;
+    ```
+    3.
+    ```sql
+    SELECT count(*)
+    FROM Ville 
+    WHERE idDepartement = 2;
+    ```
+    4.
+    ```sql
+    SELECT count(*)
+    FROM Ville 
+    WHERE idDepartement = 1;
+    ```
+    5.
+    ```sql
+    SELECT count(*)
+    FROM Ville 
+    WHERE idDepartement = 3;
+    ```
 ### Base consacrée au cinéma
 
 #### Exploration de la base de données
@@ -1162,7 +1780,15 @@ Dans la cellule ci-dessous, on a chargé la base de donnée `Cinema.sqlite`.
 7. Quelle est la référence de la clé étangère.
 8. En procédant de la même façon pour toutes les tables, représentez le schéma relationnel sous forme graphique, en faisant bien ﬁgurer les relations entre les clé primaires et clés étrangères.
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice35_correction.md"
+??? note "Correction"
+    1. 5 relations : Artiste, Cinema, Film, Role, Seance.
+    2. Artiste à 3 attributs : nom, prenom, anneeNaissance.
+    3. La clé primaire d’Artiste est nom.
+    4. Film a 4 attributs : idFilm, titre, annee, nomRealisateur.
+    5. La clé primaire de Film est idFilm.
+    6. La clé étrangère de Film est nomRealisateur.
+    7. La clé étrangère de Film fait référence à l’attribut nom de la relation Artiste.
+    8. ![](images/Exercice35.png) 
 
 #### Requêtes simples
 
@@ -1179,8 +1805,43 @@ Indiquez le code SQL permettant d’afficher :
 5. Les acteurs dont on ignore la date de naissance (cela signiﬁe que la valeur n’existe pas).
 6. Le nombre de fois où Bruce Willis a joué le rôle de McLane (on utilisera la commande UPPER() pour s’affranchir de la casse).
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice36_correction.md"
-
+??? note "Correction"
+    1.
+    ```sql
+    SELECT titre
+    FROM Film 
+    ORDER BY titre;
+    ```
+    2.
+    ```sql
+    SELECT prenom, nom, anneeNaissance
+    FROM artiste 
+    WHERE anneeNaissance <= 1950;
+    ```
+    3.
+    ```sql
+    SELECT nomCinema
+    FROM Cinema 
+    WHERE arrondissement = 12;
+    ```
+    4.
+    ```sql
+    SELECT prenom, nom
+    FROM Artiste 
+    WHERE nom LIKE "H %";
+    ```
+    5.
+    ```sql
+    SELECT prenom, nom
+    FROM Artiste 
+    WHERE anneeNaissance IS NULL;
+    ```
+    6.
+    ```sql
+    SELECT count(idFilm))
+    FROM Role 
+    WHERE UPPER(nomRole) = "MCLANE" AND UPPER(nomActeur) = "WILLIS";
+    ```
 #### Requêtes avec jointure
 
 **Exercice 37**
@@ -1214,8 +1875,33 @@ Indiquez aussi le titre du ﬁlm.
 12. Où peut-on voir un ﬁlm avec Clint Eastwood? On donnera le titre du ﬁlm, le nom et l’adresse du cinéma, ainsi que l’heure de début du ﬁlm.
 13. Quels sont les cinémas (nom, adresse et arrondissement) ayant une salle de plus de 150 places et passant un ﬁlm avec Bruce Willis?
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice37_correction.md"
-
+??? note "Correction"
+    1.
+    ```sql
+    SELECT nom,prenom
+    FROM Artiste
+    JOIN Role ON Artiste.nom = Role.nomActeur 
+    WHERE UPPER(nomRole) = "TARZAN";
+    → Lambert Christophe
+    ```
+    2.
+    ```sql
+    SELECT anneeNaissance
+    FROM Artiste
+    JOIN Film ON Artiste.nom = Film.nomRealisateur 
+    WHERE titre = "Reservoir Dogs";
+    → 1948
+    ```
+    3.
+    ```sql
+    SELECT titre, nomRole
+    FROM Film
+    JOIN Role ON Film.idFilm = Role.idFilm 
+    WHERE nomActeur = "Allen";
+    → Manhattan, Davis
+    → Annie Hall, Jonas
+    ```
+    4. ...
 #### Modification de la base cinéma
 
 **Exercice 38**
@@ -1231,8 +1917,46 @@ Indiquez l’ordre dans lequel il faut remplir les relations.
 salle 1 de 13h à 16h, le ﬁlm Shower on the Beach tourné en 1963 avec Camille Honnête (née en 1940) dans la salle 1 de 16h à 18h et Bains Moussants avec Jacques Célère (né en 1945 et décédé trop vite en 1969) tourné en 1967 dans la salle 2 de 15h à 18h. Indiquez
 les requêtes SQL permettant de modiﬁer les séances du cinéma Rex.
 
---8<-- "docs/04-Bases_de_donnees/Corrections/Exercice38_correction.md"
-
+??? note "Correction"
+    1.
+    ```sql
+    INSERT INTO Artiste
+    VALUES(‘Scott’, "Ridley", 1937);
+    ```
+    2.
+    ```sql
+    INSERT INTO Film
+    VALUES(143, "Blade Runner", 1982, "Scott");
+    ```
+    3.
+    ```sql
+    INSERT INTO Artiste
+    VALUES("Ford", "Harisson", 1942);
+    INSERT INTO Artiste  
+    VALUES("Hauer", "Rutger", 1944);
+    INSERT INTO Role  
+    VALUES("Rick Deckard", 143, "Ford");
+    INSERT INTO Role  
+    VALUES("Roy Batty", 143, "Hauer");
+    ```
+    4.
+    ```sql
+    INSERT INTO Artiste
+    VALUES("Hamill", "Mark", 1951) 
+    INSERT INTO Artiste  
+    VALUES("Fisher", "Carrie", 1956);
+    INSERT INTO Artiste  
+    VALUES("Kershner", "Irvin", 1923);
+    INSERT INTO Film 
+    VALUES(144, "L empire contre attaque", 1980, "Kershner");
+    INSERT INTO Role 
+    VALUES("Luke Skywalker", 144, "Hamill");
+    INSERT INTO Role 
+    VALUES("Princesse Leia", 144, "Fisher");
+    INSERT INTO Role 
+    VALUES("Han Solo", 144, "Ford");
+    ```
+    5. ...
 ### [SQL Murder Mystery](https://mystery.knightlab.com/){target="_blank"}
 
 
@@ -1241,11 +1965,11 @@ souvenez plus du nom du meurtrier. Vous  vous souvenez juste que le meurtre a eu
 lieu le 15 janvier 2018 dans la ville de SQL City.
 
 
-![e g robinson](Images/egr.webp)
+![e g robinson](images/egr.webp)
 
 Vous disposez ensuite de la base de données schématisée ici :
 
-![bdd de sql murder mystery](Images/sqlmm.png)
+![bdd de sql murder mystery](images/sqlmm.png)
 
 A vous de jouer :
 

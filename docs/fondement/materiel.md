@@ -1,5 +1,16 @@
 # Architecture matérielle des ordinateurs
 
+
+??? conclu "Programme"
+      Exprimer un algorithme dans un langage de programmation a pour but de le rendre
+      exécutable par une machine dans un contexte donné. La découverte de l’architecture des machines et de leur système d’exploitation constitue une étape importante.  
+      Les circuits électroniques sont au cœur de toutes les machines informatiques. Les réseaux permettent de transmettre l’information entre machines. Les systèmes d’exploitation gèrent et optimisent l’ensemble des fonctions de la machine, de l’exécution des programmes aux entrées-sorties et à la gestion d’énergie.  
+      On étudie aussi le rôle des capteurs et actionneurs dans les entrées-sorties clavier, interfaces graphiques et tactiles, dispositifs de mesure physique, commandes de machines, etc.
+
+      |Notions|Compétences|Remarques|
+      |--|--|--|
+      Modèle d’architecture séquentielle (von Neumann) | Distinguer les rôles et les caractéristiques des différents constituants d’une machine.<br>Dérouler l’exécution d’une séquence d’instructions simples du type langage machine. | La présentation se limite aux concepts généraux.<br> On distingue les architectures monoprocesseur et les architectures multiprocesseur.<br> Des activités débranchées sont proposées.<br> Les circuits combinatoires réalisent des fonctions booléennes.
+
 L'informatique revient donc à réaliser une suite d'**instructions** (combinaisons de portes logiques) sur un certain nombre de **données** binaires.
 
 En **1945**, le développement du projet [EDVAC](https://fr.wikipedia.org/wiki/Electronic_Discrete_Variable_Automatic_Computer) amène  John von **Neumann** (mathématicien et physicien américano-hongrois 1903-1957) à imaginer l'utilisation d'une **structure de stockage (mémoire)** pour stocker à la fois les données et les instructions.
@@ -32,7 +43,7 @@ svg {
 
 </style>
 
---8<-- 'assets/images/neumann.svg'
+--8<-- 'docs/assets/images/neumann.svg'
 
 
 <script>
