@@ -556,123 +556,121 @@ Cela génère l'affichage d'un message explicite et l'arrêt du programme si ces
 
 En effet, la plupart des programmes ont vocation à être utilisés par d'autres utilisateurs que leur concepteur, et ceux-ci peuvent entrer des valeurs de variables provoquant des erreurs lors de l'exécution, même si le code du concepteur est initialement correct. Le concepteur doit anticiper ces erreurs dues à l'utilisateur.
 
-#### Liste non exhaustive d'exceptions
-
-Il existe un certain nombre de catégories d'exceptions clairement identifiées et repérées par un nom adéquat.
-
-**Exercice 8**
-
-Dans les lignes ci-dessous, un certain nombre de codes erronés sont écrits. Identifier l'exception correspondante parmi celles proposées ci-dessous et associées les au code.
-
-```
-a) SyntaxError: invalid syntax
-b) ZeroDivisionError: division by zero
-c) FileNotFoundError: [Errno 2] No such file or directory: 'mon_fichier'
-d) IndexError: list index out of range
-e) ValueError: invalid literal for int() with base 10: 'seize'
-f) TypeError: unsupported operand type(s) for +: 'int' and 'str'
-g) NameError: name 'z' is not defined
-```
-
-Cette liste est non exhaustive...
-
-1. 
-```python
-somme = 0
-L = [2, 5, '6', 9]
-for element in L:
-    somme = somme + element
-```
-2. 
-```python
-def div(x, y):
-    return x/y
-
-for i in range(5):
-    print(div(5, i))
-```
-3. 
-```python
-x = 2
-y = x + z
-print(y)
-```
-4. 
-```python
-l = [1, 2, 3]
-for i in range(5):
-    print(l[i])
-```
-5. 
-```python
-age = "seize"
-print(int(age))
-```
-6. 
-```python
-for i in range(5)
-    print(i)
-```
-7. 
-```python
-open('mon_fichier')
-```
-
-??? note "Correction"
-    - a → 6
-    - b → 2
-    - c → 7
-    - d → 4
-    - e → 5
-    - f → 1
-    - g → 3
-
-Au-dessus du type d'exception (ValueError, IndexError, etc...) se trouve une description de ce qui a causé l'erreur. C'est ce qu'on appelle une stack trace, et ça représente la pile d'appels qui ont amené à cette erreur. Pour comprendre votre erreur, il faut lire ce texte à l'envers, de bas en haut.
-
-Testez et analysez le programme suivant :
-
-```python
-def une_fonction():
-    return 1/0
-  
-
-def une_autre_fonction():
-    une_fonction()
 
 
-une_autre_fonction()
-```
+{{exercice(titre="Liste non exhaustive d'exceptions")}}
+    Il existe un certain nombre de catégories d'exceptions clairement identifiées et repérées par un nom adéquat.
 
-{{IDE()}}
+    Dans les lignes ci-dessous, un certain nombre de codes erronés sont écrits. Identifier l'exception correspondante parmi celles proposées ci-dessous et associées les au code.
 
-#### Comment gérer les exceptions?
+    ```
+    a) SyntaxError: invalid syntax
+    b) ZeroDivisionError: division by zero
+    c) FileNotFoundError: [Errno 2] No such file or directory: 'mon_fichier'
+    d) IndexError: list index out of range
+    e) ValueError: invalid literal for int() with base 10: 'seize'
+    f) TypeError: unsupported operand type(s) for +: 'int' and 'str'
+    g) NameError: name 'z' is not defined
+    ```
 
-Il suffit pour cela d'utiliser les instructions `try/except` et éventuellement `else` et `finally`.
+    Cette liste est non exhaustive...
 
-- **Le bloc `try`** permet de tester un bloc de code et ne l'exécute que s'il ne contient aucune erreur. Dans le cas contraire, le programme ignore la totalité du code dans ce bloc et passe au bloc suivant `except`
-- **Le bloc `except`** sera exécuté en cas d'erreur
-- **Le bloc `else`** permet d'exécuter une action si aucune erreur ne survient dans le bloc `try`
-- **Le bloc `finally`** vous permet d'exécuter du code, quel que soit le résultat des blocs `try` et `except`.
+    1. 
+    ```python
+    somme = 0
+    L = [2, 5, '6', 9]
+    for element in L:
+        somme = somme + element
+    ```
+    2. 
+    ```python
+    def div(x, y):
+        return x/y
 
-*Exemple* : structure complète possible
+    for i in range(5):
+        print(div(5, i))
+    ```
+    3. 
+    ```python
+    x = 2
+    y = x + z
+    print(y)
+    ```
+    4. 
+    ```python
+    l = [1, 2, 3]
+    for i in range(5):
+        print(l[i])
+    ```
+    5. 
+    ```python
+    age = "seize"
+    print(int(age))
+    ```
+    6. 
+    ```python
+    for i in range(5)
+        print(i)
+    ```
+    7. 
+    ```python
+    open('mon_fichier')
+    ```
 
-```python
-try:
-  resultat = numerateur/denominateur
-except NameError:
-  print("La variable numerateur ou denominateur n'a pas été définie.")
-except TypeError:
-  print("La variable numerateur ou denomniateur possède un type incompatible avec la division")
-except ZeroDivisionError:
-  print("La variable denominateur est égale à 0.")
-else:
-  print("Le résultat est : ", resultat)
-finally:
-  print("Vous venez de calculer une division")
-```
+    ??? success "Correction"
+        - a → 6
+        - b → 2
+        - c → 7
+        - d → 4
+        - e → 5
+        - f → 1
+        - g → 3
+
+??? info "Stack trace"
+    Au-dessus du type d'exception (ValueError, IndexError, etc...) se trouve une description de ce qui a causé l'erreur. C'est ce qu'on appelle une stack trace, et ça représente la pile d'appels qui ont amené à cette erreur. Pour comprendre votre erreur, il faut lire ce texte à l'envers, de bas en haut.
+
+    Testez et analysez le programme suivant :
+
+    ```python
+    def une_fonction():
+        return 1/0
+    
+
+    def une_autre_fonction():
+        une_fonction()
 
 
-{{IDE()}}
+    une_autre_fonction()
+    ```
+
+    {{IDE()}}
+
+??? info "Gestion des exceptions"
+    On utilise les instructions `try/except` et éventuellement `else` et `finally`.
+
+    - **Le bloc `try`** permet de tester un bloc de code et ne l'exécute que s'il ne contient aucune erreur. Dans le cas contraire, le programme ignore la totalité du code dans ce bloc et passe au bloc suivant `except`
+    - **Le bloc `except`** sera exécuté en cas d'erreur
+    - **Le bloc `else`** permet d'exécuter une action si aucune erreur ne survient dans le bloc `try`
+    - **Le bloc `finally`** vous permet d'exécuter du code, quel que soit le résultat des blocs `try` et `except`.
+
+    *Exemple* : structure complète possible
+
+    ```python
+    try:
+        resultat = numerateur/denominateur
+    except NameError:
+        print("La variable numerateur ou denominateur n'a pas été définie.")
+    except TypeError:
+        print("La variable numerateur ou denomniateur possède un type incompatible avec la division")
+    except ZeroDivisionError:
+        print("La variable denominateur est égale à 0.")
+    else:
+        print("Le résultat est : ", resultat)
+    finally:
+        print("Vous venez de calculer une division")
+    ```
+
+    {{IDE()}}
 
 ## Jeux de tests
 
@@ -704,174 +702,174 @@ if __name__ == '__main__':
   doctest.testmod()
 ```
 
-**Exercice 9**
+{{exercice(titre="Docstring et Doctests")}}
 
-Faire la docstring complète de ce module (général et pour chaque fonction), en incluant des exemples à tester avec le module Doctest.
-Ne pas oublier de respecter le PEP8
-
-
-{{IDE('scripts/module_liste.py')}}
-
-??? success "Corrigé"
-    ```python
-    # module sur les listes
-
-    """
-    Ce module contient les différentes fonctions sur les listes suivantes:
-
-        - dans_liste: Recherche de la présence d'un élément dans la liste
-        - max_liste: Recherche de la valeur maximale (et/ou minimale) des élément d'une liste
-        - moy_liste: Calcul de la moyenne des élément d'une liste
-        - indice_min_liste: Recherche de l'indice de l'élément minimum 
-        - card_val_liste: Recherche du nb d'occurrences d'une valeur 
-        - supp_liste: Suppression de la première occurrence d'un élément 
-    """
+    Faire la docstring complète de ce module (général et pour chaque fonction), en incluant des exemples à tester avec le module Doctest.
+    Ne pas oublier de respecter le PEP8
 
 
-    def dans_liste(x,L):
+    {{IDE('scripts/module_liste')}}
+
+    ??? success "Corrigé"
+        ```python
+        # module sur les listes
+
         """
-        Cette fonction permet de rechercher si un élément est dans une liste ou non.
-        
-        param x : Elément recherché (float)
-        param L : Liste pour la recherche (list)
-        return : présence ou non (bool)
-        
-        Exemple :
-        
-        >>> dans_liste(2, [1, 2, 3])
-        True
-        >>> dans_liste(4, [1, 2, 3])
-        False
+        Ce module contient les différentes fonctions sur les listes suivantes:
+
+            - dans_liste: Recherche de la présence d'un élément dans la liste
+            - max_liste: Recherche de la valeur maximale (et/ou minimale) des élément d'une liste
+            - moy_liste: Calcul de la moyenne des élément d'une liste
+            - indice_min_liste: Recherche de l'indice de l'élément minimum 
+            - card_val_liste: Recherche du nb d'occurrences d'une valeur 
+            - supp_liste: Suppression de la première occurrence d'un élément 
         """
-        msg = False
-        
-        for e in L:
-            if e == x:
-                msg = True
-        
-        return msg
 
 
-    def max_liste(L):
-        """
-        Cette fonction permet de rechercher le plus grand élément d'une liste.
-        
-        param L : Liste (list)
-        return : valeur max (float)
-        
-        Exemple :
-        
-        >>> max_liste([1, 2, 3])
-        3
-        >>> max_liste([4, 1, 2])
-        4
-        """
-        
-        maxi = L[0]
-        for i in range(1, len(L)):
-            if L[i] > maxi:
-                maxi = L[i]
+        def dans_liste(x,L):
+            """
+            Cette fonction permet de rechercher si un élément est dans une liste ou non.
+            
+            param x : Elément recherché (float)
+            param L : Liste pour la recherche (list)
+            return : présence ou non (bool)
+            
+            Exemple :
+            
+            >>> dans_liste(2, [1, 2, 3])
+            True
+            >>> dans_liste(4, [1, 2, 3])
+            False
+            """
+            msg = False
+            
+            for e in L:
+                if e == x:
+                    msg = True
+            
+            return msg
+
+
+        def max_liste(L):
+            """
+            Cette fonction permet de rechercher le plus grand élément d'une liste.
+            
+            param L : Liste (list)
+            return : valeur max (float)
+            
+            Exemple :
+            
+            >>> max_liste([1, 2, 3])
+            3
+            >>> max_liste([4, 1, 2])
+            4
+            """
+            
+            maxi = L[0]
+            for i in range(1, len(L)):
+                if L[i] > maxi:
+                    maxi = L[i]
+                    
+            return maxi
+
+
+        def moy_liste(L):
+            """
+            Cette fonction permet de calculer la moyenne des valeurs d'une liste.
+            
+            param L : Liste dont on cherche la moyenne (list)
+            return : valeur moyenne (float)
+            
+            Exemple :
+            
+            >>> moy_liste([1, 2, 3])
+            2
+            """ 
+            
+            Somme = 0
+            for e in L:
+                Somme = Somme + e
                 
-        return maxi
-
-
-    def moy_liste(L):
-        """
-        Cette fonction permet de calculer la moyenne des valeurs d'une liste.
-        
-        param L : Liste dont on cherche la moyenne (list)
-        return : valeur moyenne (float)
-        
-        Exemple :
-        
-        >>> moy_liste([1, 2, 3])
-        2
-        """ 
-        
-        Somme = 0
-        for e in L:
-            Somme = Somme + e
+            moyenne = Somme/len(L)
             
-        moyenne = Somme/len(L)
-        
-        return moyenne
+            return moyenne
 
 
-    def indice_min_liste(L):
-        """
-        Cette fonction permet d'avoir l'indice de la valeur minimum d'une liste.
-        
-        param L : Liste dont on cherche l'indice du min (list)
-        return : indice du min (int)
-        
-        Exemple :
-        
-        >>> indice_min_liste([1, 2, 3])
-        0
-        >>> indice_min_liste([4, 2, 1])
-        2
-        """ 
-        
-        i = 0
-        indice = 0
-        mini = L[0]
-        for e in L:
-            if L[i] < mini:
-                L[i] = mini
-                indice = i
-            i = i + 1
+        def indice_min_liste(L):
+            """
+            Cette fonction permet d'avoir l'indice de la valeur minimum d'une liste.
             
-        return indice
+            param L : Liste dont on cherche l'indice du min (list)
+            return : indice du min (int)
+            
+            Exemple :
+            
+            >>> indice_min_liste([1, 2, 3])
+            0
+            >>> indice_min_liste([4, 2, 1])
+            2
+            """ 
+            
+            i = 0
+            indice = 0
+            mini = L[0]
+            for e in L:
+                if L[i] < mini:
+                    L[i] = mini
+                    indice = i
+                i = i + 1
+                
+            return indice
 
 
-    def card_val_liste(x, L):
-        """
-        Cette fonction permet d'avoir le nombre de fois où apparaît une occurence dans une liste.
-        
-        param x : occurence à compter (float ou str)
-        param L : Liste où on compte (list)
-        return : nombre d'occurence (int)
-        
-        Exemple :
-        
-        >>> card_val_liste(2, [1, 2, 3])
-        1
-        >>> card_val_liste(2, [2, 2, 2])
-        3
-        """
-        
-        nb = 0
-        for e in L:
-            if e == x:
-                nb = nb + 1
-        
-        return nb
+        def card_val_liste(x, L):
+            """
+            Cette fonction permet d'avoir le nombre de fois où apparaît une occurence dans une liste.
+            
+            param x : occurence à compter (float ou str)
+            param L : Liste où on compte (list)
+            return : nombre d'occurence (int)
+            
+            Exemple :
+            
+            >>> card_val_liste(2, [1, 2, 3])
+            1
+            >>> card_val_liste(2, [2, 2, 2])
+            3
+            """
+            
+            nb = 0
+            for e in L:
+                if e == x:
+                    nb = nb + 1
+            
+            return nb
 
 
-    def supp_liste(x, L):
-        """
-        Cette fonction permet de supprimer la première occurence d'un élément d'une liste.
-        
-        param x : élément à supprimer
-        param L : Liste de départ(list)
-        return : Liste sans l'occurence de l'élément (list)
-        
-        Exemple :
-        
-        >>> supp_liste(1, [2, 1, 4, 1, 3])
-        [2, 4, 1, 3]
-        """
-        arret = False
-        for e in L:
-            if e == x and arret == False:
-                indice=L.index(e)
-                del L[indice]
-                arret = True
-        return L
+        def supp_liste(x, L):
+            """
+            Cette fonction permet de supprimer la première occurence d'un élément d'une liste.
+            
+            param x : élément à supprimer
+            param L : Liste de départ(list)
+            return : Liste sans l'occurence de l'élément (list)
+            
+            Exemple :
+            
+            >>> supp_liste(1, [2, 1, 4, 1, 3])
+            [2, 4, 1, 3]
+            """
+            arret = False
+            for e in L:
+                if e == x and arret == False:
+                    indice=L.index(e)
+                    del L[indice]
+                    arret = True
+            return L
 
-    if __name__ == '__main__':
-        import doctest
-      
-      
-        doctest.testmod()
-    ```
+        if __name__ == '__main__':
+            import doctest
+        
+        
+            doctest.testmod()
+        ```
