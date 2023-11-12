@@ -1,3 +1,4 @@
 # Algorithmes
 
-{{plan()}}
+!!! abstract "Plan de la partie"
+    {{plan()}}

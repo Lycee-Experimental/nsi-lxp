@@ -1,7 +1,7 @@
 nav:
     - 1️⃣ Langages et programmation: index.md
     - 1️⃣ Les bases de Python: bases.md
-    - 🇹 Bonnes pratiques de la progra: bonnes_pratiques
-    - 🇹 Progra Orientée Objet: progra_orientee_objet
-    - 🇹 Paradigmes de la progra: paradigmes_progra
-    - 🇹 Décidabilité et calculabilité: decidabilite_calculabilite
+    - 🇹 Bonnes pratiques de la progra: bonnes_pratiques.md
+    - 🇹 Progra Orientée Objet: poo.md
+    - 🇹 Paradigmes de la progra: paradigmes.md
+    - 🇹 Décidabilité et calculabilité: decidabilite_calculabilite.md

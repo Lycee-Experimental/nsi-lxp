@@ -412,7 +412,7 @@ Prelude> :load main.hs
     Nous allons utiliser les faits suivants : `homme`, `femme`, `parent` comme point de départ.  
     Nous définirons ensuite des règles permettant d'établir d'autres relations de parentés, pour les tester ensuite avec des requêtes.  
     Nous utiliserons l'arbre généalogique de la figure suivante :
-    ![](images/arbre.PNG){width=70% .center}
+    ![](images/arbre.png){width=70% .center}
 
     a. **Faits de genre**
 
@@ -578,7 +578,7 @@ Prelude> :load main.hs
 
     On considère le réseau suivant :
 
-    ![](images/graphe.PNG){: .center}
+    ![](images/graphe.png){: .center}
 
     Pour définir l'existence d'une route entre deux sommets, on utilisera la syntaxe : *route(a,b)* si une route existe.
 
@@ -610,7 +610,7 @@ Prelude> :load main.hs
 
     On dispose de 4 couleurs pour colorier la carte suivante :
 
-    ![](images/couleur.PNG){: .center}
+    ![](images/couleur.png){: .center}
 
     Écrire un programme Prolog permettant d'associer une couleur (rouge, jaune, vert, bleu) à une région (1,2,3,4,5,6) de telle manière que deux régions adjacentes ne soient pas de la même couleur.
 

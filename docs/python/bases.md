@@ -45,7 +45,7 @@
             b = temp
             ```
 
-        === "💡En utilisant des tuples💡"
+        === "💡En utilisant des paires de variables💡"
             👉  Il est aisé, en python, de faire cet échange de façon très simple
             
 
@@ -103,7 +103,7 @@
 
     !!! info "Remarque"
 
-        Il existe également des types plus complexes de données structurées comme les `tuple`, les `list`, et le type dictionnaire `dict`?
+        Il existe également des types plus complexes de données structurées comme les `tuple`, les `list`, et le type dictionnaire `dict`.
 
 
     ??? note "Conversion d'un type à un autre : les transtypages"
@@ -158,10 +158,10 @@
 
         !!! info "modulo (`%`) et division entière (`//`)"
 
-            * L'opérateur modulo donne le reste de la division euclidienne.   
+            * L'opérateur modulo donne le **reste** de la division euclidienne.   
             $7=2 \times 3 + 1$ donc `7 % 3` donne 1
 
-            * L'opérateur division entière donne le quotient.  
+            * L'opérateur division entière donne le **quotient**.  
             $7=2 \times 3 + 1$ donc `7 // 3` donne 2
 
 
@@ -384,7 +384,7 @@
 
         !!! info "Parcours 💚"
 
-            Ces codes sont à connaitre **sans aucune hésitation** (ils sont strictement identiques aux parcours d'une liste).
+            Ces codes sont à connaître **sans aucune hésitation** (ils sont strictement identiques aux parcours d'une liste).
 
             ```python
             for i in range(len(mon_tuple)) :
@@ -412,7 +412,7 @@
 
         !!! info "Choisir la bonne structure"
 
-            Il est préférable d'utiliser un tuple quand on veut regrouper des valeurs, et qu'on n'aura pas besoin de modifier les éléments ensuite. Les tuples étant immuables on ne risque pas, dans une partie du code, de modifier accidentellement les valeurs (ce qui, dans le cas d'une liste, peut très facilement arriver avec les effets de bords, que nous étudierons plus tard).
+            Il est préférable d'utiliser un tuple quand on veut regrouper des valeurs, et qu'on n'aura pas besoin de modifier les éléments ensuite. Les tuples étant immuables on ne risque pas, dans une partie du code, de modifier accidentellement les valeurs (ce qui, dans le cas d'une liste, peut très facilement arriver avec les **effets de bords**, que nous étudierons plus tard).
 
             !!! example "Exemple"
 
@@ -431,7 +431,7 @@
             Il suffit de faire une nouvelle affectation : `mon_dico[cle] = nouvelle_valeur`
 
 
-        !!! abstract "Appartenance d'une clé dans un dictionnaire"
+        !!! abstract "Appartenance d'une clé dans un dictionnaire : `in`"
 
             * `cle in mon_dico` renvoie `True` si la clé `cle` existe dans `mon_dico` et `False` sinon.  
             * `cle not in mon_dico` renvoie `True` si la clé `cle` n'existe pas dans `mon_dico` et `False` sinon. 
@@ -871,20 +871,37 @@
     ??? note "Notion d'espace de noms"
         
 
-    ??? info "Définitions :heart:"
+        ??? info "Définitions :heart:"
 
-        - Les variables définies dans le corps d'une fonction sont appelées **variables locales**.
-        - Les variables définies dans le corps du programme (sous-entendu : pas à l'intérieur d'une fonction) sont appelées **variables globales**.
+            - Les variables définies dans le corps d'une fonction sont appelées **variables locales**.
+            - Les variables définies dans le corps du programme (sous-entendu : pas à l'intérieur d'une fonction) sont appelées **variables globales**.
 
 
-    ??? info "Règles d'accès aux variables locales et globales :heart:"
+        ??? info "Règles d'accès aux variables locales et globales :heart:"
 
-        - **règle 1 :** une **variable locale** (définie au cœur d'une fonction) est **inaccessible** hors de cette fonction.
-        - **règle 2 :** une **variable globale** (définie à l'extérieur d'une fonction) est **accessible** en **lecture** à l'intérieur d'une fonction.
-        - **règle 3 :** une **variable globale** (définie à l'extérieur d'une fonction) **ne peut pas être modifiée** à l'intérieur d'une fonction.
+            - **règle 1 :** une **variable locale** (définie au cœur d'une fonction) est **inaccessible** hors de cette fonction.
+            - **règle 2 :** une **variable globale** (définie à l'extérieur d'une fonction) est **accessible** en **lecture** à l'intérieur d'une fonction.
+            - **règle 3 :** une **variable globale** (définie à l'extérieur d'une fonction) **ne peut pas être modifiée** à l'intérieur d'une fonction.
 
-        ![global_regles.png](../Python/images/global_regles.png){ width=80%; : .center }
+            !!! example "Example de code dysfonctionnel"
+                ```python
+                def jeu():
+                    for k in range(nb_repetitions): # (1)
+                        print("hola")
+                    valeur = 50               
+                    score = score +1 # (2) 
 
+                nb_repetitions = 5
+                score = 0
+                jeu()
+                print(valeur) # (3)                                
+                ``` 
+
+                1. **Lecture** d'une variable définie dans le corps du programme : **autorisé**.
+
+                2. **Modification** d'une variable définie dans le corps du programme : **interdit**.
+
+                3. **Lecture** d'une variable définie dans le corps d'une fonction' : **interdit**.
 
     ??? info "Test de fonctions : `assert`"
             

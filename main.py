@@ -36,18 +36,19 @@ def define_env(env):
         child_pages = parent_page.children if parent_page else []
         if child_pages:
             toc_html = '<div class="toc">\n<ul>\n'
+            i=0
             for child_page in child_pages:
-                i=0
+
                 if child_page != env.variables.page:
                     i+=1
                     if child_page.children:
-                        toc_html += f'<li>{child_page.title}</li>\n<ul>\n'
+                        toc_html += f'<li>Chapitre {i} : {child_page.title}</li>\n<ul>\n'
                         for child in child_page.children:
                             if child != child_page:
                                 toc_html += f'<li><a href="/{child.url}">{child.title}</a></li>\n'           
                         toc_html += '</ul>'
                     else:
-                        toc_html += f'<li><a href="/{child_page.url}">{child_page.title}</a></li>\n'           
+                        toc_html += f'<li><a href="/{child_page.url}">Chapitre {i} : {child_page.title}</a></li>\n'           
             toc_html += '</ul>\n</div>'
 #                    toc_html += f'<li><a href="/{child_page.url}">Chapitre {i}: {child_page.title}</a></li>\n'           
 #            toc_html += '</ul>\n</div>'

@@ -1,11 +1,15 @@
 # Bonnes pratiques Logicielles
 
+??? conclu "Programme"
+    |Notions|Compétences|Remarques|
+    |--|--|--| 
+    Mise au point des programmes.<br>Gestion des bugs. | Dans la pratique de la programmation, savoir répondre aux causes typiques de bugs : problèmes liés au typage, effets de bord non désirés, débordements dans les tableaux, instruction conditionnelle non exhaustive, choix des inégalités, comparaisons et calculs entre flottants, mauvais nommage des variables, etc. | On prolonge le travail entrepris en classe de première sur l’utilisation de la spécification, des assertions, de la documentation des programmes et de la construction de jeux de tests.<br> Les élèves apprennent progressivement à anticiper leurs erreurs.
+
 ## Introduction
 
 Le respect de certaines règles plus ou moins explicites permettent à tout programmeur de lire, comprendre et modifier le programme écrit par un autre. Nous allons voir ici quelques unes de ces règles.
 
-## Syntaxe pythonesque !
-
+## La syntaxe en Python
 ### Règles explicites du PEP8
 
 Les règles de syntaxe de Python sont définies dans le document PEP8 (Python Enhancement Proposal) rédigé entre autres par **Guido van Rossum** lui-même.
@@ -191,8 +195,8 @@ def calcul_moyenne(x, y):
     {{terminal()}}
 
 !!! info "`help()` et `dir()` en résumé"
-    - L'instruction `help()` permet de se documenter sur des instructions, fonctions, modules...
-    - L'instruction `dir()` permet de lister les attributs et méthodes d'un objet.
+    - L'instruction `help()` permet de **se documenter** sur des instructions, fonctions, modules...
+    - L'instruction `dir()` permet de **lister les attributs et méthodes **d'un objet.
 
 {{exercice(prem=1, titre="Module de gestion de listes")}}
     1. Créez un module personnalisé nommé `algos_classiques_listes.py` dans lequel vous mettrez toutes les fonctions concernant les listes. A savoir :
@@ -436,9 +440,7 @@ Comparez les deux exemples ci-dessous :
 {{IDE('scripts/effet_bord')}}
     
 
-test
-
-### Débordement
+#### Débordement
 
 Il existe deux sortes de débordement:
 

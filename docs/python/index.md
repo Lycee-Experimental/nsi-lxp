@@ -15,9 +15,8 @@
 
     **Terminale :**
     Le travail entrepris en classe de première sur les méthodes de programmation est prolongé.  
-    L’accent est mis sur une programmation assurant une meilleure sûreté, c’est-à-dire minimisant le nombre d’erreurs. Parallèlement, on montre l’universalité et les limites de la
-    notion de calculabilité.  
-    La récursivité est une méthode fondamentale de programmation. Son introduction permet également de diversifier les algorithmes étudiés. En classe terminale, les élèves s’initient à différents paradigmes de programmation pour ne pas se limiter à une démarche impérative.
+    L’accent est mis sur une programmation assurant une meilleure **sûreté**, c’est-à-dire minimisant le nombre d’erreurs. Parallèlement, on montre l’universalité et les limites de la notion de **calculabilité**.  
+    La **récursivité** est une méthode fondamentale de programmation. Son introduction permet également de diversifier les algorithmes étudiés. En classe terminale, les élèves s’initient à différents **paradigmes** de programmation pour ne pas se limiter à une démarche impérative.
 
 !!! info "Langages de programmation"
     Comme nous l'avons vu dans le chapitre sur les [fondements de l'informatique](/fondement), le **langage informatique** est un intermédiaire indispensable entre les programmeurs et l'ordinateur, qui n'interprète qu'un **langage machine binaire**. Il existe de nombreux langages, compilés (C, C++, C#, Rust...) ou interprétés (Python, Javascript).
@@ -25,7 +24,7 @@
     L'objectif de ce chapitre est d'aborder les bases de la programmation en se focalisant sur l'utilisation d'un des des langages les plus utilisés : **Python**.
 
 
-!!! abstract "Plan du chapitre"
+!!! abstract "Plan de la partie"
     {{plan()}}
 
 ## Outils
