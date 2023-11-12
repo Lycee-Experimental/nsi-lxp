@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://nsi.lycee-experimental.org/data/structure/donnees_lineaires/">
+        <link rel="canonical" href="https://nsi.lycee-experimental.org/data/structure/lineaire/">
       
       
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../donnees_arbres/">
+        <link rel="next" href="../arbre/">
       
       
       <link rel="icon" href="../../../assets/images/logo-lxp-noir.svg">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Structure de données linéaires - NSI-LXP</title>
+        <title>Données linéaires - NSI-LXP</title>
       
     
     
@@ -141,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Structure de données linéaires
+              Données linéaires
             
           </span>
         </div>
@@ -1415,19 +1415,11 @@
         
       
         
-          
+      
         
       
         
-          
-        
       
-        
-          
-        
-      
-        
-          
         
       
     
@@ -1519,7 +1511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../python/progra_orientee_objet/" class="md-nav__link">
+      <a href="../../../python/poo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1539,7 +1531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../python/paradigmes_progra/" class="md-nav__link">
+      <a href="../../../python/paradigmes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2157,15 +2149,9 @@
         
       
         
-          
-        
       
         
-          
-        
       
-        
-          
         
       
     
@@ -2230,7 +2216,7 @@
           
   
   <span class="md-ellipsis">
-    Structure de données linéaires
+    Données linéaires
   </span>
   
 
@@ -2241,7 +2227,7 @@
         
   
   <span class="md-ellipsis">
-    Structure de données linéaires
+    Données linéaires
   </span>
   
 
@@ -2326,11 +2312,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../donnees_arbres/" class="md-nav__link">
+      <a href="../arbre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Les arbres binaires
+    Données en arbres
   </span>
   
 
@@ -2346,11 +2332,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../donnees_graphes/" class="md-nav__link">
+      <a href="../graphe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Les Graphes
+    Données en graphes
   </span>
   
 
@@ -4059,14 +4045,14 @@
 <p>Mais attention, la première case de ce tableau, donc d’index 0 est réservée pour contenir le nombre d’éléments contenus dans la liste. </p>
 <p>Le nombre d’éléments contenus dans la liste indique la dernière position occupée et donc informe sur la position de la case disponible. Et chaque élément <em>e</em> sera caractérisé par sa position supérieure ou égale à 1.</p>
 <p>Supposons un tableau de 11 cases. Alors ce tableau pourra représenter une liste de <span class="arithmatex">\(n=10\)</span> éléments au maximum. On grise l’espace où l’insertion est possible.</p>
-<p><img alt="" class="center" src="images/tab1.JPG"></p>
+<p><img alt="" class="center" src="../images/tab1.JPG"></p>
 <p>Les espaces libres sont alloués au fur et à mesure, tant qu’il reste de l’espace. Ci-dessous, on rend compte de l’évolution du remplissage du tableau qui représente cette liste, pour différentes insertions</p>
 <p><strong>Exercice 1</strong></p>
 <p>On vous donne les deux premières allocations, à vous de compléter pour les suivantes.</p>
-<p><img alt="" class="center" src="images/tab2.JPG"></p>
+<p><img alt="" class="center" src="../images/tab2.JPG"></p>
 <details class="note">
 <summary>Correction</summary>
-<p><img alt="" src="images/Exercice1_correction.JPG"></p>
+<p><img alt="" src="../images/Exercice1_correction.JPG"></p>
 </details>
 <div class="admonition note">
 <p class="admonition-title">Remarques</p>
@@ -4228,13 +4214,13 @@
 <p>Si on choisit de représenter la PILE par un tableau, sa première case, d’index 0 contiendra l’indice (ou position) de la prochaine case vide et donc l’indice du prochain élément à insérer. Ensuite chaque élément inséré sera repéré par son index. Le sommet de la PILE correspond à la dernière case non vide du tableau.</p>
 <p>Un exemple pour fixer les idées : </p>
 <p>On part d’un tableau de 11 cases donc qui pourra accueillir les <span class="arithmatex">\(n=10\)</span> éléments d’une PILE :</p>
-<p><img alt="" class="center" src="images/tab3.JPG"></p>
+<p><img alt="" class="center" src="../images/tab3.JPG"></p>
 <p><strong>Exercice 4</strong></p>
 <p>Remplir les tableaux suivants. On grise les cases où l’empilement est possible.</p>
-<p><img alt="" class="center" src="images/tab4.JPG"></p>
+<p><img alt="" class="center" src="../images/tab4.JPG"></p>
 <details class="note">
 <summary>Correction</summary>
-<p><img alt="" src="images/Exercice4_Correction.JPG"></p>
+<p><img alt="" src="../images/Exercice4_Correction.JPG"></p>
 </details>
 <p><strong>Remarque</strong> : on voit qu’il est inutile de « vider » la case lorsqu’on dépile, la valeur dépilée sera écrasée à l’empilement suivant.</p>
 <p><strong>Exercice 5</strong></p>
@@ -4293,16 +4279,16 @@
 <p>Ensuite chaque élément inséré sera repéré par son index.</p>
 <p>Un exemple pour fixer les idées : </p>
 <p>On part d’un tableau de 11 cases donc qui pourra accueillir les n=8 éléments d’une FILE :</p>
-<p><img alt="" class="center" src="images/tab5.JPG"></p>
+<p><img alt="" class="center" src="../images/tab5.JPG"></p>
 <p>Chaque fois qu’un élément est enfilé, la queue et la taille augmente chacune d’une unité.</p>
 <p>Chaque fois qu’un élément est défilé, la taille diminue d’une unité et la tête augmente d’une unité.</p>
 <p>Lorsque la tête ou la queue dépasse la longueur du tableau, on repart au début du tableau (gestion circulaire du tableau)</p>
 <p><strong>Exercice 6</strong></p>
 <p>Pour comprendre, remplir les tableaux suivants. On grise les espaces dans lesquelles les valeurs pourront être enfilées.</p>
-<p><img alt="" class="center" src="images/tab6.JPG"></p>
+<p><img alt="" class="center" src="../images/tab6.JPG"></p>
 <details class="note">
 <summary>Correction</summary>
-<p><img alt="" src="images/Exercice6_Correction.JPG"></p>
+<p><img alt="" src="../images/Exercice6_Correction.JPG"></p>
 </details>
 <p><strong>Remarque :</strong> lorsqu’on défile, la case n’est pas vidée. Son contenu sera écrasé lorsqu’un prochain élément sera enfilé.</p>
 <p><strong>Exercice 7</strong></p>
@@ -4368,9 +4354,9 @@ c. file
 Dans le cas du traitement des données, la complexité est liée à l’espace de stockage (mémoire) le temps de traitement (par le processeur) et le nombre de ces données.</p>
 </div>
 <p>Les complexités et leur représentation graphique :</p>
-<p><img alt="" class="center" src="images/tab7.JPG"></p>
+<p><img alt="" class="center" src="../images/tab7.JPG"></p>
 <p>Tableau résumé des complexités pour les différentes structures abordées :</p>
-<p><img alt="" class="center" src="images/tab8.JPG"></p>
+<p><img alt="" class="center" src="../images/tab8.JPG"></p>
 <h2 id="comment-distinguer-les-structures-par-le-jeu-des-methodes-qui-les-caracterisent">Comment distinguer les structures ? … par le jeu des méthodes qui les caractérisent<a class="headerlink" href="#comment-distinguer-les-structures-par-le-jeu-des-methodes-qui-les-caracterisent" title="Permanent link">⚓︎</a></h2>
 <p>Tableau résumé des méthodes de la liste, de la pile, de la file et du dictionnaire</p>
 <table>
@@ -4523,7 +4509,7 @@ Dans le cas du traitement des données, la complexité est liée à l’espace d
 <p><strong>Etape 2 :</strong></p>
 <p>On crée la classe FILE à partir de deux PILES a et b. La PILE a est une zone de remplissage de la FILE. La PILE b est une zone de suppression de la FILE. Lorsqu’on veut enfiler un élément dans la FILE, on l’empile dans la PILE a. Lorsqu’on veut défiler la FILE, il faut dépiler la PILE a dans la PILE b puis dépiler la PILE b.</p>
 <p>Soit par exemple deux PILES pouvant contenir 3 éléments chacune, et la FILE pourra en contenir 3. La FILE est initialement vide. On montre le fonctionnement ci-dessous.</p>
-<p><img alt="" class="center" src="images/tab9.JPG"></p>
+<p><img alt="" class="center" src="../images/tab9.JPG"></p>
 <div class="admonition note">
 <p class="admonition-title">Remarque</p>
 <p>Il faut dépiler complètement b avant de dépiler a dans b.</p>
@@ -4658,13 +4644,13 @@ De manière générale, on définit une interface, ou spécification, d’une st
         
         
           
-          <a href="../donnees_arbres/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Les arbres binaires">
+          <a href="../arbre/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Données en arbres">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Suivant
               </span>
               <div class="md-ellipsis">
-                Les arbres binaires
+                Données en arbres
               </div>
             </div>
             <div class="md-footer__button md-icon">

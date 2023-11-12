@@ -16,7 +16,7 @@
         <link rel="prev" href="../bases/">
       
       
-        <link rel="next" href="../progra_orientee_objet/">
+        <link rel="next" href="../poo/">
       
       
       <link rel="icon" href="../../assets/images/logo-lxp-noir.svg">
@@ -1417,19 +1417,11 @@
         
       
         
-          
+      
         
       
         
-          
-        
       
-        
-          
-        
-      
-        
-          
         
       
     
@@ -1554,11 +1546,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#syntaxe-pythonesque" class="md-nav__link">
-    Syntaxe pythonesque !
+  <a href="#la-syntaxe-en-python" class="md-nav__link">
+    La syntaxe en Python
   </a>
   
-    <nav class="md-nav" aria-label="Syntaxe pythonesque !">
+    <nav class="md-nav" aria-label="La syntaxe en Python">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1603,13 +1595,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#debordement" class="md-nav__link">
-    Débordement
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#les-exceptions" class="md-nav__link">
     Les exceptions
   </a>
@@ -1643,7 +1628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../progra_orientee_objet/" class="md-nav__link">
+      <a href="../poo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1663,7 +1648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../paradigmes_progra/" class="md-nav__link">
+      <a href="../paradigmes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2277,15 +2262,9 @@
         
       
         
-          
-        
       
         
-          
-        
       
-        
-          
         
       
     
@@ -2337,11 +2316,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data/structure/donnees_lineaires/" class="md-nav__link">
+      <a href="../../data/structure/lineaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Structure de données linéaires
+    Données linéaires
   </span>
   
 
@@ -2357,11 +2336,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data/structure/donnees_arbres/" class="md-nav__link">
+      <a href="../../data/structure/arbre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Les arbres binaires
+    Données en arbres
   </span>
   
 
@@ -2377,11 +2356,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data/structure/donnees_graphes/" class="md-nav__link">
+      <a href="../../data/structure/graphe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Les Graphes
+    Données en graphes
   </span>
   
 
@@ -3999,9 +3978,28 @@
 
 
 <div><h1 id="bonnes-pratiques-logicielles">Bonnes pratiques Logicielles<a class="headerlink" href="#bonnes-pratiques-logicielles" title="Permanent link">⚓︎</a></h1>
+<details class="conclu">
+<summary>Programme</summary>
+<table>
+<thead>
+<tr>
+<th>Notions</th>
+<th>Compétences</th>
+<th>Remarques</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mise au point des programmes.<br>Gestion des bugs.</td>
+<td>Dans la pratique de la programmation, savoir répondre aux causes typiques de bugs : problèmes liés au typage, effets de bord non désirés, débordements dans les tableaux, instruction conditionnelle non exhaustive, choix des inégalités, comparaisons et calculs entre flottants, mauvais nommage des variables, etc.</td>
+<td>On prolonge le travail entrepris en classe de première sur l’utilisation de la spécification, des assertions, de la documentation des programmes et de la construction de jeux de tests.<br> Les élèves apprennent progressivement à anticiper leurs erreurs.</td>
+</tr>
+</tbody>
+</table>
+</details>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">⚓︎</a></h2>
 <p>Le respect de certaines règles plus ou moins explicites permettent à tout programmeur de lire, comprendre et modifier le programme écrit par un autre. Nous allons voir ici quelques unes de ces règles.</p>
-<h2 id="syntaxe-pythonesque">Syntaxe pythonesque !<a class="headerlink" href="#syntaxe-pythonesque" title="Permanent link">⚓︎</a></h2>
+<h2 id="la-syntaxe-en-python">La syntaxe en Python<a class="headerlink" href="#la-syntaxe-en-python" title="Permanent link">⚓︎</a></h2>
 <h3 id="regles-explicites-du-pep8">Règles explicites du PEP8<a class="headerlink" href="#regles-explicites-du-pep8" title="Permanent link">⚓︎</a></h3>
 <p>Les règles de syntaxe de Python sont définies dans le document PEP8 (Python Enhancement Proposal) rédigé entre autres par <strong>Guido van Rossum</strong> lui-même.</p>
 <p>A consulter sur <a href="https://www.python.org/dev/peps/pep-0008/" target="_blank">https://www.python.org/dev/peps/pep-0008/</a></p>
@@ -4179,8 +4177,8 @@
 <div class="admonition info">
 <p class="admonition-title"><code>help()</code> et <code>dir()</code> en résumé</p>
 <ul>
-<li>L'instruction <code>help()</code> permet de se documenter sur des instructions, fonctions, modules...</li>
-<li>L'instruction <code>dir()</code> permet de lister les attributs et méthodes d'un objet.</li>
+<li>L'instruction <code>help()</code> permet de <strong>se documenter</strong> sur des instructions, fonctions, modules...</li>
+<li>L'instruction <code>dir()</code> permet de <strong>lister les attributs et méthodes </strong>d'un objet.</li>
 </ul>
 </div>
 <details class="question">
@@ -4398,8 +4396,7 @@ et
 <p><span id="content_editor_34bbd4aaf49109af323e092f55992bb3c820475b" class="py_mk_hide">def plancher(dictionnaire): bksl-nl    for cle, valeur in dictionnaire.items():bksl-nl        if valeur &lt; 0:bksl-nl            dictionnaire[cle] = 0bksl-nl    return dictionnairebksl-nlbksl-nlentrees = {'A': 12, 'B': 21, 'C': -2, 'D': 37, 'E': -99, 'F': 6}bksl-nlprint(entrees)bksl-nlprint(plancher(entrees))bksl-nlprint(entrees)bksl-nlbksl-nlbksl-nl</span><span id="corr_content_editor_34bbd4aaf49109af323e092f55992bb3c820475b" class="py_mk_hide" data-strudel="">from copy import deepcopybksl-nlbksl-nldef plancher(dictionnaire): bksl-nl    dictionnaire2 = deepcopy(dictionnaire)bksl-nl    for cle, valeur in dictionnaire.items():bksl-nl        if valeur &lt; 0:bksl-nl            dictionnaire2[cle] = 0bksl-nl    return dictionnaire2bksl-nlbksl-nlentrees= {'A': 12, 'B': 21, 'C': -2, 'D': 37, 'E': -99, 'F': 6}bksl-nlprint(entrees)bksl-nlprint(plancher(entrees))bksl-nlbksl-nl</span></p>
 <p><strong>A</strong></p>
 <p><strong>Z</strong></p>
-<p>test</p>
-<h3 id="debordement">Débordement<a class="headerlink" href="#debordement" title="Permanent link">⚓︎</a></h3>
+<h4 id="debordement">Débordement<a class="headerlink" href="#debordement" title="Permanent link">⚓︎</a></h4>
 <p>Il existe deux sortes de débordement:</p>
 <ul>
 <li>
@@ -4836,7 +4833,7 @@ Ne pas oublier de respecter le PEP8</p>
         
         
           
-          <a href="../progra_orientee_objet/" class="md-footer__link md-footer__link--next" aria-label="Suivant: 🇹 Progra Orientée Objet">
+          <a href="../poo/" class="md-footer__link md-footer__link--next" aria-label="Suivant: 🇹 Progra Orientée Objet">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Suivant

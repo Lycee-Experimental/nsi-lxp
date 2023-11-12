@@ -1417,19 +1417,11 @@
         
       
         
-          
+      
         
       
         
-          
-        
       
-        
-          
-        
-      
-        
-          
         
       
     
@@ -1531,7 +1523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../progra_orientee_objet/" class="md-nav__link">
+      <a href="../poo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1551,7 +1543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../paradigmes_progra/" class="md-nav__link">
+      <a href="../paradigmes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2165,15 +2157,9 @@
         
       
         
-          
-        
       
         
-          
-        
       
-        
-          
         
       
     
@@ -2225,11 +2211,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data/structure/donnees_lineaires/" class="md-nav__link">
+      <a href="../../data/structure/lineaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Structure de données linéaires
+    Données linéaires
   </span>
   
 
@@ -2245,11 +2231,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data/structure/donnees_arbres/" class="md-nav__link">
+      <a href="../../data/structure/arbre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Les arbres binaires
+    Données en arbres
   </span>
   
 
@@ -2265,11 +2251,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data/structure/donnees_graphes/" class="md-nav__link">
+      <a href="../../data/structure/graphe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Les Graphes
+    Données en graphes
   </span>
   
 
@@ -3914,7 +3900,7 @@
 <details class="info">
 <summary>Échange de valeurs entre deux variables</summary>
 <p>Nous désirons échanger le contenu des variables <code>a</code> et <code>b</code></p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Avec une variable temporaire</label><label for="__tabbed_1_2">💡En utilisant des tuples💡</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Avec une variable temporaire</label><label for="__tabbed_1_2">💡En utilisant des paires de variables💡</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="n">valeur_de_a</span>
@@ -4030,7 +4016,7 @@
 </div>
 <div class="admonition info">
 <p class="admonition-title">Remarque</p>
-<p>Il existe également des types plus complexes de données structurées comme les <code>tuple</code>, les <code>list</code>, et le type dictionnaire <code>dict</code>?</p>
+<p>Il existe également des types plus complexes de données structurées comme les <code>tuple</code>, les <code>list</code>, et le type dictionnaire <code>dict</code>.</p>
 </div>
 <details class="note">
 <summary>Conversion d'un type à un autre : les transtypages</summary>
@@ -4122,11 +4108,11 @@
 <p class="admonition-title">modulo (<code>%</code>) et division entière (<code>//</code>)</p>
 <ul>
 <li>
-<p>L'opérateur modulo donne le reste de la division euclidienne. <br>
+<p>L'opérateur modulo donne le <strong>reste</strong> de la division euclidienne. <br>
 <span class="arithmatex">\(7=2 \times 3 + 1\)</span> donc <code>7 % 3</code> donne 1</p>
 </li>
 <li>
-<p>L'opérateur division entière donne le quotient.<br>
+<p>L'opérateur division entière donne le <strong>quotient</strong>.<br>
 <span class="arithmatex">\(7=2 \times 3 + 1\)</span> donc <code>7 // 3</code> donne 2</p>
 </li>
 </ul>
@@ -4388,7 +4374,7 @@ Ce script produira l'affichage suivant en console :
 </div>
 <div class="admonition info">
 <p class="admonition-title">Parcours 💚</p>
-<p>Ces codes sont à connaitre <strong>sans aucune hésitation</strong> (ils sont strictement identiques aux parcours d'une liste).</p>
+<p>Ces codes sont à connaître <strong>sans aucune hésitation</strong> (ils sont strictement identiques aux parcours d'une liste).</p>
 <div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mon_tuple</span><span class="p">))</span> <span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">mon_tuple</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 </code></pre></div>
@@ -4408,7 +4394,7 @@ Ce script produira l'affichage suivant en console :
 </div>
 <div class="admonition info">
 <p class="admonition-title">Choisir la bonne structure</p>
-<p>Il est préférable d'utiliser un tuple quand on veut regrouper des valeurs, et qu'on n'aura pas besoin de modifier les éléments ensuite. Les tuples étant immuables on ne risque pas, dans une partie du code, de modifier accidentellement les valeurs (ce qui, dans le cas d'une liste, peut très facilement arriver avec les effets de bords, que nous étudierons plus tard).</p>
+<p>Il est préférable d'utiliser un tuple quand on veut regrouper des valeurs, et qu'on n'aura pas besoin de modifier les éléments ensuite. Les tuples étant immuables on ne risque pas, dans une partie du code, de modifier accidentellement les valeurs (ce qui, dans le cas d'une liste, peut très facilement arriver avec les <strong>effets de bords</strong>, que nous étudierons plus tard).</p>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
 <ul>
@@ -4429,7 +4415,7 @@ Ce script produira l'affichage suivant en console :
 <p>Il suffit de faire une nouvelle affectation : <code>mon_dico[cle] = nouvelle_valeur</code></p>
 </div>
 <div class="admonition abstract">
-<p class="admonition-title">Appartenance d'une clé dans un dictionnaire</p>
+<p class="admonition-title">Appartenance d'une clé dans un dictionnaire : <code>in</code></p>
 <ul>
 <li><code>cle in mon_dico</code> renvoie <code>True</code> si la clé <code>cle</code> existe dans <code>mon_dico</code> et <code>False</code> sinon.  </li>
 <li><code>cle not in mon_dico</code> renvoie <code>True</code> si la clé <code>cle</code> n'existe pas dans <code>mon_dico</code> et <code>False</code> sinon. </li>
@@ -4850,7 +4836,6 @@ Cette fonction <strong>ne renvoie rien</strong>
 </details>
 <details class="note">
 <summary>Notion d'espace de noms</summary>
-</details>
 <details class="info">
 <summary>Définitions <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:"></summary>
 <ul>
@@ -4865,7 +4850,32 @@ Cette fonction <strong>ne renvoie rien</strong>
 <li><strong>règle 2 :</strong> une <strong>variable globale</strong> (définie à l'extérieur d'une fonction) est <strong>accessible</strong> en <strong>lecture</strong> à l'intérieur d'une fonction.</li>
 <li><strong>règle 3 :</strong> une <strong>variable globale</strong> (définie à l'extérieur d'une fonction) <strong>ne peut pas être modifiée</strong> à l'intérieur d'une fonction.</li>
 </ul>
-<p><img :=":" alt="global_regles.png" class="center" src="../Python/images/global_regles.png" width="80%;"></p>
+<div class="admonition example">
+<p class="admonition-title">Example de code dysfonctionnel</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">jeu</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nb_repetitions</span><span class="p">):</span> <span class="c1"># (1)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"hola"</span><span class="p">)</span>
+    <span class="n">valeur</span> <span class="o">=</span> <span class="mi">50</span>               
+    <span class="n">score</span> <span class="o">=</span> <span class="n">score</span> <span class="o">+</span><span class="mi">1</span> <span class="c1"># (2) </span>
+
+<span class="n">nb_repetitions</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">jeu</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span> <span class="c1"># (3)                                </span>
+</code></pre></div>
+<ol>
+<li>
+<p><strong>Lecture</strong> d'une variable définie dans le corps du programme : <strong>autorisé</strong>.</p>
+</li>
+<li>
+<p><strong>Modification</strong> d'une variable définie dans le corps du programme : <strong>interdit</strong>.</p>
+</li>
+<li>
+<p><strong>Lecture</strong> d'une variable définie dans le corps d'une fonction' : <strong>interdit</strong>.</p>
+</li>
+</ol>
+</div>
+</details>
 </details>
 <details class="info">
 <summary>Test de fonctions : <code>assert</code></summary>

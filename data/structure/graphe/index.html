@@ -10,10 +10,10 @@
       
       
       
-        <link rel="canonical" href="https://nsi.lycee-experimental.org/data/structure/donnees_graphes/">
+        <link rel="canonical" href="https://nsi.lycee-experimental.org/data/structure/graphe/">
       
       
-        <link rel="prev" href="../donnees_arbres/">
+        <link rel="prev" href="../arbre/">
       
       
         <link rel="next" href="../../bases_de_donnees/">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Les Graphes - NSI-LXP</title>
+        <title>Données en graphes - NSI-LXP</title>
       
     
     
@@ -141,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Les Graphes
+              Données en graphes
             
           </span>
         </div>
@@ -1415,19 +1415,11 @@
         
       
         
-          
+      
         
       
         
-          
-        
       
-        
-          
-        
-      
-        
-          
         
       
     
@@ -1519,7 +1511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../python/progra_orientee_objet/" class="md-nav__link">
+      <a href="../../../python/poo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1539,7 +1531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../python/paradigmes_progra/" class="md-nav__link">
+      <a href="../../../python/paradigmes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2157,15 +2149,9 @@
         
       
         
-          
-        
       
         
-          
-        
       
-        
-          
         
       
     
@@ -2217,11 +2203,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../donnees_lineaires/" class="md-nav__link">
+      <a href="../lineaire/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Structure de données linéaires
+    Données linéaires
   </span>
   
 
@@ -2237,11 +2223,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../donnees_arbres/" class="md-nav__link">
+      <a href="../arbre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Les arbres binaires
+    Données en arbres
   </span>
   
 
@@ -2270,7 +2256,7 @@
           
   
   <span class="md-ellipsis">
-    Les Graphes
+    Données en graphes
   </span>
   
 
@@ -2281,7 +2267,7 @@
         
   
   <span class="md-ellipsis">
-    Les Graphes
+    Données en graphes
   </span>
   
 
@@ -4113,7 +4099,7 @@
 <p>La description de ce réseau social, malgré son faible nombre d'abonnés, est déjà quelque peu rébarbative, alors imaginez cette même description avec un réseau social comportant des millions d'abonnés !</p>
 <p>Il existe un moyen plus "visuel" pour représenter ce réseau social : on peut représenter chaque abonné par un cercle (avec le nom de l'abonné situé dans le cercle) et chaque relation "X est ami avec Y" par un segment de droite reliant X et Y ("X est ami avec Y" et "Y est ami avec X" étant représenté par le même segment de droite).</p>
 <p>Voici ce que cela donne avec le réseau social décrit ci-dessus : </p>
-<p><img alt="" class="center" src="images/graph1.PNG"></p>
+<p><img alt="" class="center" src="../images/graph1.PNG"></p>
 <p>Ce genre de figure s'appelle un <strong>graphe</strong>. Les graphes sont des objets mathématiques très utilisés, notamment en informatique.</p>
 <p>Les cercles sont appelés des <strong>sommets</strong> ( parfois des nœuds ) et les segments de droites qui relient 2 sommets des <strong>arcs</strong> ( parfois des arêtes). </p>
 <p>Plus formellement on dira qu'un graphe G est un couple G = (V,E) avec V un ensemble de sommets et E un ensemble d'arêtes ( V et E pour Vertice (sommet) et Edge (arête) en anglais bien sûr !)</p>
@@ -4144,18 +4130,18 @@
 <p class="admonition-title">Vocabulaire</p>
 <p>Un graphe non orienté est une structure de données constituées d’objets, appelés <strong>sommets</strong>, et de relations entre ces sommets appelées <strong>arcs</strong>.</p>
 <p>Vous trouverez aussi des ouvrages où pour ces graphes on parle de <strong>noeuds</strong> ( sommets ) et d’<strong>arêtes</strong> (arcs) .</p>
-<p><img alt="" class="center" src="images/graph2.PNG"></p>
-<p><img alt="" class="center" src="images/graph3.PNG"></p>
+<p><img alt="" class="center" src="../images/graph2.PNG"></p>
+<p><img alt="" class="center" src="../images/graph3.PNG"></p>
 <p>Un <strong>chemin</strong> ( chaine ) est une suite d'arcs (arêtes) consécutifs dans un graphe, un peu comme si on se promenait sur le graphe. On le désigne par les lettres des sommets qu'il comporte.</p>
 <p>Un chemin ( une chaine ) est dit <strong>élémentaire</strong> si il ne comporte pas plusieurs fois le même sommet.</p>
 <p>Un chemin ( une chaine ) est dit <strong>simple</strong> si il ne comporte pas plusieurs fois le même arc.</p>
 <p>Un <strong>cycle</strong> est un chemin ( une chaine ) qui commence et se termine au même sommet.</p>
 <p>Un graphe est <strong>connexe</strong> s’il existe un chemin (une chaine) pour toute paire de sommets (intuitivement, un graphe connexe comporte un seul « morceau »)</p>
-<p><img alt="" class="center" src="images/graph4.PNG"></p>
+<p><img alt="" class="center" src="../images/graph4.PNG"></p>
 </div>
 <p><strong>Exercice 2</strong></p>
 <p>Soit le graphe G ci-dessous :</p>
-<p><img alt="" class="center" src="images/graph5.PNG"></p>
+<p><img alt="" class="center" src="../images/graph5.PNG"></p>
 <ol>
 <li>Combien G possède-t-il de sommets ?</li>
 <li>Combien G possède-t-il d’arcs ?</li>
@@ -4198,7 +4184,7 @@
 <li>il existe une route entre E et F </li>
 </ul>
 <p>Ici aussi, la représentation sous forme de graphe s'impose :</p>
-<p><img alt="" class="center" src="images/graph6.PNG"></p>
+<p><img alt="" class="center" src="../images/graph6.PNG"></p>
 <p>Problème : avec cette représentation du réseau routier sous forme de graphe, il est impossible de prendre en compte des routes à sens unique. Pour que cela puisse se faire, il va falloir orienter les arcs.</p>
 <p>Voici de nouvelles contraintes : </p>
 <ul>
@@ -4212,7 +4198,7 @@
 <li>il existe une route entre E et F (double)</li>
 </ul>
 <p>Pour tenir compte de ces nouvelles contraintes, on utilisera un graphe orienté :</p>
-<p><img alt="" class="center" src="images/graph7.PNG"></p>
+<p><img alt="" class="center" src="../images/graph7.PNG"></p>
 <p>Dans un graphe orienté, les arcs possèdent une orientation. On dira qu'un graphe orienté G est un couple G = (V, A) avec V un ensemble de sommets et A un ensemble d'arcs orientés. </p>
 <h3 id="vocabulaire-sur-les-graphes-orientes">Vocabulaire sur les graphes orientés<a class="headerlink" href="#vocabulaire-sur-les-graphes-orientes" title="Permanent link">⚓︎</a></h3>
 <div class="admonition example">
@@ -4222,7 +4208,7 @@
 sommet 2 est <strong>adjacent</strong> au sommet 1 ( voir ci-dessous ).</p>
 <p>Par contre s’il n’existe pas d’arc du sommet 2 vers le sommet 1, 
 le sommet 1 n’est pas adjacent au sommet 2 ( voir schéma ).</p>
-<p><img alt="" class="center" src="images/graph8.PNG"></p>
+<p><img alt="" class="center" src="../images/graph8.PNG"></p>
 <p>On note 1 → 2 l’arc (1, 2) où 1 est son extrémité initiale et 2 son extrémité finale.\
 2 est le successeur de 1 et 1 est le prédécesseur de 2.</p>
 <p>Un <strong>chemin</strong> est une suite d'arcs consécutifs dans un graphe, un peu comme si on se promenait sur le graphe. On la désigne par les lettres des sommets qu'il comporte.</p>
@@ -4232,11 +4218,11 @@ le sommet 1 n’est pas adjacent au sommet 2 ( voir schéma ).</p>
 <p>Un graphe orienté est <strong>connexe</strong> si le graphe non orienté obtenu en oubliant le sens des arcs est 
 connexe.</p>
 <p>Un graphe orienté est <strong>fortement connexe</strong> lorsque pour toute paire de sommets distincts ( u, v ) il existe un chemin de u vers v et un chemin  de v vers u .</p>
-<p><img alt="" class="center" src="images/graph9.PNG"></p>
+<p><img alt="" class="center" src="../images/graph9.PNG"></p>
 </div>
 <p><strong>Exercice 3</strong></p>
 <p>Soit le graphe G ci-dessous :</p>
-<p><img alt="" class="center" src="images/graph10.PNG"></p>
+<p><img alt="" class="center" src="../images/graph10.PNG"></p>
 <ol>
 <li>Combien G possède-t-il de sommets ?</li>
 <li>Combien G possède-t-il d’arcs ?</li>
@@ -4266,50 +4252,50 @@ connexe.</p>
 </details>
 <p><strong>Exercice 4</strong></p>
 <p>Les deux graphes suivants sont-ils identiques?</p>
-<p><img alt="" class="center" src="images/graph11.PNG"></p>
+<p><img alt="" class="center" src="../images/graph11.PNG"></p>
 <details class="note">
 <summary>Correction</summary>
 <p>Oui, ils sont identiques.</p>
 </details>
 <p><strong>Exercice 5</strong></p>
 <p>Les deux graphes suivants sont-ils identiques?</p>
-<p><img alt="" class="center" src="images/graph12.PNG"></p>
+<p><img alt="" class="center" src="../images/graph12.PNG"></p>
 <details class="note">
 <summary>Correction</summary>
 <p>Non, ils ne sont pas identiques (voir voisins de 3).</p>
 </details>
 <h2 id="graphes-ponderes">Graphes pondérés<a class="headerlink" href="#graphes-ponderes" title="Permanent link">⚓︎</a></h2>
 <p>Parfois il est intéressant d'associer aux arcs des valeurs, on parle alors de <strong>graphes pondérés</strong>. Si nous revenons à notre "graphe cartographie", il est possible d'associer à chaque arc la distance en km entre les 2 lieux : </p>
-<p><img alt="" class="center" src="images/graph13.PNG"></p>
+<p><img alt="" class="center" src="../images/graph13.PNG"></p>
 <p>Il est aussi possible d'associer à chaque arc la durée du trajet 
 entre 2 points : </p>
-<p><img alt="" class="center" src="images/graph14.PNG"></p>
+<p><img alt="" class="center" src="../images/graph14.PNG"></p>
 <p>En fonction du choix fait par le conducteur (trajet le plus court "en distance" ou trajet le plus court "en temps"), l'algorithme permettant de déterminer le "chemin le plus court entre 2 points" 
 travaillera sur le graphe "graphe pondéré (km) cartographie" ou sur le graphe "graphe pondéré (minutes) cartographie". À noter que le "graphe pondéré (minutes) cartographie" peut évoluer au cours du temps en fonction du trafic routier : une application comme Waze utilise les données en provenance des utilisateurs de l'application afin de mettre à jour en temps réel leur "graphe pondéré (minutes) cartographie". </p>
 <h2 id="implementation-des-graphes">Implémentation des graphes<a class="headerlink" href="#implementation-des-graphes" title="Permanent link">⚓︎</a></h2>
 <h3 id="matrice-dadjacence">Matrice d'adjacence<a class="headerlink" href="#matrice-dadjacence" title="Permanent link">⚓︎</a></h3>
 <p>Une matrice est un tableau à double entrée : </p>
-<p><img alt="" class="center" src="images/mat1.PNG"></p>
+<p><img alt="" class="center" src="../images/mat1.PNG"></p>
 <p>La matrice A ci-dessus est constitué de 5 lignes et 4 colonnes. </p>
 <p>On appelle matrice carrée une matrice qui comporte le même nombre de lignes et de colonnes. </p>
 <p>Les matrices d'adjacences sont des matrices carrées. </p>
 <p>Reprenons l'exemple du "graphe cartographie" précédent :</p>
-<p><img alt="" class="center" src="images/mat2.PNG"></p>
+<p><img alt="" class="center" src="../images/mat2.PNG"></p>
 <p>On peut observer que pour un graphe non orienté, la matrice d’adjacence sera symétrique.</p>
 <p>Comment construire une matrice d'adjacence ?</p>
 <p>Il faut savoir qu'à chaque ligne correspond un sommet du graphe et qu'à chaque colonne correspond aussi un sommet du graphe. À chaque intersection ligne i-colonne j (ligne i correspond au sommet i et colonne j correspond au sommet j), on place un 1 s'il existe un arc entre le sommet i et le sommet j, et un zéro s'il n'existe pas d'arc entre le sommet i et le sommet j.</p>
 <p>Il existe une arête entre le sommet E et le sommet F, nous avons donc placé un 1 à l'intersection de la ligne E et de la colonne F (il en est de même à l'intersection de la ligne F et de la colonne E).</p>
 <p>Il n'existe pas d'arête entre le sommet D et le sommet C, nous avons donc placé un 0 à l'intersection de la ligne D et de la colonne C (il en est de même à l'intersection de la ligne C et de la colonne D). </p>
 <p>Vérifiez que la matrice d'adjacence proposée ci-dessous correspond bien au graphe "cartographie". </p>
-<p><img alt="" class="center" src="images/mat3.PNG"></p>
+<p><img alt="" class="center" src="../images/mat3.PNG"></p>
 <p>Il est aussi possible d'établir une matrice d'adjacence pour un graphe orienté. Le principe reste le même : si le sommet i (ligne) est lié au sommet j (colonne), nous avons un 1 à l'intersection 
 (0 dans le cas contraire). </p>
-<p><img alt="" class="center" src="images/mat4.PNG"></p>
+<p><img alt="" class="center" src="../images/mat4.PNG"></p>
 <p>Il est aussi possible d'utiliser une matrice d'adjacence pour implémenter un graphe pondéré : on remplace les 1 par les valeurs liées à chaque arc.</p>
-<p><img alt="" class="center" src="images/mat5.PNG"></p>
+<p><img alt="" class="center" src="../images/mat5.PNG"></p>
 <p><strong>Exercice 6</strong></p>
 <p>Établissez la matrice d'adjacence du graphe ci-dessous :</p>
-<p><img alt="" class="center" src="images/mat6.PNG"></p>
+<p><img alt="" class="center" src="../images/mat6.PNG"></p>
 <details class="note">
 <summary>Correction</summary>
 <div class="arithmatex">\[\begin{pmatrix}
@@ -4323,7 +4309,7 @@ travaillera sur le graphe "graphe pondéré (km) cartographie" ou sur le graphe 
 </details>
 <p><strong>Exercice 7</strong></p>
 <p>Établissez la matrice d'adjacence du graphe ci-dessous :</p>
-<p><img alt="" class="center" src="images/mat7.PNG"></p>
+<p><img alt="" class="center" src="../images/mat7.PNG"></p>
 <details class="note">
 <summary>Correction</summary>
 <div class="arithmatex">\[\begin{pmatrix}
@@ -4335,7 +4321,7 @@ travaillera sur le graphe "graphe pondéré (km) cartographie" ou sur le graphe 
 </details>
 <p><strong>Exercice 8</strong></p>
 <p>Établissez la matrice d'adjacence du graphe ci-dessous :</p>
-<p><img alt="" class="center" src="images/mat8.PNG"></p>
+<p><img alt="" class="center" src="../images/mat8.PNG"></p>
 <details class="note">
 <summary>Correction</summary>
 <div class="arithmatex">\[\begin{pmatrix}
@@ -4350,7 +4336,7 @@ travaillera sur le graphe "graphe pondéré (km) cartographie" ou sur le graphe 
 </details>
 <p><strong>Exercice 9</strong></p>
 <p>Établissez la matrice d'adjacence du graphe ci-dessous :</p>
-<p><img alt="" class="center" src="images/mat9.PNG"></p>
+<p><img alt="" class="center" src="../images/mat9.PNG"></p>
 <details class="note">
 <summary>Correction</summary>
 <div class="arithmatex">\[\begin{pmatrix}
@@ -4363,7 +4349,7 @@ travaillera sur le graphe "graphe pondéré (km) cartographie" ou sur le graphe 
 </details>
 <p><strong>Exercice 10</strong></p>
 <p>Dessinez le graphe dont la matrice d'adjacences est la suivante :</p>
-<p><img alt="" class="center" src="images/mat10.PNG"></p>
+<p><img alt="" class="center" src="../images/mat10.PNG"></p>
 <details class="note">
 <summary>Correction</summary>
 <pre class="mermaid"><code>graph
@@ -4384,7 +4370,7 @@ travaillera sur le graphe "graphe pondéré (km) cartographie" ou sur le graphe 
 </details>
 <p><strong>Exercice 12</strong></p>
 <p>Soit la matrice d’adjacence suivante : </p>
-<p><img alt="" class="center" src="images/mat11.PNG"></p>
+<p><img alt="" class="center" src="../images/mat11.PNG"></p>
 <ol>
 <li>Cette matrice d’adjacence permet-elle de savoir, sans le construire, si le graphe correspondant est orienté ? </li>
 <li>Tracez le graphe correspondant à cette matrice d’adjacences.</li>
@@ -4533,7 +4519,7 @@ travaillera sur le graphe "graphe pondéré (km) cartographie" ou sur le graphe 
 <p><strong>Exercice 13</strong></p>
 <p>A l’aide de la classe Graphe présentée ci-dessus, écrivez un programme qui permet d’implémenter le graphe ci-contre avec une
 matrice d’adjacence.</p>
-<p><img alt="" class="center" src="images/mat12.PNG"></p>
+<p><img alt="" class="center" src="../images/mat12.PNG"></p>
 <div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_00000016" class="comment">###</span><div class="line" id="editor_00000016"></div><div id="term_editor_00000016" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_00000016","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000016","")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000016').click()">            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000016" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000016")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000016")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
 <p><span id="content_editor_00000016" class="py_mk_hide"></span><span id="corr_content_editor_00000016" class="py_mk_hide" data-strudel=""></span></p>
 <p><strong>Exercice 14</strong></p>
@@ -4570,13 +4556,13 @@ matrice d’adjacence.</p>
 <li>chaque sommet du graphe définit une clé du dictionnaire</li>
 <li>la liste des voisins de chaque sommet définit la valeur associée à chaque sommet.</li>
 </ul>
-<p><img alt="" class="center" src="images/dic1.PNG"></p>
+<p><img alt="" class="center" src="../images/dic1.PNG"></p>
 <p>Voici les clés ( sommets ) et les valeurs ( listes ) associées à 
 chacune de ces clés dans l’exemple étudié :</p>
-<p><img alt="" class="center" src="images/dic2.PNG"></p>
+<p><img alt="" class="center" src="../images/dic2.PNG"></p>
 <p><strong>Exercice 17</strong></p>
 <p>Soit le graphe orienté ci-dessous :</p>
-<p><img alt="" class="center" src="images/dic3.PNG"></p>
+<p><img alt="" class="center" src="../images/dic3.PNG"></p>
 <p>Le dictionnaire d’adjacence du graphe ci-dessus est créé de la manière suivante :</p>
 <ul>
 <li>chaque sommet du graphe définit une clé du dictionnaire</li>
@@ -4584,7 +4570,7 @@ chacune de ces clés dans l’exemple étudié :</p>
 </ul>
 <p>Écrivez la liste des successeurs associés à chacun des sommets du 
 graphe orienté ci-dessus.</p>
-<p><img alt="" class="center" src="images/dic4.PNG"></p>
+<p><img alt="" class="center" src="../images/dic4.PNG"></p>
 <details class="note">
 <summary>Correction</summary>
 <p>A → C, D</p>
@@ -4700,7 +4686,7 @@ graphe orienté ci-dessus.</p>
 </code></pre></div>
 <p><strong>Exercice 18</strong></p>
 <p>Soit le graphe ci-dessous :</p>
-<p><img alt="" class="center" src="images/graph1.PNG"></p>
+<p><img alt="" class="center" src="../images/graph1.PNG"></p>
 <ol>
 <li>Créez un objet <code>g1</code> qui représente le graphe ci-dessus à l’aide de la classe <code>Graphe_Dico</code>.</li>
 <li>Affichez la liste des sommets de l’objet <code>g1</code> .</li>
@@ -4710,7 +4696,7 @@ graphe orienté ci-dessus.</p>
 <p><span id="content_editor_00000019" class="py_mk_hide"></span><span id="corr_content_editor_00000019" class="py_mk_hide" data-strudel=""></span></p>
 <p><strong>Exercice 19</strong></p>
 <p>Soit le graphe ci-dessous :</p>
-<p><img alt="" class="center" src="images/graph8.PNG"></p>
+<p><img alt="" class="center" src="../images/graph8.PNG"></p>
 <ol>
 <li>Créez un objet <code>g2</code> qui représente le graphe ci-dessus à l’aide de la classe <code>Graphe_Dico</code>.</li>
 <li>Affichez la liste des sommets de l’objet <code>g2</code>.</li>
@@ -4763,7 +4749,7 @@ FIN
 </code></pre></div></li>
 <li>Appliquez l'algorithme du parcours en largeur d'abord au graphe ci-dessous. Le 'point de départ' de notre parcours (le sommet s dans l'algorithme), sera le sommet A. Vous noterez les sommets atteints à chaque étape ainsi que les sommets présents dans la file f. Vous pourrez aussi, à chaque étape, donner les changements de couleur des sommets. </li>
 </ol>
-<p><img alt="" class="center" src="images/parc1.PNG"></p>
+<p><img alt="" class="center" src="../images/parc1.PNG"></p>
 <details class="note">
 <summary>Correction</summary>
 <p>2) En partant de A :
@@ -4923,7 +4909,7 @@ FIN
 Vous avez dû remarquer que le parcours en profondeur utilise une fonction récursive. J'attire votre attention sur l'extrême simplicité de cet algorithme (au niveau de sa conception), c'est souvent le cas avec les algorithmes récursifs.</li>
 <li>Appliquez l'algorithme du parcours en profondeur d'abord au graphe ci-dessous.</li>
 </ol>
-<p><img alt="" class="center" src="images/parc2.PNG"></p>
+<p><img alt="" class="center" src="../images/parc2.PNG"></p>
 <details class="note">
 <summary>Correction</summary>
 <p>2) En partant de A :
@@ -4996,7 +4982,7 @@ FIN
 Vous avez sans doute remarqué que la version "non récursive" (on dit "itérative") de l'algorithme du parcours en profondeur ressemble beaucoup à l'algorithme du parcours en largeur, on a juste remplacé la file par une pile. </li>
 <li>Appliquez cet algorithme au graphe ci-dessous. Vérifiez que l'on obtient bien un parcours en profondeur. </li>
 </ol>
-<p><img alt="" class="center" src="images/parc3.PNG"></p>
+<p><img alt="" class="center" src="../images/parc3.PNG"></p>
 <details class="note">
 <summary>Correction</summary>
 <p>2) En partant de A :
@@ -5149,10 +5135,10 @@ FIN
 </code></pre></div></li>
 <li>Appliquez l'algorithme de détection d'un cycle au graphe ci-dessous (vous partirez du sommet de votre choix). 
 <br>
-<img alt="" class="center" src="images/cyc1.PNG"></li>
+<img alt="" class="center" src="../images/cyc1.PNG"></li>
 <li>Appliquez l'algorithme de détection d'un cycle au graphe ci-dessous (vous partirez du sommet de votre choix).
 <br>
-<img alt="" class="center" src="images/cyc2.PNG"></li>
+<img alt="" class="center" src="../images/cyc2.PNG"></li>
 </ol>
 <details class="note">
 <summary>Correction</summary>
@@ -5285,7 +5271,7 @@ FIN
 Vous noterez que l'algorithme ci-dessus est basé sur un parcours en profondeur d'abord.</li>
 <li>Appliquez l'algorithme permettant de trouver une chaine entre un noeud de départ et un noeud d'arrivée au graphe ci-dessous (vous choisirez les noeuds de départ et d'arrivée de votre choix). 
 <br>
-<img alt="" class="center" src="images/parc4.PNG">
+<img alt="" class="center" src="../images/parc4.PNG">
 <br></li>
 </ol>
 <div class="admonition note">
@@ -5355,7 +5341,7 @@ A diff de E
       <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
         
           
-          <a href="../donnees_arbres/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Les arbres binaires">
+          <a href="../arbre/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Données en arbres">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -5365,7 +5351,7 @@ A diff de E
                 Précédent
               </span>
               <div class="md-ellipsis">
-                Les arbres binaires
+                Données en arbres
               </div>
             </div>
           </a>
