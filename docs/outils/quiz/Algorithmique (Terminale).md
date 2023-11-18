@@ -1,1 +1,1 @@
-{{quiz('outils/quiz/sources/Algorithmique (Terminale).md')}}
+{{quiz('docs/outils/quiz/sources/Algorithmique (Terminale).md')}}

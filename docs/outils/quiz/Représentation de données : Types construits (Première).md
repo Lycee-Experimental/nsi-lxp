@@ -1,1 +1,1 @@
-{{quiz('outils/quiz/sources/Représentation de données : Types construits (Première).md')}}
+{{quiz('docs/outils/quiz/sources/Représentation de données : Types construits (Première).md')}}

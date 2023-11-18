@@ -1,1 +1,1 @@
-{{quiz('outils/quiz/sources/Interactions entre l’homme et la machine sur le Web (Première).md')}}
+{{quiz('docs/outils/quiz/sources/Interactions entre l’homme et la machine sur le Web (Première).md')}}

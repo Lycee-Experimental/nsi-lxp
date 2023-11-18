@@ -41,3 +41,6 @@
     Pour aller plus loin et réaliser des taches plus complexe (traitement de données, tracé de graphiques...), vous pouvez créer des **notebooks Jupyter** :
     {{jupyter()}}
 
+
+
+{{quiz('docs/outils/quiz/sources/banque_algo.md', 10)}}
