@@ -994,3 +994,8 @@
             * `expected an indented block` : Une ligne n'est pas indentée et elle devrait. Le plus souvent vous avez simplement oublié de l'indenter.
             * `indent does not match any outer indentation level` : Une ligne n'est pas indentée comme celles qui précède (souvent un espace en plus ou en moins)
 
+
+## Quiz !
+
+{{quiz('docs/outils/quiz/sources/banque_progra.md', 10)}}
+

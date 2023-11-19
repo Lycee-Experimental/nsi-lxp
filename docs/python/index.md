@@ -26,21 +26,3 @@
 
 !!! abstract "Plan de la partie"
     {{plan()}}
-
-## Outils
-??? tool "Terminal Pyodide"
-    Si vous avez déjà fait de la programmation en **blocks** (scratch), vous pouvez utiliser l'application [Blockly(/outils/blockly)] pour voir le code converti en **Python**.
-
-??? tool "Terminal Pyodide"
-    {{terminal()}}
-
-??? tool "IDE Pyodide"
-    {{IDE()}}
-
-??? tool "Jupyter Notebooks"
-    Pour aller plus loin et réaliser des taches plus complexe (traitement de données, tracé de graphiques...), vous pouvez créer des **notebooks Jupyter** :
-    {{jupyter()}}
-
-
-
-{{quiz('docs/outils/quiz/sources/banque_algo.md', 10)}}
