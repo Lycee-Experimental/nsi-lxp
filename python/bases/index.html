@@ -5181,8 +5181,11 @@ Quelle construction élémentaire peut-on identifier ?
 
 ### Langages et programmation (Première)
 
-La documentation de la fonction floor de la bibliothèque math est : 
-`floor(x) : Return the floor of x as an Integral. This is the largest integer &lt;= x.`
+La documentation de la fonction floor de la bibliothèque math est :
+
+```python
+floor(x) : Return the floor of x as an Integral. This is the largest integer &lt;= x.
+```
 
 Que vaut floor(-2.2) ?
 
@@ -5622,10 +5625,10 @@ a = ......
 Que peut-on écrire à la place des pointillés pour réaliser cet échange ?
 
 
-1. [ ] a - b
-1. [ ] a + b
-1. [X] b - a
-1. [ ] - a - b
+1. [ ] `a - b`
+1. [ ] `a + b`
+1. [X] `b - a`
+1. [ ]  `- a - b`
 
 
 ### Langages et programmation (Première)
@@ -6032,6 +6035,303 @@ Quelle est la valeur renvoyée par l'appel `calcul(30,100)` ?
 1. [X] AssertionError: la réduction doit être inférieure à 100
 1. [ ] AssertionError: le prix doit être un nombre strictement positif
 1. [ ] 70
+
+
+### Langages et programmation (Première)
+
+Soit `n` un entier naturel. Sa factorielle est le produit des nombres entiers strictement positifs qui sont plus petits ou égaux à n. Par exemple la factorielle de 4 vaut 1 × 2 × 3 × 4 = 24.
+
+Quelle est la fonction correcte parmi les suivantes ?
+
+1. [ ] ```{.quiz}
+def factorielle(n):
+    i = 0
+    fact = 1
+    while i &lt;= n:
+        fact = fact * i
+        i = i + 1
+    return fact
+    ```
+1. [ ] ```{.quiz}
+def factorielle(n):
+    i = 1
+    fact = 1
+    while i &lt; n:
+        fact = fact * i
+        i = i + 1
+    return fact
+    ```
+1. [X] ```{.quiz}
+def factorielle(n):
+    i = 0
+    fact = 1
+    while i &lt; n:
+        i = i + 1
+        fact = fact * i
+    return fact
+    ```
+1. [ ] ```{.quiz}
+def factorielle(n):
+    i = 0
+    fact = 1
+    while i &lt;= n:
+        i = i + 1
+        fact = fact * i
+    return fact
+    ```
+
+
+### Langages et programmation (Première)
+
+En voulant programmer une fonction qui calcule la valeur minimale d'une liste d'entiers, on a écrit :
+
+```python
+def minimum(L):
+    mini = 0
+    for e in L:
+        if e &lt; mini:
+            mini = e
+    return mini
+```
+
+Cette fonction a été mal programmée. Pour quelle liste ne donnera-t-elle pas le résultat attendu, c'est-à-dire son minimum ?
+
+1. [ ] [-1,-8,12,2,23]
+1. [ ] [0,18,12,2,3]
+1. [ ] [-1,-1,12,12,23]
+1. [X] [1,8,12,2,23]
+
+### Langages et programmation (Première)
+
+On a défini une fonction somme qui doit calculer la somme des éléments de la liste passée en argument de la façon suivante :
+
+```python
+def somme(L):
+    s = L[0]
+    for i in range(len(L)):
+        s = s + L[i]
+    return s
+```
+
+Cette fonction a été mal programmée. Quel appel parmi les suivants permet de mettre en évidence son incorrection ?
+
+1. [ ] somme([0,0,0,0])
+1. [ ] somme([0,1,2,3])
+1. [ ] somme([0,3,2,1])
+1. [X] somme([3,2,1,0])
+
+### Langages et programmation (Première)
+
+On exécute le script suivant :
+
+```python
+a = 10
+if a &lt; 5:
+    a = 20
+elif a &lt; 100:
+    a = 500
+elif a &lt; 1000:
+    a = 1
+else:
+    a = 0
+```
+
+Quelle est la valeur de la variable `a` à la fin de cette exécution ?
+
+1. [ ] 1
+1. [ ] 10
+1. [ ] 20
+1. [X] 500
+
+### Langages et programmation (Première)
+
+On définit une fonction `f` de la façon suivante :
+
+```python
+def f(L, m):
+    R = []
+    for i in range(len(L)):
+        if L[i] &gt; m:
+            R.append(L[i])
+    return R
+```
+
+On définit L = [1, 7, 3, 4, 8, 2, 0, 3, 5].
+
+Que vaut f(L, 4) ?
+
+1. [ ] [0, 7, 0, 0, 8, 0, 0, 0, 5]
+1. [ ] [0, 0, 0, 5]
+1. [X] [7, 8, 5]
+1. [ ] []
+
+### Langages et programmation (Première)
+
+
+On exécute le script suivant.
+
+```python
+a = 11
+for i in range(3):
+    a = a * 2
+    a = a - 10
+```
+
+Que contient la variable a à la fin de cette exécution ?
+
+1. [ ] 0
+1. [ ] 14
+1. [X] 18
+1. [ ] 26
+
+### Langages et programmation (Première)
+
+On a écrit une fonction qui prend en paramètre une liste non vide et qui renvoie son plus grand élément.
+
+Combien de tests faudrait-il écrire pour garantir que la fonction donne un résultat correct pour toute liste ?
+
+1. [ ] deux tests : pour une liste à un élément et pour une liste à deux éléments ou plus
+1. [ ] deux tests : pour le cas où le plus grand élément est en début de liste, et pour le cas où le plus grand
+élément n’est pas en début de liste
+1. [ ] trois tests : pour une liste vide, pour une liste à un élément, et pour une liste à deux éléments ou plus
+1. [X] il faudrait écrire une infinité de tests : on ne peut pas prouver que cette fonction est correcte, simplement
+en la testant
+
+### Langages et programmation (Première)
+
+
+Quelle est la valeur de la variable `n` à la fin de l'exécution du script ci-dessous ?
+```python
+n = 1
+while n != 20:
+    n = n + 2
+```
+
+1. [ ] 1
+1. [ ] 20
+1. [ ] 22
+1. [X] le programme ne termine pas, la boucle tourne indéfiniment
+
+### Langages et programmation (Première)
+
+On exécute le script suivant.
+```python
+a,b = 10,3
+if a &lt; 10:
+    a,b = a+2,b+a
+```
+
+Quelle est la valeur de `b` à la fin de son exécution ?
+
+1. [X] 3
+1. [ ] 12
+1. [ ] 13
+1. [ ] 15
+
+### Langages et programmation (Première)
+
+
+Dans le programme suivant, la variable `A` contient un entier strictement positif. Quelle est la valeur numérique de la variable i en fin de programme ?
+
+```python
+i = 0
+while 2**i &lt; A :
+    i = i + 1
+```
+
+Que vaut la variable i à la fin de l'exécution ?
+
+1. [ ] A + 1
+1. [ ] l'exposant de la plus grande puissance de 2 inférieure à A
+1. [X] l'exposant de la plus petite puissance de 2 supérieure à A
+1. [ ] A - 1
+
+### Langages et programmation (Première)
+
+On considère le code incomplet suivant, où la fonction maximum renvoie le plus grand élément d’une liste de nombres :
+
+```python
+def maximum(L):
+    m = L[0]
+    for i in range(1,len(L)):
+        ..............
+        ..............
+    return m
+```
+
+Que faut-il écrire à la place des lignes pointillées ?
+
+1. [ ] ```{.quiz} if m &lt; L[i]:
+    L[i] = m
+    ```
+1. [ ] ```{.quiz} if L[i-1] &lt; L[i]:
+    m = L[i]
+    ```
+1. [ ] ```{.quiz} if L[i] &lt; L[0]:
+    L[i],L[0] = L[0],L[i]
+    ```
+1. [X] ```{.quiz} if L[i] &gt; m:
+    m = L[i]
+    ```
+
+
+
+### Langages et programmation (Première)
+
+
+La fonction maxi ci-dessous a pour but de renvoyer la valeur maximale présente dans la liste qui lui est passée en argument.
+
+```python
+def maxi(L):
+    dernier_indice = len(L) - 1
+    valeur_max = L[0]
+    for i in range(1,dernier_indice):
+        if L[i] &gt; valeur_max:
+            valeur_max = L[i]
+    return valeur_max
+```
+
+Cette fonction a été mal programmée. On souhaite réaliser un test pour le démontrer.
+
+Parmi les propositions suivantes, laquelle mettra la fonction maxi en défaut ?
+
+1. [X] maxi([1, 2, 3, 4])
+1. [ ] maxi([4, 3, 2, 1])
+1. [ ] maxi([1, 3, 3, 2])
+1. [ ] maxi([1, 1, 1, 1])
+
+### Langages et programmation (Première)
+
+Karine écrit une bibliothèque Python, nommée GeomPlan, de géométrie plane dont voici un extrait :
+```python
+import math
+def aireDisque(R):
+    return math.pi * R**2
+```
+
+Gilles utilise cette bibliothèque pour calculer l'aire d'un disque de rayon 8.
+
+Laquelle des instructions suivantes renvoie un message d'erreur ?
+
+1. [ ] ```{.quiz}
+import GeomPlan
+GeomPlan.aireDisque(8)
+    ```
+
+1. [X] ```{.quiz}
+import GeomPlan
+aireDisque(8)
+    ```
+
+1. [ ] ```{.quiz}
+from GeomPlan import *
+aireDisque(8)
+    ```
+
+1. [ ] ```{.quiz}
+from GeomPlan import aireDisque
+aireDisque(8)
+    ```
 </div></div>
 
 
