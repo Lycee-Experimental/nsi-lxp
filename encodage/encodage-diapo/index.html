@@ -2,16 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=no">
     <title>Diaporama</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reset.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/blood.css">
 <!-- Theme used for syntax highlighted code -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/monokai.css">
-
+<style>
+.scrollable-slide {
+    overflow-y: auto !important;
+}
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb {
+  background-color: #333;
+}
+::-webkit-scrollbar-corner {
+  background-color: #333;
+}
+.reveal p code {
+  background-color: #000;
+  color: #2cd913;
+}
+</style>
 </head>
+
+
+
 <body>
 <div class="reveal">
     <div class="slides">
@@ -206,7 +228,7 @@ Avec l'essor du réseau Internet et de ses applications comme le Web et l'explos
 </section>
     </div>
 </div>
-
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/reveal.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js"></script>
@@ -216,9 +238,40 @@ Avec l'essor du réseau Internet et de ses applications comme le Web et l'explos
     // - https://revealjs.com/initialization/
     // - https://revealjs.com/config/
     Reveal.initialize({
+        //embedded: true,
+        width: '100%',
+        height: '100%',
+        // Factor of the display size that should remain empty around
+        // the content
+        margin: 0.04,
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.2,
+        maxScale: 2.0,
         hash: true,
         // Learn about plugins: https://revealjs.com/plugins/
         plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+    });
+
+    //https://stackoverflow.com/questions/35237862/best-way-to-handle-overflowing-reveal-js-slide
+    function resetSlideScrolling(slide) {
+    slide.classList.remove('scrollable-slide');
+    }
+    function handleSlideScrolling(slide) {
+        if (slide.scrollHeight >= document.body.offsetHeight) {
+            slide.classList.add('scrollable-slide');
+            slide.style.height = document.body.offsetHeight + 'px';
+        }
+    }
+
+    Reveal.addEventListener('ready', function (event) {
+        handleSlideScrolling(event.currentSlide);
+    });
+
+    Reveal.addEventListener('slidechanged', function (event) {
+        if (event.previousSlide) {
+            resetSlideScrolling(event.previousSlide);
+        }
+        handleSlideScrolling(event.currentSlide);
     });
 </script>
 </body>

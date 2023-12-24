@@ -3872,7 +3872,59 @@
   
 
 
-<h1 id="la-gestion-des-permissions-dans-le-shell">La gestion des permissions dans le shell<a class="headerlink" href="#la-gestion-des-permissions-dans-le-shell" title="Permanent link">⚓︎</a></h1>
+<div><h1 id="la-gestion-des-permissions-dans-le-shell">La gestion des permissions dans le shell<a class="headerlink" href="#la-gestion-des-permissions-dans-le-shell" title="Permanent link">⚓︎</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Lecture des droits</p>
+</div>
+<p>Il est possible d'utiliser la commande <code>ls</code> avec l'option <code>-l</code> afin d'avoir des informations supplémentaires.</p>
+<p>Nous sommes positionnés dans le répertoire <code>boulot</code> et nous avons exécuté la commande ls <code>-l</code> :</p>
+<div class="highlight"><pre><span></span><code>~/Documents/boulot<span class="w"> </span>$<span class="w"> </span>ls<span class="w"> </span>-l
+total<span class="w"> </span><span class="m">1</span>
+-rw-r--r--<span class="w">  </span><span class="m">1</span><span class="w">   </span>luna<span class="w">    </span>luna<span class="w">    </span><span class="m">0</span><span class="w">   </span>Feb<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">14</span>:59<span class="w"> </span>TODO.txt
+</code></pre></div>
+<p>Lisons cette ligne de gauche à droite :</p>
+<p>1- <code>-rw-r--r--</code></p>
+<div class="highlight"><pre><span></span><code>- le premier symbole `-` signifie que l'on a affaire à un fichier, dans le cas d'un répertoire,nous aurions un `d` (directory)
+
+- les 3 symboles suivants `rw-` donnent les droits du propriétaire du fichier : lecture autorisée (r), écriture autorisée (w), exécution interdite (- à la place de x)
+
+- Les 3 symboles suivants `r--` donnent les droits du groupe lié au fichier : lecture autorisée (r), écriture interdite (- à la place de w), exécution interdite (- à laplace de x)
+
+- Les 3 symboles suivants `r--` donnent les droits des autres utilisateurs : lecture autorisée (r), écriture interdite (- à la place de w), exécution interdite (- à la place de x)
+</code></pre></div>
+<p>2 - Un peu plus loins sur la ligne :</p>
+<div class="highlight"><pre><span></span><code>- Le caractère suivant "1" donne le nombre de liens (nous n'étudierons pas cette notion ici)
+
+- Le premier `luna` représente le nom du propriétaire du fichier
+
+- Le second `luna` représente le nom du groupe lié au fichier
+
+- `0` représente la taille du fichier en octet (ici notre fichier est vide)
+
+`Feb 20 14:59` donne la date et l'heure de la dernière modification du fichier
+
+`TODO.txt` est le nom du fichier
+</code></pre></div>
+<table>
+  <tr>
+    <td>-</td>
+    <td>r</td>
+    <td>w
+    </td><td>-</td>
+    <td>r</td>
+    <td>-</td>
+    <td>-</td>
+    <td>r</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>type</td>
+    <td colspan="3">Propriétaire : u</td>
+    <td colspan="3">Groupe : g</td>
+    <td colspan="3">Les autres : o</td>    
+  </tr>
+</table></div>
 
 
 
