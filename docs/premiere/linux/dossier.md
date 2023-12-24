@@ -118,7 +118,7 @@ Le schéma ci-dessous représente les principaux **répertoires** (entourés d'u
     !!! note "Remarque"
         L'absence du caractère `/` au début du chemin relatif : c'est cela qui permet de distinguer un chemin relatif et un chemin absolu.
 
-{{exercice(1, "Trouver les chemins relatifs et absolus ?")}}
+{{exercice(1, "Déterminer des chemins relatifs et absolus.")}}
     Avec l'arborescence précédente, on suppose que l'on se trouve dans le répertoire `boulot`. Quel est le chemin relatif du répertoire `photo_vrac` ?
 
     ??? tip "Réponse"
