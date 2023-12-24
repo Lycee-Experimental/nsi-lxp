@@ -1,2 +1,13 @@
-!!! warning "En construction"
-    Cette section de **cours de spécialité Numérique et Sciences de l'Informatique (NSI)** est en construction.
+|Notions|Compétences|Remarques|
+|--|--|--|
+Modalités de l’interaction entre l’homme et la machine <br> Événements | Identifier les différents composants graphiques permettant d’interagir avec une application Web.<br>Identifier les événements que les fonctions associées aux différents composants graphiques sont capables de traiter. | Il s’agit d’examiner le code HTML d’une page comprenant des composants graphiques et de distinguer ce qui relève de la description des composants graphiques en HTML de leur comportement (réaction aux événements) programmé par exemple en JavaScript.
+
+
+
+
+
+|Notions|Compétences|Remarques|
+|--|--|--|
+Interaction avec l’utilisateur dans une page Web | Analyser et modifier les méthodes exécutées lors d’un clic sur un bouton d’une page Web.
+Interaction client-serveur.<br>Requêtes HTTP, réponses du serveur | Distinguer ce qui est exécuté sur le client ou sur le serveur et dans quel ordre.<br> Distinguer ce qui est mémorisé dans le client et retransmis au serveur.<br> Reconnaître quand et pourquoi la transmission est chiffrée.| Il s’agit de faire le lien avec ce qui a été vu en classe de seconde et d’expliquer comment on peut passer des paramètres à un site grâce au protocole HTTP.
+Formulaire d’une page Web | Analyser le fonctionnement d’un formulaire simple.<br>Distinguer les transmissions de paramètres par les requêtes POST ou GET.|Discuter les deux types de requêtes selon le type des valeurs à transmettre et/ou leur confidentialité.
