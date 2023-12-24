@@ -222,7 +222,7 @@ nav:
         - Affichage de la fiche d'inscription: projets/djangolxp/style-fiche-inscription.md
         - Afficher/filtrer les listes d'élèves: projets/djangolxp/tableau-filtre.md
     - Renpy:
-      - Décompiler un jeu: projets/renpy/decompile.m
+      - Décompiler un jeu: projets/renpy/decompile.md
     - Drum-LXP:
       - Introduction: projets/drumxp/intro.md
       - Électronique: projets/drumxp/elec.md
