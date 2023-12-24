@@ -1,1 +1,1 @@
-{{quiz('outils/quiz/sources/Langages et programmation (Terminale).md')}}
+{{quiz('docs/outils/quiz/sources/Langages et programmation (Terminale).md')}}

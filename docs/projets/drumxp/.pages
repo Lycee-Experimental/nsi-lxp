@@ -1,0 +1,6 @@
+nav:
+    - index.md
+    - Électronique: elec.md
+    - Programmation: progra.md
+    - Logiciel: logiciels.md
+    - Structure: matos.md  

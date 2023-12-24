@@ -1,0 +1,7 @@
+nav:
+    - 1️⃣ Systèmes d'exploitation: index.md
+    - 1️⃣ Tester et installer Linux: linux.md
+    - 1️⃣ Commandes Shell: commande.md
+    - 1️⃣ Arborescence des dossiers: dossier.md
+    - 1️⃣ Gestion des permissions: permission.md
+    - 🇹 Gestion des processus: gestion_processus

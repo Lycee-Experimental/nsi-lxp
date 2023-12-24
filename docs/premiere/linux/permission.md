@@ -22,7 +22,7 @@ Lisons cette ligne de gauche à droite :
 
     - les 3 symboles suivants `rw-` donnent les droits du propriétaire du fichier : lecture autorisée (r), écriture autorisée (w), exécution interdite (- à la place de x)
 
-    - Les 3 symboles suivants `r--` donnent les droits du groupe lié au fichier : lecture autorisée (r), écriture interdite (- à la place de w), exécution interdite (- à laplace de x)
+    - Les 3 symboles suivants `r--` donnent les droits du groupe lié au fichier : lecture autorisée (r), écriture interdite (- à la place de w), exécution interdite (- à la place de x)
 
     - Les 3 symboles suivants `r--` donnent les droits des autres utilisateurs : lecture autorisée (r), écriture interdite (- à la place de w), exécution interdite (- à la place de x)
 

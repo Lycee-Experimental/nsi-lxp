@@ -3,6 +3,7 @@
 !!! note "Remerciements"
     Les quiz ci-dessous sont réalisés avec **QuizDown-JS**[:material-git:](https://github.com/bonartm/quizdown-js) à partir de la base de donnée de [GeNumSi](https://genumsi.inria.fr/accueil.php).
 
+
 === "Premières"
     - [Histoire de l'informatique (Première)](Histoire de l&#39;informatique (Première))
     - [Architectures matérielles et systèmes d’exploitation (Première)](Architectures matérielles et systèmes d’exploitation (Première))

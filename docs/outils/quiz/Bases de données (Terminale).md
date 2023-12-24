@@ -1,1 +1,1 @@
-{{quiz('outils/quiz/sources/Bases de données (Terminale).md')}}
+{{quiz('docs/outils/quiz/sources/Bases de données (Terminale).md')}}

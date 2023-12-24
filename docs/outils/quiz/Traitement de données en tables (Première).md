@@ -1,1 +1,1 @@
-{{quiz('outils/quiz/sources/Traitement de données en tables (Première).md')}}
+{{quiz('docs/outils/quiz/sources/Traitement de données en tables (Première).md')}}

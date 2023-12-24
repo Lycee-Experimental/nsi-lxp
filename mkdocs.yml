@@ -34,7 +34,7 @@ theme:
           icon: material/weather-night
           name: Passer au mode jour
   features:
-    - navigation.instant
+    #- navigation.instant
     - navigation.tabs
     #- navigation.tabs.sticky
     - navigation.sections
@@ -62,8 +62,7 @@ markdown_extensions:
   - pymdownx.tilde # Passage ~~barré~~ ou en ~indice~.
   - pymdownx.highlight # Coloration syntaxique du code
   - pymdownx.inlinehilite # pour  `#!python  <python en ligne>`
-  - pymdownx.snippets: # Inclusion de fichiers externe.
-      base_path: docs
+  - pymdownx.snippets
   - pymdownx.tasklist: # Cases à cocher  - [ ]  et - [x]
       custom_checkbox: false #   avec cases d'origine
       clickable_checkbox: true #   et cliquables.
@@ -105,8 +104,16 @@ extra:
 
 plugins:
   - search
-  - macros
   - mkdocs-video
+  - awesome-pages:
+      filename: .pages
+      collapse_single_pages: true
+      strict: false
+      order: asc
+      sort_type: natural
+      order_by: title
+  - macros
+
   #- inline-svg
 
 extra_javascript:
@@ -126,6 +133,7 @@ extra_javascript:
 extra_css:
   - xtra/stylesheets/ajustements.css # ajustements piodide
   - xtra/stylesheets/extra.css # mes ajustements
+<<<<<<< HEAD
 
 nav:
   - intro.md
@@ -230,4 +238,6 @@ nav:
       - Logiciel: projets/drumxp/logiciels.md
       - Structure: projets/drumxp/matos.md  
   - Bac: bac/sujet.md
+=======
+>>>>>>> 30191400701bd70ed349c194f022febf00d03494
    

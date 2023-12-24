@@ -1,0 +1,2 @@
+// Automatically generated file.  Do not edit!
+var BlocklyGamesMsg={"Games.name":"Παιχνίδια Blockly","Games.puzzle":"Παζλ","Games.maze":"Λαβύρινθος","Games.bird":"Πουλί","Games.turtle":"Χελώνα","Games.movie":"Ταινία","Games.music":"Μουσική","Games.pondTutor":"Εκπαιδευτής Pond","Games.pond":"Λίμνη","Index.clear":"Θέλετε να διαγράψετε όλες τις λύσεις;","Index.subTitle":"Παιχνίδια για τους προγραμματιστές του αύριο.","Index.moreInfo":"Περισσότερες πληροφορίες για εκπαιδευτές…","Index.startOver":"Θέλετε να ξεκινήσετε πάλι από την αρχή;","Index.clearData":"Εκκαθάριση δεδομένων"}

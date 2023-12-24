@@ -11,6 +11,948 @@ MAX_EMPTY_IDE = 10**8
 def define_env(env):
     "Hook function"
 
+
+    @env.macro
+    def jupy(nb) -> str:
+        path='/xtra/jupyterlite/lab/index.html'
+        notebook_dir='/notebooks/'
+        if nb !='':
+            path += f"?fromURL={notebook_dir}{nb}"
+        return f"""<a class="md-button md-button--primary" href="{path}" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span> Notebook <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span></a>"""
+
+    @env.macro
+    def jupy_cor(nb) -> str:
+        path='/xtra/jupyterlite/lab/index.html'
+        notebook_dir='/notebooks/'
+        if nb !='':
+            path += f"?fromURL={notebook_dir}{nb}"
+        return f"""<a class="md-button" href="{path}" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span> Corrigé <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span></a>"""
+
+
+
+    @env.macro
+    def plan():
+        parent_page = env.variables.page.parent
+        child_pages = parent_page.children if parent_page else []
+        if child_pages:
+            toc_html = '<div class="toc">\n<ul>\n'
+            i=0
+            for child_page in child_pages:
+
+                if child_page != env.variables.page:
+                    i+=1
+                    if child_page.children:
+                        toc_html += f'<li>Chapitre {i} : {child_page.title}</li>\n<ul>\n'
+                        for child in child_page.children:
+                            if child != child_page:
+                                toc_html += f'<li><a href="/{child.url}">{child.title}</a></li>\n'           
+                        toc_html += '</ul>'
+                    else:
+                        toc_html += f'<li><a href="/{child_page.url}">Chapitre {i} : {child_page.title}</a></li>\n'           
+            toc_html += '</ul>\n</div>'
+#                    toc_html += f'<li><a href="/{child_page.url}">Chapitre {i}: {child_page.title}</a></li>\n'           
+#            toc_html += '</ul>\n</div>'
+#            return toc_html
+        
+        return toc_html
+
+
+    @env.macro
+    def jupyter(nb='') -> str:
+        path='/xtra/jupyterlite/lab/index.html'
+        if nb !='':
+            path += f"?fromURL={nb}"
+        return f"""<iframe src="{path}" frameborder="0" scrolling="auto" style="width: 100%; height: 700px;"></iframe>"""
+
+    @env.macro
+    def blockly() -> str:
+        return """<script src="https://unpkg.com/blockly"></script>
+<script src="https://unpkg.com/blockly/blocks"></script>
+<script src="https://unpkg.com/blockly/python_compressed"></script>
+<script src="https://unpkg.com/blockly/msg/fr"></script>
+<script src="https://unpkg.com/@blockly/theme-dark"></script>
+<div id="blocklyDiv" style="height: 600px; width: 100%"></div>
+<script type="text/javascript">
+    var toolbox = {
+'kind': 'categoryToolbox',
+'contents': [
+{
+    'kind': 'category',
+    'name': 'Logique',
+    'categorystyle': 'logic_category',
+    'contents': [
+    {
+        'type': 'controls_if',
+        'kind': 'block',
+    },
+    {
+        'type': 'logic_compare',
+        'kind': 'block',
+        'fields': {
+        'OP': 'EQ',
+        },
+    },
+    {
+        'type': 'logic_operation',
+        'kind': 'block',
+        'fields': {
+        'OP': 'AND',
+        },
+    },
+    {
+        'type': 'logic_negate',
+        'kind': 'block',
+    },
+    {
+        'type': 'logic_boolean',
+        'kind': 'block',
+        'fields': {
+        'BOOL': 'TRUE',
+        },
+    },
+    {
+        'type': 'logic_null',
+        'kind': 'block',
+        'enabled': false,
+    },
+    {
+        'type': 'logic_ternary',
+        'kind': 'block',
+    },
+    ],
+},
+{
+    'kind': 'category',
+    'name': 'Boucles',
+    'categorystyle': 'loop_category',
+    'contents': [
+    {
+        'type': 'controls_repeat_ext',
+        'kind': 'block',
+        'inputs': {
+        'TIMES': {
+            'shadow': {
+            'type': 'math_number',
+            'fields': {
+                'NUM': 10,
+            },
+            },
+        },
+        },
+    },
+    {
+        'type': 'controls_repeat',
+        'kind': 'block',
+        'enabled': false,
+        'fields': {
+        'TIMES': 10,
+        },
+    },
+    {
+        'type': 'controls_whileUntil',
+        'kind': 'block',
+        'fields': {
+        'MODE': 'WHILE',
+        },
+    },
+    {
+        'type': 'controls_for',
+        'kind': 'block',
+        'fields': {
+        'VAR': {
+            'name': 'i',
+        },
+        },
+        'inputs': {
+        'FROM': {
+            'shadow': {
+            'type': 'math_number',
+            'fields': {
+                'NUM': 1,
+            },
+            },
+        },
+        'TO': {
+            'shadow': {
+            'type': 'math_number',
+            'fields': {
+                'NUM': 10,
+            },
+            },
+        },
+        'BY': {
+            'shadow': {
+            'type': 'math_number',
+            'fields': {
+                'NUM': 1,
+            },
+            },
+        },
+        },
+    },
+    {
+        'type': 'controls_forEach',
+        'kind': 'block',
+        'fields': {
+        'VAR': {
+            'name': 'j',
+        },
+        },
+    },
+    {
+        'type': 'controls_flow_statements',
+        'kind': 'block',
+        'enabled': false,
+        'fields': {
+        'FLOW': 'BREAK',
+        },
+    },
+    ],
+},
+{
+    'kind': 'category',
+    'name': 'Maths',
+    'categorystyle': 'math_category',
+    'contents': [
+    {
+        'type': 'math_number',
+        'kind': 'block',
+        'fields': {
+        'NUM': 123,
+        },
+    },
+    {
+        'type': 'math_arithmetic',
+        'kind': 'block',
+        'fields': {
+        'OP': 'ADD',
+        },
+        'inputs': {
+        'A': {
+            'shadow': {
+            'type': 'math_number',
+            'fields': {
+                'NUM': 1,
+            },
+            },
+        },
+        'B': {
+            'shadow': {
+            'type': 'math_number',
+            'fields': {
+                'NUM': 1,
+            },
+            },
+        },
+        },
+    },
+    {
+        'type': 'math_single',
+        'kind': 'block',
+        'fields': {
+        'OP': 'ROOT',
+        },
+        'inputs': {
+        'NUM': {
+            'shadow': {
+            'type': 'math_number',
+            'fields': {
+                'NUM': 9,
+            },
+            },
+        },
+        },
+    },
+    {
+        'type': 'math_trig',
+        'kind': 'block',
+        'fields': {
+        'OP': 'SIN',
+        },
+        'inputs': {
+        'NUM': {
+            'shadow': {
+            'type': 'math_number',
+            'fields': {
+                'NUM': 45,
+            },
+            },
+        },
+        },
+    },
+    {
+        'type': 'math_constant',
+        'kind': 'block',
+        'fields': {
+        'CONSTANT': 'PI',
+        },
+    },
+    {
+        'type': 'math_number_property',
+        'kind': 'block',
+        'fields': {
+        'PROPERTY': 'EVEN',
+        },
+        'inputs': {
+        'NUMBER_TO_CHECK': {
+            'shadow': {
+            'type': 'math_number',
+            'fields': {
+                'NUM': 0,
+            },
+            },
+        },
+        },
+    },
+    {
+        'type': 'math_round',
+        'kind': 'block',
+        'fields': {
+        'OP': 'ROUND',
+        },
+        'inputs': {
+        'NUM': {
+            'shadow': {
+            'type': 'math_number',
+            'fields': {
+                'NUM': 3.1,
+            },
+            },
+        },
+        },
+    },
+    {
+        'type': 'math_on_list',
+        'kind': 'block',
+        'fields': {
+        'OP': 'SUM',
+        },
+    },
+    {
+        'type': 'math_modulo',
+        'kind': 'block',
+        'inputs': {
+        'DIVIDEND': {
+            'shadow': {
+            'type': 'math_number',
+            'fields': {
+                'NUM': 64,
+            },
+            },
+        },
+        'DIVISOR': {
+            'shadow': {
+            'type': 'math_number',
+            'fields': {
+                'NUM': 10,
+            },
+            },
+        },
+        },
+    },
+    {
+        'type': 'math_constrain',
+        'kind': 'block',
+        'inputs': {
+        'VALUE': {
+            'shadow': {
+            'type': 'math_number',
+            'fields': {
+                'NUM': 50,
+            },
+            },
+        },
+        'LOW': {
+            'shadow': {
+            'type': 'math_number',
+            'fields': {
+                'NUM': 1,
+            },
+            },
+        },
+        'HIGH': {
+            'shadow': {
+            'type': 'math_number',
+            'fields': {
+                'NUM': 100,
+            },
+            },
+        },
+        },
+    },
+    {
+        'type': 'math_random_int',
+        'kind': 'block',
+        'inputs': {
+        'FROM': {
+            'shadow': {
+            'type': 'math_number',
+            'fields': {
+                'NUM': 1,
+            },
+            },
+        },
+        'TO': {
+            'shadow': {
+            'type': 'math_number',
+            'fields': {
+                'NUM': 100,
+            },
+            },
+        },
+        },
+    },
+    {
+        'type': 'math_random_float',
+        'kind': 'block',
+    },
+    {
+        'type': 'math_atan2',
+        'kind': 'block',
+        'inputs': {
+        'X': {
+            'shadow': {
+            'type': 'math_number',
+            'fields': {
+                'NUM': 1,
+            },
+            },
+        },
+        'Y': {
+            'shadow': {
+            'type': 'math_number',
+            'fields': {
+                'NUM': 1,
+            },
+            },
+        },
+        },
+    },
+    ],
+},
+{
+    'kind': 'category',
+    'name': 'Texte',
+    'categorystyle': 'text_category',
+    'contents': [
+    {
+        'type': 'text',
+        'kind': 'block',
+        'fields': {
+        'TEXT': '',
+        },
+    },
+    {
+        'type': 'text_multiline',
+        'kind': 'block',
+        'fields': {
+        'TEXT': '',
+        },
+    },
+    {
+        'type': 'text_join',
+        'kind': 'block',
+    },
+    {
+        'type': 'text_append',
+        'kind': 'block',
+        'fields': {
+        'name': 'item',
+        },
+        'inputs': {
+        'TEXT': {
+            'shadow': {
+            'type': 'text',
+            'fields': {
+                'TEXT': '',
+            },
+            },
+        },
+        },
+    },
+    {
+        'type': 'text_length',
+        'kind': 'block',
+        'inputs': {
+        'VALUE': {
+            'shadow': {
+            'type': 'text',
+            'fields': {
+                'TEXT': 'abc',
+            },
+            },
+        },
+        },
+    },
+    {
+        'type': 'text_isEmpty',
+        'kind': 'block',
+        'inputs': {
+        'VALUE': {
+            'shadow': {
+            'type': 'text',
+            'fields': {
+                'TEXT': '',
+            },
+            },
+        },
+        },
+    },
+    {
+        'type': 'text_indexOf',
+        'kind': 'block',
+        'fields': {
+        'END': 'FIRST',
+        },
+        'inputs': {
+        'VALUE': {
+            'block': {
+            'type': 'variables_get',
+            'fields': {
+                'VAR': {
+                'name': 'text',
+                },
+            },
+            },
+        },
+        'FIND': {
+            'shadow': {
+            'type': 'text',
+            'fields': {
+                'TEXT': 'abc',
+            },
+            },
+        },
+        },
+    },
+    {
+        'type': 'text_charAt',
+        'kind': 'block',
+        'fields': {
+        'WHERE': 'FROM_START',
+        },
+        'inputs': {
+        'VALUE': {
+            'block': {
+            'type': 'variables_get',
+            'fields': {
+                'VAR': {
+                'name': 'text',
+                },
+            },
+            },
+        },
+        },
+    },
+    {
+        'type': 'text_getSubstring',
+        'kind': 'block',
+        'fields': {
+        'WHERE1': 'FROM_START',
+        'WHERE2': 'FROM_START',
+        },
+        'inputs': {
+        'STRING': {
+            'block': {
+            'type': 'variables_get',
+            'fields': {
+                'VAR': {
+                'name': 'text',
+                },
+            },
+            },
+        },
+        },
+    },
+    {
+        'type': 'text_changeCase',
+        'kind': 'block',
+        'fields': {
+        'CASE': 'UPPERCASE',
+        },
+        'inputs': {
+        'TEXT': {
+            'shadow': {
+            'type': 'text',
+            'fields': {
+                'TEXT': 'abc',
+            },
+            },
+        },
+        },
+    },
+    {
+        'type': 'text_trim',
+        'kind': 'block',
+        'fields': {
+        'MODE': 'BOTH',
+        },
+        'inputs': {
+        'TEXT': {
+            'shadow': {
+            'type': 'text',
+            'fields': {
+                'TEXT': 'abc',
+            },
+            },
+        },
+        },
+    },
+    {
+        'type': 'text_count',
+        'kind': 'block',
+        'inputs': {
+        'SUB': {
+            'shadow': {
+            'type': 'text',
+            'fields': {
+                'TEXT': '',
+            },
+            },
+        },
+        'TEXT': {
+            'shadow': {
+            'type': 'text',
+            'fields': {
+                'TEXT': '',
+            },
+            },
+        },
+        },
+    },
+    {
+        'type': 'text_replace',
+        'kind': 'block',
+        'inputs': {
+        'FROM': {
+            'shadow': {
+            'type': 'text',
+            'fields': {
+                'TEXT': '',
+            },
+            },
+        },
+        'TO': {
+            'shadow': {
+            'type': 'text',
+            'fields': {
+                'TEXT': '',
+            },
+            },
+        },
+        'TEXT': {
+            'shadow': {
+            'type': 'text',
+            'fields': {
+                'TEXT': '',
+            },
+            },
+        },
+        },
+    },
+    {
+        'type': 'text_reverse',
+        'kind': 'block',
+        'inputs': {
+        'TEXT': {
+            'shadow': {
+            'type': 'text',
+            'fields': {
+                'TEXT': '',
+            },
+            },
+        },
+        },
+    },
+    {
+        'type': 'text_print',
+        'kind': 'block',
+        'inputs': {
+        'TEXT': {
+            'shadow': {
+            'type': 'text',
+            'fields': {
+                'TEXT': 'abc',
+            },
+            },
+        },
+        },
+    },
+    {
+        'type': 'text_prompt_ext',
+        'kind': 'block',
+        'fields': {
+        'TYPE': 'TEXT',
+        },
+        'inputs': {
+        'TEXT': {
+            'shadow': {
+            'type': 'text',
+            'fields': {
+                'TEXT': 'abc',
+            },
+            },
+        },
+        },
+    },
+    ],
+},
+{
+    'kind': 'category',
+    'name': 'Listes',
+    'categorystyle': 'list_category',
+    'contents': [
+    {
+        'type': 'lists_create_with',
+        'kind': 'block',
+    },
+    {
+        'type': 'lists_create_with',
+        'kind': 'block',
+    },
+    {
+        'type': 'lists_repeat',
+        'kind': 'block',
+        'inputs': {
+        'NUM': {
+            'shadow': {
+            'type': 'math_number',
+            'fields': {
+                'NUM': 5,
+            },
+            },
+        },
+        },
+    },
+    {
+        'type': 'lists_length',
+        'kind': 'block',
+    },
+    {
+        'type': 'lists_isEmpty',
+        'kind': 'block',
+    },
+    {
+        'type': 'lists_indexOf',
+        'kind': 'block',
+        'fields': {
+        'END': 'FIRST',
+        },
+        'inputs': {
+        'VALUE': {
+            'block': {
+            'type': 'variables_get',
+            'fields': {
+                'VAR': {
+                'name': 'list',
+                },
+            },
+            },
+        },
+        },
+    },
+    {
+        'type': 'lists_getIndex',
+        'kind': 'block',
+        'fields': {
+        'MODE': 'GET',
+        'WHERE': 'FROM_START',
+        },
+        'inputs': {
+        'VALUE': {
+            'block': {
+            'type': 'variables_get',
+            'fields': {
+                'VAR': {
+                'name': 'list',
+                },
+            },
+            },
+        },
+        },
+    },
+    {
+        'type': 'lists_setIndex',
+        'kind': 'block',
+        'fields': {
+        'MODE': 'SET',
+        'WHERE': 'FROM_START',
+        },
+        'inputs': {
+        'LIST': {
+            'block': {
+            'type': 'variables_get',
+            'fields': {
+                'VAR': {
+                'name': 'list',
+                },
+            },
+            },
+        },
+        },
+    },
+    {
+        'type': 'lists_getSublist',
+        'kind': 'block',
+        'fields': {
+        'WHERE1': 'FROM_START',
+        'WHERE2': 'FROM_START',
+        },
+        'inputs': {
+        'LIST': {
+            'block': {
+            'type': 'variables_get',
+            'fields': {
+                'VAR': {
+                'name': 'list',
+                },
+            },
+            },
+        },
+        },
+    },
+    {
+        'type': 'lists_split',
+        'kind': 'block',
+        'fields': {
+        'MODE': 'SPLIT',
+        },
+        'inputs': {
+        'DELIM': {
+            'shadow': {
+            'type': 'text',
+            'fields': {
+                'TEXT': ',',
+            },
+            },
+        },
+        },
+    },
+    {
+        'type': 'lists_sort',
+        'kind': 'block',
+        'fields': {
+        'TYPE': 'NUMERIC',
+        'DIRECTION': '1',
+        },
+    },
+    {
+        'type': 'lists_reverse',
+        'kind': 'block',
+    },
+    ],
+},
+{
+    'kind': 'category',
+    'categorystyle': 'colour_category',
+    'name': 'Couleur',
+    'contents': [
+    {
+        'type': 'colour_picker',
+        'kind': 'block',
+        'fields': {
+        'COLOUR': '#ff0000',
+        },
+    },
+    {
+        'type': 'colour_random',
+        'kind': 'block',
+    },
+    {
+        'type': 'colour_rgb',
+        'kind': 'block',
+        'inputs': {
+        'RED': {
+            'shadow': {
+            'type': 'math_number',
+            'fields': {
+                'NUM': 100,
+            },
+            },
+        },
+        'GREEN': {
+            'shadow': {
+            'type': 'math_number',
+            'fields': {
+                'NUM': 50,
+            },
+            },
+        },
+        'BLUE': {
+            'shadow': {
+            'type': 'math_number',
+            'fields': {
+                'NUM': 0,
+            },
+            },
+        },
+        },
+    },
+    {
+        'type': 'colour_blend',
+        'kind': 'block',
+        'inputs': {
+        'COLOUR1': {
+            'shadow': {
+            'type': 'colour_picker',
+            'fields': {
+                'COLOUR': '#ff0000',
+            },
+            },
+        },
+        'COLOUR2': {
+            'shadow': {
+            'type': 'colour_picker',
+            'fields': {
+                'COLOUR': '#3333ff',
+            },
+            },
+        },
+        'RATIO': {
+            'shadow': {
+            'type': 'math_number',
+            'fields': {
+                'NUM': 0.5,
+            },
+            },
+        },
+        },
+    },
+    ],
+},
+{
+    'kind': 'sep',
+},
+{
+    'kind': 'category',
+    'name': 'Variables',
+    'custom': 'VARIABLE',
+    'categorystyle': 'variable_category',
+},
+{
+    'kind': 'category',
+    'name': 'Fonctions',
+    'custom': 'PROCEDURE',
+    'categorystyle': 'procedure_category',
+},
+
+],
+};
+var workspace = Blockly.inject("blocklyDiv", { toolbox: toolbox, theme: 'dark' });
+function myUpdateFunction(event) {
+var code = python.pythonGenerator.workspaceToCode(workspace);
+// Get a reference to the Ace editor element
+const editorDiv = document.querySelector('#editor > div div[id^="editor_"]');
+editor = ace.edit(editorDiv.id);
+// Set the value of the editor to some code
+editor.setValue(code, -1);
+}
+workspace.addChangeListener(myUpdateFunction);
+</script>
+<div id="editor">"""+IDE()+"</div>"
+
+
+
     @env.macro
     def script(lang: str, nom: str) -> str:
         "Renvoie le script dans une balise bloc avec langage spécifié"
@@ -129,8 +1071,6 @@ $(document).ready(launchDebian());
 
 '''
 
-
-
     @env.macro
     def ext() -> str:
         return f'ext "Pour aller plus loin"'
@@ -166,12 +1106,11 @@ $(document).ready(launchDebian());
         @details : The content of the file is hidden in the webpage. Replacing \n, _ and * by a string enables
         the integration in mkdocs admonitions.
         """
-        docs_path = f"""docs/"""
-
+        docs_path = f"""docs"""
         try:
             relative_path = "scripts" if path == "" else path
             with open(
-                f"""{docs_path}{relative_path}/{script_name}.{extension}"""
+                f"""{docs_path}/{relative_path}/{script_name}.{extension}"""
             ) as filename:
                 content = "".join(filename.readlines())
                 content = content + "\n"
@@ -197,15 +1136,22 @@ $(document).ready(launchDebian());
 
     # TODO : this issue concerning the urls must be closed ASAP
     def get_filepath() -> str:
-        print("docs_dirs", env.conf["docs_dir"])
-        return ""
-    #    return "/"+"/".join(
-    #        filter(
-    #            lambda folder: folder != "",
-    #            convert_url_to_utf8(env.variables.page.abs_url).split("/")[2:-2],
-    #        )
-    #    )
-
+        if env.variables.page.is_index:
+            path = "/".join(
+                filter(
+                    lambda folder: folder != "",
+                    convert_url_to_utf8(env.variables.page.abs_url).split("/")[1:-1],
+                )
+            )
+        else:
+            path = "/".join(
+                filter(
+                    lambda folder: folder != "",
+                    convert_url_to_utf8(env.variables.page.abs_url).split("/")[1:-2],
+                )
+            )
+        #print(path)
+        return path
     # TODO : handle the case where the same files are loaded on the same page.
     def generate_id_ide(content: str) -> str:
         """
@@ -451,6 +1397,7 @@ $(document).ready(launchDebian());
 """
         return block_remark
 
+
     def insert_content(editor_name: str, ide_content: str) -> str:
         return f"""<span id="content_{editor_name}" class="py_mk_hide">{ide_content}</span>"""
 
@@ -473,7 +1420,7 @@ $(document).ready(launchDebian());
         Last span hides the code content of the IDE when loaded.
         """
         filepath = get_filepath()
-        ide_content = read_external_file('/'+script_name, filepath)
+        ide_content = read_external_file(script_name, filepath)
         id_ide = generate_id_ide(ide_content)
 
         if (max_from_file := get_max_from_file(ide_content)) != "":
@@ -509,7 +1456,6 @@ $(document).ready(launchDebian());
         )
         div_exercise += insert_corr_content(editor_name, ide_corr_content, key_ide)
         div_exercise += insert_remark_file(script_name, key_ide)
-
         return div_exercise
 
     @env.macro
@@ -552,10 +1498,10 @@ $(document).ready(launchDebian());
     @env.macro
     def qcm(list_answers, list_correct, opts=None, shuffle=True, single=True):
         # single -> une seule question de QCM
-        print("opts", opts)
+        #print("opts", opts)
         if type(list_correct) == int:
             list_correct = [list_correct]
-        print("liste", list_correct, type(list_correct))
+        #print("liste", list_correct, type(list_correct))
         list_correct = list(
             map(lambda x: x - 1, list_correct)
         )  # back to 0 to n-1 indexing
@@ -585,7 +1531,7 @@ $(document).ready(launchDebian());
         prefix = "data-var-"
         variable_part = ""
         if opts != None:
-            print("opts", opts, type(opts))
+            #print("opts", opts, type(opts))
             for clé in opts:
                 variable_part += f"""{prefix}{clé} = "{opts[clé]}" """
         html_element = f"""<div class="wrapper_qcm" id = "qcm_{id}" data-n-correct = {len(list_correct)} data-shuffle = {1 if shuffle else 0} {variable_part}>"""
@@ -628,7 +1574,7 @@ $(document).ready(launchDebian());
             content = list(map(lambda x: x[:-1], f.readlines()))
             header = content.pop(0).split(sep)
             csv_file = []
-            print(header)
+            #print(header)
             for ligne in content:
                 split_ligne = ligne.split(sep)
                 dico = {
@@ -734,7 +1680,7 @@ $(document).ready(launchDebian());
             list_correct = entry[2]
             dictionnaire_var = entry[3]
 
-            print(entry, dictionnaire_var)
+            #print(entry, dictionnaire_var)
 
             html_element += f"<div class = 'setQCM'>"
             html_element += f"<span class = 'questionQCM arithmatex' data-nq = {i+1}>{latexify(question)}</span>"

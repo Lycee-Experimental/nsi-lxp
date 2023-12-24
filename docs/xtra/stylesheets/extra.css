@@ -1,3 +1,47 @@
+/* pour appli tri */
+
+#bouton-melange,
+#bouton-lancer {
+    background-color: rgb(44, 151, 222);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-align: center;
+    min-width: 15%;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    display: inline-block;
+}
+
+#bouton-melange:hover {
+    background-color: rgb(16, 73, 186)
+}
+
+#bouton-lancer {
+    background-color: rgb(0, 168, 64);
+}
+
+#bouton-lancer:hover {
+    background-color: rgb(37, 130, 73);
+}
+
+#tableau{
+    font-family: 'Courier New', Courier, monospace;
+    height: 2.5em;
+    width: 80%;
+    border: 1px solid;
+    color: black;
+    font-size: 105%;
+}
+
+
+#canvas {
+    display: block;
+    margin: auto;
+}
+
+
 /* center les tableaux */
 .md-typeset__table, .md-typeset__scrollwrap {
   margin: 0 auto; 

@@ -1,0 +1,6 @@
+nav:
+    - index.md
+    - 1️⃣ Entiers positifs: entier-positif.md
+    - 1️⃣ Entiers signés: entier-negatif.md
+    - 1️⃣ Nombres réels: non-entier.md
+    - 1️⃣ Caractères: caractere.md   
