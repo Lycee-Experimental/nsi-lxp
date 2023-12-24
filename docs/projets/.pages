@@ -1,6 +1,7 @@
 nav:
     - Introduction: index.md
     - Le dépot Git du LXP: git
-    - Django-LXP: djangolxp
     - Jeux vidéos: jeu-video
+    - Lumières DMX: dmx
+    - Django-LXP: djangolxp
     - Drum-LXP: drumxp
