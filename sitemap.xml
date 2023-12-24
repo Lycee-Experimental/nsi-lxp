@@ -1646,6 +1646,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://nsi.lycee-experimental.org/projets/dmx/</loc>
+         <lastmod>2023-12-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://nsi.lycee-experimental.org/projets/drumxp/</loc>
          <lastmod>2023-12-24</lastmod>
          <changefreq>daily</changefreq>
