@@ -35,5 +35,5 @@
 
 ## Quiz
 
-{{quiz("outils/quiz/sources/Histoire de l'informatique (Première).md",20)}}
+{{quiz("docs/outils/quiz/sources/Histoire de l'informatique (Première).md",20)}}
 

@@ -1,1 +1,1 @@
-{{quiz("outils/quiz/sources/Histoire de l'informatique (Terminale).md")}}
+{{quiz("docs/outils/quiz/sources/Histoire de l'informatique (Terminale).md")}}
