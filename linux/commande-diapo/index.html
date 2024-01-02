@@ -531,8 +531,9 @@ répertoires contenu dans un répertoire.
     // More info about initialization & config:
     // - https://revealjs.com/initialization/
     // - https://revealjs.com/config/
-    Reveal.initialize({
-        //embedded: true,
+    Reveal.initialize({ plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+ });
+    /*
         width: '100%',
         height: '100%',
         // Factor of the display size that should remain empty around
@@ -541,11 +542,9 @@ répertoires contenu dans un répertoire.
         // Bounds for smallest/largest possible scale to apply to content
         minScale: 0.2,
         maxScale: 2.0,
-        hash: true,
-        // Learn about plugins: https://revealjs.com/plugins/
-        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+        hash: true
     });
-
+/*
     //https://stackoverflow.com/questions/35237862/best-way-to-handle-overflowing-reveal-js-slide
     function resetSlideScrolling(slide) {
     slide.classList.remove('scrollable-slide');
@@ -567,6 +566,7 @@ répertoires contenu dans un répertoire.
         }
         handleSlideScrolling(event.currentSlide);
     });
+*/
 </script>
 </body>
 </html>
