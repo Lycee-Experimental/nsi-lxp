@@ -1,6 +1,6 @@
 site_name: NSI-LXP
 site_description: 'Les sciences du numériques au Lycée Expérimental'
-site_url: 'https://nsi.lycee-experimental.org/'
+site_url: https://nsi.lycee-experimental.org
 site_dir: docs-build
 repo_url: https://github.com/lycee-experimental/nsi-lxp
 docs_dir: docs
@@ -60,9 +60,17 @@ markdown_extensions:
   - pymdownx.caret # Passage ^^souligné^^ ou en ^exposant^.
   - pymdownx.mark # Passage ==surligné==.
   - pymdownx.tilde # Passage ~~barré~~ ou en ~indice~.
-  - pymdownx.highlight # Coloration syntaxique du code
+  - pymdownx.highlight: # Coloration syntaxique du code
+        auto_title: true
+        auto_title_map:
+            "Python": "🐍 Script Python"
+            "Python Console Session": "🐍 Console Python"
+            "Text Only": "📋 Texte"
+            "E-mail": "📥 Entrée"
+            "Text Output": "📤 Sortie"
+            "JSON": "📑 Données json"
   - pymdownx.inlinehilite # pour  `#!python  <python en ligne>`
-  - pymdownx.snippets
+  - pymdownx.snippets # Inclusion de fichiers externe.
   - pymdownx.tasklist: # Cases à cocher  - [ ]  et - [x]
       custom_checkbox: false #   avec cases d'origine
       clickable_checkbox: true #   et cliquables.
@@ -91,6 +99,7 @@ markdown_extensions:
   - toc:
       permalink: ⚓︎
       toc_depth: 3
+  - meta
 
 extra:
   social:
@@ -104,7 +113,7 @@ extra:
 
 plugins:
   - search
-  - mkdocs-video
+  #- mkdocs-video
   - awesome-pages:
       filename: .pages
       collapse_single_pages: true
