@@ -70,7 +70,7 @@ Donc $243_{10}=11110011_2$
         1
         ```
 
-    {{ IDE("encodage/binaire") }}
+    {{ IDE("scripts/binaire") }}
 
 
 ## Le système hexadécimal
