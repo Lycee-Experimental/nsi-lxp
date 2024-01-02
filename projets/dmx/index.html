@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3999,7 +3998,7 @@
   
 
 
-<div><h1 id="controlleurs-dmx">Controlleurs DMX<a class="headerlink" href="#controlleurs-dmx" title="Permanent link">⚓︎</a></h1>
+<h1 id="controlleurs-dmx">Controlleurs DMX<a class="headerlink" href="#controlleurs-dmx" title="Permanent link">⚓︎</a></h1>
 <p>Le <strong>DMX512</strong> (Digital Multiplexing) est une norme de transmission de données utilisée pour le contrôle de l'éclairage et des effets de scène dans le spectacle.</p>
 <p>Le projet est de fabriquer des contrôleurs DMX pour piloter nos lumières.</p>
 <h2 id="circuitpython">Circuitpython<a class="headerlink" href="#circuitpython" title="Permanent link">⚓︎</a></h2>
@@ -4007,7 +4006,7 @@
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">⚓︎</a></h3>
 <p>L'installation se fait en copiant un fichier UF2 sur le microcontroleur démarrer en mode boot.</p>
 <p>Télécharger l'UF2 :</p>
-<div class="highlight"><pre><span></span><code>- pour le [Raspberry Pico](https://circuitpython.org/board/raspberry_pi_pico/)
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>- pour le [Raspberry Pico](https://circuitpython.org/board/raspberry_pi_pico/)
 
 - pour le [LOLIN S3](https://circuitpython.org/board/lolin_s3/)
 </code></pre></div>
@@ -4029,18 +4028,18 @@
 </div>
 <ul>
 <li>Pour les installer facilement, installer l'outil <code>circup</code>
-<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>circup
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>circup
 </code></pre></div></li>
 </ul>
 <p>Une fois votre board CIRCUITPY connectée, l'installation d'une librairie se fait en une commande.</p>
 <p>Par exemple, pour installer la librairie <code>adafruit_ble_radio</code> :</p>
-<div class="highlight"><pre><span></span><code>circup<span class="w"> </span>install<span class="w"> </span>adafruit_ble_radio
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code>circup<span class="w"> </span>install<span class="w"> </span>adafruit_ble_radio
 </code></pre></div>
 <h2 id="communications-dmx">Communications DMX<a class="headerlink" href="#communications-dmx" title="Permanent link">⚓︎</a></h2>
 <h3 id="cablage">Cablage<a class="headerlink" href="#cablage" title="Permanent link">⚓︎</a></h3>
 <p>Le protocole DMX512 utilise un protocole de type RS-485 qui permet des communications sur des plus longues distances par le recours à un signal symétrisé (2 pins A + B, plus le GND).</p>
 <p>La puce <strong>MAX485</strong> permet de convertir un signal tx habituel en un signal rs-485</p>
-<p><img alt="" src="http://hobbycomponents.com/images/forum/RS485_Module_HCMODU0081_Diagram.png"></p>
+<p><img alt="" src="http://hobbycomponents.com/images/forum/RS485_Module_HCMODU0081_Diagram.png" /></p>
 <p><strong>Mode Emmission</strong></p>
 <blockquote>
 <p>RE &amp; DE -&gt; Gnd
@@ -4057,7 +4056,7 @@ DI -&gt; TX</p>
 <li>Cloner le dépot et copier le dossier <code>dmx_transmitter</code> dans le dossier <code>lib</code></li>
 </ul>
 <h4 id="exemple-dutilisation">Exemple d'utilisation<a class="headerlink" href="#exemple-dutilisation" title="Permanent link">⚓︎</a></h4>
-<div class="highlight"><pre><span></span><code><span class="s2">"Exemple de clignottement d'une lampe DMX."</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="s2">&quot;Exemple de clignottement d&#39;une lampe DMX.&quot;</span>
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">import</span> <span class="nn">board</span>
 <span class="kn">from</span> <span class="nn">dmx_transmitter</span> <span class="kn">import</span> <span class="n">dmx_transmitter</span>
@@ -4081,7 +4080,7 @@ DI -&gt; TX</p>
 </code></pre></div>
 <h2 id="peripheriques-dentree">Périphériques d'entrée<a class="headerlink" href="#peripheriques-dentree" title="Permanent link">⚓︎</a></h2>
 <h3 id="joystics-analogique-a-2-axes">Joystics analogique à 2 axes<a class="headerlink" href="#joystics-analogique-a-2-axes" title="Permanent link">⚓︎</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">import</span> <span class="nn">analogio</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">analogio</span><span class="o">.</span><span class="n">AnalogIn</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">A0</span><span class="p">)</span>
 <span class="n">ay</span> <span class="o">=</span> <span class="n">analogio</span><span class="o">.</span><span class="n">AnalogIn</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">A1</span><span class="p">)</span>
@@ -4092,7 +4091,7 @@ DI -&gt; TX</p>
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">x</span><span class="o">=</span><span class="n">range_map</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4095</span><span class="p">,</span> <span class="o">-</span><span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">)</span>
     <span class="n">y</span><span class="o">=</span><span class="n">range_map</span><span class="p">(</span><span class="n">ay</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4095</span><span class="p">,</span> <span class="o">-</span><span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"x"</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">"y"</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
 </code></pre></div>
 <div class="admonition note">
@@ -4101,10 +4100,10 @@ DI -&gt; TX</p>
 </div>
 <h3 id="encodeurs-rotatifs">Encodeurs rotatifs<a class="headerlink" href="#encodeurs-rotatifs" title="Permanent link">⚓︎</a></h3>
 <p>Contrairement aux potentiomètres et faders, les encodeurs rotatifs permettrons de changer dynamiquement les canaux DMX, en passant d'un preset à l'autre, et sont minis d'une fonction bouton (pour enregistrer la valeur dans le preset ?).</p>
-<p><img alt="" src="https://cdn-learn.adafruit.com/assets/assets/000/044/661/original/rotary_encoder_bb.png?1486239862"></p>
+<p><img alt="" src="https://cdn-learn.adafruit.com/assets/assets/000/044/661/original/rotary_encoder_bb.png?1486239862" /></p>
 <p>Leur utilisation avec circuitpython est détaillée <a href="https://learn.adafruit.com/rotary-encoder/hardware">ici</a></p>
 <h4 id="exemple-dutilisation_1">Exemple d'utilisation<a class="headerlink" href="#exemple-dutilisation_1" title="Permanent link">⚓︎</a></h4>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">rotaryio</span> <span class="c1">#pour l'ncodeur rotatif</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">rotaryio</span> <span class="c1">#pour l&#39;ncodeur rotatif</span>
 <span class="kn">import</span> <span class="nn">digitalio</span> <span class="c1">#pour le bouton</span>
 <span class="kn">import</span> <span class="nn">board</span>
 
@@ -4123,39 +4122,39 @@ DI -&gt; TX</p>
         <span class="nb">print</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>
     <span class="n">last_position</span> <span class="o">=</span> <span class="n">position</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">button</span><span class="o">.</span><span class="n">value</span> <span class="ow">and</span> <span class="n">button_state</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">button_state</span> <span class="o">=</span> <span class="s2">"pressed"</span>
-    <span class="k">if</span> <span class="n">button</span><span class="o">.</span><span class="n">value</span> <span class="ow">and</span> <span class="n">button_state</span> <span class="o">==</span> <span class="s2">"pressed"</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"Appui sur le bouton."</span><span class="p">)</span>
+        <span class="n">button_state</span> <span class="o">=</span> <span class="s2">&quot;pressed&quot;</span>
+    <span class="k">if</span> <span class="n">button</span><span class="o">.</span><span class="n">value</span> <span class="ow">and</span> <span class="n">button_state</span> <span class="o">==</span> <span class="s2">&quot;pressed&quot;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Appui sur le bouton.&quot;</span><span class="p">)</span>
         <span class="n">button_state</span> <span class="o">=</span> <span class="kc">None</span>
 </code></pre></div>
 <h3 id="ecran-ssd1306">Ecran SSD1306<a class="headerlink" href="#ecran-ssd1306" title="Permanent link">⚓︎</a></h3>
 <h4 id="exemple-dutilisation_2">Exemple d'utilisation<a class="headerlink" href="#exemple-dutilisation_2" title="Permanent link">⚓︎</a></h4>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">displayio</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">displayio</span>
 <span class="kn">import</span> <span class="nn">terminalio</span>
 <span class="kn">import</span> <span class="nn">adafruit_displayio_ssd1306</span>
 
-<span class="c1"># On efface le contenu de l'écran</span>
+<span class="c1"># On efface le contenu de l&#39;écran</span>
 <span class="n">displayio</span><span class="o">.</span><span class="n">release_displays</span><span class="p">()</span>
 
 <span class="c1"># On déclare un port I2C sur les pins PG0 et GP0</span>
 <span class="n">i2c</span> <span class="o">=</span> <span class="n">busio</span><span class="o">.</span><span class="n">I2C</span><span class="p">(</span><span class="n">scl</span><span class="o">=</span><span class="n">board</span><span class="o">.</span><span class="n">GP1</span><span class="p">,</span> <span class="n">sda</span><span class="o">=</span><span class="n">board</span><span class="o">.</span><span class="n">GP0</span><span class="p">)</span>
 
-<span class="c1"># On déclare notre écran de 128x32 pixels sur l'I2C à l'addresse 0x3C</span>
+<span class="c1"># On déclare notre écran de 128x32 pixels sur l&#39;I2C à l&#39;addresse 0x3C</span>
 <span class="n">display_bus</span> <span class="o">=</span> <span class="n">displayio</span><span class="o">.</span><span class="n">I2CDisplay</span><span class="p">(</span><span class="n">i2c</span><span class="p">,</span> <span class="n">device_address</span><span class="o">=</span><span class="mh">0x3C</span><span class="p">)</span>
 <span class="n">display</span> <span class="o">=</span> <span class="n">adafruit_displayio_ssd1306</span><span class="o">.</span><span class="n">SSD1306</span><span class="p">(</span><span class="n">display_bus</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span>
-<span class="c1"># On gère l'affichage du texte sur l'écran</span>
+<span class="c1"># On gère l&#39;affichage du texte sur l&#39;écran</span>
 <span class="n">text_group</span> <span class="o">=</span> <span class="n">displayio</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span><span class="n">max_size</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 <span class="c1"># On écrit sur un ligne située à 3 pixel du haut</span>
-<span class="n">text_area</span> <span class="o">=</span> <span class="n">label</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">terminalio</span><span class="o">.</span><span class="n">FONT</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">"Mon texte"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="mh">0xFFFFFF</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">text_area</span> <span class="o">=</span> <span class="n">label</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">terminalio</span><span class="o">.</span><span class="n">FONT</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Mon texte&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="mh">0xFFFFFF</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">text_group</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">text_area</span><span class="p">)</span>
 <span class="c1"># On écrit sur un ligne située à 14 pixel du haut</span>
-<span class="n">text_area</span> <span class="o">=</span> <span class="n">label</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">terminalio</span><span class="o">.</span><span class="n">FONT</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">"Mon 2ème texte"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="mh">0xFFFFFF</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">text_area</span> <span class="o">=</span> <span class="n">label</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">terminalio</span><span class="o">.</span><span class="n">FONT</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Mon 2ème texte&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="mh">0xFFFFFF</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 <span class="n">text_group</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">text_area</span><span class="p">)</span>
 <span class="c1"># On écrit sur une ligne située à 25 pixel du haut</span>
-<span class="n">text_area</span> <span class="o">=</span> <span class="n">label</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">terminalio</span><span class="o">.</span><span class="n">FONT</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">"Ma 3ème ligne"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="mh">0xFFFFFF</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+<span class="n">text_area</span> <span class="o">=</span> <span class="n">label</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">terminalio</span><span class="o">.</span><span class="n">FONT</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Ma 3ème ligne&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="mh">0xFFFFFF</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
 <span class="n">text_group</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">text_area</span><span class="p">)</span>
 <span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">text_group</span><span class="p">)</span>
-</code></pre></div></div>
+</code></pre></div>
 
 
 

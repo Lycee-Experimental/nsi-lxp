@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,7 +3856,7 @@
 
   <h1>Enonce</h1>
 
-<div><p>La fonction <code>rendu_monnaie</code> prend en paramètres deux nombres entiers
+<p>La fonction <code>rendu_monnaie</code> prend en paramètres deux nombres entiers
 positifs <code>somme_due</code> et <code>somme_versee</code> et elle permet de procéder au rendu de monnaie de la
 différence <code>somme_versee – somme_due</code> pour des achats effectués avec le système de pièces de
 la zone Euro. On utilise pour cela un algorithme glouton qui commence par rendre le maximum de
@@ -3872,7 +3871,7 @@ renvoie le tableau
 <code>[20, 20, 5, 2, 1]</code>.</p>
 <p>En effet, la somme à rendre est de <code>48</code> euros soit <code>20 + 20 + 5 + 2 + 1</code>.</p>
 <p>Le code de la fonction <code>rendu_monnaie</code> est donné ci-dessous :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3897,11 +3896,11 @@ renvoie le tableau
     <span class="k">return</span> <span class="n">rendu</span>
 </code></pre></div></td></tr></table></div>
 <p>Compléter ce code et le tester :
-</p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">rendu_monnaie</span><span class="p">(</span><span class="mi">700</span><span class="p">,</span><span class="mi">700</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">rendu_monnaie</span><span class="p">(</span><span class="mi">700</span><span class="p">,</span><span class="mi">700</span><span class="p">)</span>
 <span class="p">[]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">rendu_monnaie</span><span class="p">(</span><span class="mi">102</span><span class="p">,</span><span class="mi">500</span><span class="p">)</span>
 <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-</code></pre></div></div>
+</code></pre></div></p>
 
 
 

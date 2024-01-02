@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,7 +3856,7 @@
 
   <h1>Enonce</h1>
 
-<div><p>On rappelle que :</p>
+<p>On rappelle que :</p>
 <ul>
 <li>le nombre <span class="arithmatex">\(a^n\)</span> est le nombre <span class="arithmatex">\(a \times a \times a \times \dots \times a\)</span>, où le facteur <span class="arithmatex">\(a\)</span> apparaît <span class="arithmatex">\(n\)</span> fois,</li>
 <li>en langage Python, l’instruction <code>t[-1]</code> permet d’accéder au dernier élément du
@@ -3871,7 +3870,7 @@ un nombre entier <code>a</code>, un entier strictement positif <code>n</code> et
 argument un nombre entier <code>a</code> supérieur ou égal à 2 et un entier <code>borne</code>, et qui renvoie la
 liste de ses puissances, à l’exclusion de <span class="arithmatex">\(\rm{a^0}\)</span>, strictement inférieures à <code>borne</code>.</p>
 <p>Exemples :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">liste_puissances</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">liste_puissances</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">243</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">liste_puissances</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
@@ -3881,7 +3880,7 @@ liste de ses puissances, à l’exclusion de <span class="arithmatex">\(\rm{a^0}
 <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">liste_puissances_borne</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 <span class="p">[]</span>
-</code></pre></div></div>
+</code></pre></div>
 
 
 

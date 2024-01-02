@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,7 +3856,7 @@
 
   <h1>Correction</h1>
 
-<div><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3876,7 +3875,7 @@
 <span class="normal">17</span>
 <span class="normal">18</span>
 <span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">urne</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'A'</span><span class="p">,</span> <span class="s1">'A'</span><span class="p">,</span> <span class="s1">'A'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">]</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">urne</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">]</span>
 
 <span class="k">def</span> <span class="nf">depouille</span><span class="p">(</span><span class="n">urne</span><span class="p">):</span>
 <span class="hll">    <span class="n">resultat</span> <span class="o">=</span> <span class="p">{}</span>
@@ -3888,7 +3887,7 @@
 </span>    <span class="k">return</span> <span class="n">resultat</span>
 
 <span class="k">def</span> <span class="nf">vainqueur</span><span class="p">(</span><span class="n">election</span><span class="p">):</span>
-    <span class="n">vainqueur</span> <span class="o">=</span> <span class="s1">''</span> <span class="c1">#(1)</span>
+    <span class="n">vainqueur</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="c1">#(1)</span>
     <span class="n">nmax</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">candidat</span> <span class="ow">in</span> <span class="n">election</span><span class="p">:</span>
 <span class="hll">        <span class="k">if</span> <span class="n">election</span><span class="p">[</span><span class="n">candidat</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">nmax</span> <span class="p">:</span>
@@ -3900,7 +3899,7 @@
 <ol>
 <li>Il est pourtant très déconseillé de nommer une variable avec le même nom que la fonction qui la contient...</li>
 <li>Cette variable <code>vainqueur</code> est inutile, on ne s'en sert pas dans l'élaboration de la liste finale.</li>
-</ol></div>
+</ol>
 
 
 

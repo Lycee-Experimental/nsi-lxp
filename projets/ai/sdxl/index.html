@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3864,7 +3863,7 @@
   
 
 
-<div><h1 id="stable-diffusion-pour-generer-des-images">Stable Diffusion pour générer des images<a class="headerlink" href="#stable-diffusion-pour-generer-des-images" title="Permanent link">⚓︎</a></h1>
+<h1 id="stable-diffusion-pour-generer-des-images">Stable Diffusion pour générer des images<a class="headerlink" href="#stable-diffusion-pour-generer-des-images" title="Permanent link">⚓︎</a></h1>
 <p>Stable Diffusion est une série de modèles de génération d'images open-source développés par <a href="https://github.com/Stability-AI/generative-models">Stability AI</a></p>
 <p>En particulier, le 26 juillet 2023 ont été diffusés les modèles <strong>SDXL 1.0</strong>, plus performants que les précédents.</p>
 <h2 id="utilisation">Utilisation<a class="headerlink" href="#utilisation" title="Permanent link">⚓︎</a></h2>
@@ -3873,7 +3872,7 @@
 <h4 id="installation-avec-un-gpu-amd">Installation avec un GPU AMD<a class="headerlink" href="#installation-avec-un-gpu-amd" title="Permanent link">⚓︎</a></h4>
 <h5 id="installation-de-amdgpu-550">Installation de Amdgpu 5.5.0<a class="headerlink" href="#installation-de-amdgpu-550" title="Permanent link">⚓︎</a></h5>
 <p>Les versions ultérieures ne marchent pas ? <a href="https://github.com/xuhuisheng/rocm-gfx803/issues/27#issuecomment-1585514854">voir ici</a></p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Récupération de l'installateur</span>
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code><span class="c1"># Récupération de l&#39;installateur</span>
 wget<span class="w"> </span>https://repo.radeon.com/amdgpu-install/5.5/ubuntu/jammy/amdgpu-install_5.5.50500-1_all.deb
 sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>amdgpu-install_5.5.50500-1_all.deb
 <span class="c1"># Instalation des driver avec le support de rocm</span>
@@ -3891,19 +3890,19 @@ sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> <
 <ul>
 <li>Ajouter ces variables d'environnement puis <strong>redémarrer</strong> l'ordinateur :</li>
 </ul>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>-i
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>-i
 sudo<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">ROC_ENABLE_PRE_VEGA</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>/etc/environment
 sudo<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">HSA_OVERRIDE_GFX_VERSION</span><span class="o">=</span><span class="m">8</span>.0.3<span class="w"> </span>&gt;&gt;<span class="w"> </span>/etc/environment
 </code></pre></div>
 <ul>
 <li>Compiler pytorch</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span>
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code><span class="nb">cd</span>
 <span class="c1"># Installation des dépendances</span>
 sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libopenmpi3<span class="w"> </span>libstdc++-12-dev<span class="w"> </span>libdnnl-dev<span class="w"> </span>ninja-build<span class="w"> </span>libopenblas-dev<span class="w"> </span>libpng-dev<span class="w"> </span>libjpeg-dev<span class="w"> </span>cmake<span class="w"> </span>build-essential<span class="w"> </span>git
 <span class="c1"># Récupération du code source de la version 2.0.1</span>
 git<span class="w"> </span>clone<span class="w"> </span>https://github.com/pytorch/pytorch.git<span class="w"> </span>-b<span class="w"> </span>v2.0.1
-<span class="c1"># patcher le code pour éviter le bug : multiple definition of `gloo::rendezvous::Store::kDefaultTimeout'</span>
+<span class="c1"># patcher le code pour éviter le bug : multiple definition of `gloo::rendezvous::Store::kDefaultTimeout&#39;</span>
 <span class="c1">#https://github.com/pytorch/pytorch/issues/90448#issuecomment-1670918495</span>
 patch<span class="w"> </span>-p1<span class="w"> </span><span class="s">&lt;&lt;EOF</span>
 <span class="s">--- a/torch/csrc/distributed/c10d/ProcessGroupGloo.hpp</span>
@@ -3918,7 +3917,7 @@ patch<span class="w"> </span>-p1<span class="w"> </span><span class="s">&lt;&lt;
 
 <span class="s">     void wait(</span>
 <span class="s">EOF</span>
-<span class="c1"># Définition de variables d'environnement</span>
+<span class="c1"># Définition de variables d&#39;environnement</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>/opt/rocm/bin:<span class="nv">$PATH</span><span class="w"> </span><span class="nv">ROCM_PATH</span><span class="o">=</span>/opt/rocm<span class="w"> </span><span class="nv">HIP_PATH</span><span class="o">=</span>/opt/rocm/hip
 <span class="nb">export</span><span class="w"> </span><span class="nv">PYTORCH_ROCM_ARCH</span><span class="o">=</span>gfx803
 <span class="nb">export</span><span class="w"> </span><span class="nv">PYTORCH_BUILD_VERSION</span><span class="o">=</span><span class="m">2</span>.0.1<span class="w"> </span><span class="nv">PYTORCH_BUILD_NUMBER</span><span class="o">=</span><span class="m">1</span>
@@ -3932,7 +3931,7 @@ pip3<span class="w"> </span>install<span class="w"> </span>dist/torch-1.13.1-cp3
 <ul>
 <li>Compilation et installation de torchvision</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span>
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code><span class="nb">cd</span>
 git<span class="w"> </span>clone<span class="w"> </span>https://github.com/pytorch/vision.git<span class="w"> </span>-b<span class="w"> </span>v0.15.2
 <span class="nb">cd</span><span class="w"> </span>vision
 <span class="nb">export</span><span class="w"> </span><span class="nv">BUILD_VERSION</span><span class="o">=</span><span class="m">0</span>.15.2
@@ -3945,7 +3944,7 @@ pip3<span class="w"> </span>install<span class="w"> </span>dist/torchvision-0.14
 <p>https://github.com/lllyasviel/Fooocus</p>
 <h4 id="automatic1111-stable-diffusion-webui">AUTOMATIC1111 Stable diffusion webui<a class="headerlink" href="#automatic1111-stable-diffusion-webui" title="Permanent link">⚓︎</a></h4>
 <p>Les fonctionnalités sont décrites <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features">ici</a></p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/AUTOMATIC1111/stable-diffusion-webui
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/AUTOMATIC1111/stable-diffusion-webui
 <span class="nb">cd</span><span class="w"> </span>stable-diffusion-webui/models/Stable-diffusion
 wget<span class="w"> </span>https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors
 wget<span class="w"> </span>https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors
@@ -4070,7 +4069,7 @@ Utilisation de Dreamboot pour créer un modèle LoRA</p>
 <h6 id="blogs">Blogs<a class="headerlink" href="#blogs" title="Permanent link">⚓︎</a></h6>
 <ul>
 <li><a href="https://aituts.com">Aituts</a></li>
-</ul></div>
+</ul>
 
 
 

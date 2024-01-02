@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3979,7 +3978,7 @@
   
 
 
-<div><h1 id="bonnes-pratiques-logicielles">Bonnes pratiques Logicielles<a class="headerlink" href="#bonnes-pratiques-logicielles" title="Permanent link">⚓︎</a></h1>
+<h1 id="bonnes-pratiques-logicielles">Bonnes pratiques Logicielles<a class="headerlink" href="#bonnes-pratiques-logicielles" title="Permanent link">⚓︎</a></h1>
 <details class="conclu">
 <summary>Programme</summary>
 <table>
@@ -4005,7 +4004,7 @@
 <h3 id="regles-explicites-du-pep8">Règles explicites du PEP8<a class="headerlink" href="#regles-explicites-du-pep8" title="Permanent link">⚓︎</a></h3>
 <p>Les règles de syntaxe de Python sont définies dans le document PEP8 (Python Enhancement Proposal) rédigé entre autres par <strong>Guido van Rossum</strong> lui-même.</p>
 <p>A consulter sur <a href="https://www.python.org/dev/peps/pep-0008/" target="_blank">https://www.python.org/dev/peps/pep-0008/</a></p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><input id="__tabbed_1_5" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Nommage</label><label for="__tabbed_1_2">Espaces</label><label for="__tabbed_1_3">Longueur des lignes</label><label for="__tabbed_1_4">Indentation</label><label for="__tabbed_1_5">Saut de ligne</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Nommage</label><label for="__tabbed_1_2">Espaces</label><label for="__tabbed_1_3">Longueur des lignes</label><label for="__tabbed_1_4">Indentation</label><label for="__tabbed_1_5">Saut de ligne</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -4020,7 +4019,7 @@
 <li>Pas d'espace à l'intérieur de <code>()</code>, <code>[]</code> ou <code>{}</code></li>
 <li>Pas d'espace avant <code>:</code> et <code>,</code> mais on en met <strong>après</strong>.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">*</span><span class="n">y</span>
 <span class="n">c</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">)</span>
@@ -4038,10 +4037,10 @@
 <li>L'indentation</li>
 <li>Des parenthèses</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">dico</span> <span class="p">{</span>
-    <span class="mi">0</span><span class="p">:</span> <span class="s1">'zero'</span><span class="p">,</span>
-    <span class="mi">1</span><span class="p">:</span> <span class="s1">'un'</span><span class="p">,</span>
-    <span class="mi">2</span><span class="p">:</span> <span class="s1">'deux'</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">dico</span> <span class="p">{</span>
+    <span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;zero&#39;</span><span class="p">,</span>
+    <span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;un&#39;</span><span class="p">,</span>
+    <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;deux&#39;</span>
 <span class="p">}</span>
 
 <span class="kn">from</span> <span class="nn">module</span> <span class="kn">import</span> <span class="p">(</span><span class="n">package1</span><span class="p">,</span> <span class="n">package2</span><span class="p">,</span> <span class="n">package3</span><span class="p">,</span>
@@ -4056,7 +4055,7 @@
 <li>2 lignes entre les imports et les fonctions, puis entre chaque définition de fonction</li>
 <li>Mais une seule ligne entre chaque méthode d'une classe (voir Chapitre 2)</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">math</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">math</span>
 
 
 <span class="k">def</span> <span class="nf">f1</span><span class="p">():</span>
@@ -4083,8 +4082,8 @@
 <p><strong>Documenter</strong> chaque fonction avec un prototype (<em>docstring</em>). Ne pas hésiter à inclure un exemple simple et concret pour les fonctions compliquées</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">calcul_moyenne</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-<span class="w">  </span><span class="sd">"""</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">calcul_moyenne</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">  Calcul de la moyenne de x et y</span>
 <span class="sd">  </span>
 <span class="sd">  param x: première valeur (int ou float)</span>
@@ -4095,7 +4094,7 @@
 <span class="sd">  </span>
 <span class="sd">  &gt;&gt;&gt; calcul_moyenne(4, 7)</span>
 <span class="sd">  5.5</span>
-<span class="sd">  """</span>
+<span class="sd">  &quot;&quot;&quot;</span>
 </code></pre></div>
 <ul>
 <li><strong>Anticiper et gérer les bugs</strong> en levant des exceptions et en incluant des test les plus complets possibles de manière à avoir la meilleur couverture de code (pourcentage de code couvert par les tests) possible</li>
@@ -4105,7 +4104,7 @@
 <details class="note">
 <summary>The zen of Python</summary>
 <p>Le poème "The zen of Python" écrit par Timp Peters résume la philosopie d'un bon programmeur en Python et est accessible par un simple import (surnommé <em>oeuf de Pâques</em>)</p>
-<div class="highlight"><pre><span></span><code><span class="go">&gt;&gt;&gt; import this</span>
+<div class="highlight"><span class="filename">Bash Session</span><pre><span></span><code><span class="go">&gt;&gt;&gt; import this</span>
 
 <span class="go">The Zen of Python, by Tim Peters</span>
 
@@ -4116,18 +4115,18 @@
 <span class="go">Flat is better than nested.</span>
 <span class="go">Sparse is better than dense.</span>
 <span class="go">Readability counts.</span>
-<span class="go">Special cases aren't special enough to break the rules.</span>
+<span class="go">Special cases aren&#39;t special enough to break the rules.</span>
 <span class="go">Although practicality beats purity.</span>
 <span class="go">Errors should never pass silently.</span>
 <span class="go">Unless explicitly silenced.</span>
 <span class="go">In the face of ambiguity, refuse the temptation to guess.</span>
 <span class="go">There should be one-- and preferably only one --obvious way to do it.</span>
-<span class="go">Although that way may not be obvious at first unless you're Dutch.</span>
+<span class="go">Although that way may not be obvious at first unless you&#39;re Dutch.</span>
 <span class="go">Now is better than never.</span>
 <span class="go">Although never is often better than *right* now.</span>
-<span class="go">If the implementation is hard to explain, it's a bad idea.</span>
+<span class="go">If the implementation is hard to explain, it&#39;s a bad idea.</span>
 <span class="go">If the implementation is easy to explain, it may be a good idea.</span>
-<span class="go">Namespaces are one honking great idea -- let's do more of those!</span>
+<span class="go">Namespaces are one honking great idea -- let&#39;s do more of those!</span>
 </code></pre></div>
 <p>Et la version française pour les non-anglophones :</p>
 <p><a href="https://fr.wikipedia.org/wiki/Zen_de_Python" target="_blank">https://fr.wikipedia.org/wiki/Zen_de_Python</a></p>
@@ -4146,10 +4145,10 @@
 <summary>Instruction <code>help()</code></summary>
 <p>L'instruction <code>help(nom_de_la_fonction)</code> ou <code>help(module)</code> premet d'obtenir la liste des fonctions contenues dans ce module.</p>
 <p>Testez dans la cellule ci-dessous, les lignes suivantes et analysez-les:</p>
-<p></p><div onclick='start_term("id11")' id="fake_id11" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id11" class="py_mk_hide"></div>
-<div class="highlight"><pre><span></span><code><span class="n">help</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
+<p><div onclick='start_term("id11")' id="fake_id11" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id11" class="py_mk_hide"></div></p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">help</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">math</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">math</span>
 
 <span class="n">help</span><span class="p">(</span><span class="n">math</span><span class="p">)</span>
 </code></pre></div>
@@ -4157,11 +4156,11 @@
 <details class="python">
 <summary>Instruction <code>dir()</code></summary>
 <p>Cette instruction permet de lister les attributs d'un objet (liste, tuple, dictionnaire, classe...).</p>
-<div class="highlight"><pre><span></span><code><span class="n">number1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">number1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">number1</span><span class="p">))</span>
 </code></pre></div>
-<p></p><div onclick='start_term("id12")' id="fake_id12" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id12" class="py_mk_hide"></div>
+<p><div onclick='start_term("id12")' id="fake_id12" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id12" class="py_mk_hide"></div></p>
 <p>Ici, une longue liste d'attributs apparaît.</p>
 <p>On s'aperçoit ainsi que l'on peut, entre autres :</p>
 <ul>
@@ -4169,12 +4168,12 @@
 <li>Trier une liste avec la méthode <code>sort</code></li>
 </ul>
 <p>Vérifiez tout cela avec :</p>
-<div class="highlight"><pre><span></span><code><span class="n">number1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">number1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">number1</span><span class="p">)</span>
 <span class="n">number1</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">number1</span><span class="p">)</span>
 </code></pre></div>
-<p></p><div onclick='start_term("id13")' id="fake_id13" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id13" class="py_mk_hide"></div>
+<p><div onclick='start_term("id13")' id="fake_id13" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id13" class="py_mk_hide"></div></p>
 </details>
 <div class="admonition info">
 <p class="admonition-title"><code>help()</code> et <code>dir()</code> en résumé</p>
@@ -4207,7 +4206,7 @@
 <summary>Notebook Jupyter</summary>
 <p><iframe src="/xtra/jupyterlite/lab/index.html" frameborder="0" scrolling="auto" style="width: 100%; height: 700px;"></iframe></p>
 </details>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">algos_classiques_listes</span> <span class="k">as</span> <span class="nn">al</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">algos_classiques_listes</span> <span class="k">as</span> <span class="nn">al</span>
 
 <span class="n">help</span><span class="p">(</span><span class="n">al</span><span class="o">.</span><span class="n">dans_liste</span><span class="p">)</span>
 
@@ -4223,7 +4222,7 @@
 
 <span class="nb">print</span><span class="p">(</span><span class="n">al</span><span class="o">.</span><span class="n">supp_liste</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>
 </code></pre></div>
-<p><a class="md-button" href="/xtra/jupyterlite/lab/index.html?fromURL=/notebooks/algos_classiques_listes.ipynb&amp;fromURL=/scripts/algos_classiques_listes.py" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span> Corrigé <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span></a></p>
+<p><a class="md-button" href="/xtra/jupyterlite/lab/index.html?fromURL=/notebooks/algos_classiques_listes.ipynb&fromURL=/scripts/algos_classiques_listes.py" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span> Corrigé <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span></a></p>
 </details>
 <h2 id="gestion-des-erreurs">Gestion des erreurs<a class="headerlink" href="#gestion-des-erreurs" title="Permanent link">⚓︎</a></h2>
 <p>L'erreur étant humaine, même les meilleurs programmeurs en commettent. Ce qui peut avoir de grosses conséquences, tant au niveau humain (crash de navette spatiale...), économique (retour de produits défectueux...) ou encore en terme d'image et/ou de crédibilité.</p>
@@ -4237,31 +4236,31 @@
 <h4 id="typage-dynamique">Typage dynamique<a class="headerlink" href="#typage-dynamique" title="Permanent link">⚓︎</a></h4>
 <p>Python est un langage à typage dynamique: il n'impose pas que le type des variables soit défini. Le type est alors déterminé à la volée au moment de l'interprétation du code. On peut donc à loisir changer le type de données d'une variable. Cela peut poser problème si on n'est pas prudent. D'autres langages, tels le C, Java ou Pascal sont à typage statique, donc nettement moins permissifs que Python.</p>
 <p>Testez et analysez ce programme :</p>
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="s2">"Hello World"</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;Hello World&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
 <span class="n">a</span> <span class="o">=</span> <span class="mi">12</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
 </code></pre></div>
-<div onclick='start_term("id14")' id="fake_id14" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div>
+<div onclick='start_term("id14")' id="fake_id14" class="py_mk_terminal_f"><label class="terminal"><span>>>> </span></label></div>
 <div id="id14" class="py_mk_hide"></div>
 
 <details class="question">
 <summary>Activité 2 - Typage dynamique</summary>
 <p>Python est un langage à typage dynamique : il n'impose pas que le type des variables soit défini. Le type est
 alors déterminé à la volée au moment de l'interprétation du code. On peut donc à loisir changer le type de donnée d'une variable. Cela peut poser problème si on n'est pas prudent.</p>
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="s1">'Hello world'</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;Hello world&#39;</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
 <span class="n">a</span> <span class="o">=</span> <span class="mi">12</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
 </code></pre></div>
 <p>D'autres langages, tels le C, Java ou Pascal sont à typage statique, donc nettement moins permissifs que Python.</p>
 <p>Corriger le programme ci-dessous :</p>
-<p></p><div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_2651410e10f2c751be2b0094529fd02d4d63b048" class="comment">###</span><div class="line" id="editor_2651410e10f2c751be2b0094529fd02d4d63b048"></div><div id="term_editor_2651410e10f2c751be2b0094529fd02d4d63b048" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_2651410e10f2c751be2b0094529fd02d4d63b048","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_2651410e10f2c751be2b0094529fd02d4d63b048","scripts/typage")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_2651410e10f2c751be2b0094529fd02d4d63b048').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_2651410e10f2c751be2b0094529fd02d4d63b048" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_2651410e10f2c751be2b0094529fd02d4d63b048")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_2651410e10f2c751be2b0094529fd02d4d63b048")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_2651410e10f2c751be2b0094529fd02d4d63b048" class="py_mk_hide">from random import randintbksl-nlbksl-nlbksl-nldef fonc(n, listepy-undnotes):bksl-nl    somme = 0bksl-nl    for elt in listepy-undnotes :bksl-nl        somme = somme + eltbksl-nl    return somme/nbksl-nlbksl-nlnombre = 10bksl-nlx="Anatole"bksl-nllistepy-undnotes = []bksl-nllistepy-undnotes = [randint(0, 20) for i in range(nombre)]bksl-nlprint(listepy-undnotes, "\t", fonc(x, listepy-undnotes))bksl-nl</span><span id="corr_content_editor_2651410e10f2c751be2b0094529fd02d4d63b048" class="py_mk_hide" data-strudel=""></span>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_2651410e10f2c751be2b0094529fd02d4d63b048" class="comment">###</span><div class="line" id="editor_2651410e10f2c751be2b0094529fd02d4d63b048"></div><div id="term_editor_2651410e10f2c751be2b0094529fd02d4d63b048"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_2651410e10f2c751be2b0094529fd02d4d63b048","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_2651410e10f2c751be2b0094529fd02d4d63b048","scripts/typage")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_2651410e10f2c751be2b0094529fd02d4d63b048').click()" >            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_2651410e10f2c751be2b0094529fd02d4d63b048" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_2651410e10f2c751be2b0094529fd02d4d63b048")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_2651410e10f2c751be2b0094529fd02d4d63b048")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_2651410e10f2c751be2b0094529fd02d4d63b048" class="py_mk_hide">from random import randintbksl-nlbksl-nlbksl-nldef fonc(n, listepy-undnotes):bksl-nl    somme = 0bksl-nl    for elt in listepy-undnotes :bksl-nl        somme = somme + eltbksl-nl    return somme/nbksl-nlbksl-nlnombre = 10bksl-nlx="Anatole"bksl-nllistepy-undnotes = []bksl-nllistepy-undnotes = [randint(0, 20) for i in range(nombre)]bksl-nlprint(listepy-undnotes, "\t", fonc(x, listepy-undnotes))bksl-nl</span><span id="corr_content_editor_2651410e10f2c751be2b0094529fd02d4d63b048" class="py_mk_hide" data-strudel=""></span></p>
 <p><strong>A</strong></p>
 <p><strong>Z</strong></p>
 <details class="success">
 <summary>Corrigé</summary>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
 
 
 <span class="k">def</span> <span class="nf">fonc</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">liste_notes</span><span class="p">):</span>
@@ -4271,10 +4270,10 @@ alors déterminé à la volée au moment de l'interprétation du code. On peut d
     <span class="k">return</span> <span class="n">somme</span><span class="o">/</span><span class="n">n</span>
 
 <span class="n">nombre</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">x</span><span class="o">=</span><span class="s2">"Anatole"</span>
+<span class="n">x</span><span class="o">=</span><span class="s2">&quot;Anatole&quot;</span>
 <span class="n">liste_notes</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">liste_notes</span> <span class="o">=</span> <span class="p">[</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nombre</span><span class="p">)]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">liste_notes</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="n">fonc</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">liste_notes</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">liste_notes</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fonc</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">liste_notes</span><span class="p">))</span>
 </code></pre></div>
 </details>
 </details>
@@ -4283,13 +4282,13 @@ alors déterminé à la volée au moment de l'interprétation du code. On peut d
 <ul>
 <li>Cas des variables <strong>non mutables</strong></li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">1961</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">1961</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 <span class="n">a</span> <span class="o">=</span> <span class="mi">1935</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 </code></pre></div>
-<div onclick='start_term("id15")' id="fake_id15" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div>
+<div onclick='start_term("id15")' id="fake_id15" class="py_mk_terminal_f"><label class="terminal"><span>>>> </span></label></div>
 <div id="id15" class="py_mk_hide"></div>
 
 <p>Comme les identifiants de <code>a</code> et <code>b</code> sont identiques, ils définissent la même plage mémoire pour les valeurs de ces deux variables. Autrement dit <code>a</code> et <code>b</code> ont la même valeur.</p>
@@ -4298,37 +4297,37 @@ alors déterminé à la volée au moment de l'interprétation du code. On peut d
 <li>Cas des variables <strong>mutables</strong></li>
 </ul>
 <p>Les variables mutables peuvent être modifiées par d'autres opérations qu'une affectation. or cela conserve l'identifiant ! Par conséquent, pour une variable de type mutable, l'identifiant ainsi que la plage mémoire allouée à la valeur de cette variable peuvent rester inchangés, même lorsque l'on change la valeur de cette variable.</p>
-<div class="highlight"><pre><span></span><code><span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="n">L2</span> <span class="o">=</span> <span class="n">L1</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>
 <span class="n">L1</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span> <span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>
 </code></pre></div>
-<div onclick='start_term("id16")' id="fake_id16" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div>
+<div onclick='start_term("id16")' id="fake_id16" class="py_mk_terminal_f"><label class="terminal"><span>>>> </span></label></div>
 <div id="id16" class="py_mk_hide"></div>
 
 <p>Cette manière de procéder permet un gain de temps (copie rapide) et de mémoire(une seule plage mémoire pour deux variables). Mais elle pose un problème technique : si le contenu de la plage mémoire de la valeur de <code>L1</code> est modifié, cela entraîne automatiquement la modification de la valeur de <code>L2</code> puisqu'ils sont référencés par le même identifiant!</p>
 <p>Pour le programmeur Python non averti, cet <strong>effet de bord</strong> peut provoquer une erreur de programmation difficile à élucider.</p>
 <p>On peut néanmoins copier une liste sans provoquer d'effet de bord en utilisant une <code>deepcopy</code> :</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
 
 
 <span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="n">L2</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">L1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>
 <span class="n">L1</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span> <span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>
 </code></pre></div>
-<div onclick='start_term("id17")' id="fake_id17" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div>
+<div onclick='start_term("id17")' id="fake_id17" class="py_mk_terminal_f"><label class="terminal"><span>>>> </span></label></div>
 <div id="id17" class="py_mk_hide"></div>
 
 <p>Un programme écrit selon le <strong>paradigme fonctionnel</strong> utilise des fonctions dites fonctionnelles (!) et se caractérise essentiellement par une chose : l'absence d'effets de bord. Le code ne dépend pas de données se trouvant à l'extérieur de la fonction courante et il ne modifie pas des données à l'extérieur de cette fonction. Il évite donc l'utilisation de variables globales.</p>
 <p>Comparez les deux exemples ci-dessous :</p>
-<div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_84802934a657542d5f0460bb901872d863aea005" class="comment">###</span><div class="line" id="editor_84802934a657542d5f0460bb901872d863aea005"></div><div id="term_editor_84802934a657542d5f0460bb901872d863aea005" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_84802934a657542d5f0460bb901872d863aea005","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_84802934a657542d5f0460bb901872d863aea005","scripts/increment_non_fonctionnel")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_84802934a657542d5f0460bb901872d863aea005').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_84802934a657542d5f0460bb901872d863aea005" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_84802934a657542d5f0460bb901872d863aea005")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_84802934a657542d5f0460bb901872d863aea005")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+<div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_84802934a657542d5f0460bb901872d863aea005" class="comment">###</span><div class="line" id="editor_84802934a657542d5f0460bb901872d863aea005"></div><div id="term_editor_84802934a657542d5f0460bb901872d863aea005"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_84802934a657542d5f0460bb901872d863aea005","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_84802934a657542d5f0460bb901872d863aea005","scripts/increment_non_fonctionnel")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_84802934a657542d5f0460bb901872d863aea005').click()" >            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_84802934a657542d5f0460bb901872d863aea005" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_84802934a657542d5f0460bb901872d863aea005")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_84802934a657542d5f0460bb901872d863aea005")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
 <p><span id="content_editor_84802934a657542d5f0460bb901872d863aea005" class="py_mk_hide">a = 0bksl-nlbksl-nldef incrementpy-undnonpy-undfonctionnel():bksl-nl  global abksl-nl  a = a + 1bksl-nl  return abksl-nlbksl-nlprint(incrementpy-undnonpy-undfonctionnel())bksl-nlprint(incrementpy-undnonpy-undfonctionnel())bksl-nl</span><span id="corr_content_editor_84802934a657542d5f0460bb901872d863aea005" class="py_mk_hide" data-strudel=""></span></p>
 <p><strong>A</strong></p>
 <p><strong>Z</strong></p>
-<div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_89bb6052a48b72e75fa0a859b3a83c5de1954550" class="comment">###</span><div class="line" id="editor_89bb6052a48b72e75fa0a859b3a83c5de1954550"></div><div id="term_editor_89bb6052a48b72e75fa0a859b3a83c5de1954550" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_89bb6052a48b72e75fa0a859b3a83c5de1954550","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_89bb6052a48b72e75fa0a859b3a83c5de1954550","scripts/increment_fonctionnel")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_89bb6052a48b72e75fa0a859b3a83c5de1954550').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_89bb6052a48b72e75fa0a859b3a83c5de1954550" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_89bb6052a48b72e75fa0a859b3a83c5de1954550")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_89bb6052a48b72e75fa0a859b3a83c5de1954550")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+<div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_89bb6052a48b72e75fa0a859b3a83c5de1954550" class="comment">###</span><div class="line" id="editor_89bb6052a48b72e75fa0a859b3a83c5de1954550"></div><div id="term_editor_89bb6052a48b72e75fa0a859b3a83c5de1954550"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_89bb6052a48b72e75fa0a859b3a83c5de1954550","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_89bb6052a48b72e75fa0a859b3a83c5de1954550","scripts/increment_fonctionnel")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_89bb6052a48b72e75fa0a859b3a83c5de1954550').click()" >            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_89bb6052a48b72e75fa0a859b3a83c5de1954550" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_89bb6052a48b72e75fa0a859b3a83c5de1954550")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_89bb6052a48b72e75fa0a859b3a83c5de1954550")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
 <p><span id="content_editor_89bb6052a48b72e75fa0a859b3a83c5de1954550" class="py_mk_hide">a = 0bksl-nlbksl-nldef incrementpy-undfonctionnel(a):bksl-nl  return a + 1bksl-nl  bksl-nlprint(incrementpy-undfonctionnel(a))bksl-nlprint(incrementpy-undfonctionnel(a))bksl-nl</span><span id="corr_content_editor_89bb6052a48b72e75fa0a859b3a83c5de1954550" class="py_mk_hide" data-strudel=""></span></p>
 <p><strong>A</strong></p>
 <p><strong>Z</strong></p>
@@ -4349,31 +4348,31 @@ La copie de variables immutables ne pose pas de souci. Mais la copie de variable
 <p>On appelle effet de bord la modification de valeurs référencées par des variables. Pour les éviter, le code intérieur d’une fonction ne doit pas modifier le code extérieur. </p>
 <p>La copie de variables immutables ne pose pas de souci ! Mais la copie de variables mutables (listes, dictionnaires..) provoque un effet de bord. Il faut alors utiliser une copie « profonde »</p>
 <p>Ex 1:</p>
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">1961</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">1961</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 <span class="n">a</span> <span class="o">=</span> <span class="mi">1935</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 </code></pre></div>
 <p>Ex 2:</p>
-<div class="highlight"><pre><span></span><code><span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="n">L2</span> <span class="o">=</span> <span class="n">L1</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>
 <span class="n">L1</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span> <span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>
 </code></pre></div>
 <p>Ex 3:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
 
 
 <span class="n">L1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="n">L2</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">L1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>
 <span class="n">L1</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span> <span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L1</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">L2</span><span class="p">)</span>
 </code></pre></div>
 <p>Ex 3:</p>
-<p></p><div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="k">def</span> <span class="nf">increment_non_fonctionnel</span><span class="p">():</span>
 <span class="k">global</span> <span class="n">a</span>
@@ -4383,8 +4382,8 @@ La copie de variables immutables ne pose pas de souci. Mais la copie de variable
 <span class="nb">print</span><span class="p">(</span><span class="n">increment_non_fonctionnel</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">increment_non_fonctionnel</span><span class="p">())</span>
 </code></pre></div>
-et
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+et</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="k">def</span> <span class="nf">increment_fonctionnel</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
 <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>
@@ -4394,7 +4393,7 @@ et
 </code></pre></div>
 <p>Modifiez le programme ci-dessous pour que la fonction ne provoque pas d'effets de bord :</p>
 </details>
-<div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_34bbd4aaf49109af323e092f55992bb3c820475b" class="comment">###</span><div class="line" id="editor_34bbd4aaf49109af323e092f55992bb3c820475b"></div><div id="term_editor_34bbd4aaf49109af323e092f55992bb3c820475b" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_34bbd4aaf49109af323e092f55992bb3c820475b","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_34bbd4aaf49109af323e092f55992bb3c820475b" class="py_mk_hide"># Testsbksl-nlassert entrees == {'A': 12, 'B': 21, 'C': -2, 'D': 37, 'E': -99, 'F': 6}bksl-nlbksl-nl</span>            <button class="tooltip" onclick='check("editor_34bbd4aaf49109af323e092f55992bb3c820475b","")'>            <img src="../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_34bbd4aaf49109af323e092f55992bb3c820475b","scripts/effet_bord")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_34bbd4aaf49109af323e092f55992bb3c820475b').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_34bbd4aaf49109af323e092f55992bb3c820475b" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_34bbd4aaf49109af323e092f55992bb3c820475b")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_34bbd4aaf49109af323e092f55992bb3c820475b")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+<div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_34bbd4aaf49109af323e092f55992bb3c820475b" class="comment">###</span><div class="line" id="editor_34bbd4aaf49109af323e092f55992bb3c820475b"></div><div id="term_editor_34bbd4aaf49109af323e092f55992bb3c820475b"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_34bbd4aaf49109af323e092f55992bb3c820475b","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_34bbd4aaf49109af323e092f55992bb3c820475b" class="py_mk_hide"># Testsbksl-nlassert entrees == {'A': 12, 'B': 21, 'C': -2, 'D': 37, 'E': -99, 'F': 6}bksl-nlbksl-nl</span>            <button class="tooltip" onclick='check("editor_34bbd4aaf49109af323e092f55992bb3c820475b","")'>            <img src="../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_34bbd4aaf49109af323e092f55992bb3c820475b","scripts/effet_bord")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_34bbd4aaf49109af323e092f55992bb3c820475b').click()" >            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_34bbd4aaf49109af323e092f55992bb3c820475b" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_34bbd4aaf49109af323e092f55992bb3c820475b")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_34bbd4aaf49109af323e092f55992bb3c820475b")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
 <p><span id="content_editor_34bbd4aaf49109af323e092f55992bb3c820475b" class="py_mk_hide">def plancher(dictionnaire): bksl-nl    for cle, valeur in dictionnaire.items():bksl-nl        if valeur &lt; 0:bksl-nl            dictionnaire[cle] = 0bksl-nl    return dictionnairebksl-nlbksl-nlentrees = {'A': 12, 'B': 21, 'C': -2, 'D': 37, 'E': -99, 'F': 6}bksl-nlprint(entrees)bksl-nlprint(plancher(entrees))bksl-nlprint(entrees)bksl-nlbksl-nlbksl-nl</span><span id="corr_content_editor_34bbd4aaf49109af323e092f55992bb3c820475b" class="py_mk_hide" data-strudel="">from copy import deepcopybksl-nlbksl-nldef plancher(dictionnaire): bksl-nl    dictionnaire2 = deepcopy(dictionnaire)bksl-nl    for cle, valeur in dictionnaire.items():bksl-nl        if valeur &lt; 0:bksl-nl            dictionnaire2[cle] = 0bksl-nl    return dictionnaire2bksl-nlbksl-nlentrees= {'A': 12, 'B': 21, 'C': -2, 'D': 37, 'E': -99, 'F': 6}bksl-nlprint(entrees)bksl-nlprint(plancher(entrees))bksl-nlbksl-nl</span></p>
 <p><strong>A</strong></p>
 <p><strong>Z</strong></p>
@@ -4414,11 +4413,11 @@ et
 <summary>Activité 4 - Débordements</summary>
 <p>Modifiez les programmes ci-dessous pour empêcher tout débordement.
 <strong>Programme 1 :</strong></p>
-<p></p><div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1" class="comment">###</span><div class="line" id="editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1"></div><div id="term_editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1" class="py_mk_hide">assert L1 == []bksl-nl</span>            <button class="tooltip" onclick='check("editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1","")'>            <img src="../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1","scripts/debordement1")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1" class="py_mk_hide">L1 = [2, 3, 4]bksl-nlprint(L1)bksl-nlfor i in range(4):bksl-nl    L1.pop()bksl-nlprint(L1)bksl-nl</span><span id="corr_content_editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1" class="py_mk_hide" data-strudel="">L1 = [2, 3, 4]bksl-nlprint(L1)bksl-nlfor i in range(3):bksl-nl    L1.pop()bksl-nlprint(L1)bksl-nl</span>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1" class="comment">###</span><div class="line" id="editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1"></div><div id="term_editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1" class="py_mk_hide">assert L1 == []bksl-nl</span>            <button class="tooltip" onclick='check("editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1","")'>            <img src="../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1","scripts/debordement1")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1').click()" >            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1" class="py_mk_hide">L1 = [2, 3, 4]bksl-nlprint(L1)bksl-nlfor i in range(4):bksl-nl    L1.pop()bksl-nlprint(L1)bksl-nl</span><span id="corr_content_editor_e8ed834e3f341637ff17713327f25ff5a5f73dc1" class="py_mk_hide" data-strudel="">L1 = [2, 3, 4]bksl-nlprint(L1)bksl-nlfor i in range(3):bksl-nl    L1.pop()bksl-nlprint(L1)bksl-nl</span></p>
 <p><strong>A</strong></p>
 <p><strong>Z</strong></p>
 <p><strong>Programme 2 :</strong></p>
-<p></p><div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_2daa74829347b784520ed82e3d1dfb8b658224f7" class="comment">###</span><div class="line" id="editor_2daa74829347b784520ed82e3d1dfb8b658224f7"></div><div id="term_editor_2daa74829347b784520ed82e3d1dfb8b658224f7" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_2daa74829347b784520ed82e3d1dfb8b658224f7","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_2daa74829347b784520ed82e3d1dfb8b658224f7" class="py_mk_hide">assert L2 == [2, 3, 4, 5, 6]bksl-nl</span>            <button class="tooltip" onclick='check("editor_2daa74829347b784520ed82e3d1dfb8b658224f7","")'>            <img src="../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_2daa74829347b784520ed82e3d1dfb8b658224f7","scripts/debordement2")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_2daa74829347b784520ed82e3d1dfb8b658224f7').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_2daa74829347b784520ed82e3d1dfb8b658224f7" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_2daa74829347b784520ed82e3d1dfb8b658224f7")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_2daa74829347b784520ed82e3d1dfb8b658224f7")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_2daa74829347b784520ed82e3d1dfb8b658224f7" class="py_mk_hide">L1 = [2, 3, 4, 5, 6]bksl-nlL2 = []bksl-nlfor i in range(6):bksl-nl    L2.append(L1[i])bksl-nl    print(L1[i], end=' , ')bksl-nl</span><span id="corr_content_editor_2daa74829347b784520ed82e3d1dfb8b658224f7" class="py_mk_hide" data-strudel="">L1 = [2, 3, 4, 5, 6]bksl-nlL2 = []bksl-nlfor i in range(5):bksl-nl    L2.append(L1[i])bksl-nl    print(L1[i], end=' , ')bksl-nl</span>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_2daa74829347b784520ed82e3d1dfb8b658224f7" class="comment">###</span><div class="line" id="editor_2daa74829347b784520ed82e3d1dfb8b658224f7"></div><div id="term_editor_2daa74829347b784520ed82e3d1dfb8b658224f7"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_2daa74829347b784520ed82e3d1dfb8b658224f7","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_2daa74829347b784520ed82e3d1dfb8b658224f7" class="py_mk_hide">assert L2 == [2, 3, 4, 5, 6]bksl-nl</span>            <button class="tooltip" onclick='check("editor_2daa74829347b784520ed82e3d1dfb8b658224f7","")'>            <img src="../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_2daa74829347b784520ed82e3d1dfb8b658224f7","scripts/debordement2")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_2daa74829347b784520ed82e3d1dfb8b658224f7').click()" >            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_2daa74829347b784520ed82e3d1dfb8b658224f7" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_2daa74829347b784520ed82e3d1dfb8b658224f7")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_2daa74829347b784520ed82e3d1dfb8b658224f7")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_2daa74829347b784520ed82e3d1dfb8b658224f7" class="py_mk_hide">L1 = [2, 3, 4, 5, 6]bksl-nlL2 = []bksl-nlfor i in range(6):bksl-nl    L2.append(L1[i])bksl-nl    print(L1[i], end=' , ')bksl-nl</span><span id="corr_content_editor_2daa74829347b784520ed82e3d1dfb8b658224f7" class="py_mk_hide" data-strudel="">L1 = [2, 3, 4, 5, 6]bksl-nlL2 = []bksl-nlfor i in range(5):bksl-nl    L2.append(L1[i])bksl-nl    print(L1[i], end=' , ')bksl-nl</span></p>
 <p><strong>A</strong></p>
 <p><strong>Z</strong></p>
 </details>
@@ -4430,8 +4429,8 @@ et
 - séquence incomplète
 - séquence complète mais construite avec un ordre incorrect des conditions
 - séquence contenant un traitement conditionnel d’égalité conduisant à des erreurs</p>
-<p><a class="md-button md-button--primary" href="/xtra/jupyterlite/lab/index.html?fromURL=/notebooks/instructions_conditionnelles.ipynb" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span> Notebook <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span></a></p>
-<p><a class="md-button" href="/xtra/jupyterlite/lab/index.html?fromURL=/notebooks/instructions_conditionnelles_corr.ipynb" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span> Corrigé <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span></a></p>
+<p><a class="md-button md-button--primary" href="/xtra/jupyterlite/lab/index.html?fromURL=/notebooks/instructions_conditionnelles.ipynb" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span> Notebook <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span></a></p>
+<p><a class="md-button" href="/xtra/jupyterlite/lab/index.html?fromURL=/notebooks/instructions_conditionnelles_corr.ipynb" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span> Corrigé <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span></a></p>
 </details>
 <h4 id="comparaisons">Comparaisons<a class="headerlink" href="#comparaisons" title="Permanent link">⚓︎</a></h4>
 <details class="question">
@@ -4441,35 +4440,35 @@ et
 <summary>Difficile comparaison des réels</summary>
 <p>La comparaison d'entier (type <code>int</code>) ne pose pas de problèmes particuliers. Il n'en va pas de même avec les réels (type <code>float</code>).</p>
 <p>En effet, certaines valeurs sont seulement des valeurs approchées. Exemple pour la valeur 0.3 affichée avec un très grand nombre de décimales:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{:.80f}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">0.3</span><span class="p">))</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.80f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">0.3</span><span class="p">))</span>
 </code></pre></div>
-<p></p><div onclick='start_term("id18")' id="fake_id18" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id18" class="py_mk_hide"></div>
+<p><div onclick='start_term("id18")' id="fake_id18" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id18" class="py_mk_hide"></div></p>
 <p>Les tests d'égalité stricte sont donc à éviter entre réels. Il faudra privilégier des comparaisons de valeurs arrondies (instruction <code>round</code>) ou tolérer un faible écart.
 Certaines valeurs réelles sont seulement des valeurs approchées. </p>
 <p>Exemple pour la valeur 0.3 affichée avec un très grand nombre de décimales : </p>
-<p></p><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{:.80f}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">0.3</span><span class="p">))</span>
+<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.80f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">0.3</span><span class="p">))</span>
 </code></pre></div>
-<em>donne : 0.29999999999999998889776975374843459576368331909179687500000000000000000000000000</em>
+<em>donne : 0.29999999999999998889776975374843459576368331909179687500000000000000000000000000</em></p>
 <p>Les tests d’égalité stricte sont donc à éviter entre réels. Il faudra privilégier des comparaisons de valeurs arrondies (instruction round) ou tolérer un faible écart.</p>
 </details>
 <ul>
 <li>Afficher les deux nombres x et y avec une cinquantaine de décimales puis transformer le test d'égalité stricte en un test de comparaison d'arrondis en utilisant la fonction round (help() est votre amie...). </li>
 <li>Ensuite, vous écrirez un test de comparaison tolérant un faible écart (ex : ecart_tolere = 0.01)</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.1</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.1</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mf">0.3</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span>
 </code></pre></div>
-<p></p><div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_00000045" class="comment">###</span><div class="line" id="editor_00000045"></div><div id="term_editor_00000045" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_00000045","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000045","")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000045').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000045" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000045")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000045")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000045" class="py_mk_hide"></span><span id="corr_content_editor_00000045" class="py_mk_hide" data-strudel=""></span>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000060" class="comment">###</span><div class="line" id="editor_00000060"></div><div id="term_editor_00000060"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000060","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000060","")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000060').click()" >            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000060" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000060")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000060")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000060" class="py_mk_hide"></span><span id="corr_content_editor_00000060" class="py_mk_hide" data-strudel=""></span></p>
 <details class="success">
 <summary>Corrigé</summary>
-<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.1</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.1</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mf">0.3</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{:.50f}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.50f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{:.50f}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.50f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="nb">round</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 
@@ -4484,7 +4483,7 @@ Certaines valeurs réelles sont seulement des valeurs approchées. </p>
 <p>Toute variable peut être considérée comme un objet, défini par différentes caractéristiques telle que leur adresse en mémoire. Des copies simple peuvent alors poser problèmes pour des variables mutables.</p>
 <p>Exécutez le programme suivant puis expliquer les résultats obtenus.</p>
 <p><em>Remarque : la fonction id() renvoie l'identifiant d'une variable.</em></p>
-<p></p><div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_80f5d29cf2b895360adb79755019d48589d8d7de" class="comment">###</span><div class="line" id="editor_80f5d29cf2b895360adb79755019d48589d8d7de"></div><div id="term_editor_80f5d29cf2b895360adb79755019d48589d8d7de" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_80f5d29cf2b895360adb79755019d48589d8d7de","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_80f5d29cf2b895360adb79755019d48589d8d7de","scripts/variable")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_80f5d29cf2b895360adb79755019d48589d8d7de').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_80f5d29cf2b895360adb79755019d48589d8d7de" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_80f5d29cf2b895360adb79755019d48589d8d7de")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_80f5d29cf2b895360adb79755019d48589d8d7de")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_80f5d29cf2b895360adb79755019d48589d8d7de" class="py_mk_hide">liste1 = ['a', 'b', 'c']bksl-nlliste2 = liste1bksl-nlliste3 = ['a', 'b', 'c']bksl-nlbksl-nlprint(liste1 == liste2)bksl-nlprint(liste1 == liste3)bksl-nlbksl-nlprint(liste1 is liste2)bksl-nlprint(liste1 is liste3)bksl-nlbksl-nlprint(id(liste1))bksl-nlprint(id(liste2))bksl-nlprint(id(liste3))bksl-nl</span><span id="corr_content_editor_80f5d29cf2b895360adb79755019d48589d8d7de" class="py_mk_hide" data-strudel=""></span>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_80f5d29cf2b895360adb79755019d48589d8d7de" class="comment">###</span><div class="line" id="editor_80f5d29cf2b895360adb79755019d48589d8d7de"></div><div id="term_editor_80f5d29cf2b895360adb79755019d48589d8d7de"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_80f5d29cf2b895360adb79755019d48589d8d7de","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_80f5d29cf2b895360adb79755019d48589d8d7de","scripts/variable")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_80f5d29cf2b895360adb79755019d48589d8d7de').click()" >            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_80f5d29cf2b895360adb79755019d48589d8d7de" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_80f5d29cf2b895360adb79755019d48589d8d7de")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_80f5d29cf2b895360adb79755019d48589d8d7de")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_80f5d29cf2b895360adb79755019d48589d8d7de" class="py_mk_hide">liste1 = ['a', 'b', 'c']bksl-nlliste2 = liste1bksl-nlliste3 = ['a', 'b', 'c']bksl-nlbksl-nlprint(liste1 == liste2)bksl-nlprint(liste1 == liste3)bksl-nlbksl-nlprint(liste1 is liste2)bksl-nlprint(liste1 is liste3)bksl-nlbksl-nlprint(id(liste1))bksl-nlprint(id(liste2))bksl-nlprint(id(liste3))bksl-nl</span><span id="corr_content_editor_80f5d29cf2b895360adb79755019d48589d8d7de" class="py_mk_hide" data-strudel=""></span></p>
 <p><strong>A</strong></p>
 <p><strong>Z</strong></p>
 <details class="success">
@@ -4502,42 +4501,42 @@ Certaines valeurs réelles sont seulement des valeurs approchées. </p>
 <summary>Activité 8 - Liste non exhaustive d'exceptions</summary>
 <p>Il existe un certain nombre de catégories d'exceptions clairement identifiées et repérées par un nom adéquat.</p>
 <p>Dans les lignes ci-dessous, un certain nombre de codes erronés sont écrits. Identifier l'exception correspondante parmi celles proposées ci-dessous et associées les au code.</p>
-<div class="highlight"><pre><span></span><code>a) SyntaxError: invalid syntax
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>a) SyntaxError: invalid syntax
 b) ZeroDivisionError: division by zero
-c) FileNotFoundError: [Errno 2] No such file or directory: 'mon_fichier'
+c) FileNotFoundError: [Errno 2] No such file or directory: &#39;mon_fichier&#39;
 d) IndexError: list index out of range
-e) ValueError: invalid literal for int() with base 10: 'seize'
-f) TypeError: unsupported operand type(s) for +: 'int' and 'str'
-g) NameError: name 'z' is not defined
+e) ValueError: invalid literal for int() with base 10: &#39;seize&#39;
+f) TypeError: unsupported operand type(s) for +: &#39;int&#39; and &#39;str&#39;
+g) NameError: name &#39;z&#39; is not defined
 </code></pre></div>
 <p>Cette liste est non exhaustive...</p>
 <ol>
-<li><div class="highlight"><pre><span></span><code><span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">'6'</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<li><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;6&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">L</span><span class="p">:</span>
     <span class="n">somme</span> <span class="o">=</span> <span class="n">somme</span> <span class="o">+</span> <span class="n">element</span>
 </code></pre></div></li>
-<li><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">div</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<li><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">div</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span><span class="o">/</span><span class="n">y</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">div</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
 </code></pre></div></li>
-<li><div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+<li><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">z</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 </code></pre></div></li>
-<li><div class="highlight"><pre><span></span><code><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<li><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 </code></pre></div></li>
-<li><div class="highlight"><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="s2">"seize"</span>
+<li><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="s2">&quot;seize&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">))</span>
 </code></pre></div></li>
-<li><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<li><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </code></pre></div></li>
-<li><div class="highlight"><pre><span></span><code><span class="nb">open</span><span class="p">(</span><span class="s1">'mon_fichier'</span><span class="p">)</span>
+<li><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;mon_fichier&#39;</span><span class="p">)</span>
 </code></pre></div></li>
 </ol>
 <details class="success">
@@ -4557,7 +4556,7 @@ g) NameError: name 'z' is not defined
 <summary>Stack trace</summary>
 <p>Au-dessus du type d'exception (ValueError, IndexError, etc...) se trouve une description de ce qui a causé l'erreur. C'est ce qu'on appelle une stack trace, et ça représente la pile d'appels qui ont amené à cette erreur. Pour comprendre votre erreur, il faut lire ce texte à l'envers, de bas en haut.</p>
 <p>Testez et analysez le programme suivant :</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">une_fonction</span><span class="p">():</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">une_fonction</span><span class="p">():</span>
     <span class="k">return</span> <span class="mi">1</span><span class="o">/</span><span class="mi">0</span>
 
 
@@ -4567,7 +4566,7 @@ g) NameError: name 'z' is not defined
 
 <span class="n">une_autre_fonction</span><span class="p">()</span>
 </code></pre></div>
-<p></p><div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_00000046" class="comment">###</span><div class="line" id="editor_00000046"></div><div id="term_editor_00000046" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_00000046","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000046","")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000046').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000046" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000046")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000046")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000046" class="py_mk_hide"></span><span id="corr_content_editor_00000046" class="py_mk_hide" data-strudel=""></span>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000061" class="comment">###</span><div class="line" id="editor_00000061"></div><div id="term_editor_00000061"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000061","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000061","")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000061').click()" >            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000061" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000061")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000061")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000061" class="py_mk_hide"></span><span id="corr_content_editor_00000061" class="py_mk_hide" data-strudel=""></span></p>
 </details>
 <details class="info">
 <summary>Gestion des exceptions</summary>
@@ -4579,20 +4578,20 @@ g) NameError: name 'z' is not defined
 <li><strong>Le bloc <code>finally</code></strong> vous permet d'exécuter du code, quel que soit le résultat des blocs <code>try</code> et <code>except</code>.</li>
 </ul>
 <p><em>Exemple</em> : structure complète possible</p>
-<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">try</span><span class="p">:</span>
     <span class="n">resultat</span> <span class="o">=</span> <span class="n">numerateur</span><span class="o">/</span><span class="n">denominateur</span>
 <span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"La variable numerateur ou denominateur n'a pas été définie."</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La variable numerateur ou denominateur n&#39;a pas été définie.&quot;</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"La variable numerateur ou denomniateur possède un type incompatible avec la division"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La variable numerateur ou denomniateur possède un type incompatible avec la division&quot;</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"La variable denominateur est égale à 0."</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La variable denominateur est égale à 0.&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Le résultat est : "</span><span class="p">,</span> <span class="n">resultat</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Le résultat est : &quot;</span><span class="p">,</span> <span class="n">resultat</span><span class="p">)</span>
 <span class="k">finally</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Vous venez de calculer une division"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vous venez de calculer une division&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p></p><div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_00000047" class="comment">###</span><div class="line" id="editor_00000047"></div><div id="term_editor_00000047" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_00000047","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000047","")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000047').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000047" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000047")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000047")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000047" class="py_mk_hide"></span><span id="corr_content_editor_00000047" class="py_mk_hide" data-strudel=""></span>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000062" class="comment">###</span><div class="line" id="editor_00000062"></div><div id="term_editor_00000062"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000062","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000062","")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000062').click()" >            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000062" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000062")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000062")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000062" class="py_mk_hide"></span><span id="corr_content_editor_00000062" class="py_mk_hide" data-strudel=""></span></p>
 </details>
 <h2 id="jeux-de-tests">Jeux de tests<a class="headerlink" href="#jeux-de-tests" title="Permanent link">⚓︎</a></h2>
 <p>Afin de vérifier le bon fonctionnement d'un algorithme, il faut aussi tester son programme avec un jeu de tests judicieusement choisi.</p>
@@ -4602,16 +4601,16 @@ g) NameError: name 'z' is not defined
 <li>Insérer des tests dans le prototype même de la fonction. Cela présente de gros avantages : la fonction peut être transférée à un autre programme, ou données à un autre programmeur : celui-ci aura tous les renseignements nécessaires.</li>
 </ul>
 <p>Voyons un exemple de test inséré dans le prototype d'une fonction :</p>
-<p></p><div class="highlight"><pre><span></span><code><span class="sd">"""</span>
+<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">...</span>
 
 <span class="sd">Exemples :</span>
 <span class="sd">&gt;&gt;&gt; indice_maximum_liste([2, 0, 8, -3, 9, 6])</span>
 <span class="sd">4</span>
-<span class="sd">"""</span>
+<span class="sd">&quot;&quot;&quot;</span>
 </code></pre></div>
-Pour que ce test tapé dans le prototype de la fonction soit reconnu, exécuté et comparé au résultat souhaité, il faudra toutefois ajouter les trois lignes de code suivantes dans votre prorgamme principal :
-<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+Pour que ce test tapé dans le prototype de la fonction soit reconnu, exécuté et comparé au résultat souhaité, il faudra toutefois ajouter les trois lignes de code suivantes dans votre prorgamme principal :</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
   <span class="kn">import</span> <span class="nn">doctest</span>
   
   
@@ -4621,27 +4620,27 @@ Pour que ce test tapé dans le prototype de la fonction soit reconnu, exécuté 
 <summary>Activité 9 - Docstring et Doctests</summary>
 <p>Faire la docstring complète de ce module (général et pour chaque fonction), en incluant des exemples à tester avec le module Doctest.
 Ne pas oublier de respecter le PEP8</p>
-<p></p><div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_7b5540a0498e5517be263cdeb566fbb8404d39dd" class="comment">###</span><div class="line" id="editor_7b5540a0498e5517be263cdeb566fbb8404d39dd"></div><div id="term_editor_7b5540a0498e5517be263cdeb566fbb8404d39dd" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_7b5540a0498e5517be263cdeb566fbb8404d39dd","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_7b5540a0498e5517be263cdeb566fbb8404d39dd","scripts/module_liste")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_7b5540a0498e5517be263cdeb566fbb8404d39dd').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_7b5540a0498e5517be263cdeb566fbb8404d39dd" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_7b5540a0498e5517be263cdeb566fbb8404d39dd")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_7b5540a0498e5517be263cdeb566fbb8404d39dd")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_7b5540a0498e5517be263cdeb566fbb8404d39dd" class="py_mk_hide"># module sur les listesbksl-nlbksl-nl"""bksl-nlbksl-nl"""bksl-nlbksl-nlbksl-nldef danspy-undliste(x, L):bksl-nl    """bksl-nlbksl-nl    """bksl-nl    msg = Falsebksl-nl    bksl-nl    for e in L:bksl-nl        if e==x:bksl-nl            msg=Truebksl-nl    bksl-nl    return msgbksl-nlbksl-nlbksl-nldef maxpy-undliste(L):bksl-nl    """bksl-nlbksl-nl    """bksl-nl    bksl-nl    maxi = L[0]bksl-nl    for i in range(1, len(L)):bksl-nl        if L[i] &gt; maxi:bksl-nl            maxi=L[i]bksl-nl            bksl-nl    return maxibksl-nlbksl-nlbksl-nldef moypy-undliste(L):bksl-nl    """bksl-nlbksl-nl    """ bksl-nl    bksl-nl    Somme = 0bksl-nl    for e in L:bksl-nl        Somme = Somme + ebksl-nl        bksl-nl    moyenne=Somme / len(L)bksl-nl    bksl-nl    return moyennebksl-nlbksl-nlbksl-nldef indicepy-undminpy-undliste(L):bksl-nl    """bksl-nlbksl-nl    """ bksl-nl    bksl-nl    i = 0bksl-nl    indice = 0bksl-nl    mini = L[0]bksl-nl    for e in L:bksl-nl        if L[i] &lt; mini:bksl-nl            L[i] = minibksl-nl            indice=ibksl-nl        i = i + 1bksl-nl        bksl-nl    return indicebksl-nlbksl-nlbksl-nldef cardpy-undvalpy-undliste(x, L):bksl-nl    """bksl-nlbksl-nl    """bksl-nl    bksl-nl    nb = 0bksl-nl    for e in L:bksl-nl        if e == x:bksl-nl            nb= nb + 1bksl-nl    bksl-nl    return nbbksl-nlbksl-nlbksl-nldef supppy-undliste(x,L):bksl-nl    """bksl-nlbksl-nl    """bksl-nl    arret = Falsebksl-nl    for e in L:bksl-nl        if e==x and arret is False:bksl-nl            indice=L.index(e)bksl-nl            del L[indice]bksl-nl            arret = Truebksl-nl    return Lbksl-nl</span><span id="corr_content_editor_7b5540a0498e5517be263cdeb566fbb8404d39dd" class="py_mk_hide" data-strudel=""></span>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_7b5540a0498e5517be263cdeb566fbb8404d39dd" class="comment">###</span><div class="line" id="editor_7b5540a0498e5517be263cdeb566fbb8404d39dd"></div><div id="term_editor_7b5540a0498e5517be263cdeb566fbb8404d39dd"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_7b5540a0498e5517be263cdeb566fbb8404d39dd","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_7b5540a0498e5517be263cdeb566fbb8404d39dd","scripts/module_liste")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_7b5540a0498e5517be263cdeb566fbb8404d39dd').click()" >            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_7b5540a0498e5517be263cdeb566fbb8404d39dd" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_7b5540a0498e5517be263cdeb566fbb8404d39dd")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_7b5540a0498e5517be263cdeb566fbb8404d39dd")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_7b5540a0498e5517be263cdeb566fbb8404d39dd" class="py_mk_hide"># module sur les listesbksl-nlbksl-nl"""bksl-nlbksl-nl"""bksl-nlbksl-nlbksl-nldef danspy-undliste(x, L):bksl-nl    """bksl-nlbksl-nl    """bksl-nl    msg = Falsebksl-nl    bksl-nl    for e in L:bksl-nl        if e==x:bksl-nl            msg=Truebksl-nl    bksl-nl    return msgbksl-nlbksl-nlbksl-nldef maxpy-undliste(L):bksl-nl    """bksl-nlbksl-nl    """bksl-nl    bksl-nl    maxi = L[0]bksl-nl    for i in range(1, len(L)):bksl-nl        if L[i] &gt; maxi:bksl-nl            maxi=L[i]bksl-nl            bksl-nl    return maxibksl-nlbksl-nlbksl-nldef moypy-undliste(L):bksl-nl    """bksl-nlbksl-nl    """ bksl-nl    bksl-nl    Somme = 0bksl-nl    for e in L:bksl-nl        Somme = Somme + ebksl-nl        bksl-nl    moyenne=Somme / len(L)bksl-nl    bksl-nl    return moyennebksl-nlbksl-nlbksl-nldef indicepy-undminpy-undliste(L):bksl-nl    """bksl-nlbksl-nl    """ bksl-nl    bksl-nl    i = 0bksl-nl    indice = 0bksl-nl    mini = L[0]bksl-nl    for e in L:bksl-nl        if L[i] &lt; mini:bksl-nl            L[i] = minibksl-nl            indice=ibksl-nl        i = i + 1bksl-nl        bksl-nl    return indicebksl-nlbksl-nlbksl-nldef cardpy-undvalpy-undliste(x, L):bksl-nl    """bksl-nlbksl-nl    """bksl-nl    bksl-nl    nb = 0bksl-nl    for e in L:bksl-nl        if e == x:bksl-nl            nb= nb + 1bksl-nl    bksl-nl    return nbbksl-nlbksl-nlbksl-nldef supppy-undliste(x,L):bksl-nl    """bksl-nlbksl-nl    """bksl-nl    arret = Falsebksl-nl    for e in L:bksl-nl        if e==x and arret is False:bksl-nl            indice=L.index(e)bksl-nl            del L[indice]bksl-nl            arret = Truebksl-nl    return Lbksl-nl</span><span id="corr_content_editor_7b5540a0498e5517be263cdeb566fbb8404d39dd" class="py_mk_hide" data-strudel=""></span></p>
 <p><strong>A</strong></p>
 <p><strong>Z</strong></p>
 <details class="success">
 <summary>Corrigé</summary>
-<div class="highlight"><pre><span></span><code><span class="c1"># module sur les listes</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># module sur les listes</span>
 
-<span class="sd">"""</span>
+<span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Ce module contient les différentes fonctions sur les listes suivantes:</span>
 
-<span class="sd">    - dans_liste: Recherche de la présence d'un élément dans la liste</span>
-<span class="sd">    - max_liste: Recherche de la valeur maximale (et/ou minimale) des élément d'une liste</span>
-<span class="sd">    - moy_liste: Calcul de la moyenne des élément d'une liste</span>
-<span class="sd">    - indice_min_liste: Recherche de l'indice de l'élément minimum </span>
-<span class="sd">    - card_val_liste: Recherche du nb d'occurrences d'une valeur </span>
-<span class="sd">    - supp_liste: Suppression de la première occurrence d'un élément </span>
-<span class="sd">"""</span>
+<span class="sd">    - dans_liste: Recherche de la présence d&#39;un élément dans la liste</span>
+<span class="sd">    - max_liste: Recherche de la valeur maximale (et/ou minimale) des élément d&#39;une liste</span>
+<span class="sd">    - moy_liste: Calcul de la moyenne des élément d&#39;une liste</span>
+<span class="sd">    - indice_min_liste: Recherche de l&#39;indice de l&#39;élément minimum </span>
+<span class="sd">    - card_val_liste: Recherche du nb d&#39;occurrences d&#39;une valeur </span>
+<span class="sd">    - supp_liste: Suppression de la première occurrence d&#39;un élément </span>
+<span class="sd">&quot;&quot;&quot;</span>
 
 
 <span class="k">def</span> <span class="nf">dans_liste</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">L</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Cette fonction permet de rechercher si un élément est dans une liste ou non.</span>
 <span class="sd">    </span>
 <span class="sd">    param x : Elément recherché (float)</span>
@@ -4654,7 +4653,7 @@ Ne pas oublier de respecter le PEP8</p>
 <span class="sd">    True</span>
 <span class="sd">    &gt;&gt;&gt; dans_liste(4, [1, 2, 3])</span>
 <span class="sd">    False</span>
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">msg</span> <span class="o">=</span> <span class="kc">False</span>
     
     <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">L</span><span class="p">:</span>
@@ -4665,8 +4664,8 @@ Ne pas oublier de respecter le PEP8</p>
 
 
 <span class="k">def</span> <span class="nf">max_liste</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Cette fonction permet de rechercher le plus grand élément d'une liste.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Cette fonction permet de rechercher le plus grand élément d&#39;une liste.</span>
 <span class="sd">    </span>
 <span class="sd">    param L : Liste (list)</span>
 <span class="sd">    return : valeur max (float)</span>
@@ -4677,7 +4676,7 @@ Ne pas oublier de respecter le PEP8</p>
 <span class="sd">    3</span>
 <span class="sd">    &gt;&gt;&gt; max_liste([4, 1, 2])</span>
 <span class="sd">    4</span>
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     
     <span class="n">maxi</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)):</span>
@@ -4688,8 +4687,8 @@ Ne pas oublier de respecter le PEP8</p>
 
 
 <span class="k">def</span> <span class="nf">moy_liste</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Cette fonction permet de calculer la moyenne des valeurs d'une liste.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Cette fonction permet de calculer la moyenne des valeurs d&#39;une liste.</span>
 <span class="sd">    </span>
 <span class="sd">    param L : Liste dont on cherche la moyenne (list)</span>
 <span class="sd">    return : valeur moyenne (float)</span>
@@ -4698,7 +4697,7 @@ Ne pas oublier de respecter le PEP8</p>
 <span class="sd">    </span>
 <span class="sd">    &gt;&gt;&gt; moy_liste([1, 2, 3])</span>
 <span class="sd">    2</span>
-<span class="sd">    """</span> 
+<span class="sd">    &quot;&quot;&quot;</span> 
     
     <span class="n">Somme</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">L</span><span class="p">:</span>
@@ -4710,10 +4709,10 @@ Ne pas oublier de respecter le PEP8</p>
 
 
 <span class="k">def</span> <span class="nf">indice_min_liste</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Cette fonction permet d'avoir l'indice de la valeur minimum d'une liste.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Cette fonction permet d&#39;avoir l&#39;indice de la valeur minimum d&#39;une liste.</span>
 <span class="sd">    </span>
-<span class="sd">    param L : Liste dont on cherche l'indice du min (list)</span>
+<span class="sd">    param L : Liste dont on cherche l&#39;indice du min (list)</span>
 <span class="sd">    return : indice du min (int)</span>
 <span class="sd">    </span>
 <span class="sd">    Exemple :</span>
@@ -4722,7 +4721,7 @@ Ne pas oublier de respecter le PEP8</p>
 <span class="sd">    0</span>
 <span class="sd">    &gt;&gt;&gt; indice_min_liste([4, 2, 1])</span>
 <span class="sd">    2</span>
-<span class="sd">    """</span> 
+<span class="sd">    &quot;&quot;&quot;</span> 
     
     <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">indice</span> <span class="o">=</span> <span class="mi">0</span>
@@ -4737,12 +4736,12 @@ Ne pas oublier de respecter le PEP8</p>
 
 
 <span class="k">def</span> <span class="nf">card_val_liste</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">L</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Cette fonction permet d'avoir le nombre de fois où apparaît une occurence dans une liste.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Cette fonction permet d&#39;avoir le nombre de fois où apparaît une occurence dans une liste.</span>
 <span class="sd">    </span>
 <span class="sd">    param x : occurence à compter (float ou str)</span>
 <span class="sd">    param L : Liste où on compte (list)</span>
-<span class="sd">    return : nombre d'occurence (int)</span>
+<span class="sd">    return : nombre d&#39;occurence (int)</span>
 <span class="sd">    </span>
 <span class="sd">    Exemple :</span>
 <span class="sd">    </span>
@@ -4750,7 +4749,7 @@ Ne pas oublier de respecter le PEP8</p>
 <span class="sd">    1</span>
 <span class="sd">    &gt;&gt;&gt; card_val_liste(2, [2, 2, 2])</span>
 <span class="sd">    3</span>
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     
     <span class="n">nb</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">L</span><span class="p">:</span>
@@ -4761,18 +4760,18 @@ Ne pas oublier de respecter le PEP8</p>
 
 
 <span class="k">def</span> <span class="nf">supp_liste</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">L</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Cette fonction permet de supprimer la première occurence d'un élément d'une liste.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Cette fonction permet de supprimer la première occurence d&#39;un élément d&#39;une liste.</span>
 <span class="sd">    </span>
 <span class="sd">    param x : élément à supprimer</span>
 <span class="sd">    param L : Liste de départ(list)</span>
-<span class="sd">    return : Liste sans l'occurence de l'élément (list)</span>
+<span class="sd">    return : Liste sans l&#39;occurence de l&#39;élément (list)</span>
 <span class="sd">    </span>
 <span class="sd">    Exemple :</span>
 <span class="sd">    </span>
 <span class="sd">    &gt;&gt;&gt; supp_liste(1, [2, 1, 4, 1, 3])</span>
 <span class="sd">    [2, 4, 1, 3]</span>
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">arret</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">L</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">e</span> <span class="o">==</span> <span class="n">x</span> <span class="ow">and</span> <span class="n">arret</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
@@ -4781,14 +4780,14 @@ Ne pas oublier de respecter le PEP8</p>
             <span class="n">arret</span> <span class="o">=</span> <span class="kc">True</span>
     <span class="k">return</span> <span class="n">L</span>
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="kn">import</span> <span class="nn">doctest</span>
 
 
     <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
 </code></pre></div>
 </details>
-</details></div>
+</details>
 
 
 

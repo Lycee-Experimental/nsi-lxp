@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3874,24 +3873,24 @@
   
 
 
-<div><h1 id="quelques-macro-pour-mkdocs">Quelques macro pour Mkdocs<a class="headerlink" href="#quelques-macro-pour-mkdocs" title="Permanent link">⚓︎</a></h1>
+<h1 id="quelques-macro-pour-mkdocs">Quelques macro pour Mkdocs<a class="headerlink" href="#quelques-macro-pour-mkdocs" title="Permanent link">⚓︎</a></h1>
 <details class="tool">
 <summary>Numérotation automatique des exercices</summary>
 <p>Pour commencer à partir de l'exo 3 : <code>{{ exercice(3) }}</code>
 et <code>{{ exercice() }}</code> ensuite pour la numérotation automatique.</p>
 <p>Implémenté par la fonction suivante du fichier <code>main.py</code>
-</p><div class="highlight"><pre><span></span><code><span class="n">env</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s2">"compteur_exo"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">env</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s2">&quot;compteur_exo&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
 
 <span class="nd">@env</span><span class="o">.</span><span class="n">macro</span>
 <span class="k">def</span> <span class="nf">exercice</span><span class="p">(</span><span class="n">prem</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-    <span class="c1"># si var == False, alors l'exercice est placé dans une superfence.</span>
+    <span class="c1"># si var == False, alors l&#39;exercice est placé dans une superfence.</span>
     <span class="k">if</span> <span class="n">prem</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">env</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s2">"compteur_exo"</span><span class="p">]</span> <span class="o">=</span> <span class="n">prem</span>
-    <span class="n">root</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"Exercice </span><span class="si">{</span><span class="w"> </span><span class="n">env</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">'compteur_exo'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span>
-    <span class="n">env</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s2">"compteur_exo"</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">env</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s2">&quot;compteur_exo&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">prem</span>
+    <span class="n">root</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Exercice </span><span class="si">{</span><span class="w"> </span><span class="n">env</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;compteur_exo&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s2">&quot;compteur_exo&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="n">root</span>
-</code></pre></div>
-</details></div>
+</code></pre></div></p>
+</details>
 
 
 

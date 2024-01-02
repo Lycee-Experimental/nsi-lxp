@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3863,20 +3862,20 @@
 
   <h1>exo REM</h1>
 
-<div><p>On profite ici du fait que les deux genres sont incompatibles (dans cette liste de films <em>a minima</em>).</p>
+<p>On profite ici du fait que les deux genres sont incompatibles (dans cette liste de films <em>a minima</em>).</p>
 <p>Si l'on souhaite comparer deux genres compatibles, on doit utiliser deux <code class="highlight"><span class="k">if</span></code> et pas un <code class="highlight"><span class="k">if</span> <span class="o">...</span> <span class="k">elif</span></code>. C'est le cas par exemple avec les genres <code>Adventure</code> et <code>Family</code></p>
-<div class="annotate highlight"><pre><span></span><code><span class="n">total_adventure</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="annotate highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">total_adventure</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">total_family</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="k">for</span> <span class="n">entree</span> <span class="ow">in</span> <span class="n">films</span><span class="p">:</span>
-    <span class="k">if</span> <span class="s2">"Adventure"</span> <span class="ow">in</span> <span class="n">entree</span><span class="p">[</span><span class="s2">"Genres"</span><span class="p">]:</span>
-        <span class="n">total_adventure</span> <span class="o">+=</span> <span class="n">entree</span><span class="p">[</span><span class="s2">"Votes"</span><span class="p">]</span>
-    <span class="k">if</span> <span class="s2">"Family"</span> <span class="ow">in</span> <span class="n">entree</span><span class="p">[</span><span class="s2">"Genres"</span><span class="p">]:</span>  <span class="c1"># (1)</span>
-        <span class="n">total_family</span> <span class="o">+=</span> <span class="n">entree</span><span class="p">[</span><span class="s2">"Votes"</span><span class="p">]</span>
+    <span class="k">if</span> <span class="s2">&quot;Adventure&quot;</span> <span class="ow">in</span> <span class="n">entree</span><span class="p">[</span><span class="s2">&quot;Genres&quot;</span><span class="p">]:</span>
+        <span class="n">total_adventure</span> <span class="o">+=</span> <span class="n">entree</span><span class="p">[</span><span class="s2">&quot;Votes&quot;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="s2">&quot;Family&quot;</span> <span class="ow">in</span> <span class="n">entree</span><span class="p">[</span><span class="s2">&quot;Genres&quot;</span><span class="p">]:</span>  <span class="c1"># (1)</span>
+        <span class="n">total_family</span> <span class="o">+=</span> <span class="n">entree</span><span class="p">[</span><span class="s2">&quot;Votes&quot;</span><span class="p">]</span>
 </code></pre></div>
 <ol>
 <li>Un second <code class="highlight"><span class="k">if</span></code> au lieu d'un <code class="highlight"><span class="k">elif</span></code></li>
-</ol></div>
+</ol>
 
 
 

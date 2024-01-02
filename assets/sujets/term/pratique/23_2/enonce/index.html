@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,19 +3856,19 @@
 
   <h1>Enonce</h1>
 
-<div><p>On considère des tableaux de nombres dont tous les éléments sont présents exactement
+<p>On considère des tableaux de nombres dont tous les éléments sont présents exactement
 trois fois et à suivre, sauf un élément qui est présent une unique fois et que l'on appelle «
 l'intrus ». Voici quelques exemples :</p>
-<p></p><div class="highlight"><pre><span></span><code><span class="n">tab_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="c1">#l'intrus est 7</span>
+<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">tab_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="c1">#l&#39;intrus est 7</span>
 
 <span class="n">tab_b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="c1">#l'intrus est 8</span>
+<span class="c1">#l&#39;intrus est 8</span>
 
 <span class="n">tab_c</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
-<span class="c1">#l'intrus est 3</span>
+<span class="c1">#l&#39;intrus est 3</span>
 </code></pre></div>
-On remarque qu'avec de tels tableaux :
+On remarque qu'avec de tels tableaux :</p>
 <ul>
 <li>pour les indices multiples de 3 situés strictement avant l'intrus, l'élément
 correspondant et son voisin de droite sont égaux,</li>
@@ -3878,7 +3877,7 @@ voisin de droite - s'il existe - sont différents.</li>
 </ul>
 <p>Ce que l'on peut observer ci-dessous en observant les valeurs des paires de voisins
 marquées par des caractères ^ :</p>
-<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
  <span class="o">^</span>  <span class="o">^</span>     <span class="o">^</span>  <span class="o">^</span>     <span class="o">^</span>  <span class="o">^</span>     <span class="o">^</span>  <span class="o">^</span>     <span class="o">^</span>  <span class="o">^</span>     <span class="o">^</span>  <span class="o">^</span>     <span class="o">^</span>  <span class="o">^</span>     <span class="o">^</span>
  <span class="mi">0</span>        <span class="mi">3</span>        <span class="mi">6</span>        <span class="mi">9</span>        <span class="mi">12</span>       <span class="mi">15</span>       <span class="mi">18</span>       <span class="mi">21</span>
 </code></pre></div>
@@ -3894,7 +3893,7 @@ différentes : l’intrus est donc à gauche de l’indice 12 (indice 12 compris
 identiques : l’intrus est donc à droite des indices 3-4-5, donc à partir de l’indice 6.</p>
 <p>Compléter la fonction récursive <code>trouver_intrus</code> proposée page suivante qui met
 en œuvre cet algorithme.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3911,12 +3910,12 @@ en œuvre cet algorithme.</p>
 <span class="normal">15</span>
 <span class="normal">16</span>
 <span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">trouver_intrus</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">'''</span>
-<span class="sd">    Renvoie la valeur de l'intrus situé entre les indices g et d </span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Renvoie la valeur de l&#39;intrus situé entre les indices g et d </span>
 <span class="sd">    dans la liste tab où :</span>
-<span class="sd">    tab vérifie les conditions de l'exercice,</span>
+<span class="sd">    tab vérifie les conditions de l&#39;exercice,</span>
 <span class="sd">    g et d sont des multiples de 3.</span>
-<span class="sd">    '''</span>
+<span class="sd">    &#39;&#39;&#39;</span>
     <span class="k">if</span> <span class="n">g</span> <span class="o">==</span> <span class="n">d</span><span class="p">:</span>
         <span class="k">return</span> <span class="o">...</span>
     
@@ -3929,7 +3928,7 @@ en œuvre cet algorithme.</p>
             <span class="k">return</span> <span class="o">...</span>
 </code></pre></div></td></tr></table></div>
 <p>Exemples :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">trouver_intrus</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">trouver_intrus</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span>
 <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">21</span><span class="p">)</span>
 <span class="mi">7</span>
 
@@ -3938,7 +3937,7 @@ en œuvre cet algorithme.</p>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">trouver_intrus</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
 <span class="mi">3</span>
-</code></pre></div></div>
+</code></pre></div>
 
 
 

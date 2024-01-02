@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,14 +3856,14 @@
 
   <h1>Enonce</h1>
 
-<div><p>On définit une classe gérant une adresse IPv4.</p>
+<p>On définit une classe gérant une adresse IPv4.</p>
 <p>On rappelle qu’une adresse IPv4 est une adresse de longueur 4 octets, notée en décimale
 à point, en séparant chacun des octets par un point. On considère un réseau privé avec
 une plage d’adresses IP de <code>192.168.0.0</code> à <code>192.168.0.255</code>.</p>
 <p>On considère que les adresses IP saisies sont valides.</p>
 <p>Les adresses IP <code>192.168.0.0</code> et <code>192.168.0.255</code> sont des adresses réservées.</p>
 <p>Le code ci-dessous implémente la classe <code>AdresseIP</code>.</p>
-<p></p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3891,36 +3890,36 @@ une plage d’adresses IP de <code>192.168.0.0</code> à <code>192.168.0.255</co
         <span class="bp">self</span><span class="o">.</span><span class="n">adresse</span> <span class="o">=</span> <span class="o">...</span>
 
     <span class="k">def</span> <span class="nf">liste_octet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">"""renvoie une liste de nombres entiers,</span>
-<span class="sd">        la liste des octets de l'adresse IP"""</span>
-        <span class="k">return</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">adresse</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"."</span><span class="p">)]</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;renvoie une liste de nombres entiers,</span>
+<span class="sd">        la liste des octets de l&#39;adresse IP&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">adresse</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)]</span>
 
     <span class="k">def</span> <span class="nf">est_reservee</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">"""renvoie True si l'adresse IP est une adresse</span>
-<span class="sd">        réservée, False sinon"""</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;renvoie True si l&#39;adresse IP est une adresse</span>
+<span class="sd">        réservée, False sinon&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="o">...</span> <span class="ow">or</span> <span class="o">...</span>
 
     <span class="k">def</span> <span class="nf">adresse_suivante</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">"""renvoie un objet de AdresseIP avec l'adresse</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;renvoie un objet de AdresseIP avec l&#39;adresse</span>
 <span class="sd">        IP qui suit l’adresse self</span>
-<span class="sd">        si elle existe et False sinon"""</span>
+<span class="sd">        si elle existe et False sinon&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="o">...</span> <span class="o">&lt;</span> <span class="mi">254</span><span class="p">:</span>
             <span class="n">octet_nouveau</span> <span class="o">=</span> <span class="o">...</span> <span class="o">+</span> <span class="o">...</span>
-            <span class="k">return</span> <span class="n">AdresseIP</span><span class="p">(</span><span class="s1">'192.168.0.'</span> <span class="o">+</span> <span class="o">...</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">AdresseIP</span><span class="p">(</span><span class="s1">&#39;192.168.0.&#39;</span> <span class="o">+</span> <span class="o">...</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">False</span>
 </code></pre></div></td></tr></table></div>
 Compléter le code ci-dessus et instancier trois objets : <code>adresse1</code>, <code>adresse2</code>,
-<code>adresse3</code> avec respectivement les arguments suivants :
+<code>adresse3</code> avec respectivement les arguments suivants :</p>
 <p><code>'192.168.0.1'</code>, <code>'192.168.0.2'</code>, <code>'192.168.0.0'</code></p>
 <p>Vérifier que : 
-</p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">adresse1</span><span class="o">.</span><span class="n">est_reservee</span><span class="p">()</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">adresse1</span><span class="o">.</span><span class="n">est_reservee</span><span class="p">()</span>
 <span class="kc">False</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">adresse3</span><span class="o">.</span><span class="n">est_reservee</span><span class="p">()</span>
 <span class="kc">True</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">adresse2</span><span class="o">.</span><span class="n">adresse_suivante</span><span class="p">()</span><span class="o">.</span><span class="n">adresse</span>
-<span class="s1">'192.168.0.3'</span>
-</code></pre></div></div>
+<span class="s1">&#39;192.168.0.3&#39;</span>
+</code></pre></div></p>
 
 
 

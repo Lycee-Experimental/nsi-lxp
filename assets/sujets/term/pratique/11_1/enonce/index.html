@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,26 +3856,26 @@
 
   <h1>Enonce</h1>
 
-<div><p>On modélise la représentation binaire d'un entier non signé par un tableau d'entiers dont
+<p>On modélise la représentation binaire d'un entier non signé par un tableau d'entiers dont
 les éléments sont 0 ou 1. Par exemple, le tableau <code>[1, 0, 1, 0, 0, 1, 1]</code> représente
 l'écriture binaire de l'entier dont l'écriture décimale est
 <code>2**6 + 2**4 + 2**1 + 2**0 = 83</code>.</p>
 <p>À l'aide d'un parcours séquentiel, écrire la fonction <code>convertir</code> répondant aux
 spécifications suivantes :</p>
-<p></p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">convertir</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    tab est un tableau d'entiers, dont les éléments sont 0 ou 1 et</span>
-<span class="sd">    représentant un entier écrit en binaire. Renvoie l'écriture</span>
-<span class="sd">    décimale de l'entier positif dont la représentation binaire</span>
+<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">convertir</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    tab est un tableau d&#39;entiers, dont les éléments sont 0 ou 1 et</span>
+<span class="sd">    représentant un entier écrit en binaire. Renvoie l&#39;écriture</span>
+<span class="sd">    décimale de l&#39;entier positif dont la représentation binaire</span>
 <span class="sd">    est donnée par le tableau tab</span>
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 </code></pre></div>
 Exemple :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">convertir</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">convertir</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
 <span class="mi">83</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">convertir</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
 <span class="mi">130</span>
-</code></pre></div></div>
+</code></pre></div></p>
 
 
 

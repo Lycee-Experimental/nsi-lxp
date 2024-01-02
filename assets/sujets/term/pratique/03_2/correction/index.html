@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,7 +3856,7 @@
 
   <h1>Correction</h1>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3913,20 +3912,20 @@
         <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
 
 <span class="k">def</span> <span class="nf">affiche</span><span class="p">(</span><span class="n">dessin</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">''' affichage d'une grille : les 1 sont représentés par </span>
-<span class="sd">    des " *" , les 0 par deux espaces "  " '''</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; affichage d&#39;une grille : les 1 sont représentés par </span>
+<span class="sd">    des &quot; *&quot; , les 0 par deux espaces &quot;  &quot; &#39;&#39;&#39;</span>
     <span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="n">dessin</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">ligne</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">col</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s1">' *'</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s1">''</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; *&#39;</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s1">'  '</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s1">''</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;  &#39;</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">()</span>
 
 
 <span class="k">def</span> <span class="nf">zoomListe</span><span class="p">(</span><span class="n">liste_depart</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">'''renvoie une liste contenant k fois chaque </span>
-<span class="sd">    élément de liste_depart'''</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie une liste contenant k fois chaque </span>
+<span class="sd">    élément de liste_depart&#39;&#39;&#39;</span>
 <span class="hll">    <span class="n">liste_zoom</span> <span class="o">=</span> <span class="p">[]</span>
 </span><span class="hll">    <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">liste_depart</span><span class="p">:</span>
 </span>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
@@ -3934,8 +3933,8 @@
 </span>    <span class="k">return</span> <span class="n">liste_zoom</span>
 
 <span class="k">def</span> <span class="nf">zoomDessin</span><span class="p">(</span><span class="n">grille</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">'''renvoie une grille où les lignes sont zoomées k fois </span>
-<span class="sd">    ET répétées k fois'''</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie une grille où les lignes sont zoomées k fois </span>
+<span class="sd">    ET répétées k fois&#39;&#39;&#39;</span>
     <span class="n">grille_zoom</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">grille</span><span class="p">:</span>
 <span class="hll">        <span class="n">liste_zoom</span> <span class="o">=</span> <span class="n">zoomListe</span><span class="p">(</span><span class="n">elt</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>

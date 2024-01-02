@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,7 +3856,7 @@
 
   <h1>Correction</h1>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3882,16 +3881,16 @@
 <span class="normal">23</span>
 <span class="normal">24</span>
 <span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">dichotomie</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    tab : tableau trié dans l’ordre croissant</span>
 <span class="sd">    x : nombre entier</span>
 <span class="sd">    La fonction renvoie True si tab contient x et False sinon</span>
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># cas du tableau vide</span>
 <span class="hll">    <span class="k">if</span> <span class="n">tab</span> <span class="o">==</span> <span class="p">[]:</span>
 </span>        <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="mi">1</span>
 
-    <span class="c1"># cas où x n'est pas compris entre les valeurs extrêmes</span>
+    <span class="c1"># cas où x n&#39;est pas compris entre les valeurs extrêmes</span>
 <span class="hll">    <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">tab</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">or</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">tab</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]):</span>
 </span>        <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="mi">2</span>
         

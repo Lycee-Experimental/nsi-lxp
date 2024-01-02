@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3958,7 +3957,7 @@
   
 
 
-<div><h1 id="codage-des-caracteres">Codage des caractères<a class="headerlink" href="#codage-des-caracteres" title="Permanent link">⚓︎</a></h1>
+<h1 id="codage-des-caracteres">Codage des caractères<a class="headerlink" href="#codage-des-caracteres" title="Permanent link">⚓︎</a></h1>
 <p>Comment Ã©viter les erreurs d'encodage ?</p>
 <details class="conclu">
 <summary>Programme</summary>
@@ -3981,11 +3980,11 @@
 </details>
 <details class="debian">
 <summary>Terminal Linux</summary>
-<p></p><div id="screen_container">
+<p><div id="screen_container">
                     <div style="white-space: pre; font: 14px monospace; line-height: 14px">
                     </div>
                     <canvas style="display: none"></canvas>
-                </div>
+                </div></p>
 </details>
 <script>
 "use strict";
@@ -4040,10 +4039,10 @@ $(document).ready(launchDebian());
 <p>Dans le terminal Linux ci-dessus :</p>
 <ul>
 <li>Insert la chaine de caractère "test" dans un fichier <code>test.txt</code> :
-<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s1">'test'</span><span class="w"> </span>&gt;<span class="w"> </span>test.txt
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;test&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>test.txt
 </code></pre></div></li>
 <li>Utilise la commande suivante pour connaitre le système d'encodage du fichier créé (charset) :
-<div class="highlight"><pre><span></span><code>file<span class="w"> </span>-i<span class="w"> </span>test.txt
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code>file<span class="w"> </span>-i<span class="w"> </span>test.txt
 </code></pre></div></li>
 <li>Effectue les mêmes opérations avec la chaine de caractère "testé".</li>
 </ul>
@@ -4060,17 +4059,17 @@ $(document).ready(launchDebian());
 <h2 id="la-norme-ascii">La norme ASCII<a class="headerlink" href="#la-norme-ascii" title="Permanent link">⚓︎</a></h2>
 <p>Le standard ACSII pour <em>American Standard Code for Information Interchange</em> a été créé en 1960 aux États-Unis.</p>
 <p>Les caractères sont codés sur <strong>7 bits</strong>, soit sur 127 <em>«points de code»</em> (nombres associés aux caractères). </p>
-<p><img alt="" class="center" src="/assets/images/ascii.png"></p>
+<p><img alt="" class="center" src="/assets/images/ascii.png" /></p>
 <details class="question">
 <summary>Activité 2 - Décodage de textes décodés en ASCII</summary>
 <p>Dans le terminal linux en haut de la page :</p>
 <ul>
 <li>Afficher le contenu hexadécimal du fichier <code>networking.sh</code> :
-<div class="highlight"><pre><span></span><code>od<span class="w"> </span>-t<span class="w"> </span>x1<span class="w"> </span>networking.sh
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code>od<span class="w"> </span>-t<span class="w"> </span>x1<span class="w"> </span>networking.sh
 </code></pre></div></li>
 <li>Utiliser le tableau ci-desous pour traduire les 11 premiers caractères (21, 23, ..., 68).</li>
 <li>Vérifier votre résultat en affichat le contenu du fichier :
-<div class="highlight"><pre><span></span><code>cat<span class="w"> </span>networking.sh
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code>cat<span class="w"> </span>networking.sh
 </code></pre></div></li>
 </ul>
 </details>
@@ -4078,7 +4077,7 @@ $(document).ready(launchDebian());
 <p>Lorsque d'autres personnes que des americains ou des anglais ont voulu s'échanger des données faisant intervenir du texte, certains caractères (é, è, à, ñ, Ø, Ö, β, 漢...) étaient manquants. Les 127 caractères de l'ASCII étaient largement insuffisants. 
 Il a donc été décidé de passer à... 256 caractères ! Il suffisait pour cela de coder les caractères non plus sur 7 bits mais sur 8 bits.</p>
 <p>Ainsi naquît, après de nombreuses modifications successives (la dernière en date rajoutant par exemple le symbole €), la célèbre table <strong>ISO 8859-15</strong>, dite aussi <strong>Latin-9</strong> :</p>
-<p><img alt="" class="center" src="/assets/images/iso-latin.png"></p>
+<p><img alt="" class="center" src="/assets/images/iso-latin.png" /></p>
 <h3 id="utilisation">Utilisation :<a class="headerlink" href="#utilisation" title="Permanent link">⚓︎</a></h3>
 <p>Les codes sont donnés en hexadécimal :</p>
 <ul>
@@ -4088,25 +4087,25 @@ Il a donc été décidé de passer à... 256 caractères ! Il suffisait pour cel
 <p>Les caractères ASCII y ont été inclus avec leur même code, ce qui rendait cette nouvelle norme rétro-compatible.</p>
 <p>Parfait, mais comment font les Grecs pour écrire leur alphabet ?
 Pas de problème, il leur suffit d'utiliser... une autre table, appelée ISO-8859-7 :</p>
-<p><img alt="" class="center" src="/assets/images/isogrec.png"></p>
+<p><img alt="" class="center" src="/assets/images/isogrec.png" /></p>
 <p>On retrouve les caractères universels hérités de l'ASCII, puis des caractères spécifiques à la langue grecque... oui mais les Thaïlandais alors ? </p>
 <p>Pas de problème, ils ont la ISO-8859-11 :</p>
-<p><img alt="" class="center" src="/assets/images/isothai.png"></p>
+<p><img alt="" class="center" src="/assets/images/isothai.png" /></p>
 <p>Évidemment, quand tous ces gens veulent discuter entre eux, les problèmes d'encodage surviennent immédiatement : certains caractères sont remplacés par d'autres.</p>
 <h2 id="que-fait-un-logiciel-a-louverture-dun-fichier-texte">Que fait un logiciel à l'ouverture d'un fichier texte ?<a class="headerlink" href="#que-fait-un-logiciel-a-louverture-dun-fichier-texte" title="Permanent link">⚓︎</a></h2>
 <p>Il essaie de deviner l'encodage utilisé... Parfois cela marche, parfois non.
-<img alt="" class="center" src="/assets/images/erreur_nav.png"></p>
+<img alt="" class="center" src="/assets/images/erreur_nav.png" /></p>
 <p>Normalement, pour un navigateur, une page web correctement codée doit contenir dans une balise <code>meta</code> le <code>charset</code> utilisé. 
-<img alt="" class="center" src="/assets/images/source_twitter.png"></p>
+<img alt="" class="center" src="/assets/images/source_twitter.png" /></p>
 <p>Mais parfois, il n'y a pas d'autre choix pour le logiciel d'essayer de deviner l'encodage qui semble être utilisé.</p>
 <details class="question">
 <summary>Activité 3 - Identifier un encodage</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Correction</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Le fichier texte représenté par les octets ci-dessous est-il encodé en ASCII ou en Latin-9 ?
-</p><div class="highlight"><pre><span></span><code>4c 79 63 e9 65 58 50
-</code></pre></div>
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>4c 79 63 e9 65 58 50
+</code></pre></div></p>
 </div>
 <div class="tabbed-block">
 <p>C'est du Latin-9, car le point de code <code>e9</code> n'existe pas en ASCII. Le fichier texte contient le mot "LycéeXP"</p>
@@ -4119,13 +4118,13 @@ Pas de problème, il leur suffit d'utiliser... une autre table, appelée ISO-885
 <p>Dans le terminal linux :</p>
 <ul>
 <li>Crée le fichier texte contenant "LycéeXP" :
-<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">"LycéeXP"</span><span class="w"> </span>&gt;<span class="w"> </span>test.txt
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;LycéeXP&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>test.txt
 </code></pre></div></li>
 <li>Convertis-le en ISO8859-15 :
-<div class="highlight"><pre><span></span><code>iconv<span class="w"> </span>-t<span class="w"> </span>ISO-8859-15<span class="w"> </span>test.txt<span class="w"> </span>-o<span class="w"> </span>test.txt
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code>iconv<span class="w"> </span>-t<span class="w"> </span>ISO-8859-15<span class="w"> </span>test.txt<span class="w"> </span>-o<span class="w"> </span>test.txt
 </code></pre></div></li>
 <li>Affiche le : 
-<div class="highlight"><pre><span></span><code>cat<span class="w"> </span>test.txt
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code>cat<span class="w"> </span>test.txt
 </code></pre></div></li>
 </ul>
 <details class="note">
@@ -4136,28 +4135,28 @@ Pas de problème, il leur suffit d'utiliser... une autre table, appelée ISO-885
 <h2 id="la-normalisation-utf">La normalisation UTF<a class="headerlink" href="#la-normalisation-utf" title="Permanent link">⚓︎</a></h2>
 <p>En 1996, le <a href="https://home.unicode.org/">Consortium Unicode</a> décide de normaliser tout cela et de créer un système unique qui contiendra l'intégralité des caractères dont les êtres humains ont besoin pour communiquer entre eux.  </p>
 <p>Ils créent l'Universal character set Transformation Format : l'UTF. 
-Ou plutôt ils en créent... plusieurs  <img alt="😢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f622.svg" title=":cry:"> :</p>
+Ou plutôt ils en créent... plusieurs  <img alt="😢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f622.svg" title=":cry:" /> :</p>
 <ul>
 <li>l'<strong>UTF-8</strong> : les caractères sont codés sur 1, 2, 3 ou 4 octets.</li>
 <li>l'<strong>UTF-16</strong> : les caractères sont codés sur 2 ou 4 octets.</li>
 <li>l'<strong>UTF-32</strong> : les caractères sont codés sur 4 octets.</li>
 </ul>
 <p>Pourquoi est-ce encore si compliqué ? En UTF-32, 32 bits sont disponibles, soit <span class="arithmatex">\(2^{32}=4294967296\)</span> caractères différents encodables. </p>
-<p>C'est largement suffisant, mais c'est surtout très très lourd !<br>
+<p>C'est largement suffisant, mais c'est surtout très très lourd !<br />
 D'autres encodages plus légers, mais plus complexes, sont donc proposés. </p>
 <h3 id="le-cas-particulier-de-lutf-8">Le cas particulier de l'UTF-8<a class="headerlink" href="#le-cas-particulier-de-lutf-8" title="Permanent link">⚓︎</a></h3>
 <p>Le principe de l'<strong>UTF-8</strong> est qu'il est <strong>adaptatif</strong> : les caracères les plus fréquents sont codés sur un octet, qui est la taille minimale (et qui donne le 8 de <strong>UTF-8</strong>). Les autres caractères peuvent être codés sur 2, 3 ou 4 octets au maximum.</p>
-<p><img alt="" class="center" src="/assets/images/cap_utf8.png"></p>
+<p><img alt="" class="center" src="/assets/images/cap_utf8.png" /></p>
 <div class="admonition python">
 <p class="admonition-title">L'encodage des caractères avec Python</p>
 <ul>
-<li>La fonction <code>ord(caractere)</code> renvoie le nombre entier Unicode associé au caractère.<br>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">'à'</span><span class="p">)</span>
+<li>La fonction <code>ord(caractere)</code> renvoie le nombre entier Unicode associé au caractère.<br />
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;à&#39;</span><span class="p">)</span>
 <span class="mi">224</span>
 </code></pre></div></li>
 <li>La fonction <code>chr(nombre)</code> renvoie le caractère codé par l'entier Unicode nombre.
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">chr</span><span class="p">(</span><span class="mi">224</span><span class="p">)</span>
-<span class="s1">'à'</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">chr</span><span class="p">(</span><span class="mi">224</span><span class="p">)</span>
+<span class="s1">&#39;à&#39;</span>
 </code></pre></div></li>
 </ul>
 </div>
@@ -4169,15 +4168,15 @@ D'autres encodages plus légers, mais plus complexes, sont donc proposés. </p>
 <p class="admonition-title">Rappel sur le binaire en python</p>
 <p>La fonction <code>bin()</code> convertit un entier en binaire.</p>
 </div>
-<p></p><div onclick='start_term("id2")' id="fake_id2" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id2" class="py_mk_hide"></div>
+<p><div onclick='start_term("id2")' id="fake_id2" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id2" class="py_mk_hide"></div></p>
 <details class="tip">
 <summary>Correction</summary>
-<p></p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">'é'</span><span class="p">)</span>
+<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;é&#39;</span><span class="p">)</span>
 <span class="mi">233</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="mi">233</span><span class="p">)</span>
-<span class="s1">'0b11101001'</span>
+<span class="s1">&#39;0b11101001&#39;</span>
 </code></pre></div>
-Donc en UTF-8, <code>é</code> est associé au nombre <code>11101001</code>.
+Donc en UTF-8, <code>é</code> est associé au nombre <code>11101001</code>.</p>
 </details>
 <p><strong>Q2.</strong> D'après l'explication de fonctionnement de l'encodage adaptatif de l'UTF-8 (voir ci-dessus), les 8 bits nécessaires à l'encodage de <code>é</code> en UTF-8 doivent être «encapsulés» dans 2 octets de la forme <code>110XXXXX 10XXXXXX</code>, où les onze <code>X</code> représentent les 11 bits d'information disponibles. Écrire ces 2 octets en complétant si nécessaire avec des <code>0</code> à gauche.</p>
 <details class="tip">
@@ -4189,35 +4188,35 @@ Donc en UTF-8, <code>é</code> est associé au nombre <code>11101001</code>.
 <p class="admonition-title">Rappel sur le décimal et hexadécimal en Python</p>
 <ul>
 <li>La fonction <code>int('monNombreBinaire', 2)</code> convertit un binaire en entier.
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="s1">'11000011'</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;11000011&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="mi">195</span>
 </code></pre></div></li>
 <li>La fonction <code>hex(nombre)</code> convertit nombre en hexadécimal.
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">hex</span><span class="p">(</span><span class="mi">169</span><span class="p">)</span>
-<span class="s1">'0xa9'</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">hex</span><span class="p">(</span><span class="mi">169</span><span class="p">)</span>
+<span class="s1">&#39;0xa9&#39;</span>
 </code></pre></div></li>
 </ul>
 </div>
-<p></p><div onclick='start_term("id3")' id="fake_id3" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id3" class="py_mk_hide"></div>
+<p><div onclick='start_term("id3")' id="fake_id3" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id3" class="py_mk_hide"></div></p>
 <details class="tip">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="s1">'11000011'</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;11000011&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="mi">195</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">hex</span><span class="p">(</span><span class="mi">195</span><span class="p">)</span>
-<span class="s1">'0xc3'</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="s1">'10101001'</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="s1">&#39;0xc3&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;10101001&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="mi">169</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">hex</span><span class="p">(</span><span class="mi">169</span><span class="p">)</span>
-<span class="s1">'0xa9'</span>
+<span class="s1">&#39;0xa9&#39;</span>
 </code></pre></div>
 </details>
 <p><strong>Q4.</strong> Conclusion : Si un logiciel considère <strong>à tort</strong> que les deux octets servant à encoder le <code>é</code> en UTF-8 servent à encoder deux caractères en ISO 8859-15, quels seront ces deux caractères ?</p>
 <details class="tip">
 <summary>Correction</summary>
-<p>Le premier octet, <code>c3</code> en hexadécimal, sera perçu en ISO 8859-15 comme le caractère <code>Ã</code>.<br>
+<p>Le premier octet, <code>c3</code> en hexadécimal, sera perçu en ISO 8859-15 comme le caractère <code>Ã</code>.<br />
 Le deuxième octet, <code>a9</code> en hexadécimal, sera perçu en ISO 8859-15 comme la lettre <code>©</code>.  </p>
 <p>Finalement, ce qui aurait dû être un <code>é</code> en UTF-8 se retrouvera être un <code>Ã©</code> en ISO 8859-15. </p>
-<p><img alt="" class="center" src="/assets/images/iso-latin.png"></p>
+<p><img alt="" class="center" src="/assets/images/iso-latin.png" /></p>
 </details>
 </details>
 <details class="question">
@@ -4233,16 +4232,16 @@ Le deuxième octet, <code>a9</code> en hexadécimal, sera perçu en ISO 8859-15 
 </ul>
 <p>Le premier caractère du mot chiffré sera donc <code>'\x0e'</code></p>
 <p><strong>Q1.</strong> Écrire une fonction <code>chiffre</code> qui prendra en paramètre un mot <code>mot_clair</code> et un mot de passe <code>cle</code> <strong>de même taille</strong> que <code>mot_clair</code> et qui renvoie la chaîne de caractères obtenue en XORant <code>mot_clair</code> avec <code>cle</code>.</p>
-<p></p><div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_00000025" class="comment">###</span><div class="line" id="editor_00000025"></div><div id="term_editor_00000025" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_00000025","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000025","")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000025').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000025" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000025")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000025")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000025" class="py_mk_hide"></span><span id="corr_content_editor_00000025" class="py_mk_hide" data-strudel=""></span>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000048" class="comment">###</span><div class="line" id="editor_00000048"></div><div id="term_editor_00000048"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000048","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000048","")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000048').click()" >            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000048" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000048")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000048")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000048" class="py_mk_hide"></span><span id="corr_content_editor_00000048" class="py_mk_hide" data-strudel=""></span></p>
 <details class="tip">
 <summary>correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">chiffre</span><span class="p">(</span><span class="n">mot_clair</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
-    <span class="n">mot_chiffre</span> <span class="o">=</span> <span class="s2">""</span>
+    <span class="n">mot_chiffre</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mot_clair</span><span class="p">)):</span>
         <span class="n">code</span> <span class="o">=</span> <span class="nb">ord</span><span class="p">(</span><span class="n">mot_clair</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">^</span> <span class="nb">ord</span><span class="p">(</span><span class="n">cle</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
         <span class="n">mot_chiffre</span> <span class="o">+=</span> <span class="nb">chr</span><span class="p">(</span><span class="n">code</span><span class="p">)</span>
@@ -4252,19 +4251,19 @@ Le deuxième octet, <code>a9</code> en hexadécimal, sera perçu en ISO 8859-15 
 <p><strong>Q2.</strong> Grâce à la fonction ci-dessus, chiffrer le mot <code>"BONJOUR"</code> avec la clé <code>"LYCEEXP"</code>.</p>
 <details class="tip">
 <summary>correction</summary>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">chiffre</span><span class="p">(</span><span class="s2">"BONJOUR"</span><span class="p">,</span> <span class="s2">"LYCEEXP"</span><span class="p">)</span>
-<span class="s1">'</span><span class="se">\x0f\x0e\x1b\x18\x06\x14\x11</span><span class="s1">'</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">chiffre</span><span class="p">(</span><span class="s2">&quot;BONJOUR&quot;</span><span class="p">,</span> <span class="s2">&quot;LYCEEXP&quot;</span><span class="p">)</span>
+<span class="s1">&#39;</span><span class="se">\x0f\x0e\x1b\x18\x06\x14\x11</span><span class="s1">&#39;</span>
 </code></pre></div>
 </details>
 <p><strong>Q3.</strong> Reprendre la chaîne de caractères précédemment obtenue et la rechiffrer à nouveau avec la clé <code>"LYCEEXP"</code>. Que constate-t-on ? </p>
 <details class="tip">
 <summary>correction</summary>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">chiffre</span><span class="p">(</span><span class="s1">'</span><span class="se">\x0f\x0e\x1b\x18\x06\x14\x11</span><span class="s1">'</span><span class="p">,</span> <span class="s2">"LYCEEXP"</span><span class="p">)</span>
-<span class="s1">'BONJOUR'</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">chiffre</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\x0f\x0e\x1b\x18\x06\x14\x11</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s2">&quot;LYCEEXP&quot;</span><span class="p">)</span>
+<span class="s1">&#39;BONJOUR&#39;</span>
 </code></pre></div>
 </details>
 <p><strong>Q4.</strong> Montrer que <code>(a^b)^b = a</code> avec les portes logiques.</p>
-<p></p><div style="width: 100%; height: 400px">
+<p><div style="width: 100%; height: 400px">
         <logic-editor mode="design" showonly="in out and or not xor">
             <script type="application/json">
             { // JSON5
@@ -4272,10 +4271,10 @@ Le deuxième octet, <code>a9</code> en hexadécimal, sera perçu en ISO 8859-15 
             }
             </script>
         </logic-editor>
-</div>
+</div></p>
 <details class="tip">
 <summary>Correction</summary>
-<p></p><div style="width: 100%; height: 193.5px">
+<p><div style="width: 100%; height: 193.5px">
 <logic-editor mode="design">
     <script type="application/json">
     { // JSON5
@@ -4294,12 +4293,12 @@ Le deuxième octet, <code>a9</code> en hexadécimal, sera perçu en ISO 8859-15 
     }
     </script>
 </logic-editor>
-</div>
+</div></p>
 </details>
-<p><strong>Q4.</strong> <img alt="💀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f480.svg" title=":skull:"> Résoudre le Pydéfi <a class="" href="https://pydefis.callicode.fr/defis/MasqueJetable/txt" target="_blank">La clé endommagée</a></p>
+<p><strong>Q4.</strong> <img alt="💀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f480.svg" title=":skull:" /> Résoudre le Pydéfi <a class="" href="https://pydefis.callicode.fr/defis/MasqueJetable/txt" target="_blank">La clé endommagée</a></p>
 <details class="tip">
 <summary>correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -4316,7 +4315,7 @@ Le deuxième octet, <code>a9</code> en hexadécimal, sera perçu en ISO 8859-15 
 <span class="n">cle</span> <span class="o">=</span> <span class="p">[</span><span class="mi">111</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">177</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">199</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">175</span><span class="p">,</span> <span class="mi">181</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">174</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">212</span><span class="p">,</span> <span class="mi">225</span><span class="p">,</span> <span class="mi">63</span><span class="p">,</span> <span class="mi">106</span><span class="p">,</span> <span class="mi">248</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">175</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">247</span><span class="p">,</span> <span class="mi">245</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">160</span><span class="p">,</span> <span class="mi">111</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">167</span><span class="p">,</span> <span class="mi">177</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">89</span><span class="p">]</span>
 
 <span class="k">def</span> <span class="nf">decrypt</span><span class="p">(</span><span class="n">dec</span><span class="p">):</span>
-    <span class="n">l</span> <span class="o">=</span> <span class="s2">""</span>
+    <span class="n">l</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cle</span><span class="p">)):</span>
         <span class="n">c</span> <span class="o">=</span> <span class="n">msg</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="n">dec</span><span class="p">]</span> <span class="o">^</span> <span class="n">cle</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
         <span class="n">l</span> <span class="o">=</span> <span class="n">l</span> <span class="o">+</span> <span class="nb">chr</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
@@ -4330,8 +4329,8 @@ Le deuxième octet, <code>a9</code> en hexadécimal, sera perçu en ISO 8859-15 
 <div class="admonition info">
 <p class="admonition-title">Utilisation grandissante de l'encodage UTF-8</p>
 <p>La majorité des sites internet utilisent maintenant l'UTF-8, tout comme les systèmes d'exploitation récents.</p>
-<p><img alt="" class="center" src="/assets/images/graph_comparaison.png"></p>
-</div></div>
+<p><img alt="" class="center" src="/assets/images/graph_comparaison.png" /></p>
+</div>
 
 
 

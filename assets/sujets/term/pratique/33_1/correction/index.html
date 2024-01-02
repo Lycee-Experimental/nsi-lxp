@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,7 +3856,7 @@
 
   <h1>Correction</h1>
 
-<div><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3873,33 +3872,33 @@
 <span class="normal">14</span>
 <span class="normal">15</span>
 <span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'F'</span><span class="p">:[</span><span class="s1">'B'</span><span class="p">,</span><span class="s1">'G'</span><span class="p">],</span> <span class="s1">'B'</span><span class="p">:[</span><span class="s1">'A'</span><span class="p">,</span><span class="s1">'D'</span><span class="p">],</span> <span class="s1">'A'</span><span class="p">:[</span><span class="s1">''</span><span class="p">,</span><span class="s1">''</span><span class="p">],</span> <span class="s1">'D'</span><span class="p">:[</span><span class="s1">'C'</span><span class="p">,</span><span class="s1">'E'</span><span class="p">],</span> <span class="s1">'C'</span><span class="p">:[</span><span class="s1">''</span><span class="p">,</span><span class="s1">''</span><span class="p">],</span> <span class="s1">'E'</span><span class="p">:[</span><span class="s1">''</span><span class="p">,</span><span class="s1">''</span><span class="p">],</span> <span class="s1">'G'</span><span class="p">:[</span><span class="s1">''</span><span class="p">,</span><span class="s1">'I'</span><span class="p">],</span> <span class="s1">'I'</span><span class="p">:[</span><span class="s1">''</span><span class="p">,</span><span class="s1">'H'</span><span class="p">],</span> <span class="s1">'H'</span><span class="p">:[</span><span class="s1">''</span><span class="p">,</span><span class="s1">''</span><span class="p">]}</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;F&#39;</span><span class="p">:[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;G&#39;</span><span class="p">],</span> <span class="s1">&#39;B&#39;</span><span class="p">:[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;D&#39;</span><span class="p">],</span> <span class="s1">&#39;A&#39;</span><span class="p">:[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">],</span> <span class="s1">&#39;D&#39;</span><span class="p">:[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="s1">&#39;E&#39;</span><span class="p">],</span> <span class="s1">&#39;C&#39;</span><span class="p">:[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">],</span> <span class="s1">&#39;E&#39;</span><span class="p">:[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">],</span> <span class="s1">&#39;G&#39;</span><span class="p">:[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;I&#39;</span><span class="p">],</span> <span class="s1">&#39;I&#39;</span><span class="p">:[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;H&#39;</span><span class="p">],</span> <span class="s1">&#39;H&#39;</span><span class="p">:[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">]}</span>
 
 <span class="k">def</span> <span class="nf">taille</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">lettre</span><span class="p">):</span>
     <span class="n">fils_gauche</span> <span class="o">=</span> <span class="n">arbre</span><span class="p">[</span><span class="n">lettre</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">fils_droit</span> <span class="o">=</span> <span class="n">arbre</span><span class="p">[</span><span class="n">lettre</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
 
-    <span class="k">if</span> <span class="n">fils_gauche</span> <span class="o">!=</span> <span class="s1">''</span> <span class="ow">and</span> <span class="n">fils_droit</span> <span class="o">!=</span> <span class="s1">''</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">fils_gauche</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span> <span class="ow">and</span> <span class="n">fils_droit</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">taille</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">fils_gauche</span><span class="p">)</span> <span class="o">+</span> <span class="n">taille</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">fils_droit</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="n">fils_gauche</span> <span class="o">!=</span> <span class="s1">''</span> <span class="ow">and</span> <span class="n">fils_droit</span> <span class="o">==</span> <span class="s1">''</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">fils_gauche</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span> <span class="ow">and</span> <span class="n">fils_droit</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">taille</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">fils_gauche</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="n">fils_gauche</span> <span class="o">==</span> <span class="s1">''</span> <span class="ow">and</span> <span class="n">fils_droit</span> <span class="o">!=</span> <span class="s1">''</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">fils_gauche</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span> <span class="ow">and</span> <span class="n">fils_droit</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">taille</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">fils_droit</span><span class="p">)</span>
 
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">1</span>
 </code></pre></div></td></tr></table></div>
 <p>ou plus simplement :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">taille</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">lettre</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">lettre</span> <span class="o">==</span> <span class="s1">''</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">lettre</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">0</span>
     <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">taille</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">arbre</span><span class="p">[</span><span class="n">lettre</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="n">taille</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">arbre</span><span class="p">[</span><span class="n">lettre</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
-</code></pre></div></td></tr></table></div></div>
+</code></pre></div></td></tr></table></div>
 
 
 

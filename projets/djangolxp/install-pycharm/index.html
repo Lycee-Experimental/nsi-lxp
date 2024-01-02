@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3878,15 +3877,15 @@
   
 
 
-<div><p>Pour travailler sur notre projet, on utilise l'environnement de développement (Integrated Development Environment) Pycharm.
+<p>Pour travailler sur notre projet, on utilise l'environnement de développement (Integrated Development Environment) Pycharm.
 Ce logiciel dédié au développement python est gratuit dans sa <a href="https://www.jetbrains.com/fr-fr/pycharm/download/download-thanks.html?platform=linux&amp;code=PCC">version communautaire</a>, mais payant pour avoir accès à des fonctionnalités supplémentaires, notamment pour le développement Web. Pour installer et activer la license pro en attendant de l'acquérir :</p>
 <h1 id="installation-de-pycharm">Installation de Pycharm<a class="headerlink" href="#installation-de-pycharm" title="Permanent link">⚓︎</a></h1>
-<div class="highlight"><pre><span></span><code><span class="c1"># On télécharge la version pro de l'IDE</span>
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code><span class="c1"># On télécharge la version pro de l&#39;IDE</span>
 sudo<span class="w"> </span>wget<span class="w"> </span>-c<span class="w"> </span>https://download-cdn.jetbrains.com/python/pycharm-professional-2021.3.2.tar.gz<span class="w"> </span>-O<span class="w"> </span>-<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tar<span class="w"> </span>-xz<span class="w"> </span>-C<span class="w"> </span>/opt/
-<span class="c1"># Son patch d'activation</span>
+<span class="c1"># Son patch d&#39;activation</span>
 sudo<span class="w"> </span>wget<span class="w"> </span>-c<span class="w"> </span>https://github.com/Lycee-Experimental/django-lxp/raw/main/extra/ja-netfilter-all.tar.gz<span class="w"> </span>-O<span class="w"> </span>-<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tar<span class="w"> </span>-xz<span class="w"> </span>-C<span class="w"> </span>/opt/pycharm-2021.3.2
-<span class="c1"># on indique à l'IDE où trouver le patch</span>
-<span class="nb">echo</span><span class="w"> </span><span class="s2">"-javaagent:/opt/pycharm-2021.3.2/ja-netfilter-all/ja-netfilter.jar"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>/opt/pycharm-2021.3.2/bin/pycharm64.vmoptions
+<span class="c1"># on indique à l&#39;IDE où trouver le patch</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;-javaagent:/opt/pycharm-2021.3.2/ja-netfilter-all/ja-netfilter.jar&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>/opt/pycharm-2021.3.2/bin/pycharm64.vmoptions
 <span class="c1"># Enfin, on crée un élément de menu pour lancer notre IDE plus facilement</span>
 cat<span class="w"> </span><span class="s">&lt;&lt;EOT &gt; ~/.local/share/applications/pycharm.desktop</span>
 <span class="s">[Desktop Entry]</span>
@@ -3899,7 +3898,7 @@ cat<span class="w"> </span><span class="s">&lt;&lt;EOT &gt; ~/.local/share/appli
 <span class="s">Type=Application</span>
 <span class="s">EOT</span>
 
-<span class="c1"># On charge l'élément de menu ainsi créé </span>
+<span class="c1"># On charge l&#39;élément de menu ainsi créé </span>
 sudo<span class="w"> </span>update-desktop-database<span class="w"> </span>~/.local/share/applications
 </code></pre></div>
 <p>Un petit redémarrage (ou simplement déconnection/reconnection), PyCharm est maintenant prêt à être utilisé depuis le menu !</p>
@@ -3907,9 +3906,9 @@ sudo<span class="w"> </span>update-desktop-database<span class="w"> </span>~/.lo
 (<code>Start trial</code>) puis vous connecter sur Jetbrains, par exemple avec <strong>vos identifiants Github</strong>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<div class="highlight"><pre><span></span><code>Si vous n'en avez pas encore créé un, rendez-vous sur [cette page](https://github.com/join). Indiquer le nom de codeur·euse que vous souhaitez.
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Si vous n&#39;en avez pas encore créé un, rendez-vous sur [cette page](https://github.com/join). Indiquer le nom de codeur·euse que vous souhaitez.
 </code></pre></div>
-</div></div>
+</div>
 
 
 

@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3876,7 +3875,7 @@
   
 
 
-<div><h1 id="lemulateur-linux-v86">L'émulateur Linux V86<a class="headerlink" href="#lemulateur-linux-v86" title="Permanent link">⚓︎</a></h1>
+<h1 id="lemulateur-linux-v86">L'émulateur Linux V86<a class="headerlink" href="#lemulateur-linux-v86" title="Permanent link">⚓︎</a></h1>
 <p>Cet émulateur est une adaptation de la <a href="https://github.com/copy/v86">librairie V86</a>.</p>
 <p>Les dépendances se trouvent dans le dossier <code>xtra/v86</code>.</p>
 <p>Le code html/js/css source est intégré dans la macro debian du fichier <code>main.py</code></p>
@@ -3884,11 +3883,11 @@
 <p><strong>Résultat</strong></p>
 <details class="debian">
 <summary>Ouvrir le terminal</summary>
-<p></p><div id="screen_container">
+<p><div id="screen_container">
                     <div style="white-space: pre; font: 14px monospace; line-height: 14px">
                     </div>
                     <canvas style="display: none"></canvas>
-                </div>
+                </div></p>
 </details>
 <script>
 "use strict";
@@ -3941,27 +3940,27 @@ $(document).ready(launchDebian());
 <details class="note">
 <summary>Compilation de V86</summary>
 <p><strong>Installation des dépendances</strong>
-</p><div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>nodejs<span class="w"> </span>nasm<span class="w"> </span>gdb<span class="w"> </span>unzip<span class="w"> </span>p7zip-full<span class="w"> </span>openjdk-8-jre<span class="w"> </span>wget<span class="w"> </span>python3<span class="w"> </span>qemu-system-x86<span class="w"> </span>git-core<span class="w"> </span>build-essential<span class="w"> </span>libc6-dev-i386-cross<span class="w"> </span>libc6-dev-i386<span class="w"> </span>clang<span class="w"> </span>curl<span class="w"> </span><span class="nb">time</span><span class="w"> </span>zstd
-curl<span class="w"> </span>--proto<span class="w"> </span><span class="s1">'=https'</span><span class="w"> </span>--tlsv1.2<span class="w"> </span>-sSf<span class="w"> </span>https://sh.rustup.rs<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>sh<span class="w"> </span>-s<span class="w"> </span>--<span class="w"> </span>-y
-<span class="nb">source</span><span class="w"> </span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.cargo/env"</span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.cargo/bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>nodejs<span class="w"> </span>nasm<span class="w"> </span>gdb<span class="w"> </span>unzip<span class="w"> </span>p7zip-full<span class="w"> </span>openjdk-8-jre<span class="w"> </span>wget<span class="w"> </span>python3<span class="w"> </span>qemu-system-x86<span class="w"> </span>git-core<span class="w"> </span>build-essential<span class="w"> </span>libc6-dev-i386-cross<span class="w"> </span>libc6-dev-i386<span class="w"> </span>clang<span class="w"> </span>curl<span class="w"> </span><span class="nb">time</span><span class="w"> </span>zstd
+curl<span class="w"> </span>--proto<span class="w"> </span><span class="s1">&#39;=https&#39;</span><span class="w"> </span>--tlsv1.2<span class="w"> </span>-sSf<span class="w"> </span>https://sh.rustup.rs<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>sh<span class="w"> </span>-s<span class="w"> </span>--<span class="w"> </span>-y
+<span class="nb">source</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.cargo/env&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.cargo/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
 rustup<span class="w"> </span>toolchain<span class="w"> </span>install<span class="w"> </span>stable
 rustup<span class="w"> </span>target<span class="w"> </span>add<span class="w"> </span>wasm32-unknown-unknown
 rustup<span class="w"> </span>component<span class="w"> </span>add<span class="w"> </span>rustfmt-preview
 </code></pre></div>
 <strong>Compilation du code source</strong>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/copy/v86
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/copy/v86
 <span class="nb">cd</span><span class="w"> </span>v86
 wget<span class="w"> </span>-P<span class="w"> </span>images/<span class="w"> </span>https://k.copy.sh/<span class="o">{</span>linux.iso,linux4.iso,buildroot-bzimage.bin,openbsd-floppy.img,kolibri.img,windows101.img,os8.img,freedos722.img<span class="o">}</span>
 make<span class="w"> </span>all
 </code></pre></div>
 <strong>Tester en local</strong>
-<div class="highlight"><pre><span></span><code>make<span class="w"> </span>run
-</code></pre></div>
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code>make<span class="w"> </span>run
+</code></pre></div></p>
 </details>
 <details class="note">
 <summary>Création d'une image Debian</summary>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>tools/docker/debian
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>tools/docker/debian
 ./build-container.sh
 ./build-state.js
 <span class="nb">cd</span><span class="w"> </span>../../../images/
@@ -3983,7 +3982,7 @@ XKBVARIANT="latin9"
 BACKSPACE="guess"</code></p>
 </li>
 </ul>
-</details></div>
+</details>
 
 
 

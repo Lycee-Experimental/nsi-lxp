@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,7 +3856,7 @@
 
   <h1>Correction</h1>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3879,21 +3878,21 @@
 
 <span class="k">def</span> <span class="nf">plus_ou_moins</span><span class="p">():</span>
 <span class="hll">    <span class="n">nb_mystere</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">99</span><span class="p">)</span>
-</span>    <span class="n">nb_test</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">'Proposez un nombre entre 1 et 99 : '</span><span class="p">))</span>
+</span>    <span class="n">nb_test</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Proposez un nombre entre 1 et 99 : &#39;</span><span class="p">))</span>
 <span class="hll">    <span class="n">compteur</span> <span class="o">=</span> <span class="mi">1</span>
 </span>
 <span class="hll">    <span class="k">while</span> <span class="n">nb_mystere</span> <span class="o">!=</span> <span class="n">nb_test</span> <span class="ow">and</span> <span class="n">compteur</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="p">:</span>
 </span><span class="hll">        <span class="n">compteur</span> <span class="o">=</span> <span class="n">compteur</span> <span class="o">+</span> <span class="mi">1</span>
 </span><span class="hll">        <span class="k">if</span> <span class="n">nb_mystere</span> <span class="o">&gt;</span> <span class="n">nb_test</span><span class="p">:</span>
-</span>            <span class="n">nb_test</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">'Trop petit ! Testez encore : '</span><span class="p">))</span>
+</span>            <span class="n">nb_test</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Trop petit ! Testez encore : &#39;</span><span class="p">))</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">nb_test</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">'Trop grand ! Testez encore : '</span><span class="p">))</span>
+            <span class="n">nb_test</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Trop grand ! Testez encore : &#39;</span><span class="p">))</span>
 
     <span class="k">if</span> <span class="n">nb_mystere</span> <span class="o">==</span> <span class="n">nb_test</span><span class="p">:</span>
-<span class="hll">        <span class="nb">print</span> <span class="p">(</span><span class="s1">'Bravo ! Le nombre était '</span><span class="p">,</span> <span class="n">nb_mystere</span><span class="p">)</span>
-</span><span class="hll">        <span class="nb">print</span><span class="p">(</span><span class="s1">'Nombre d essais: '</span><span class="p">,</span> <span class="n">compteur</span><span class="p">)</span>
+<span class="hll">        <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Bravo ! Le nombre était &#39;</span><span class="p">,</span> <span class="n">nb_mystere</span><span class="p">)</span>
+</span><span class="hll">        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Nombre d essais: &#39;</span><span class="p">,</span> <span class="n">compteur</span><span class="p">)</span>
 </span>    <span class="k">else</span><span class="p">:</span>
-<span class="hll">        <span class="nb">print</span> <span class="p">(</span><span class="s1">'Perdu ! Le nombre était '</span><span class="p">,</span> <span class="n">nb_mystere</span><span class="p">)</span>
+<span class="hll">        <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Perdu ! Le nombre était &#39;</span><span class="p">,</span> <span class="n">nb_mystere</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 
 

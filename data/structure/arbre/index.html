@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -4056,7 +4055,7 @@
   
 
 
-<div><h1 id="les-arbres-binaires">Les arbres binaires<a class="headerlink" href="#les-arbres-binaires" title="Permanent link">⚓︎</a></h1>
+<h1 id="les-arbres-binaires">Les arbres binaires<a class="headerlink" href="#les-arbres-binaires" title="Permanent link">⚓︎</a></h1>
 <details class="conclu">
 <summary>Programme</summary>
 <table>
@@ -4145,7 +4144,7 @@ N'oubliez pas d'indiquer pour chaque arbre le nombre total de trajets fait pour 
 <p>Un noeud dont les sous-arbres sont vides est appelé <strong>feuille</strong>.</p>
 </div>
 <p>Dans la figure ci-dessous, tous les arbres dessinés sont deux à deux distincts, ce qui confirme qu'il faut distinguer sous-arbre droit et gauche, et qu'un des sous-arbres peut être vide :</p>
-<p><img alt="" class="center" src="../images/arbre1.PNG"></p>
+<p><img alt="" class="center" src="../images/arbre1.PNG" /></p>
 <p><strong>Exercice 2</strong></p>
 <ol>
 <li>Dessiner tous les arbres ayant 3 noeuds.</li>
@@ -4156,7 +4155,7 @@ N'oubliez pas d'indiquer pour chaque arbre le nombre total de trajets fait pour 
 <p class="admonition-title">Propriétés</p>
 <p><strong>Taille</strong> : nombre de noeuds d'un arbre.</p>
 <p><strong>Profondeur</strong> : </p>
-<p><img alt="" class="center" src="../images/profondeur.PNG"></p>
+<p><img alt="" class="center" src="../images/profondeur.PNG" /></p>
 <p><strong>Hauteur</strong> : Profondeur maximale d'un arbre</p>
 <p><strong>Complet ou parfait</strong> : c'est un arbre binaire de hauteur <em>h</em> tel qu'à chaque profondeur <em>p</em> tous les noeuds sont présents.</p>
 </div>
@@ -4419,11 +4418,11 @@ N'oubliez pas d'indiquer pour chaque arbre le nombre total de trajets fait pour 
 </code></pre>
 </details>
 <h3 id="arbres-particuliers">Arbres particuliers<a class="headerlink" href="#arbres-particuliers" title="Permanent link">⚓︎</a></h3>
-<p><img alt="" class="center" src="../images/arbre2.PNG"></p>
+<p><img alt="" class="center" src="../images/arbre2.PNG" /></p>
 <h3 id="tp-1">TP 1<a class="headerlink" href="#tp-1" title="Permanent link">⚓︎</a></h3>
 <p>Un façon classique de représenter un arbre binaire en Python est de créer une classe <em>Noeud</em> :</p>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Noeud</span> <span class="p">:</span>
-<span class="w">    </span><span class="sd">"""objet Noeud d'un arbre binaire"""</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">Noeud</span> <span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;objet Noeud d&#39;un arbre binaire&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">filsG</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">filsD</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">set_val</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">set_filsG</span><span class="p">(</span><span class="n">filsG</span><span class="p">)</span>
@@ -4448,21 +4447,21 @@ N'oubliez pas d'indiquer pour chaque arbre le nombre total de trajets fait pour 
         <span class="bp">self</span><span class="o">.</span><span class="n">filsD</span> <span class="o">=</span> <span class="n">nouveau_filsD</span>
     
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">get_val</span><span class="p">()</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">get_filsG</span><span class="p">()</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">get_filsD</span><span class="p">()</span><span class="si">}</span><span class="s2">"</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">get_val</span><span class="p">()</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">get_filsG</span><span class="p">()</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">get_filsD</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span>
 </code></pre></div>
 <p>Le noeud contient 3 attributs : sa valeur, ses fils droit et gauche. On peut y ajouter un affichage basique.</p>
 <h4 id="utilisation-de-la-classe-noeud">Utilisation de la classe Noeud<a class="headerlink" href="#utilisation-de-la-classe-noeud" title="Permanent link">⚓︎</a></h4>
-<p><img alt="" class="center" src="../images/tab1.PNG"></p>
+<p><img alt="" class="center" src="../images/tab1.PNG" /></p>
 <p><strong>Exercice 4</strong></p>
 <p>Créer l'arbre suivant dans Capytale avec le code suivant : <code>3213-1144872</code></p>
-<p><img alt="" class="center" src="../images/arbre3.PNG"></p>
+<p><img alt="" class="center" src="../images/arbre3.PNG" /></p>
 <details class="note">
 <summary>Correction</summary>
 <p>Code Capytale : <code>15aa-1144869</code></p>
 </details>
 <h4 id="creation-de-la-fonction-taille">Création de la fonction <code>taille</code><a class="headerlink" href="#creation-de-la-fonction-taille" title="Permanent link">⚓︎</a></h4>
 <p>Voici l'algorithme <strong>récursif</strong> de la fonction <code>taille</code> :</p>
-<div class="highlight"><pre><span></span><code>Fonction taille(arbre):
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Fonction taille(arbre):
   Si arbre est vide :
     Renvoyer 0
   Sinon :
@@ -4472,7 +4471,7 @@ N'oubliez pas d'indiquer pour chaque arbre le nombre total de trajets fait pour 
 <p>Completez le notebook de l'exercice 4 avec cet algorithme codé en Python, et testez-le.</p>
 <h4 id="creation-de-la-fonction-hauteur">Création de la fonction <code>hauteur</code><a class="headerlink" href="#creation-de-la-fonction-hauteur" title="Permanent link">⚓︎</a></h4>
 <p>Voici l'algorithme <strong>récursif</strong> de la fonction <code>hauteur</code> : </p>
-<div class="highlight"><pre><span></span><code>Fonction hauteur(arbre):
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Fonction hauteur(arbre):
   Si arbre est vide :
     Renvoyer 0
   Sinon :
@@ -4482,12 +4481,12 @@ N'oubliez pas d'indiquer pour chaque arbre le nombre total de trajets fait pour 
 <p>Completez le notebook de l'exercice 4 avec cet algorithme codé en Python, et testez-le.</p>
 <h2 id="parcours-dans-un-arbre">Parcours dans un arbre<a class="headerlink" href="#parcours-dans-un-arbre" title="Permanent link">⚓︎</a></h2>
 <p>On parcours un arbre pour "afficher" ou tester toutes les valeurs d'un arbres. Il existe 4 type de parcours :</p>
-<p><img alt="" class="center" src="../images/parcours.PNG"></p>
+<p><img alt="" class="center" src="../images/parcours.PNG" /></p>
 <p><strong>Exercice 5</strong></p>
 <p>On donne les algorithmes de parcours suivants :</p>
 <p><strong>Parcours Préfixe :</strong></p>
-<div class="highlight"><pre><span></span><code>Fonction parcours_prefixe(arbre):
-  Si arbre n'est pas vide :
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Fonction parcours_prefixe(arbre):
+  Si arbre n&#39;est pas vide :
     Noeud ← arbre.racine
     Afficher Noeud.valeur
     parcours_prefixe(arbre.gauche)
@@ -4495,8 +4494,8 @@ N'oubliez pas d'indiquer pour chaque arbre le nombre total de trajets fait pour 
   Fin Si
 </code></pre></div>
 <p><strong>Parcours Infixe :</strong></p>
-<div class="highlight"><pre><span></span><code>Fonction parcours_infixe(arbre):
-  Si arbre n'est pas vide :
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Fonction parcours_infixe(arbre):
+  Si arbre n&#39;est pas vide :
     Noeud ← arbre.racine
     parcours_infixe(arbre.gauche)
     Afficher Noeud.valeur
@@ -4504,8 +4503,8 @@ N'oubliez pas d'indiquer pour chaque arbre le nombre total de trajets fait pour 
   Fin Si
 </code></pre></div>
 <p><strong>Parcours Suffixe :</strong></p>
-<div class="highlight"><pre><span></span><code>Fonction parcours_suffixe(arbre):
-  Si arbre n'est pas vide :
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Fonction parcours_suffixe(arbre):
+  Si arbre n&#39;est pas vide :
     Noeud ← arbre.racine
     parcours_suffixe(arbre.gauche)
     parcours_suffixe(arbre.droit)
@@ -4513,7 +4512,7 @@ N'oubliez pas d'indiquer pour chaque arbre le nombre total de trajets fait pour 
   Fin Si
 </code></pre></div>
 <p><strong>Parcours en Largeur d'abord :</strong></p>
-<div class="highlight"><pre><span></span><code>Fonction parcours_largeur(arbre):
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Fonction parcours_largeur(arbre):
   Enfiler(f,arbre.racine)
   Tant que f est non vide :
     x ← Defiler(f)
@@ -4530,10 +4529,10 @@ N'oubliez pas d'indiquer pour chaque arbre le nombre total de trajets fait pour 
 </code></pre></div>
 <p>Appliquez les 4 algorithmes "à la main" sur l'abre binaire suivant et donner les valeurs dans l'ordre :</p>
 <ol>
-<li><img alt="" class="center" src="../images/arbre4.PNG"></li>
-<li><img alt="" class="center" src="../images/arbre4.PNG"></li>
-<li><img alt="" class="center" src="../images/arbre4.PNG"></li>
-<li><img alt="" class="center" src="../images/arbre4.PNG"></li>
+<li><img alt="" class="center" src="../images/arbre4.PNG" /></li>
+<li><img alt="" class="center" src="../images/arbre4.PNG" /></li>
+<li><img alt="" class="center" src="../images/arbre4.PNG" /></li>
+<li><img alt="" class="center" src="../images/arbre4.PNG" /></li>
 </ol>
 <details class="note">
 <summary>Correction</summary>
@@ -4560,7 +4559,7 @@ N'oubliez pas d'indiquer pour chaque arbre le nombre total de trajets fait pour 
 <li>Toutes les valeurs situées dans le <strong>sous-arbre gauche</strong> sont plus <strong>petites</strong> que la valeur du noeud.</li>
 <li>Toutes les valeurs situées dans le <strong>sous-arbre droit</strong> sont plus <strong>grandes</strong> que la valeur du noeud.</li>
 </ul>
-<p><img alt="" class="center" src="../images/ABR.PNG"></p>
+<p><img alt="" class="center" src="../images/ABR.PNG" /></p>
 </div>
 <h3 id="tp3">TP3<a class="headerlink" href="#tp3" title="Permanent link">⚓︎</a></h3>
 <p><strong>Exercice 7</strong></p>
@@ -4586,25 +4585,25 @@ N'oubliez pas d'indiquer pour chaque arbre le nombre total de trajets fait pour 
 <p>Prenons toujours l’exemple du mot Anticonstitutionnel.</p>
 <h4 id="comptage-des-occurrences">Comptage des occurrences<a class="headerlink" href="#comptage-des-occurrences" title="Permanent link">⚓︎</a></h4>
 <p>On indique pour chaque caractère du mot le nombre d’occurrence de ce caractère dans le mot. (on pourra mettre les résultats sous forme d’un tableau, d’un dictionnaire…)</p>
-<p><img alt="" class="center" src="../images/huff1.PNG"></p>
+<p><img alt="" class="center" src="../images/huff1.PNG" /></p>
 <h4 id="tri-par-ordre-croissant">Tri par ordre croissant<a class="headerlink" href="#tri-par-ordre-croissant" title="Permanent link">⚓︎</a></h4>
 <p>On range cette « liste » dans l’ordre <strong>croissant</strong> (ou décroissant) des nombres d’ occurrences.</p>
-<p><img alt="" class="center" src="../images/huff2.PNG"></p>
+<p><img alt="" class="center" src="../images/huff2.PNG" /></p>
 <h4 id="construction-de-larbre-binaire-de-huffman">Construction de l’arbre binaire « de Huffman »<a class="headerlink" href="#construction-de-larbre-binaire-de-huffman" title="Permanent link">⚓︎</a></h4>
 <p>On crée des <strong>feuilles</strong> pour chaque élément de la « liste », chacune <strong>étiquetée</strong> par un couple (caractère, nombre d’occurrence).</p>
-<p><img alt="" class="center" src="../images/huff3.PNG"></p>
+<p><img alt="" class="center" src="../images/huff3.PNG" /></p>
 <p>On sélectionne les <strong>2 feuilles</strong> dont le nombre d’occurrence est <strong>le plus petit</strong>.</p>
-<p><img alt="" class="center" src="../images/huff4.PNG"></p>
+<p><img alt="" class="center" src="../images/huff4.PNG" /></p>
 <p>On fusionne ces 2 feuilles dans un nouvel arbre. L’étiquette de ce nouvel arbre sera (’’,<strong>somme des poids des deux feuilles</strong>)</p>
-<p><img alt="" class="center" src="../images/huff5.PNG"></p>
+<p><img alt="" class="center" src="../images/huff5.PNG" /></p>
 <p>On supprime les 2 feuilles de la « liste » et on insère, <strong>à la bonne place</strong>, le nouvel arbre dans cette liste.</p>
-<p><img alt="" class="center" src="../images/huff6.PNG"></p>
+<p><img alt="" class="center" src="../images/huff6.PNG" /></p>
 <p>Par <strong>récurrence</strong>, on « vide » la liste et l’ensemble des feuilles et des arbres qui s’y trouve. Au final, on obtient un arbre unique : <strong>l’arbre d’Huffman</strong>.</p>
-<p><img alt="" class="center" src="../images/huff7.PNG"></p>
+<p><img alt="" class="center" src="../images/huff7.PNG" /></p>
 <h3 id="mise-en-application-codage">Mise en application : Codage<a class="headerlink" href="#mise-en-application-codage" title="Permanent link">⚓︎</a></h3>
 <p>On peut maintenant utiliser cet arbre pour coder chaque caractère : en parcourant l’arbre de la racine à une feuille, on notera <strong>0 si on part à gauche ou 1 si on part à droite</strong>. On obtient ainsi la <strong>table de codage</strong>.</p>
-<p><img alt="" class="center" src="../images/huff9.PNG"> </p>
-<p><img alt="" class="center" src="../images/huff8.PNG"></p>
+<p><img alt="" class="center" src="../images/huff9.PNG" /> </p>
+<p><img alt="" class="center" src="../images/huff8.PNG" /></p>
 <p>On obtient ainsi le codage d'<strong>Anticonstitutionnel</strong> :</p>
 <p>11100011011011101111101001010110100011101101111010100000001</p>
 <h3 id="mise-en-application-decodage">Mise en application : Décodage<a class="headerlink" href="#mise-en-application-decodage" title="Permanent link">⚓︎</a></h3>
@@ -4625,7 +4624,7 @@ On vous donne la série binaire et l’arbre de Huffman suivants :
 <br>
 110101101101001001111000010110011001111010101111111100100111010111011101110101000010011001100000001
 <br>
-<img alt="" class="center" src="../images/huff10.PNG">
+<img alt="" class="center" src="../images/huff10.PNG" />
 <br>
 Décoder la série binaire et donner le texte en clair.</li>
 </ol>
@@ -4636,16 +4635,16 @@ Décoder la série binaire et donner le texte en clair.</li>
 <br>
 En suivant l’algorithme de Huffman, Dessiner les arbres des Huffman, et donner les tables de codages des mots suivants : <ul>
 <li>Attention<br>
-<img alt="" src="../Corrections/huffman1.png"></li>
+<img alt="" src="../Corrections/huffman1.png" /></li>
 <li>Institutionnalisation<br>
-<img alt="" src="../Corrections/huffman2.png"></li>
+<img alt="" src="../Corrections/huffman2.png" /></li>
 </ul>
 </li>
 <li>Décodage
 <br>
 On vous donne la série binaire et l’arbre de Huffman suivants :<br>
 110101101101001001111000010110011001111010101111111100100111010111011101110101000010011001100000001<br>
-<img alt="" src="../Corrections/huffman3.png"><br>
+<img alt="" src="../Corrections/huffman3.png" /><br>
 Décoder la série binaire et donner le texte en clair. <br>
 'Warriors deux mille vingt'</li>
 </ol>
@@ -4656,7 +4655,7 @@ Décoder la série binaire et donner le texte en clair. <br>
 <details class="note">
 <summary>Correction</summary>
 <p>Code Capytale : <code>309d-1144902</code></p>
-</details></div>
+</details>
 
 
 

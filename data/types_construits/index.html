@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3874,10 +3873,10 @@
   
 
 
-<div><h1 id="representation-des-donnees-types-construits">Représentation des données : types construits<a class="headerlink" href="#representation-des-donnees-types-construits" title="Permanent link">⚓︎</a></h1>
+<h1 id="representation-des-donnees-types-construits">Représentation des données : types construits<a class="headerlink" href="#representation-des-donnees-types-construits" title="Permanent link">⚓︎</a></h1>
 <details class="conclu">
 <summary>Programme</summary>
-<p>À partir des types de base se constituent des types construits, qui sont introduits au fur et à mesure qu’ils sont nécessaires.<br>
+<p>À partir des types de base se constituent des types construits, qui sont introduits au fur et à mesure qu’ils sont nécessaires.<br />
 Il s’agit de présenter tour à tour les <strong>p-uplets (tuples)</strong>, les enregistrements qui collectent des valeurs de types différents dans des champs nommés et les tableaux qui permettent un accès calculé direct aux éléments. En pratique, on utilise les appellations de Python, qui peuvent être différentes de celles d’autres langages de programmation.</p>
 <table>
 <thead>
@@ -3917,9 +3916,9 @@ Il s’agit de présenter tour à tour les <strong>p-uplets (tuples)</strong>, l
 <p>Un tuple est contient des valeurs, séparées par des virgules, mais encadrée par des parenthèses, ( ) ce qui les différencie des listes.</p>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
-<div class="highlight"><pre><span></span><code><span class="n">tuple_1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="c1"># tuple_1 est un tuple de nombres entiers</span>
-<span class="n">tuple_2</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"albert"</span><span class="p">,</span> <span class="s2">"paul"</span><span class="p">,</span> <span class="s2">"jacques"</span><span class="p">)</span> <span class="c1"># tuple_2 est un tuple de `str`</span>
-<span class="n">tuple_3</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"1G4"</span><span class="p">,</span><span class="s2">"NSI"</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mf">13.7</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span> <span class="c1"># tuple_3 contient des éléments de différents types. </span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">tuple_1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="c1"># tuple_1 est un tuple de nombres entiers</span>
+<span class="n">tuple_2</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;albert&quot;</span><span class="p">,</span> <span class="s2">&quot;paul&quot;</span><span class="p">,</span> <span class="s2">&quot;jacques&quot;</span><span class="p">)</span> <span class="c1"># tuple_2 est un tuple de `str`</span>
+<span class="n">tuple_3</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;1G4&quot;</span><span class="p">,</span><span class="s2">&quot;NSI&quot;</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mf">13.7</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span> <span class="c1"># tuple_3 contient des éléments de différents types. </span>
 <span class="n">ma_liste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="c1"># ma_liste est une **liste** de nombres entiers</span>
 </code></pre></div>
 </div>
@@ -3937,11 +3936,11 @@ Il s’agit de présenter tour à tour les <strong>p-uplets (tuples)</strong>, l
 <div class="admonition bug">
 <p class="admonition-title">Bug</p>
 <p>Le code ci-dessous lèvera une exception TypeError </p>
-<div class="highlight"><pre><span></span><code><span class="n">mon_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">)</span>
-<span class="n">mon_tuple</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"e"</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">mon_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">)</span>
+<span class="n">mon_tuple</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;e&quot;</span>
 </code></pre></div>
 <p>On obtiendra en console, après exécution e ce code :</p>
-<div class="highlight"><pre><span></span><code><span class="go">TypeError: 'tuple' object does not support item assignment</span>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="go">TypeError: &#39;tuple&#39; object does not support item assignment</span>
 </code></pre></div>
 </div>
 </div>
@@ -3952,20 +3951,20 @@ Il s’agit de présenter tour à tour les <strong>p-uplets (tuples)</strong>, l
 <div class="admonition info">
 <p class="admonition-title">Parcours 💚</p>
 <p>Ces codes sont à connaitre <strong>sans aucune hésitation</strong> (ils sont strictement identiques aux parcours d'une liste).</p>
-<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mon_tuple</span><span class="p">))</span> <span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mon_tuple</span><span class="p">))</span> <span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">mon_tuple</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">mon_tuple</span> <span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">mon_tuple</span> <span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Conversion entre listes et tuples</p>
 <p>Il est possible de transformer une liste en tuple, et inversement :</p>
-<div class="highlight"><pre><span></span><code><span class="n">mon_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">mon_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="n">ma_liste</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">mon_tuple</span><span class="p">)</span>  <span class="c1"># ma_liste contient les mêmes éléments : [1, 2, 3]</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">ma_liste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">ma_liste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="n">mon_tuple</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">ma_liste</span><span class="p">)</span>  <span class="c1"># mon_tuple contient les mêmes éléments : (1, 2, 3)</span>
 </code></pre></div>
 </div>
@@ -4010,27 +4009,27 @@ Il s’agit de présenter tour à tour les <strong>p-uplets (tuples)</strong>, l
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Parcours de listes</p>
-<p>Python permet de parcourir les tableaux, comme <code class="highlight"><span class="n">neveux</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Riri"</span><span class="p">,</span> <span class="s2">"Fifi"</span><span class="p">,</span> <span class="s2">"Loulou"</span><span class="p">]</span></code> :</p>
+<p>Python permet de parcourir les tableaux, comme <code class="highlight"><span class="n">neveux</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Riri&quot;</span><span class="p">,</span> <span class="s2">&quot;Fifi&quot;</span><span class="p">,</span> <span class="s2">&quot;Loulou&quot;</span><span class="p">]</span></code> :</p>
 <ul>
 <li>
 <p>selon les indices :</p>
-<div class="highlight"><pre><span></span><code>for i in range(len(neveux)):
-    print("L'élément d'indice", i, "est", neveux[i])
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>for i in range(len(neveux)):
+    print(&quot;L&#39;élément d&#39;indice&quot;, i, &quot;est&quot;, neveux[i])
 </code></pre></div>
 <p>Ce script produira l'affichage suivant en console :</p>
-<div class="highlight"><pre><span></span><code><span class="go">L'élément d'indice 0 est Riri</span>
-<span class="go">L'élément d'indice 1 est Fifi</span>
-<span class="go">L'élément d'indice 2 est Loulou</span>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="go">L&#39;élément d&#39;indice 0 est Riri</span>
+<span class="go">L&#39;élément d&#39;indice 1 est Fifi</span>
+<span class="go">L&#39;élément d&#39;indice 2 est Loulou</span>
 <span class="gp">&gt;&gt;&gt;</span>
 </code></pre></div>
 </li>
 <li>
 <p>selon les valeurs :</p>
-<p></p><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">neveu</span> <span class="ow">in</span> <span class="n">neveux</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">neveu</span><span class="p">,</span> <span class="s2">"est un élément"</span><span class="p">)</span>
+<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">for</span> <span class="n">neveu</span> <span class="ow">in</span> <span class="n">neveux</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">neveu</span><span class="p">,</span> <span class="s2">&quot;est un élément&quot;</span><span class="p">)</span>
 </code></pre></div>
-Ce script produira l'affichage suivant en console :
-<div class="highlight"><pre><span></span><code><span class="go">Riri est un élément</span>
+Ce script produira l'affichage suivant en console :</p>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="go">Riri est un élément</span>
 <span class="go">Fifi est un élément</span>
 <span class="go">Loulou est un élément</span>
 <span class="gp">&gt;&gt;&gt;</span>
@@ -4044,21 +4043,21 @@ Ce script produira l'affichage suivant en console :
 <ul>
 <li>
 <p>utiliser une variable tierce :</p>
-<div class="highlight"><pre><span></span><code><span class="n">temporaire</span> <span class="o">=</span> <span class="n">tableau</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">temporaire</span> <span class="o">=</span> <span class="n">tableau</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
 <span class="n">tableau</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">tableau</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
 <span class="n">tableau</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">temporaire</span>
 </code></pre></div>
 </li>
 <li>
 <p>utiliser l'affectation multiple qui se fait de façon <strong>simultanée</strong>:</p>
-<div class="highlight"><pre><span></span><code><span class="n">tableau</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">tableau</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">tableau</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">tableau</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">tableau</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">tableau</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">tableau</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">tableau</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
 </code></pre></div>
 </li>
 </ul>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Liste en compréhension</p>
-<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">liste_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="o">*</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)]</span>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">liste_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="o">*</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">liste_1</span>
 <span class="go">[9, 18, 27, 36, 45, 54, 63, 72, 81, 90]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">liste_2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="o">*</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span> <span class="k">if</span> <span class="mi">9</span><span class="o">*</span><span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
@@ -4068,11 +4067,11 @@ Ce script produira l'affichage suivant en console :
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Listes de listes</p>
-<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">ma_matrice</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">],</span> <span class="p">[</span><span class="s2">"d"</span><span class="p">,</span> <span class="s2">"e"</span><span class="p">,</span> <span class="s2">"f"</span><span class="p">],</span> <span class="p">[</span><span class="s2">"g"</span><span class="p">,</span> <span class="s2">"h"</span><span class="p">,</span> <span class="s2">"i"</span><span class="p">]]</span>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">ma_matrice</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="s2">&quot;h&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">]]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ma_matrice</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="go">['d', 'e', 'f']</span>
+<span class="go">[&#39;d&#39;, &#39;e&#39;, &#39;f&#39;]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ma_matrice</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-<span class="go">'d'</span>
+<span class="go">&#39;d&#39;</span>
 </code></pre></div>
 </div>
 </details>
@@ -4143,7 +4142,7 @@ Ce script produira l'affichage suivant en console :
 <li><code>list(mon_dico.items())</code> permet d'obtenir une liste des tuples (clé, valeur) de <code>mon_dico</code></li>
 </ul>
 </div>
-</details></div>
+</details>
 
 
 

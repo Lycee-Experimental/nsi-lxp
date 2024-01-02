@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3861,7 +3860,7 @@
 
   <h1>Interactions entre l’homme et la machine sur le Web (Première)</h1>
 
-<div><div class="admonition tip">
+<div class="admonition tip">
 <p class="admonition-title">Recharger la page pour de nouvelles questions.</p>
 </div>
 <div class="quizdown">
@@ -4194,7 +4193,7 @@ L’interactivité dans une page Web :
 - [ ] ne peut se faire que grâce à Javascript.
 - [ ] n’est pas possible.
 - [ ] ne peut se faire que grâce au CSS.
-- [X] `peut se faire avec la balise &amp;ltform&gt;.`
+- [X] `peut se faire avec la balise &ltform&gt;.`
 
 ### Interactions entre l’homme et la machine sur le Web (Première) - IHM Web
 n°237
@@ -4718,9 +4717,9 @@ Quelle est l'adresse de la page obtenue lorsque l'utilisateur clique sur le bout
 <br>
 
 
-- [ ] `traitement.php?leNom=Seconde B&amp;n=35`
-- [X] `traitement.php?leNom=Seconde+B&amp;n=35`
-- [ ] `traitement.php?nom=Seconde+B&amp;effectif=35`
+- [ ] `traitement.php?leNom=Seconde B&n=35`
+- [X] `traitement.php?leNom=Seconde+B&n=35`
+- [ ] `traitement.php?nom=Seconde+B&effectif=35`
 - [ ] traitement.php
 
 ### Interactions entre l’homme et la machine sur le Web (Première) - Autres
@@ -5034,7 +5033,7 @@ Quel est le code HTML correct pour créer un hyperlien vers le site Eduscol ?
 n°807
 <br>
 Un internaute clique sur un lien qui envoie la requête HTTP suivante à un serveur :  <br>
-`http://jaimelaneige.com/ma_planche/traitement.php?nom=Snow&amp;prenom=Jon`<br>
+`http://jaimelaneige.com/ma_planche/traitement.php?nom=Snow&prenom=Jon`<br>
 Que demande cette requête au serveur ?
 
 
@@ -5743,7 +5742,7 @@ Parmi les balises HTML ci-dessous quelle est celle qui permet à l’utilisateur
 n°1185
 <br>
 Un internaute clique sur un lien qui envoie la requête HTTP suivante à un serveur :<br>
-`http://jaimelaneige.com/ma_planche/traitement.php?nom=Snow&amp;prenom=Jon`<br>
+`http://jaimelaneige.com/ma_planche/traitement.php?nom=Snow&prenom=Jon`<br>
 Quelle est l'adresse du serveur ?
 
 
@@ -5849,7 +5848,7 @@ Un site internet utilise une requête HTTP avec la méthode POST pour transmettr
 n°1228
 <br>
 Un internaute clique sur un lien qui envoie la requête HTTP suivante à un serveur :<br>
-`http://jaimelaneige.com/ma_planche/traitement.php?nom=Snow&amp;prenom=Jon`<br>
+`http://jaimelaneige.com/ma_planche/traitement.php?nom=Snow&prenom=Jon`<br>
 Quelle est l'adresse du serveur ?
 
 
@@ -6022,10 +6021,10 @@ n°1333
 Liens et image  <br>
 Un fichier html contient le code suivant :<br>
 ```python
-&amp;ltimg src='Deuxcygnes.jpg' alt='Deux cygnes' usemap='#carte' /&gt;  
-&amp;ltmap name='carte'&gt;  
-  &amp;ltarea shape='rect' coords='36,10,322,302' alt='cygne 1' href='page1.html' /&gt;  
-  &amp;ltarea shape='rect' coords='326,10,604,302' alt='cygne 2' href='page2.html' /&gt;  
+&ltimg src='Deuxcygnes.jpg' alt='Deux cygnes' usemap='#carte' /&gt;  
+&ltmap name='carte'&gt;  
+  &ltarea shape='rect' coords='36,10,322,302' alt='cygne 1' href='page1.html' /&gt;  
+  &ltarea shape='rect' coords='326,10,604,302' alt='cygne 2' href='page2.html' /&gt;  
 &lt;/map&gt;'  
 ```
 L'image ci-dessous a un format 654x400 pixels.  <br>
@@ -6046,10 +6045,10 @@ n°1334
 Sélecteurs  <br>
 On donne le code html :<br>
 ```python
-&amp;ltp&amp;gtpremier paragraphe&lt;/p&gt;  
-&amp;ltdiv&gt;&amp;ltp&amp;gtdeuxième paragraphe&lt;/p&gt;&lt;/div&gt;  
-&amp;ltdiv&amp;gttroisième paragraphe&lt;/div&gt;  
-&amp;ltdiv&gt;&amp;ltarticle&gt;&amp;ltp&amp;gtquatrième paragraphe&lt;/p&gt;&lt;/article&gt;&lt;/div&gt;  
+&ltp&gtpremier paragraphe&lt;/p&gt;  
+&ltdiv&gt;&ltp&gtdeuxième paragraphe&lt;/p&gt;&lt;/div&gt;  
+&ltdiv&gttroisième paragraphe&lt;/div&gt;  
+&ltdiv&gt;&ltarticle&gt;&ltp&gtquatrième paragraphe&lt;/p&gt;&lt;/article&gt;&lt;/div&gt;  
 ```
 ainsi que le code css :<br>
 ```python
@@ -6415,7 +6414,7 @@ n°1608
 <br>
  Dans la barre d'adresse d'un navigateur, on a saisi l'URL suivante :<br>
 ```python
-https://onlinemathtools.com/generate-prime-numbers?&amp;start=1000&amp;count=10&amp;separator=%3B
+https://onlinemathtools.com/generate-prime-numbers?&start=1000&count=10&separator=%3B
 ```
 Quelle méthode HTTP est utilisée ?
 
@@ -6431,7 +6430,7 @@ n°1609
 <br>
  Dans la barre d'adresse d'un navigateur, on a saisi l'URL suivante :<br>
 ```python
-https://onlinemathtools.com/generate-prime-numbers?&amp;start=1000&amp;count=10&amp;separator=%3B
+https://onlinemathtools.com/generate-prime-numbers?&start=1000&count=10&separator=%3B
 ```
 Quelle est l'adresse du serveur ?
 
@@ -6601,9 +6600,9 @@ Quelle est l'adresse de la page obtenue lorsque l'utilisateur clique sur le bout
 <br>
 
 
-- [ ] `traitement.php?Groupe:1NSINF2&amp;Effectif:18`
-- [X] `traitement.php?leNom=1NSINF2&amp;n=18`
-- [ ] `traitement.php?nom=1NSINF2&amp;effectif=18`
+- [ ] `traitement.php?Groupe:1NSINF2&Effectif:18`
+- [X] `traitement.php?leNom=1NSINF2&n=18`
+- [ ] `traitement.php?nom=1NSINF2&effectif=18`
 - [ ] traitement.php
 
 ### Interactions entre l’homme et la machine sur le Web (Première) - Autres
@@ -7081,7 +7080,7 @@ Est-ce que cette portion de code HTML est valide ?/p<br>
 - [ ] Peut-être
 - [ ] A la rigueur
 
-</div></div>
+</div>
 
 
 

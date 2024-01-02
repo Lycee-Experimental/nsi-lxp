@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -4000,7 +3999,7 @@
   
 
 
-<div><h1 id="securisation-des-communications">Sécurisation des communications<a class="headerlink" href="#securisation-des-communications" title="Permanent link">⚓︎</a></h1>
+<h1 id="securisation-des-communications">Sécurisation des communications<a class="headerlink" href="#securisation-des-communications" title="Permanent link">⚓︎</a></h1>
 <details class="conclu">
 <summary>Programme</summary>
 <table>
@@ -4022,9 +4021,9 @@
 </details>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">⚓︎</a></h2>
 <p>Les  communications,  qu’elles  soient  entre  humains,  entre  humains  et  machines,  ou  entre  machines, peuvent  être  interceptées  par  différents  moyens,  parfois  surprenants. </p>
-<p><img alt="" class="center" src="Images/ecoute.png"></p>
+<p><img alt="" class="center" src="Images/ecoute.png" /></p>
 <p>Il  est  donc  important  de  les protéger,  que  ce soit  pour  <strong>protéger</strong> sa  vie  privée  ou  pour  éviter  un  <strong>piratage</strong>.  </p>
-<p><img alt="" class="center" src="Images/imposteur.png"></p>
+<p><img alt="" class="center" src="Images/imposteur.png" /></p>
 <p>Pour  protéger  ces communications,  on  <strong>chiffre</strong> les  messages à  l’aide  d’une  méthode  de  <strong>cryptographie</strong>. </p>
 <p>Les deux principes de chiffrement sont le <strong>chiffrement symétrique</strong> et le <strong>chiffrement  asymétrique</strong> utilisant des clés supposées secrètes.</p>
 <p>Reste à assurer que les clés ne soient pas piratées, ce qui est le problème de  l’authenticité  des  utilisateurs.</p>
@@ -4037,7 +4036,7 @@
 <h3 id="un-exemple-simple-le-code-cesar">Un exemple simple : le code César<a class="headerlink" href="#un-exemple-simple-le-code-cesar" title="Permanent link">⚓︎</a></h3>
 <p>Principe : Chaque lettre est décalée d'une certaine valeur (appelée clé)  dans l'alphabet. Lorsque le décalage "dépasse" la fin de l'alphabet, on revient au début.</p>
 <p>Dans l'exemple ci-dessous, la clé est de 3</p>
-<p><img alt="" class="center" src="Images/Cesar.png"></p>
+<p><img alt="" class="center" src="Images/Cesar.png" /></p>
 <p><strong>Exercice 2</strong></p>
 <ol>
 <li>Quelle est la clé de chiffrement du code César de l'exercice 1?</li>
@@ -4047,23 +4046,23 @@
 <p><strong>Exercice 3</strong></p>
 <p>Ecrire une fonction python <code>code_Cesar</code> prenant en paramètres la clé et une chaîne de caracatère à chiffrer et qui renvoie la chaîne chiffrée. </p>
 <p>On pourra utiliser un dictionnaire et la table ASCII :</p>
-<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="p">:</span> <span class="nb">chr</span><span class="p">((</span><span class="n">i</span><span class="o">+</span><span class="n">cle</span><span class="p">)</span><span class="o">%</span><span class="mi">127</span><span class="p">)</span> <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">cle</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">127</span> <span class="k">else</span> <span class="nb">chr</span><span class="p">((</span><span class="n">i</span><span class="o">+</span><span class="n">cle</span><span class="p">)</span><span class="o">%</span><span class="mi">127</span><span class="o">+</span><span class="mi">33</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">33</span><span class="p">,</span><span class="mi">127</span><span class="p">)}</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="p">:</span> <span class="nb">chr</span><span class="p">((</span><span class="n">i</span><span class="o">+</span><span class="n">cle</span><span class="p">)</span><span class="o">%</span><span class="mi">127</span><span class="p">)</span> <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="n">cle</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">127</span> <span class="k">else</span> <span class="nb">chr</span><span class="p">((</span><span class="n">i</span><span class="o">+</span><span class="n">cle</span><span class="p">)</span><span class="o">%</span><span class="mi">127</span><span class="o">+</span><span class="mi">33</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">33</span><span class="p">,</span><span class="mi">127</span><span class="p">)}</span>
 </code></pre></div>
 <p><code>chr(i)</code> transforme un nombre décimal <code>i</code> en son caractère <a href="https://fr.m.wikipedia.org/wiki/Fichier:ASCII-Table.svg" target="_blank">ASCII</a> correspondant.
 <br>
 Le <code>range(33,127)</code> permet d'aller du caractère <code>!</code> au caractère <code>~</code> dans la table ASCII.
 <br>
 Un espace sera systématiquement remplacé par un espace pour garder la "forme" du message.</p>
-<div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_00000052" class="comment">###</span><div class="line" id="editor_00000052"></div><div id="term_editor_00000052" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_00000052","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000052","")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000052').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000052" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000052")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000052")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
-<p><span id="content_editor_00000052" class="py_mk_hide"></span><span id="corr_content_editor_00000052" class="py_mk_hide" data-strudel=""></span></p>
+<div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000067" class="comment">###</span><div class="line" id="editor_00000067"></div><div id="term_editor_00000067"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000067","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000067","")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000067').click()" >            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000067" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000067")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000067")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+<p><span id="content_editor_00000067" class="py_mk_hide"></span><span id="corr_content_editor_00000067" class="py_mk_hide" data-strudel=""></span></p>
 <p><strong>Exercice 4</strong></p>
 <p>Ecrire une fonction python <code>decode_Cesar</code> prenant en paramètres la clé et une chaîne de caracatère à déchiffrer et qui renvoie une chaîne déchiffrée.</p>
-<div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_00000053" class="comment">###</span><div class="line" id="editor_00000053"></div><div id="term_editor_00000053" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_00000053","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000053","")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000053').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000053" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000053")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000053")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
-<p><span id="content_editor_00000053" class="py_mk_hide"></span><span id="corr_content_editor_00000053" class="py_mk_hide" data-strudel=""></span></p>
+<div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000068" class="comment">###</span><div class="line" id="editor_00000068"></div><div id="term_editor_00000068"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000068","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000068","")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000068').click()" >            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000068" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000068")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000068")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+<p><span id="content_editor_00000068" class="py_mk_hide"></span><span id="corr_content_editor_00000068" class="py_mk_hide" data-strudel=""></span></p>
 <h3 id="le-principe-du-chiffrement-symetrique">Le principe du chiffrement symétrique<a class="headerlink" href="#le-principe-du-chiffrement-symetrique" title="Permanent link">⚓︎</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Principe</p>
-<p><img alt="" class="center" src="Images/symetrie.png"></p>
+<p><img alt="" class="center" src="Images/symetrie.png" /></p>
 <p>Dans un <strong>chiffrement symétrique</strong>, la clé utilisée par l'expéditeur pour chiffrer le message est la même que celle utilisée par le récepteur pour déchiffrer le message.</p>
 <p>La clé secrète doit donc être connue préalablement par les deux entités communiquant.</p>
 <p>Il faut également échanger cette clé au préalable, sans qu'elle ne soit interceptée (d'où certains problèmes...le python se mord la queue !)</p>
@@ -4071,10 +4070,10 @@ Un espace sera systématiquement remplacé par un espace pour garder la "forme" 
 <h3 id="exemple-de-xor">Exemple de XOR<a class="headerlink" href="#exemple-de-xor" title="Permanent link">⚓︎</a></h3>
 <p>Nous nous intéresserons ici uniquement aux communications ayant lieu par l'intermédiaire d'un réseau informatique. Comme nous avons déjà eu l'occasion de le voir en première, toute "donnée informatique" peut être vue comme une suite de zéro et de un. Nous chercherons donc à chiffrer une suite de zéro et de un :</p>
 <p>Soit le message "HELLO WORLD!" ce qui nous donnera en binaire (en utilisant le code ASCII) : </p>
-<div class="highlight"><pre><span></span><code>010010000100010101001100010011000100111100100000010101110100111101010010010011000100010000100001
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>010010000100010101001100010011000100111100100000010101110100111101010010010011000100010000100001
 </code></pre></div>
 <p>Choisissons maintenant un mot (ou une phrase) qui nous servira de clé de chiffrement, prenons pour exemple le mot "toto". "toto" nous donne en binaire : </p>
-<div class="highlight"><pre><span></span><code>01110100011011110111010001101111
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>01110100011011110111010001101111
 </code></pre></div>
 <p>Pour chiffrer le message nous allons effectuer un XOR bit à bit.</p>
 <p>Pour rappel, voici la table de vérité du <em>XOR</em> :</p>
@@ -4110,31 +4109,31 @@ Un espace sera systématiquement remplacé par un espace pour garder la "forme" 
 </tbody>
 </table>
 <p>Comme la clé est plus courte que le message, il faut "reproduire" la clé vers la droite autant de fois que nécessaire (si la taille du message n'est pas un multiple de la taille de la clé, on peut reproduire seulement quelques bits de la clé pour la fin du message): </p>
-<p>    0100100001000101 0100110001001100 0100111100100000 0101011101001111 0101001001001100 0100010000100001
+<p>&nbsp;&nbsp;&nbsp;&nbsp;0100100001000101 0100110001001100 0100111100100000 0101011101001111 0101001001001100 0100010000100001
 <br>
-<span class="arithmatex">\(\oplus\)</span>0111010001101111  0111010001101111  0111010001101111  0111010001101111  0111010001101111  0111010001101111
+<span class="arithmatex">\(\oplus\)</span>0111010001101111 &nbsp;0111010001101111 &nbsp;0111010001101111 &nbsp;0111010001101111 &nbsp;0111010001101111 &nbsp;0111010001101111
 <br></p>
 <hr>
-<p>    0011110000101010 0011100000100011 0011101101001111 0010001100100000 0010011000100011 0011000001001110</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;0011110000101010 0011100000100011 0011101101001111 0010001100100000 0010011000100011 0011000001001110</p>
 <p>Le signe <span class="arithmatex">\(\oplus\)</span> symbolise XOR.</p>
 <p>Après ce XOR on obtient donc la suite de bits suivante : </p>
-<div class="highlight"><pre><span></span><code>001111000010101000111000001000110011101101001111001000110010000000100110001000110011000001001110
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>001111000010101000111000001000110011101101001111001000110010000000100110001000110011000001001110
 </code></pre></div>
 <p>Soit la chaine de caractères suivante (si on cherche à afficher le message chiffré avec un éditeur de texte) : </p>
-<div class="highlight"><pre><span></span><code>&lt;*8#;O# &amp;#0N
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>&lt;*8#;O# &amp;#0N
 </code></pre></div>
 <p>Maintenant ce message est prêt pour être envoyé à son destinataire Bob. Si Max intercepte le message et cherche à le lire avec un éditeur de texte, il obtiendra la suite de caractère</p>
-<div class="highlight"><pre><span></span><code>&lt;*8#;O# &amp;#0N
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>&lt;*8#;O# &amp;#0N
 </code></pre></div>
 <p>Bob a maintenant reçu le message chiffré, il possède la clé (toto), il va donc pouvoir déchiffrer le message en appliquant un XOR entre le message chiffré et la clé (on applique exactement la même méthode que ci-dessus). </p>
-<p>    0011110000101010 0011100000100011 0011101101001111 0010001100100000 0010011000100011 0011000001001110
+<p>&nbsp;&nbsp;&nbsp;&nbsp;0011110000101010 0011100000100011 0011101101001111 0010001100100000 0010011000100011 0011000001001110
 <br>
-<span class="arithmatex">\(\oplus\)</span>0111010001101111  0111010001101111  0111010001101111  0111010001101111  0111010001101111  0111010001101111
+<span class="arithmatex">\(\oplus\)</span>0111010001101111 &nbsp;0111010001101111 &nbsp;0111010001101111 &nbsp;0111010001101111 &nbsp;0111010001101111 &nbsp;0111010001101111
 <br></p>
 <hr>
-<p>    0100100001000101 0100110001001100 0100111100100000 0101011101001111 0101001001001100 0100010000100001</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;0100100001000101 0100110001001100 0100111100100000 0101011101001111 0101001001001100 0100010000100001</p>
 <p>On trouve le code binaire suivant :</p>
-<div class="highlight"><pre><span></span><code>010010000100010101001100010011000100111100100000010101110100111101010010010011000100010000100001
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>010010000100010101001100010011000100111100100000010101110100111101010010010011000100010000100001
 </code></pre></div>
 <p>Vous pouvez remarquer que nous avons bien retrouvé le code binaire d'origine.</p>
 <p>On retrouve bien le message d'origine : Hello World!, Bob a pu lire le message envoyé par Alice alors que pour Max, malgré le fait qu'il a pu intercepter le message, il n'a pas pu prendre connaissance de son contenu sans la clé. </p>
@@ -4142,7 +4141,7 @@ Un espace sera systématiquement remplacé par un espace pour garder la "forme" 
 <p>Avec de l'Unicode (plutôt que du binaire !)</p>
 <ol>
 <li>Testez le code suivant : 
-<div class="highlight"><pre><span></span><code><span class="n">m</span> <span class="o">=</span> <span class="s2">"bonjour"</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">m</span> <span class="o">=</span> <span class="s2">&quot;bonjour&quot;</span>
 <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">m</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">),</span> <span class="n">end</span> <span class="o">=</span> <span class="err">’</span> <span class="err">’</span><span class="p">)</span>
 </code></pre></div>
@@ -4151,7 +4150,7 @@ Ce programme donne le code Unicode du mot 'bonjour', soit 98 111 119 196 111 117
 Le mot 'nsi' va nous servir de clé. Quel est son code Unicode?</li>
 <li>En python l'opérateur <span class="arithmatex">\(\wedge\)</span> (accent circonflexe sur le clavier) permet d'effectuer un <em>xor</em> directement sur deux entiers. Le programme suivant chiffre un message en utilisant cette méthode :</li>
 </ol>
-<p></p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">chiffre_xor</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">chiffre_xor</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
     <span class="n">c</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
     <span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
@@ -4162,9 +4161,9 @@ Le mot 'nsi' va nous servir de clé. Quel est son code Unicode?</li>
     <span class="k">return</span> <span class="n">c</span>
 </code></pre></div>
 Modifier la fonction chiffre_xor pour qu'elle renvoie le message chiffré (avec les caractères)
-3. Ecrire une fonction dechiffre_xor qui prend en paramètres le message chiffré et la clé et qui renvoie le message déchiffré.
-<div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_00000054" class="comment">###</span><div class="line" id="editor_00000054"></div><div id="term_editor_00000054" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_00000054","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000054","")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000054').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000054" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000054")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000054")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
-<p><span id="content_editor_00000054" class="py_mk_hide"></span><span id="corr_content_editor_00000054" class="py_mk_hide" data-strudel=""></span></p>
+3. Ecrire une fonction dechiffre_xor qui prend en paramètres le message chiffré et la clé et qui renvoie le message déchiffré.</p>
+<div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000069" class="comment">###</span><div class="line" id="editor_00000069"></div><div id="term_editor_00000069"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000069","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000069","")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000069').click()" >            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000069" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000069")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000069")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+<p><span id="content_editor_00000069" class="py_mk_hide"></span><span id="corr_content_editor_00000069" class="py_mk_hide" data-strudel=""></span></p>
 <h3 id="exemple-du-aes">Exemple du AES<a class="headerlink" href="#exemple-du-aes" title="Permanent link">⚓︎</a></h3>
 <p>La méthode la plus utilisée en matière de chiffrement symétrique se nomme AES (Advanced Encryption Standard). Cette méthode utilise une technique de chiffrement plus élaborée que ce qui a été vu ci-dessus, mais les grands principes restent identiques.</p>
 <h3 id="problemes">Problèmes<a class="headerlink" href="#problemes" title="Permanent link">⚓︎</a></h3>
@@ -4177,9 +4176,9 @@ Modifier la fonction chiffre_xor pour qu'elle renvoie le message chiffré (avec 
 <p>Imaginon que Bob souhaite envoyer des messages secrets à Alice. Ils vont pour cela utiliser utiliser la cryptographie symétrique.</p>
 <p>Alice génère tout d'abord un couple de clés. Une clé privée (en rouge) et une clé publique (en vert).</p>
 <p>Ces clés ont des propriétés particulières vis à vis des algorithmes utilisés. En effet, un message chiffré avec une clé ne peut être déchiffré qu'avec l'autre clé. Il s'agit de fonctions à sens unique.</p>
-<p><img alt="" class="center" src="Images/principe.png"></p>
+<p><img alt="" class="center" src="Images/principe.png" /></p>
 <p>Alice transmet ensuite la clé publique (en vert) à Bob. Grâce à cette clé, Bob peut chiffrer un texte et l'envoyer à Alice.</p>
-<p><img alt="" class="center" src="Images/principe2.png"></p>
+<p><img alt="" class="center" src="Images/principe2.png" /></p>
 <p>En utilisant la clé publique d'Alice, Bob est certain de deux choses :</p>
 <ul>
 <li>Personne ne peut lire le message, puisqu'il est crypté.</li>
@@ -4202,12 +4201,12 @@ Modifier la fonction chiffre_xor pour qu'elle renvoie le message chiffré (avec 
 </ul>
 <p>HTTPS est donc la version sécurisée de HTTP, le but de HTTPS est d'éviter les 2 problèmes évoqués ci-dessus. HTTPS s'appuie sur le protocole TSL (Transport Layer Security) anciennement connu sous le nom de SSL (Secure Sockets Layer) </p>
 <p>Dans le schéma ci-dessous, on a représenté les échanges de communications entre un client et un serveur avec le protocole HTTPS :</p>
-<p><img alt="" class="center" src="Images/HTTPS.PNG"></p>
+<p><img alt="" class="center" src="Images/HTTPS.PNG" /></p>
 <p>Les échanges entre client et serveur se font avec un chiffrement symétrique (clé K2) après que celle-ci ait été échangée avec un chiffrement asymétrique.</p>
 <p>Plus en détail, on obtient ceci :</p>
-<p><img alt="" class="center" src="Images/HTTPS2.PNG"></p>
+<p><img alt="" class="center" src="Images/HTTPS2.PNG" /></p>
 <h2 id="et-dans-le-futur">Et dans le futur?<a class="headerlink" href="#et-dans-le-futur" title="Permanent link">⚓︎</a></h2>
-<p>Les protocoles actuels sont très solides, les coûts de décryptage étant prohibitifs. Par contre, avec un ordinateur  quantique  ils seront cassés très  rapidement.  Il faudra alors passer à des méthodes de cryptographie quantique. Notamment, lors de transmissions de paquets quantiques, une éventuelle interception est toujours détectable (elle modifie la nature du paquet transmis). Cela permet au moins de savoir que la communication a été interceptée.</p></div>
+<p>Les protocoles actuels sont très solides, les coûts de décryptage étant prohibitifs. Par contre, avec un ordinateur  quantique  ils seront cassés très  rapidement.  Il faudra alors passer à des méthodes de cryptographie quantique. Notamment, lors de transmissions de paquets quantiques, une éventuelle interception est toujours détectable (elle modifie la nature du paquet transmis). Cela permet au moins de savoir que la communication a été interceptée.</p>
 
 
 

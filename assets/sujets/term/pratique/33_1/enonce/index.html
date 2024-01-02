@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,15 +3856,15 @@
 
   <h1>Enonce</h1>
 
-<div><p>Dans cet exercice, un arbre binaire de caractères est stocké sous la forme d’un
+<p>Dans cet exercice, un arbre binaire de caractères est stocké sous la forme d’un
 dictionnaire où les clefs sont les caractères des nœuds de l’arbre et les valeurs, pour
 chaque clef, la liste des caractères des fils gauche et droit du nœud.</p>
 <p>Par exemple, l’arbre</p>
-<p><img alt="image" class="center" src="/assets/sujets/nsi/term/pratique/img/33_arbre.png"></p>
+<p><img alt="image" class="center" src="/assets/sujets/nsi/term/pratique/img/33_arbre.png" /></p>
 <p>est stocké dans</p>
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'F'</span><span class="p">:[</span><span class="s1">'B'</span><span class="p">,</span><span class="s1">'G'</span><span class="p">],</span> <span class="s1">'B'</span><span class="p">:[</span><span class="s1">'A'</span><span class="p">,</span><span class="s1">'D'</span><span class="p">],</span> <span class="s1">'A'</span><span class="p">:[</span><span class="s1">''</span><span class="p">,</span><span class="s1">''</span><span class="p">],</span> <span class="s1">'D'</span><span class="p">:[</span><span class="s1">'C'</span><span class="p">,</span><span class="s1">'E'</span><span class="p">],</span> \
-<span class="s1">'C'</span><span class="p">:[</span><span class="s1">''</span><span class="p">,</span><span class="s1">''</span><span class="p">],</span> <span class="s1">'E'</span><span class="p">:[</span><span class="s1">''</span><span class="p">,</span><span class="s1">''</span><span class="p">],</span> <span class="s1">'G'</span><span class="p">:[</span><span class="s1">''</span><span class="p">,</span><span class="s1">'I'</span><span class="p">],</span> <span class="s1">'I'</span><span class="p">:[</span><span class="s1">''</span><span class="p">,</span><span class="s1">'H'</span><span class="p">],</span> \
-<span class="s1">'H'</span><span class="p">:[</span><span class="s1">''</span><span class="p">,</span><span class="s1">''</span><span class="p">]}</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;F&#39;</span><span class="p">:[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;G&#39;</span><span class="p">],</span> <span class="s1">&#39;B&#39;</span><span class="p">:[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;D&#39;</span><span class="p">],</span> <span class="s1">&#39;A&#39;</span><span class="p">:[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">],</span> <span class="s1">&#39;D&#39;</span><span class="p">:[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="s1">&#39;E&#39;</span><span class="p">],</span> \
+<span class="s1">&#39;C&#39;</span><span class="p">:[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">],</span> <span class="s1">&#39;E&#39;</span><span class="p">:[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">],</span> <span class="s1">&#39;G&#39;</span><span class="p">:[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;I&#39;</span><span class="p">],</span> <span class="s1">&#39;I&#39;</span><span class="p">:[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;H&#39;</span><span class="p">],</span> \
+<span class="s1">&#39;H&#39;</span><span class="p">:[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">]}</span>
 </code></pre></div>
 <p>Écrire une fonction récursive <code>taille</code> prenant en paramètres un arbre binaire <code>arbre</code>
 sous la forme d’un dictionnaire et un caractère <code>lettre</code> qui est la valeur du sommet de
@@ -3874,9 +3873,9 @@ l’arbre, et qui renvoie la taille de l’arbre à savoir le nombre total de n�
 <code>arbre[lettre][1]</code>, permet d’atteindre la clé du sous-arbre gauche, respectivement
 droit, de l’arbre <code>arbre</code> de sommet <code>lettre</code>.</p>
 <p>Exemple :
-</p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">taille</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="err">’</span><span class="n">F</span><span class="err">’</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">taille</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="err">’</span><span class="n">F</span><span class="err">’</span><span class="p">)</span>
 <span class="mi">9</span>
-</code></pre></div></div>
+</code></pre></div></p>
 
 
 

@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,21 +3856,21 @@
 
   <h1>Enonce</h1>
 
-<div><p>Un arbre binaire est implémenté par la classe <code>Arbre</code> donnée ci-dessous.
+<p>Un arbre binaire est implémenté par la classe <code>Arbre</code> donnée ci-dessous.
 Les attributs <code>fg</code> et <code>fd</code> prennent pour valeurs des instances de la classe <code>Arbre</code> ou <code>None</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Arbre</span><span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">Arbre</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">etiquette</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">v</span> <span class="o">=</span> <span class="n">etiquette</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fg</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fd</span> <span class="o">=</span> <span class="kc">None</span>
 </code></pre></div>
-<p><img alt="image" class="center" src="/assets/sujets/nsi/term/pratique/img/29_arbre1.png"></p>
+<p><img alt="image" class="center" src="/assets/sujets/nsi/term/pratique/img/29_arbre1.png" /></p>
 <p>L’arbre ci-dessus sera donc implémenté de la manière suivante :
-</p><div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">a</span><span class="o">.</span><span class="n">fg</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="n">a</span><span class="o">.</span><span class="n">fd</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">a</span><span class="o">.</span><span class="n">fd</span><span class="o">.</span><span class="n">fd</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
-</code></pre></div>
+</code></pre></div></p>
 <p>Écrire une fonction récursive <code>taille</code> prenant en paramètre une instance <code>a</code> de la classe
 <code>Arbre</code> et qui renvoie la taille de l’arbre que cette instance implémente.</p>
 <p>Écrire de même une fonction récursive <code>hauteur</code> prenant en paramètre une instance <code>a</code>
@@ -3879,7 +3878,7 @@ de la classe <code>Arbre</code> et qui renvoie la hauteur de l’arbre que cette
 <p>Si un arbre a un seul nœud, sa taille et sa hauteur sont égales à 1.
 S’il est vide, sa taille et sa hauteur sont égales à 0.</p>
 <p>Tester les deux fonctions sur l’arbre représenté ci-dessous :</p>
-<p><img alt="image" class="center" src="/assets/sujets/nsi/term/pratique/img/29_arbre2.png"></p></div>
+<p><img alt="image" class="center" src="/assets/sujets/nsi/term/pratique/img/29_arbre2.png" /></p>
 
 
 

@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,7 +3856,7 @@
 
   <h1>Enonce</h1>
 
-<div><p>Le codage par différence (<em>delta encoding</em> en anglais) permet de compresser un tableau de
+<p>Le codage par différence (<em>delta encoding</em> en anglais) permet de compresser un tableau de
 données en indiquant pour chaque donnée, sa différence avec la précédente (plutôt que la
 donnée elle-même). On se retrouve alors avec un tableau de données plus petit, nécessitant
 moins de place en mémoire. Cette méthode se révèle efficace lorsque les valeurs consécutives
@@ -3865,11 +3864,11 @@ sont proches. </p>
 <p>Programmer la fonction <code>delta(liste)</code> qui prend en paramètre un tableau non vide de nombres entiers
 et qui renvoie un tableau contenant les valeurs entières compressées à l’aide cette technique.</p>
 <p>Exemples :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">delta</span><span class="p">([</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">800</span><span class="p">,</span> <span class="mi">802</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">1003</span><span class="p">])</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">delta</span><span class="p">([</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">800</span><span class="p">,</span> <span class="mi">802</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">1003</span><span class="p">])</span>
 <span class="p">[</span><span class="mi">1000</span><span class="p">,</span> <span class="o">-</span><span class="mi">200</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">198</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">delta</span><span class="p">([</span><span class="mi">42</span><span class="p">])</span>
 <span class="p">[</span><span class="mi">42</span><span class="p">]</span> 
-</code></pre></div></div>
+</code></pre></div>
 
 
 

@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,7 +3856,7 @@
 
   <h1>Correction</h1>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3879,19 +3878,19 @@
 <span class="hll">    <span class="k">if</span> <span class="n">M</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
 </span>        <span class="n">M</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
 
-    <span class="c1"># l'element en haut fait partie de la composante</span>
+    <span class="c1"># l&#39;element en haut fait partie de la composante</span>
 <span class="hll">    <span class="k">if</span> <span class="n">i</span><span class="o">-</span><span class="mi">1</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">M</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
 </span>        <span class="n">propager</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
 
-    <span class="c1"># l'element en bas fait partie de la composante</span>
+    <span class="c1"># l&#39;element en bas fait partie de la composante</span>
 <span class="hll">    <span class="k">if</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">M</span><span class="p">)</span> <span class="ow">and</span> <span class="n">M</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
 </span><span class="hll">        <span class="n">propager</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
 </span>
-    <span class="c1"># l'element à gauche fait partie de la composante</span>
+    <span class="c1"># l&#39;element à gauche fait partie de la composante</span>
 <span class="hll">    <span class="k">if</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">M</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
 </span><span class="hll">        <span class="n">propager</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
 </span>
-    <span class="c1"># l'element à droite fait partie de la composante</span>
+    <span class="c1"># l&#39;element à droite fait partie de la composante</span>
 <span class="hll">    <span class="k">if</span> <span class="n">j</span><span class="o">+</span><span class="mi">1</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">M</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="ow">and</span> <span class="n">M</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
 </span><span class="hll">        <span class="n">propager</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>

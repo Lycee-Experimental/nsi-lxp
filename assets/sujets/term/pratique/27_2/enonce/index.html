@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,10 +3856,10 @@
 
   <h1>Enonce</h1>
 
-<div><p>On considère la fonction <code>separe</code> ci-dessous qui prend en argument un tableau <code>tab</code> dont
+<p>On considère la fonction <code>separe</code> ci-dessous qui prend en argument un tableau <code>tab</code> dont
 les éléments sont des <code>0</code> et des <code>1</code> et qui sépare les <code>0</code> des <code>1</code> en plaçant les <code>0</code> en début de
 tableau et les <code>1</code> à la suite.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3882,7 +3881,7 @@ tableau et les <code>1</code> à la suite.</p>
 </code></pre></div></td></tr></table></div>
 <p>Compléter la fonction <code>separe</code> ci-dessus.</p>
 <p>Exemples :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">separe</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">separe</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
 <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">separe</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
 <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
@@ -3893,30 +3892,30 @@ tableau et les <code>1</code> à la suite.</p>
 <li>
 <p><strong>Etape 1 :</strong> on regarde la première case, qui contient un 1 : ce 1 va aller dans la seconde
 partie du tableau final et on l’échange avec la dernière case.
-Il est à présent bien positionné : on ne prend plus la dernière case en compte.<br>
+Il est à présent bien positionné : on ne prend plus la dernière case en compte.<br />
 <code>tab = [0, 0, 1, 0, 1, 0, 1, 1]</code></p>
 </li>
 <li>
 <p><strong>Etape 2 :</strong> on regarde à nouveau la première case, qui contient maintenant un 0 : ce 0 va
 aller dans la première partie du tableau final et est bien positionné : on ne prend plus la
-première case en compte.<br>
+première case en compte.<br />
 <code>tab = [0, 0, 1, 0, 1, 0, 1, 1]</code></p>
 </li>
 <li>
 <p><strong>Etape 3 :</strong> on regarde la seconde case, qui contient un 0 : ce 0 va aller dans la première
-partie du tableau final et est bien positionné : on ne prend plus la seconde case en compte.<br>
+partie du tableau final et est bien positionné : on ne prend plus la seconde case en compte.<br />
 <code>tab = [0, 0, 1, 0, 1, 0, 1, 1]</code></p>
 </li>
 <li>
 <p><strong>Etape 4 :</strong> on regarde la troisième case, qui contient un 1 : ce 1 va aller dans la seconde
 partie du tableau final et on l’échange avec l’avant-dernière case.
-Il est à présent bien positionné : on ne prend plus l’avant-dernière case en compte.<br>
+Il est à présent bien positionné : on ne prend plus l’avant-dernière case en compte.<br />
 <code>tab = [0, 0, 1, 0, 1, 0, 1, 1]</code></p>
 </li>
 </ul>
 <p>Et ainsi de suite...</p>
 <p><code>tab = [0, 0, 0, 0, 1, 1, 1, 1]</code></p>
-<p>Compléter la fonction <code>separe</code> présentée à la page précédente</p></div>
+<p>Compléter la fonction <code>separe</code> présentée à la page précédente</p>
 
 
 

@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,7 +3856,7 @@
 
   <h1>Correction</h1>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3893,16 +3892,16 @@
 <span class="normal">34</span>
 <span class="normal">35</span>
 <span class="normal">36</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">nbLig</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">'''renvoie le nombre de lignes de l'image'''</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie le nombre de lignes de l&#39;image&#39;&#39;&#39;</span>
 <span class="hll">    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
 </span>
 <span class="k">def</span> <span class="nf">nbCol</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">'''renvoie la largeur de l'image'''</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie la largeur de l&#39;image&#39;&#39;&#39;</span>
 <span class="hll">    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </span>
 <span class="k">def</span> <span class="nf">negatif</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">'''renvoie le negatif de l'image sous la forme</span>
-<span class="sd">       d'une liste de listes'''</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie le negatif de l&#39;image sous la forme</span>
+<span class="sd">       d&#39;une liste de listes&#39;&#39;&#39;</span>
 
     <span class="c1"># on cree une image de 0 aux memes dimensions que le parametre image</span>
     <span class="n">L</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbCol</span><span class="p">(</span><span class="n">image</span><span class="p">))]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbLig</span><span class="p">(</span><span class="n">image</span><span class="p">))]</span>
@@ -3913,10 +3912,10 @@
 </span>    <span class="k">return</span> <span class="n">L</span>
 
 <span class="k">def</span> <span class="nf">binaire</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">seuil</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">'''renvoie une image binarisee de l'image sous la forme</span>
-<span class="sd">       d'une liste de listes contenant des 0 si la valeur</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie une image binarisee de l&#39;image sous la forme</span>
+<span class="sd">       d&#39;une liste de listes contenant des 0 si la valeur</span>
 <span class="sd">       du pixel est strictement inferieure au seuil</span>
-<span class="sd">       et 1 sinon'''</span>
+<span class="sd">       et 1 sinon&#39;&#39;&#39;</span>
 
     <span class="c1"># on cree une image de 0 aux memes dimensions que le parametre image</span>
     <span class="n">L</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbCol</span><span class="p">(</span><span class="n">image</span><span class="p">))]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbLig</span><span class="p">(</span><span class="n">image</span><span class="p">))]</span>

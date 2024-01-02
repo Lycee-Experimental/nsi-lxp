@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3918,7 +3917,7 @@
   
 
 
-<div><h1 id="codage-des-entiers-negatifs-signes">Codage des entiers négatifs (signés)<a class="headerlink" href="#codage-des-entiers-negatifs-signes" title="Permanent link">⚓︎</a></h1>
+<h1 id="codage-des-entiers-negatifs-signes">Codage des entiers négatifs (signés)<a class="headerlink" href="#codage-des-entiers-negatifs-signes" title="Permanent link">⚓︎</a></h1>
 <details class="conclu">
 <summary>Programme</summary>
 <table>
@@ -3951,7 +3950,7 @@
 <h2 id="rappels-les-nombres-entiers-en-binaire-non-signe">Rappels : les nombres entiers en binaire non signé<a class="headerlink" href="#rappels-les-nombres-entiers-en-binaire-non-signe" title="Permanent link">⚓︎</a></h2>
 <p>L'expression <strong>"non signé"</strong> signifie que la contrainte du signe n'existe pas : tous les nombres sont considérés comme étant positifs.</p>
 <p>Nous avons vu <a href="../entier-positif/">ici</a> comment ces nombres se codaient en binaire.  </p>
-<p>Sur un octet, le nombre minimal qu'on puisse coder est <code>00000000</code>. C'est l'entier naturel 0.<br>
+<p>Sur un octet, le nombre minimal qu'on puisse coder est <code>00000000</code>. C'est l'entier naturel 0.<br />
 Le nombre maximal qu'on puisse coder est <code>11111111</code>. C'est l'entier naturel 255.</p>
 <details class="question">
 <summary>Activité 1 - Jusqu'à combien peux-tu compter en binaire ?</summary>
@@ -3979,7 +3978,7 @@ Le nombre maximal qu'on puisse coder est <code>11111111</code>. C'est l'entier n
 <details class="tip">
 <summary>Correction</summary>
 <ol>
-<li><div class="highlight"><pre><span></span><code>retenues:  1111
+<li><div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>retenues:  1111
         00001101
       + 00001011
       ----------
@@ -4005,13 +4004,13 @@ L'idée la plus simple est de réserver 1 bit pour le signe, et de coder le rest
 <p>Calculer <span class="arithmatex">\((+3)+(-3)\)</span> dans ce système.</p>
 <details class="tip">
 <summary>Résultat</summary>
-<p></p><div class="highlight"><pre><span></span><code>retenues :       11
+<p><div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>retenues :       11
             00000011
         +   10000011
         ------------
             10000110
 </code></pre></div>
-<strong>Problème</strong> : 
+<strong>Problème</strong> : </p>
 <ul>
 <li>
 <p>10000110 = -6 !</p>
@@ -4028,19 +4027,19 @@ L'idée la plus simple est de réserver 1 bit pour le signe, et de coder le rest
 <summary>Activité 4 - À la recherche de l'opposé d'un nombre</summary>
 <p><strong>Idée</strong></p>
 <p>Plutôt que de chercher à écrire directement le nombre <span class="arithmatex">\(-3\)</span>, que faut-il ajouter au nombre <span class="arithmatex">\((+3)\)</span> pour obtenir 0 ?
-</p><div class="highlight"><pre><span></span><code>  00000011
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>  00000011
 + ????????
 ----------
 = 00000000  
-</code></pre></div>
+</code></pre></div></p>
 <details class="tip">
 <summary>Réponse</summary>
 <p>Commence par la droite, en essayant de «fabriquer du zéro» en choisissant le bon bit à ajouter :
-</p><div class="highlight"><pre><span></span><code>  00000011  |    00000011  |   100000011
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>  00000011  |    00000011  |   100000011
 + ???????1  |  + ??????01  |  + 11111101
 ----------  |  ----------  |  ----------
 =        0  |  =       00  |  =100000000 
-</code></pre></div>
+</code></pre></div></p>
 <p>On arrive bien à fabriquer des 0 sur tout notre octet, mais une retenue (en anglais <em>carry</em>) de 1 déborde de notre octet...</p>
 <p>Pas de problème, elle sera perdue et ce nombre sera donc considéré comme un 0 : tu as trouvé que <span class="arithmatex">\(-3\)</span> s'écrit <code>11111101</code> !</p>
 </details>
@@ -4203,7 +4202,7 @@ L'idée la plus simple est de réserver 1 bit pour le signe, et de coder le rest
 <details class="question">
 <summary>Activité 8 - A quand le bug ?</summary>
 <p>Lorsqu'on demande à Python l'heure qu'il est, par la fonction <code>time()</code> du module <code>time</code>, voici ce qu'il répond :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">time</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">time</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 <span class="mf">1653855138.398177</span>
 </code></pre></div>
@@ -4214,10 +4213,10 @@ Au 29 mai 2022, il s'en donc écoulé environ 1,6 milliards.</p>
 <p>À la seconde d'après, la represéntation binaire du temps sera <code>10000000 00000000 00000000 00000000</code>, qui sera interprété comme le nombre <strong>négatif</strong> −2147483648, et qui ramènera donc les horloges au 13 décembre 1901...</p>
 <p><strong>Question</strong></p>
 <p>A l'aide de python, déterminer en quelle année ce bug informatique aura lieu.</p>
-<p></p><div onclick='start_term("id4")' id="fake_id4" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id4" class="py_mk_hide"></div>
+<p><div onclick='start_term("id4")' id="fake_id4" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id4" class="py_mk_hide"></div></p>
 <details class="tip">
 <summary>Réponse</summary>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="s1">'01111111111111111111111111111111'</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;01111111111111111111111111111111&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="mi">2147483647</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="mi">2147483647</span><span class="o">/</span><span class="mi">60</span><span class="o">/</span><span class="mi">60</span><span class="o">/</span><span class="mi">24</span><span class="o">/</span><span class="mi">365</span>
 <span class="mf">68.09625973490614</span>
@@ -4225,13 +4224,13 @@ Au 29 mai 2022, il s'en donc écoulé environ 1,6 milliards.</p>
 <span class="mi">2038</span>
 </code></pre></div>
 <p>Ce nombre représente un peu plus de 2 milliards de secondes... En les comptant depuis le 01/01/1970 00h00m00s, on arrive au 19/01/2038 à 03h14m07s.</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">datetime</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="s1">'01111111111111111111111111111111'</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">'Bug le </span><span class="si">%d</span><span class="s1">-%m-%Y à %H:%M:%S'</span><span class="p">))</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">datetime</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;01111111111111111111111111111111&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;Bug le </span><span class="si">%d</span><span class="s1">-%m-%Y à %H:%M:%S&#39;</span><span class="p">))</span>
 <span class="n">Bug</span> <span class="n">le</span> <span class="mi">19</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">2038</span> <span class="n">à</span> <span class="mi">04</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mi">07</span>
 </code></pre></div>
 <p>Plus d'info sur la page Wikipedia <a href="https://fr.wikipedia.org/wiki/Bug_de_l%27an_2038">Bug de l'an 2038</a></p>
 </details>
-</details></div>
+</details>
 
 
 

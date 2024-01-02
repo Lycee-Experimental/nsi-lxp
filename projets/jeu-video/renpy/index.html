@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3876,7 +3875,7 @@
   
 
 
-<div><h1 id="renpy">Ren'Py<a class="headerlink" href="#renpy" title="Permanent link">⚓︎</a></h1>
+<h1 id="renpy">Ren'Py<a class="headerlink" href="#renpy" title="Permanent link">⚓︎</a></h1>
 <p><a href="http://fr.renpy.org/">Ren'Py</a> est un moteur en python permettant de créer facilement des <a href="https://fr.wikipedia.org/wiki/Visual_novel">Visual Novels</a>.</p>
 <p>De nombreux jeux réalisés avec Ren'Py sont disponibles gratuitement, mais le code source de ces jeux n'est pas souvent accessible. Une multitude de jeux gratuits est accessible sur <a href="https://itch.io/games/top-rated/free/made-with-renpy">Itch</a> , <a href="https://vndb.org/v?f=02N18Nd01N18fwRen_7Py-&amp;s=33w">Visual Novel DataBase</a> ou sur <a href="https://steamdb.info/instantsearch/?refinementList%5Btags%5D%5B0%5D=Free%20to%20Play&amp;refinementList%5Btechnologies%5D%5B0%5D=Engine.RenPy">Steam</a>.</p>
 <p>Ainsi pour apprendre à utiliser Ren'Py, il peut s'avérer utile de décompiler les jeux existants pour pouvoir en étudier les scripts.</p>
@@ -3885,7 +3884,7 @@
 <ul>
 <li>Ouvrir un terminal dans le dossier <code>game</code> de votre jeu et télécharger la dernière version de <code>un.rpyc</code> :</li>
 </ul>
-<div class="highlight"><pre><span></span><code>wget<span class="w"> </span>https://github.com/CensoredUsername/unrpyc/releases/download/v1.1.7/un.rpyc
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code>wget<span class="w"> </span>https://github.com/CensoredUsername/unrpyc/releases/download/v1.1.7/un.rpyc
 </code></pre></div>
 <ul>
 <li>Simplement lancer le jeu (fichier .py ou .sh à la racine), le quitter, tous les <code>.rpyc</code> des sous-dossiers game devraient avoir été décompliés en <code>.rpy</code>.</li>
@@ -3896,19 +3895,19 @@
 <h2 id="depaqueter-les-fichiers-rpa">Dépaqueter les fichiers .rpa<a class="headerlink" href="#depaqueter-les-fichiers-rpa" title="Permanent link">⚓︎</a></h2>
 <p>Les jeux sont empaquetés dans des fichiers d'extension <code>.rpa</code>, notamment les images et sons en plus des scripts. Il faut donc également les décompacter.</p>
 <h3 id="installation-de-unrpa">Installation de unrpa<a class="headerlink" href="#installation-de-unrpa" title="Permanent link">⚓︎</a></h3>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-pip
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-pip
 sudo<span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>unrpa
 </code></pre></div>
 <h3 id="utilisation">Utilisation<a class="headerlink" href="#utilisation" title="Permanent link">⚓︎</a></h3>
 <p>Pour extraire et supprimer tous les rpa du dossier :</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>path/to/my/game
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>path/to/my/game
 unrpa<span class="w"> </span>*.rpa
 rm<span class="w"> </span>*.rpa
 </code></pre></div>
 <h2 id="decompiler-les-rpyc">Décompiler les .rpyc<a class="headerlink" href="#decompiler-les-rpyc" title="Permanent link">⚓︎</a></h2>
 <p>Dans les paquets rpa ainsi extraits se trouvent les fichiers compilés du jeu au format .rpyc</p>
 <h3 id="installation-de-unrpyc">Installation de unrpyc<a class="headerlink" href="#installation-de-unrpyc" title="Permanent link">⚓︎</a></h3>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python2
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python2
 curl<span class="w"> </span>https://bootstrap.pypa.io/pip/2.7/get-pip.py<span class="w"> </span>--output<span class="w"> </span>get-pip.py
 sudo<span class="w"> </span>python2<span class="w"> </span>get-pip.py
 <span class="nb">cd</span><span class="w"> </span>~/Téléchargements
@@ -3918,9 +3917,9 @@ sudo<span class="w"> </span>python2<span class="w"> </span>setup.py<span class="
 </code></pre></div>
 <h3 id="utilisation_1">Utilisation<a class="headerlink" href="#utilisation_1" title="Permanent link">⚓︎</a></h3>
 <p>Pour décompiler tous les .rpyc du dossier et sous-dossiers :</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>path/to/my/game
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>path/to/my/game
 unrpyc.py<span class="w"> </span>.
-</code></pre></div></div>
+</code></pre></div>
 
 
 

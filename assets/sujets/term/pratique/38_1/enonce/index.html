@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,7 +3856,7 @@
 
   <h1>Enonce</h1>
 
-<div><p>On considère des mots à trous : ce sont des chaînes de caractères contenant uniquement
+<p>On considère des mots à trous : ce sont des chaînes de caractères contenant uniquement
 des majuscules et des caractères <code>*</code>. Par exemple <code>INFO*MA*IQUE</code>, <code>***I***E**</code> et
 <code>*S*</code> sont des mots à trous.  </p>
 <p>Programmer une fonction <code>correspond</code> qui :</p>
@@ -3872,15 +3871,15 @@ des majuscules et des caractères <code>*</code>. Par exemple <code>INFO*MA*IQUE
 </li>
 </ul>
 <p>Exemple :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">correspond</span><span class="p">(</span><span class="s1">'INFORMATIQUE'</span><span class="p">,</span> <span class="s1">'INFO*MA*IQUE'</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">correspond</span><span class="p">(</span><span class="s1">&#39;INFORMATIQUE&#39;</span><span class="p">,</span> <span class="s1">&#39;INFO*MA*IQUE&#39;</span><span class="p">)</span>
 <span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">correspond</span><span class="p">(</span><span class="s1">'AUTOMATIQUE'</span><span class="p">,</span> <span class="s1">'INFO*MA*IQUE'</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">correspond</span><span class="p">(</span><span class="s1">&#39;AUTOMATIQUE&#39;</span><span class="p">,</span> <span class="s1">&#39;INFO*MA*IQUE&#39;</span><span class="p">)</span>
 <span class="kc">False</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">correspond</span><span class="p">(</span><span class="s1">'STOP'</span><span class="p">,</span> <span class="s1">'S*'</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">correspond</span><span class="p">(</span><span class="s1">&#39;STOP&#39;</span><span class="p">,</span> <span class="s1">&#39;S*&#39;</span><span class="p">)</span>
 <span class="kc">False</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">correspond</span><span class="p">(</span><span class="s1">'AUTO'</span><span class="p">,</span> <span class="s1">'*UT*'</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">correspond</span><span class="p">(</span><span class="s1">&#39;AUTO&#39;</span><span class="p">,</span> <span class="s1">&#39;*UT*&#39;</span><span class="p">)</span>
 <span class="kc">True</span>
-</code></pre></div></div>
+</code></pre></div>
 
 
 

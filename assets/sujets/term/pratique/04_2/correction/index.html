@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,7 +3856,7 @@
 
   <h1>Correction</h1>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3891,8 +3890,8 @@
 <span class="normal">32</span>
 <span class="normal">33</span>
 <span class="normal">34</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">voisinage</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">ligne</span><span class="p">,</span> <span class="n">colonne</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">""" Renvoie la liste des coordonnées des voisins de la case</span>
-<span class="sd">    (ligne, colonne) en gérant les cases sur les bords. """</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Renvoie la liste des coordonnées des voisins de la case</span>
+<span class="sd">    (ligne, colonne) en gérant les cases sur les bords. &quot;&quot;&quot;</span>
     <span class="n">voisins</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">ligne</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="nb">min</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">ligne</span><span class="o">+</span><span class="mi">2</span><span class="p">)):</span>
         <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">colonne</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="nb">min</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">colonne</span><span class="o">+</span><span class="mi">2</span><span class="p">)):</span>
@@ -3902,21 +3901,21 @@
 
 
 <span class="k">def</span> <span class="nf">incremente_voisins</span><span class="p">(</span><span class="n">grille</span><span class="p">,</span> <span class="n">ligne</span><span class="p">,</span> <span class="n">colonne</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">""" Incrémente de 1 toutes les cases voisines d'une bombe."""</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Incrémente de 1 toutes les cases voisines d&#39;une bombe.&quot;&quot;&quot;</span>
 <span class="hll">    <span class="n">voisins</span> <span class="o">=</span> <span class="n">voisinage</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">grille</span><span class="p">),</span> <span class="n">ligne</span><span class="p">,</span> <span class="n">colonne</span><span class="p">)</span>
 </span>    <span class="k">for</span> <span class="n">l</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">voisins</span><span class="p">:</span>
-<span class="hll">        <span class="k">if</span> <span class="n">grille</span><span class="p">[</span><span class="n">l</span><span class="p">][</span><span class="n">c</span><span class="p">]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span> <span class="c1"># si ce n'est pas une bombe</span>
+<span class="hll">        <span class="k">if</span> <span class="n">grille</span><span class="p">[</span><span class="n">l</span><span class="p">][</span><span class="n">c</span><span class="p">]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span> <span class="c1"># si ce n&#39;est pas une bombe</span>
 </span><span class="hll">            <span class="n">grille</span><span class="p">[</span><span class="n">l</span><span class="p">][</span><span class="n">c</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># on ajoute 1 à sa valeur</span>
 </span>
 
 
 <span class="k">def</span> <span class="nf">genere_grille</span><span class="p">(</span><span class="n">bombes</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">""" Renvoie une grille de démineur de taille nxn où n est</span>
-<span class="sd">    le nombre de bombes, en plaçant les bombes à l'aide de</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Renvoie une grille de démineur de taille nxn où n est</span>
+<span class="sd">    le nombre de bombes, en plaçant les bombes à l&#39;aide de</span>
 <span class="sd">    la liste bombes de coordonnées (tuples) passée en</span>
-<span class="sd">    paramètre. """</span>
+<span class="sd">    paramètre. &quot;&quot;&quot;</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">bombes</span><span class="p">)</span>
-    <span class="c1"># Initialisation d'une grille nxn remplie de 0</span>
+    <span class="c1"># Initialisation d&#39;une grille nxn remplie de 0</span>
     <span class="n">grille</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">colonne</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span> <span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
     <span class="c1"># Place les bombes et calcule les valeurs des autres cases</span>
     <span class="k">for</span> <span class="n">ligne</span><span class="p">,</span> <span class="n">colonne</span> <span class="ow">in</span> <span class="n">bombes</span><span class="p">:</span>

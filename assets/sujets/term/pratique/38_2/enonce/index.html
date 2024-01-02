@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,7 +3856,7 @@
 
   <h1>Enonce</h1>
 
-<div><p>On considère au plus 26 personnes A, B, C, D, E, F ... qui peuvent s'envoyer des messages
+<p>On considère au plus 26 personnes A, B, C, D, E, F ... qui peuvent s'envoyer des messages
 avec deux règles à respecter :</p>
 <ul>
 <li>chaque personne ne peut envoyer des messages qu'à une seule personne
@@ -3896,7 +3895,7 @@ qu’on ne « retombe » pas sur l’expéditeur initial,</li>
 </ul>
 <p>Compléter la fonction <code>est_cyclique</code> en respectant la spécification.</p>
 <p><em>Remarque :</em> la fonction python <code>len</code> permet d'obtenir la longueur d'un dictionnaire.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3910,11 +3909,11 @@ qu’on ne « retombe » pas sur l’expéditeur initial,</li>
 <span class="normal">12</span>
 <span class="normal">13</span>
 <span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">est_cyclique</span><span class="p">(</span><span class="n">plan</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">'''</span>
-<span class="sd">    Prend en paramètre un dictionnaire `plan` correspondant à un plan d'envoi de messages (ici entre les personnes A, B, C, D, E, F).</span>
-<span class="sd">    Renvoie True si le plan d'envoi de messages est cyclique et False sinon.</span>
-<span class="sd">    '''</span>
-    <span class="n">expediteur</span> <span class="o">=</span> <span class="s1">'A'</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Prend en paramètre un dictionnaire `plan` correspondant à un plan d&#39;envoi de messages (ici entre les personnes A, B, C, D, E, F).</span>
+<span class="sd">    Renvoie True si le plan d&#39;envoi de messages est cyclique et False sinon.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">expediteur</span> <span class="o">=</span> <span class="s1">&#39;A&#39;</span>
     <span class="n">destinataire</span> <span class="o">=</span> <span class="n">plan</span><span class="p">[</span> <span class="o">...</span> <span class="p">]</span>
     <span class="n">nb_destinaires</span> <span class="o">=</span> <span class="mi">1</span>
     
@@ -3925,15 +3924,15 @@ qu’on ne « retombe » pas sur l’expéditeur initial,</li>
     <span class="k">return</span> <span class="n">nb_destinaires</span> <span class="o">==</span> <span class="o">...</span>
 </code></pre></div></td></tr></table></div>
 <p><em>Exemples :</em></p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">est_cyclique</span><span class="p">({</span><span class="s1">'A'</span><span class="p">:</span><span class="s1">'E'</span><span class="p">,</span> <span class="s1">'F'</span><span class="p">:</span><span class="s1">'A'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">:</span><span class="s1">'D'</span><span class="p">,</span> <span class="s1">'E'</span><span class="p">:</span><span class="s1">'B'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">:</span><span class="s1">'F'</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">:</span><span class="s1">'C'</span><span class="p">})</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">est_cyclique</span><span class="p">({</span><span class="s1">&#39;A&#39;</span><span class="p">:</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">:</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span><span class="s1">&#39;C&#39;</span><span class="p">})</span>
 <span class="kc">False</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">est_cyclique</span><span class="p">({</span><span class="s1">'A'</span><span class="p">:</span><span class="s1">'E'</span><span class="p">,</span> <span class="s1">'F'</span><span class="p">:</span><span class="s1">'C'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">:</span><span class="s1">'D'</span><span class="p">,</span> <span class="s1">'E'</span><span class="p">:</span><span class="s1">'B'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">:</span><span class="s1">'F'</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">:</span><span class="s1">'A'</span><span class="p">})</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">est_cyclique</span><span class="p">({</span><span class="s1">&#39;A&#39;</span><span class="p">:</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">:</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span><span class="s1">&#39;A&#39;</span><span class="p">})</span>
 <span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">est_cyclique</span><span class="p">({</span><span class="s1">'A'</span><span class="p">:</span><span class="s1">'B'</span><span class="p">,</span> <span class="s1">'F'</span><span class="p">:</span><span class="s1">'C'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">:</span><span class="s1">'D'</span><span class="p">,</span> <span class="s1">'E'</span><span class="p">:</span><span class="s1">'A'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">:</span><span class="s1">'F'</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">:</span><span class="s1">'E'</span><span class="p">})</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">est_cyclique</span><span class="p">({</span><span class="s1">&#39;A&#39;</span><span class="p">:</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">:</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span><span class="s1">&#39;E&#39;</span><span class="p">})</span>
 <span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">est_cyclique</span><span class="p">({</span><span class="s1">'A'</span><span class="p">:</span><span class="s1">'B'</span><span class="p">,</span> <span class="s1">'F'</span><span class="p">:</span><span class="s1">'A'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">:</span><span class="s1">'D'</span><span class="p">,</span> <span class="s1">'E'</span><span class="p">:</span><span class="s1">'C'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">:</span><span class="s1">'F'</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">:</span><span class="s1">'E'</span><span class="p">})</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">est_cyclique</span><span class="p">({</span><span class="s1">&#39;A&#39;</span><span class="p">:</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">:</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span><span class="s1">&#39;E&#39;</span><span class="p">})</span>
 <span class="kc">False</span>
-</code></pre></div></div>
+</code></pre></div>
 
 
 

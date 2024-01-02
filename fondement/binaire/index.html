@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3972,7 +3971,7 @@
   
 
 
-<div><h1 id="operateurs-booleens-et-portes-logiques">Opérateurs booléens et portes logiques<a class="headerlink" href="#operateurs-booleens-et-portes-logiques" title="Permanent link">⚓︎</a></h1>
+<h1 id="operateurs-booleens-et-portes-logiques">Opérateurs booléens et portes logiques<a class="headerlink" href="#operateurs-booleens-et-portes-logiques" title="Permanent link">⚓︎</a></h1>
 <details class="conclu">
 <summary>Programme</summary>
 <table>
@@ -3992,9 +3991,9 @@
 </tbody>
 </table>
 </details>
-<p></p><center>
-<img src="/assets/images/watergates.gif" speed="1" play>
-</center>
+<p><center>
+<img src="/assets/images/watergates.gif" speed="1" play></img>
+</center></p>
 <h2 id="le-langage-binaire">Le langage binaire<a class="headerlink" href="#le-langage-binaire" title="Permanent link">⚓︎</a></h2>
 <p>Avec le développement des premiers calculateurs fonctionnant à l'électricité, à base de relais électromécaniques, puis de tubes électroniques, de transistors, et enfin de circuits intégrés au sein de microprocesseurs, l'informatique s'est orienté vers un <strong>langage binaire</strong> : </p>
 <ul>
@@ -4042,7 +4041,7 @@ qui ne contient que <strong>deux éléments</strong> notés <strong>0 et 1</stro
 </div>
 <h3 id="fonctionnement-des-principales-portes-logiques">Fonctionnement des principales portes logiques<a class="headerlink" href="#fonctionnement-des-principales-portes-logiques" title="Permanent link">⚓︎</a></h3>
 <p>Il est nécessaire de connaître le fonctionnement des principales portes logiques, et de savoir en établir les <strong>tables de vérités</strong>.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">La négation : porte NON - NOT</label><label for="__tabbed_1_2">La disjonction : porte OU - OR</label><label for="__tabbed_1_3">La conjonction : porte ET - AND</label><label for="__tabbed_1_4">La disjonction exclusive : porte OU EXCLUSIF - XOR</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">La négation : porte NON - NOT</label><label for="__tabbed_1_2">La disjonction : porte OU - OR</label><label for="__tabbed_1_3">La conjonction : porte ET - AND</label><label for="__tabbed_1_4">La disjonction exclusive : porte OU EXCLUSIF - XOR</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -4053,7 +4052,7 @@ qui ne contient que <strong>deux éléments</strong> notés <strong>0 et 1</stro
 <li>notation mathématique :  <span class="arithmatex">\(\overline{x}\)</span></li>
 </ul>
 <p>Le plus simple des circuits combinatoires est la porte "NON" ("NOT" en anglais) qui inverse l'état en entrée : si l'entrée de la porte est dans un état "bas" alors la sortie sera dans un état "haut" et vice versa. </p>
-<p></p><div style="width: 100%; height: 70px">
+<p><div style="width: 100%; height: 70px">
 <logic-editor class="dark" mode="tryout">
     <script type="application/json">
     { // JSON5
@@ -4067,7 +4066,7 @@ qui ne contient que <strong>deux éléments</strong> notés <strong>0 et 1</stro
     }
     </script>
 </logic-editor>
-</div>
+</div></p>
 <div class="admonition conclu">
 <p class="admonition-title">Table de vérité de NON</p>
 <p>Si on symbolise l'état "haut" par un "1" et l'état "bas" pour un "0", on peut obtenir ce que l'on appelle la table de vérité de la porte "NON" :</p>
@@ -4100,7 +4099,7 @@ qui ne contient que <strong>deux éléments</strong> notés <strong>0 et 1</stro
 <li>notation mathématique :  <span class="arithmatex">\(+\)</span></li>
 </ul>
 <p>La porte "OU" a deux entrées (E1 et E2) et une sortie S</p>
-<p></p><div style="width: 100%; height: 90px">
+<p><div style="width: 100%; height: 90px">
 <logic-editor mode="tryout">
     <script type="application/json">
     { // JSON5
@@ -4115,7 +4114,7 @@ qui ne contient que <strong>deux éléments</strong> notés <strong>0 et 1</stro
     }
     </script>
 </logic-editor>
-</div>
+</div></p>
 <div class="admonition conclu">
 <p class="admonition-title">Table de vérité de OU</p>
 <table>
@@ -4160,7 +4159,7 @@ qui ne contient que <strong>deux éléments</strong> notés <strong>0 et 1</stro
 <li>notation mathématique :  <code>.</code> </li>
 </ul>
 <p>La porte "ET" ("AND") a deux entrées (E1 et E2) et une sortie S</p>
-<p></p><div style="width: 100%; height: 90px">
+<p><div style="width: 100%; height: 90px">
 <logic-editor mode="tryout">
     <script type="application/json">
     { // JSON5
@@ -4175,7 +4174,7 @@ qui ne contient que <strong>deux éléments</strong> notés <strong>0 et 1</stro
     }
     </script>
 </logic-editor>
-</div>
+</div></p>
 <div class="admonition conclu">
 <p class="admonition-title">Table de vérité de ET</p>
 <table>
@@ -4220,7 +4219,7 @@ qui ne contient que <strong>deux éléments</strong> notés <strong>0 et 1</stro
 <li>notation logique : ⊕</li>
 <li>notation mathématique :  ↮</li>
 </ul>
-<p></p><div style="width: 100%; height: 90px">
+<p><div style="width: 100%; height: 90px">
 <logic-editor mode="tryout">
     <script type="application/json">
     { // JSON5
@@ -4235,7 +4234,7 @@ qui ne contient que <strong>deux éléments</strong> notés <strong>0 et 1</stro
     }
     </script>
 </logic-editor>
-</div>
+</div></p>
 <div class="admonition conclu">
 <p class="admonition-title">Table de vérité de OU EXCLUSIF</p>
 <table>
@@ -4276,12 +4275,12 @@ qui ne contient que <strong>deux éléments</strong> notés <strong>0 et 1</stro
 <h3 id="activites">Activités<a class="headerlink" href="#activites" title="Permanent link">⚓︎</a></h3>
 <details class="question">
 <summary>Activité 1 - Combinaison de portes logiques</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Réponse</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Réponse</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Des portes logique peuvent s'obtenir en combinant 2 autres.
 Constituer les portes <code>NON OU</code> et <code>NON ET</code> et en établir le tableau de vérité.
-</p><div style="width: 100%; height: 400px">
+<div style="width: 100%; height: 400px">
     <logic-editor mode="design" showonly="in out and or not xor">
         <script type="application/json">
         { // JSON5
@@ -4289,11 +4288,11 @@ Constituer les portes <code>NON OU</code> et <code>NON ET</code> et en établir 
         }
         </script>
     </logic-editor>
-</div>
+</div></p>
 </div>
 <div class="tabbed-block">
 <p><strong>NON ET</strong></p>
-<p></p><div style="width: 100%; height: 100px">
+<p><div style="width: 100%; height: 100px">
     <logic-editor mode="tryout">
         <script type="application/json">
             { // JSON5
@@ -4309,7 +4308,7 @@ Constituer les portes <code>NON OU</code> et <code>NON ET</code> et en établir 
             }
         </script>
     </logic-editor>
-</div>
+</div></p>
 <p><em>Table de vérité</em></p>
 <table>
 <thead>
@@ -4343,7 +4342,7 @@ Constituer les portes <code>NON OU</code> et <code>NON ET</code> et en établir 
 </tbody>
 </table>
 <p><strong>NON OU</strong></p>
-<p></p><div style="width: 100%; height: 100px">
+<p><div style="width: 100%; height: 100px">
     <logic-editor mode="tryout">
         <script type="application/json">
             { // JSON5
@@ -4359,7 +4358,7 @@ Constituer les portes <code>NON OU</code> et <code>NON ET</code> et en établir 
             }
         </script>
     </logic-editor>
-</div>
+</div></p>
 <p><em>Table de vérité</em></p>
 <table>
 <thead>
@@ -4399,7 +4398,7 @@ Constituer les portes <code>NON OU</code> et <code>NON ET</code> et en établir 
 <details class="question">
 <summary>Activité 2 - Table de vérité d'un additionneur</summary>
 <p>En combinant les portes logiques, on obtient des circuits plus complexes. Par exemple en combinant 2 portes "OU EXCLUSIF", 2 portes "ET" et une porte "OU" on obtient un additionneur, qui permet d'additionner 2 bits (E1 et E2) en tenant compte de la retenue entrante (C0). En sortie on obtient le résultat de l'addition (S) et la retenue sortante ("C1").</p>
-<p></p><div style="width: 100%; height: 300px">
+<p><div style="width: 100%; height: 300px">
     <logic-editor mode="tryout">
         <script type="application/json">
         { // JSON5
@@ -4425,7 +4424,7 @@ Constituer les portes <code>NON OU</code> et <code>NON ET</code> et en établir 
         }
         </script>
     </logic-editor>
-</div>
+</div></p>
 <p><strong>Question</strong> : Constituer la table de vérité de S1 et C1 en fonction de E1, E2 et C0.</p>
 <details class="tip">
 <summary>Réponse</summary>
@@ -4507,12 +4506,12 @@ Constituer les portes <code>NON OU</code> et <code>NON ET</code> et en établir 
 </details>
 <details class="question">
 <summary>Activité 3 - Réalisation d'opérations logiques sur les bits</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Énoncé</label><label for="__tabbed_3_2">Réponse</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Énoncé</label><label for="__tabbed_3_2">Réponse</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>1 - Effectue à la main les opérations suivantes, en les réalisant bit à bit.</p>
 <p><strong>Rappel</strong> :  <code>&amp;</code> est le symbole de <strong>ET</strong>, <code>|</code> de <strong>OU</strong>,  <code>^</code> de <strong>OU EXCLUSIF</strong>.</p>
-<p></p><div class="highlight"><pre><span></span><code>   <span class="mi">1011011</span>
+<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code>   <span class="mi">1011011</span>
 <span class="o">&amp;</span>  <span class="mi">1010101</span>
 <span class="o">----------</span>
 
@@ -4526,14 +4525,14 @@ Constituer les portes <code>NON OU</code> et <code>NON ET</code> et en établir 
 <span class="o">^</span>  <span class="mi">1010101</span>
 <span class="o">----------</span>
 </code></pre></div>
-2 - Vérifie tes résultats avec python.
+2 - Vérifie tes résultats avec python.</p>
 <details class="python">
 <summary>La logique booléenne en Python</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">and, or, not</label><label for="__tabbed_4_2">&amp;, | et ^</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">and, or, not</label><label for="__tabbed_4_2">&amp;, | et ^</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Les opérateurs <code>and</code>, <code>or</code> et <code>not</code> sont utilisables pour tester des <strong>conditions</strong>, et renvoient <code>False</code> ou <code>True</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span>
 <span class="kc">False</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">)</span>
@@ -4546,15 +4545,15 @@ Constituer les portes <code>NON OU</code> et <code>NON ET</code> et en établir 
 </div>
 <div class="tabbed-block">
 <p>Les opérateurs <code>&amp;</code>, <code>|</code> et <code>^</code> sont utilisables directement avec des <strong>nombres</strong>, et renvoient des nombres.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># calcul A</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># calcul A</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="mi">12</span> <span class="o">&amp;</span> <span class="mi">7</span>
 <span class="mi">4</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1"># calcul B</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># calcul B</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="mi">12</span> <span class="o">|</span> <span class="mi">7</span>
 <span class="mi">15</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1"># calcul C</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># calcul C</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="mi">12</span> <span class="o">^</span> <span class="mi">5</span>
 <span class="mi">9</span>
 </code></pre></div>
@@ -4566,27 +4565,27 @@ Constituer les portes <code>NON OU</code> et <code>NON ET</code> et en établir 
 <li>La fonction <code>bin(n)</code> convertit un nombre entier en binaire.</li>
 </ul>
 <p>Voici les mêmes calculs, qui peuvent mieux s'analyser en prenant les bits un à un :</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># calcul A</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># calcul A</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="mb">0b1100</span> <span class="o">&amp;</span> <span class="mb">0b111</span><span class="p">)</span>
-	<span class="s1">'0b100'</span>
+	<span class="s1">&#39;0b100&#39;</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1"># calcul B</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># calcul B</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="mb">0b1100</span> <span class="o">|</span> <span class="mb">0b111</span><span class="p">)</span>
-<span class="s1">'0b1111'</span>
+<span class="s1">&#39;0b1111&#39;</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1"># calcul C</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># calcul C</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="mb">0b1100</span> <span class="o">^</span> <span class="mb">0b111</span><span class="p">)</span>
-<span class="s1">'0b1011'</span>
+<span class="s1">&#39;0b1011&#39;</span>
 </code></pre></div>
 </div>
 </div>
 </div>
 </div>
 </details>
-<p></p><div onclick='start_term("id7")' id="fake_id7" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id7" class="py_mk_hide"></div>
+<p><div onclick='start_term("id7")' id="fake_id7" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id7" class="py_mk_hide"></div></p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code> <span class="mi">1011011</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code> <span class="mi">1011011</span>
 <span class="o">&amp;</span><span class="mi">1010101</span>
 <span class="o">----------</span>
  <span class="mi">1010001</span>
@@ -4608,7 +4607,7 @@ Constituer les portes <code>NON OU</code> et <code>NON ET</code> et en établir 
 <div class="admonition conclu">
 <p class="admonition-title">Conclusion : Du transistor aux circuits logiques complexes</p>
 <p>A la base de l'informatique nous avons le transistor, composant muni de 2 entrées et une sortie. Une combinaison de transistors (sous forme de circuit intégré) permet d'obtenir des circuits logiques, la combinaison de circuits logiques permet d'obtenir des circuits plus complexes (exemple : l'additionneur), et ainsi de suite...</p>
-</div></div>
+</div>
 
 
 

@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,9 +3856,9 @@
 
   <h1>Enonce</h1>
 
-<div><p>Un arbre binaire est implémenté par la classe <code>Arbre</code> donnée ci-dessous.<br>
+<p>Un arbre binaire est implémenté par la classe <code>Arbre</code> donnée ci-dessous.<br />
 Les attributs <code>fg</code> et <code>fd</code> prennent pour valeurs des instances de la classe <code>Arbre</code> ou <code>None</code>.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3892,8 +3891,8 @@ l’arbre ainsi complété soit encore un arbre binaire de recherche.</p>
 <p>Tester ensuite ce code en utilisant la fonction <code>parcours</code> et en insérant successivement
 des nœuds d’étiquette 1, 4, 6 et 8 dans l’arbre binaire de recherche représenté ci-
 dessous :</p>
-<p><img alt="image" class="center" src="/assets/sujets/nsi/term/pratique/img/25_arbre.png" width="15%"></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<p><img alt="image" class="center" src="/assets/sujets/nsi/term/pratique/img/25_arbre.png" width="15%" /></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3907,9 +3906,9 @@ dessous :</p>
 <span class="normal">12</span>
 <span class="normal">13</span>
 <span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">insere</span><span class="p">(</span><span class="n">arbre</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">""" arbre est une instance de la classe Arbre qui implémente</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; arbre est une instance de la classe Arbre qui implémente</span>
 <span class="sd">        un arbre binaire de recherche.</span>
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="o">...</span><span class="p">:</span>
         <span class="k">if</span> <span class="o">...</span><span class="p">:</span>
             <span class="n">insere</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">fg</span><span class="p">,</span> <span class="n">cle</span><span class="p">)</span>
@@ -3920,7 +3919,7 @@ dessous :</p>
             <span class="n">insere</span><span class="p">(</span><span class="n">arbre</span><span class="o">.</span><span class="n">fd</span><span class="p">,</span> <span class="n">cle</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">arbre</span><span class="o">.</span><span class="n">fd</span> <span class="o">=</span> <span class="n">Arbre</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div></div>
+</code></pre></div></td></tr></table></div>
 
 
 

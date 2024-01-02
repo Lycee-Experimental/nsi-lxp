@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3980,7 +3979,7 @@
   
 
 
-<div><h1 id="os-et-gestion-des-processus">OS et Gestion des processus<a class="headerlink" href="#os-et-gestion-des-processus" title="Permanent link">⚓︎</a></h1>
+<h1 id="os-et-gestion-des-processus">OS et Gestion des processus<a class="headerlink" href="#os-et-gestion-des-processus" title="Permanent link">⚓︎</a></h1>
 <details class="conclu">
 <summary>Programme</summary>
 <table>
@@ -4019,7 +4018,7 @@ Les applications s'appuient sur l’élément central qu’est le noyau.</p>
 <p>Le noyau génère des appels systèmes pour accéder à des ressources.<br>
 Divers gestionnaires peuvent êtres sollicités : le gestionnaire de mémoire pour l’accès à des données en mémoire, le système de fichiers pour gérer les périphériques de stockage de masse, les protocoles réseaux, le gestionnaire de processus pour l’exécution d’un programme par le microprocesseur.</p>
 <p>Chaque ressource physique est gérée par un pilote.</p>
-<p><img alt="" class="center" src="Images/schema.png"></p>
+<p><img alt="" class="center" src="Images/schema.png" /></p>
 <h2 id="les-processus">Les processus<a class="headerlink" href="#les-processus" title="Permanent link">⚓︎</a></h2>
 <p>Le processeur appelé aussi CPU ( Central Processing Unit ) est l'unité matérielle en charge de l'exécution au sein d'un ordinateur.<br>
 Il exécute des instructions de bas niveau. Ces instructions  proviennent en général de programmes lancés sur la machine.</p>
@@ -4054,7 +4053,7 @@ Le processus qui appelle le fork est appelé processus père. Le nouveau process
 <p>Par exemple, si on ouvre  deux consoles sous linux, deux processus seront créés ; les deux processus sont exactement identiques et exécutent le même programme sur deux copies distinctes des données.<br>
 Les espaces de données sont complètement séparés: la modification d'une variable dans l'un est invisible dans l'autre.</p>
 <p>À l’issue d’un fork() les deux processus s’exécutent simultanément.</p>
-<p><img alt="" class="center" src="../Images/fork.png"></p>
+<p><img alt="" class="center" src="../Images/fork.png" /></p>
 <p><strong>Le système gère les processus:</strong></p>
 <ul>
 <li>il sait tout et il peut tout</li>
@@ -4082,18 +4081,18 @@ Les espaces de données sont complètement séparés: la modification d'une vari
 <ul>
 <li>Sous Windows 10, il y a le  bien connu  gestionnaire de tâches ( raccourci : <code>CRTL+MAJ+ECHAP</code> )</li>
 </ul>
-<p><img alt="" class="center" src="../Images/gui11.png"></p>
-<p><img alt="" class="center" src="../Images/gui4.png"></p>
+<p><img alt="" class="center" src="../Images/gui11.png" /></p>
+<p><img alt="" class="center" src="../Images/gui4.png" /></p>
 <ul>
 <li>Sous Ubuntu Mate, une distribution Linux,  il y a par exemple <strong>Moniteur Système</strong>. (cf MENU puis Outils Système )</li>
 </ul>
-<p><img alt="" class="center" src="../Images/gui1.png"></p>
-<p><img alt="" class="center" src="../Images/gui2.png"></p>
+<p><img alt="" class="center" src="../Images/gui1.png" /></p>
+<p><img alt="" class="center" src="../Images/gui2.png" /></p>
 <ul>
 <li>Sous Kubuntu, une autre distribution Linux, il y a par exemple  <strong>KsysGuard</strong>.</li>
 </ul>
-<p><img alt="" class="center" src="../Images/gui3.png"></p>
-<p><img alt="" class="center" src="../Images/gui10.png"></p>
+<p><img alt="" class="center" src="../Images/gui3.png" /></p>
+<p><img alt="" class="center" src="../Images/gui10.png" /></p>
 <h3 id="exemples-avec-la-console-sous-linux-cli-command-line-interface">Exemples avec la console sous Linux  (CLI= Command Line Interface)<a class="headerlink" href="#exemples-avec-la-console-sous-linux-cli-command-line-interface" title="Permanent link">⚓︎</a></h3>
 <p>La commande <code>top</code> permet d'afficher la liste des processus de manière dynamique ( la liste est rafraîchit toutes les 3 secondes) (Pensez à la commande  <code>man top</code> pour plus d'informations).</p>
 <p><em>Sur Windows, on utilisera :</em></p>
@@ -4101,7 +4100,7 @@ Les espaces de données sont complètement séparés: la modification d'une vari
 <li>le site (comme pour les bases de données) : <a href="https://bellard.org/jslinux/vm.html?url=alpine-x86.cfg&amp;mem=192" target="_blank">linux en ligne</a></li>
 <li>le logiciel <a href="../Documents/ntop.exe">ntop.exe</a> pour visualiser les différents processus, mais nous ne pourrons pas aller plus loin...</li>
 </ul>
-<p><img alt="" class="center" src="../Images/gui5.png"></p>
+<p><img alt="" class="center" src="../Images/gui5.png" /></p>
 <p>Lorsque la commande <code>top</code> fonctionne, les lettres suivantes permettent de changer son fonctionnement :</p>
 <ul>
 <li>h : affiche l'aide</li>
@@ -4114,9 +4113,9 @@ Les espaces de données sont complètement séparés: la modification d'une vari
 <p>Pour en savoir plus : <a href="https://debian-facile.org/doc:systeme:top" target="_blank">https://debian-facile.org/doc:systeme:top</a></p>
 <p><em>Exemple</em></p>
 <p>Lançons les applications suivantes : Firefox, Libreoffice et Spyder (un logiciel pour programmer en Python)</p>
-<p><img alt="" class="center" src="../Images/gui7.png"></p>
+<p><img alt="" class="center" src="../Images/gui7.png" /></p>
 <p>Le  moniteur système juste après le lancement :</p>
-<p><img alt="" class="center" src="../Images/gui8.png"></p>
+<p><img alt="" class="center" src="../Images/gui8.png" /></p>
 <p>Les différentes colonnes nous renseignent sur le nom du processus, son propriétaire , etc.
 Le système d'exploitation alloue des ressources nécessaires aux processus : mémoires et temps processeur notamment.</p>
 <p>Au démarrage de l'ordinateur, le système charge le noyau Linux qui se charge de l'initialisation du matériel et de la détection des périphériques. Ceci fait, il démarre ensuite le processus <strong>init</strong> qui a comme particularité d'être <strong>le premier processus et de toujours utiliser le PID 1</strong>.</p>
@@ -4125,7 +4124,7 @@ Chaque processus a ainsi un père (sauf init), et peut être à son tour le pèr
 <p><strong>Un processus est toujours identifié par un numéro unique</strong> que l'on appelle le <strong>PID</strong> (Process IDentifiant).<br>
 <strong>Un processus dispose d'un processus père que l'on appelle le PPID (Parent PID)</strong>.<br>
 La particularité d'un processus est de s'exécuter avec les droits accordés à l'utilisateur qui a lancé la commande. Ceci participe fortement à la sécurité du système.</p>
-<p><img alt="" class="center" src="../Images/gui9.png"></p>
+<p><img alt="" class="center" src="../Images/gui9.png" /></p>
 <p>La commande <code>pstree</code>  permet de visualiser l'arbre des processus.<br>
 L'option <code>-p</code>  permet de visualiser les PID de chaque processus.</p>
 <h2 id="comment-gerer-les-processus">Comment gérer les processus?<a class="headerlink" href="#comment-gerer-les-processus" title="Permanent link">⚓︎</a></h2>
@@ -4137,12 +4136,12 @@ Pour rappel, en tapant <code>man ps</code> dans la console vous pouvez voir les 
 <li>ouvrez un autre terminal et exécutez <code>python3</code> dans la console</li>
 <li>revenez sur le premier terminal et relancez la commande <code>ps -a</code></li>
 </ul>
-<p><img alt="" class="center" src="../Images/ger1.png"></p>
-<p><img alt="" class="center" src="../Images/ger2.png"></p>
-<p><img alt="" class="center" src="../Images/ger3.png"></p>
+<p><img alt="" class="center" src="../Images/ger1.png" /></p>
+<p><img alt="" class="center" src="../Images/ger2.png" /></p>
+<p><img alt="" class="center" src="../Images/ger3.png" /></p>
 <p>La première commande <code>ps -a</code> permet de voir qu’il y a un processus de <strong>PID 9984</strong>  créé en lançant la commande <code>ps -a</code> !<br>
 Après avoir exécuter la commande <code>python3</code> puis en relançant la commande <code>ps -a</code>  on peut voir que son PID est <strong>10055</strong> et que celui de python est <strong>10054</strong>.</p>
-<p><img alt="" class="center" src="../Images/ger4.png"></p>
+<p><img alt="" class="center" src="../Images/ger4.png" /></p>
 <p><strong>Les différents champs</strong></p>
 <ul>
 <li><strong>USER</strong> indique le nom de l'utilisateur du processus</li>
@@ -4157,7 +4156,7 @@ Après avoir exécuter la commande <code>python3</code> puis en relançant la co
 <li><strong>TIME</strong> affiche le temps processeur utilisé par ce processus</li>
 <li><strong>COMMAND</strong> affiche le nom de la commande qui utilise ce PID</li>
 </ul>
-<p><img alt="" class="center" src="../Images/ger5.png"></p>
+<p><img alt="" class="center" src="../Images/ger5.png" /></p>
 <p><strong>Quelques options de la commande  <code>ps</code></strong></p>
 <ul>
 <li>L'option <code>-x</code> permet de visualiser tout les processus actifs de l'utilisateur courant</li>
@@ -4181,7 +4180,7 @@ Après avoir exécuter la commande <code>python3</code> puis en relançant la co
 <li><strong>Éligible ou Prêt</strong> : en attente d’un processeur pour s’exécuter </li>
 <li><strong>Bloqué</strong>: en attente d’un événement ; ne peut donc pas s’exécuter pour l’instant </li>
 </ul>
-<p><img alt="" class="center" src="../Images/etat1.png"></p>
+<p><img alt="" class="center" src="../Images/etat1.png" /></p>
 <p><strong>On peut voir l’état d’un processus dans le champ STAT après une commande ps. Ci-dessous quelques exemples d’attributs possibles :</strong></p>
 <ul>
 <li><strong>D</strong> en sommeil non interruptible (normalement entrées et sorties) ;</li>
@@ -4191,7 +4190,7 @@ Après avoir exécuter la commande <code>python3</code> puis en relançant la co
 <li><strong>T</strong> arrêté par le signal de contrôle de la tâche ;</li>
 <li><strong>Z</strong> processus zombie , terminé mais pas détruit par son parent...</li>
 </ul>
-<p><img alt="" class="center" src="../Images/etat2.png"></p>
+<p><img alt="" class="center" src="../Images/etat2.png" /></p>
 <h2 id="envoyer-un-signal-a-un-processus">Envoyer un signal à un processus<a class="headerlink" href="#envoyer-un-signal-a-un-processus" title="Permanent link">⚓︎</a></h2>
 <p>Un signal est une interruption logicielle envoyée par un processus à un autre processus.<br>
 Il peut signaler une anomalie ou solliciter l'arrêt définitif ou temporaire d'un processus. Un utilisateur ne peut envoyer de signal qu'à des processus qui lui appartiennent.</p>
@@ -4204,7 +4203,7 @@ La liste des signaux possibles peut être obtenue avec l'option <code>-l</code> 
 <p>15 - <code>TERM</code> qui permet de terminer proprement un processus</p>
 <p>Si un processus  ne répond plus on peut prendre l’initiative de le stopper avec un <strong>signal</strong> approprié en identifiant son PID au préalable.</p>
 <p>Illustration ci-dessous avec un programme python qui aurait  « planté ».</p>
-<p><img alt="" class="center" src="Images/signal1.png"></p>
+<p><img alt="" class="center" src="Images/signal1.png" /></p>
 <h2 id="comment-sorganise-les-processus">Comment s'organise les processus?<a class="headerlink" href="#comment-sorganise-les-processus" title="Permanent link">⚓︎</a></h2>
 <p><strong>Multi-programmation</strong></p>
 <ul>
@@ -4249,7 +4248,7 @@ Imaginons 4 philosophes qui passent leur temps soit à réfléchir, soit à mang
 </ul>
 <p>Supposons que tous les philosophes prennent leur fourchette de droite et qu’ils attendent que la fourchette de gauche se libère. Alors, aucun philosophe ne pourra obtenir la fourchette de gauche manquante. Les philosophes attendent mutuellement l’un après l'autre. Le philosophe A attend après B, B après C, C après D et D après A. Il y a attente circulaire et les philosophes sont bloqués et vont mourir de faim !</p>
 <p>L’analogie consiste maintenant à identifier un philosophe à un processus et une fourchette à une ressource pouvant être sollicitée par un philosophe… On obtient alors ce que l’on appelle un interblocage de processus.</p>
-<p><img alt="" class="center" src="../Images/philo1.png"></p>
+<p><img alt="" class="center" src="../Images/philo1.png" /></p>
 <p><strong>Un exemple plus détaillé</strong></p>
 <p>Pour terminer, illustrons ce phénomène avec deux  processus P1 et P2 initialement « éligibles » et deux  ressources R1 et R2, initialement libres. On rappelle à droite les 3 états de bases dans lesquels se trouvent en général un processus.<br>
 On suppose que l’algorithme d’ordonnancement  utilisé est celui du tourniquet et que les processus P1 et P2 contiennent les instructions  décrites ci-contre. Démarrons :</p>
@@ -4259,9 +4258,9 @@ On suppose que l’algorithme d’ordonnancement  utilisé est celui du tourniqu
 <li>Le système maintient P2 à l'état « élu » et P2 poursuit donc son exécution et une instruction de P2 demande la ressource R1, il passe donc dans l’état « bloqué » puisque la ressource R1 n’est pas libre : P1 étant toujours dans l'état « éligible », il n'a pas pu libérer la ressource R1  (pour  libérer R1, P1 doit être dans l'état « élu »). </li>
 <li>P2 étant bloqué (en attente de R1), le système repasse P1 dans l'état « élu » et avant de libérer R1, une des instructions de P1 demande à utiliser R2. Problème : R2 n'a pas encore été libéré par P2,  R2 n'est donc pas disponible, P1 passe donc aussi à l’ état « bloqué ».</li>
 </ul>
-<p><img alt="Diagramme des états de bases pour un processus" src="../Images/philo2.png"></p>
+<p><img alt="Diagramme des états de bases pour un processus" src="../Images/philo2.png" /></p>
 <p><strong>Processus P1</strong> | <strong>Processus P2</strong></p>
-<div class="highlight"><pre><span></span><code>...        | ...
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>...        | ...
 demande R1 | demande R2
 demande R2 | demande R1
 ...        | ...
@@ -4281,7 +4280,7 @@ Pour que P2 puisse poursuivre son exécution, il faut que P1 libère la ressourc
 </ul>
 <p><strong>L’interblocage est donc le risque pour plusieurs processus qui interagissent de se bloquer l’un et l’autre.</strong><br>
 Il existe plusieurs solutions permettant, soit de mettre fin à un interblocage (cela passe par l'arrêt d'un des processus), soit d'éviter les interblocages, mais ces solutions ne seront pas étudiées ici.<br>
-La plupart des OS ont choisi de ne pas essayer d’éviter les interblocages, mais de le détecter s’ils surviennent et de les résoudre.</p></div>
+La plupart des OS ont choisi de ne pas essayer d’éviter les interblocages, mais de le détecter s’ils surviennent et de les résoudre.</p>
 
 
 

@@ -54,7 +54,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3862,31 +3861,30 @@
   
 
 
-<div><hr>
 <h1 id="elocution-chez-le-dentiste">Élocution chez le dentiste<a class="headerlink" href="#elocution-chez-le-dentiste" title="Permanent link">⚓︎</a></h1>
 <p>Chez le dentiste, la bouche grande ouverte, lorsqu'on essaie de parler, il
 ne reste que les voyelles. Même les ponctuations sont supprimées. 
 Vous devez écrire une fonction <code>dentiste(texte)</code> qui renvoie un texte 
 ne contenant que les voyelles de <code>texte</code>, dans l'ordre. </p>
 <p>Les voyelles sont données par :
-</p><div class="highlight"><pre><span></span><code><span class="n">voyelles</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'a'</span><span class="p">,</span> <span class="s1">'e'</span><span class="p">,</span> <span class="s1">'i'</span><span class="p">,</span> <span class="s1">'o'</span><span class="p">,</span> <span class="s1">'u'</span><span class="p">,</span> <span class="s1">'y'</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">voyelles</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;u&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">]</span>
 </code></pre></div>
-On ne considèrera que des textes écrits en minuscules, sans accents.
+On ne considèrera que des textes écrits en minuscules, sans accents.</p>
 <div class="admonition example">
 <p class="admonition-title">Exemples</p>
-<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">dentiste</span><span class="p">(</span><span class="s2">"j'ai mal"</span><span class="p">)</span>
-<span class="go">'aia'</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">dentiste</span><span class="p">(</span><span class="s2">"il fait chaud"</span><span class="p">)</span>
-<span class="go">'iaiau'</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">dentiste</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
-<span class="go">''</span>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">dentiste</span><span class="p">(</span><span class="s2">&quot;j&#39;ai mal&quot;</span><span class="p">)</span>
+<span class="go">&#39;aia&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dentiste</span><span class="p">(</span><span class="s2">&quot;il fait chaud&quot;</span><span class="p">)</span>
+<span class="go">&#39;iaiau&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dentiste</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="go">&#39;&#39;</span>
 </code></pre></div>
 </div>
-<div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_e7dadab25e6018869f6d7857a6143b32b588d1b7" class="comment">###</span><div class="line" id="editor_e7dadab25e6018869f6d7857a6143b32b588d1b7"></div><div id="term_editor_e7dadab25e6018869f6d7857a6143b32b588d1b7" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_e7dadab25e6018869f6d7857a6143b32b588d1b7","")'>            <img src="../../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_e7dadab25e6018869f6d7857a6143b32b588d1b7" class="py_mk_hide"># Testsbksl-nlassert (bksl-nl    appartient("oie", fermepy-undgaston) == Falsebksl-nl), "oie n'est pas une clé de ce dictionnaire"bksl-nlassert appartient("oie", fermepy-undgaston) == Truebksl-nlbksl-nl</span>            <button class="tooltip" onclick='check("editor_e7dadab25e6018869f6d7857a6143b32b588d1b7","")'>            <img src="../../../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_e7dadab25e6018869f6d7857a6143b32b588d1b7","exo")'>            <img src="../../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_e7dadab25e6018869f6d7857a6143b32b588d1b7').click()">            <img src="../../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_e7dadab25e6018869f6d7857a6143b32b588d1b7" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_e7dadab25e6018869f6d7857a6143b32b588d1b7")'>            <img src="../../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_e7dadab25e6018869f6d7857a6143b32b588d1b7")'>            <img src="../../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
+<div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_e7dadab25e6018869f6d7857a6143b32b588d1b7" class="comment">###</span><div class="line" id="editor_e7dadab25e6018869f6d7857a6143b32b588d1b7"></div><div id="term_editor_e7dadab25e6018869f6d7857a6143b32b588d1b7"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_e7dadab25e6018869f6d7857a6143b32b588d1b7","")'>            <img src="../../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_e7dadab25e6018869f6d7857a6143b32b588d1b7" class="py_mk_hide"># Testsbksl-nlassert (bksl-nl    appartient("oie", fermepy-undgaston) == Falsebksl-nl), "oie n'est pas une clé de ce dictionnaire"bksl-nlassert appartient("oie", fermepy-undgaston) == Truebksl-nlbksl-nl</span>            <button class="tooltip" onclick='check("editor_e7dadab25e6018869f6d7857a6143b32b588d1b7","")'>            <img src="../../../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_e7dadab25e6018869f6d7857a6143b32b588d1b7","exo")'>            <img src="../../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_e7dadab25e6018869f6d7857a6143b32b588d1b7').click()" >            <img src="../../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_e7dadab25e6018869f6d7857a6143b32b588d1b7" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_e7dadab25e6018869f6d7857a6143b32b588d1b7")'>            <img src="../../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_e7dadab25e6018869f6d7857a6143b32b588d1b7")'>            <img src="../../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
 <p><span id="content_editor_e7dadab25e6018869f6d7857a6143b32b588d1b7" class="py_mk_hide">def appartient(animal, ferme):bksl-nl    return animal in fermebksl-nlbksl-nlbksl-nlfermepy-undgaston = {"lapin": 5, "vache": 7, "cochon": 2, "cheval": 4}bksl-nlbksl-nl# Testsbksl-nlassert (bksl-nl    appartient("oie", fermepy-undgaston) == Falsebksl-nl), "oie n'est pas une clé de ce dictionnaire"bksl-nlassert appartient("oie", fermepy-undgaston) == Truebksl-nlbksl-nl# Ajoutez vos essais ci-dessous en mettant un message dans le assert:bksl-nlbksl-nl</span><span id="corr_content_editor_e7dadab25e6018869f6d7857a6143b32b588d1b7" class="py_mk_hide" data-strudel="">voyelles = ["a", "e", "i", "o", "u", "y"]bksl-nlbksl-nlbksl-nldef dentiste(texte):bksl-nl    resultat = ""bksl-nl    for lettre in texte:bksl-nl        if lettre in voyelles:bksl-nl            resultat = resultat + lettrebksl-nl    return resultatbksl-nlbksl-nl</span></p>
 <p><strong>A</strong></p>
 <p>Je n'ai qu'une remarque à faire : quel bel exercice !</p>
-<p><strong>Z</strong></p></div>
+<p><strong>Z</strong></p>
 
 
 

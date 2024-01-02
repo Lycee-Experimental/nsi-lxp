@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3951,7 +3950,7 @@
   
 
 
-<div><h1 id="representation-dun-entier-positif-dans-differentes-bases">Représentation d'un entier positif dans différentes bases<a class="headerlink" href="#representation-dun-entier-positif-dans-differentes-bases" title="Permanent link">⚓︎</a></h1>
+<h1 id="representation-dun-entier-positif-dans-differentes-bases">Représentation d'un entier positif dans différentes bases<a class="headerlink" href="#representation-dun-entier-positif-dans-differentes-bases" title="Permanent link">⚓︎</a></h1>
 <details class="conclu">
 <summary>Programme</summary>
 <table>
@@ -4023,16 +4022,16 @@
 <p>Le nombre binaire 11010010 correspond donc au nombre décimal 210.</p>
 <h3 id="du-decimal-vers-le-binaire">Du décimal vers le binaire<a class="headerlink" href="#du-decimal-vers-le-binaire" title="Permanent link">⚓︎</a></h3>
 <p>Principe : dans chaque nombre décimal, il existe une plus grande puissance de 2 qui est inférieure au nombre. </p>
-<p>Par exemple, dans 243, il y a 128. Donc <br>
-<span class="arithmatex">\(243=128 + (115)\)</span> <br>
-<span class="arithmatex">\(243=128+64+(51)\)</span>   <br>
-<span class="arithmatex">\(243=128+64+32+(19)\)</span>  <br>
-<span class="arithmatex">\(243=128+64+32+16+(3)\)</span> <br>
-<span class="arithmatex">\(243=128+64+32+16+2+1\)</span><br>
+<p>Par exemple, dans 243, il y a 128. Donc <br />
+<span class="arithmatex">\(243=128 + (115)\)</span> <br />
+<span class="arithmatex">\(243=128+64+(51)\)</span>   <br />
+<span class="arithmatex">\(243=128+64+32+(19)\)</span>  <br />
+<span class="arithmatex">\(243=128+64+32+16+(3)\)</span> <br />
+<span class="arithmatex">\(243=128+64+32+16+2+1\)</span><br />
 <span class="arithmatex">\(243=1 \times 2^7+ 1 \times 2^6+1 \times 2^5+1 \times 2^4+0 \times 2^3+0 \times 2^2+1 \times 2^1+1 \times 2^0\)</span></p>
 <p>Donc <span class="arithmatex">\(243_{10}=11110011_2\)</span></p>
 <p><strong>Méthode des divisions successives</strong></p>
-<p><img alt="image" class="center" src="/assets/images/div_successives.gif"></p>
+<p><img alt="image" class="center" src="/assets/images/div_successives.gif" /></p>
 <details class="question">
 <summary>Activité 1 - Nombre de valeurs d'un octet</summary>
 <p>Quelle est la valeur maximale d'un octet (un octet = 8 chiffres binaires) ?</p>
@@ -4047,13 +4046,13 @@
 <div class="admonition python">
 <p class="admonition-title">Rappel Python</p>
 <p>L'opérateur <code>//</code> donne le quotient de la division et <code>%</code> donne le reste.
-</p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">7</span><span class="o">//</span><span class="mi">2</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">7</span><span class="o">//</span><span class="mi">2</span>
 <span class="mi">3</span>
 <span class="o">&gt;&gt;&gt;</span><span class="mi">7</span><span class="o">%</span><span class="mi">2</span>
 <span class="mi">1</span>
-</code></pre></div>
+</code></pre></div></p>
 </div>
-<p></p><div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_00000026" class="comment">###</span><div class="line" id="editor_00000026"></div><div id="term_editor_00000026" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_00000026","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000026","encodage/binaire")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000026').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000026" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000026")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000026")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000026" class="py_mk_hide"></span><span id="corr_content_editor_00000026" class="py_mk_hide" data-strudel=""></span>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_be10f8a74d78846d19558f4a0ff4ff2ff2b81dd3" class="comment">###</span><div class="line" id="editor_be10f8a74d78846d19558f4a0ff4ff2ff2b81dd3"></div><div id="term_editor_be10f8a74d78846d19558f4a0ff4ff2ff2b81dd3"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_be10f8a74d78846d19558f4a0ff4ff2ff2b81dd3","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_be10f8a74d78846d19558f4a0ff4ff2ff2b81dd3" class="py_mk_hide">assert binaire(225) == '11100001', "La valeur retournée n'est pas la bonne."bksl-nl</span>            <button class="tooltip" onclick='check("editor_be10f8a74d78846d19558f4a0ff4ff2ff2b81dd3","")'>            <img src="../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_be10f8a74d78846d19558f4a0ff4ff2ff2b81dd3","scripts/binaire")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_be10f8a74d78846d19558f4a0ff4ff2ff2b81dd3').click()" >            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_be10f8a74d78846d19558f4a0ff4ff2ff2b81dd3" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_be10f8a74d78846d19558f4a0ff4ff2ff2b81dd3")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_be10f8a74d78846d19558f4a0ff4ff2ff2b81dd3")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_be10f8a74d78846d19558f4a0ff4ff2ff2b81dd3" class="py_mk_hide">def binaire(n) :bksl-nl    ''' recompose le mot binaire en mettant dans l'ordre les restes successifs'''bksl-nl    valeur=""bksl-nl    return valeurbksl-nlbksl-nl</span><span id="corr_content_editor_be10f8a74d78846d19558f4a0ff4ff2ff2b81dd3" class="py_mk_hide" data-strudel="">def binaire(n) :bksl-nl    ''' recompose le mot binaire en mettant dans l'ordre les restes successifs'''bksl-nl    liste = []bksl-nl    while n != 0 :bksl-nl        liste.append(n % 2)bksl-nl        n = n // 2bksl-nl    liste.reverse() #permet d'inverser l'ordre des élément d'une listebksl-nl    valeur = ""bksl-nl    for k in liste :bksl-nl        valeur += str(k)bksl-nl    return valeurbksl-nl</span></p>
 <p><strong>A</strong></p>
 <p><strong>Z</strong></p>
 </details>
@@ -4134,37 +4133,37 @@
 </details>
 <div class="admonition python">
 <p class="admonition-title">Les changements de base en Python</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Binaire -&gt; Décimal</label><label for="__tabbed_1_2">Décimal -&gt; Binaire</label><label for="__tabbed_1_3">Décimal -&gt; Hexadécimal</label><label for="__tabbed_1_4">Hexadécimal -&gt; décimal</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Binaire -&gt; Décimal</label><label for="__tabbed_1_2">Décimal -&gt; Binaire</label><label for="__tabbed_1_3">Décimal -&gt; Hexadécimal</label><label for="__tabbed_1_4">Hexadécimal -&gt; décimal</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>La fonction <code>int("nombre", base)</code> permet de convertir un nombre de n'importe quelle base en entier décimal. Par exemple, en binaire : 
-</p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="s2">"11010010"</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="s2">&quot;11010010&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="mi">210</span>
-</code></pre></div>
+</code></pre></div></p>
 </div>
 <div class="tabbed-block">
 <p>La fonction <code>bin(nombre)</code> renvoie une chaîne de caractère où le nombre binaire est précédé de <code>'0b'</code>.
-</p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="mi">243</span><span class="p">)</span>
-<span class="s1">'0b11110011'</span>
-</code></pre></div>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="mi">243</span><span class="p">)</span>
+<span class="s1">&#39;0b11110011&#39;</span>
+</code></pre></div></p>
 </div>
 <div class="tabbed-block">
 <p>La fonction <code>hex(nombre)</code> renvoie une chaîne de caractère où le nombre hexadécimal est précédé de <code>'0x'</code>.
-</p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">hex</span><span class="p">(</span><span class="mi">125</span><span class="p">)</span>
-<span class="s1">'0x7d'</span>
-</code></pre></div>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">hex</span><span class="p">(</span><span class="mi">125</span><span class="p">)</span>
+<span class="s1">&#39;0x7d&#39;</span>
+</code></pre></div></p>
 </div>
 <div class="tabbed-block">
 <p>On peut utiliser la fonction <code>int("nombre",base)</code>.
-</p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="s2">"FF"</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">int</span><span class="p">(</span><span class="s2">&quot;FF&quot;</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
 <span class="mi">255</span>
-</code></pre></div>
+</code></pre></div></p>
 </div>
 </div>
 </div>
 <p>Amuse toi ici : </p>
-<p></p><div onclick='start_term("id5")' id="fake_id5" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id5" class="py_mk_hide"></div>
-</div></div>
+<p><div onclick='start_term("id5")' id="fake_id5" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id5" class="py_mk_hide"></div></p>
+</div>
 
 
 

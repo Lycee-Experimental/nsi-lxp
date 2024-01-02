@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,7 +3856,7 @@
 
   <h1>Correction</h1>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3891,23 +3890,23 @@
 <span class="normal">32</span>
 <span class="normal">33</span>
 <span class="normal">34</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Pile</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">"""Classe définissant une structure de pile."""</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Classe définissant une structure de pile.&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">=</span> <span class="p">[]</span>
 
     <span class="k">def</span> <span class="nf">est_vide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">"""Renvoie le booléen True si la pile est vide, False sinon."""</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Renvoie le booléen True si la pile est vide, False sinon.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">==</span> <span class="p">[]</span>
 
     <span class="k">def</span> <span class="nf">empiler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">"""Place l'élément v au sommet de la pile"""</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Place l&#39;élément v au sommet de la pile&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">depiler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">"""</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Retire et renvoie l’élément placé au sommet de la pile,</span>
 <span class="sd">        si la pile n’est pas vide.</span>
-<span class="sd">        """</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
 
@@ -3915,10 +3914,10 @@
 <span class="k">def</span> <span class="nf">eval_expression</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
     <span class="n">p</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
 <span class="hll">    <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">tab</span><span class="p">:</span>
-</span><span class="hll">        <span class="k">if</span> <span class="n">element</span> <span class="o">!=</span> <span class="s1">'+'</span> <span class="ow">and</span> <span class="n">element</span> <span class="o">!=</span> <span class="s1">'*'</span><span class="p">:</span>
+</span><span class="hll">        <span class="k">if</span> <span class="n">element</span> <span class="o">!=</span> <span class="s1">&#39;+&#39;</span> <span class="ow">and</span> <span class="n">element</span> <span class="o">!=</span> <span class="s1">&#39;*&#39;</span><span class="p">:</span>
 </span><span class="hll">            <span class="n">p</span><span class="o">.</span><span class="n">empiler</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
 </span>        <span class="k">else</span><span class="p">:</span>
-<span class="hll">            <span class="k">if</span> <span class="n">element</span> <span class="o">==</span> <span class="s1">'+'</span><span class="p">:</span>
+<span class="hll">            <span class="k">if</span> <span class="n">element</span> <span class="o">==</span> <span class="s1">&#39;+&#39;</span><span class="p">:</span>
 </span><span class="hll">                <span class="n">resultat</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">depiler</span><span class="p">()</span> <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">depiler</span><span class="p">()</span>
 </span>            <span class="k">else</span><span class="p">:</span>
 <span class="hll">                <span class="n">resultat</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">depiler</span><span class="p">()</span> <span class="o">*</span> <span class="n">p</span><span class="o">.</span><span class="n">depiler</span><span class="p">()</span>

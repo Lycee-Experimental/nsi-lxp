@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,16 +3856,16 @@
 
   <h1>Enonce</h1>
 
-<div><p>On cherche à déterminer les valeurs du triangle de Pascal (Figure 1).</p>
+<p>On cherche à déterminer les valeurs du triangle de Pascal (Figure 1).</p>
 <p>Dans le triangle de Pascal, chaque ligne commence et se termine par le nombre 1.
 Comme l’illustre la Figure 2, on additionne deux valeurs successives d’une ligne pour
 obtenir la valeur qui se situe sous la deuxième valeur.</p>
-<p><img alt="image" class="center" src="/assets/sujets/nsi/term/pratique/img/17_triangle.png" width="60%"></p>
+<p><img alt="image" class="center" src="/assets/sujets/nsi/term/pratique/img/17_triangle.png" width="60%" /></p>
 <p>Compléter la fonction <code>pascal</code> ci-après prenant en paramètre un entier <code>n</code> supérieur ou
 égal à 2. Cette fonction doit renvoyer une liste correspondant au triangle de Pascal de la
 ligne 0 à la ligne <code>n</code>. Le tableau représentant le triangle de Pascal sera contenu dans la
 variable <code>triangle</code>.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -3885,13 +3884,13 @@ variable <code>triangle</code>.</p>
     <span class="k">return</span> <span class="n">triangle</span>
 </code></pre></div></td></tr></table></div>
 <p>Pour <code>n = 4</code>, voici ce qu'on devra obtenir :
-</p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">pascal</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">pascal</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="p">[[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
 </code></pre></div>
 Pour <code>n = 5</code>, voici ce qu'on devra obtenir :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">pascal</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">pascal</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="p">[[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
-</code></pre></div></div>
+</code></pre></div></p>
 
 
 

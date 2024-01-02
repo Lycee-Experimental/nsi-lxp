@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,11 +3856,11 @@
 
   <h1>Enonce</h1>
 
-<div><p>Une expression arithmétique ne comportant que les quatre opérations +, −, ×, ÷ peut être
+<p>Une expression arithmétique ne comportant que les quatre opérations +, −, ×, ÷ peut être
 représentée sous forme d’arbre binaire. Les nœuds internes sont des opérateurs et les feuilles
 sont des nombres. Dans un tel arbre, la disposition des nœuds joue le rôle des parenthèses que
 nous connaissons bien.  </p>
-<p><img alt="image" class="center" src="/assets/sujets/nsi/term/pratique/img/21_arbre.png" width="30%"></p>
+<p><img alt="image" class="center" src="/assets/sujets/nsi/term/pratique/img/21_arbre.png" width="30%" /></p>
 <p>En parcourant en profondeur infixe l’arbre binaire ci-dessus, on
 retrouve l’expression notée habituellement :  </p>
 <div class="arithmatex">\[(3 \times (8 + 7)) − (2 + 1)\]</div>
@@ -3873,14 +3872,14 @@ l’expression arithmétique représentée par l’arbre binaire passé
 en paramètre, sous forme d’une chaîne de caractères contenant
 des parenthèses.  </p>
 <p>Résultat attendu avec l’arbre ci-dessus :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">e</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="n">Noeud</span><span class="p">(</span><span class="n">Noeud</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span> <span class="s1">'*'</span><span class="p">,</span> <span class="n">Noeud</span><span class="p">(</span><span class="n">Noeud</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="s1">'+'</span><span class="p">,</span> <span class="n">Noeud</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="kc">None</span><span class="p">))),</span> <span class="s1">'-'</span><span class="p">,</span> <span class="n">Noeud</span><span class="p">(</span><span class="n">Noeud</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span> <span class="s1">'+'</span><span class="p">,</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">e</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="n">Noeud</span><span class="p">(</span><span class="n">Noeud</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">Noeud</span><span class="p">(</span><span class="n">Noeud</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="n">Noeud</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="kc">None</span><span class="p">))),</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">Noeud</span><span class="p">(</span><span class="n">Noeud</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span> <span class="s1">&#39;+&#39;</span><span class="p">,</span>
 <span class="n">Noeud</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="kc">None</span><span class="p">)))</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">expression_infixe</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
-<span class="s1">'((3*(8+7))-(2+1))'</span>
+<span class="s1">&#39;((3*(8+7))-(2+1))&#39;</span>
 </code></pre></div>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3917,43 +3916,43 @@ des parenthèses.  </p>
 <span class="normal">35</span>
 <span class="normal">36</span>
 <span class="normal">37</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Noeud</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">'''</span>
-<span class="sd">    classe implémentant un noeud d'arbre binaire</span>
-<span class="sd">    '''</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    classe implémentant un noeud d&#39;arbre binaire</span>
+<span class="sd">    &#39;&#39;&#39;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">'''</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        un objet Noeud possède 3 attributs :</span>
 <span class="sd">        - gauche : le sous-arbre gauche,</span>
-<span class="sd">        - valeur : la valeur de l'étiquette,</span>
+<span class="sd">        - valeur : la valeur de l&#39;étiquette,</span>
 <span class="sd">        - droit : le sous-arbre droit.</span>
-<span class="sd">        '''</span>
+<span class="sd">        &#39;&#39;&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="o">=</span> <span class="n">g</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="n">v</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="o">=</span> <span class="n">d</span>
 
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">'''</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        renvoie la représentation du noeud en chaine de caractères</span>
-<span class="sd">        '''</span>
+<span class="sd">        &#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">valeur</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">est_une_feuille</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">'''</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        renvoie True si et seulement si le noeud est une feuille</span>
-<span class="sd">        '''</span>
+<span class="sd">        &#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="ow">is</span> <span class="kc">None</span>
 
 
 <span class="k">def</span> <span class="nf">expression_infixe</span><span class="p">(</span><span class="n">e</span><span class="p">):</span>
     <span class="n">s</span> <span class="o">=</span> <span class="o">...</span>
     <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">gauche</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">s</span> <span class="o">=</span> <span class="s1">'('</span> <span class="o">+</span> <span class="n">s</span> <span class="o">+</span> <span class="n">expression_infixe</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;(&#39;</span> <span class="o">+</span> <span class="n">s</span> <span class="o">+</span> <span class="n">expression_infixe</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
     <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="o">...</span>
     <span class="k">if</span> <span class="o">...</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="o">...</span> <span class="o">+</span> <span class="o">...</span>
     <span class="k">return</span> <span class="n">s</span>
-</code></pre></div></td></tr></table></div></div>
+</code></pre></div></td></tr></table></div>
 
 
 

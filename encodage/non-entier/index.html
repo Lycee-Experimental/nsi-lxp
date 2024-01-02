@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3931,7 +3930,7 @@
   
 
 
-<div><h1 id="codage-des-non-entiers">Codage des non-entiers<a class="headerlink" href="#codage-des-non-entiers" title="Permanent link">⚓︎</a></h1>
+<h1 id="codage-des-non-entiers">Codage des non-entiers<a class="headerlink" href="#codage-des-non-entiers" title="Permanent link">⚓︎</a></h1>
 <table>
 <thead>
 <tr>
@@ -3951,7 +3950,7 @@
 <details class="question">
 <summary>Activité 1 - Introduction</summary>
 <p>Effectuer l'opération <span class="arithmatex">\(0.1 + 0.2\)</span>  avec python :</p>
-<p></p><div onclick='start_term("id6")' id="fake_id6" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id6" class="py_mk_hide"></div>
+<p><div onclick='start_term("id6")' id="fake_id6" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id6" class="py_mk_hide"></div></p>
 <p>Etonnant n'est-pas ?! Ce chapitre a pour but de nous aider à y voir plus clair sur l'encodage des nombres entiers.</p>
 </details>
 <h2 id="encodage-des-reels-en-binaire">Encodage des réels en binaire<a class="headerlink" href="#encodage-des-reels-en-binaire" title="Permanent link">⚓︎</a></h2>
@@ -4009,10 +4008,10 @@
 <p>Considérons le nombre <span class="arithmatex">\(3,6875\)</span>. Il se décompose en une partie entière (3) et une partie décimale (<span class="arithmatex">\(0,6875\)</span>).</p>
 <ul>
 <li><strong>partie entière :</strong> <span class="arithmatex">\(3=11_2\)</span> </li>
-<li><strong>partie décimale :</strong> la conversion de <span class="arithmatex">\(0,6875\)</span> se fait en plusieurs étapes.<br>
-<span class="arithmatex">\(0,6875 \times 2 = \textbf{1},375\)</span><br>
-<span class="arithmatex">\(0,375 \times 2   = \textbf{0},75\)</span> <br>
-<span class="arithmatex">\(0,75 \times 2 = \textbf{1},5\)</span><br>
+<li><strong>partie décimale :</strong> la conversion de <span class="arithmatex">\(0,6875\)</span> se fait en plusieurs étapes.<br />
+<span class="arithmatex">\(0,6875 \times 2 = \textbf{1},375\)</span><br />
+<span class="arithmatex">\(0,375 \times 2   = \textbf{0},75\)</span> <br />
+<span class="arithmatex">\(0,75 \times 2 = \textbf{1},5\)</span><br />
 <span class="arithmatex">\(0,5 \times 2 = \textbf{1}\)</span> </li>
 </ul>
 <p>On prend ensuite le chiffre des unités de tous les nombres obtenus : 1011</p>
@@ -4055,7 +4054,7 @@
 <div class="admonition warning">
 <p class="admonition-title">Attention</p>
 <p>Certains nombres n'admettent pas une écriture binaire <strong>finie</strong>. Or la mémoire d'un ordinateur, quelqu'il soit, est toujours finie. Certains nombres ne peuvent donc pas être représentés correctement en machine : c'est une impossibilité théorique. Cela amène à des comportements étranges : </p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span>
 <span class="mf">0.30000000000000004</span>
 </code></pre></div>
 </div>
@@ -4065,11 +4064,11 @@
 </div>
 <h2 id="la-difficile-manipulation-des-flottants">La difficile manipulation des flottants<a class="headerlink" href="#la-difficile-manipulation-des-flottants" title="Permanent link">⚓︎</a></h2>
 <p>En python, les nombres non entiers sont du type <strong>float</strong>. </p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
-<span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">float</span><span class="s1">'&gt;</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">float</span><span class="s1">&#39;&gt;</span>
 </code></pre></div>
 <p>Ces flottants (traduction française) sont à manipuler avec une extrême précaution. Il faut garder en tête que les calculs sont potentiellement faux, du moins imprécis, lorsque des flottants interviennent.</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mf">0.5</span><span class="o">-</span><span class="mf">0.2</span><span class="o">-</span><span class="mf">0.2</span><span class="o">-</span><span class="mf">0.1</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mf">0.5</span><span class="o">-</span><span class="mf">0.2</span><span class="o">-</span><span class="mf">0.2</span><span class="o">-</span><span class="mf">0.1</span>
 <span class="o">-</span><span class="mf">2.7755575615628914e-17</span>
 </code></pre></div>
 <div class="admonition note">
@@ -4079,12 +4078,12 @@
 <h3 id="comment-faire-des-tests-degalite-sur-les-flottants">Comment faire des tests d'egalité sur les flottants ?<a class="headerlink" href="#comment-faire-des-tests-degalite-sur-les-flottants" title="Permanent link">⚓︎</a></h3>
 <p>Première réponse : <strong>ON N'EN FAIT PAS</strong>.</p>
 <p>Si <code>a</code> et <code>b</code> sont deux flottants, le test classique</p>
-<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span> <span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"a et b sont égaux"</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a et b sont égaux&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>a de grandes chances d'échouer :</p>
 <p>Le script </p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -4092,35 +4091,35 @@
 <span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mf">0.1</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mf">0.3</span> <span class="o">-</span> <span class="mf">0.2</span>
 <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span> <span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"a et b sont égaux"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a et b sont égaux&quot;</span><span class="p">)</span>
 <span class="k">else</span> <span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"a et b sont différents"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a et b sont différents&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>renverra</p>
-<div class="highlight"><pre><span></span><code>a et b sont différents
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>a et b sont différents
 </code></pre></div>
 <p>Si <em>vraiment</em> un test d'égalité est nécessaire, on ne va pas tester l'égalité entre <code>a</code> et <code>b</code> mais leur <strong>proximité</strong>, grâce à la valeur absolue de leur différence.</p>
 <p>La fonction <code>abs(a-b)</code> renvoie un nombre positif égal à la distance entre <code>a</code> et <code>b</code>. Il faut alors décider d'un écart minimal <code>e</code> en dessous duquel on considèrera que <code>a</code> et <code>b</code> sont égaux.</p>
 <p>Le script </p>
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mf">0.1</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mf">0.1</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mf">0.3</span><span class="o">-</span><span class="mf">0.2</span>
 <span class="n">e</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">12</span><span class="p">)</span>
 <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">e</span> <span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"a et b sont égaux"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a et b sont égaux&quot;</span><span class="p">)</span>
 <span class="k">else</span> <span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"a et b sont différents"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a et b sont différents&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>renverra
-</p><div class="highlight"><pre><span></span><code>a et b sont égaux
-</code></pre></div>
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>a et b sont égaux
+</code></pre></div></p>
 <details class="question">
 <summary>Activité 2 - Résolution d'équation</summary>
-<p>On considère la fonction <span class="arithmatex">\(f(x)=x^3-6x+2\)</span>. <br>
-L'équation <span class="arithmatex">\(f(x)=1\)</span> admet une solution unique dans l'intervalle <span class="arithmatex">\([0;1]\)</span>.<br>
+<p>On considère la fonction <span class="arithmatex">\(f(x)=x^3-6x+2\)</span>. <br />
+L'équation <span class="arithmatex">\(f(x)=1\)</span> admet une solution unique dans l'intervalle <span class="arithmatex">\([0;1]\)</span>.<br />
 Trouver une valeur approchée de cette solution à <span class="arithmatex">\(10^{-5}\)</span> près. On prendra <code>e</code><span class="arithmatex">\(=0,001\)</span>.</p>
 <details class="tip">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">6</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
 
 <span class="n">e</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
@@ -4130,7 +4129,7 @@ Trouver une valeur approchée de cette solution à <span class="arithmatex">\(10
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </code></pre></div>
 </details>
-</details></div>
+</details>
 
 
 

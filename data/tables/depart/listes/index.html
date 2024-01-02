@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3929,7 +3928,7 @@
   
 
 
-<div><h1 id="rappels-sur-les-listes-python">🏁 Rappels sur les listes Python<a class="headerlink" href="#rappels-sur-les-listes-python" title="Permanent link">⚓︎</a></h1>
+<h1 id="rappels-sur-les-listes-python">🏁 Rappels sur les listes Python<a class="headerlink" href="#rappels-sur-les-listes-python" title="Permanent link">⚓︎</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Remarque</p>
 <p>Cette page rappelle rapidement les outils fondamentaux sur les listes Python.</p>
@@ -3956,8 +3955,8 @@
 <li><em>etc</em></li>
 </ul>
 <p>Ces données peuvent être représentées dans un objet Python de type <code class="highlight"><span class="nb">list</span></code> :</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># indices     0       1   2       3     4</span>
-<span class="n">animal</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Oli"</span><span class="p">,</span> <span class="s2">"Chat"</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">"juin"</span><span class="p">,</span> <span class="mi">2018</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># indices     0       1   2       3     4</span>
+<span class="n">animal</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Oli&quot;</span><span class="p">,</span> <span class="s2">&quot;Chat&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;juin&quot;</span><span class="p">,</span> <span class="mi">2018</span><span class="p">]</span>
 </code></pre></div>
 <p>Dans ce cadre on distingue les indices et les valeurs des éléments :</p>
 <ul>
@@ -3980,17 +3979,17 @@
 <ul>
 <li>Création d'une liste vide :</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">vide</span> <span class="o">=</span> <span class="p">[</span> <span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">vide</span> <span class="o">=</span> <span class="p">[</span> <span class="p">]</span>
 </code></pre></div>
 <ul>
 <li>Création d'une liste « à la main » :</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">animal</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Oli"</span><span class="p">,</span> <span class="s2">"Chat"</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">"juin"</span><span class="p">,</span> <span class="mi">2018</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">animal</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Oli&quot;</span><span class="p">,</span> <span class="s2">&quot;Chat&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;juin&quot;</span><span class="p">,</span> <span class="mi">2018</span><span class="p">]</span>
 </code></pre></div>
 <ul>
 <li>Création d'une liste contenant plusieurs fois la même valeur :</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">mille_None</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="mi">1000</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">mille_None</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="mi">1000</span>
 </code></pre></div>
 </details>
 <details class="tip">
@@ -3998,7 +3997,7 @@
 <ul>
 <li>La longueur d'une liste est données par la fonction <code class="highlight"><span class="nb">len</span></code>:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">repertoire</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Clarissa"</span><span class="p">,</span> <span class="s2">"Dalloway"</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="s2">"May"</span><span class="p">,</span> <span class="mi">1925</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">repertoire</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Clarissa&quot;</span><span class="p">,</span> <span class="s2">&quot;Dalloway&quot;</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="s2">&quot;May&quot;</span><span class="p">,</span> <span class="mi">1925</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">repertoire</span><span class="p">)</span>
 <span class="go">5</span>
 </code></pre></div>
@@ -4009,25 +4008,25 @@
 <ul>
 <li>On accède à une valeur en utilisant des <strong>crochets</strong> :</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">repertoire</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Clarissa"</span><span class="p">,</span> <span class="s2">"Dalloway"</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="s2">"May"</span><span class="p">,</span> <span class="mi">1925</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">repertoire</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Clarissa&quot;</span><span class="p">,</span> <span class="s2">&quot;Dalloway&quot;</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="s2">&quot;May&quot;</span><span class="p">,</span> <span class="mi">1925</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">repertoire</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="go">'Clarissa'</span>
+<span class="go">&#39;Clarissa&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">repertoire</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
 <span class="go">14</span>
 </code></pre></div>
 <ul>
 <li>La dernière valeur est à l'indice <code class="highlight"><span class="nb">len</span><span class="p">(</span><span class="n">repertoire</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span></code> :</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">repertoire</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">repertoire</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">repertoire</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">repertoire</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
 <span class="go">1925</span>
 </code></pre></div>
 <ul>
 <li>Python autorise les indices négatifs : la dernière valeur a pour indice <code class="highlight"><span class="o">-</span><span class="mi">1</span></code>, l'avant-dernière <code class="highlight"><span class="o">-</span><span class="mi">2</span></code>, <em>etc</em></li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">repertoire</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">repertoire</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 <span class="go">1925</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">repertoire</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
-<span class="go">'May'</span>
+<span class="go">&#39;May&#39;</span>
 </code></pre></div>
 </details>
 <details class="tip">
@@ -4035,50 +4034,50 @@
 <ul>
 <li>On modifie des valeurs avec une simple affectation :</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">animaux</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"éléfants"</span><span class="p">,</span> <span class="s2">"girafes"</span><span class="p">,</span> <span class="s2">"chevals"</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">animaux</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"éléphants"</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">animaux</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"chevaux"</span>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">animaux</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;éléfants&quot;</span><span class="p">,</span> <span class="s2">&quot;girafes&quot;</span><span class="p">,</span> <span class="s2">&quot;chevals&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">animaux</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;éléphants&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">animaux</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;chevaux&quot;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">animaux</span>
-<span class="go">['éléphants', 'girafes', 'chevaux']</span>
+<span class="go">[&#39;éléphants&#39;, &#39;girafes&#39;, &#39;chevaux&#39;]</span>
 </code></pre></div>
 </details>
 <details class="tip">
 <summary>Parcours</summary>
-<p>On considère la liste <code class="highlight"><span class="n">animaux</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'éléphants'</span><span class="p">,</span> <span class="s1">'girafes'</span><span class="p">,</span> <span class="s1">'chevaux'</span><span class="p">]</span></code></p>
+<p>On considère la liste <code class="highlight"><span class="n">animaux</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;éléphants&#39;</span><span class="p">,</span> <span class="s1">&#39;girafes&#39;</span><span class="p">,</span> <span class="s1">&#39;chevaux&#39;</span><span class="p">]</span></code></p>
 <ul>
 <li>Parcours selon les <strong>indices</strong> :</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">animaux</span><span class="p">)):</span>
-<span class="go">        print("Indice :",i, "; Valeur :", animaux[i])</span>
-<span class="go">Indice : 0 ; Valeur : 'éléphants'</span>
-<span class="go">Indice : 1 ; Valeur : 'girafes'</span>
-<span class="go">Indice : 2 ; Valeur : 'chevaux'</span>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">animaux</span><span class="p">)):</span>
+<span class="go">        print(&quot;Indice :&quot;,i, &quot;; Valeur :&quot;, animaux[i])</span>
+<span class="go">Indice : 0 ; Valeur : &#39;éléphants&#39;</span>
+<span class="go">Indice : 1 ; Valeur : &#39;girafes&#39;</span>
+<span class="go">Indice : 2 ; Valeur : &#39;chevaux&#39;</span>
 </code></pre></div>
 <ul>
 <li>Les parcours selon les <strong>valeurs</strong> :</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">animal</span> <span class="ow">in</span> <span class="n">animaux</span><span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">animal</span> <span class="ow">in</span> <span class="n">animaux</span><span class="p">:</span>
 <span class="go">        print(animal)</span>
-<span class="go">'éléphants'</span>
-<span class="go">'girafes'</span>
-<span class="go">'chevaux'</span>
+<span class="go">&#39;éléphants&#39;</span>
+<span class="go">&#39;girafes&#39;</span>
+<span class="go">&#39;chevaux&#39;</span>
 </code></pre></div>
 </details>
 <details class="tip">
 <summary>Ajout d'éléments</summary>
 <p>On peut ajouter des éléments à la fin d'une liste en utilisant <code class="highlight"><span class="n">append</span></code> :</p>
-<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">conjonctions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"mais"</span><span class="p">,</span> <span class="s2">"ou"</span><span class="p">,</span> <span class="s2">"et"</span><span class="p">,</span> <span class="s2">"donc"</span><span class="p">,</span> <span class="s2">"or"</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">conjonctions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"ni"</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">conjonctions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"car"</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">conjonctions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;mais&quot;</span><span class="p">,</span> <span class="s2">&quot;ou&quot;</span><span class="p">,</span> <span class="s2">&quot;et&quot;</span><span class="p">,</span> <span class="s2">&quot;donc&quot;</span><span class="p">,</span> <span class="s2">&quot;or&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">conjonctions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;ni&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">conjonctions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;car&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">conjonctions</span>
-<span class="go">['mais', 'ou', 'et', 'donc', 'or', 'ni', 'car']</span>
+<span class="go">[&#39;mais&#39;, &#39;ou&#39;, &#39;et&#39;, &#39;donc&#39;, &#39;or&#39;, &#39;ni&#39;, &#39;car&#39;]</span>
 </code></pre></div>
 </details>
 <h2 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">⚓︎</a></h2>
 <details class="question">
 <summary>Manipulations élémentaires</summary>
 <p>Compléter le code ci-dessous afin d'effectuer les actions demandées. Au bout de 10 essais infructueux, le corrigé vous est proposé.</p>
-<p></p><div class="py_mk_ide" data-max="10" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_4c66baa3cea91813e3310a48ee56945b782a4a5c" class="comment">###</span><div class="line" id="editor_4c66baa3cea91813e3310a48ee56945b782a4a5c"></div><div id="term_editor_4c66baa3cea91813e3310a48ee56945b782a4a5c" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_4c66baa3cea91813e3310a48ee56945b782a4a5c","")'>            <img src="../../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_4c66baa3cea91813e3310a48ee56945b782a4a5c" class="py_mk_hide"># Testsbksl-nlassert listepy-undA == []bksl-nlassert listepy-undB == [10, 11, 12, 13]bksl-nlassert cinquantepy-undtoto == ["Toto"] py-str 50bksl-nlassert greetings == ["Hello", "World"]bksl-nlassert salutations == ["Bonjour", "le", "Monde"]bksl-nlbksl-nl</span>            <button class="tooltip" onclick='check("editor_4c66baa3cea91813e3310a48ee56945b782a4a5c","")'>            <img src="../../../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">10/10</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_4c66baa3cea91813e3310a48ee56945b782a4a5c","pythons/creation/exo")'>            <img src="../../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_4c66baa3cea91813e3310a48ee56945b782a4a5c').click()">            <img src="../../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_4c66baa3cea91813e3310a48ee56945b782a4a5c" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_4c66baa3cea91813e3310a48ee56945b782a4a5c")'>            <img src="../../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_4c66baa3cea91813e3310a48ee56945b782a4a5c")'>            <img src="../../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_4c66baa3cea91813e3310a48ee56945b782a4a5c" class="py_mk_hide"># Créer une liste vide nommée listepy-undAbksl-nllistepy-undA = ...bksl-nlbksl-nl# Créer la liste des nombres entiers compris entre 10 et 13 (inclus tous les deux)bksl-nl# nommée listepy-undBbksl-nllistepy-undB = ...bksl-nlbksl-nl# Créer la liste cinquantepy-undtoto qui contient 50 fois la valeur "Toto"bksl-nlcinquantepy-undtoto = ...bksl-nlbksl-nlsalutations = []bksl-nl# Ajouter successivement les valeurs "Hello" et "World" à salutationsbksl-nlsalutations....bksl-nl...bksl-nlbksl-nl# Modifiez salutations afin qu'elle contienne désormais :bksl-nl# ["Bonjour", "le", "Monde"]bksl-nl# (ne pas créer de nouvelle liste)bksl-nlsalutations[...] = ...bksl-nl...bksl-nl...bksl-nl</span><span id="corr_content_editor_4c66baa3cea91813e3310a48ee56945b782a4a5c" class="py_mk_hide" data-strudel=""># Créer une liste vide nommée listepy-undAbksl-nllistepy-undA = []bksl-nlbksl-nl# Créer la liste des nombres entiers compris entre 10 et 13 (inclus tous les deux)bksl-nl# nommée listepy-undBbksl-nllistepy-undB = [10, 11, 12, 13]bksl-nlbksl-nl# Créer la liste cinquantepy-undtoto qui contient 50 fois la valeur "Toto"bksl-nlcinquantepy-undtoto = ["Toto"] py-str 50bksl-nlbksl-nlgreetings = []bksl-nl# Ajouter successivement les valeurs "Hello" et "World" à salutationsbksl-nlgreetings.append("Hello")bksl-nlgreetings.append("World")bksl-nlbksl-nlbksl-nlsalutations = ["Bjr", "m0nd3"]bksl-nl# Modifiez salutations afin qu'elle contienne désormais :bksl-nl# ["Bonjour", "le", "Monde"]bksl-nl# (ne pas créer de nouvelle liste)bksl-nlsalutations[0] = "Bonjour"bksl-nlsalutations[1] = "le"bksl-nlsalutations.append("Monde")bksl-nlbksl-nl</span>
+<p><div class="py_mk_ide"  data-max="10"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_4c66baa3cea91813e3310a48ee56945b782a4a5c" class="comment">###</span><div class="line" id="editor_4c66baa3cea91813e3310a48ee56945b782a4a5c"></div><div id="term_editor_4c66baa3cea91813e3310a48ee56945b782a4a5c"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_4c66baa3cea91813e3310a48ee56945b782a4a5c","")'>            <img src="../../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_4c66baa3cea91813e3310a48ee56945b782a4a5c" class="py_mk_hide"># Testsbksl-nlassert listepy-undA == []bksl-nlassert listepy-undB == [10, 11, 12, 13]bksl-nlassert cinquantepy-undtoto == ["Toto"] py-str 50bksl-nlassert greetings == ["Hello", "World"]bksl-nlassert salutations == ["Bonjour", "le", "Monde"]bksl-nlbksl-nl</span>            <button class="tooltip" onclick='check("editor_4c66baa3cea91813e3310a48ee56945b782a4a5c","")'>            <img src="../../../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">10/10</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_4c66baa3cea91813e3310a48ee56945b782a4a5c","pythons/creation/exo")'>            <img src="../../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_4c66baa3cea91813e3310a48ee56945b782a4a5c').click()" >            <img src="../../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_4c66baa3cea91813e3310a48ee56945b782a4a5c" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_4c66baa3cea91813e3310a48ee56945b782a4a5c")'>            <img src="../../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_4c66baa3cea91813e3310a48ee56945b782a4a5c")'>            <img src="../../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_4c66baa3cea91813e3310a48ee56945b782a4a5c" class="py_mk_hide"># Créer une liste vide nommée listepy-undAbksl-nllistepy-undA = ...bksl-nlbksl-nl# Créer la liste des nombres entiers compris entre 10 et 13 (inclus tous les deux)bksl-nl# nommée listepy-undBbksl-nllistepy-undB = ...bksl-nlbksl-nl# Créer la liste cinquantepy-undtoto qui contient 50 fois la valeur "Toto"bksl-nlcinquantepy-undtoto = ...bksl-nlbksl-nlsalutations = []bksl-nl# Ajouter successivement les valeurs "Hello" et "World" à salutationsbksl-nlsalutations....bksl-nl...bksl-nlbksl-nl# Modifiez salutations afin qu'elle contienne désormais :bksl-nl# ["Bonjour", "le", "Monde"]bksl-nl# (ne pas créer de nouvelle liste)bksl-nlsalutations[...] = ...bksl-nl...bksl-nl...bksl-nl</span><span id="corr_content_editor_4c66baa3cea91813e3310a48ee56945b782a4a5c" class="py_mk_hide" data-strudel=""># Créer une liste vide nommée listepy-undAbksl-nllistepy-undA = []bksl-nlbksl-nl# Créer la liste des nombres entiers compris entre 10 et 13 (inclus tous les deux)bksl-nl# nommée listepy-undBbksl-nllistepy-undB = [10, 11, 12, 13]bksl-nlbksl-nl# Créer la liste cinquantepy-undtoto qui contient 50 fois la valeur "Toto"bksl-nlcinquantepy-undtoto = ["Toto"] py-str 50bksl-nlbksl-nlgreetings = []bksl-nl# Ajouter successivement les valeurs "Hello" et "World" à salutationsbksl-nlgreetings.append("Hello")bksl-nlgreetings.append("World")bksl-nlbksl-nlbksl-nlsalutations = ["Bjr", "m0nd3"]bksl-nl# Modifiez salutations afin qu'elle contienne désormais :bksl-nl# ["Bonjour", "le", "Monde"]bksl-nl# (ne pas créer de nouvelle liste)bksl-nlsalutations[0] = "Bonjour"bksl-nlsalutations[1] = "le"bksl-nlsalutations.append("Monde")bksl-nlbksl-nl</span></p>
 <p><strong>A</strong></p>
 <p><strong>Z</strong></p>
 </details>
@@ -4096,7 +4095,7 @@
 <summary>Modification d'un tableau - non guidé</summary>
 <p>On se donne un tableau, une valeur cible et une valeur de remplacement et il faut parcourir le tableau et remplacer la cible par la nouvelle valeur.</p>
 <p><a class="md-button" href="https://e-nsi.forge.aeif.fr/pratique/N1/100-remplacer/sujet/" rel="noopener" target="_blank">Remplacer une valeur</a></p>
-</details></div>
+</details>
 
 
 

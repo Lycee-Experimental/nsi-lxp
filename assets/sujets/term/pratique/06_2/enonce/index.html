@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,7 +3856,7 @@
 
   <h1>Enonce</h1>
 
-<div><p>On souhaite programmer une fonction donnant la distance la plus courte entre un point
+<p>On souhaite programmer une fonction donnant la distance la plus courte entre un point
 de départ et une liste de points. Les points sont tous à coordonnées entières.
 Les points sont donnés sous la forme d'un tuple de deux entiers.
 La liste des points à traiter est donc un tableau de tuples.</p>
@@ -3866,7 +3865,7 @@ est donnée par la formule :</p>
 <div class="arithmatex">\[d=\sqrt{(x-x')^2+(y-y')^2}\]</div>
 <p>On importe pour cela la fonction racine carrée (<code>sqrt</code>) du module <code>math</code> de Python.</p>
 <p>Compléter le code des fonctions <code>distance</code> et <code>plus_courte_distance</code> fournies ci-dessous pour qu’elles répondent à leurs spécifications.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3883,11 +3882,11 @@ est donnée par la formule :</p>
 <span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>     <span class="c1"># import de la fonction racine carrée</span>
 
 <span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">point1</span><span class="p">,</span> <span class="n">point2</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">""" Calcule et renvoie la distance entre deux points. """</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Calcule et renvoie la distance entre deux points. &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">sqrt</span><span class="p">((</span><span class="o">...</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">plus_courte_distance</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">depart</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">""" Renvoie le point du tableau tab se trouvant à la plus courte distance du point depart."""</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Renvoie le point du tableau tab se trouvant à la plus courte distance du point depart.&quot;&quot;&quot;</span>
     <span class="n">point</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">min_dist</span> <span class="o">=</span> <span class="o">...</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
@@ -3897,7 +3896,7 @@ est donnée par la formule :</p>
     <span class="k">return</span> <span class="n">point</span>
 </code></pre></div></td></tr></table></div>
 <p>Exemples :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">distance</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">distance</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 <span class="mf">5.0</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">distance</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 <span class="mf">1.4142135623730951</span>
@@ -3905,7 +3904,7 @@ est donnée par la formule :</p>
 <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">plus_courte_distance</span><span class="p">([(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)],</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-</code></pre></div></div>
+</code></pre></div>
 
 
 

@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -4068,7 +4067,7 @@
   
 
 
-<div><h1 id="les-bases-de-donnees">Les bases de données<a class="headerlink" href="#les-bases-de-donnees" title="Permanent link">⚓︎</a></h1>
+<h1 id="les-bases-de-donnees">Les bases de données<a class="headerlink" href="#les-bases-de-donnees" title="Permanent link">⚓︎</a></h1>
 <details class="conclu">
 <summary>Programme</summary>
 <table>
@@ -4161,7 +4160,7 @@
 <h3 id="les-limites-des-outils-traditionnels">Les limites des outils traditionnels<a class="headerlink" href="#les-limites-des-outils-traditionnels" title="Permanent link">⚓︎</a></h3>
 <h4 id="lexemple-de-la-mediatheque">L'exemple de la médiathèque<a class="headerlink" href="#lexemple-de-la-mediatheque" title="Permanent link">⚓︎</a></h4>
 <p>Prenons l’exemple d’une médiathèque. Elle souhaite recenser les ouvrages qu’elle possède. Voici le tableau qu’elle a réalisé.</p>
-<p><img alt="" class="center" src="images/tab1.JPG"></p>
+<p><img alt="" class="center" src="images/tab1.JPG" /></p>
 <p><strong>Exercice 6</strong></p>
 <ul>
 <li>Identiﬁez les redondances dans ce tableau, et les éléments qui semblent uniques.</li>
@@ -4231,14 +4230,14 @@ et les valeurs qui vous sont propres.</p>
 <h4 id="un-exemple-le-bon-de-commande">Un exemple : le bon de commande<a class="headerlink" href="#un-exemple-le-bon-de-commande" title="Permanent link">⚓︎</a></h4>
 <p>La société Le Coin, située à Caen, a commandé des produits chimiques à la société BonPrixChim.</p>
 <p>Le bon de commande est indiqué ci-dessous :</p>
-<p><img alt="" class="center" src="images/tab2.JPG"></p>
+<p><img alt="" class="center" src="images/tab2.JPG" /></p>
 <p>À partir de ce bon de commande, on peut séparer les informations en 3 entités :</p>
 <ul>
 <li>une entité commande qui va regrouper les données de la commande;</li>
 <li>une entité client qui va regrouper les données du client;</li>
 <li>une entité produits qui va regrouper les données d’un détail.</li>
 </ul>
-<p><img alt="" class="center" src="images/tab3.JPG"></p>
+<p><img alt="" class="center" src="images/tab3.JPG" /></p>
 <p><strong>Exercice 8</strong></p>
 <ol>
 <li>Établissez, pour chaque entité, la liste des attributs.</li>
@@ -4339,7 +4338,7 @@ dans la table Details et de l’absence de l’attribut numero client dans la ta
 <div class="admonition example">
 <p class="admonition-title">Définition</p>
 <p>Une <strong>relation</strong> (on parle aussi de table) est composée d’un en-tête (le libellé des attributs ) et d’un corps composé d’un ou plusieurs t-uplets (on parle aussi d’enregistrement).</p>
-<p><img alt="" class="center" src="images/tab4.JPG"></p>
+<p><img alt="" class="center" src="images/tab4.JPG" /></p>
 </div>
 <h4 id="domaine-de-valeurs-dun-attribut">Domaine de valeurs d'un attribut<a class="headerlink" href="#domaine-de-valeurs-dun-attribut" title="Permanent link">⚓︎</a></h4>
 <p>Chaque valeur possède un type et un ensemble ﬁni ou non des valeurs possibles. Cela constitue le domaine de valeurs d’un attribut.</p>
@@ -4418,7 +4417,7 @@ caractères . Le domaine de valeur correspond à toutes les chaînes de caractè
 <div class="admonition example">
 <p class="admonition-title">Définition</p>
 <p>Une <strong>clé étrangère</strong> référence une clé primaire d’une autre table.</p>
-<p><img alt="" class="center" src="images/tab5.JPG"></p>
+<p><img alt="" class="center" src="images/tab5.JPG" /></p>
 </div>
 <p>L’attribut <strong>idAuteur</strong> est ce que l’on nomme une <strong>clé étrangère</strong> de la relation <strong>Livres</strong> , elle permet de faire le lien entre les deux relations.</p>
 <div class="admonition note">
@@ -4458,10 +4457,10 @@ caractères . Le domaine de valeur correspond à toutes les chaînes de caractè
 <p><strong>Livres</strong> (<u>idLivre</u>, titre, idAuteur # Auteurs(idAuteur), annPubli)<br>
 <strong>Auteurs</strong> (<u>idAuteur</u>, nom, prenom, langueEcriture)</p>
 <p><em>Exemple : schéma relationnel</em></p>
-<p><img alt="" class="center" src="images/tab6.JPG"></p>
+<p><img alt="" class="center" src="images/tab6.JPG" /></p>
 <p><strong>Exercice 11</strong></p>
 <p>Les relations de l'exercice 8 sont représentées ci-dessous :</p>
-<p><img alt="" class="center" src="images/tab7.JPG"></p>
+<p><img alt="" class="center" src="images/tab7.JPG" /></p>
 <p>Les clés primaires et étrangères ont été déﬁnies à l’exercice 10.</p>
 <ol>
 <li>Écrivez la notation textuelle du modèle relationnel.</li>
@@ -4476,7 +4475,7 @@ caractères . Le domaine de valeur correspond à toutes les chaînes de caractè
 <strong>Produit</strong> : (<u>Référence</u>, libelle, prix)<br>
 <strong>Détail</strong> : (<u># Référence, # numero de commande</u>, quantite)</li>
 <li><br>
-<img alt="" src="images/Exercice11.png"></li>
+<img alt="" src="images/Exercice11.png" /></li>
 </ol>
 </details>
 <h3 id="les-contraintes-dintegrite">Les contraintes d'intégrité<a class="headerlink" href="#les-contraintes-dintegrite" title="Permanent link">⚓︎</a></h3>
@@ -4509,7 +4508,7 @@ caractères . Le domaine de valeur correspond à toutes les chaînes de caractè
 </div>
 <p><em>Exemple</em></p>
 <p>Dans la ﬁgure ci-dessous, la valeur de la clé étrangère idAuteur ne peut pas être supérieure à 8.</p>
-<p><img alt="" class="center" src="images/tab8.JPG"></p>
+<p><img alt="" class="center" src="images/tab8.JPG" /></p>
 <h3 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">⚓︎</a></h3>
 <p><strong>Exercice 12</strong></p>
 <p>Dans l’exemple de la Médiathèque, on souhaite créer 3 relations :</p>
@@ -4668,7 +4667,7 @@ Ses contre-indications sont :</p>
 <p class="admonition-title">Définition</p>
 <p>Un Système de Gestion de Base de Données est un outil permettant aux utilisateurs de structurer, d’insérer, de modiﬁer et de rechercher de manière eﬃcace des données au sein d’une
 grande quantité d’informations stockées sur des mémoires partagées.</p>
-<p><img alt="" class="center" src="images/tab9.JPG"></p>
+<p><img alt="" class="center" src="images/tab9.JPG" /></p>
 </div>
 <h3 id="proprietes">Propriétés<a class="headerlink" href="#proprietes" title="Permanent link">⚓︎</a></h3>
 <p>Les SGBD permettent de gérer la lecture, l’écriture ou la modiﬁcation des informations contenues dans une base de données.</p>
@@ -4681,7 +4680,7 @@ contenues dans une base de données soit maintenu, même en cas de panne matéri
 <li>plusieurs personnes peuvent avoir besoin d’accéder aux informations contenues dans une base données en même temps. Cela peut parfois poser problème, notamment si les 2 personnes désirent modiﬁer la même donnée au même moment (on parle d’accès concurrent).</li>
 </ul>
 <p>Ces problèmes d’accès concurrent sont aussi gérés par les SGBD.</p>
-<p><img alt="" class="center" src="images/tab10.JPG"></p>
+<p><img alt="" class="center" src="images/tab10.JPG" /></p>
 <p>L’utilisation des SGBD explique en partie la supériorité de l’utilisation des bases de données sur des solutions plus simples à mettre en oeuvre; mais aussi beaucoup plus limitées comme les ﬁchiers au format CSV.</p>
 <p>L’interaction avec le SGBD se fait par l’intermédiaire de requêtes exprimées dans un langage devenu standard au ﬁl des temps : le langage SQL (Structured Query Language).</p>
 <div class="admonition note">
@@ -4714,17 +4713,17 @@ contenues dans une base de données soit maintenu, même en cas de panne matéri
 </div>
 <p><em>Exemple</em></p>
 <p>On considère la relation <strong>LIVRES</strong> ( <u>id</u> , titre, auteur, ann_publi)</p>
-<p><img alt="" class="center" src="images/tab11.JPG"></p>
+<p><img alt="" class="center" src="images/tab11.JPG" /></p>
 <p>Elle contient les éléments suivants :</p>
-<p><img alt="" class="center" src="images/tab12.JPG"></p>
+<p><img alt="" class="center" src="images/tab12.JPG" /></p>
 <ul>
 <li>Affichage de tous les titres présents dans la relation LIVRES</li>
 </ul>
-<p></p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="n">titre</span><span class="w"> </span>
+<p><div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="n">titre</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w">  </span><span class="n">livres</span><span class="p">;</span>
 </code></pre></div>
-renvoie l’affichage :
-<div class="highlight"><pre><span></span><code>1984
+renvoie l’affichage :</p>
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>1984
 Dune
 Fondation
 Farenheit  451
@@ -4733,11 +4732,11 @@ Chroniques  martiennes
 <ul>
 <li>Affichage de tous les titres et années de publication présents dans la relation LIVRES</li>
 </ul>
-<p></p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="n">titre</span><span class="p">,</span><span class="w">  </span><span class="n">ann_publi</span><span class="w"> </span>
+<p><div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="n">titre</span><span class="p">,</span><span class="w">  </span><span class="n">ann_publi</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w">  </span><span class="n">livres</span><span class="p">;</span>
 </code></pre></div>
-renvoie l’aﬃchage :
-<div class="highlight"><pre><span></span><code>1984,  1949
+renvoie l’aﬃchage :</p>
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>1984,  1949
 Dune,  1965
 Fondation,  1951
 Farenheit  451,  1953
@@ -4746,11 +4745,11 @@ Chroniques  martiennes,  1950
 <ul>
 <li>Affichage de tous les attributs présents dans la relation LIVRES</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="o">*</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="o">*</span>
 <span class="k">FROM</span><span class="w">  </span><span class="n">livres</span><span class="p">;</span>
 </code></pre></div>
 <p>renvoie l’aﬃchage :</p>
-<div class="highlight"><pre><span></span><code>1,  1984,  Orwel,  1949
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>1,  1984,  Orwel,  1949
 2,  Dune,  Herbert,  1965
 3,  Fondation,  Asimov,  1951
 4,  Farenheit  451,  Bradbury  1953
@@ -4764,11 +4763,11 @@ Chroniques  martiennes,  1950
 <ul>
 <li>Affichage de tous les auteurs dans la relation LIVRES</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="n">auteur</span><span class="w"> </span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="n">auteur</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w">  </span><span class="n">livres</span><span class="p">;</span>
 </code></pre></div>
 <p>renvoie l’affichage :</p>
-<div class="highlight"><pre><span></span><code>Orwell
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Orwell
 Herbert
 Asimov
 Bradbury
@@ -4777,11 +4776,11 @@ Bradbury
 <ul>
 <li>Affichage de tous les auteurs dans la relation LIVRES sans les doublons</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="k">DISTINCT</span><span class="w">  </span><span class="n">auteur</span><span class="w"> </span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="k">DISTINCT</span><span class="w">  </span><span class="n">auteur</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w">  </span><span class="n">livres</span><span class="p">;</span>
 </code></pre></div>
 <p>renvoie l’affichage :</p>
-<div class="highlight"><pre><span></span><code>Orwell
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Orwell
 Herbert
 Asimov
 Bradbury
@@ -4795,12 +4794,12 @@ Pour trier par ordre décroissant, il faut ajouter l’option <code>DESC</code>.
 <ul>
 <li>Affichage de tous les auteurs et titre dans la relation LIVRES par ordre croissant de l’attribut <strong>auteur</strong></li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="n">titre</span><span class="p">,</span><span class="w">  </span><span class="n">auteur</span><span class="w"> </span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="n">titre</span><span class="p">,</span><span class="w">  </span><span class="n">auteur</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w">  </span><span class="n">livres</span><span class="w"> </span>
 <span class="k">ORDER</span><span class="w">  </span><span class="k">BY</span><span class="w">  </span><span class="n">auteur</span><span class="p">;</span>
 </code></pre></div>
 <p>renvoie l’affichage :</p>
-<div class="highlight"><pre><span></span><code>Fondation,  Asimov
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Fondation,  Asimov
 Farenheit  451,  Bradbury
 Chroniques  martiennes,  Bradbury
 Dune,  Herbert
@@ -4809,12 +4808,12 @@ Dune,  Herbert
 <ul>
 <li>Affichage de tous les auteurs et titre dans la relation LIVRES par ordre décroissant de l’attribut <strong>ann_publi</strong></li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="k">DISTINCT</span><span class="w">  </span><span class="n">auteur</span><span class="p">,</span><span class="w">  </span><span class="n">titre</span><span class="w"> </span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="k">DISTINCT</span><span class="w">  </span><span class="n">auteur</span><span class="p">,</span><span class="w">  </span><span class="n">titre</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w">  </span><span class="n">livres</span>
 <span class="k">ORDER</span><span class="w">  </span><span class="k">BY</span><span class="w"> </span><span class="n">ann_publi</span><span class="w">  </span><span class="k">DESC</span><span class="p">;</span>
 </code></pre></div>
 <p>renvoie l’affichage :</p>
-<div class="highlight"><pre><span></span><code>Dune,  Herbert
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Dune,  Herbert
 Chroniques  martiennes,  Bradbury
 Fondation,  Asimov
 Farenheit  451,  Bradbury
@@ -4822,7 +4821,7 @@ Farenheit  451,  Bradbury
 </code></pre></div>
 <p><strong>Exercice 14</strong></p>
 <p>On considère la relation COMMUNES dont une partie du contenu est représenté ci-dessous :</p>
-<p><img alt="" class="center" src="images/tab13.JPG"></p>
+<p><img alt="" class="center" src="images/tab13.JPG" /></p>
 <ol>
 <li>Quelle requête permet d’aﬃcher tous les noms de commune?</li>
 <li>Quelle requête permet d’aﬃcher tous les noms de commune et leur population?</li>
@@ -4832,23 +4831,23 @@ Farenheit  451,  Bradbury
 <details class="note">
 <summary>Correction</summary>
 <p>1.
-</p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_ville</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_ville</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">communes</span><span class="p">;</span>
 </code></pre></div>
 2.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_ville</span><span class="p">,</span><span class="n">Population</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_ville</span><span class="p">,</span><span class="n">Population</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">communes</span><span class="p">;</span>
 </code></pre></div>
 3.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_ville</span><span class="p">,</span><span class="n">Population</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_ville</span><span class="p">,</span><span class="n">Population</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">communes</span><span class="w">  </span>
 <span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">Population</span><span class="p">;</span>
 </code></pre></div>
 4.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_ville</span><span class="p">,</span><span class="n">Population</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_ville</span><span class="p">,</span><span class="n">Population</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">communes</span><span class="w">  </span>
 <span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">Nb_elus_municipaux</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
-</code></pre></div>
+</code></pre></div></p>
 </details>
 <h4 id="construction-dune-requete-avec-une-ou-plusieurs-restrictions">Construction d'une requête avec une ou plusieurs restrictions<a class="headerlink" href="#construction-dune-requete-avec-une-ou-plusieurs-restrictions" title="Permanent link">⚓︎</a></h4>
 <div class="admonition example">
@@ -4864,20 +4863,20 @@ Farenheit  451,  Bradbury
 <ul>
 <li>Affichage de tous les auteurs et titres dont le titre du livre est « 1984 »</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="n">auteur</span><span class="p">,</span><span class="w">  </span><span class="n">titre</span><span class="w"> </span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="n">auteur</span><span class="p">,</span><span class="w">  </span><span class="n">titre</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w">  </span><span class="n">livres</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w">  </span><span class="n">titre</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="s1">'1984'</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w">  </span><span class="n">titre</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="s1">&#39;1984&#39;</span><span class="p">;</span>
 </code></pre></div>
 <p>renvoie l’affichage :</p>
-<div class="highlight"><pre><span></span><code>Orwell,  1984
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Orwell,  1984
 </code></pre></div>
 <p>Affichage de tous les auteurs et titres dont le titre du livre n’est pas « 1984 »</p>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="n">auteur</span><span class="p">,</span><span class="w">  </span><span class="n">titre</span><span class="w"> </span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="n">auteur</span><span class="p">,</span><span class="w">  </span><span class="n">titre</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w">  </span><span class="n">livres</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w">  </span><span class="n">titre</span><span class="w">  </span><span class="o">&lt;&gt;</span><span class="w">  </span><span class="s1">'1984'</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w">  </span><span class="n">titre</span><span class="w">  </span><span class="o">&lt;&gt;</span><span class="w">  </span><span class="s1">&#39;1984&#39;</span><span class="p">;</span>
 </code></pre></div>
 <p>renvoie l’affichage :</p>
-<div class="highlight"><pre><span></span><code>Herbert,  Dune
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Herbert,  Dune
 Asimov,  Fondation
 Bradbury,  Farenheit  452
 Bradbury,  Chroniques  martiennes
@@ -4885,12 +4884,12 @@ Bradbury,  Chroniques  martiennes
 <ul>
 <li>Affichage de tous les auteurs et titres dont l’année de publication est inférieure ou égale à 1950</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="n">auteur</span><span class="p">,</span><span class="w">  </span><span class="n">titre</span><span class="w"> </span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="n">auteur</span><span class="p">,</span><span class="w">  </span><span class="n">titre</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w">  </span><span class="n">livres</span><span class="w"> </span>
 <span class="k">WHERE</span><span class="w">  </span><span class="n">ann_publi</span><span class="w">  </span><span class="o">&lt;=</span><span class="w">  </span><span class="mi">1950</span><span class="p">;</span>
 </code></pre></div>
 <p>renvoie l’aﬃchage :</p>
-<div class="highlight"><pre><span></span><code>Orwell,  1984
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Orwell,  1984
 Bradbury,  Chroniques  martiennes
 </code></pre></div>
 <div class="admonition note">
@@ -4898,9 +4897,9 @@ Bradbury,  Chroniques  martiennes
 <p>Pour les comparaisons de chaînes de caractères, il est important de faire attention à la casse. Par déﬁnition, un "a" est donc diﬀérent d’un "A". Pour remédier à ce problème, il
 existe les fonction UPPER() et LOWER() pour transformer une chaîne en respectivement majuscule et minuscule.</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="n">auteur</span><span class="p">,</span><span class="w">  </span><span class="n">titre</span><span class="w"> </span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="n">auteur</span><span class="p">,</span><span class="w">  </span><span class="n">titre</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w">  </span><span class="n">livres</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w">  </span><span class="k">UPPER</span><span class="p">(</span><span class="n">titre</span><span class="p">)</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="ss">"DUNE"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w">  </span><span class="k">UPPER</span><span class="p">(</span><span class="n">titre</span><span class="p">)</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="ss">&quot;DUNE&quot;</span><span class="p">;</span>
 </code></pre></div>
 <p><strong>Exercice 15</strong></p>
 <p>On reprend la relation COMMUNES de l’exercice 14.</p>
@@ -4912,20 +4911,20 @@ existe les fonction UPPER() et LOWER() pour transformer une chaîne en respectiv
 <details class="note">
 <summary>Correction</summary>
 <p>1.
-</p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_ville</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_ville</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">communes</span><span class="w"> </span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">Nb_elus_municipaux</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span>
 </code></pre></div>
 2.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_ville</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_ville</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">communes</span><span class="w"> </span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">Nb_elus_municipaux</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">10</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">Population</span><span class="o">&lt;=</span><span class="mi">100</span><span class="p">;</span>
 </code></pre></div>
 3.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nb_elus_municipaux</span><span class="p">,</span><span class="w"> </span><span class="n">Population</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nb_elus_municipaux</span><span class="p">,</span><span class="w"> </span><span class="n">Population</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">communes</span><span class="w"> </span>
 <span class="k">WHERE</span><span class="w"> </span><span class="k">LOWER</span><span class="p">(</span><span class="n">Nom_ville</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">«</span><span class="w"> </span><span class="n">cressin</span><span class="o">-</span><span class="n">rochefort</span><span class="w"> </span><span class="err">»</span><span class="p">;</span>
-</code></pre></div>
+</code></pre></div></p>
 </details>
 <div class="admonition example">
 <p class="admonition-title">Définition</p>
@@ -4935,12 +4934,12 @@ présence. Pour cela, nous allons utiliser le terme <code>IS  NULL</code> comme 
 </div>
 <p><em>Exemple</em></p>
 <p>Aﬃchage de tous les auteurs et titres dont l’année de publication est connue</p>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="n">auteur</span><span class="p">,</span><span class="w">  </span><span class="n">titre</span><span class="w"> </span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="n">auteur</span><span class="p">,</span><span class="w">  </span><span class="n">titre</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w">  </span><span class="n">livres</span><span class="w"> </span>
 <span class="k">WHERE</span><span class="w">  </span><span class="n">ann_publi</span><span class="w">  </span><span class="k">IS</span><span class="w">  </span><span class="k">NOT</span><span class="w">  </span><span class="k">NULL</span><span class="p">;</span>
 </code></pre></div>
 <p>renvoie l’aﬃchage :</p>
-<div class="highlight"><pre><span></span><code>Orwell,  1984
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Orwell,  1984
 Herbert,  Dune
 Asimov,  Fondation
 Bradbury,  Farenheit  451
@@ -4955,15 +4954,15 @@ Bradbury,  Chroniques  martiennes
 <details class="note">
 <summary>Correction</summary>
 <p>1.
-</p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_villes</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_villes</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">communes</span><span class="w"> </span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">exprime_deuxieme_tour</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 2.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_villes</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_villes</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">communes</span><span class="w"> </span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">Population</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5000</span><span class="w"> </span><span class="k">AND</span><span class="w">  </span><span class="n">exprime_deuxieme_tour</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
-</code></pre></div>
+</code></pre></div></p>
 </details>
 <div class="admonition example">
 <p class="admonition-title">Définition</p>
@@ -4971,12 +4970,12 @@ Bradbury,  Chroniques  martiennes
 </div>
 <p><em>Exemple</em></p>
 <p>Affichage de tous les auteurs et titres dont le titre contient le mot « Chronique » (remarquez l’absence du s ﬁnal)</p>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="n">auteur</span><span class="p">,</span><span class="w">  </span><span class="n">titre</span><span class="w"> </span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="n">auteur</span><span class="p">,</span><span class="w">  </span><span class="n">titre</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w">  </span><span class="n">livres</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w">  </span><span class="n">titre</span><span class="w">  </span><span class="k">LIKE</span><span class="w">  </span><span class="ss">"%Chronique%"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w">  </span><span class="n">titre</span><span class="w">  </span><span class="k">LIKE</span><span class="w">  </span><span class="ss">&quot;%Chronique%&quot;</span><span class="p">;</span>
 </code></pre></div>
 <p>renvoie l’aﬃchage :</p>
-<div class="highlight"><pre><span></span><code>Bradbury,  Chroniques  martiennes
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Bradbury,  Chroniques  martiennes
 </code></pre></div>
 <p><strong>Exercice 17</strong></p>
 <p>On reprend la relation COMMUNES de l’exercice 14.</p>
@@ -4987,15 +4986,15 @@ Bradbury,  Chroniques  martiennes
 <details class="note">
 <summary>Correction</summary>
 <p>1.
-</p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_villes</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_villes</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">communes</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">Nom_villes</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">"Roncherolles %"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">Nom_villes</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;Roncherolles %&quot;</span><span class="p">;</span>
 </code></pre></div>
 2.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_villes</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_villes</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">communes</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">Nom_villes</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">"%sur%"</span><span class="p">;</span>
-</code></pre></div>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">Nom_villes</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%sur%&quot;</span><span class="p">;</span>
+</code></pre></div></p>
 </details>
 <h4 id="les-fonctions-dagregation">Les fonctions d'agrégation<a class="headerlink" href="#les-fonctions-dagregation" title="Permanent link">⚓︎</a></h4>
 <div class="admonition example">
@@ -5007,39 +5006,39 @@ Bradbury,  Chroniques  martiennes
 <ul>
 <li>On compte tous les enregistrements présents dans la relation LIVRES.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w">  </span><span class="n">livres</span><span class="p">;</span>
 </code></pre></div>
 <p>renvoie l’affichage :</p>
-<div class="highlight"><pre><span></span><code>5
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>5
 </code></pre></div>
 <ul>
 <li>On compte tous les enregistrements qui ont l’attribut ann_publi renseigné</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="k">COUNT</span><span class="p">(</span><span class="n">ann_publi</span><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="k">COUNT</span><span class="p">(</span><span class="n">ann_publi</span><span class="p">)</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w">  </span><span class="n">livres</span><span class="p">;</span>
 </code></pre></div>
 <p>renvoie l’affichage :</p>
-<div class="highlight"><pre><span></span><code>5
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>5
 </code></pre></div>
 <ul>
 <li>On compte le nombre d’auteurs diﬀérents enregistrés</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w">  </span><span class="n">auteur</span><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w">  </span><span class="n">auteur</span><span class="p">)</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w">  </span><span class="n">livres</span><span class="p">;</span>
 </code></pre></div>
 <p>renvoie l’affichage :</p>
-<div class="highlight"><pre><span></span><code>4
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>4
 </code></pre></div>
 <ul>
 <li>On compte le nombre d’enregistrements pour lesquels l’année de publication est inférerieure ou égale à 1950</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w">  </span><span class="n">livres</span><span class="w"> </span>
 <span class="k">WHERE</span><span class="w">  </span><span class="n">ann_publi</span><span class="w">  </span><span class="o">&lt;=</span><span class="w">  </span><span class="mi">1950</span><span class="p">;</span>
 </code></pre></div>
 <p>renvoie l’affichage :</p>
-<div class="highlight"><pre><span></span><code>2
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>2
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Définition</p>
@@ -5054,11 +5053,11 @@ Bradbury,  Chroniques  martiennes
 <p><em>Exemple</em></p>
 <p>Reprenons la relation déﬁnie dans le premier exemple.</p>
 <p>On affiche l’année de publication la plus petite :</p>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="k">MIN</span><span class="p">(</span><span class="n">ann_publi</span><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="k">MIN</span><span class="p">(</span><span class="n">ann_publi</span><span class="p">)</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w">  </span><span class="n">livres</span><span class="p">;</span>
 </code></pre></div>
 <p>renvoie l’affichage :</p>
-<div class="highlight"><pre><span></span><code>1949
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>1949
 </code></pre></div>
 <p><strong>Exercice 18</strong></p>
 <p>On reprend la relation COMMUNES de l’exercice 14.</p>
@@ -5070,42 +5069,42 @@ Bradbury,  Chroniques  martiennes
 <details class="note">
 <summary>Correction</summary>
 <p>1.
-</p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">Nb_elus_municipaux</span><span class="p">)</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">Nb_elus_municipaux</span><span class="p">)</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">communes</span><span class="p">;</span>
 </code></pre></div>
 2.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">Population</span><span class="p">)</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">Population</span><span class="p">)</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">communes</span><span class="p">;</span>
 </code></pre></div>
 3.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_villes</span><span class="p">,</span><span class="w"> </span><span class="k">Max</span><span class="p">(</span><span class="n">Population</span><span class="p">)</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Nom_villes</span><span class="p">,</span><span class="w"> </span><span class="k">Max</span><span class="p">(</span><span class="n">Population</span><span class="p">)</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">communes</span><span class="w"> </span>
 <span class="k">WHERE</span><span class="w">  </span><span class="n">exprime_deuxieme_tour</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
-</code></pre></div>
+</code></pre></div></p>
 </details>
 <h4 id="les-requetes-avec-jointure">Les requêtes avec jointure<a class="headerlink" href="#les-requetes-avec-jointure" title="Permanent link">⚓︎</a></h4>
 <p>On a vu dans la partie consacrée au modèle relationnel, qu’une clé étrangère référence une clé primaire venant d’une autre table, suivant l’exemple ci-dessous :</p>
-<p><img alt="" class="center" src="images/tab6.JPG"></p>
+<p><img alt="" class="center" src="images/tab6.JPG" /></p>
 <p>Pour représenter le lien entre la clé étrangère et la clé primaire, on réalise une <strong>jointure</strong> .</p>
 <p>Une jointure est l’opération consistant à rapprocher selon une condition les clé primaire et clé étrangère de deux relations.</p>
 <p>La syntaxe est : </p>
-<div class="highlight"><pre><span></span><code><span class="n">relation1</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="n">relation1</span>
 <span class="k">JOIN</span><span class="w">  </span><span class="n">relation2</span><span class="w">  </span><span class="k">ON</span><span class="w">  </span><span class="n">relation1</span><span class="p">.</span><span class="n">attribut1</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">relation2</span><span class="p">.</span><span class="n">attribut2</span><span class="p">;</span>
 </code></pre></div>
 <p>La jointure se positionne après les clauses <code>SELECT</code> et <code>FROM</code></p>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="n">attribut</span><span class="w"> </span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="n">attribut</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w">  </span><span class="n">relation1</span><span class="w"> </span>
 <span class="k">JOIN</span><span class="w">  </span><span class="n">relation2</span><span class="w">  </span><span class="k">ON</span><span class="w">  </span><span class="n">realtion1</span><span class="p">.</span><span class="n">attribut1</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="n">realtion2</span><span class="p">.</span><span class="n">attribut2</span><span class="p">;</span>
 </code></pre></div>
 <p><em>Exemple</em></p>
 <p>Suivant le schéma ci-dessus,on écrirait:</p>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">livres</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">livres</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">Livres</span>
 <span class="k">JOIN</span><span class="w">  </span><span class="n">Auteurs</span><span class="w">  </span><span class="k">ON</span><span class="w">  </span><span class="n">livres</span><span class="p">.</span><span class="n">idAuteur</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="n">auteurs</span><span class="p">.</span><span class="n">id</span><span class="p">;</span>
 </code></pre></div>
 <p><strong>Exercice 19</strong></p>
 <p>On considère les deux relations représentés ci-dessous :</p>
-<p><img alt="" class="center" src="images/tab8.JPG"></p>
+<p><img alt="" class="center" src="images/tab8.JPG" /></p>
 <ol>
 <li>Quelle requête permet d’afficher l’auteur du livre dont le titre est « 1984 »?</li>
 <li>Quelle requête permet d’afficher tous les auteurs qui ont publié un livre avant 1960 (strictement)?</li>
@@ -5115,29 +5114,29 @@ Bradbury,  Chroniques  martiennes
 <details class="note">
 <summary>Correction</summary>
 <p>1.
-</p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">livres</span>
 <span class="k">JOIN</span><span class="w"> </span><span class="n">auteurs</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">livres</span><span class="p">.</span><span class="n">idAuteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">auteurs</span><span class="p">.</span><span class="n">id</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"1984"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;1984&quot;</span><span class="p">;</span>
 </code></pre></div>
 2.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">livres</span>
 <span class="k">JOIN</span><span class="w"> </span><span class="n">auteurs</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">livres</span><span class="p">.</span><span class="n">idAuteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">auteurs</span><span class="p">.</span><span class="n">id</span><span class="w"> </span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">ann_publi</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">1960</span><span class="p">;</span>
 </code></pre></div>
 3.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">livres</span>
 <span class="k">JOIN</span><span class="w"> </span><span class="n">auteurs</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">livres</span><span class="p">.</span><span class="n">idAuteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">auteurs</span><span class="p">.</span><span class="n">id</span><span class="w"> </span>
 <span class="k">WHERE</span><span class="w"> </span><span class="k">UPPER</span><span class="p">(</span><span class="n">nom</span><span class="p">)</span><span class="o">=</span><span class="w"> </span><span class="n">boulle</span><span class="p">;</span>
 </code></pre></div>
 4.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="n">titre</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="n">titre</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">livres</span>
 <span class="k">JOIN</span><span class="w"> </span><span class="n">auteurs</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">livres</span><span class="p">.</span><span class="n">idAuteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">auteurs</span><span class="p">.</span><span class="n">id</span><span class="w"> </span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">ann_publi</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1960</span><span class="p">;</span>
-</code></pre></div>
+</code></pre></div></p>
 </details>
 <h3 id="les-requetes-de-manipulation-de-donnees">Les requêtes de manipulation de données<a class="headerlink" href="#les-requetes-de-manipulation-de-donnees" title="Permanent link">⚓︎</a></h3>
 <h4 id="insertion-de-donnees">Insertion de données<a class="headerlink" href="#insertion-de-donnees" title="Permanent link">⚓︎</a></h4>
@@ -5149,15 +5148,15 @@ Bradbury,  Chroniques  martiennes
 <li><code>VALUES</code> indique les valeurs qui doivent être insérées. Elles sont indiquées entre deux parenthèses.</li>
 </ul>
 <p>La syntaxe est :</p>
-<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w">  </span><span class="k">INTO</span><span class="w">  </span><span class="n">relation</span><span class="w"> </span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w">  </span><span class="k">INTO</span><span class="w">  </span><span class="n">relation</span><span class="w"> </span>
 <span class="k">VALUES</span><span class="w">  </span><span class="p">(</span><span class="n">attribut1</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="n">valeur1</span><span class="p">,</span><span class="w">  </span><span class="n">attribut2</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="n">valeur2</span><span class="p">)</span><span class="w"> </span>
 <span class="k">WHERE</span><span class="w">  </span><span class="n">condition</span><span class="p">;</span>
 </code></pre></div>
 </div>
 <p><em>Exemple</em></p>
-<div class="highlight"><pre><span></span><code>INSERT  INTO  Livres VALUES  (4,  "Les  Furtifs",  "Damasio",  2019);
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>INSERT  INTO  Livres VALUES  (4,  &quot;Les  Furtifs&quot;,  &quot;Damasio&quot;,  2019);
 </code></pre></div>
-<p><img alt="" class="center" src="images/tab11.JPG"></p>
+<p><img alt="" class="center" src="images/tab11.JPG" /></p>
 <ul>
 <li>On insère des valeurs dans la relation Livres ;</li>
 <li>l’attribut id prend la valeur 4 ;</li>
@@ -5167,11 +5166,11 @@ Bradbury,  Chroniques  martiennes
 </ul>
 <p><strong>Exercice 20</strong></p>
 <p>Au vu du diagramme relationnel suivant, indiquez les deux requêtes pour insérer le livre d’Alain Damasio intitulé "La Horde du Contrevent", paru en 2004 et publié en langue française.</p>
-<p><img alt="" class="center" src="images/tab6.JPG"></p>
+<p><img alt="" class="center" src="images/tab6.JPG" /></p>
 <details class="note">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">auteurs</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="ss">"Damasio"</span><span class="p">,</span><span class="w"> </span><span class="ss">"Alain"</span><span class="p">,</span><span class="w"> </span><span class="n">français</span><span class="p">);</span>
-<span class="k">INSERT</span><span class="w">  </span><span class="k">INTO</span><span class="w">  </span><span class="n">livres</span><span class="w"> </span><span class="k">VALUES</span><span class="w">  </span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="w">  </span><span class="ss">"La Horde du Contrevent"</span><span class="p">,</span><span class="w">  </span><span class="mi">9</span><span class="p">,</span><span class="w">  </span><span class="mi">2004</span><span class="p">);</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">auteurs</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Damasio&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Alain&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">français</span><span class="p">);</span>
+<span class="k">INSERT</span><span class="w">  </span><span class="k">INTO</span><span class="w">  </span><span class="n">livres</span><span class="w"> </span><span class="k">VALUES</span><span class="w">  </span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="w">  </span><span class="ss">&quot;La Horde du Contrevent&quot;</span><span class="p">,</span><span class="w">  </span><span class="mi">9</span><span class="p">,</span><span class="w">  </span><span class="mi">2004</span><span class="p">);</span>
 </code></pre></div>
 <p>ATTENTION : l’ordre des requêtes est important !!!</p>
 </details>
@@ -5180,7 +5179,7 @@ Bradbury,  Chroniques  martiennes
 <p class="admonition-title">Définition</p>
 <p>L’instruction de base pour l’insertion de données dans une base est constituée du mot-clé <code>DELETE FROM</code>.</p>
 <p>La syntaxe est :</p>
-<div class="highlight"><pre><span></span><code><span class="k">DELETE</span><span class="w">  </span><span class="k">FROM</span><span class="w">  </span><span class="n">relation</span><span class="w"> </span><span class="k">WHERE</span><span class="w">  </span><span class="n">condition</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">DELETE</span><span class="w">  </span><span class="k">FROM</span><span class="w">  </span><span class="n">relation</span><span class="w"> </span><span class="k">WHERE</span><span class="w">  </span><span class="n">condition</span>
 </code></pre></div>
 </div>
 <p><strong>Exercice 21</strong></p>
@@ -5192,17 +5191,17 @@ Bradbury,  Chroniques  martiennes
 <details class="note">
 <summary>Correction</summary>
 <p>1.
-</p><div class="highlight"><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">livres</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">titre</span><span class="o">=</span><span class="w"> </span><span class="ss">"Fondation"</span><span class="p">;</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">livres</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">titre</span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Fondation&quot;</span><span class="p">;</span>
 </code></pre></div>
 2.
-<div class="highlight"><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">livres</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">livres</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">idAuteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
 </code></pre></div>
 3.
-<div class="highlight"><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">livres</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">livres</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">annPubli</span><span class="w"> </span><span class="err">≤</span><span class="w"> </span><span class="mi">1945</span><span class="p">;</span>
-</code></pre></div>
+</code></pre></div></p>
 </details>
 <h4 id="modification-de-donnees">Modification de données<a class="headerlink" href="#modification-de-donnees" title="Permanent link">⚓︎</a></h4>
 <div class="admonition example">
@@ -5213,7 +5212,7 @@ Bradbury,  Chroniques  martiennes
 <li><code>SET</code> indique les attributs qui doivent être modiﬁés, et les valeurs correspondantes.</li>
 </ul>
 <p>La syntaxe est :</p>
-<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w">  </span><span class="n">relation</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">UPDATE</span><span class="w">  </span><span class="n">relation</span>
 <span class="k">SET</span><span class="w">  </span><span class="n">attribut</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="n">valeur</span><span class="w"> </span>
 <span class="k">WHERE</span><span class="w">  </span><span class="n">condition</span><span class="p">;</span>
 </code></pre></div>
@@ -5227,13 +5226,13 @@ requête permettant de corriger cette erreur dans la relation Livres .</li>
 <details class="note">
 <summary>Correction</summary>
 <p>1.
-</p><div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">livres</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Fondation – Tome 1"</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Fondation"</span><span class="p">;</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">livres</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Fondation – Tome 1&quot;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Fondation&quot;</span><span class="p">;</span>
 </code></pre></div>
 2.
-<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">livres</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">annPubli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1999</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"La Zone du Dehors"</span><span class="p">;</span>
-</code></pre></div>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">livres</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">annPubli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1999</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;La Zone du Dehors&quot;</span><span class="p">;</span>
+</code></pre></div></p>
 </details>
 <h3 id="exercices_1">Exercices<a class="headerlink" href="#exercices_1" title="Permanent link">⚓︎</a></h3>
 <p><strong>Exercice 23</strong></p>
@@ -5255,35 +5254,35 @@ requête permettant de corriger cette erreur dans la relation Livres .</li>
 <details class="note">
 <summary>Correction</summary>
 <p>1.
-</p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titreRep</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titreRep</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">representation</span><span class="p">;</span><span class="w"> </span>
 </code></pre></div>
 2.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titreRep</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titreRep</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">representation</span><span class="w">  </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">lieu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"théâtre allissa"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">lieu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;théâtre allissa&quot;</span><span class="p">;</span>
 </code></pre></div>
 3.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">titreRep</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">titreRep</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">representation</span>
 <span class="k">JOIN</span><span class="w"> </span><span class="n">musicien</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">representation</span><span class="p">.</span><span class="n">numRep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">musicien</span><span class="p">.</span><span class="n">numRep</span><span class="p">;</span>
 </code></pre></div>
 4.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titreRep</span><span class="p">,</span><span class="w"> </span><span class="n">lieu</span><span class="p">,</span><span class="w"> </span><span class="n">tarif</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titreRep</span><span class="p">,</span><span class="w"> </span><span class="n">lieu</span><span class="p">,</span><span class="w"> </span><span class="n">tarif</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">representation</span>
 <span class="k">JOIN</span><span class="w"> </span><span class="n">programmer</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">representation</span><span class="p">.</span><span class="n">numRep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">programmer</span><span class="p">.</span><span class="n">numRep</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="nb">date</span><span class="o">=</span><span class="w"> </span><span class="ss">"25/07/2008"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="nb">date</span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;25/07/2008&quot;</span><span class="p">;</span>
 </code></pre></div>
 5.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">musicien</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">numRep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 6.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titreRep</span><span class="p">,</span><span class="w"> </span><span class="nb">date</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titreRep</span><span class="p">,</span><span class="w"> </span><span class="nb">date</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">representation</span>
 <span class="k">JOIN</span><span class="w"> </span><span class="n">programmer</span><span class="w"> </span><span class="k">ON</span><span class="w">  </span><span class="n">representation</span><span class="p">.</span><span class="n">numRep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">programmer</span><span class="p">.</span><span class="n">numRep</span><span class="w"> </span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">tarif</span><span class="w"> </span><span class="err">≤</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
-</code></pre></div>
+</code></pre></div></p>
 </details>
 <p><strong>Exercice 24</strong></p>
 <p>Soit le modèle relationnel suivant relatif à la gestion des locations de ﬁlms :</p>
@@ -5302,21 +5301,21 @@ requête permettant de corriger cette erreur dans la relation Livres .</li>
 <details class="note">
 <summary>Correction</summary>
 <p>1.
-</p><div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w">  </span><span class="k">INTO</span><span class="w">  </span><span class="n">films</span><span class="w"> </span>
-<span class="k">VALUES</span><span class="w">  </span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="ss">"The Raid"</span><span class="p">);</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w">  </span><span class="k">INTO</span><span class="w">  </span><span class="n">films</span><span class="w"> </span>
+<span class="k">VALUES</span><span class="w">  </span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;The Raid&quot;</span><span class="p">);</span>
 </code></pre></div>
 2.
-<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w">  </span><span class="k">INTO</span><span class="w">  </span><span class="n">clients</span><span class="w"> </span>
-<span class="k">VALUES</span><span class="w">  </span><span class="p">(</span><span class="mi">124</span><span class="p">,</span><span class="w"> </span><span class="ss">"Jean"</span><span class="p">,</span><span class="w"> </span><span class="err">«</span><span class="w"> </span><span class="n">Talu</span><span class="w"> </span><span class="err">»</span><span class="p">,</span><span class="k">NULL</span><span class="p">,</span><span class="k">NULL</span><span class="p">,</span><span class="k">NULL</span><span class="p">);</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w">  </span><span class="k">INTO</span><span class="w">  </span><span class="n">clients</span><span class="w"> </span>
+<span class="k">VALUES</span><span class="w">  </span><span class="p">(</span><span class="mi">124</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Jean&quot;</span><span class="p">,</span><span class="w"> </span><span class="err">«</span><span class="w"> </span><span class="n">Talu</span><span class="w"> </span><span class="err">»</span><span class="p">,</span><span class="k">NULL</span><span class="p">,</span><span class="k">NULL</span><span class="p">,</span><span class="k">NULL</span><span class="p">);</span>
 </code></pre></div>
 3.
-<div class="highlight"><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">films</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">nomfilm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Dans la peau de John Malkovitch"</span><span class="p">;</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">films</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">nomfilm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Dans la peau de John Malkovitch&quot;</span><span class="p">;</span>
 </code></pre></div>
 4.
-<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">films</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">nomfilm</span><span class="o">=</span><span class="w"> </span><span class="err">«</span><span class="w"> </span><span class="n">Death</span><span class="w"> </span><span class="n">Proof</span><span class="w"> </span><span class="err">»</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">nomfilm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Boulevard de la Mort"</span><span class="p">;</span>
-</code></pre></div>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">films</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">nomfilm</span><span class="o">=</span><span class="w"> </span><span class="err">«</span><span class="w"> </span><span class="n">Death</span><span class="w"> </span><span class="n">Proof</span><span class="w"> </span><span class="err">»</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">nomfilm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Boulevard de la Mort&quot;</span><span class="p">;</span>
+</code></pre></div></p>
 </details>
 <p><strong>Exercice 25</strong></p>
 <p>Soit la Base de données <strong>hôtel</strong> qui contient 3 relations :</p>
@@ -5326,7 +5325,7 @@ requête permettant de corriger cette erreur dans la relation Livres .</li>
 <li><strong>Reservation</strong> (<u># numClient, # numChambre</u>, dateArr, dateDep)</li>
 </ul>
 <p>Le contenu de chaque relation est :</p>
-<p><img alt="" class="center" src="images/tab14.JPG"></p>
+<p><img alt="" class="center" src="images/tab14.JPG" /></p>
 <p>Indiquez les requêtes qui permettent d’obtenir :</p>
 <ol>
 <li>Les numéros de chambres avec TV.</li>
@@ -5342,58 +5341,58 @@ requête permettant de corriger cette erreur dans la relation Livres .</li>
 <details class="note">
 <summary>Correction</summary>
 <p>1.
-</p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">numChambre</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">numChambre</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">chambre</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">equipement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"TV"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">equipement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;TV&quot;</span><span class="p">;</span>
 </code></pre></div>
 2.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">numChambre</span><span class="p">,</span><span class="w"> </span><span class="n">nbrPers</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">numChambre</span><span class="p">,</span><span class="w"> </span><span class="n">nbrPers</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">chambre</span><span class="p">;</span>
 </code></pre></div>
 3.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">nbrPers</span><span class="p">)</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">nbrPers</span><span class="p">)</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">chambre</span><span class="p">;</span>
 </code></pre></div>
 4.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">prix</span><span class="o">/</span><span class="n">nbrpers</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">prix</span><span class="o">/</span><span class="n">nbrpers</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">chambre</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">equipement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"TV"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">equipement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;TV&quot;</span><span class="p">;</span>
 </code></pre></div>
 5.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">numChambre</span><span class="p">,</span><span class="w"> </span><span class="n">numClient</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">numChambre</span><span class="p">,</span><span class="w"> </span><span class="n">numClient</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">reservation</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">dateArr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"09/02/2004"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">dateArr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;09/02/2004&quot;</span><span class="p">;</span>
 </code></pre></div>
 6.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">numChambre</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">numChambre</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">chambre</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">prix</span><span class="w"> </span><span class="err">≤</span><span class="w"> </span><span class="mi">80</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="p">(</span><span class="n">confort</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Bain"</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">prix</span><span class="w"> </span><span class="err">≤</span><span class="w"> </span><span class="mi">120</span><span class="p">);</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">prix</span><span class="w"> </span><span class="err">≤</span><span class="w"> </span><span class="mi">80</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="p">(</span><span class="n">confort</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Bain&quot;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">prix</span><span class="w"> </span><span class="err">≤</span><span class="w"> </span><span class="mi">120</span><span class="p">);</span>
 </code></pre></div>
 7.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">adresse</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">adresse</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">client</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"D%"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;D%&quot;</span><span class="p">;</span>
 </code></pre></div>
 8.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">chambre</span><span class="w"> </span>
 <span class="k">WHERE</span><span class="w"> </span><span class="mi">85</span><span class="w"> </span><span class="err">≤</span><span class="w"> </span><span class="n">prix</span><span class="w"> </span><span class="err">≤</span><span class="w"> </span><span class="mi">120</span><span class="p">;</span>
 </code></pre></div>
 9.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">client</span>
 <span class="k">JOIN</span><span class="w"> </span><span class="n">reservation</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">numcClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reservation</span><span class="p">.</span><span class="n">numClient</span><span class="w"> </span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">dateDep</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
-</code></pre></div>
+</code></pre></div></p>
 </details>
 <h2 id="mise-en-pratique">Mise en pratique<a class="headerlink" href="#mise-en-pratique" title="Permanent link">⚓︎</a></h2>
 <h3 id="base-de-donnees-sur-les-prix-nobel">Base de données sur les prix Nobel<a class="headerlink" href="#base-de-donnees-sur-les-prix-nobel" title="Permanent link">⚓︎</a></h3>
 <h4 id="exploration-de-la-base">Exploration de la base<a class="headerlink" href="#exploration-de-la-base" title="Permanent link">⚓︎</a></h4>
 <p><strong>Exercice 26</strong></p>
 <p>1) Pour connaître l'ensemble des tables, il suffit d'écrire </p>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">sqlite_master</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="k">TYPE</span><span class="w"> </span><span class="o">=</span><span class="ss">"table"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="k">TYPE</span><span class="w"> </span><span class="o">=</span><span class="ss">&quot;table&quot;</span><span class="p">;</span>
 </code></pre></div>
 <p>et de valider.</p>
 <p>2) A l'aide de la cellule ci-dessous, répondre aux questions :</p>
@@ -5404,12 +5403,12 @@ requête permettant de corriger cette erreur dans la relation Livres .</li>
 <details class="note">
 <summary>Correction</summary>
 <p>1.
-</p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">sqlite_master</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="k">TYPE</span><span class="w"> </span><span class="o">=</span><span class="ss">"table"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="k">TYPE</span><span class="w"> </span><span class="o">=</span><span class="ss">&quot;table&quot;</span><span class="p">;</span>
 </code></pre></div>
 2.
-    <div class="highlight"><pre><span></span><code>CREATE TABLE nobel(
+    <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>CREATE TABLE nobel(
 annee INT,
 sujet VARCHAR(15),
 laureat VARCHAR(50)
@@ -5419,7 +5418,7 @@ laureat VARCHAR(50)
 3. <br>
     a. Il y a une seule relation : <code>nobel</code><br>
     b. Elle possède trois attributs : <code>annee</code>, <code>sujet</code>, <code>laureat</code><br>
-    c. L’attribut `anneev est du type Entier 
+    c. L’attribut `anneev est du type Entier </p>
 </details>
 <h4 id="les-requetes-dinterrogation_1">Les requêtes d'interrogation<a class="headerlink" href="#les-requetes-dinterrogation_1" title="Permanent link">⚓︎</a></h4>
 <p><strong>Chaque requête devra se terminer par un <code>;</code> avant d'être exécutée.</strong></p>
@@ -5441,58 +5440,58 @@ laureat VARCHAR(50)
 <details class="note">
 <summary>Correction</summary>
 <p>1.
-</p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">laureat</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">laureat</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="p">;</span>
 </code></pre></div>
 2.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">sujet</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">sujet</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="p">;</span>
 </code></pre></div>
 3.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">sujet</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">sujet</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">laureat</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">"Wilhelm Conrad R%ntgen"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">laureat</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;Wilhelm Conrad R%ntgen&quot;</span><span class="p">;</span>
 </code></pre></div>
 4.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">sujet</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">sujet</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">laureat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Paul Krugman"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">laureat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Paul Krugman&quot;</span><span class="p">;</span>
 </code></pre></div>
 5.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">annee</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">annee</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">laureat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Albert Fert"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">laureat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Albert Fert&quot;</span><span class="p">;</span>
 </code></pre></div>
 6.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">annee</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">annee</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">laureat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Pierre Curie"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">laureat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Pierre Curie&quot;</span><span class="p">;</span>
 </code></pre></div>
 7.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">annee</span><span class="p">,</span><span class="w"> </span><span class="n">sujet</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">annee</span><span class="p">,</span><span class="w"> </span><span class="n">sujet</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">laureat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Bertha von Suttner"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">laureat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Bertha von Suttner&quot;</span><span class="p">;</span>
 </code></pre></div>
 8.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">laureat</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">laureat</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"> </span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">2000</span><span class="p">;</span>
 </code></pre></div>
 9.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">laureat</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">laureat</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">1939</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">1945</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">sujet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Paix"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">1939</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">1945</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">sujet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Paix&quot;</span><span class="p">;</span>
 </code></pre></div>
 10.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">laureat</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">laureat</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="n">annee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1901</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2001</span><span class="p">)</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">sujet</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">"M%decine"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="n">annee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1901</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2001</span><span class="p">)</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">sujet</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;M%decine&quot;</span><span class="p">;</span>
 </code></pre></div>
 11.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">laureat</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">laureat</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="n">sujet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Physique"</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">sujet</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">"M%decine"</span><span class="p">)</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2008</span><span class="p">;</span>
-</code></pre></div>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="n">sujet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Physique&quot;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">sujet</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;M%decine&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2008</span><span class="p">;</span>
+</code></pre></div></p>
 </details>
 <h4 id="les-requetes-dagregation">Les requêtes d'agrégation<a class="headerlink" href="#les-requetes-dagregation" title="Permanent link">⚓︎</a></h4>
 <p><strong>Exercice 28</strong></p>
@@ -5514,71 +5513,71 @@ laureat VARCHAR(50)
 <details class="note">
 <summary>Correction</summary>
 <p>1.
-</p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="p">;</span>
 <span class="err">→</span><span class="w"> </span><span class="mi">816</span><span class="w"> </span>
 </code></pre></div>
 2.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="n">laureat</span><span class="p">)</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="n">laureat</span><span class="p">)</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">sujet</span><span class="o">=</span><span class="w"> </span><span class="ss">"Paix"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">sujet</span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Paix&quot;</span><span class="p">;</span>
 <span class="err">→</span><span class="w"> </span><span class="mi">119</span>
 </code></pre></div>
 3.
-<div class="highlight"><pre><span></span><code><span class="err">→</span><span class="w"> </span><span class="mi">105</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="err">→</span><span class="w"> </span><span class="mi">105</span>
 </code></pre></div>
 4.
-<div class="highlight"><pre><span></span><code><span class="err">→</span><span class="w"> </span><span class="mi">0</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="err">→</span><span class="w"> </span><span class="mi">0</span>
 </code></pre></div>
 5.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="n">laureat</span><span class="p">)</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="n">laureat</span><span class="p">)</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"> </span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1901</span><span class="p">;</span>
 <span class="err">→</span><span class="w"> </span><span class="mi">6</span>
 </code></pre></div>
 6.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="n">laureat</span><span class="p">)</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="n">laureat</span><span class="p">)</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1939</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">sujet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Chimie"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1939</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">sujet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Chimie&quot;</span><span class="p">;</span>
 <span class="err">→</span><span class="w"> </span><span class="mi">2</span>
 </code></pre></div>
 7.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">MIN</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">MIN</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">sujet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Economie"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">sujet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Economie&quot;</span><span class="p">;</span>
 <span class="err">→</span><span class="w"> </span><span class="mi">1969</span>
 </code></pre></div>
 8.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">laureat</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">"%Marie Curie %"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">laureat</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%Marie Curie %&quot;</span><span class="p">;</span>
 <span class="err">→</span><span class="w"> </span><span class="mi">2</span>
 </code></pre></div>
 9.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">laureat</span><span class="p">,</span><span class="w"> </span><span class="n">sujet</span><span class="p">,</span><span class="w"> </span><span class="n">annee</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">laureat</span><span class="p">,</span><span class="w"> </span><span class="n">sujet</span><span class="p">,</span><span class="w"> </span><span class="n">annee</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="k">UPPER</span><span class="p">(</span><span class="n">laureat</span><span class="p">)</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">"%COHEN %"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="k">UPPER</span><span class="p">(</span><span class="n">laureat</span><span class="p">)</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;%COHEN %&quot;</span><span class="p">;</span>
 <span class="err">→</span><span class="w"> </span><span class="n">Claude</span><span class="w"> </span><span class="n">Cohen</span><span class="o">-</span><span class="n">Tannoudji</span><span class="o">|</span><span class="n">Physique</span><span class="o">|</span><span class="mi">1997</span>
 <span class="n">Stanley</span><span class="w"> </span><span class="n">Cohen</span><span class="o">|</span><span class="n">Médecine</span><span class="o">|</span><span class="mi">1986</span>
 </code></pre></div>
 10.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">laureat</span><span class="p">)</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">laureat</span><span class="p">)</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">sujet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Physique"</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">sujet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Chimie"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">sujet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Physique&quot;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">sujet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Chimie&quot;</span><span class="p">;</span>
 <span class="err">→</span><span class="w"> </span><span class="mi">335</span>
 </code></pre></div>
 11.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">laureat</span><span class="p">)</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">laureat</span><span class="p">)</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="n">sujet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Literature"</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">sujet</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">"M%decine"</span><span class="p">)</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2000</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="n">sujet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Literature&quot;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">sujet</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;M%decine&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">annee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2000</span><span class="p">;</span>
 <span class="err">→</span><span class="w"> </span><span class="mi">4</span>
 </code></pre></div>
 12.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">laureat</span><span class="p">)</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">laureat</span><span class="p">)</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">sujet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Paix"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">sujet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Paix&quot;</span><span class="p">;</span>
 <span class="err">→</span><span class="w"> </span><span class="mi">116</span>
-</code></pre></div>
+</code></pre></div></p>
 </details>
 <h4 id="les-requetes-dinsertion">Les requêtes d'insertion<a class="headerlink" href="#les-requetes-dinsertion" title="Permanent link">⚓︎</a></h4>
 <p><strong>Exercice 29</strong></p>
@@ -5591,18 +5590,18 @@ laureat VARCHAR(50)
 <details class="note">
 <summary>Correction</summary>
 <p>1.
-</p><div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">nobel</span>
-<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">2019</span><span class="p">,</span><span class="w"> </span><span class="ss">"Economie"</span><span class="p">,</span><span class="w"> </span><span class="ss">"Esther Duflo"</span><span class="p">);</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">nobel</span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">2019</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Economie&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Esther Duflo&quot;</span><span class="p">);</span>
 </code></pre></div>
 2.
-<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">nobel</span>
-<span class="k">SET</span><span class="w"> </span><span class="n">laureat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Esther Duflo Banerjee"</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">laureat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Esther Duflo"</span><span class="p">;</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">nobel</span>
+<span class="k">SET</span><span class="w"> </span><span class="n">laureat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Esther Duflo Banerjee&quot;</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">laureat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Esther Duflo&quot;</span><span class="p">;</span>
 </code></pre></div>
 3.
-<div class="highlight"><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">laureat</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">"Aung %"</span><span class="p">;</span>
-</code></pre></div>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">nobel</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">laureat</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;Aung %&quot;</span><span class="p">;</span>
+</code></pre></div></p>
 </details>
 <h3 id="base-de-donnees-collectivites">Base de données collectivités<a class="headerlink" href="#base-de-donnees-collectivites" title="Permanent link">⚓︎</a></h3>
 <h4 id="exploration-de-la-base_1">Exploration de la base<a class="headerlink" href="#exploration-de-la-base_1" title="Permanent link">⚓︎</a></h4>
@@ -5817,27 +5816,27 @@ laureat VARCHAR(50)
 <details class="note">
 <summary>Correction</summary>
 <p>1.
-</p><div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Departement</span>
-<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">"76"</span><span class="p">,</span><span class="w"> </span><span class="ss">"Seine-Maritime"</span><span class="p">);</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Departement</span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;76&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Seine-Maritime&quot;</span><span class="p">);</span>
 </code></pre></div>
 2.
-<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Ville</span>
-<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">"Rouen"</span><span class="p">,</span><span class="w"> </span><span class="mi">76000</span><span class="p">,</span><span class="w"> </span><span class="mi">110169</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Ville</span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Rouen&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">76000</span><span class="p">,</span><span class="w"> </span><span class="mi">110169</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 </code></pre></div>
 3.
-<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Ville</span>
-<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="ss">"Dieppe"</span><span class="p">,</span><span class="w"> </span><span class="mi">76200</span><span class="p">,</span><span class="w"> </span><span class="mi">29080</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="ss">"Envermeu"</span><span class="p">,</span><span class="w"> </span><span class="mi">76630</span><span class="p">,</span><span class="w"> </span><span class="mi">2097</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Ville</span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Dieppe&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">76200</span><span class="p">,</span><span class="w"> </span><span class="mi">29080</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Envermeu&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">76630</span><span class="p">,</span><span class="w"> </span><span class="mi">2097</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 </code></pre></div>
 4.
-<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Departement</span>
-<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="ss">"27"</span><span class="p">,</span><span class="w"> </span><span class="ss">"Eure"</span><span class="p">);</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Departement</span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;27&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Eure&quot;</span><span class="p">);</span>
 <span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Ville</span><span class="w"> </span>
-<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="ss">"Igoville"</span><span class="p">,</span><span class="w"> </span><span class="mi">27460</span><span class="p">,</span><span class="w"> </span><span class="mi">1746</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Igoville&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">27460</span><span class="p">,</span><span class="w"> </span><span class="mi">1746</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
 </code></pre></div>
 5.
-<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Ville</span>
-<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="ss">"Le Neubourg"</span><span class="p">,</span><span class="w"> </span><span class="mi">27110</span><span class="p">,</span><span class="w"> </span><span class="mi">4166</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
-</code></pre></div>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Ville</span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Le Neubourg&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">27110</span><span class="p">,</span><span class="w"> </span><span class="mi">4166</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+</code></pre></div></p>
 </details>
 <p><strong>Exercice 33</strong></p>
 <p>{!{ sqlide titre="Base Collectivites" base="04-Bases_de_donnees/Documents/Collectivites.db" }!}</p>
@@ -5850,24 +5849,24 @@ laureat VARCHAR(50)
 <details class="note">
 <summary>Correction</summary>
 <p>1.
-</p><div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Departement</span>
-<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="ss">"14"</span><span class="p">,</span><span class="w"> </span><span class="ss">"Calvados"</span><span class="p">);</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Departement</span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;14&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Calvados&quot;</span><span class="p">);</span>
 <span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Ville</span><span class="w"> </span>
-<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="ss">"Trouville"</span><span class="p">,</span><span class="w"> </span><span class="mi">14360</span><span class="p">,</span><span class="w"> </span><span class="mi">4675</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="ss">"Mezidon-Canon"</span><span class="p">,</span><span class="w"> </span><span class="mi">14270</span><span class="p">,</span><span class="w"> </span><span class="mi">4838</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">),</span>
-<span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="ss">"Crevecoeur-en-Auge"</span><span class="p">,</span><span class="w"> </span><span class="mi">14240</span><span class="p">,</span><span class="w"> </span><span class="mi">480</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Trouville&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">14360</span><span class="p">,</span><span class="w"> </span><span class="mi">4675</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Mezidon-Canon&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">14270</span><span class="p">,</span><span class="w"> </span><span class="mi">4838</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Crevecoeur-en-Auge&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">14240</span><span class="p">,</span><span class="w"> </span><span class="mi">480</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
 </code></pre></div>
 2.
-<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">Ville</span>
-<span class="k">SET</span><span class="w"> </span><span class="n">nom</span><span class="o">=</span><span class="w"> </span><span class="ss">"Trouville-sur-Mer"</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">nom</span><span class="o">=</span><span class="w"> </span><span class="ss">"Trouville"</span><span class="p">;</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">Ville</span>
+<span class="k">SET</span><span class="w"> </span><span class="n">nom</span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Trouville-sur-Mer&quot;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">nom</span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Trouville&quot;</span><span class="p">;</span>
 </code></pre></div>
 3.
-<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Ville</span>
-<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="ss">"Mezidon-Vallee-d’Auge"</span><span class="p">,</span><span class="w"> </span><span class="mi">14270</span><span class="p">,</span><span class="w"> </span><span class="mi">9712</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Ville</span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Mezidon-Vallee-d’Auge&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">14270</span><span class="p">,</span><span class="w"> </span><span class="mi">9712</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
 <span class="k">DELETE</span><span class="w">  </span><span class="k">FROM</span><span class="w">  </span><span class="n">Ville</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w">  </span><span class="n">nom</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="ss">"Mezidon-Canon"</span><span class="w">  </span><span class="k">OR</span><span class="w">  </span><span class="n">nom</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="ss">"Crevecoeur-en-Auge"</span><span class="p">;</span>
-</code></pre></div>
+<span class="k">WHERE</span><span class="w">  </span><span class="n">nom</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="ss">&quot;Mezidon-Canon&quot;</span><span class="w">  </span><span class="k">OR</span><span class="w">  </span><span class="n">nom</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="ss">&quot;Crevecoeur-en-Auge&quot;</span><span class="p">;</span>
+</code></pre></div></p>
 </details>
 <h4 id="verification-des-enregistrements">Vérification des enregistrements<a class="headerlink" href="#verification-des-enregistrements" title="Permanent link">⚓︎</a></h4>
 <p><strong>Exercice 34</strong></p>
@@ -5883,28 +5882,28 @@ laureat VARCHAR(50)
 <details class="note">
 <summary>Correction</summary>
 <p>1.
-</p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">Departement</span><span class="p">;</span>
 </code></pre></div>
 2.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">Ville</span><span class="p">;</span>
 </code></pre></div>
 3.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">Ville</span><span class="w"> </span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">idDepartement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
 </code></pre></div>
 4.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">Ville</span><span class="w"> </span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">idDepartement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 </code></pre></div>
 5.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">Ville</span><span class="w"> </span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">idDepartement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
-</code></pre></div>
+</code></pre></div></p>
 </details>
 <h3 id="base-consacree-au-cinema">Base consacrée au cinéma<a class="headerlink" href="#base-consacree-au-cinema" title="Permanent link">⚓︎</a></h3>
 <h4 id="exploration-de-la-base-de-donnees">Exploration de la base de données<a class="headerlink" href="#exploration-de-la-base-de-donnees" title="Permanent link">⚓︎</a></h4>
@@ -5931,7 +5930,7 @@ laureat VARCHAR(50)
 <li>La clé primaire de Film est idFilm.</li>
 <li>La clé étrangère de Film est nomRealisateur.</li>
 <li>La clé étrangère de Film fait référence à l’attribut nom de la relation Artiste.</li>
-<li><img alt="" src="images/Exercice35.png"> </li>
+<li><img alt="" src="images/Exercice35.png" /> </li>
 </ol>
 </details>
 <h4 id="requetes-simples">Requêtes simples<a class="headerlink" href="#requetes-simples" title="Permanent link">⚓︎</a></h4>
@@ -5949,41 +5948,41 @@ laureat VARCHAR(50)
 <details class="note">
 <summary>Correction</summary>
 <p>1.
-</p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">Film</span><span class="w"> </span>
 <span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">titre</span><span class="p">;</span>
 </code></pre></div>
 2.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">anneeNaissance</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">anneeNaissance</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">artiste</span><span class="w"> </span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">anneeNaissance</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">1950</span><span class="p">;</span>
 </code></pre></div>
 3.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomCinema</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nomCinema</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">Cinema</span><span class="w"> </span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">arrondissement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span>
 </code></pre></div>
 4.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">Artiste</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">"H %"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="ss">&quot;H %&quot;</span><span class="p">;</span>
 </code></pre></div>
 5.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">Artiste</span><span class="w"> </span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">anneeNaissance</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
 </code></pre></div>
 6.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="n">idFilm</span><span class="p">))</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="n">idFilm</span><span class="p">))</span>
 <span class="k">FROM</span><span class="w"> </span><span class="k">Role</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="k">UPPER</span><span class="p">(</span><span class="n">nomRole</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"MCLANE"</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="k">UPPER</span><span class="p">(</span><span class="n">nomActeur</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"WILLIS"</span><span class="p">;</span>
-</code></pre></div>
+<span class="k">WHERE</span><span class="w"> </span><span class="k">UPPER</span><span class="p">(</span><span class="n">nomRole</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;MCLANE&quot;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="k">UPPER</span><span class="p">(</span><span class="n">nomActeur</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;WILLIS&quot;</span><span class="p">;</span>
+</code></pre></div></p>
 </details>
 <h4 id="requetes-avec-jointure">Requêtes avec jointure<a class="headerlink" href="#requetes-avec-jointure" title="Permanent link">⚓︎</a></h4>
 <p><strong>Exercice 37</strong></p>
 <p>On rapelle qu’une jointure consiste à rapprocher les clé primaire et étrangère de deux relations.</p>
 <p>La syntaxe est la suivante :</p>
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="n">attribut</span><span class="w"> </span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w">  </span><span class="n">attribut</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w">  </span><span class="n">relation1</span><span class="w"> </span><span class="k">JOIN</span><span class="w">  </span><span class="n">relation2</span><span class="w">  </span>
 <span class="k">ON</span><span class="w">  </span><span class="n">relation1</span><span class="p">.</span><span class="n">cle1</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="n">relation2</span><span class="p">.</span><span class="n">cle2</span><span class="p">;</span>
 </code></pre></div>
@@ -6008,28 +6007,28 @@ Indiquez aussi le titre du ﬁlm.
 <details class="note">
 <summary>Correction</summary>
 <p>1.
-</p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="n">prenom</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="n">prenom</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">Artiste</span>
 <span class="k">JOIN</span><span class="w"> </span><span class="k">Role</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Artiste</span><span class="p">.</span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">Role</span><span class="p">.</span><span class="n">nomActeur</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="k">UPPER</span><span class="p">(</span><span class="n">nomRole</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"TARZAN"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="k">UPPER</span><span class="p">(</span><span class="n">nomRole</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;TARZAN&quot;</span><span class="p">;</span>
 <span class="err">→</span><span class="w"> </span><span class="n">Lambert</span><span class="w"> </span><span class="n">Christophe</span>
 </code></pre></div>
 2.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">anneeNaissance</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">anneeNaissance</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">Artiste</span>
 <span class="k">JOIN</span><span class="w"> </span><span class="n">Film</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Artiste</span><span class="p">.</span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Film</span><span class="p">.</span><span class="n">nomRealisateur</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Reservoir Dogs"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Reservoir Dogs&quot;</span><span class="p">;</span>
 <span class="err">→</span><span class="w"> </span><span class="mi">1948</span>
 </code></pre></div>
 3.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="w"> </span><span class="n">nomRole</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="w"> </span><span class="n">nomRole</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">Film</span>
 <span class="k">JOIN</span><span class="w"> </span><span class="k">Role</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Film</span><span class="p">.</span><span class="n">idFilm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">Role</span><span class="p">.</span><span class="n">idFilm</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">nomActeur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">"Allen"</span><span class="p">;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">nomActeur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Allen&quot;</span><span class="p">;</span>
 <span class="err">→</span><span class="w"> </span><span class="n">Manhattan</span><span class="p">,</span><span class="w"> </span><span class="n">Davis</span>
 <span class="err">→</span><span class="w"> </span><span class="n">Annie</span><span class="w"> </span><span class="n">Hall</span><span class="p">,</span><span class="w"> </span><span class="n">Jonas</span>
 </code></pre></div>
-4. ...
+4. ...</p>
 </details>
 <h4 id="modification-de-la-base-cinema">Modification de la base cinéma<a class="headerlink" href="#modification-de-la-base-cinema" title="Permanent link">⚓︎</a></h4>
 <p><strong>Exercice 38</strong></p>
@@ -6047,52 +6046,52 @@ les requêtes SQL permettant de modiﬁer les séances du cinéma Rex.</li>
 <details class="note">
 <summary>Correction</summary>
 <p>1.
-</p><div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Artiste</span>
-<span class="k">VALUES</span><span class="p">(</span><span class="err">‘</span><span class="n">Scott</span><span class="err">’</span><span class="p">,</span><span class="w"> </span><span class="ss">"Ridley"</span><span class="p">,</span><span class="w"> </span><span class="mi">1937</span><span class="p">);</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Artiste</span>
+<span class="k">VALUES</span><span class="p">(</span><span class="err">‘</span><span class="n">Scott</span><span class="err">’</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Ridley&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1937</span><span class="p">);</span>
 </code></pre></div>
 2.
-<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Film</span>
-<span class="k">VALUES</span><span class="p">(</span><span class="mi">143</span><span class="p">,</span><span class="w"> </span><span class="ss">"Blade Runner"</span><span class="p">,</span><span class="w"> </span><span class="mi">1982</span><span class="p">,</span><span class="w"> </span><span class="ss">"Scott"</span><span class="p">);</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Film</span>
+<span class="k">VALUES</span><span class="p">(</span><span class="mi">143</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Blade Runner&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1982</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Scott&quot;</span><span class="p">);</span>
 </code></pre></div>
 3.
-<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Artiste</span>
-<span class="k">VALUES</span><span class="p">(</span><span class="ss">"Ford"</span><span class="p">,</span><span class="w"> </span><span class="ss">"Harisson"</span><span class="p">,</span><span class="w"> </span><span class="mi">1942</span><span class="p">);</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Artiste</span>
+<span class="k">VALUES</span><span class="p">(</span><span class="ss">&quot;Ford&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Harisson&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1942</span><span class="p">);</span>
 <span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Artiste</span><span class="w">  </span>
-<span class="k">VALUES</span><span class="p">(</span><span class="ss">"Hauer"</span><span class="p">,</span><span class="w"> </span><span class="ss">"Rutger"</span><span class="p">,</span><span class="w"> </span><span class="mi">1944</span><span class="p">);</span>
+<span class="k">VALUES</span><span class="p">(</span><span class="ss">&quot;Hauer&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Rutger&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1944</span><span class="p">);</span>
 <span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="k">Role</span><span class="w">  </span>
-<span class="k">VALUES</span><span class="p">(</span><span class="ss">"Rick Deckard"</span><span class="p">,</span><span class="w"> </span><span class="mi">143</span><span class="p">,</span><span class="w"> </span><span class="ss">"Ford"</span><span class="p">);</span>
+<span class="k">VALUES</span><span class="p">(</span><span class="ss">&quot;Rick Deckard&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">143</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Ford&quot;</span><span class="p">);</span>
 <span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="k">Role</span><span class="w">  </span>
-<span class="k">VALUES</span><span class="p">(</span><span class="ss">"Roy Batty"</span><span class="p">,</span><span class="w"> </span><span class="mi">143</span><span class="p">,</span><span class="w"> </span><span class="ss">"Hauer"</span><span class="p">);</span>
+<span class="k">VALUES</span><span class="p">(</span><span class="ss">&quot;Roy Batty&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">143</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Hauer&quot;</span><span class="p">);</span>
 </code></pre></div>
 4.
-<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Artiste</span>
-<span class="k">VALUES</span><span class="p">(</span><span class="ss">"Hamill"</span><span class="p">,</span><span class="w"> </span><span class="ss">"Mark"</span><span class="p">,</span><span class="w"> </span><span class="mi">1951</span><span class="p">)</span><span class="w"> </span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Artiste</span>
+<span class="k">VALUES</span><span class="p">(</span><span class="ss">&quot;Hamill&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Mark&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1951</span><span class="p">)</span><span class="w"> </span>
 <span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Artiste</span><span class="w">  </span>
-<span class="k">VALUES</span><span class="p">(</span><span class="ss">"Fisher"</span><span class="p">,</span><span class="w"> </span><span class="ss">"Carrie"</span><span class="p">,</span><span class="w"> </span><span class="mi">1956</span><span class="p">);</span>
+<span class="k">VALUES</span><span class="p">(</span><span class="ss">&quot;Fisher&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Carrie&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1956</span><span class="p">);</span>
 <span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Artiste</span><span class="w">  </span>
-<span class="k">VALUES</span><span class="p">(</span><span class="ss">"Kershner"</span><span class="p">,</span><span class="w"> </span><span class="ss">"Irvin"</span><span class="p">,</span><span class="w"> </span><span class="mi">1923</span><span class="p">);</span>
+<span class="k">VALUES</span><span class="p">(</span><span class="ss">&quot;Kershner&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Irvin&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1923</span><span class="p">);</span>
 <span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Film</span><span class="w"> </span>
-<span class="k">VALUES</span><span class="p">(</span><span class="mi">144</span><span class="p">,</span><span class="w"> </span><span class="ss">"L empire contre attaque"</span><span class="p">,</span><span class="w"> </span><span class="mi">1980</span><span class="p">,</span><span class="w"> </span><span class="ss">"Kershner"</span><span class="p">);</span>
+<span class="k">VALUES</span><span class="p">(</span><span class="mi">144</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;L empire contre attaque&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1980</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Kershner&quot;</span><span class="p">);</span>
 <span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="k">Role</span><span class="w"> </span>
-<span class="k">VALUES</span><span class="p">(</span><span class="ss">"Luke Skywalker"</span><span class="p">,</span><span class="w"> </span><span class="mi">144</span><span class="p">,</span><span class="w"> </span><span class="ss">"Hamill"</span><span class="p">);</span>
+<span class="k">VALUES</span><span class="p">(</span><span class="ss">&quot;Luke Skywalker&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">144</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Hamill&quot;</span><span class="p">);</span>
 <span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="k">Role</span><span class="w"> </span>
-<span class="k">VALUES</span><span class="p">(</span><span class="ss">"Princesse Leia"</span><span class="p">,</span><span class="w"> </span><span class="mi">144</span><span class="p">,</span><span class="w"> </span><span class="ss">"Fisher"</span><span class="p">);</span>
+<span class="k">VALUES</span><span class="p">(</span><span class="ss">&quot;Princesse Leia&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">144</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Fisher&quot;</span><span class="p">);</span>
 <span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="k">Role</span><span class="w"> </span>
-<span class="k">VALUES</span><span class="p">(</span><span class="ss">"Han Solo"</span><span class="p">,</span><span class="w"> </span><span class="mi">144</span><span class="p">,</span><span class="w"> </span><span class="ss">"Ford"</span><span class="p">);</span>
+<span class="k">VALUES</span><span class="p">(</span><span class="ss">&quot;Han Solo&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">144</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;Ford&quot;</span><span class="p">);</span>
 </code></pre></div>
-5. ...
+5. ...</p>
 </details>
 <h3 id="sql-murder-mystery"><a href="https://mystery.knightlab.com/" target="_blank">SQL Murder Mystery</a><a class="headerlink" href="#sql-murder-mystery" title="Permanent link">⚓︎</a></h3>
 <p>Un meurtre  a été commis.  Comme vous  ne prenez jamais  de notes, vous  ne vous
 souvenez plus du nom du meurtrier. Vous  vous souvenez juste que le meurtre a eu
 lieu le 15 janvier 2018 dans la ville de SQL City.</p>
-<p><img alt="e g robinson" src="images/egr.webp"></p>
+<p><img alt="e g robinson" src="images/egr.webp" /></p>
 <p>Vous disposez ensuite de la base de données schématisée ici :</p>
-<p><img alt="bdd de sql murder mystery" src="images/sqlmm.png"></p>
+<p><img alt="bdd de sql murder mystery" src="images/sqlmm.png" /></p>
 <p>A vous de jouer :</p>
 <p>{!{ sqlide titre="Entrez ici vos requêtes pour mener l'enquête:" base="04-Bases_de_donnees/Documents/sql-murder-mystery.db" espace="bddmm"}!}</p>
 <p>Vous rentrerez ensuite votre solution ici :</p>
-<p>{!{ sqlide titre="Votre solution:" sql="04-Bases_de_donnees/Documents/sqlmm-sol.sql" espace="bddmm"}!}</p></div>
+<p>{!{ sqlide titre="Votre solution:" sql="04-Bases_de_donnees/Documents/sqlmm-sol.sql" espace="bddmm"}!}</p>
 
 
 

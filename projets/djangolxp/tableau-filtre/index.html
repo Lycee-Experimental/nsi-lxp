@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3957,7 +3956,7 @@
   
 
 
-<div><h1 id="affichage-des-listes-deleves">Affichage des listes d'élèves<a class="headerlink" href="#affichage-des-listes-deleves" title="Permanent link">⚓︎</a></h1>
+<h1 id="affichage-des-listes-deleves">Affichage des listes d'élèves<a class="headerlink" href="#affichage-des-listes-deleves" title="Permanent link">⚓︎</a></h1>
 <p>Une fois les données entrées dans la base, il nous faut pouvoir les afficher.</p>
 <p>Dans un premier temps, 2 objectifs sont à atteindre :</p>
 <ul>
@@ -3973,19 +3972,19 @@
 <p>Evidemment les listes d'élèves doivent être accessibles que par des personnes authorisées.
 Pour cela, si ce n'est pas encore fait, créer un compte administateur de l'application Django :</p>
 <p>Dans le dossier contenant votre fichier docker-compose.yml, entrer les commandes suivantes :
-</p><div class="highlight"><pre><span></span><code># Lancer l'application
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code># Lancer l&#39;application
 docker-compose up -d
 # Créer votre compte administrateur
 docker-compose exec web python manage.py createsuperuser
-</code></pre></div>
+</code></pre></div></p>
 <p>Vous deviez maintenant pouvoir vous connecter à l'interface d'administration à l'adresse suivante : http://localhost:8000/admin</p>
 <h2 id="urls-des-listings">URLs des listings<a class="headerlink" href="#urls-des-listings" title="Permanent link">⚓︎</a></h2>
 <p>Deux URLs sont pour l'instant disponibles pour accéder aux listes.
 Elles sont définies dans le fichier <code>django-lxp/inscription/urls.py</code>
 https://github.com/Lycee-Experimental/django-lxp/blob/main/inscription/urls.py</p>
-<div class="highlight"><pre><span></span><code><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">path</span><span class="p">(</span><span class="s1">'inscriptions'</span><span class="p">,</span> <span class="n">login_required</span><span class="p">(</span><span class="n">InscriptionRechercheView</span><span class="o">.</span><span class="n">as_view</span><span class="p">()),</span> <span class="n">name</span><span class="o">=</span><span class="s2">"inscriptions"</span><span class="p">),</span>
-    <span class="n">path</span><span class="p">(</span><span class="s1">'inscriptions_table'</span><span class="p">,</span> <span class="n">login_required</span><span class="p">(</span><span class="n">InscriptionTableView</span><span class="o">.</span><span class="n">as_view</span><span class="p">()),</span> <span class="n">name</span><span class="o">=</span><span class="s2">"inscriptions_table"</span><span class="p">),</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;inscriptions&#39;</span><span class="p">,</span> <span class="n">login_required</span><span class="p">(</span><span class="n">InscriptionRechercheView</span><span class="o">.</span><span class="n">as_view</span><span class="p">()),</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;inscriptions&quot;</span><span class="p">),</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;inscriptions_table&#39;</span><span class="p">,</span> <span class="n">login_required</span><span class="p">(</span><span class="n">InscriptionTableView</span><span class="o">.</span><span class="n">as_view</span><span class="p">()),</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;inscriptions_table&quot;</span><span class="p">),</span>
 </code></pre></div>
 <ul>
 <li>
@@ -3998,9 +3997,9 @@ https://github.com/Lycee-Experimental/django-lxp/blob/main/inscription/urls.py</
 <h2 id="views-des-listing">Views des listing<a class="headerlink" href="#views-des-listing" title="Permanent link">⚓︎</a></h2>
 <p>Comme tout ce qui s'affiche avec Django, nos 2 vues liées aux URLs précédentes sont définies dans le fichier <code>django-lxp/inscription/views.py</code>
 https://github.com/Lycee-Experimental/django-lxp/blob/main/inscription/views.py</p>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">InscriptionRechercheView</span><span class="p">(</span><span class="n">PagedFilteredTableView</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">""" Une view pour afficher un tableau de recherche dans la base.</span>
-<span class="sd">    """</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">InscriptionRechercheView</span><span class="p">(</span><span class="n">PagedFilteredTableView</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Une view pour afficher un tableau de recherche dans la base.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># La classe de filtrage définie dans django-lxp/inscription/filters.py</span>
     <span class="n">filter_class</span> <span class="o">=</span> <span class="n">ListeEleveFiltre</span>
     <span class="c1"># La base dans laquelle on fait nos recherches</span>
@@ -4008,7 +4007,7 @@ https://github.com/Lycee-Experimental/django-lxp/blob/main/inscription/views.py<
     <span class="c1"># Le tableau à afficher défini dans django-lxp/inscription/tables.py</span>
     <span class="n">table_class</span> <span class="o">=</span> <span class="n">ListeEleveTableau</span>
     <span class="c1"># Le template de la page web à afficher : django-lxp/template/inscription/recherche_eleves.html</span>
-    <span class="n">template_name</span> <span class="o">=</span> <span class="s2">"inscription/recherche_eleves.html"</span>
+    <span class="n">template_name</span> <span class="o">=</span> <span class="s2">&quot;inscription/recherche_eleves.html&quot;</span>
     <span class="c1"># Le formulaire pour effectuer des recherches django-lxp/inscription/forms.py</span>
     <span class="n">formhelper_class</span> <span class="o">=</span> <span class="n">ListeEleveForm</span>
 
@@ -4018,10 +4017,10 @@ https://github.com/Lycee-Experimental/django-lxp/blob/main/inscription/views.py<
 
 
 <span class="k">class</span> <span class="nc">InscriptionTableView</span><span class="p">(</span><span class="n">PagedFilteredTableView</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">""" Une view pour afficher un tableau à imprimer.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Une view pour afficher un tableau à imprimer.</span>
 <span class="sd">    On y effectue les recherches directement avec un requette GET </span>
 <span class="sd">    ex : http://localhost:8000/inscriptions_table?nom=LeNomRecherché</span>
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># La classe de filtrage définie dans django-lxp/inscription/filters.py</span>
     <span class="n">filter_class</span> <span class="o">=</span> <span class="n">ListeEleveFiltre</span>
     <span class="c1"># La base dans laquelle on fait nos recherches</span>
@@ -4029,7 +4028,7 @@ https://github.com/Lycee-Experimental/django-lxp/blob/main/inscription/views.py<
     <span class="c1"># Le tableau à afficher défini dans django-lxp/inscription/tables.py</span>
     <span class="n">table_class</span> <span class="o">=</span> <span class="n">ListeEleveTableau</span>
     <span class="c1"># Le template de la page web à afficher : django-lxp/template/inscription/filtre_eleves.html</span>
-    <span class="n">template_name</span> <span class="o">=</span> <span class="s2">"inscription/filtre_eleves.html"</span>
+    <span class="n">template_name</span> <span class="o">=</span> <span class="s2">&quot;inscription/filtre_eleves.html&quot;</span>
     <span class="n">formhelper_class</span> <span class="o">=</span> <span class="n">ListeEleveForm</span>
 
     <span class="k">def</span> <span class="nf">get_queryset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -4052,26 +4051,26 @@ Par exemple : http://localhost:8000/inscriptions_table?gb_annee_en_cours=1</li>
 <li>Créer une page interface avec des liens pour générer directement les pages par GB, par niveau, par spé...</li>
 </ul>
 </div>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ListeEleveFiltre</span><span class="p">(</span><span class="n">django_filters</span><span class="o">.</span><span class="n">FilterSet</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Classe facilitant le filtrage de la liste d'élève.</span>
-<span class="sd">    """</span>
-    <span class="n">nom</span> <span class="o">=</span> <span class="n">django_filters</span><span class="o">.</span><span class="n">CharFilter</span><span class="p">(</span><span class="n">lookup_expr</span><span class="o">=</span><span class="s1">'icontains'</span><span class="p">)</span>
-    <span class="c1"># Définit la lookup expression, pour que la recherche fonctionne même si le terme n'est pas exact</span>
-    <span class="n">prenom</span> <span class="o">=</span> <span class="n">django_filters</span><span class="o">.</span><span class="n">CharFilter</span><span class="p">(</span><span class="n">lookup_expr</span><span class="o">=</span><span class="s1">'icontains'</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">ListeEleveFiltre</span><span class="p">(</span><span class="n">django_filters</span><span class="o">.</span><span class="n">FilterSet</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Classe facilitant le filtrage de la liste d&#39;élève.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">nom</span> <span class="o">=</span> <span class="n">django_filters</span><span class="o">.</span><span class="n">CharFilter</span><span class="p">(</span><span class="n">lookup_expr</span><span class="o">=</span><span class="s1">&#39;icontains&#39;</span><span class="p">)</span>
+    <span class="c1"># Définit la lookup expression, pour que la recherche fonctionne même si le terme n&#39;est pas exact</span>
+    <span class="n">prenom</span> <span class="o">=</span> <span class="n">django_filters</span><span class="o">.</span><span class="n">CharFilter</span><span class="p">(</span><span class="n">lookup_expr</span><span class="o">=</span><span class="s1">&#39;icontains&#39;</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">"""Bidouille pour redéfinir le label des champs du formulaire de recherche."""</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Bidouille pour redéfinir le label des champs du formulaire de recherche.&quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">ListeEleveFiltre</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">filters</span><span class="p">[</span><span class="s1">'nom'</span><span class="p">]</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="s2">"Nom"</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">filters</span><span class="p">[</span><span class="s1">'prenom'</span><span class="p">]</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="s2">"Prénom"</span> 
-        <span class="bp">self</span><span class="o">.</span><span class="n">filters</span><span class="p">[</span><span class="s1">'gb_annee_en_cours'</span><span class="p">]</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="s2">"GB"</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">filters</span><span class="p">[</span><span class="s1">&#39;nom&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Nom&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">filters</span><span class="p">[</span><span class="s1">&#39;prenom&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Prénom&quot;</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">filters</span><span class="p">[</span><span class="s1">&#39;gb_annee_en_cours&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;GB&quot;</span> 
 
     <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">"""Définition des champs de la base élève dans lesquels effectuer la recherche"""</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Définition des champs de la base élève dans lesquels effectuer la recherche&quot;&quot;&quot;</span>
         <span class="n">model</span> <span class="o">=</span> <span class="n">BaseEleve</span>
-        <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'gb_annee_en_cours'</span><span class="p">,</span><span class="s1">'nom'</span><span class="p">,</span><span class="s1">'prenom'</span><span class="p">]</span>
-        <span class="n">order_by</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"nom"</span><span class="p">]</span>
+        <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;gb_annee_en_cours&#39;</span><span class="p">,</span><span class="s1">&#39;nom&#39;</span><span class="p">,</span><span class="s1">&#39;prenom&#39;</span><span class="p">]</span>
+        <span class="n">order_by</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;nom&quot;</span><span class="p">]</span>
 </code></pre></div>
 <h2 id="formulaire-de-recherche">Formulaire de recherche<a class="headerlink" href="#formulaire-de-recherche" title="Permanent link">⚓︎</a></h2>
 <p>Comme tout formulaire, on le retrouve dans <code>django-lxp/inscription/forms.py</code></p>
@@ -4080,35 +4079,35 @@ Par exemple : http://localhost:8000/inscriptions_table?gb_annee_en_cours=1</li>
 <p class="admonition-title">Todo</p>
 <p>Il faudrait ajouter d'autres champs de recherche et travailler à leur mise en forme. </p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ListeEleveForm</span><span class="p">(</span><span class="n">FormHelper</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">ListeEleveForm</span><span class="p">(</span><span class="n">FormHelper</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Formulaire pour faire des recherches dans le tableau</span>
 <span class="sd">    Voir https://django-crispy-forms.readthedocs.io/en/latest/form_helper.html</span>
-<span class="sd">    """</span>
-    <span class="c1">#form_class = "form-inline"</span>
-    <span class="n">form_class</span> <span class="o">=</span> <span class="s2">"form-horizontal"</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">#form_class = &quot;form-inline&quot;</span>
+    <span class="n">form_class</span> <span class="o">=</span> <span class="s2">&quot;form-horizontal&quot;</span>
     <span class="n">use_custom_control</span> <span class="o">=</span> <span class="kc">True</span>
-    <span class="n">form_id</span> <span class="o">=</span> <span class="s2">"inscription-search-form"</span>
-    <span class="n">form_method</span> <span class="o">=</span> <span class="s2">"GET"</span>
+    <span class="n">form_id</span> <span class="o">=</span> <span class="s2">&quot;inscription-search-form&quot;</span>
+    <span class="n">form_method</span> <span class="o">=</span> <span class="s2">&quot;GET&quot;</span>
     <span class="n">form_tag</span> <span class="o">=</span> <span class="kc">True</span>
-    <span class="n">label_class</span> <span class="o">=</span> <span class="s1">'col-md-3'</span>
-    <span class="n">field_class</span> <span class="o">=</span> <span class="s1">'col-md-9'</span>
+    <span class="n">label_class</span> <span class="o">=</span> <span class="s1">&#39;col-md-3&#39;</span>
+    <span class="n">field_class</span> <span class="o">=</span> <span class="s1">&#39;col-md-9&#39;</span>
     <span class="n">html5_required</span> <span class="o">=</span> <span class="kc">True</span>
     <span class="c1">#form_show_labels = False</span>
-    <span class="c1">#form_style = 'inline'</span>
-    <span class="c1">#field_template = 'bootstrap4/layout/inline_field.html'</span>
+    <span class="c1">#form_style = &#39;inline&#39;</span>
+    <span class="c1">#field_template = &#39;bootstrap4/layout/inline_field.html&#39;</span>
     <span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span>
                 <span class="n">Fieldset</span><span class="p">(</span>
-                  <span class="s2">"&lt;span class='fa fa-search'&gt;&lt;/span&gt; "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">"Rechercher des élèves"</span><span class="p">)),</span>
+                  <span class="s2">&quot;&lt;span class=&#39;fa fa-search&#39;&gt;&lt;/span&gt; &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Rechercher des élèves&quot;</span><span class="p">)),</span>
                     <span class="n">Div</span><span class="p">(</span>
-                        <span class="s2">"gb_annee_en_cours"</span><span class="p">,</span>
-                        <span class="s2">"nom"</span><span class="p">,</span>
-                        <span class="s2">"prenom"</span><span class="p">,</span>
-                        <span class="n">css_class</span><span class="o">=</span><span class="s1">'row'</span> 
+                        <span class="s2">&quot;gb_annee_en_cours&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;nom&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;prenom&quot;</span><span class="p">,</span>
+                        <span class="n">css_class</span><span class="o">=</span><span class="s1">&#39;row&#39;</span> 
                     <span class="p">),</span>
                     <span class="n">FormActions</span><span class="p">(</span>
-                        <span class="n">Submit</span><span class="p">(</span><span class="s2">"submit"</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s2">"Filtrer"</span><span class="p">)),</span>
-                        <span class="n">css_class</span><span class="o">=</span><span class="s2">"text-right align-self-center"</span><span class="p">,</span>
+                        <span class="n">Submit</span><span class="p">(</span><span class="s2">&quot;submit&quot;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Filtrer&quot;</span><span class="p">)),</span>
+                        <span class="n">css_class</span><span class="o">=</span><span class="s2">&quot;text-right align-self-center&quot;</span><span class="p">,</span>
                     <span class="p">),</span>
                 <span class="p">)</span>
             <span class="p">)</span>
@@ -4121,26 +4120,26 @@ https://github.com/Lycee-Experimental/django-lxp/blob/main/inscription/tables.py
 <p class="admonition-title">Todo</p>
 <p>Travailler l'allure du tableau et les champs à afficher (niveau, spé, teléphone, email...). Eventuellement créer d'autres tableaux selon les informations que l'on souhaite afficher (peut-être pas les même pour les GB, le GN...).</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ListeEleveTableau</span><span class="p">(</span><span class="n">tables</span><span class="o">.</span><span class="n">Table</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""Affiche le tableau de recherche des inscrit.e.s."""</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">ListeEleveTableau</span><span class="p">(</span><span class="n">tables</span><span class="o">.</span><span class="n">Table</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Affiche le tableau de recherche des inscrit.e.s.&quot;&quot;&quot;</span>
     <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
-        <span class="c1"># L'allure du tableau, on utilise celui de bootstrap4</span>
-        <span class="n">template_name</span> <span class="o">=</span> <span class="s2">"django_tables2/bootstrap4.html"</span>
+        <span class="c1"># L&#39;allure du tableau, on utilise celui de bootstrap4</span>
+        <span class="n">template_name</span> <span class="o">=</span> <span class="s2">&quot;django_tables2/bootstrap4.html&quot;</span>
         <span class="c1"># Quelques classes css pour sa customisation</span>
-        <span class="n">attrs</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"class"</span><span class="p">:</span> <span class="s2">"table table-striped table-hover"</span><span class="p">}</span>
+        <span class="n">attrs</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;table table-striped table-hover&quot;</span><span class="p">}</span>
         <span class="c1"># Les données à utiliser</span>
         <span class="n">model</span> <span class="o">=</span> <span class="n">BaseEleve</span>
         <span class="c1"># Les champs à afficher dans le tableau</span>
         <span class="n">fields</span> <span class="o">=</span> <span class="p">(</span>
-            <span class="s2">"nom"</span><span class="p">,</span>
-            <span class="s2">"prenom"</span><span class="p">,</span>
-            <span class="s2">"nom_usage"</span>
+            <span class="s2">&quot;nom&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;prenom&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;nom_usage&quot;</span>
         <span class="p">)</span>
         <span class="c1"># Le texte si aucune entrées</span>
         <span class="n">empty_text</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span>
-            <span class="s2">"Aucun.e élève ne correspond aux critères de recherche."</span>
+            <span class="s2">&quot;Aucun.e élève ne correspond aux critères de recherche.&quot;</span>
         <span class="p">)</span>
-        <span class="c1"># Le nombre d'entrée max par page</span>
+        <span class="c1"># Le nombre d&#39;entrée max par page</span>
         <span class="n">per_page</span> <span class="o">=</span> <span class="mi">50</span>
 </code></pre></div>
 <h2 id="enfin-les-templates-de-nos-pages-pour-mettre-tout-ca">Enfin, les templates de nos pages pour mettre tout ça<a class="headerlink" href="#enfin-les-templates-de-nos-pages-pour-mettre-tout-ca" title="Permanent link">⚓︎</a></h2>
@@ -4152,12 +4151,12 @@ https://github.com/Lycee-Experimental/django-lxp/blob/main/inscription/tables.py
 <p><code>django-lxp/template/inscription/filtre_eleves.html</code></p>
 <p><em>Remarque</em> : Le titre de la page doit être passé à l'url, par exemple :
 http://localhost:8000/inscriptions_table?titre=Groupe de Base 1&amp;gb_annee_en_cours=1</p>
-<div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">extends</span> <span class="s1">'base.html'</span> <span class="cp">%}</span>
+<div class="highlight"><span class="filename">Django/Jinja</span><pre><span></span><code><span class="cp">{%</span> <span class="k">extends</span> <span class="s1">&#39;base.html&#39;</span> <span class="cp">%}</span>
 <span class="cp">{%</span> <span class="k">load</span> <span class="nv">crispy_forms_tags</span> <span class="nv">i18n</span> <span class="cp">%}</span>
 <span class="cp">{%</span> <span class="k">load</span> <span class="nv">render_table</span> <span class="nv">from</span> <span class="nv">django_tables2</span> <span class="cp">%}</span>
 
 <span class="cp">{%</span> <span class="k">block</span> <span class="nv">content</span> <span class="cp">%}</span>
-<span class="x">&lt;div class="container"&gt;</span>
+<span class="x">&lt;div class=&quot;container&quot;&gt;</span>
 <span class="x">  &lt;h1&gt;</span><span class="cp">{{</span> <span class="nv">titre</span> <span class="cp">}}</span><span class="x">&lt;/h1&gt;</span>
 <span class="x">  &lt;hr /&gt;</span>
 
@@ -4168,12 +4167,12 @@ http://localhost:8000/inscriptions_table?titre=Groupe de Base 1&amp;gb_annee_en_
 </code></pre></div>
 <p><code>django-lxp/template/inscription/recherche_eleves.html</code>
 Sans titre, avec le formulaire de recherche crispy en plus</p>
-<div class="highlight"><pre><span></span><code><span class="cp">{%</span> <span class="k">extends</span> <span class="s1">'base.html'</span> <span class="cp">%}</span>
+<div class="highlight"><span class="filename">Django/Jinja</span><pre><span></span><code><span class="cp">{%</span> <span class="k">extends</span> <span class="s1">&#39;base.html&#39;</span> <span class="cp">%}</span>
 <span class="cp">{%</span> <span class="k">load</span> <span class="nv">crispy_forms_tags</span> <span class="nv">i18n</span> <span class="cp">%}</span>
 <span class="cp">{%</span> <span class="k">load</span> <span class="nv">render_table</span> <span class="nv">from</span> <span class="nv">django_tables2</span> <span class="cp">%}</span>
 
 <span class="cp">{%</span> <span class="k">block</span> <span class="nv">content</span> <span class="cp">%}</span>
-<span class="x">&lt;div class="container"&gt;</span>
+<span class="x">&lt;div class=&quot;container&quot;&gt;</span>
 <span class="x">  &lt;h1&gt;Inscriptions au Lycée Expérimental&lt;/h1&gt;</span>
 <span class="x">  &lt;hr /&gt;</span>
 <span class="x">  &lt;br /&gt;</span>
@@ -4183,7 +4182,7 @@ Sans titre, avec le formulaire de recherche crispy en plus</p>
 <span class="x">  </span><span class="cp">{%</span> <span class="k">render_table</span> <span class="nv">table</span> <span class="cp">%}</span>
 <span class="x">&lt;/div&gt;</span>
 <span class="cp">{%</span> <span class="k">endblock</span> <span class="nv">content</span> <span class="cp">%}</span>
-</code></pre></div></div>
+</code></pre></div>
 
 
 

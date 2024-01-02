@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,7 +3856,7 @@
 
   <h1>Enonce</h1>
 
-<div><p>Dans cet exercice, les nombres sont des entiers ou des flottants.</p>
+<p>Dans cet exercice, les nombres sont des entiers ou des flottants.</p>
 <p>Écrire une fonction <code>moyenne</code> renvoyant la moyenne pondérée d’une liste non vide,
 passée en paramètre, de tuples à deux éléments de la forme (<code>valeur</code>,
 <code>coefficient</code>) où <code>valeur</code> et <code>coefficient</code> sont des nombres positifs ou nuls.
@@ -3865,13 +3864,13 @@ Si la somme des coefficients est nulle, la fonction renvoie <code>None</code>, s
 coefficients est non nulle, la fonction renvoie, sous forme de flottant, la moyenne des
 valeurs affectées de leur coefficient.</p>
 <p>Exemple :
-</p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">moyenne</span><span class="p">([(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mf">13.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)])</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">moyenne</span><span class="p">([(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mf">13.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)])</span>
 <span class="mf">9.142857142857142</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">moyenne</span><span class="p">([(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">)])</span>
 <span class="kc">None</span>
-</code></pre></div>
+</code></pre></div></p>
 <p>Dans le premier exemple la moyenne est calculée par la formule :</p>
-<p><span class="arithmatex">\(\dfrac{8 \times 2 + 12 \times 0 + 13,5 \times 1 + 5 \times 0,5}{2+0+1+0,5}\)</span></p></div>
+<p><span class="arithmatex">\(\dfrac{8 \times 2 + 12 \times 0 + 13,5 \times 1 + 5 \times 0,5}{2+0+1+0,5}\)</span></p>
 
 
 

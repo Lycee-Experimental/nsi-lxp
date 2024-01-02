@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3932,7 +3931,7 @@
   
 
 
-<div><h1 id="composants-integres-dun-systeme-sur-puce">Composants intégrés d'un système sur puce<a class="headerlink" href="#composants-integres-dun-systeme-sur-puce" title="Permanent link">⚓︎</a></h1>
+<h1 id="composants-integres-dun-systeme-sur-puce">Composants intégrés d'un système sur puce<a class="headerlink" href="#composants-integres-dun-systeme-sur-puce" title="Permanent link">⚓︎</a></h1>
 <details class="conclu">
 <summary>Programme</summary>
 <table>
@@ -3954,23 +3953,23 @@
 </details>
 <h2 id="de-leniac-au-telephone-portable">De l'ENIAC au téléphone portable<a class="headerlink" href="#de-leniac-au-telephone-portable" title="Permanent link">⚓︎</a></h2>
 <p>Le premier ordinateur entièrement électronique capable, en principe, de résoudre tous les problèmes calculatoires par la saisie d'un programme informatique est l'ENIAC (Electronic Numerical Integrator And Computer) construit en 1945.</p>
-<p><img alt="" class="center" src="../Images/eniac.jpg"></p>
+<p><img alt="" class="center" src="../Images/eniac.jpg" /></p>
 <p>Sa capacité est de 20 nombres à 10 chiffres signés permettant chacun de réaliser 5 000 additions simples chaque seconde (pour un total de 100 000 additions par seconde). Il ne peut en revanche gérer que 357 multiplications ou 38 divisions par seconde. Cette puissance de calcul lui a permi en 1949 de calculer 2000 décimales de pi en 70 heures. Son poids est de 30 tonnes et il occupe la surface d'une maison individuelle ! Sa consommation est de 150 kW, soit l'équivalent de 100 bouilloires électriques branchées simultanément ! Il faudrait la puissance électrique disponible dans une vingtaine de maisons individuelles pour l'alimenter.</p>
 <p>Dans les années 1960, les missions Apollo qui ont envoyé des hommes sur la lune ont imposé une puissance de calcul disponible dans un espace restreint. Cela a conduit à la conception de l'ordinateur AGC (Apollo Guidance Computer).</p>
-<p><img alt="" class="center" src="../Images/agc.jpg"></p>
+<p><img alt="" class="center" src="../Images/agc.jpg" /></p>
 <p>Celui-ci ne pèse que 32kg et possède une consommation électrique suffisemment faible pour être embarqué dans une capsule spatiale fonctionnant sur batteries. Ces progrès ont été possibles grâce notamment au recours aux circuits intégrés (CI) pour réaliser des fonctions logiques : Il a fallu plus de 5 000 portes NOR pour constituer l'unité de calcul de l'AGC. Voici une photo de l'une d'entre elles :</p>
-<p><img alt="" class="center" src="../Images/nor-die.jpg"></p>
+<p><img alt="" class="center" src="../Images/nor-die.jpg" /></p>
 <p>L'AGC possède une mémoire de stockage de 72ko et une mémoire de travail (RAM) de 2ko.</p>
 <p>Le premier microprocesseur commercialisé est apparu en 1971 : c'est le 4004 d'Intel.</p>
-<p><img alt="" class="center" src="../Images/Intel_C4004.jpg"></p>
+<p><img alt="" class="center" src="../Images/Intel_C4004.jpg" /></p>
 <p>Il intègre dans une seule puce 2300 transistors ce qui lui donne une puissance de calcul comparable à l'ENIAC !!</p>
 <p>En 1975 est apparu le premier microprocesseur bon marché permettant l'essort des ordinateurs personnels : le 6502 de MOS. Ce microprocesseur a équipé le tout premier ordinateur APPLE (APPLE 1) et est encore fabriqué de nos jours ! Le site <a href="http://visual6502.org/JSSim/index.html" target="_blank">Visual 6502</a> permet de voir le fonctionnement interne de ce processeur lors de l'exécution d'un programme.</p>
 <p>A partir des années 1980, l'architecture des ordinateurs n'a plus beaucoup évolué. Les puces ont intégré de plus en plus de composants leur permettant de réaliser des opérations plus complexes. La miniaturisation de la gravure de la puce a permis une montée de la fréquence d'horloge permettant aux ordinateurs d'aller plus vite ainsi qu'une consommation d'énergie moindre.</p>
 <p>Les puces sont devenues tellement miniaturisées que l'on trouve maintenant sur une seule puce un système embarqué complet réalisant toutes les fonctions d'un ordinateur. La carte BBC microbit en est un exemple :</p>
-<p><img alt="" class="center" src="../Images/BBC_Microbit.jpg"></p>
+<p><img alt="" class="center" src="../Images/BBC_Microbit.jpg" /></p>
 <p>Cette carte embarque un microcontrolleur qui est un système complet tenant dans une seule puce : SoC (System On Chip). On y trouve de la mémoire RAM, de la mémpore FLASH, un microprocesseur, des périphériques d'interface, un circuit radio.</p>
 <p>Voici le schéma de circuit d'un SoC : </p>
-<p><img alt="" class="center" src="../Images/soc.jpg"></p>
+<p><img alt="" class="center" src="../Images/soc.jpg" /></p>
 <p>Vous pouvez remarquer que l'on retrouve bien sur ce schéma un CPU et de la mémoire (on a différents types de mémoires, mais ce sujet ne sera pas abordé ici).</p>
 <p>Outre leur taille, les Soc ont d'autres avantages par rapport aux systèmes "classiques" (carte mère + CPU + carte graphique...) :</p>
 <ul>
@@ -3979,7 +3978,7 @@
 <li>Vu les distances réduites entre, par exemple, le CPU et la mémoire, les données circulent beaucoup plus vites, ce qui permet d'améliorer les performances. En effet, dans les systèmes "classiques" les bus (si nécessaire voir le cours de première : Modèle d'architecture de von Neumann à propos des bus) sont souvent des "goulots d'étranglement" en termes de performances à cause de la vitesse de circulation des données.</li>
 </ul>
 <p>Une autre catégorie de l'utilisation de ces puces intégrées se trouve dans les SBC (Single Board Computers) ou ordinateurs sur carte unique dont le représentant le plus célèbre est probablement le Raspberry Pi.</p>
-<p><img alt="" class="center" src="../Images/raspberry-pi-4.jpg"></p>
+<p><img alt="" class="center" src="../Images/raspberry-pi-4.jpg" /></p>
 <p>Cette carte est assez puissante pour faire fonctionner le système d'exploitation Linux et être utilisé comme ordinateur de bureau. Il est néanmoins le plus souvent utilisé en mini serveur ou sur des projets IoT (Internet of Things : Internet des Objets).</p>
 <p>L'aboutissement de toute cette miniaturisation est le téléphone portable qui intègre tout ce que la technologie peut nous apporter : un microprocesseur puissant, de la mémoire, des interfaces de communication rapides (4G, 5g, Wifi...), un contrôleur graphique digne d'une console de jeu, tout cela fonctionnant sur batterie avec une durée de fonctionnement de plusieurs heures.</p>
 <h2 id="fonctionnement-dun-telephone-portable">Fonctionnement d'un téléphone portable<a class="headerlink" href="#fonctionnement-dun-telephone-portable" title="Permanent link">⚓︎</a></h2>
@@ -3991,10 +3990,10 @@
 </ul>
 <p>Le microprocesseur n'est qu'un composant du SoC qui est au coeur du téléphone. On peut voir un SoC comme un PC miniaturisé à l’extrême. Il comprend donc des composants et contrôleurs lui permettant de gérer tous les équipements de votre smartphone, qu’il s’agisse de l’appareil photo, de la mémoire interne, ou encore des modules radio.</p>
 <p>Voici la photo d'un iPhone 4S démonté. Comme vous le voyez, le nombre de composants est très réduit au regard des fonctionaltés ! La puce principale SoC est la puce A5.</p>
-<p><img alt="" class="center" src="../Images/iphone.png"></p>
-<p><img alt="" class="center" src="../Images/CM.png"></p>
-<p><img alt="" class="center" src="../Images/flash.png"></p>
-<p><img alt="" class="center" src="../Images/A5.png"></p>
+<p><img alt="" class="center" src="../Images/iphone.png" /></p>
+<p><img alt="" class="center" src="../Images/CM.png" /></p>
+<p><img alt="" class="center" src="../Images/flash.png" /></p>
+<p><img alt="" class="center" src="../Images/A5.png" /></p>
 <p><strong>Exercice 1</strong></p>
 <ol>
 <li>Quel est le nom du SoC de votre smartphone?</li>
@@ -4028,7 +4027,7 @@
 
 <p>On peut réaliser des taches bien plus complexes comme par exemple fabriquer un microprocesseur ! Vous trouverez <a href="https://github.com/Arlet/verilog-6502" target="_blank">ici</a> un projet reconstituant un microprocesseur 6502 sur un FPGA à l'aide du langage verilog. Ce qui a demandé des années de développement pour une équipe dans les années 1970 peut à présent être reproduit avec 1300 lignes de code sur un FPGA à 50 € !</p>
 <p>La fabrication d'un système intégré sur une puce est une opération extrèmement complexe. Néanmoins, la technologie actuelle apporte des outils rendant possible la conception de système toujours plus sophistiqués. C'est ainsi que nous voyons années après années dans nos poches des téléphones aux capacités toujours plus étendues.</p>
-<p>La question est : avons nous vraiment besoin de toute cette puissance et cette sophistication ?</p></div>
+<p>La question est : avons nous vraiment besoin de toute cette puissance et cette sophistication ?</p>
 
 
 

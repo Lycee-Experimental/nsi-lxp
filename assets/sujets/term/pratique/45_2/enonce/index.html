@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,18 +3856,18 @@
 
   <h1>Enonce</h1>
 
-<div><p>L’objectif de cet exercice est d’écrire deux fonctions récursives <code>dec_to_bin</code> et
+<p>L’objectif de cet exercice est d’écrire deux fonctions récursives <code>dec_to_bin</code> et
 <code>bin_to_dec</code> assurant respectivement la conversion de l’écriture décimale d’un nombre
 entier vers son écriture en binaire et, réciproquement, la conversion de l’écriture en
 binaire d’un nombre vers son écriture décimale.</p>
 <p>Dans cet exercice, on s’interdit l’usage des fonctions Python <code>bin</code> et <code>int</code>.</p>
 <p>On rappelle sur l’exemple ci-dessous une façon d’obtenir l’écriture en binaire du
 nombre 25 :</p>
-<p><span class="arithmatex">\(25 = 1 + 2 \times 12\)</span><br>
-<span class="arithmatex">\(\phantom{25} = 1 + 2 \times 12\)</span><br>
-<span class="arithmatex">\(\phantom{25} = 1 + 2 (0 + 2 \times 6)\)</span><br>
-<span class="arithmatex">\(\phantom{25} = 1 + 2 (0 + 2 (0 + 2 \times 3))\)</span>   <br>
-<span class="arithmatex">\(\phantom{25} = 1 + 2 (0 + 2 (0 + 2 (1 + 2 \times 1)))\)</span> <br>
+<p><span class="arithmatex">\(25 = 1 + 2 \times 12\)</span><br />
+<span class="arithmatex">\(\phantom{25} = 1 + 2 \times 12\)</span><br />
+<span class="arithmatex">\(\phantom{25} = 1 + 2 (0 + 2 \times 6)\)</span><br />
+<span class="arithmatex">\(\phantom{25} = 1 + 2 (0 + 2 (0 + 2 \times 3))\)</span>   <br />
+<span class="arithmatex">\(\phantom{25} = 1 + 2 (0 + 2 (0 + 2 (1 + 2 \times 1)))\)</span> <br />
 <span class="arithmatex">\(\phantom{25} = 1 \times 2^0 + 0 \times 2^1 + 0 \times 2^2 + 1 \times 2^3 + 1 \times 2^4\)</span>   </p>
 <p>L'écriture binaire de 25 est donc <code>11001</code>.</p>
 <p>0n rappelle également que :</p>
@@ -3887,16 +3886,16 @@ On précise que la fonction récursive <code>dec_to_bin</code> prend en paramèt
 et renvoie une chaîne de caractères contenant l’écriture en binaire du nombre passé en
 paramètre.</p>
 <p>Exemple :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">dec_to_bin</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
-<span class="s1">'11001'</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">dec_to_bin</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+<span class="s1">&#39;11001&#39;</span>
 </code></pre></div>
 <p>La fonction récursive <code>bin_to_dec</code> prend en paramètre une chaîne de caractères
 représentant l’écriture d’un nombre en binaire et renvoie l’écriture décimale de ce
 nombre.</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">bin_to_dec</span><span class="p">(</span><span class="s1">'101010'</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">bin_to_dec</span><span class="p">(</span><span class="s1">&#39;101010&#39;</span><span class="p">)</span>
 <span class="mi">42</span>
 </code></pre></div>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3921,17 +3920,17 @@ nombre.</p>
         <span class="k">return</span> <span class="n">dec_to_bin</span><span class="p">(</span><span class="o">...</span><span class="p">)</span> <span class="o">+</span> <span class="o">...</span>
 
 <span class="k">def</span> <span class="nf">bin_to_dec</span><span class="p">(</span><span class="n">nb_bin</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">nb_bin</span> <span class="o">==</span> <span class="s1">'0'</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">nb_bin</span> <span class="o">==</span> <span class="s1">&#39;0&#39;</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">0</span>
     <span class="k">elif</span> <span class="o">...</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">1</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">nb_bin</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'0'</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">nb_bin</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;0&#39;</span><span class="p">:</span>
             <span class="n">bit_droit</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">bit_droit</span> <span class="o">=</span> <span class="o">...</span>
         <span class="k">return</span> <span class="o">...</span> <span class="o">*</span> <span class="n">bin_to_dec</span><span class="p">(</span><span class="n">nb_bin</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="o">...</span>
-</code></pre></div></td></tr></table></div></div>
+</code></pre></div></td></tr></table></div>
 
 
 

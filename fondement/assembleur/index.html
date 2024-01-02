@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3951,7 +3950,7 @@
   
 
 
-<div><h1 id="de-lassembleur-au-langage-machine">De l'assembleur au langage machine<a class="headerlink" href="#de-lassembleur-au-langage-machine" title="Permanent link">⚓︎</a></h1>
+<h1 id="de-lassembleur-au-langage-machine">De l'assembleur au langage machine<a class="headerlink" href="#de-lassembleur-au-langage-machine" title="Permanent link">⚓︎</a></h1>
 <h2 id="le-langage-machine">Le langage machine<a class="headerlink" href="#le-langage-machine" title="Permanent link">⚓︎</a></h2>
 <p>Comme nous l'avons vu, au chapitre précédent, des <strong>instructions machines</strong> sont exécutées par l'<strong>Unité de Commande</strong>. Ainsi les programmes exécutés par les ordinateurs sont constitués de suites d'instructions, elles même réalisables au moyen de combinaisons de <strong>portes logiques</strong>. </p>
 <p>Toutefois, le CPU est incapable d'exécuter directement des programmes écrits, par exemple, en Python. En effet, comme tous les autres constituants d'un ordinateur, le CPU gère uniquement 2 états (toujours symbolisés par <code>1</code> et <code>0</code>), les instructions exécutées au niveau du CPU doivent donc préalablement être codées en binaire. </p>
@@ -3982,7 +3981,7 @@
 </tr>
 </tbody>
 </table>
-<p></p><center>Exemple d'instruction machine</center>
+<p><center>Exemple d'instruction machine</center></p>
 <h3 id="les-codes-operations">Les codes opérations<a class="headerlink" href="#les-codes-operations" title="Permanent link">⚓︎</a></h3>
 <p>Les instructions machines sont relativement basiques (on parle d'instructions <strong>de bas niveau</strong>), voici quelques exemples :</p>
 <ul>
@@ -4020,48 +4019,48 @@
 <ul>
 <li>
 <p>instructions <strong>arithmétiques</strong> :
-</p><div class="highlight"><pre><span></span><code><span class="nf">addl</span><span class="w"> </span><span class="err">&lt;</span><span class="no">rA</span><span class="err">&gt;</span><span class="p">,</span><span class="w"> </span><span class="err">&lt;</span><span class="no">rB</span><span class="err">&gt;</span><span class="w"> </span><span class="c1">; Addition : rB = rB + rA</span>
+<div class="highlight"><span class="filename">GAS</span><pre><span></span><code><span class="nf">addl</span><span class="w"> </span><span class="err">&lt;</span><span class="no">rA</span><span class="err">&gt;</span><span class="p">,</span><span class="w"> </span><span class="err">&lt;</span><span class="no">rB</span><span class="err">&gt;</span><span class="w"> </span><span class="c1">; Addition : rB = rB + rA</span>
 <span class="nf">subl</span><span class="w"> </span><span class="err">&lt;</span><span class="no">rA</span><span class="err">&gt;</span><span class="p">,</span><span class="w"> </span><span class="err">&lt;</span><span class="no">rB</span><span class="err">&gt;</span><span class="w"> </span><span class="c1">; Soustraction : rB = rB - rA </span>
 <span class="nf">andl</span><span class="w"> </span><span class="err">&lt;</span><span class="no">rA</span><span class="err">&gt;</span><span class="p">,</span><span class="w"> </span><span class="err">&lt;</span><span class="no">rB</span><span class="err">&gt;</span><span class="w"> </span><span class="c1">; ET bit à bit : rB = rB and rA</span>
 <span class="nf">xorl</span><span class="w"> </span><span class="err">&lt;</span><span class="no">rA</span><span class="err">&gt;</span><span class="p">,</span><span class="w"> </span><span class="err">&lt;</span><span class="no">rB</span><span class="err">&gt;</span><span class="w"> </span><span class="c1">; Ou exclusif : rB = rB xor rA</span>
-</code></pre></div>
+</code></pre></div></p>
 </li>
 <li>
 <p>instructions de <strong>transfert de données</strong> : 
-</p><div class="highlight"><pre><span></span><code><span class="nf">rrmov1</span><span class="w"> </span><span class="err">&lt;</span><span class="no">rA</span><span class="err">&gt;</span><span class="p">,</span><span class="w"> </span><span class="err">&lt;</span><span class="no">rB</span><span class="err">&gt;</span><span class="w"> </span><span class="c1">; Copie d'une valeur d'un registre à un autre</span>
-<span class="nf">mrmovl</span><span class="w"> </span><span class="err">&lt;</span><span class="no">D</span><span class="err">&gt;</span><span class="p">,</span><span class="w"> </span><span class="err">&lt;</span><span class="no">rA</span><span class="err">&gt;</span><span class="w"> </span><span class="c1">; Copie d'une valeur de l'adresse D de la mémoire au registre rA</span>
-<span class="nf">rmmovl</span><span class="w"> </span><span class="err">&lt;</span><span class="no">rA</span><span class="err">&gt;</span><span class="p">,</span><span class="w"> </span><span class="err">&lt;</span><span class="no">D</span><span class="err">&gt;</span><span class="w"> </span><span class="c1">; Copie d'une valeur du registre rA à l'adresse D de la mémoire</span>
-<span class="nf">irmovl</span><span class="w"> </span><span class="err">&lt;</span><span class="no">V</span><span class="err">&gt;</span><span class="p">,</span><span class="w"> </span><span class="err">&lt;</span><span class="no">rA</span><span class="err">&gt;</span><span class="w"> </span><span class="c1">; Copie d'une valeur immediate V à l'adresse  &lt;rA&gt; de la mémoire</span>
-</code></pre></div>
+<div class="highlight"><span class="filename">GAS</span><pre><span></span><code><span class="nf">rrmov1</span><span class="w"> </span><span class="err">&lt;</span><span class="no">rA</span><span class="err">&gt;</span><span class="p">,</span><span class="w"> </span><span class="err">&lt;</span><span class="no">rB</span><span class="err">&gt;</span><span class="w"> </span><span class="c1">; Copie d&#39;une valeur d&#39;un registre à un autre</span>
+<span class="nf">mrmovl</span><span class="w"> </span><span class="err">&lt;</span><span class="no">D</span><span class="err">&gt;</span><span class="p">,</span><span class="w"> </span><span class="err">&lt;</span><span class="no">rA</span><span class="err">&gt;</span><span class="w"> </span><span class="c1">; Copie d&#39;une valeur de l&#39;adresse D de la mémoire au registre rA</span>
+<span class="nf">rmmovl</span><span class="w"> </span><span class="err">&lt;</span><span class="no">rA</span><span class="err">&gt;</span><span class="p">,</span><span class="w"> </span><span class="err">&lt;</span><span class="no">D</span><span class="err">&gt;</span><span class="w"> </span><span class="c1">; Copie d&#39;une valeur du registre rA à l&#39;adresse D de la mémoire</span>
+<span class="nf">irmovl</span><span class="w"> </span><span class="err">&lt;</span><span class="no">V</span><span class="err">&gt;</span><span class="p">,</span><span class="w"> </span><span class="err">&lt;</span><span class="no">rA</span><span class="err">&gt;</span><span class="w"> </span><span class="c1">; Copie d&#39;une valeur immediate V à l&#39;adresse  &lt;rA&gt; de la mémoire</span>
+</code></pre></div></p>
 </li>
 <li>
 <p>instructions de <strong>rupture de séquence</strong> (conditionnels ou pas). Évalue le résultat de la précédente opération arithmétique, que l'on appellera <code>r</code>.
-</p><div class="highlight"><pre><span></span><code><span class="nf">jmp</span><span class="w"> </span><span class="no">label</span><span class="w"> </span><span class="c1">; Se rend au point nommé label (Jump)</span>
+<div class="highlight"><span class="filename">GAS</span><pre><span></span><code><span class="nf">jmp</span><span class="w"> </span><span class="no">label</span><span class="w"> </span><span class="c1">; Se rend au point nommé label (Jump)</span>
 <span class="nf">je</span><span class="w"> </span><span class="no">label</span><span class="w"> </span><span class="c1">; Jump si r = 0 </span>
 <span class="nf">jne</span><span class="w"> </span><span class="no">label</span><span class="w"> </span><span class="c1">; Jump si r != 0</span>
 <span class="nf">jg</span><span class="w"> </span><span class="no">label</span><span class="w"> </span><span class="c1">; Jump si r &gt; 0</span>
 <span class="nf">jge</span><span class="w"> </span><span class="no">label</span><span class="w"> </span><span class="c1">; Jump si r &gt;= 0</span>
 <span class="nf">jl</span><span class="w"> </span><span class="no">label</span><span class="w"> </span><span class="c1">; Jump si r &lt; 0</span>
 <span class="nf">jle</span><span class="w"> </span><span class="no">label</span><span class="w"> </span><span class="c1">; Jump si r &lt;= 0</span>
-</code></pre></div>
+</code></pre></div></p>
 </li>
 <li>
 <p>gestion de la pile :
-</p><div class="highlight"><pre><span></span><code><span class="nf">pushl</span><span class="w"> </span><span class="nv">%eax</span><span class="w">    </span><span class="c1">; Empile la valeur du registre %eax sur la pile</span>
+<div class="highlight"><span class="filename">GAS</span><pre><span></span><code><span class="nf">pushl</span><span class="w"> </span><span class="nv">%eax</span><span class="w">    </span><span class="c1">; Empile la valeur du registre %eax sur la pile</span>
 <span class="nf">popl</span><span class="w"> </span><span class="nv">%ebx</span><span class="w">    </span><span class="c1">; Dépile la valeur du dessus de la pile et la stocke dans le registre %ebx</span>
-</code></pre></div>
+</code></pre></div></p>
 </li>
 <li>
 <p>appel/retour de fonction : 
-</p><div class="highlight"><pre><span></span><code><span class="nf">call</span><span class="w"> </span><span class="no">label</span><span class="w"> </span><span class="c1">; Execute la fonction située au label puis reviens ou il s'était arrêté</span>
-<span class="nf">ret</span><span class="w"> </span><span class="c1">; force le retour au point d'où une fonction à été appelée</span>
-</code></pre></div>
+<div class="highlight"><span class="filename">GAS</span><pre><span></span><code><span class="nf">call</span><span class="w"> </span><span class="no">label</span><span class="w"> </span><span class="c1">; Execute la fonction située au label puis reviens ou il s&#39;était arrêté</span>
+<span class="nf">ret</span><span class="w"> </span><span class="c1">; force le retour au point d&#39;où une fonction à été appelée</span>
+</code></pre></div></p>
 </li>
 <li>
 <p>divers : 
-</p><div class="highlight"><pre><span></span><code><span class="nf">halt</span><span class="w">             </span><span class="c1">; Arrête l'exécution du programme</span>
+<div class="highlight"><span class="filename">GAS</span><pre><span></span><code><span class="nf">halt</span><span class="w">             </span><span class="c1">; Arrête l&#39;exécution du programme</span>
 <span class="nf">nop</span><span class="w">              </span><span class="c1">; Aucune opération (instruction nulle)</span>
-</code></pre></div>
+</code></pre></div></p>
 </li>
 <li>
 <p>Les registres s'écrivent sous la forme : <code>%eax</code>, <code>%ebx</code>...</p>
@@ -4069,11 +4068,11 @@
 </ul>
 <details class="question">
 <summary>Activité 1 - Simulation d'un programme en assembleur</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Démarche</label><label for="__tabbed_1_3">Résultat</label><label for="__tabbed_1_4">Explications</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Démarche</label><label for="__tabbed_1_3">Résultat</label><label for="__tabbed_1_4">Explications</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Étudions le programme <strong>python</strong> ci-dessous :</p>
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 </code></pre></div>
@@ -4082,7 +4081,7 @@
 </div>
 <div class="tabbed-block">
 <p>En <strong>assembleur Y86</strong>, notre programme s'écrirait :</p>
-<div class="highlight"><pre><span></span><code><span class="na">.pos</span><span class="w"> </span><span class="mi">0</span>
+<div class="highlight"><span class="filename">GAS</span><pre><span></span><code><span class="na">.pos</span><span class="w"> </span><span class="mi">0</span>
 <span class="w">    </span><span class="nf">mrmovl</span><span class="w"> </span><span class="no">a</span><span class="p">,</span><span class="w"> </span><span class="nv">%eax</span><span class="w"> </span><span class="c1">;affecte la valeur a (3) au registre %eax</span>
 <span class="w">    </span><span class="nf">mrmovl</span><span class="w"> </span><span class="no">b</span><span class="p">,</span><span class="w"> </span><span class="nv">%ebx</span><span class="w"> </span><span class="c1">;affecte la valeur b (5) au registre %ebx</span>
 <span class="w">    </span><span class="nf">addl</span><span class="w"> </span><span class="nv">%eax</span><span class="p">,</span><span class="w"> </span><span class="nv">%ebx</span><span class="w"> </span><span class="c1">;affecte la somme %eax + %ebx à %ebx</span>
@@ -4099,7 +4098,7 @@
 </div>
 <div class="tabbed-block">
 <p>Sur la partie droite du simulateur, la zone Mémoire contient, après assemblage, la traduction de notre code en langage-machine au format hexadécimal :</p>
-<div class="highlight"><pre><span></span><code>500f1800
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>500f1800
 0000503f
 1c000000
 6003403f
@@ -4109,7 +4108,7 @@
 05000000
 </code></pre></div>
 <p>Ce qui correspond correspond au <strong>langage-machine</strong> binnaire suivant (voir <a href="/premiere/encodage/entier-positif/#le-systeme-hexadecimal">chapitre suivant</a> pour conversions hexa-&gt; bin) : </p>
-<div class="highlight"><pre><span></span><code>01010000 00001111 00011000 00000000
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>01010000 00001111 00011000 00000000
 00000000 00000000 01010000 00111111
 00011100 00000000 00000000 00000000
 01100000 00000011 01000000 00111111
@@ -4120,18 +4119,18 @@
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><div class="video-container"><iframe src="https://www.youtube.com/embed/5xABe90yolM" style="position:relative;width:100%;height:22.172vw" frameborder="0" allowfullscreen alt="type:video"></iframe></div></p>
+<p><img alt="type:video" src="https://www.youtube.com/embed/5xABe90yolM" /></p>
 </div>
 </div>
 </div>
 </details>
 <details class="question">
 <summary>Activité 2 - Réaliser un code en assembleur</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Correction</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Sur la base de l'activité précédente, coder en assembleur la séquence d'instruction suivante :</p>
-<div class="highlight"><pre><span></span><code><span class="n">w</span> <span class="o">=</span> <span class="mi">10</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">w</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">z</span> <span class="o">=</span> <span class="n">w</span> <span class="o">-</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>
@@ -4143,7 +4142,7 @@
 <p><iframe src="/xtra/y86jsv2/index.html" frameborder="0" scrolling="auto" style="width: 100%; height: 550px;"></iframe></p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="na">.pos</span><span class="w"> </span><span class="mi">0</span>
+<div class="highlight"><span class="filename">GAS</span><pre><span></span><code><span class="na">.pos</span><span class="w"> </span><span class="mi">0</span>
 <span class="nf">mrmovl</span><span class="w"> </span><span class="no">x</span><span class="p">,</span><span class="w"> </span><span class="nv">%eax</span>
 <span class="nf">mrmovl</span><span class="w"> </span><span class="no">y</span><span class="p">,</span><span class="w"> </span><span class="nv">%ebx</span>
 <span class="nf">mrmovl</span><span class="w"> </span><span class="no">w</span><span class="p">,</span><span class="w"> </span><span class="nv">%ecx</span>
@@ -4164,26 +4163,26 @@
 </details>
 <details class="question">
 <summary>Activité 3 - Cracker un programme par désassemblage</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:5"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><input id="__tabbed_3_4" name="__tabbed_3" type="radio"><input id="__tabbed_3_5" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">1 - Énoncé</label><label for="__tabbed_3_2">2 - Compilation et exécution</label><label for="__tabbed_3_3">3 - Observation du fichier binaire</label><label for="__tabbed_3_4">4 - Modification du fichier binaire</label><label for="__tabbed_3_5">5 - Bonus : assembleur</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:5"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><input id="__tabbed_3_4" name="__tabbed_3" type="radio" /><input id="__tabbed_3_5" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">1 - Énoncé</label><label for="__tabbed_3_2">2 - Compilation et exécution</label><label for="__tabbed_3_3">3 - Observation du fichier binaire</label><label for="__tabbed_3_4">4 - Modification du fichier binaire</label><label for="__tabbed_3_5">5 - Bonus : assembleur</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>On considère le programme en langage C suivant :</p>
-<div class="highlight"><span class="filename">crackme.c</span><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">"stdio.h"</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">"stdlib.h"</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">"string.h"</span>
+<div class="highlight"><span class="filename">crackme.c</span><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;stdio.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;stdlib.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;string.h&quot;</span>
 
 <span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
 
 <span class="kt">char</span><span class="w"> </span><span class="n">saisie</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
-<span class="n">printf</span><span class="p">(</span><span class="s">"Accès restreint : saisissez votre mot de passe </span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
-<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">saisie</span><span class="p">,</span><span class="s">"LYCEEXP"</span><span class="p">)</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;Accès restreint : saisissez votre mot de passe </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">saisie</span><span class="p">,</span><span class="s">&quot;LYCEEXP&quot;</span><span class="p">)</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span>
 <span class="p">{</span>
-<span class="n">printf</span><span class="p">(</span><span class="s">"Mot de passe ? </span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
-<span class="n">scanf</span><span class="p">(</span><span class="s">"%19s"</span><span class="p">,</span><span class="n">saisie</span><span class="p">);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;Mot de passe ? </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%19s&quot;</span><span class="p">,</span><span class="n">saisie</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="n">printf</span><span class="p">(</span><span class="s">"Accès autorisé </span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;Accès autorisé </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
 
 <span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span><span class="w"> </span>
@@ -4231,7 +4230,7 @@
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Cracker des programme grâce au language-machine</p>
-<p>Le désassemblage d'un programme est une opération très complexe et les opérations et chaînes de caractères qui apparaissent sont souvent incompréhensibles (parfois volontairement, dans le cas d'<a class="" href="https://connect.ed-diamond.com/MISC/mischs-007/obfuscation-de-langage-interprete-cachez-ce-code-que-je-ne-saurais-voir" target="_blank">obfuscation</a>  de code).<br>
+<p>Le désassemblage d'un programme est une opération très complexe et les opérations et chaînes de caractères qui apparaissent sont souvent incompréhensibles (parfois volontairement, dans le cas d'<a class="" href="https://connect.ed-diamond.com/MISC/mischs-007/obfuscation-de-langage-interprete-cachez-ce-code-que-je-ne-saurais-voir" target="_blank">obfuscation</a>  de code).<br />
 Néanmoins, il est parfois possible d'agir au niveau le plus bas (le langage-machine) pour modifier un code, comme nous venons de le faire.</p>
 </div>
 </div>
@@ -4251,11 +4250,11 @@ Néanmoins, il est parfois possible d'agir au niveau le plus bas (le langage-mac
 <p>Utilise le terminal Linux pour cracker ce logiciel :</p>
 <div class="admonition debian">
 <p class="admonition-title">Terminal Linux</p>
-<p></p><div id="screen_container">
+<p><div id="screen_container">
                 <div style="white-space: pre; font: 14px monospace; line-height: 14px">
                 </div>
                 <canvas style="display: none"></canvas>
-            </div>
+            </div></p>
 </div>
 </details>
 <script>
@@ -4304,7 +4303,7 @@ detailsElements.forEach(element => {
 observer.observe(element, observerConfig);
 });
 $(document).ready(launchDebian());
-</script></div>
+</script>
 
 
 

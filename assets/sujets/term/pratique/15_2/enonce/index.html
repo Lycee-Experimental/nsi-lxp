@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,7 +3856,7 @@
 
   <h1>Enonce</h1>
 
-<div><p>Un mot palindrome peut se lire de la même façon de gauche à droite ou de droite à
+<p>Un mot palindrome peut se lire de la même façon de gauche à droite ou de droite à
 gauche : <em>bob</em>, <em>radar</em>, et <em>non</em> sont des mots palindromes.</p>
 <p>De même certains nombres sont eux aussi des palindromes : 33, 121, 345543.</p>
 <p>L’objectif de cet exercice est d’obtenir un programme Python permettant de tester si un
@@ -3874,7 +3873,7 @@ la fonction précédente.</p>
 renvoie <code>True</code> si c’est le cas et <code>False</code> sinon. Cette fonction s’appuie sur la fonction
 précédente.</p>
 <p>Compléter le code des trois fonctions ci-dessous.</p>
-<p></p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3900,18 +3899,18 @@ précédente.</p>
     <span class="n">chaine</span> <span class="o">=</span> <span class="o">...</span>
     <span class="k">return</span> <span class="n">est_palindrome</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-Exemples :
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">inverse_chaine</span><span class="p">(</span><span class="s1">'bac'</span><span class="p">)</span>
-<span class="s1">'cab'</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">est_palindrome</span><span class="p">(</span><span class="s1">'NSI'</span><span class="p">)</span>
+Exemples :</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">inverse_chaine</span><span class="p">(</span><span class="s1">&#39;bac&#39;</span><span class="p">)</span>
+<span class="s1">&#39;cab&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">est_palindrome</span><span class="p">(</span><span class="s1">&#39;NSI&#39;</span><span class="p">)</span>
 <span class="kc">False</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">est_palindrome</span><span class="p">(</span><span class="s1">'ISN-NSI'</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">est_palindrome</span><span class="p">(</span><span class="s1">&#39;ISN-NSI&#39;</span><span class="p">)</span>
 <span class="kc">True</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">est_nbre_palindrome</span><span class="p">(</span><span class="mi">214312</span><span class="p">)</span>
 <span class="kc">False</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">est_nbre_palindrome</span><span class="p">(</span><span class="mi">213312</span><span class="p">)</span>
 <span class="kc">True</span>
-</code></pre></div></div>
+</code></pre></div>
 
 
 

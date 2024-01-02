@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,7 +3856,7 @@
 
   <h1>Enonce</h1>
 
-<div><p>On considère l'algorithme de tri de tableau suivant : à chaque étape, on parcourt le sous-
+<p>On considère l'algorithme de tri de tableau suivant : à chaque étape, on parcourt le sous-
 tableau des éléments non rangés et on place le plus petit élément en première position de
 ce sous-tableau.</p>
 <p>Exemple avec le tableau : <code>t = [41, 55, 21, 18, 12, 6, 25]</code> </p>
@@ -3874,7 +3873,7 @@ trouvé avec le second. Le tableau devient : <code>t = [6, 12, 21, 18, 55, 41, 2
 <p>Et ainsi de suite. </p>
 <p>La code de la fonction <code>tri_selection</code> qui implémente cet algorithme est donné ci-
 dessous.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -3891,12 +3890,12 @@ dessous.</p>
         <span class="o">...</span> <span class="p">,</span> <span class="n">tab</span><span class="p">[</span><span class="n">imin</span><span class="p">]</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="n">imin</span><span class="p">]</span> <span class="p">,</span> <span class="o">...</span>
 </code></pre></div></td></tr></table></div>
 <p>Compléter le code de cette fonction de façon à obtenir :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">41</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">25</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">41</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">25</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">tri_selection</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">liste</span>
 <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">55</span><span class="p">]</span>
 </code></pre></div>
-<p>On rappelle que l'instruction <code>a, b = b, a</code> échange les contenus de <code>a</code> et de <code>b</code>.</p></div>
+<p>On rappelle que l'instruction <code>a, b = b, a</code> échange les contenus de <code>a</code> et de <code>b</code>.</p>
 
 
 

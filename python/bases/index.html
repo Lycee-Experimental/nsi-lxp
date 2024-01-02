@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3911,7 +3910,7 @@
   
 
 
-<div><h1 id="les-bases-du-langage-python">Les bases du langage Python<a class="headerlink" href="#les-bases-du-langage-python" title="Permanent link">⚓︎</a></h1>
+<h1 id="les-bases-du-langage-python">Les bases du langage Python<a class="headerlink" href="#les-bases-du-langage-python" title="Permanent link">⚓︎</a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Attention, ceci n'est pas un cours.</p>
 <p>Cette page ne se substitue pas à un cours de programmation python, ni à l'entraînement que nécessite l'apprentissage d'un nouveau langage.</p>
@@ -3939,10 +3938,10 @@
 <details class="info">
 <summary>Échange de valeurs entre deux variables</summary>
 <p>Nous désirons échanger le contenu des variables <code>a</code> et <code>b</code></p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Avec une variable temporaire</label><label for="__tabbed_1_2">💡En utilisant des paires de variables💡</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Avec une variable temporaire</label><label for="__tabbed_1_2">💡En utilisant des paires de variables💡</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="n">valeur_de_a</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="n">valeur_de_a</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">valeur_de_b</span>
 <span class="c1"># problème : échanger les deux valeurs</span>
 <span class="n">temp</span> <span class="o">=</span> <span class="n">valeur_de_a</span>
@@ -3952,7 +3951,7 @@
 </div>
 <div class="tabbed-block">
 <p>👉  Il est aisé, en python, de faire cet échange de façon très simple</p>
-<div class="highlight"><pre><span></span><code><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span>
 </code></pre></div>
 </div>
 </div>
@@ -3967,7 +3966,7 @@
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
 <p>Considérons ce code : </p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
@@ -4043,14 +4042,14 @@
 <div class="admonition warning">
 <p class="admonition-title">Les flottants</p>
 <p>1 est un entier, et 1.0 est un <code>float</code>. Ils sont égaux (ces deux écritures représentent la même valeur) mais pas identiques :</p>
-<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span> <span class="o">==</span> <span class="mf">1.0</span>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span> <span class="o">==</span> <span class="mf">1.0</span>
 <span class="go">True</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span> <span class="ow">is</span> <span class="mf">1.0</span>
 <span class="go">False</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="go">&lt;class 'int'&gt;</span>
+<span class="go">&lt;class &#39;int&#39;&gt;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
-<span class="go">&lt;class 'float'&gt;</span>
+<span class="go">&lt;class &#39;float&#39;&gt;</span>
 </code></pre></div>
 </div>
 <div class="admonition info">
@@ -4067,15 +4066,15 @@
 <p>On peut également convertir des chaînes <code>str</code> en <code>int</code> ou en <code>float</code> mais seulement si la chaîne contient un nombre compréhensible.</p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mf">1.23</span><span class="p">)</span>   <span class="c1"># a vaudra 1</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mf">1.23</span><span class="p">)</span>   <span class="c1"># a vaudra 1</span>
 <span class="n">a</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>    <span class="c1"># a vaudra 1.0</span>
-<span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s2">"12"</span><span class="p">)</span>   <span class="c1"># a vaudra 12 car on a converti la chaine "12" en entier qui vaut 12</span>
-<span class="n">chaine</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># chaine vaudra "3" car on a converti l'entier 3 en str</span>
+<span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s2">&quot;12&quot;</span><span class="p">)</span>   <span class="c1"># a vaudra 12 car on a converti la chaine &quot;12&quot; en entier qui vaut 12</span>
+<span class="n">chaine</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># chaine vaudra &quot;3&quot; car on a converti l&#39;entier 3 en str</span>
 </code></pre></div>
 <p>😰 <strong>Mais</strong></p>
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s2">"douze"</span><span class="p">)</span>  <span class="c1"># TValueError : int ne sait pas interpréter douze comme un nombre               </span>
-<span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s2">"12.3"</span><span class="p">)</span>   <span class="c1"># ValueError : idem, int ne sait pas interpréter 12.3 comme un entier</span>
-<span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s2">"1.0"</span><span class="p">)</span>    <span class="c1"># ValueError : idem, int ne sait pas interpréter 1.0 comme un entier</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s2">&quot;douze&quot;</span><span class="p">)</span>  <span class="c1"># TValueError : int ne sait pas interpréter douze comme un nombre               </span>
+<span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s2">&quot;12.3&quot;</span><span class="p">)</span>   <span class="c1"># ValueError : idem, int ne sait pas interpréter 12.3 comme un entier</span>
+<span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s2">&quot;1.0&quot;</span><span class="p">)</span>    <span class="c1"># ValueError : idem, int ne sait pas interpréter 1.0 comme un entier</span>
 </code></pre></div>
 </details>
 </details>
@@ -4094,7 +4093,7 @@
 <p>Lorsqu' il y a deux opérandes, on parle d’opérateurs binaires.</p>
 <p>Les opérandes ne sont pas toujours des nombres, ce peut être des <code>int</code>, des <code>float</code> des <code>str</code> ou des <code>bool</code>, mais on fait aussi des opérations plus complexes sur d'autres objets .</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Opérateurs avec les nombres</label><label for="__tabbed_2_2">Opérateurs avec les chaînes de caractères</label><label for="__tabbed_2_3">Opérateurs booléens</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Opérateurs avec les nombres</label><label for="__tabbed_2_2">Opérateurs avec les chaînes de caractères</label><label for="__tabbed_2_3">Opérateurs booléens</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <table>
@@ -4147,19 +4146,19 @@
 <p class="admonition-title">modulo (<code>%</code>) et division entière (<code>//</code>)</p>
 <ul>
 <li>
-<p>L'opérateur modulo donne le <strong>reste</strong> de la division euclidienne. <br>
+<p>L'opérateur modulo donne le <strong>reste</strong> de la division euclidienne. <br />
 <span class="arithmatex">\(7=2 \times 3 + 1\)</span> donc <code>7 % 3</code> donne 1</p>
 </li>
 <li>
-<p>L'opérateur division entière donne le <strong>quotient</strong>.<br>
+<p>L'opérateur division entière donne le <strong>quotient</strong>.<br />
 <span class="arithmatex">\(7=2 \times 3 + 1\)</span> donc <code>7 // 3</code> donne 2</p>
 </li>
 </ul>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exemples</p>
-<p>17 divisé par 8 : "il y va deux fois" et il reste 1. (<span class="arithmatex">\(17 = 2 \times 8 +1\)</span>)<br>
-👉 <code>17 % 8</code> vaut 1<br>
+<p>17 divisé par 8 : "il y va deux fois" et il reste 1. (<span class="arithmatex">\(17 = 2 \times 8 +1\)</span>)<br />
+👉 <code>17 % 8</code> vaut 1<br />
 👉 <code>17 // 8</code> vaut 2</p>
 <p>Alors que : <code>17 / 8</code> vaut 2.125</p>
 </div>
@@ -4238,7 +4237,7 @@ ET | and |</p>
 <p>Le <code>and</code> est prioritaire sur le <code>or</code> . De même, <code>not</code> est prioritaire sur les autres opérations.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="ow">not</span> <span class="kc">False</span> <span class="ow">and</span> <span class="kc">False</span>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="ow">not</span> <span class="kc">False</span> <span class="ow">and</span> <span class="kc">False</span>
 <span class="go">False</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="ow">not</span> <span class="p">(</span><span class="kc">False</span> <span class="ow">and</span> <span class="kc">False</span><span class="p">)</span>
 <span class="go">False</span>
@@ -4260,7 +4259,7 @@ Différence | <code>!=</code> |</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Tester les évaluations paresseuses</p>
-<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="o">/</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">1</span>
 <span class="go">True</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">!=</span><span class="mi">0</span> <span class="ow">and</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="o">/</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">1</span>
@@ -4274,7 +4273,7 @@ Différence | <code>!=</code> |</p>
 </details>
 <details class="note">
 <summary>Données structurées : <code>tuple</code>, <code>list</code>, <code>dict</code></summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Les listes : <code>ma_liste=[2,3,4]</code></label><label for="__tabbed_3_2">Les tuples : <code>mon_tuple=(2,3,4)</code></label><label for="__tabbed_3_3">Les dictionnaires : <code>dico = {'key': value}</code></label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Les listes : <code>ma_liste=[2,3,4]</code></label><label for="__tabbed_3_2">Les tuples : <code>mon_tuple=(2,3,4)</code></label><label for="__tabbed_3_3">Les dictionnaires : <code>dico = {'key': value}</code></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="admonition abstract">
@@ -4303,27 +4302,27 @@ Différence | <code>!=</code> |</p>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Parcours de listes</p>
-<p>Python permet de parcourir les tableaux, comme <code class="highlight"><span class="n">neveux</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Riri"</span><span class="p">,</span> <span class="s2">"Fifi"</span><span class="p">,</span> <span class="s2">"Loulou"</span><span class="p">]</span></code> :</p>
+<p>Python permet de parcourir les tableaux, comme <code class="highlight"><span class="n">neveux</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Riri&quot;</span><span class="p">,</span> <span class="s2">&quot;Fifi&quot;</span><span class="p">,</span> <span class="s2">&quot;Loulou&quot;</span><span class="p">]</span></code> :</p>
 <ul>
 <li>
 <p>selon les indices :</p>
-<div class="highlight"><pre><span></span><code>for i in range(len(neveux)):
-    print("L'élément d'indice", i, "est", neveux[i])
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>for i in range(len(neveux)):
+    print(&quot;L&#39;élément d&#39;indice&quot;, i, &quot;est&quot;, neveux[i])
 </code></pre></div>
 <p>Ce script produira l'affichage suivant en console :</p>
-<div class="highlight"><pre><span></span><code><span class="go">L'élément d'indice 0 est Riri</span>
-<span class="go">L'élément d'indice 1 est Fifi</span>
-<span class="go">L'élément d'indice 2 est Loulou</span>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="go">L&#39;élément d&#39;indice 0 est Riri</span>
+<span class="go">L&#39;élément d&#39;indice 1 est Fifi</span>
+<span class="go">L&#39;élément d&#39;indice 2 est Loulou</span>
 <span class="gp">&gt;&gt;&gt;</span>
 </code></pre></div>
 </li>
 <li>
 <p>selon les valeurs :</p>
-<p></p><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">neveu</span> <span class="ow">in</span> <span class="n">neveux</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">neveu</span><span class="p">,</span> <span class="s2">"est un élément"</span><span class="p">)</span>
+<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">for</span> <span class="n">neveu</span> <span class="ow">in</span> <span class="n">neveux</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">neveu</span><span class="p">,</span> <span class="s2">&quot;est un élément&quot;</span><span class="p">)</span>
 </code></pre></div>
-Ce script produira l'affichage suivant en console :
-<div class="highlight"><pre><span></span><code><span class="go">Riri est un élément</span>
+Ce script produira l'affichage suivant en console :</p>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="go">Riri est un élément</span>
 <span class="go">Fifi est un élément</span>
 <span class="go">Loulou est un élément</span>
 <span class="gp">&gt;&gt;&gt;</span>
@@ -4337,21 +4336,21 @@ Ce script produira l'affichage suivant en console :
 <ul>
 <li>
 <p>utiliser une variable tierce :</p>
-<div class="highlight"><pre><span></span><code><span class="n">temporaire</span> <span class="o">=</span> <span class="n">tableau</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">temporaire</span> <span class="o">=</span> <span class="n">tableau</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
 <span class="n">tableau</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">tableau</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
 <span class="n">tableau</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">temporaire</span>
 </code></pre></div>
 </li>
 <li>
 <p>utiliser l'affectation multiple qui se fait de façon <strong>simultanée</strong>:</p>
-<div class="highlight"><pre><span></span><code><span class="n">tableau</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">tableau</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">tableau</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">tableau</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">tableau</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">tableau</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">tableau</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">tableau</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
 </code></pre></div>
 </li>
 </ul>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Liste en compréhension</p>
-<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">liste_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="o">*</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)]</span>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">liste_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="o">*</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">liste_1</span>
 <span class="go">[9, 18, 27, 36, 45, 54, 63, 72, 81, 90]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">liste_2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="o">*</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span> <span class="k">if</span> <span class="mi">9</span><span class="o">*</span><span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
@@ -4361,11 +4360,11 @@ Ce script produira l'affichage suivant en console :
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Listes de listes</p>
-<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">ma_matrice</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">],</span> <span class="p">[</span><span class="s2">"d"</span><span class="p">,</span> <span class="s2">"e"</span><span class="p">,</span> <span class="s2">"f"</span><span class="p">],</span> <span class="p">[</span><span class="s2">"g"</span><span class="p">,</span> <span class="s2">"h"</span><span class="p">,</span> <span class="s2">"i"</span><span class="p">]]</span>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">ma_matrice</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="s2">&quot;h&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">]]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ma_matrice</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="go">['d', 'e', 'f']</span>
+<span class="go">[&#39;d&#39;, &#39;e&#39;, &#39;f&#39;]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ma_matrice</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-<span class="go">'d'</span>
+<span class="go">&#39;d&#39;</span>
 </code></pre></div>
 </div>
 </div>
@@ -4379,9 +4378,9 @@ Ce script produira l'affichage suivant en console :
 <p>Un tuple est contient des valeurs, séparées par des virgules, mais encadrée par des parenthèses, ( ) ce qui les différencie des listes.</p>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
-<div class="highlight"><pre><span></span><code><span class="n">tuple_1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="c1"># tuple_1 est un tuple de nombres entiers</span>
-<span class="n">tuple_2</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"albert"</span><span class="p">,</span> <span class="s2">"paul"</span><span class="p">,</span> <span class="s2">"jacques"</span><span class="p">)</span> <span class="c1"># tuple_2 est un tuple de `str`</span>
-<span class="n">tuple_3</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"1G4"</span><span class="p">,</span><span class="s2">"NSI"</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mf">13.7</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span> <span class="c1"># tuple_3 contient des éléments de différents types. </span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">tuple_1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="c1"># tuple_1 est un tuple de nombres entiers</span>
+<span class="n">tuple_2</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;albert&quot;</span><span class="p">,</span> <span class="s2">&quot;paul&quot;</span><span class="p">,</span> <span class="s2">&quot;jacques&quot;</span><span class="p">)</span> <span class="c1"># tuple_2 est un tuple de `str`</span>
+<span class="n">tuple_3</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;1G4&quot;</span><span class="p">,</span><span class="s2">&quot;NSI&quot;</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mf">13.7</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span> <span class="c1"># tuple_3 contient des éléments de différents types. </span>
 <span class="n">ma_liste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="c1"># ma_liste est une **liste** de nombres entiers</span>
 </code></pre></div>
 </div>
@@ -4399,11 +4398,11 @@ Ce script produira l'affichage suivant en console :
 <div class="admonition bug">
 <p class="admonition-title">Bug</p>
 <p>Le code ci-dessous lèvera une exception TypeError </p>
-<div class="highlight"><pre><span></span><code><span class="n">mon_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">)</span>
-<span class="n">mon_tuple</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"e"</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">mon_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">)</span>
+<span class="n">mon_tuple</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;e&quot;</span>
 </code></pre></div>
 <p>On obtiendra en console, après exécution e ce code :</p>
-<div class="highlight"><pre><span></span><code><span class="go">TypeError: 'tuple' object does not support item assignment</span>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="go">TypeError: &#39;tuple&#39; object does not support item assignment</span>
 </code></pre></div>
 </div>
 </div>
@@ -4414,20 +4413,20 @@ Ce script produira l'affichage suivant en console :
 <div class="admonition info">
 <p class="admonition-title">Parcours 💚</p>
 <p>Ces codes sont à connaître <strong>sans aucune hésitation</strong> (ils sont strictement identiques aux parcours d'une liste).</p>
-<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mon_tuple</span><span class="p">))</span> <span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mon_tuple</span><span class="p">))</span> <span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">mon_tuple</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">mon_tuple</span> <span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">mon_tuple</span> <span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Conversion entre listes et tuples</p>
 <p>Il est possible de transformer une liste en tuple, et inversement :</p>
-<div class="highlight"><pre><span></span><code><span class="n">mon_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">mon_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="n">ma_liste</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">mon_tuple</span><span class="p">)</span>  <span class="c1"># ma_liste contient les mêmes éléments : [1, 2, 3]</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">ma_liste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">ma_liste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="n">mon_tuple</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">ma_liste</span><span class="p">)</span>  <span class="c1"># mon_tuple contient les mêmes éléments : (1, 2, 3)</span>
 </code></pre></div>
 </div>
@@ -4520,39 +4519,39 @@ Ce script produira l'affichage suivant en console :
 <details class="abstract">
 <summary><code>if ... (else) :</code></summary>
 <p>👉 L'instructions <code>else</code> n'est pas obligatoire.  </p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Avec seulement if</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># Avec seulement if</span>
 <span class="k">if</span> <span class="n">condition</span> <span class="p">:</span>
-    <span class="n">bloc</span> <span class="n">d</span><span class="s1">'instructions à réaliser</span>
+    <span class="n">bloc</span> <span class="n">d</span><span class="s1">&#39;instructions à réaliser</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1"># Avec if et else</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># Avec if et else</span>
 <span class="k">if</span> <span class="n">condition</span> <span class="p">:</span>
-    <span class="n">bloc</span> <span class="n">d</span><span class="s1">'instructions à réaliser</span>
+    <span class="n">bloc</span> <span class="n">d</span><span class="s1">&#39;instructions à réaliser</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="n">autre</span> <span class="n">bloc</span> <span class="n">d</span><span class="s1">'instructions à réaliser</span>
+    <span class="n">autre</span> <span class="n">bloc</span> <span class="n">d</span><span class="s1">&#39;instructions à réaliser</span>
 </code></pre></div>
 </details>
 <details class="abstract">
 <summary><code>if ... elif ... else :</code></summary>
 <p>👉 L'instruction <code>else</code> n'est pas obligatoire.  </p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Avec seulement if et elif</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># Avec seulement if et elif</span>
 <span class="k">if</span> <span class="n">condition</span> <span class="p">:</span>
-    <span class="n">bloc</span> <span class="n">d</span><span class="s1">'instructions à réaliser</span>
+    <span class="n">bloc</span> <span class="n">d</span><span class="s1">&#39;instructions à réaliser</span>
 <span class="k">elif</span> <span class="n">autre</span> <span class="n">condition</span><span class="p">:</span>
-    <span class="n">autre</span> <span class="n">bloc</span> <span class="n">d</span><span class="s1">'instructions à réaliser</span>
+    <span class="n">autre</span> <span class="n">bloc</span> <span class="n">d</span><span class="s1">&#39;instructions à réaliser</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1"># Avec if ... elif ... else</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># Avec if ... elif ... else</span>
 <span class="k">if</span> <span class="n">condition</span> <span class="p">:</span>
-    <span class="n">bloc</span> <span class="n">d</span><span class="s1">'instructions à réaliser</span>
+    <span class="n">bloc</span> <span class="n">d</span><span class="s1">&#39;instructions à réaliser</span>
 <span class="k">elif</span> <span class="n">autre</span> <span class="n">condition</span><span class="p">:</span>
-    <span class="n">autre</span> <span class="n">bloc</span> <span class="n">d</span><span class="s1">'instructions à réaliser</span>
+    <span class="n">autre</span> <span class="n">bloc</span> <span class="n">d</span><span class="s1">&#39;instructions à réaliser</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="n">encore</span> <span class="n">un</span> <span class="n">autre</span> <span class="n">bloc</span> <span class="n">d</span><span class="s1">'instructions à réaliser</span>
+    <span class="n">encore</span> <span class="n">un</span> <span class="n">autre</span> <span class="n">bloc</span> <span class="n">d</span><span class="s1">&#39;instructions à réaliser</span>
 </code></pre></div>
 </details>
 </details>
 <details class="note">
 <summary>Boucles <code>for</code> et <code>while</code></summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">for</label><label for="__tabbed_4_2">while</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">for</label><label for="__tabbed_4_2">while</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <details class="info">
@@ -4584,7 +4583,7 @@ Ce script produira l'affichage suivant en console :
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
-<div class="highlight"><pre><span></span><code><span class="go">&gt;&gt;&gt;for i in range(3):</span>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="go">&gt;&gt;&gt;for i in range(3):</span>
 <span class="gp">&gt;&gt;&gt; </span>   <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt;</span>
 <span class="go">0</span>
@@ -4602,7 +4601,7 @@ Ce script produira l'affichage suivant en console :
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
-<div class="highlight"><pre><span></span><code><span class="go">&gt;&gt;&gt;for i in range(3, 7):</span>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="go">&gt;&gt;&gt;for i in range(3, 7):</span>
 <span class="gp">&gt;&gt;&gt; </span>   <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt;</span>
 <span class="go">3</span>
@@ -4620,7 +4619,7 @@ Ce script produira l'affichage suivant en console :
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
-<div class="highlight"><pre><span></span><code><span class="go">&gt;&gt;&gt;for i in range(3, 9, 2):</span>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="go">&gt;&gt;&gt;for i in range(3, 9, 2):</span>
 <span class="gp">&gt;&gt;&gt; </span>   <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt;</span>
 <span class="go">3</span>
@@ -4634,7 +4633,7 @@ Ce script produira l'affichage suivant en console :
 <div class="tabbed-block">
 <details class="info">
 <summary>Syntaxe</summary>
-<div class="highlight"><pre><span></span><code><span class="k">while</span> <span class="n">condition</span><span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">while</span> <span class="n">condition</span><span class="p">:</span>
     <span class="n">instructions</span>  <span class="c1"># (1)</span>
 </code></pre></div>
 <ol>
@@ -4652,7 +4651,7 @@ Ce script produira l'affichage suivant en console :
 <details class="warning">
 <summary>Ne pas en abuser</summary>
 <p>Le code ci-dessous, pour afficher les entiers de 0 à <code>n</code> est correct mais <strong>à éviter</strong> :</p>
-<div class="highlight"><pre><span></span><code><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
     <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
@@ -4665,7 +4664,7 @@ Ce script produira l'affichage suivant en console :
 </details>
 <details class="info">
 <summary>Ou jusqu’à ce que ????</summary>
-<p>Le problème est parfois proposé de façon un peu différente : faire quelques chose jusqu'à ce que...<br>
+<p>Le problème est parfois proposé de façon un peu différente : faire quelques chose jusqu'à ce que...<br />
 Par exemple, on demande un mot de passe, et on répète jusqu'à ce que le mot de passe soit le bon.
 Cet exemple est équivalent à celui-ci : </p>
 <blockquote>
@@ -4679,9 +4678,9 @@ Cet exemple est équivalent à celui-ci : </p>
 <summary>Initialisation</summary>
 <p>Pour exécuter l'instruction <code>while condition</code> : il faut que la condition soit un booléen dont la valeur est définie.</p>
 <p>Dans l'exemple suivant, Pour évaluer l'expression <code>mot_de_passe != "123456"</code> il faut que la variable <code>mot_de_passe</code> ait été initialisée.</p>
-<div class="highlight"><pre><span></span><code><span class="n">mot_de_passe</span> <span class="o">=</span> <span class="s2">""</span>  <span class="c1"># (1)</span>
-<span class="k">while</span> <span class="n">mot_de_passe</span> <span class="o">!=</span> <span class="s2">"123456"</span> <span class="p">:</span>
-    <span class="n">mot_de_passe</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Entrez le mot de passe : "</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">mot_de_passe</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>  <span class="c1"># (1)</span>
+<span class="k">while</span> <span class="n">mot_de_passe</span> <span class="o">!=</span> <span class="s2">&quot;123456&quot;</span> <span class="p">:</span>
+    <span class="n">mot_de_passe</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Entrez le mot de passe : &quot;</span><span class="p">)</span>
 </code></pre></div>
 <ol>
 <li>Initialisation de <code>mot_de_passe</code></li>
@@ -4692,14 +4691,14 @@ Cet exemple est équivalent à celui-ci : </p>
 <p>😰 Il est fréquent d'oublier une ligne de code, et d'écrire une boucle while qui ne se termine pas.</p>
 <details class="bug">
 <summary>Boucle <strong>infinie</strong></summary>
-<div class="highlight"><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Version correcte</p>
 <p>On incrémente <code>n</code> dans la boucle, <code>n</code> finira donc par atteindre la valeur d'arrêt :</p>
-<div class="highlight"><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
     <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
@@ -4708,12 +4707,12 @@ Cet exemple est équivalent à celui-ci : </p>
 </details>
 <details class="bug">
 <summary>Ne <strong>jamais entrer</strong> dans la boucle</summary>
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Bonjour !"</span><span class="p">)</span>  <span class="c1"># (1)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bonjour !&quot;</span><span class="p">)</span>  <span class="c1"># (1)</span>
     <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Au revoir !"</span><span class="p">)</span>  <span class="c1"># (2)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Au revoir !&quot;</span><span class="p">)</span>  <span class="c1"># (2)</span>
 </code></pre></div>
 <ol>
 <li>
@@ -4730,7 +4729,7 @@ Cet exemple est équivalent à celui-ci : </p>
 <p>Un drapeau (flag en anglais) est une variable qui sert à marquer une situation. </p>
 <p>Par exemple, dans un jeu, on continue de jouer tant que la partie n'est pas finie. </p>
 <p>👉 On pourra créer un flag booléen <code>partie_en_cours</code> :</p>
-<div class="highlight"><pre><span></span><code><span class="n">partie_en_cours</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># (1)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">partie_en_cours</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># (1)</span>
 <span class="k">while</span> <span class="n">partie_en_cours</span> <span class="p">:</span>  <span class="c1"># (2)</span>
     <span class="n">bloc</span> <span class="n">d</span> <span class="n">instructions</span> <span class="n">du</span> <span class="n">jeux</span>
 
@@ -4765,7 +4764,7 @@ Cet exemple est équivalent à celui-ci : </p>
 <p>L'écran, l'imprimante, les haut-parleurs, et les fichiers de nos disques durs sont des périphériques de sortie.</p>
 </li>
 </ul>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1"><code>input()</code></label><label for="__tabbed_5_2"><code>print()</code></label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1"><code>input()</code></label><label for="__tabbed_5_2"><code>print()</code></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>La fonction <code>input()</code> permet de saisir une entrée. </p>
@@ -4774,14 +4773,14 @@ Cet exemple est équivalent à celui-ci : </p>
 <p>👉 Par contre, même s’il n’y a rien à l’intérieur, <code>input()</code> doit absolument être accompagné de <strong><code>()</code></strong> : </p>
 <div class="admonition example">
 <p class="admonition-title">Différentes saisies à connaître</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># pour saisir un texte :</span>
-<span class="n">ma_variable</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"entrez quelque chose : "</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># pour saisir un texte :</span>
+<span class="n">ma_variable</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;entrez quelque chose : &quot;</span><span class="p">)</span>
 
 <span class="c1"># pour saisir un entier :</span>
-<span class="n">ma_variable</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"entrez quelque chose : "</span><span class="p">))</span>
+<span class="n">ma_variable</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;entrez quelque chose : &quot;</span><span class="p">))</span>
 
 <span class="c1"># pour saisir un nombre décimal :</span>
-<span class="n">ma_variable</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"entrez quelque chose : "</span><span class="p">))</span>
+<span class="n">ma_variable</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;entrez quelque chose : &quot;</span><span class="p">))</span>
 </code></pre></div>
 </div>
 </div>
@@ -4789,15 +4788,15 @@ Cet exemple est équivalent à celui-ci : </p>
 <p>La fonction <code>print</code> permet d'afficher le contenu d'une variable.</p>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
-<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">ma_variable</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">ma_variable</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">ma_variable</span><span class="p">)</span>
 <span class="go">1</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ma_variable</span> <span class="o">=</span> <span class="s2">"Hello"</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ma_variable</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">ma_variable</span><span class="p">)</span>
 <span class="go">Hello</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">"a vaut : "</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s2">" et b vaut : "</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a vaut : &quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s2">&quot; et b vaut : &quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 <span class="go">a vaut :  1  et b vaut :  2</span>
 <span class="gp">&gt;&gt;&gt; </span>
 </code></pre></div>
@@ -4810,7 +4809,7 @@ Cet exemple est équivalent à celui-ci : </p>
 <summary>Les fonctions : <code>def ma_fonction(mon_param):</code></summary>
 <details class="info">
 <summary>Définition</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">prix</span><span class="p">(</span><span class="n">nbre_adultes</span><span class="p">,</span> <span class="n">nbre_enfants</span><span class="p">):</span>  <span class="c1"># (1)                </span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">prix</span><span class="p">(</span><span class="n">nbre_adultes</span><span class="p">,</span> <span class="n">nbre_enfants</span><span class="p">):</span>  <span class="c1"># (1)                </span>
     <span class="n">resultat</span> <span class="o">=</span> <span class="mi">37</span> <span class="o">*</span> <span class="n">nbre_adultes</span> <span class="o">+</span> <span class="mi">28</span> <span class="o">*</span> <span class="n">nbre_enfants</span>  
     <span class="k">return</span> <span class="n">resultat</span>  <span class="c1"># (2) </span>
 
@@ -4825,7 +4824,7 @@ Cet exemple est équivalent à celui-ci : </p>
     Ici elle renvoie <code>resultat</code>, donc elle renvoie <strong>la valeur de la variable resultat</strong></p>
 </li>
 <li>
-<p>Cette ligne de code ne fait pas partie de la fonction (Elle n'est pas dans le bloc indenté). Les lignes de codes qui ne sont pas dans une fonction font partie de ce qu'on appelle le <strong>programme principal</strong>.<br>
+<p>Cette ligne de code ne fait pas partie de la fonction (Elle n'est pas dans le bloc indenté). Les lignes de codes qui ne sont pas dans une fonction font partie de ce qu'on appelle le <strong>programme principal</strong>.<br />
 Une fois qu'une fonction est définie, il est possible de l'appeler (l'utiliser) dans le programme principal, mais aussi dans une autre fonction.</p>
 </li>
 </ol>
@@ -4833,17 +4832,17 @@ Une fois qu'une fonction est définie, il est possible de l'appeler (l'utiliser)
 <details class="info">
 <summary>Utilisation</summary>
 <p>Toutefois, l'appel ci-dessus ne fait qu'appeler la fonction, qui <strong>renvoie</strong> le résultat. Ceci ne sera pas utile si nous ne conservons pas ce résultat (afin de pouvoir l'utiliser dans la suite du programme). Pour cela nous allons en général <strong>affecter</strong> ce résultat à une variable :</p>
-<div class="highlight"><pre><span></span><code><span class="n">prix_a_payer</span> <span class="o">=</span> <span class="n">prix</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"le prix à payer : "</span><span class="p">,</span> <span class="n">prix_a_payer</span><span class="p">)</span> 
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">prix_a_payer</span> <span class="o">=</span> <span class="n">prix</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;le prix à payer : &quot;</span><span class="p">,</span> <span class="n">prix_a_payer</span><span class="p">)</span> 
 </code></pre></div>
 <p>Si on veut seulement afficher le résultat, on peut directement afficher ainsi :</p>
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">"le prix à payer : "</span><span class="p">,</span> <span class="n">prix</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span> 
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;le prix à payer : &quot;</span><span class="p">,</span> <span class="n">prix</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span> 
 </code></pre></div>
 </details>
 <details class="info">
 <summary>Arguments</summary>
-<p>Quand on <strong>« appelle »</strong> <code>prix(3, 2)</code> : <br>
-•   3 est automatiquement affecté au 1er paramètre : la variable  <code>nbre_adultes</code><br>
+<p>Quand on <strong>« appelle »</strong> <code>prix(3, 2)</code> : <br />
+•   3 est automatiquement affecté au 1er paramètre : la variable  <code>nbre_adultes</code><br />
 •   2 est automatiquement affecté au second paramètre : la variable  <code>nbre_enfants</code></p>
 <p>3 et 2 sont les valeurs données <strong>en arguments</strong>.</p>
 </details>
@@ -4852,7 +4851,7 @@ Une fois qu'une fonction est définie, il est possible de l'appeler (l'utiliser)
 <details class="note">
 <summary>Fonction sans paramètres</summary>
 <p>Certaines fonctions n'ont aucun paramètre. Dans ce cas, on met des parenthèses vides aussi bien dans la définition que dans l'appel de la fonction :</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">ma_fonction</span><span class="p">()</span> <span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">ma_fonction</span><span class="p">()</span> <span class="p">:</span>
     <span class="n">instruction</span> <span class="n">du</span> <span class="n">bloc</span>
 
 <span class="n">ma_variable</span>  <span class="o">=</span> <span class="n">ma_fonction</span><span class="p">()</span>
@@ -4862,13 +4861,13 @@ Une fois qu'une fonction est définie, il est possible de l'appeler (l'utiliser)
 <summary>Fonction sans renvoi</summary>
 <p>Certaines fonctions ne renvoient rien.  </p>
 <p>Exemple :</p>
-<p></p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">ma_fonction</span><span class="p">(</span><span class="n">nom</span><span class="p">)</span> <span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Votre nom est :"</span><span class="p">,</span><span class="n">nom</span><span class="p">)</span>
+<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">ma_fonction</span><span class="p">(</span><span class="n">nom</span><span class="p">)</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Votre nom est :&quot;</span><span class="p">,</span><span class="n">nom</span><span class="p">)</span>
     <span class="k">return</span> <span class="kc">None</span> <span class="c1"># ou simplement return, ou pas de return du tout ...</span>
 
 <span class="n">ma_fonction</span><span class="p">()</span>
 </code></pre></div>
-Cette fonction <strong>ne renvoie rien</strong> 
+Cette fonction <strong>ne renvoie rien</strong> </p>
 <p>De telles fonctions sont, dans certains langages, appelées des procédures. En python, on ne fait pas de différence. Une procédure <strong>fait quelques chose</strong> : ici par exemple, elle sert à afficher (dans la console) un message.</p>
 <p>Notez que dans l'appel d'une procédure, on n'affecte pas le résultat à une variable. C'est logique car il n'y a pas de résultat, puisque la fonction ne renvoie rien.</p>
 </details>
@@ -4876,14 +4875,14 @@ Cette fonction <strong>ne renvoie rien</strong>
 <details class="note">
 <summary>Notion d'espace de noms</summary>
 <details class="info">
-<summary>Définitions <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:"></summary>
+<summary>Définitions <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></summary>
 <ul>
 <li>Les variables définies dans le corps d'une fonction sont appelées <strong>variables locales</strong>.</li>
 <li>Les variables définies dans le corps du programme (sous-entendu : pas à l'intérieur d'une fonction) sont appelées <strong>variables globales</strong>.</li>
 </ul>
 </details>
 <details class="info">
-<summary>Règles d'accès aux variables locales et globales <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:"></summary>
+<summary>Règles d'accès aux variables locales et globales <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></summary>
 <ul>
 <li><strong>règle 1 :</strong> une <strong>variable locale</strong> (définie au cœur d'une fonction) est <strong>inaccessible</strong> hors de cette fonction.</li>
 <li><strong>règle 2 :</strong> une <strong>variable globale</strong> (définie à l'extérieur d'une fonction) est <strong>accessible</strong> en <strong>lecture</strong> à l'intérieur d'une fonction.</li>
@@ -4891,9 +4890,9 @@ Cette fonction <strong>ne renvoie rien</strong>
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Example de code dysfonctionnel</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">jeu</span><span class="p">():</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">jeu</span><span class="p">():</span>
     <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nb_repetitions</span><span class="p">):</span> <span class="c1"># (1)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"hola"</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hola&quot;</span><span class="p">)</span>
     <span class="n">valeur</span> <span class="o">=</span> <span class="mi">50</span>               
     <span class="n">score</span> <span class="o">=</span> <span class="n">score</span> <span class="o">+</span><span class="mi">1</span> <span class="c1"># (2) </span>
 
@@ -4919,18 +4918,18 @@ Cette fonction <strong>ne renvoie rien</strong>
 <details class="info">
 <summary>Test de fonctions : <code>assert</code></summary>
 <p>Exemple d'utilisation pour une fonction <code>carre</code> qui élève au carré: </p>
-<div class="highlight"><pre><span></span><code>    <span class="k">assert</span> <span class="n">carre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">9</span><span class="p">,</span> <span class="s2">"l'appel carre(3) devrait renvoyer 9"</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code>    <span class="k">assert</span> <span class="n">carre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;l&#39;appel carre(3) devrait renvoyer 9&quot;</span>
 </code></pre></div>
 <p>Si le test est réussi, il ne se passera rien, sinon le code <strong>lève une exception <code>AssertionError</code></strong> et affiche le message.</p>
 <p>👉 Remarque : souvent nous n'écrirons pas de message explicatif. Nous nous contenterons par exemple de : </p>
-<div class="highlight"><pre><span></span><code>    <span class="k">assert</span> <span class="n">carre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">9</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code>    <span class="k">assert</span> <span class="n">carre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">9</span>
 </code></pre></div>
 <p>Dans ce cas-là, si le test est réussi, il ne se passera rien, sinon le code <strong>lève une exception AssertionError</strong> et n'affiche pas de message.</p>
 </details>
 </details>
 <details class="note">
 <summary>Les messages d'erreurs</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:5"><input checked id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><input id="__tabbed_6_3" name="__tabbed_6" type="radio"><input id="__tabbed_6_4" name="__tabbed_6" type="radio"><input id="__tabbed_6_5" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">ValueError</label><label for="__tabbed_6_2">SyntaxError</label><label for="__tabbed_6_3">NameError</label><label for="__tabbed_6_4">TypeError</label><label for="__tabbed_6_5">IndentationError</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:5"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><input id="__tabbed_6_4" name="__tabbed_6" type="radio" /><input id="__tabbed_6_5" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">ValueError</label><label for="__tabbed_6_2">SyntaxError</label><label for="__tabbed_6_3">NameError</label><label for="__tabbed_6_4">TypeError</label><label for="__tabbed_6_5">IndentationError</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="admonition info">
@@ -4938,10 +4937,10 @@ Cette fonction <strong>ne renvoie rien</strong>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
-<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">int</span><span class="p">(</span><span class="s2">"Albert"</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">int</span><span class="p">(</span><span class="s2">&quot;Albert&quot;</span><span class="p">)</span>
 <span class="gt">Traceback (most recent call last):</span>
-<span class="gr">File "&lt;interactive input&gt;", line 1, in &lt;module&gt;</span>
-<span class="gr">ValueError</span>: <span class="n">invalid literal for int() with base 10: 'Albert'</span>
+<span class="gr">File &quot;&lt;interactive input&gt;&quot;, line 1, in &lt;module&gt;</span>
+<span class="gr">ValueError</span>: <span class="n">invalid literal for int() with base 10: &#39;Albert&#39;</span>
 </code></pre></div>
 </div>
 </div>
@@ -4953,10 +4952,10 @@ Cette fonction <strong>ne renvoie rien</strong>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">"Bonjour"</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bonjour&quot;</span>
 </code></pre></div>
 <p>Si on exécute ce code on obtient : </p>
-<div class="highlight"><pre><span></span><code><span class="go">SyntaxError: unexpected EOF while parsing</span>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="go">SyntaxError: unexpected EOF while parsing</span>
 </code></pre></div>
 </div>
 </div>
@@ -4966,12 +4965,12 @@ Cette fonction <strong>ne renvoie rien</strong>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
-<p></p><div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<p><div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="gt">Traceback (most recent call last):</span>
-<span class="gr">File "&lt;interactive input&gt;", line 1, in &lt;module&gt;</span>
-<span class="gr">NameError</span>: <span class="n">name 'a' is not defined</span>
+<span class="gr">File &quot;&lt;interactive input&gt;&quot;, line 1, in &lt;module&gt;</span>
+<span class="gr">NameError</span>: <span class="n">name &#39;a&#39; is not defined</span>
 </code></pre></div>
-Cela signifie que vous demandez d'afficher la valeur de <code>a</code>, mais il n'y a pas de variable nommée <code>a</code> dans votre code.
+Cela signifie que vous demandez d'afficher la valeur de <code>a</code>, mais il n'y a pas de variable nommée <code>a</code> dans votre code.</p>
 </div>
 </div>
 <div class="tabbed-block">
@@ -4980,10 +4979,10 @@ Cela signifie que vous demandez d'afficher la valeur de <code>a</code>, mais il 
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
-<div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span> <span class="o">+</span> <span class="s2">"Albert"</span>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span> <span class="o">+</span> <span class="s2">&quot;Albert&quot;</span>
 <span class="gt">Traceback (most recent call last):</span>
-<span class="gr">File "&lt;interactive input&gt;", line 1, in &lt;module&gt;</span>
-<span class="gr">TypeError</span>: <span class="n">unsupported operand type(s) for +: 'int' and 'str'</span>
+<span class="gr">File &quot;&lt;interactive input&gt;&quot;, line 1, in &lt;module&gt;</span>
+<span class="gr">TypeError</span>: <span class="n">unsupported operand type(s) for +: &#39;int&#39; and &#39;str&#39;</span>
 </code></pre></div>
 </div>
 </div>
@@ -5040,7 +5039,7 @@ On exécute le script suivant :
 ```python
 n = 6
 s = 0
-while n &gt;= 0:
+while n >= 0:
     s = s + n
     n = n -1
 ```
@@ -5151,9 +5150,9 @@ Ce programme ne renvoie pas toujours ses trois arguments dans l’ordre croissan
 
 ```python
 def ranger(a, b, c):
-    if a &gt; b :
+    if a > b :
         a, b = b, a
-    if b &gt; c:
+    if b > c:
         b, c = c, b
     return a, b, c
 ```
@@ -5345,7 +5344,7 @@ On exécute le code suivant :
 def f(t):
     n = len(t)
     for i in range(n-1):
-        if t[i] &gt; t[i+1]:
+        if t[i] > t[i+1]:
             t[i],t[i+1] = t[i+1],t[i]
 L = [4, 8, -7, 0, 1]
 f(L)
@@ -5372,9 +5371,9 @@ def racine_du_double(x):
 Quelle est la précondition sur l'argument de cette fonction ?
 
 1. [ ] x &lt; 0
-1. [X] x &gt;= 0
-1. [ ] 2 * x &gt; 0
-1. [ ] sqrt(x) &gt;= 0
+1. [X] x >= 0
+1. [ ] 2 * x > 0
+1. [ ] sqrt(x) >= 0
 
 
 ### Langages et programmation (Première)
@@ -5512,10 +5511,10 @@ def maximum(L):
 
 Par quoi faut-il remplacer les pointillés pour que cette fonction produise bien le résultat attendu ?
 
-1. [ ] i &gt; m
-1. [X] L[i] &gt; m
-1. [ ] L[i] &gt; L[i-1]
-1. [ ] L[i] &gt; L[i+1]
+1. [ ] i > m
+1. [X] L[i] > m
+1. [ ] L[i] > L[i-1]
+1. [ ] L[i] > L[i+1]
 
 ### Langages et programmation (Première)
 
@@ -5563,7 +5562,7 @@ On définit la fonction suivante :
 ```python
 def f(n):
     c = 0
-    while n &gt; 0:
+    while n > 0:
         c = c + 1
         n = n // 2
     return c
@@ -5664,7 +5663,7 @@ La fonction `maximum` codée ci-dessous en Python doit renvoyer la plus grande v
 def maximum(tableau):
     tmp = tableau[0]
     for i in range(......): # à compléter
-        if tableau[i] &gt; tmp:
+        if tableau[i] > tmp:
             tmp = tableau[i]
     return tmp
 ```
@@ -5820,9 +5819,9 @@ Quelle est la valeur de la variable `b` à la fin de l'exécution du script suiv
 ```python
 a = 2
 b = 5
-if a &gt; 8:
+if a > 8:
     b = 10
-elif a &gt; 6:
+elif a > 6:
     b = 3
 ```
 
@@ -5883,7 +5882,7 @@ Quelle est la valeur de la variable b à la fin de l'exécution du script suivan
 ```python
 a = 3
 b = 6
-if a &gt; 5 or b != 3:
+if a > 5 or b != 3:
     b = 4
 else:
     b = 2
@@ -5935,7 +5934,7 @@ Que vaut le couple `(L,b)` à la fin de l'exécution ?
 
 On exécute le code suivant :
 ```python
-def ma_fonction(liste : list) -&gt; int:
+def ma_fonction(liste : list) -> int:
     valeur = liste[0]
     for i in range (1, len(liste)):
         if liste[i] &lt; valeur :
@@ -5977,7 +5976,7 @@ Quelles sont les valeurs des variables `x` et `y` à la fin de l'exécution du s
 
 ```python
 x = 4
-while x &gt; 0:
+while x > 0:
     y = 1
     while y &lt; x:
         y = y + 1
@@ -6024,9 +6023,9 @@ En Python, quelle est l’instruction permettant de charger la fonction sqrt du 
 On exécute le code suivant
 ```python
 def calculPourcentage (prix,reduction):
-    assert reduction &gt;= 0, 'la réduction doit être un nombre positif'
+    assert reduction >= 0, 'la réduction doit être un nombre positif'
     assert reduction &lt; 100, 'la réduction doit être inférieure à 100'
-    assert prix &gt; 0, 'le prix doit être un nombre strictement positif'
+    assert prix > 0, 'le prix doit être un nombre strictement positif'
     remise = (reduction*prix)/100
     prix_remise = prix - remise
     return prix_remise
@@ -6153,7 +6152,7 @@ On définit une fonction `f` de la façon suivante :
 def f(L, m):
     R = []
     for i in range(len(L)):
-        if L[i] &gt; m:
+        if L[i] > m:
             R.append(L[i])
     return R
 ```
@@ -6272,7 +6271,7 @@ Que faut-il écrire à la place des lignes pointillées ?
 1. [ ] ```{.quiz} if L[i] &lt; L[0]:
     L[i],L[0] = L[0],L[i]
     ```
-1. [X] ```{.quiz} if L[i] &gt; m:
+1. [X] ```{.quiz} if L[i] > m:
     m = L[i]
     ```
 
@@ -6288,7 +6287,7 @@ def maxi(L):
     dernier_indice = len(L) - 1
     valeur_max = L[0]
     for i in range(1,dernier_indice):
-        if L[i] &gt; valeur_max:
+        if L[i] > valeur_max:
             valeur_max = L[i]
     return valeur_max
 ```
@@ -6334,7 +6333,7 @@ aireDisque(8)
 from GeomPlan import aireDisque
 aireDisque(8)
     ```
-</div></div>
+</div>
 
 
 

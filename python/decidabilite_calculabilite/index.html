@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3959,7 +3958,7 @@
   
 
 
-<div><h1 id="decidabilite-et-calculabilite">Décidabilité et Calculabilité<a class="headerlink" href="#decidabilite-et-calculabilite" title="Permanent link">⚓︎</a></h1>
+<h1 id="decidabilite-et-calculabilite">Décidabilité et Calculabilité<a class="headerlink" href="#decidabilite-et-calculabilite" title="Permanent link">⚓︎</a></h1>
 <details class="conclu">
 <summary>Programme</summary>
 <table>
@@ -3991,7 +3990,7 @@
 </ul>
 <p>Fonctions et variables sont des objets de nature différente en apparence : si on se raccroche à ce que l'on connaît en python, une fonction se déclare avec le mot clé def et une variable s'initialise avec l'opérateur d'affectation =.</p>
 <p>Prenons en exemple l'algorithme d'Euclide, un algorithme vieux de plus de 2500 ans permettant de calculer le PGCD de 2 nombres. On peut l'écrire à l'aide d'une fonction Python:</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">euclide</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">euclide</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">:</span> 
         <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span>
     <span class="k">while</span> <span class="n">b</span><span class="p">:</span> 
@@ -3999,24 +3998,24 @@
     <span class="k">return</span> <span class="n">a</span>
 </code></pre></div>
 <p>Dans ce programme Python, <code>euclide</code> est une fonction et <code>a</code> et <code>b</code> sont des données. Ils ne semblent pas être de nature comparable :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">euclide</span><span class="p">(</span><span class="mi">35</span><span class="p">,</span> <span class="mi">49</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">euclide</span><span class="p">(</span><span class="mi">35</span><span class="p">,</span> <span class="mi">49</span><span class="p">)</span>
 <span class="mi">7</span>
 </code></pre></div>
 <p>Et pourtant, à y regarder de plus près, notre algorithme programmé dans la fonction <code>euclide</code> n'est rien d'autre qu'une succession de caractères. On peut même pousser la réflexion jusqu'à créer une chaîne de caractère contenant ce programme :</p>
-<div class="highlight"><pre><span></span><code><span class="n">mon_programme</span> <span class="o">=</span> <span class="s2">"def euclide(a, b):</span><span class="se">\n\t</span><span class="s2">if a &lt; b: a, b = b, a</span><span class="se">\n\t</span><span class="s2">while b: a, b = b, a%b</span><span class="se">\n\t</span><span class="s2">return a"</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">mon_programme</span> <span class="o">=</span> <span class="s2">&quot;def euclide(a, b):</span><span class="se">\n\t</span><span class="s2">if a &lt; b: a, b = b, a</span><span class="se">\n\t</span><span class="s2">while b: a, b = b, a%b</span><span class="se">\n\t</span><span class="s2">return a&quot;</span>
 </code></pre></div>
 <p>Maintenant mon algorithme est devenu une variable. On peut alors construire une machine universelle capable d'évaluer n'importe quelle donnée contenant un algorithme formalisé dans le langage Python :</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">universel</span><span class="p">(</span><span class="n">algo</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">universel</span><span class="p">(</span><span class="n">algo</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
     <span class="n">exec</span><span class="p">(</span><span class="n">algo</span><span class="p">)</span>
-    <span class="n">ligne1</span> <span class="o">=</span> <span class="n">algo</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">nom</span> <span class="o">=</span> <span class="n">ligne1</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'('</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">4</span><span class="p">:]</span>
-    <span class="k">return</span> <span class="nb">eval</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">nom</span><span class="si">}{</span><span class="n">args</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="n">ligne1</span> <span class="o">=</span> <span class="n">algo</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">nom</span> <span class="o">=</span> <span class="n">ligne1</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;(&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">4</span><span class="p">:]</span>
+    <span class="k">return</span> <span class="nb">eval</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">nom</span><span class="si">}{</span><span class="n">args</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>A présent je peut invoquer ma machine universelle en lui passant en données :</p>
 <ul>
 <li>la variable contenant mon algorithme</li>
 <li>les arguments sur lequel celui-ci va travailler et obtenir la réponse :
-<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; universel(mon_programme,35,49)\
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>&gt;&gt;&gt; universel(mon_programme,35,49)\
 7
 </code></pre></div></li>
 </ul>
@@ -4092,7 +4091,7 @@
 <p>Programmez cet algorithme en Python. Vous écrirez une fonction <em>syracuse</em> prenant en paramètre un nombre et renvoyant la liste des termes de la suite jusqu'à ce qu'elle atteigne 1.</p>
 <details class="success">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">syracuse</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">syracuse</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span><span class="p">]</span>
     <span class="k">while</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">n</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -4109,7 +4108,7 @@
 <h3 id="preuve-de-turing">Preuve de Turing<a class="headerlink" href="#preuve-de-turing" title="Permanent link">⚓︎</a></h3>
 <p>Pour prouver que le problème de l'arrêt n'est pas calculable, Turing en 1936 a fait ce raisonnement :</p>
 <p>On raisonne par l'absurde et on suppose qu'il existe une fonction arrêt qui prend en paramètres un algorithme <em>A</em> et des arguments <em>m</em> (on se rappelle qu'un algorithme est une donnée). Cela pourrait prendre cette forme en Python :</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">arret</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">arret</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
    <span class="o">...</span> <span class="c1"># Tout est ici !</span>
    <span class="k">if</span> <span class="o">...</span><span class="p">:</span>
       <span class="k">return</span> <span class="kc">True</span> 
@@ -4118,12 +4117,12 @@
 </code></pre></div>
 <p>Le vrai problème est bien sûr de compléter les ... mais on suppose ici que quelqu’un a su le faire.</p>
 <p>On peut alors créer un paradoxe à l'aide de l'algorithme suivant (écrit en pseudo python approximatif...):</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">paradoxe</span><span class="p">():</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">paradoxe</span><span class="p">():</span>
    <span class="k">if</span> <span class="n">arret</span><span class="p">(</span><span class="n">paradoxe</span><span class="p">):</span> <span class="c1"># paradoxe est une donnée passée en paramètre à arrêt</span>
        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
           <span class="k">pass</span> <span class="c1"># on fait une boucle infinie si paradoxe s’arrête</span>
     <span class="k">else</span><span class="p">:</span>
-       <span class="k">return</span> <span class="kc">True</span> <span class="c1"># On s'arrête si paradoxe ne s'arrête pas</span>
+       <span class="k">return</span> <span class="kc">True</span> <span class="c1"># On s&#39;arrête si paradoxe ne s&#39;arrête pas</span>
 </code></pre></div>
 <p>Que donne la fonction <code>arret(paradoxe)</code> (on cherche à savoir si paradoxe s'arrête) ?</p>
 <ul>
@@ -4141,7 +4140,7 @@
 <details class="note">
 <summary>Correction</summary>
 <p>Si une telle fonction existe :</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">div0</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span> <span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">div0</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span> <span class="p">:</span>
     <span class="o">...</span>
     <span class="k">if</span> <span class="n">division</span> <span class="n">par</span> <span class="n">zero</span> <span class="n">existe</span> <span class="p">:</span>
         <span class="k">return</span> <span class="kc">True</span>
@@ -4155,7 +4154,7 @@
 <p>La détection de bugs (comme des boucles infinies par exemple) est une activité cruciale en informatique. Il existe des programmes capables de détecter des erreurs dans d'autres programmes : les environnements de développement modernes comme VScode ou PyCharm sont capable de souligner vos erreurs en python alors même que vous tapez le programme, et cela constitue un grand gain de temps pour le développeur.</p>
 <p>En France, depuis l'accident du vol 501 d'Ariane 5 en 1996 dû à une erreur de programmation, le développement de programmes de preuves de correction a connu une forte croissance.</p>
 <p>Un bel exemple de progrès réalisé grâce à ces programmes est le logiciel de la ligne de métro automatique 14 (Météor) à Paris: cette ligne a été mise en service sans test en condition réelles : son programme a été mathématiquement prouvé sans faute. Depuis sa mise en service, aucun bugs n'a été à déplorer.</p>
-<p>Malheureusement, un algorithme général permettant de prouver qu'un programme fonctionne n'existe pas, cela fait partie des très nombreux problèmes indécidables. Il n'y aura donc jamais de système permettant de s'assurer que n'importe quel programme est fiable, même si c'est réalisable pour quelques exemples particuliers comme le Météor.</p></div>
+<p>Malheureusement, un algorithme général permettant de prouver qu'un programme fonctionne n'existe pas, cela fait partie des très nombreux problèmes indécidables. Il n'y aura donc jamais de système permettant de s'assurer que n'importe quel programme est fiable, même si c'est réalisable pour quelques exemples particuliers comme le Météor.</p>
 
 
 

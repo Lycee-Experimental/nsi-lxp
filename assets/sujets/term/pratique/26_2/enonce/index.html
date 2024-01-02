@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,9 +3856,9 @@
 
   <h1>Enonce</h1>
 
-<div><p>Recopier et compléter sous Python la fonction suivante en respectant la spécification. On
+<p>Recopier et compléter sous Python la fonction suivante en respectant la spécification. On
 ne recopiera pas les commentaires.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3876,11 +3875,11 @@ ne recopiera pas les commentaires.</p>
 <span class="normal">15</span>
 <span class="normal">16</span>
 <span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">dichotomie</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    tab : tableau d’entiers trié dans l’ordre croissant</span>
 <span class="sd">    x : nombre entier</span>
 <span class="sd">    La fonction renvoie True si tab contient x et False sinon</span>
-<span class="sd">    """</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">debut</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">fin</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
     <span class="k">while</span> <span class="n">debut</span> <span class="o">&lt;=</span> <span class="n">fin</span><span class="p">:</span>
@@ -3894,11 +3893,11 @@ ne recopiera pas les commentaires.</p>
     <span class="k">return</span> <span class="o">...</span>
 </code></pre></div></td></tr></table></div>
 <p>Exemples :
-</p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">dichotomie</span><span class="p">([</span><span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">33</span><span class="p">],</span><span class="mi">28</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">dichotomie</span><span class="p">([</span><span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">33</span><span class="p">],</span><span class="mi">28</span><span class="p">)</span>
 <span class="kc">True</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">dichotomie</span><span class="p">([</span><span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">33</span><span class="p">],</span><span class="mi">27</span><span class="p">)</span>
 <span class="kc">False</span>
-</code></pre></div></div>
+</code></pre></div></p>
 
 
 

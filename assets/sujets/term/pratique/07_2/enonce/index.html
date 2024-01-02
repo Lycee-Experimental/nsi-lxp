@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,7 +3856,7 @@
 
   <h1>Enonce</h1>
 
-<div><p>Le but de cet exercice est d’écrire une fonction récursive <code>traduire_romain</code> qui prend
+<p>Le but de cet exercice est d’écrire une fonction récursive <code>traduire_romain</code> qui prend
 en paramètre une chaîne de caractères, non vide, représentant un nombre écrit en
 chiffres romains et qui renvoie son écriture décimale.</p>
 <p>Les chiffres romains considérés sont : I, V, X, L, C, D et M. Ils représentent
@@ -3893,7 +3892,7 @@ la valeur du reste de la chaîne, c’est-à-dire V.</p>
 utilisera l’instruction :</p>
 <p><code>nom_de_variable[1:]</code></p>
 <p>Par exemple, si la variable <code>mot</code> contient la chaîne <code>"CDI"</code>, <code>mot[1:]</code> renvoie <code>"DI"</code>.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3903,11 +3902,11 @@ utilisera l’instruction :</p>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">romains</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"I"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"V"</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="s2">"X"</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="s2">"L"</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span> <span class="s2">"C"</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span> <span class="s2">"D"</span><span class="p">:</span><span class="mi">500</span><span class="p">,</span> <span class="s2">"M"</span><span class="p">:</span><span class="mi">1000</span><span class="p">}</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">romains</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;I&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;V&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;X&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;L&quot;</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">:</span><span class="mi">500</span><span class="p">,</span> <span class="s2">&quot;M&quot;</span><span class="p">:</span><span class="mi">1000</span><span class="p">}</span>
 
 <span class="k">def</span> <span class="nf">traduire_romain</span><span class="p">(</span><span class="n">nombre</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">""" Renvoie l’écriture décimale du nombre donné en chiffres</span>
-<span class="sd">    romains """</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Renvoie l’écriture décimale du nombre donné en chiffres</span>
+<span class="sd">    romains &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">return</span> <span class="o">...</span>
     <span class="k">elif</span> <span class="n">romains</span><span class="p">[</span><span class="n">nombre</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">&gt;=</span> <span class="o">...</span>
@@ -3917,13 +3916,13 @@ utilisera l’instruction :</p>
 </code></pre></div></td></tr></table></div>
 <p>Compléter le code de la fonction <code>traduire_romain</code> et le tester.</p>
 <p>Exemples :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">traduire_romain</span><span class="p">(</span><span class="s2">"XIV"</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">traduire_romain</span><span class="p">(</span><span class="s2">&quot;XIV&quot;</span><span class="p">)</span>
 <span class="mi">14</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">traduire_romain</span><span class="p">(</span><span class="s2">"CXLII"</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">traduire_romain</span><span class="p">(</span><span class="s2">&quot;CXLII&quot;</span><span class="p">)</span>
 <span class="mi">142</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">traduire_romain</span><span class="p">(</span><span class="s2">"MMXXIII"</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">traduire_romain</span><span class="p">(</span><span class="s2">&quot;MMXXIII&quot;</span><span class="p">)</span>
 <span class="mi">2023</span>
-</code></pre></div></div>
+</code></pre></div>
 
 
 

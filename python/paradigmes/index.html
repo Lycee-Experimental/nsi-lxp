@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3945,7 +3944,7 @@
   
 
 
-<div><h1 id="paradigmes-de-programmation">Paradigmes de programmation<a class="headerlink" href="#paradigmes-de-programmation" title="Permanent link">⚓︎</a></h1>
+<h1 id="paradigmes-de-programmation">Paradigmes de programmation<a class="headerlink" href="#paradigmes-de-programmation" title="Permanent link">⚓︎</a></h1>
 <details class="conclu">
 <summary>Programme</summary>
 <table>
@@ -3990,18 +3989,18 @@
 </ul>
 <p>Parmi ces langages, on trouve notamment Skala, Java (à partir de Java 8), Javascript et Python.</p>
 <p>Par exemple, la fonction qui consiste à ajouter 1 à une autre s'écrit en λ-calcul :</p>
-<div class="highlight"><pre><span></span><code>λx.(x+1)
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>λx.(x+1)
 </code></pre></div>
 <p>On appelle cela une <span class="arithmatex">\(\lambda\)</span>-expression; En mathématiques, on noterait cela <span class="arithmatex">\(x \mapsto x+1\)</span></p>
 <p>On peut appliquer une telle expression à une valeur ainsi :</p>
-<div class="highlight"><pre><span></span><code>(λx.(x+1))(3) = (3+1) = 4
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>(λx.(x+1))(3) = (3+1) = 4
 </code></pre></div>
 <p>Une fonction additionnant ses 2 paramètres se représente ainsi :</p>
-<div class="highlight"><pre><span></span><code>λ(x,y).(x+y)
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>λ(x,y).(x+y)
 </code></pre></div>
 <p>Soit en mathématiques : <span class="arithmatex">\((x,y) \mapsto x+y\)</span></p>
 <p>Les <span class="arithmatex">\(\lambda\)</span>-fonctions sont des fonctions anonymes, et ce n'est pas très pratique. Souvent, on préférera les stocker dans des variables, ce qui reviendra à leur donner un nom. Par ailleurs, pour éviter la profusion de parenthèses, on préférera séparer les paramètres du nom de la fonction et entre eux par des espaces. On pourra donc écrire :</p>
-<div class="highlight"><pre><span></span><code>f = λ(x,y).(x + y)
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>f = λ(x,y).(x + y)
 f 3 5
 8
 g = f 3
@@ -4013,10 +4012,10 @@ g 5
 <p>Les exemples qui suivent sont à taper dans l'interpréteur, c'est-à-dire la partie droite de la fenêtre.</p>
 <!-- Avant de commencer le moindre exemple, à l'ouverture de l'interpréteur, commencer par rentrer ces lignes (toujours dans la zone de droite) : 
 
-<div class="highlight"><pre><span></span><code>ghci
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>ghci
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>Prelude&gt; :load main.hs
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Prelude&gt; :load main.hs
 </code></pre></div>
 -->
 
@@ -4024,15 +4023,15 @@ g 5
 <summary>Activité 1 - Une première fonction</summary>
 <ol>
 <li>Testez le programme suivant :
-    <div class="highlight"><pre><span></span><code>somme x y = x + y
+    <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>somme x y = x + y
 somme 2 3
 </code></pre></div></li>
 <li>Qu'obtient-on?</li>
 <li>
 <p>Puis testez le programme suivant :
-    </p><div class="highlight"><pre><span></span><code>s2 = somme 2
+    <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>s2 = somme 2
 :t s2
-</code></pre></div>
+</code></pre></div></p>
 <div class="admonition info">
 <p class="admonition-title">Remarque</p>
 <p><code>:t</code> permet de connaître le type d'une donnée</p>
@@ -4047,15 +4046,15 @@ somme 2 3
 </li>
 <li>
 <p>Puis testez le programme suivant :
-    </p><div class="highlight"><pre><span></span><code>s2 3
-</code></pre></div>
+    <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>s2 3
+</code></pre></div></p>
 </li>
 <li>Qu'obtient-on?</li>
 </ol>
 <details class="note">
 <summary>Correction</summary>
 <ol>
-<li><img alt="" src="../images/exo1.png"></li>
+<li><img alt="" src="../images/exo1.png" /></li>
 <li>On obtient bien la somme 2+3 = 5</li>
 <li>On obtient le fait que la variable s2 est du type Num et provient de deux variables  de type num</li>
 <li>On obtient bien 5 : somme 2 3</li>
@@ -4067,13 +4066,13 @@ somme 2 3
 <p>On peut aussi composer les fonctions :</p>
 <ol>
 <li>Testez le programme suivant :
-    <div class="highlight"><pre><span></span><code>somme x y = x + y
+    <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>somme x y = x + y
 suivant x = x + 1
 somme (suivant 3) 4
 </code></pre></div></li>
 <li>Qu'obtient-on?</li>
 <li>Puis testez le programme suivant :
-    <div class="highlight"><pre><span></span><code>myst x y = somme (suivant x) (suivant y)
+    <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>myst x y = somme (suivant x) (suivant y)
 myst 2 4
 </code></pre></div></li>
 <li>Qu'obtient-on?</li>
@@ -4081,7 +4080,7 @@ myst 2 4
 <details class="note">
 <summary>Correction</summary>
 <ol>
-<li><img alt="" src="../images/exo2.png"></li>
+<li><img alt="" src="../images/exo2.png" /></li>
 <li>On obtient la somme du suivant de 3, c’est à dire 4 avec 4 : (3+1) + 4 = 8</li>
 <li>On effectue : (2+1) + (4+1) = 8</li>
 </ol>
@@ -4101,7 +4100,7 @@ myst 2 4
 </div>
 <ol>
 <li>Testez le programme suivant :
-    <div class="highlight"><pre><span></span><code>f x = if (mod x 3 == 0) then (div x 3) else 4 * x - 1
+    <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>f x = if (mod x 3 == 0) then (div x 3) else 4 * x - 1
 f 7
 f 6
 </code></pre></div></li>
@@ -4110,8 +4109,8 @@ f 6
 <details class="note">
 <summary>Correction</summary>
 <ol>
-<li><img alt="" src="../images/exo3.png"></li>
-<li>Pour f 7 : on fait la DE de 7 par 3 : le reste est égale à 1, donc différent de 0, on fait donc l’opération : 4 * 7 – 1 = 27<br>
+<li><img alt="" src="../images/exo3.png" /></li>
+<li>Pour f 7 : on fait la DE de 7 par 3 : le reste est égale à 1, donc différent de 0, on fait donc l’opération : 4 * 7 – 1 = 27<br />
 Pour f 6 : on fait la DE de 6 par 3 : le reste est égale à 0, on fait donc l’opération : 6/3 = 2</li>
 </ol>
 </details>
@@ -4121,7 +4120,7 @@ Pour f 6 : on fait la DE de 6 par 3 : le reste est égale à 0, on fait donc l
 <p>Comme les langages fonctionnels ne connaissent que la composition de fonctions, il n'y a pas de boucle, et la répétition s'effectue donc par récursivité. Voici par exemple une définition de la suite de Fibonacci en Haskell :</p>
 <ol>
 <li>Testez le programme suivant :
-    <div class="highlight"><pre><span></span><code>fibo n = if (n &lt; 2) then 1 else fibo(n-1) + fibo(n-2)
+    <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>fibo n = if (n &lt; 2) then 1 else fibo(n-1) + fibo(n-2)
 fibo 6
 </code></pre></div></li>
 <li>Qu'obtient-on?</li>
@@ -4129,7 +4128,7 @@ fibo 6
 <details class="note">
 <summary>Correction</summary>
 <ol>
-<li><img alt="" src="../images/exo4.png"></li>
+<li><img alt="" src="../images/exo4.png" /></li>
 <li>On obtient le terme d’indice 6 de la suite de fibonacci : 13</li>
 </ol>
 </details>
@@ -4139,28 +4138,28 @@ fibo 6
 <p>Les listes sont un élément essentiel des langages fonctionnels. Elles ressemblent aux listes que vous connaissez en Python. Voici un exemple de fonction construisants les termes de la suite de Fibonacci jusqu'à un indice donné :</p>
 <ol>
 <li>Testez le programme suivant :
-    <div class="highlight"><pre><span></span><code>fibo n = if (n &lt; 2) then 1 else fibo(n-1) + fibo(n-2)
+    <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>fibo n = if (n &lt; 2) then 1 else fibo(n-1) + fibo(n-2)
 termesFibo n = if n == 0 then [1] else termesFibo(n-1) ++ [fibo n]
 termesFibo 6
 </code></pre></div></li>
 <li>Qu'obtient-on?</li>
 <li>Pour accéder à l'élément d'une liste à un indice donné, on utilise l'opérateur <em>!!</em>. Testez :
-    <div class="highlight"><pre><span></span><code>[2,4,6]!!1
+    <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>[2,4,6]!!1
 </code></pre></div></li>
 <li>Qu'obtient-on?</li>
 <li>Il est possible, comme en Python, de définir des listes en compréhension. On peut également définir des listes sous la forme d'un intervalle. Testez :
-    <div class="highlight"><pre><span></span><code>[2..10]
+    <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>[2..10]
 </code></pre></div></li>
 <li>Qu'obtient-on?</li>
 </ol>
 <details class="note">
 <summary>Correction</summary>
 <ol>
-<li><img alt="" src="../images/exo5.png"></li>
+<li><img alt="" src="../images/exo5.png" /></li>
 <li>On obtient la liste des termes de la suite de Fibonacci jusqu’au terme d’indice 6.</li>
-<li>
+<li></li>
 <li>Le terme d’indice 1 de la liste [2,4,6], soit 4.</li>
-<li>
+<li></li>
 <li>La liste des entiers de 2 à 10.</li>
 </ol>
 </details>
@@ -4170,7 +4169,7 @@ termesFibo 6
 <p>Ce type d'opération consiste à appliquer une fonction à tous les éléments d'une liste, et à renvoyer la liste des résultats.</p>
 <ol>
 <li>Testez le programme suivant :
-    <div class="highlight"><pre><span></span><code>doubler x = x + x
+    <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>doubler x = x + x
 map doubler [1,2,3]
 </code></pre></div></li>
 <li>Qu'obtient-on?</li>
@@ -4178,7 +4177,7 @@ map doubler [1,2,3]
 <details class="note">
 <summary>Correction</summary>
 <ol>
-<li><img alt="" src="../images/exo6.png"></li>
+<li><img alt="" src="../images/exo6.png" /></li>
 <li>Chaque élément de la liste a été doublé : map parcours la liste et applique une régle à chaque élément, ici multiplier par 2.</li>
 </ol>
 </details>
@@ -4188,7 +4187,7 @@ map doubler [1,2,3]
 <p>Ce type d'opération consiste à renvoyer une liste constituée des éléments de la liste passée en paramètre qui vérifient un certain critère.</p>
 <ol>
 <li>Testez le programme suivant :
-    <div class="highlight"><pre><span></span><code>pair x = (mod x 2) == 0
+    <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>pair x = (mod x 2) == 0
 filter pair [1,2,3,4,5,6]
 </code></pre></div></li>
 <li>Qu'obtient-on?</li>
@@ -4196,7 +4195,7 @@ filter pair [1,2,3,4,5,6]
 <details class="note">
 <summary>Correction</summary>
 <ol>
-<li><img alt="" src="../images/exo7.png"></li>
+<li><img alt="" src="../images/exo7.png" /></li>
 <li>filter « filtre » chaque élément d’une liste à l’aide d’une règle : ici ne prendre que les nombres pairs.</li>
 </ol>
 </details>
@@ -4211,7 +4210,7 @@ fonction en utilisant différents motifs :</p>
 <li><code>(x:xs)</code> : une liste d’au moins un élément : <code>x</code> représente le premier élément, <code>xs</code> la liste (éventuellement vide) des autres éléments.</li>
 </ul>
 <p>Voici par exemple comment définir une fonction calculant la somme des éléments d’une liste :</p>
-<div class="highlight"><pre><span></span><code>:{
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>:{
 sommeL [] = 0
 sommeL (x:xs) = x + sommeL xs
 :}
@@ -4232,31 +4231,31 @@ sommeL (x:xs) = x + sommeL xs
 </ol>
 <details class="note">
 <summary>Correction</summary>
-<p><img alt="" src="../images/exo8.png"></p>
+<p><img alt="" src="../images/exo8.png" /></p>
 <p>1.
-</p><div class="highlight"><pre><span></span><code>prodL [x] = x
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>prodL [x] = x
 prodL (x:xs) = x * prodL xs
 </code></pre></div>
 2. 
-<div class="highlight"><pre><span></span><code>maxL [x] = x
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>maxL [x] = x
 maxL (x:xs) = if (x &lt; maxL xs) then maxL xs else x
 </code></pre></div>
 3. 
-<div class="highlight"><pre><span></span><code>supL x [y] = if x == y then [] else [y]
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>supL x [y] = if x == y then [] else [y]
 supL x (y:ys) = if x == y then ys else y:supL x ys
 </code></pre></div>
 4. 
-<div class="highlight"><pre><span></span><code>supL2 x [y] = if x == y then [] else [y]
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>supL2 x [y] = if x == y then [] else [y]
 supL2 x (y:ys) = if x == y then supL2 x ys else y:supL2 x ys
 </code></pre></div>
 5. 
-<div class="highlight"><pre><span></span><code>filtre p [] = []
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>filtre p [] = []
 filtre p (x:xs) = if (p x) then x:(filtre p xs) else fonc p xs
 </code></pre></div>
 6. 
-<div class="highlight"><pre><span></span><code>sommeT [] [] = []
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>sommeT [] [] = []
 sommeT (x:xs) (y:ys) = x+y:(sommeT xs ys)
-</code></pre></div>
+</code></pre></div></p>
 </details>
 </details>
 <h2 id="programmation-logique">Programmation logique<a class="headerlink" href="#programmation-logique" title="Permanent link">⚓︎</a></h2>
@@ -4282,7 +4281,7 @@ sommeT (x:xs) (y:ys) = x+y:(sommeT xs ys)
 <p>On commencera par appuyer sur le '+' en haut de la fenêtre à gauche, puis on cliquera sur 'Program'.</p>
 <p>La fenêtre de gauche est celle dédiée aux règles et aux faits, la fenêtre en bas à droit est la console de saisie des requêtes, et celle en haut à droite donne les résultats de la requête.</p>
 <p>Copier-coller le code suivant :</p>
-<div class="highlight"><pre><span></span><code>    %--------------------------------------------------------
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>    %--------------------------------------------------------
     % les faits :
 
     % les 3 maisons :
@@ -4309,7 +4308,7 @@ sommeT (x:xs) (y:ys) = x+y:(sommeT xs ys)
     different(_,X,X):-!,fail.
     different(_,_,_).
 
-    % le prédicat "resoudre" indique les 4 inconnues à retrouver :
+    % le prédicat &quot;resoudre&quot; indique les 4 inconnues à retrouver :
     resoudre(MM,ME,AE,AL):-
 
             relation(max,MM,chat),
@@ -4321,7 +4320,7 @@ sommeT (x:xs) (y:ys) = x+y:(sommeT xs ys)
 <details class="success">
 <summary>Solution</summary>
 <p>Pour résoudre le problème, on tape <code>resoudre(MM,ME,AE,AL)</code> ce qui donne :</p>
-<div class="highlight"><pre><span></span><code>MM = pavillon,
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>MM = pavillon,
 ME = chateau,
 AE = cheval,
 AL = poisson .
@@ -4340,36 +4339,36 @@ AL = poisson .
 <summary>Activité 9 - Arbre généalogique</summary>
 <p>Nous allons d'abord créer les faits à partir d'un arbre généalogique, puis créer les règles décrivant les liens de parenté.</p>
 <ol>
-<li><strong>Écriture des faits</strong><br>
-Nous allons utiliser les faits suivants : <code>homme</code>, <code>femme</code>, <code>parent</code> comme point de départ.<br>
-Nous définirons ensuite des règles permettant d'établir d'autres relations de parentés, pour les tester ensuite avec des requêtes.<br>
+<li><strong>Écriture des faits</strong><br />
+Nous allons utiliser les faits suivants : <code>homme</code>, <code>femme</code>, <code>parent</code> comme point de départ.<br />
+Nous définirons ensuite des règles permettant d'établir d'autres relations de parentés, pour les tester ensuite avec des requêtes.<br />
 Nous utiliserons l'arbre généalogique de la figure suivante :
-<img alt="" class="center" src="../images/arbre.png" width="70%"></li>
+<img alt="" class="center" src="../images/arbre.png" width="70%" /></li>
 </ol>
 <p>a. <strong>Faits de genre</strong></p>
-<p>Commencez pas saisir les faits concernant le genre de la personne considérée. Attention, n'utilisez pas les majuscules, car en Prolog, elles indiquent une variable et non une constante.<br>
+<p>Commencez pas saisir les faits concernant le genre de la personne considérée. Attention, n'utilisez pas les majuscules, car en Prolog, elles indiquent une variable et non une constante.<br />
 Par exemple :
-</p><div class="highlight"><pre><span></span><code>homme(armand).
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>homme(armand).
 femme(gisele).
 </code></pre></div>
-Complétez les faits de genre.
+Complétez les faits de genre.</p>
 <p>b. <strong>Faits de liens de parenté</strong></p>
 <p>On choisit pour <code>parent</code> la syntaxe : <code>"Si A est un parent de B, alors parent(A,B)"</code>.
-</p><div class="highlight"><pre><span></span><code>parent(armand,robert).
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>parent(armand,robert).
 parent(gisele,robert).
 </code></pre></div>
-Complétez les faits de parenté.  
+Complétez les faits de parenté.  </p>
 <ol>
 <li>
-<p><strong>Ecriture de règles</strong><br>
-Nous allons maintenant établir des règles plus précises, en commençant par la notion de père et mère.<br>
-A est le père de B si A est un homme et si A est un parent de B.<br>
+<p><strong>Ecriture de règles</strong><br />
+Nous allons maintenant établir des règles plus précises, en commençant par la notion de père et mère.<br />
+A est le père de B si A est un homme et si A est un parent de B.<br />
 Pour celà, on écrit :
-</p><div class="highlight"><pre><span></span><code>pere(X,Y):-homme(X),parent(X,Y).
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>pere(X,Y):-homme(X),parent(X,Y).
 </code></pre></div>
-On peut ensuite tester dans l'interpréteur avec une requête, par exemple <code>pere(armand,robert)</code> qui doit retourner <code>true</code>.<br>
-On peut aussi tester les unifications, en demandant <code>pere(armand,X).</code>, qui donnera toutes les possibilités pour unifier X.<br>
-Complétez avec les règles suivantes :
+On peut ensuite tester dans l'interpréteur avec une requête, par exemple <code>pere(armand,robert)</code> qui doit retourner <code>true</code>.<br />
+On peut aussi tester les unifications, en demandant <code>pere(armand,X).</code>, qui donnera toutes les possibilités pour unifier X.<br />
+Complétez avec les règles suivantes :</p>
 </li>
 <li>
 <p>mere</p>
@@ -4393,7 +4392,7 @@ Complétez avec les règles suivantes :
 <p><strong>Compléments de Prolog</strong></p>
 <ol>
 <li>
-<p>Il est possible d'imposer une utilisation précise des règles que l'on écrit en Prolog. On peut par exemple obliger d'utiliser une variable dans un paramètre, ou pas.<br>
+<p>Il est possible d'imposer une utilisation précise des règles que l'on écrit en Prolog. On peut par exemple obliger d'utiliser une variable dans un paramètre, ou pas.<br />
 Pour celà, on précède dans la définition de la règle les paramètres par les caractères suivants :</p>
 </li>
 <li>
@@ -4408,7 +4407,7 @@ Si on définit une règle <code>toto(?X,+Y)</code>, il faut donc que Y soit un �
 </ol>
 <details class="note">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code>% les faits :
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>% les faits :
 
 % de genre :
 homme(armand).
@@ -4447,7 +4446,7 @@ pere(X,Y) :- homme(X),parent(X,Y). % X est le père de Y
 % notion de mere
 mere(X,Y) :- femme(X),parent(X,Y). % X est la mère de Y
 
-% notion d'enfant
+% notion d&#39;enfant
 enfant(X,Y) :- parent(Y,X). % X est l’enfant de Y
 
 % notion de fils
@@ -4471,7 +4470,7 @@ frere(X,Y) :- homme(X),pere(P,X),pere(P,Y),mere(M,X),mere(M,Y),X\==Y. % X est l
 % notion de soeur
 soeur(X,Y) :- femme(X),pere(P,X),pere(P,Y),mere(M,X),mere(M,Y),X\==Y. % X est la sœur de Y
 
-% notion d'oncle
+% notion d&#39;oncle
 oncle(X,Y) :- parent(P,Y),frere(X,P). % X est l’oncle de Y
 
 % notion de tante
@@ -4511,7 +4510,7 @@ tante(X,Y) :- parent(P,Y),soeur(X,P). % X est la tante de Y
 <summary>Activité 11 - Traitement des graphes</summary>
 <p>On va définir un réseau routier minimal, et demander à Prolog l'existence, ou non, d'une route entre deux points.</p>
 <p>On considère le réseau suivant :</p>
-<p><img alt="" class="center" src="../images/graphe.png"></p>
+<p><img alt="" class="center" src="../images/graphe.png" /></p>
 <p>Pour définir l'existence d'une route entre deux sommets, on utilisera la syntaxe : <em>route(a,b)</em> si une route existe.</p>
 <ol>
 <li>Complétez les faits permettant de décrire le réseau ci-dessus.</li>
@@ -4519,7 +4518,7 @@ tante(X,Y) :- parent(P,Y),soeur(X,P). % X est la tante de Y
 </ol>
 <details class="note">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code>route(a,s).
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>route(a,s).
 route(a,d).
 route(a,b).
 route(b,a).
@@ -4541,14 +4540,14 @@ voisines(X,Y):-route(X,Y).
 <details class="question">
 <summary>Activité 12 - Coloriage</summary>
 <p>On dispose de 4 couleurs pour colorier la carte suivante :</p>
-<p><img alt="" class="center" src="../images/couleur.png"></p>
+<p><img alt="" class="center" src="../images/couleur.png" /></p>
 <p>Écrire un programme Prolog permettant d'associer une couleur (rouge, jaune, vert, bleu) à une région (1,2,3,4,5,6) de telle manière que deux régions adjacentes ne soient pas de la même couleur.</p>
 <p><em>Indication :</em></p>
 <p>Commencer par définir les faits de couleurs : <code>couleur(vert).</code>, etc...</p>
 <p>Écrire ensuite une règle <code>carte(C1,C2,C3,C4,C5,C6)</code> qui affectera une couleur en tenant compte des contraintes du schéma.</p>
 <details class="note">
 <summary>Correction</summary>
-<div class="highlight"><pre><span></span><code>couleur(rouge).
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>couleur(rouge).
 couleur(jaune).
 couleur(vert).
 couleur(bleu).
@@ -4562,7 +4561,7 @@ carte(C1,C2,C3,C4,C5,C6):-couleur(C1),couleur(C2),couleur(C3),
 </code></pre></div>
 <p><em>Exemple plus simple :</em></p>
 <p>Si on cherche à colorier avec 3 couleurs un découpage de cercle entre 3 parts égales, on pourrait écrire le code suivant :</p>
-<div class="highlight"><pre><span></span><code>couleur(rouge).
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>couleur(rouge).
 couleur(vert).
 couleur(bleu).
 carte(C1,C2,C3): −couleur(C1),couleur(C2),couleur(C3),C1\==C2,C2\==C3,C3\==C1.
@@ -4591,15 +4590,15 @@ carte(C1,C2,C3): −couleur(C1),couleur(C2),couleur(C3),C1\==C2,C2\==C3,C3\==C1.
 <details class="note">
 <summary>Correction</summary>
 <ol>
-<li>premier(X,[X|_]).<br>
+<li>premier(X,[X|_]).<br />
 Et on teste avec : premier(1,[1,2,3]). Qui donne bien true
 2.
-<div class="highlight"><pre><span></span><code>dernier(X,[X]).
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>dernier(X,[X]).
 dernier(X,[_|Q]):-dernier(X,Q).
 </code></pre></div>
 Et on teste avec : <code>dernier(1,[2,3,1]).</code> Qui donne bien true
 3.
-<div class="highlight"><pre><span></span><code>longueur(0,[]).
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>longueur(0,[]).
 longueur(N,[_|Q]):-longueur(M,Q),N is M+1.
 </code></pre></div>
 Et on teste avec : longueur(N,[1,2,3,4]). Qui donne bien 4</li>
@@ -4615,7 +4614,7 @@ Et on teste avec : longueur(N,[1,2,3,4]). Qui donne bien 4</li>
 <li><code>unique(?X,+L)</code> doit renvoyer si X n'apparaît qu'une seule fois dans L.</li>
 <li><code>occurences(?X,+L)</code> doit renvoyer le nombre d'occurences de X dans L.</li>
 </ul>
-</details></div>
+</details>
 
 
 

@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,7 +3856,7 @@
 
   <h1>Enonce</h1>
 
-<div><p>Un professeur de NSI décide de gérer les résultats de sa classe sous la forme d’un
+<p>Un professeur de NSI décide de gérer les résultats de sa classe sous la forme d’un
 dictionnaire :</p>
 <ul>
 <li>les clefs sont les noms des élèves ;</li>
@@ -3866,21 +3865,21 @@ forme de chaîne de caractères et les valeurs sont les notes obtenues associée
 leurs coefficients dans une liste.</li>
 </ul>
 <p>Avec :</p>
-<div class="highlight"><pre><span></span><code><span class="n">resultats</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'Dupont'</span><span class="p">:</span> <span class="p">{</span>
-                        <span class="s1">'DS1'</span><span class="p">:</span> <span class="p">[</span><span class="mf">15.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
-                        <span class="s1">'DM1'</span><span class="p">:</span> <span class="p">[</span><span class="mf">14.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-                        <span class="s1">'DS2'</span><span class="p">:</span> <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
-                        <span class="s1">'PROJET1'</span><span class="p">:</span> <span class="p">[</span><span class="mi">16</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-                        <span class="s1">'DS3'</span><span class="p">:</span> <span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">resultats</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Dupont&#39;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s1">&#39;DS1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">15.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+                        <span class="s1">&#39;DM1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">14.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+                        <span class="s1">&#39;DS2&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+                        <span class="s1">&#39;PROJET1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">16</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+                        <span class="s1">&#39;DS3&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
                     <span class="p">},</span>
-            <span class="s1">'Durand'</span><span class="p">:</span> <span class="p">{</span>
-                        <span class="s1">'DS1'</span><span class="p">:</span> <span class="p">[</span><span class="mi">6</span> <span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
-                        <span class="s1">'DM1'</span><span class="p">:</span> <span class="p">[</span><span class="mf">14.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-                        <span class="s1">'DS2'</span><span class="p">:</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
-                        <span class="s1">'PROJET1'</span><span class="p">:</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-                        <span class="s1">'IE1'</span><span class="p">:</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
-                        <span class="s1">'DS3'</span><span class="p">:</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
-                        <span class="s1">'DS4'</span><span class="p">:[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+            <span class="s1">&#39;Durand&#39;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s1">&#39;DS1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">6</span> <span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+                        <span class="s1">&#39;DM1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">14.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+                        <span class="s1">&#39;DS2&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+                        <span class="s1">&#39;PROJET1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+                        <span class="s1">&#39;IE1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+                        <span class="s1">&#39;DS3&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+                        <span class="s1">&#39;DS4&#39;</span><span class="p">:[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
                     <span class="p">}</span>
             <span class="p">}</span>
 </code></pre></div>
@@ -3888,7 +3887,7 @@ leurs coefficients dans une liste.</li>
 <p>Le professeur crée une fonction <code>moyenne</code> qui prend en paramètre le nom d’un de ses
 élèves et renvoie sa moyenne arrondie au dixième.</p>
 <p>Compléter le code du professeur ci-dessous :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3911,7 +3910,7 @@ leurs coefficients dans une liste.</li>
         <span class="k">return</span> <span class="nb">round</span><span class="p">(</span> <span class="o">...</span> <span class="o">/</span> <span class="n">total_coefficients</span><span class="p">,</span> <span class="mi">1</span> <span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
-</code></pre></div></td></tr></table></div></div>
+</code></pre></div></td></tr></table></div>
 
 
 

@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,7 +3856,7 @@
 
   <h1>Enonce</h1>
 
-<div><p>Le jeu du « plus ou moins » consiste à deviner un nombre entier choisi entre 1 et 99.</p>
+<p>Le jeu du « plus ou moins » consiste à deviner un nombre entier choisi entre 1 et 99.</p>
 <p>Un élève de NSI décide de le coder en langage Python de la manière suivante :</p>
 <ul>
 <li>le programme génère un nombre entier aléatoire compris entre 1 et 99 ;</li>
@@ -3868,11 +3867,11 @@ est averti. Il peut alors en tester un autre ;</li>
 <li>si l’utilisateur trouve le bon nombre en 10 essais ou moins, il gagne ;</li>
 <li>si l’utilisateur a fait plus de 10 essais sans trouver le bon nombre, il perd.</li>
 </ul>
-<p>La fonction <code>randint</code> est utilisée.<br>
+<p>La fonction <code>randint</code> est utilisée.<br />
 Si a et b sont des entiers tels que <code>a &lt;= b</code>, <code>randint(a,b)</code> renvoie un
 nombre entier compris entre <code>a</code> et <code>b</code>.</p>
 <p>Compléter le code ci-dessous et le tester :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3894,22 +3893,22 @@ nombre entier compris entre <code>a</code> et <code>b</code>.</p>
 
 <span class="k">def</span> <span class="nf">plus_ou_moins</span><span class="p">():</span>
     <span class="n">nb_mystere</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="o">...</span><span class="p">)</span>
-    <span class="n">nb_test</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Proposez un nombre entre 1 et 99 : "</span><span class="p">))</span>
+    <span class="n">nb_test</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Proposez un nombre entre 1 et 99 : &quot;</span><span class="p">))</span>
     <span class="n">compteur</span> <span class="o">=</span> <span class="o">...</span>
 
     <span class="k">while</span> <span class="n">nb_mystere</span> <span class="o">!=</span> <span class="o">...</span> <span class="ow">and</span> <span class="n">compteur</span> <span class="o">&lt;</span> <span class="o">...</span> <span class="p">:</span>
         <span class="n">compteur</span> <span class="o">=</span> <span class="n">compteur</span> <span class="o">+</span> <span class="o">...</span>
         <span class="k">if</span> <span class="n">nb_mystere</span> <span class="o">...</span> <span class="n">nb_test</span><span class="p">:</span>
-            <span class="n">nb_test</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Trop petit ! Testez encore : "</span><span class="p">))</span>
+            <span class="n">nb_test</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Trop petit ! Testez encore : &quot;</span><span class="p">))</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">nb_test</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Trop grand ! Testez encore : "</span><span class="p">))</span>
+            <span class="n">nb_test</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Trop grand ! Testez encore : &quot;</span><span class="p">))</span>
 
     <span class="k">if</span> <span class="n">nb_mystere</span> <span class="o">==</span> <span class="n">nb_test</span><span class="p">:</span>
-        <span class="nb">print</span> <span class="p">(</span><span class="s2">"Bravo ! Le nombre était "</span><span class="p">,</span><span class="o">...</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"Nombre d'essais: "</span><span class="p">,</span><span class="o">...</span><span class="p">)</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Bravo ! Le nombre était &quot;</span><span class="p">,</span><span class="o">...</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;essais: &quot;</span><span class="p">,</span><span class="o">...</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span> <span class="p">(</span><span class="s2">"Perdu ! Le nombre était "</span><span class="p">,</span><span class="o">...</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div></div>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Perdu ! Le nombre était &quot;</span><span class="p">,</span><span class="o">...</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 
 
 

@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3966,7 +3965,7 @@
   
 
 
-<div><h1 id="diviser-pour-regner">Diviser pour régner<a class="headerlink" href="#diviser-pour-regner" title="Permanent link">⚓︎</a></h1>
+<h1 id="diviser-pour-regner">Diviser pour régner<a class="headerlink" href="#diviser-pour-regner" title="Permanent link">⚓︎</a></h1>
 <details class="conclu">
 <summary>Programme</summary>
 <table>
@@ -4002,7 +4001,7 @@
 <p>On dispose d'un tableau de valeurs, et on cherche à savoir si une valeur donnée est présente dans le tableau ou non.</p>
 <h3 id="recherche-naive">Recherche naïve<a class="headerlink" href="#recherche-naive" title="Permanent link">⚓︎</a></h3>
 <p>On considère le programme suivant sous Python :</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">tableau</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">tableau</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">valeur</span> <span class="ow">in</span> <span class="n">tableau</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">valeur</span> <span class="o">==</span> <span class="n">element</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">True</span>
@@ -4012,7 +4011,7 @@
 <h3 id="recherche-dans-un-tableau-trie">Recherche dans un tableau trié<a class="headerlink" href="#recherche-dans-un-tableau-trie" title="Permanent link">⚓︎</a></h3>
 <p>Supposons à présent que les valeurs du tableau sont triées dans l'ordre croissant. Peut-on améliorer l'algorithme précédent afin de le rendre plus efficace ?</p>
 <p>Une première amélioration — très simple — vient à l'esprit: dès que l'on tombe sur une valeur supérieur à la valeur à rechercher, on peut stopper la recherche car toutes les valeurs suivantes seront elles aussi supérieures. Puisque l'on souhaite stopper l'algorithme préventivement, il faut utiliser une boucle tant que.</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_ordonnee</span><span class="p">(</span><span class="n">tableau</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_ordonnee</span><span class="p">(</span><span class="n">tableau</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
     <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">N</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tableau</span><span class="p">)</span>
     <span class="k">while</span> <span class="n">tableau</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">element</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">N</span><span class="p">:</span>
@@ -4046,7 +4045,7 @@ Trois cas peuvent se produire :<ul>
 <li>Si à un moment donné, on a <span class="arithmatex">\(g&gt;d\)</span> (ce qui est possible avec les instructions <span class="arithmatex">\(g=m+1\)</span> ou bien <span class="arithmatex">\(d=m-1\)</span>), on sait que l'on peut interrompre la recherche car la valeur ne se trouve pas dans le tableau.</li>
 </ol>
 <p>On obtient ainsi le programme suivant de recherche dichotomique :</p>
-<p></p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_dichotomique</span><span class="p">(</span><span class="n">tableau</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
+<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_dichotomique</span><span class="p">(</span><span class="n">tableau</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
     <span class="n">g</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">d</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tableau</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
     <span class="k">while</span> <span class="n">g</span> <span class="o">&lt;=</span> <span class="n">d</span> <span class="ow">and</span> <span class="n">tableau</span><span class="p">[</span><span class="n">g</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">element</span> <span class="o">&lt;=</span> <span class="n">tableau</span><span class="p">[</span><span class="n">d</span><span class="p">]:</span>
@@ -4057,10 +4056,10 @@ Trois cas peuvent se produire :<ul>
             <span class="n">g</span> <span class="o">=</span> <span class="n">m</span> <span class="o">+</span> <span class="mi">1</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">d</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="mi">1</span>
-    <span class="c1"># La recherche n'a rien donné</span>
+    <span class="c1"># La recherche n&#39;a rien donné</span>
     <span class="k">return</span> <span class="kc">False</span>
 </code></pre></div>
-La complexité est bien plus compliquée à évaluer. A chaque étape (passage de la boucle), le nombre de valeur à rechercher est à peu près divisé par 2.
+La complexité est bien plus compliquée à évaluer. A chaque étape (passage de la boucle), le nombre de valeur à rechercher est à peu près divisé par 2.</p>
 <p>Pourquoi <em>à peu près</em>? Plus précisément (et cela ressemble énormément au raisonnement utilisé en mathématique pour déterminer la médiane d'une série de données) :</p>
 <ul>
 <li>Si <span class="arithmatex">\(L=d-g + 1\)</span> est pair, alors à la moitié à gauche de la valeur d'indice <span class="arithmatex">\(m = (g + d) // 2\)</span> comportera <span class="arithmatex">\((L // 2) - 1\)</span> valeurs, celle de droite en comportera <span class="arithmatex">\(L // 2\)</span>. Le cas le plus défavorable étant <span class="arithmatex">\(L // 2\)</span>, on considérera cette valeur pour nos calculs.</li>
@@ -4094,14 +4093,14 @@ La complexité est bien plus compliquée à évaluer. A chaque étape (passage d
 <li>On s'arrête soit lorsque l'élément central est la valeur à rechercher, soit lorsque le sous-tableau ne contient plus aucune valeur (largeur inférieure à 0).</li>
 </ul>
 <p>Cette fois, la récursivité intrinsèque de l'algorithme apparaît explicitement. Donnons-en une implémentation en python. Nous utiliserons les mêmes paramètres <em>g</em> et <em>d</em> que pour l'implémentation itérative de Première:</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_dichotomique_rec</span><span class="p">(</span><span class="n">tableau</span><span class="p">,</span> <span class="n">element</span><span class="p">,</span>  <span class="n">g</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_dichotomique_rec</span><span class="p">(</span><span class="n">tableau</span><span class="p">,</span> <span class="n">element</span><span class="p">,</span>  <span class="n">g</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">g</span> <span class="o">&gt;</span> <span class="n">d</span><span class="p">:</span>
-        <span class="c1"># La "largeur" de la zone de recherche est négative: </span>
+        <span class="c1"># La &quot;largeur&quot; de la zone de recherche est négative: </span>
         <span class="c1"># La recherche a été infructueuse</span>
         <span class="k">return</span> <span class="kc">False</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="c1"># On sait que g &lt;= d: la "largeur" de la zone est positive ou nulle</span>
-        <span class="c1"># (nulle = il ne reste plus qu'un seul élément)</span>
+        <span class="c1"># On sait que g &lt;= d: la &quot;largeur&quot; de la zone est positive ou nulle</span>
+        <span class="c1"># (nulle = il ne reste plus qu&#39;un seul élément)</span>
         <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">g</span> <span class="o">+</span> <span class="n">d</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
         <span class="k">if</span> <span class="n">tableau</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">==</span> <span class="n">element</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">True</span>
@@ -4119,23 +4118,23 @@ La complexité est bien plus compliquée à évaluer. A chaque étape (passage d
 <p>Est-il possible de dépasser la pile d'appel de python (en général 1000 appels maximum) ? Difficilement, car pour cela il faudrait que la taille du tableau <em>N</em> soit supérieure à <span class="arithmatex">\(2^{1000}\)</span>, ce qui donne environ <span class="arithmatex">\(10^{300}\)</span>, un nombre largement supérieur au nombre estimé d'atomes de l'univers (l'ordre de grandeur est d'environ <span class="arithmatex">\(10^{80}\)</span>). Aucune chance d'avoir assez de mémoire dans un ordinateur pour ne serait-ce que stocker un tableau aussi grand.</p>
 <details class="question">
 <summary>Activité 1 - Temps d'execution</summary>
-<p><a class="md-button md-button--primary" href="/xtra/jupyterlite/lab/index.html?fromURL=/notebooks/temps_exec.ipynb" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span> Notebook <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span></a></p>
+<p><a class="md-button md-button--primary" href="/xtra/jupyterlite/lab/index.html?fromURL=/notebooks/temps_exec.ipynb" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span> Notebook <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span></a></p>
 </details>
 <details class="question">
 <summary>Activité 2 - Recherche dichotomique</summary>
-<p><a class="md-button md-button--primary" href="/xtra/jupyterlite/lab/index.html?fromURL=/notebooks/recherche_dicho.ipynb" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span> Notebook <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span></a>
-<a class="md-button" href="/xtra/jupyterlite/lab/index.html?fromURL=/notebooks/recherche_dicho_correction.ipynb" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span> Corrigé <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span></a></p>
+<p><a class="md-button md-button--primary" href="/xtra/jupyterlite/lab/index.html?fromURL=/notebooks/recherche_dicho.ipynb" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span> Notebook <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span></a>
+<a class="md-button" href="/xtra/jupyterlite/lab/index.html?fromURL=/notebooks/recherche_dicho_correction.ipynb" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span> Corrigé <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span></a></p>
 </details>
 <h2 id="le-tri-fusion">Le tri fusion<a class="headerlink" href="#le-tri-fusion" title="Permanent link">⚓︎</a></h2>
 <p>La méthodologie «diviser pour régner» peut être avantageusement utilisée pour trier une liste, donnant à la fois un algorithme simple à décrire, mais qui s'avérera aussi beaucoup plus efficace que les algorithmes de tri par insertion ou par sélection étudiés en classe de Première.</p>
 <p>Le principe est schématisé ci-dessous :</p>
-<p><img alt="" class="center" src="../images/fusion.png"></p>
+<p><img alt="" class="center" src="../images/fusion.png" /></p>
 <ul>
 <li>A chaque étape, on sépare la liste en deux sous-listes (flèches bleues sur le diagramme).</li>
 <li>Lorsque toutes les sous-listes ont été décomposées, on les fusionne deux par deux (flèches rouges). L'opération de fusion prend 2 listes déjà triées (ce qui est notamment le cas pour les listes de longueur 1), et les combine en une unique liste elle aussi triée.</li>
 </ul>
 <p>La méthode décrite peut se résumer en l'algorithme naïf suivant :</p>
-<div class="highlight"><pre><span></span><code>fonction Tri_Fusion(Liste):
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>fonction Tri_Fusion(Liste):
     Découper Liste en deux sous-listes L1 et L2
     Appliquer la fonction tri_fusion à L1
     Appliquer la fonction tri_fusion à L2
@@ -4146,10 +4145,10 @@ La complexité est bien plus compliquée à évaluer. A chaque étape (passage d
 <p>L'algorithme de tri fusion se prête bien à une implémentation à l'aide de listes.</p>
 <p>Outre la fonction récursive <em>tri_fusion</em>, nous avons besoin d'une fonction <em>coupe</em> pour découper une liste en sous-listes, ainsi que d'une fonction <em>fusion</em>.</p>
 <p>Sur le schémas précédents, la coupe a toujours été effectuée en milieu de liste. Mais cela n'est absolument pas une nécessité: l'essentiel est que l'on obtiennent deux sous-listes de tailles à peu près équivalentes (il peut y avoir une différence d'une unité), peu importe comment les éléments de la liste initiale ont été répartis :</p>
-<div class="highlight"><pre><span></span><code>Fonction  coupe(liste):
-   """
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Fonction  coupe(liste):
+   &quot;&quot;&quot;
    Découpe la liste  en deux sous-listes de tailles équivalentes.
-   """
+   &quot;&quot;&quot;
 
    l1 ← liste vide
    l2 ← liste vide
@@ -4157,17 +4156,17 @@ La complexité est bien plus compliquée à évaluer. A chaque étape (passage d
    Pour i allant de 0 à longueur de liste
    
       si  i est pair :
-         ajouter l'élément de liste d'indice i à l1
+         ajouter l&#39;élément de liste d&#39;indice i à l1
       else:
-         ajouter l'élément de liste d'indice i à l2
+         ajouter l&#39;élément de liste d&#39;indice i à l2
 
     Renvoyer l1, l2
 </code></pre></div>
 <p>La fonction de fusion peut se décrire facilement à l'aide d'un algorithme récursif :</p>
-<div class="highlight"><pre><span></span><code>Fonction fusion(l1,l2)
-    """
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Fonction fusion(l1,l2)
+    &quot;&quot;&quot;
     Fusionne les deux listes TRIÉES l1 et l2 en une unique liste triée.
-    """
+    &quot;&quot;&quot;
     
     N1 ← longueur de l1
     N2 ← longueur de l2
@@ -4175,36 +4174,36 @@ La complexité est bien plus compliquée à évaluer. A chaque étape (passage d
     liste ← liste vide
     i1 ← 0
     i2 ← 0
-    Tant que  i1 &lt; N1 ou i2 &lt; N2: # tant qu'il reste des éléments à traiter dans au moins l'une des 2 listes
+    Tant que  i1 &lt; N1 ou i2 &lt; N2: # tant qu&#39;il reste des éléments à traiter dans au moins l&#39;une des 2 listes
         Si i1 = N1 Alors
             # La première liste est déjà épuisée: on peut donc traiter exclusivement la deuxième
             Tant que i2 &lt; N2 Faire
-                Ajouter à liste l'élément d'incide i2 dans l2
+                Ajouter à liste l&#39;élément d&#39;incide i2 dans l2
                 i2 ← i2 + 1
         Sinon Si i2 = N2 Alors
             # La deuxième liste est déjà épuisée: on peut donc traiter exclusivement la première
             Tant que i1 &lt; N1 Faire
-                Ajouter à liste l'élément d'incide i1 dans l1
+                Ajouter à liste l&#39;élément d&#39;incide i1 dans l1
                 i1 ← i1+ 1
         Sinon
             # Il reste des éléments à traiter dans chacune des 2 listes: on garde le plus petit des 2
             Si l1[i1] &lt; l2[i2] Alors
-                Ajouter à liste l'élément d'incide i1 dans l1
+                Ajouter à liste l&#39;élément d&#39;incide i1 dans l1
                 i1 ← i1 + 1
             Sinon
-                Ajouter à liste l'élément d'incide i2 dans l2
+                Ajouter à liste l&#39;élément d&#39;incide i2 dans l2
                 i2 ← i2 + 1
     
     Renvoyer liste
 </code></pre></div>
 <p>Il est tout fait possible (et intéressant) de remplacer cet algorithme récursif par un autre algorithme, itératif. L'avantage étant qu'avec l'algorithme récursif, il n'est pas aisé de fusionner des listes dont la taille dépasse la limite de récursion de python (normalement 1000 appels). Avec un algorithme itératif, aucun problème de ce genre.</p>
 <p>Enfin, la fonction de tri proprement dite est une implémentation directe de l'algorithme de la section précédente:</p>
-<div class="highlight"><pre><span></span><code>Fonction tri_fusion(liste):
-    """
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Fonction tri_fusion(liste):
+    &quot;&quot;&quot;
     Renvoie une copie triée de `liste`.
-    """
+    &quot;&quot;&quot;
     
-    # Une liste de longueur 0 ou 1 est déjà triée: il n'y a rien à faire
+    # Une liste de longueur 0 ou 1 est déjà triée: il n&#39;y a rien à faire
     Si liste est vide Alors
         Renvoyer []
     Sinon Si liste de longueur 1 Alors
@@ -4225,9 +4224,9 @@ La complexité est bien plus compliquée à évaluer. A chaque étape (passage d
 <p>Prenons par exemple le cas d'une liste de taille <span class="arithmatex">\(N = 1000\)</span>. Un tri de complexité quadratique aurait un nombre d'étapes proportionnel à <span class="arithmatex">\(1000^2 = 1\,000\,000\)</span>, alors que le tri fusion ne prendrait que <span class="arithmatex">\(1000\times \log_2(1000) \approx 9966\)</span> étapes. La différence est considérable, et l'écart ne ferait que se creuser avec une liste plus longue.</p>
 <details class="question">
 <summary>Activité 3 - Le tri Fusion</summary>
-<p><a class="md-button md-button--primary" href="/xtra/jupyterlite/lab/index.html?fromURL=/notebooks/tri_fusion.ipynb" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span> Notebook <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span></a>
-<a class="md-button" href="/xtra/jupyterlite/lab/index.html?fromURL=/notebooks/tri_fusion_correction.ipynb" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span> Corrigé <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span></a></p>
-</details></div>
+<p><a class="md-button md-button--primary" href="/xtra/jupyterlite/lab/index.html?fromURL=/notebooks/tri_fusion.ipynb" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span> Notebook <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span></a>
+<a class="md-button" href="/xtra/jupyterlite/lab/index.html?fromURL=/notebooks/tri_fusion_correction.ipynb" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span> Corrigé <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"></path></svg></span></a></p>
+</details>
 
 
 

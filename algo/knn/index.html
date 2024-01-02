@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3874,7 +3873,7 @@
   
 
 
-<div><h1 id="k-plus-proches-voisins">K plus proches voisins<a class="headerlink" href="#k-plus-proches-voisins" title="Permanent link">⚓︎</a></h1>
+<h1 id="k-plus-proches-voisins">K plus proches voisins<a class="headerlink" href="#k-plus-proches-voisins" title="Permanent link">⚓︎</a></h1>
 <details class="conclu">
 <summary>Programme</summary>
 <table>
@@ -3905,13 +3904,13 @@
 <details class="question">
 <summary>Activité 1 - Un ours ou un phoque ?</summary>
 <p>Le problème revient à prédire à quelle catégorie, ou classe, appartient ce nouvel élément donné. Il est appelé <strong>problème de classification</strong>. L'algorithme des k plus proches voisins permet de trouver les k voisins les plus proches (si k = 5 on cherche les 5 voisins les plus proches) de ce nouvel élément dans le but de lui associer une classe plausible (Psy ou Eau, dans cet exemple).</p>
-<p><img :=":" alt="banquise" class="center" src="images/ours_phoque.png" width="40%;"></p>
+<p><img :=":" alt="banquise" class="center" src="images/ours_phoque.png" width="40%;" /></p>
 <p>L'animal inconnu est-il un ours ou un phoque ?</p>
 <p><a class="md-button" href="http://fred.boissac.free.fr/AnimsJS/Dariush_KVoisins/index.html" rel="noopener" target="_blank">Lancer l'appli</a></p>
 </details>
 <details class="question">
 <summary>Activité 2 - Classification des Pokémons</summary>
-<p><img :=":" alt="choix pokemon" class="center" src="images/pok_graph2.png" width="30%;"></p>
+<p><img :=":" alt="choix pokemon" class="center" src="images/pok_graph2.png" width="30%;" /></p>
 <p><iframe src="/xtra/jupyterlite/lab/index.html?fromURL=/notebooks/knn_intro.ipynb" frameborder="0" scrolling="auto" style="width: 100%; height: 700px;"></iframe></p>
 </details>
 <details class="abstract">
@@ -3944,21 +3943,21 @@
 </div>
 <div class="admonition info">
 <p class="admonition-title">k = 1</p>
-<p>Si k=1, cela revient à chercher la donnée la plus proche de notre élément cible.<br>
-Ici, on se rend compte que s la classe du plus proche élément est "Eau" (point bleu)<br>
+<p>Si k=1, cela revient à chercher la donnée la plus proche de notre élément cible.<br />
+Ici, on se rend compte que s la classe du plus proche élément est "Eau" (point bleu)<br />
 ➜ on classerait le nouveau Pokémon comme étant de type "Eau".</p>
 </div>
-<p><img :=":" alt="" class="center" src="images/1ppv.png" width="40%;"></p>
+<p><img :=":" alt="" class="center" src="images/1ppv.png" width="40%;" /></p>
 <div class="admonition info">
 <p class="admonition-title">k = 3</p>
 <p>Si k=3, on se rend compte que la classe majoritaire dans les 3 plus proches voisins est "Psy" (2 points rouges contre 1 point bleu) donc on classerait le Pokémon inconnu comme étant de type "Psy".</p>
 </div>
-<p><img :=":" alt="" class="center" src="images/3ppv.png" width="40%;"></p>
+<p><img :=":" alt="" class="center" src="images/3ppv.png" width="40%;" /></p>
 <div class="admonition info">
 <p class="admonition-title">k = 9</p>
 <p>La classe majoritaire parmi les 9 plus proches voisin est "Eau" (5 points bleus contre 4 points rouges) donc on classerait le Pokémon inconnu comme étant de type "Eau".</p>
 </div>
-<p><img :=":" alt="" class="center" src="images/9ppv.png" width="40%;"></p>
+<p><img :=":" alt="" class="center" src="images/9ppv.png" width="40%;" /></p>
 <div class="admonition warning">
 <p class="admonition-title">Remarque</p>
 <p>Si on choisit k = 34 (le nombre total de données), alors la prédiction serait toujours "Psy" car c'est la classe majoritaire de l'échantillon. Il est donc incorrect de penser que plus la valeur de k augmente meilleure sera la prédiction, c'est plus complexe que cela. Il faudra observer les resultats.</p>
@@ -3978,8 +3977,8 @@ Ici, on se rend compte que s la classe du plus proche élément est "Eau" (point
 <details class="question">
 <summary>Activité 3 - Des Pokémons inconnus</summary>
 <p>Dans l'activité précédente, nous avons obtenu la figure suivante : </p>
-<p><img :=":" alt="" class="center" src="images/rech_pok.PNG" width="60%;"></p>
-<p>Mettre en oeuvre l'algorithme knn pour prédire le <code>type</code> des trois Pokémon représentés en vert, qui sont inconnus.<br>
+<p><img :=":" alt="" class="center" src="images/rech_pok.PNG" width="60%;" /></p>
+<p>Mettre en oeuvre l'algorithme knn pour prédire le <code>type</code> des trois Pokémon représentés en vert, qui sont inconnus.<br />
 Ce sont des "cibles" :</p>
 <ul>
 <li><code>cible_1</code> : points de vie : 65 et valeur d'attaque : 25</li>
@@ -3990,12 +3989,12 @@ Ce sont des "cibles" :</p>
 <summary>Indices</summary>
 <ul>
 <li>
-<p>La liste de dictionnaires <code>pokemons</code> est déjà implémentée, mais cachée pour ne pas alourdir l'exercice.<br>
-</p><div class="highlight"><pre><span></span><code><span class="n">pokemons</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">'Attaque'</span><span class="p">:</span> <span class="mi">105</span><span class="p">,</span> <span class="s1">'Nom'</span><span class="p">:</span> <span class="s1">'Aligatueur'</span><span class="p">,</span> <span class="s1">'Points de vie'</span><span class="p">:</span> <span class="mi">85</span><span class="p">,</span> <span class="s1">'Type'</span><span class="p">:</span> <span class="s1">'Eau'</span><span class="p">},</span>  
-<span class="p">{</span><span class="s1">'Attaque'</span><span class="p">:</span> <span class="mi">92</span><span class="p">,</span> <span class="s1">'Nom'</span><span class="p">:</span> <span class="s1">'Bargantua'</span><span class="p">,</span> <span class="s1">'Points de vie'</span><span class="p">:</span> <span class="mi">70</span><span class="p">,</span> <span class="s1">'Type'</span><span class="p">:</span> <span class="s1">'Eau'</span><span class="p">},</span>  
-<span class="p">{</span><span class="s1">'Attaque'</span><span class="p">:</span> <span class="mi">63</span><span class="p">,</span> <span class="s1">'Nom'</span><span class="p">:</span> <span class="s1">'Carabaffe'</span><span class="p">,</span> <span class="s1">'Points de vie'</span><span class="p">:</span> <span class="mi">59</span><span class="p">,</span> <span class="s1">'Type'</span><span class="p">:</span> <span class="s1">'Eau'</span><span class="p">},</span>  
+<p>La liste de dictionnaires <code>pokemons</code> est déjà implémentée, mais cachée pour ne pas alourdir l'exercice.<br />
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">pokemons</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;Attaque&#39;</span><span class="p">:</span> <span class="mi">105</span><span class="p">,</span> <span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Aligatueur&#39;</span><span class="p">,</span> <span class="s1">&#39;Points de vie&#39;</span><span class="p">:</span> <span class="mi">85</span><span class="p">,</span> <span class="s1">&#39;Type&#39;</span><span class="p">:</span> <span class="s1">&#39;Eau&#39;</span><span class="p">},</span>  
+<span class="p">{</span><span class="s1">&#39;Attaque&#39;</span><span class="p">:</span> <span class="mi">92</span><span class="p">,</span> <span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Bargantua&#39;</span><span class="p">,</span> <span class="s1">&#39;Points de vie&#39;</span><span class="p">:</span> <span class="mi">70</span><span class="p">,</span> <span class="s1">&#39;Type&#39;</span><span class="p">:</span> <span class="s1">&#39;Eau&#39;</span><span class="p">},</span>  
+<span class="p">{</span><span class="s1">&#39;Attaque&#39;</span><span class="p">:</span> <span class="mi">63</span><span class="p">,</span> <span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Carabaffe&#39;</span><span class="p">,</span> <span class="s1">&#39;Points de vie&#39;</span><span class="p">:</span> <span class="mi">59</span><span class="p">,</span> <span class="s1">&#39;Type&#39;</span><span class="p">:</span> <span class="s1">&#39;Eau&#39;</span><span class="p">},</span>  
 <span class="o">...</span> <span class="p">]</span> 
-</code></pre></div>
+</code></pre></div></p>
 </li>
 <li>
 <p><code>cible</code>  est un dictionnaire représentant un pokémon dont on cherche à déterminer le type.</p>
@@ -4003,30 +4002,30 @@ Ce sont des "cibles" :</p>
 </ul>
 <p>Par exemple <code>cible_1 = {'Attaque': 25, 'Points de vie' : 65}</code></p>
 <ul>
-<li>La fonction <code>cree_liste</code> prend en paramètre la liste <code>pokemons</code> et le dictionnaire <code>cible</code>.<br>
+<li>La fonction <code>cree_liste</code> prend en paramètre la liste <code>pokemons</code> et le dictionnaire <code>cible</code>.<br />
 Elle renvoie la liste des listes composées du nom des Pokémon, de leur type, et de leur distance à la cible.</li>
 </ul>
 <p>Par exemple</p>
-<p></p><div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">cree_liste</span><span class="p">(</span><span class="n">pokemons</span><span class="p">,</span> <span class="n">cible_1</span><span class="p">)</span>
-<span class="go">[['Aligatueur', 'Eau', 82.46211251235322],</span>
-<span class="go">['Bargantua', 'Eau', 67.1863081289633],</span>
+<p><div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">cree_liste</span><span class="p">(</span><span class="n">pokemons</span><span class="p">,</span> <span class="n">cible_1</span><span class="p">)</span>
+<span class="go">[[&#39;Aligatueur&#39;, &#39;Eau&#39;, 82.46211251235322],</span>
+<span class="go">[&#39;Bargantua&#39;, &#39;Eau&#39;, 67.1863081289633],</span>
 <span class="go">... ]</span>
 </code></pre></div>
-👉 La fonction <code>cree_liste_triee</code> prend en paramètre la liste <code>pokemons</code> et le dictionnaire <code>cible</code>.<br>
-Elle renvoie la liste des listes composées du nom des Pokémon, de leur type et de leur distance à la cible <strong>triée par ordre croissant des distances</strong>.
+👉 La fonction <code>cree_liste_triee</code> prend en paramètre la liste <code>pokemons</code> et le dictionnaire <code>cible</code>.<br />
+Elle renvoie la liste des listes composées du nom des Pokémon, de leur type et de leur distance à la cible <strong>triée par ordre croissant des distances</strong>.</p>
 <p>Par exemple</p>
-<p></p><div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">cree_liste_triee</span><span class="p">(</span><span class="n">pokemons</span><span class="p">,</span> <span class="n">cible_1</span><span class="p">)</span>
-<span class="go">[['Spoink', 'Psy', 5.0],</span>
-<span class="go">['Munna', 'Psy', 11.0],</span>
+<p><div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">cree_liste_triee</span><span class="p">(</span><span class="n">pokemons</span><span class="p">,</span> <span class="n">cible_1</span><span class="p">)</span>
+<span class="go">[[&#39;Spoink&#39;, &#39;Psy&#39;, 5.0],</span>
+<span class="go">[&#39;Munna&#39;, &#39;Psy&#39;, 11.0],</span>
 <span class="go">...]</span>
 </code></pre></div>
-👉 La fonction <code>knn</code> prend en paramètre la liste <code>pokemons</code> et le dictionnaire <code>cible</code>. <br>
-Elle renvoie la liste des k premiers éléments de la liste créée par la fonction <code>cree_liste_triee</code>
+👉 La fonction <code>knn</code> prend en paramètre la liste <code>pokemons</code> et le dictionnaire <code>cible</code>. <br />
+Elle renvoie la liste des k premiers éléments de la liste créée par la fonction <code>cree_liste_triee</code></p>
 </details>
-<p></p><div class="py_mk_ide" data-max="5" data-max_size="30" data-exclude="eval,exec"><div class="wrapper"><span id="comment_editor_50d3ddb66ae8467dc65404e0dfd97a951ba3b651" class="comment">###</span><div class="line" id="editor_50d3ddb66ae8467dc65404e0dfd97a951ba3b651"></div><div id="term_editor_50d3ddb66ae8467dc65404e0dfd97a951ba3b651" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_50d3ddb66ae8467dc65404e0dfd97a951ba3b651","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_50d3ddb66ae8467dc65404e0dfd97a951ba3b651" class="py_mk_hide"># Testsbksl-nlassert knn(pokemons, ciblepy-und1, 3) == [['Spoink', 'Psy', 5.0],bksl-nl ['Munna', 'Psy', 11.0],bksl-nl ['Mesmerella', 'Psy', 20.615528128088304]]bksl-nlassert knn(pokemons, ciblepy-und2, 3) == [['Mateloutre', 'Eau', 5.0],bksl-nl ['Phione', 'Eau', 5.0],bksl-nl ['Gamblast', 'Eau', 8.06225774829855]]bksl-nlassert knn(pokemons, ciblepy-und3, 3) == [['Mewtwo', 'Psy', 18.601075237738275],bksl-nl ['Crefadet', 'Psy', 20.0],bksl-nl ['Aligatueur', 'Eau', 22.360679774997898]]bksl-nlassert knn(pokemons, ciblepy-und1, 5) == [['Spoink', 'Psy', 5.0],bksl-nl ['Munna', 'Psy', 11.0],bksl-nl ['Mesmerella', 'Psy', 20.615528128088304],bksl-nl ['Nucleos', 'Psy', 20.615528128088304],bksl-nl ['Groret', 'Psy', 25.0]]bksl-nlassert knn(pokemons, ciblepy-und2, 5) == [['Mateloutre', 'Eau', 5.0],bksl-nl ['Phione', 'Eau', 5.0],bksl-nl ['Gamblast', 'Eau', 8.06225774829855],bksl-nl ['Crocrodil', 'Eau', 10.0],bksl-nl ['Bargantua', 'Eau', 13.0]]bksl-nlassert knn(pokemons, ciblepy-und3, 5) == [['Mewtwo', 'Psy', 18.601075237738275],bksl-nl ['Crefadet', 'Psy', 20.0],bksl-nl ['Aligatueur', 'Eau', 22.360679774997898],bksl-nl ['Clamiral', 'Eau', 25.0],bksl-nl ['Mew', 'Psy', 25.495097567963924]]bksl-nl</span>            <button class="tooltip" onclick='check("editor_50d3ddb66ae8467dc65404e0dfd97a951ba3b651","")'>            <img src="../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_50d3ddb66ae8467dc65404e0dfd97a951ba3b651","scripts/dist_pok")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_50d3ddb66ae8467dc65404e0dfd97a951ba3b651').click()">            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_50d3ddb66ae8467dc65404e0dfd97a951ba3b651" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_50d3ddb66ae8467dc65404e0dfd97a951ba3b651")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_50d3ddb66ae8467dc65404e0dfd97a951ba3b651")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_50d3ddb66ae8467dc65404e0dfd97a951ba3b651" class="py_mk_hide">#--- HDR ---#bksl-nlpokemons = [{'Attaque': 105, 'Nom': 'Aligatueur', 'Points de vie': 85, 'Type': 'Eau'},\bksl-nl {'Attaque': 92, 'Nom': 'Bargantua', 'Points de vie': 70, 'Type': 'Eau'},\bksl-nl {'Attaque': 63, 'Nom': 'Carabaffe', 'Points de vie': 59, 'Type': 'Eau'},\bksl-nl {'Attaque': 100, 'Nom': 'Clamiral', 'Points de vie': 95, 'Type': 'Eau'},\bksl-nl {'Attaque': 125, 'Nom': 'Crefadet', 'Points de vie': 75, 'Type': 'Psy'},\bksl-nl {'Attaque': 80, 'Nom': 'Crocrodil', 'Points de vie': 65, 'Type': 'Eau'},\bksl-nl {'Attaque': 70, 'Nom': 'Deoxys', 'Points de vie': 50, 'Type': 'Psy'},\bksl-nl {'Attaque': 95, 'Nom': 'Deoxys', 'Points de vie': 50, 'Type': 'Psy'},\bksl-nl {'Attaque': 150, 'Nom': 'Deoxys', 'Points de vie': 50, 'Type': 'Psy'},\bksl-nl {'Attaque': 180, 'Nom': 'Deoxys', 'Points de vie': 50, 'Type': 'Psy'},\bksl-nl {'Attaque': 49, 'Nom': 'Ecayon', 'Points de vie': 49, 'Type': 'Eau'},\bksl-nl {'Attaque': 50, 'Nom': 'Eoko', 'Points de vie': 75, 'Type': 'Psy'},\bksl-nl {'Attaque': 73, 'Nom': 'Gamblast', 'Points de vie': 71, 'Type': 'Eau'},\bksl-nl {'Attaque': 70, 'Nom': 'Gobou', 'Points de vie': 50, 'Type': 'Eau'},\bksl-nl {'Attaque': 45, 'Nom': 'Groret', 'Points de vie': 80, 'Type': 'Psy'},\bksl-nl {'Attaque': 75, 'Nom': 'Mateloutre', 'Points de vie': 75, 'Type': 'Eau'},\bksl-nl {'Attaque': 45, 'Nom': 'Mesmerella', 'Points de vie': 60, 'Type': 'Psy'},\bksl-nl {'Attaque': 100, 'Nom': 'Mew', 'Points de vie': 100, 'Type': 'Psy'},\bksl-nl {'Attaque': 110, 'Nom': 'Mewtwo', 'Points de vie': 106, 'Type': 'Psy'},\bksl-nl {'Attaque': 150, 'Nom': 'Mewtwo', 'Points de vie': 106, 'Type': 'Psy'},\bksl-nl {'Attaque': 190, 'Nom': 'Mewtwo', 'Points de vie': 106, 'Type': 'Psy'},\bksl-nl {'Attaque': 25, 'Nom': 'Munna', 'Points de vie': 76, 'Type': 'Psy'},\bksl-nl {'Attaque': 30, 'Nom': 'Nucleos', 'Points de vie': 45, 'Type': 'Psy'},\bksl-nl {'Attaque': 105, 'Nom': 'Octillery', 'Points de vie': 75, 'Type': 'Eau'},\bksl-nl {'Attaque': 23, 'Nom': 'Okeoke', 'Points de vie': 95, 'Type': 'Psy'},\bksl-nl {'Attaque': 80, 'Nom': 'Phione', 'Points de vie': 80, 'Type': 'Eau'},\bksl-nl {'Attaque': 92, 'Nom': 'Poissoroy', 'Points de vie': 80, 'Type': 'Eau'},\bksl-nl {'Attaque': 66, 'Nom': 'Prinplouf', 'Points de vie': 64, 'Type': 'Eau'},\bksl-nl {'Attaque': 84, 'Nom': 'Rosabyss', 'Points de vie': 55, 'Type': 'Eau'},\bksl-nl {'Attaque': 55, 'Nom': 'Siderella', 'Points de vie': 70, 'Type': 'Psy'},\bksl-nl {'Attaque': 25, 'Nom': 'Spoink', 'Points de vie': 60, 'Type': 'Psy'},\bksl-nl {'Attaque': 65, 'Nom': 'Symbios', 'Points de vie': 110, 'Type': 'Psy'},\bksl-nl {'Attaque': 75, 'Nom': 'Tarpaud', 'Points de vie': 90, 'Type': 'Eau'},\bksl-nl {'Attaque': 51, 'Nom': 'Tiplouf', 'Points de vie': 53, 'Type': 'Eau'}]bksl-nl#--- HDR ---#bksl-nlfrom math import sqrtbksl-nlbksl-nldef distance(pokemon, cible):bksl-nl    return sqrt((cible['Points de vie']-pokemon['Points de vie'])py-strpy-str2bksl-nl    + (cible['Attaque']-pokemon['Attaque'])py-strpy-str2)bksl-nlbksl-nldef creepy-undliste(pokemons, cible):bksl-nl    ...bksl-nlbksl-nldef getpy-unddistance(donnee):bksl-nl    return donnee[2]bksl-nlbksl-nldef creepy-undlistepy-undtriee(pokemons, cible):bksl-nl    distancespy-undcibles = creepy-undliste(pokemons, cible)bksl-nl    ...bksl-nlbksl-nldef knn(pokemons, cible, k):bksl-nl    ...bksl-nlbksl-nlciblepy-und1 = {'Attaque': 25, 'Points de vie' : 65}bksl-nlciblepy-und2 = {'Attaque': 80, 'Points de vie' : 75}bksl-nlciblepy-und3 = {'Attaque': 125, 'Points de vie' : 95}bksl-nlbksl-nlknn(pokemons, ciblepy-und1, 3)bksl-nlknn(pokemons, ciblepy-und1, 5)bksl-nlknn(pokemons, ciblepy-und2, 3)bksl-nlknn(pokemons, ciblepy-und2, 5)bksl-nlknn(pokemons, ciblepy-und3, 3)bksl-nlknn(pokemons, ciblepy-und3, 5)bksl-nl</span><span id="corr_content_editor_50d3ddb66ae8467dc65404e0dfd97a951ba3b651" class="py_mk_hide" data-strudel="">from math import sqrtbksl-nlbksl-nldef distance(pokemon, cible):bksl-nl    return sqrt((cible['Points de vie']-pokemon['Points de vie'])py-strpy-str2 bksl-nl    + (cible['Attaque']-pokemon['Attaque'])py-strpy-str2)bksl-nlbksl-nldef creepy-undliste(pokemons, cible):bksl-nl    return [[pokemon['Nom'], pokemon['Type'], distance(pokemon, cible)]bksl-nl     for pokemon in pokemons]bksl-nlbksl-nldef getpy-unddistance(donnee):bksl-nl    return donnee[2]bksl-nlbksl-nldef creepy-undlistepy-undtriee(pokemons, cible):bksl-nl    distancespy-undcibles = creepy-undliste(pokemons, cible)bksl-nl    distancespy-undciblespy-undtriee = sorted(distancespy-undcibles, key=getpy-unddistance)bksl-nl    return distancespy-undciblespy-undtrieebksl-nlbksl-nldef knn(pokemons, cible, k):bksl-nl    voisinspy-undtries = creepy-undlistepy-undtriee(pokemons, cible)bksl-nl    resultat = [voisinspy-undtries[i] for i in range(k)]bksl-nl    return resultatbksl-nl</span>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000023" class="comment">###</span><div class="line" id="editor_00000023"></div><div id="term_editor_00000023"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000023","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000023","scripts/dist_pok")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000023').click()" >            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000023" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000023")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000023")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000023" class="py_mk_hide"></span><span id="corr_content_editor_00000023" class="py_mk_hide" data-strudel=""></span></p>
 </details>
 <p><strong>A</strong></p>
-<p><strong>Z</strong></p></div>
+<p><strong>Z</strong></p>
 
 
 

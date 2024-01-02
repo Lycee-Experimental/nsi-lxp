@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -4055,7 +4054,7 @@
   
 
 
-<div><h1 id="protocoles-de-routage">Protocoles de routage<a class="headerlink" href="#protocoles-de-routage" title="Permanent link">⚓︎</a></h1>
+<h1 id="protocoles-de-routage">Protocoles de routage<a class="headerlink" href="#protocoles-de-routage" title="Permanent link">⚓︎</a></h1>
 <details class="conclu">
 <summary>Programme</summary>
 <table>
@@ -4094,11 +4093,11 @@
 <li>une interface Wifi</li>
 </ul>
 <p>Un routeur sur internet est un peu plus sophistiqué, possède souvent plus de ports et ressemble d'extérieur à un switch. Il dispose d'un logiciel interne bien plus sophistiqué afin de lui permettre de communiquer avec ses routeurs voisins pour l'aider à déterminer les meilleures routes à emprunter pour acheminer ses paquets.</p>
-<p><img alt="" class="center" src="images/routeur.jpg"></p>
+<p><img alt="" class="center" src="images/routeur.jpg" /></p>
 <p>Le routeur reçoit un paquet sur l'un de ses ports et sa mission consiste essentiellement à déterminer sur lequel de ses autres ports il doit réacheminer le paquet. Il doit le faire très vite et s'adapter à un environnement qui change (routes qui apparaissent et disparaissent).</p>
 <h4 id="exemple">Exemple<a class="headerlink" href="#exemple" title="Permanent link">⚓︎</a></h4>
 <p>Voici le schéma d'un réseau :</p>
-<p><img alt="" class="center" src="images/DiagRes.png"></p>
+<p><img alt="" class="center" src="images/DiagRes.png" /></p>
 <p>Nous avons sur ce schéma les éléments suivants :</p>
 <ul>
 <li>15 ordinateurs : M1 à M15</li>
@@ -4176,7 +4175,7 @@
 </tr>
 </tbody>
 </table>
-<p><img alt="" class="center" src="images/nsi_term_archi_rout_1.png"></p>
+<p><img alt="" class="center" src="images/nsi_term_archi_rout_1.png" /></p>
 <p>Déterminez la table de routage du routeur G</p>
 <details class="note">
 <summary>Correction</summary>
@@ -4209,7 +4208,7 @@
 </details>
 <p>Dans des réseaux très complexes, chaque routeur aura une table de routage qui comportera de très nombreuses lignes (des dizaines voir des centaines...). En effet chaque routeur devra savoir vers quelle interface réseau il faudra envoyer un paquet afin qu'il puisse atteindre sa destination. On peut trouver dans une table de routage plusieurs lignes pour une même destination, il peut en effet, à partir d'un routeur donné, exister plusieurs chemins possibles pour atteindre la destination. Dans le cas où il existe plusieurs chemins possibles pour atteindre la même destination, le routeur va choisir le "chemin le plus court". Pour choisir ce chemin le plus court, le routeur va utiliser la métrique : plus la valeur de la métrique est petite, plus le chemin pour atteindre le réseau est "court". Un réseau directement lié à un routeur aura une métrique de 0. </p>
 <p>En voici un exemple :</p>
-<div class="highlight"><pre><span></span><code>Total number of IP routes: 687
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Total number of IP routes: 687
 Destination     NetMask             Gateway         Port    Cost
 137.194.2.0     255.255.254.0       137.194.4.254       v10     2
 137.194.4.0     255.255.255.248     137.194.4.253       v10     2
@@ -4223,7 +4222,7 @@ Destination     NetMask             Gateway         Port    Cost
 137.194.16.176  255.255.255.240     137.194.192.103     v192    20
 137.194.17.0    255.255.255.0       137.194.192.103     v192    2
 </code></pre></div>
-<p>Le routeur sait ainsi que pour atteindre la machine 137.194.2.21, il doit s'adresser au réseau 137.194.2.0 <a _='"' href="https://en.wikipedia.org/wiki/Wildcard_mask" target="_blank">/23</a> en redirigeant le paquet au routeur 137.194.4.254 qui est joignable sur l'interface v10.</p>
+<p>Le routeur sait ainsi que pour atteindre la machine 137.194.2.21, il doit s'adresser au réseau 137.194.2.0 <a _="&quot;" href="https://en.wikipedia.org/wiki/Wildcard_mask" target="_blank">/23</a> en redirigeant le paquet au routeur 137.194.4.254 qui est joignable sur l'interface v10.</p>
 <p><strong>Exercice 4</strong></p>
 <ol>
 <li>Comment atteindre la machine 137.194.6.37?</li>
@@ -4238,7 +4237,7 @@ Destination     NetMask             Gateway         Port    Cost
 </details>
 <h3 id="protocoles-de-routage_1">Protocoles de routage<a class="headerlink" href="#protocoles-de-routage_1" title="Permanent link">⚓︎</a></h3>
 <p>Imaginons le petit réseau suivant : </p>
-<p><img alt="" class="center" src="images/exemple.png"></p>
+<p><img alt="" class="center" src="images/exemple.png" /></p>
 <p>Aller du réseau 5 (R5) au réseau 2 (R2) revient à trouver son chemin dans un graphe :</p>
 <ul>
 <li>les routeurs constituent les nœuds de ce graphe</li>
@@ -4281,7 +4280,7 @@ Destination     NetMask             Gateway         Port    Cost
 
 <h3 id="exemple_1">Exemple<a class="headerlink" href="#exemple_1" title="Permanent link">⚓︎</a></h3>
 <p>Considérons le réseau suivant :</p>
-<p><img alt="" class="center" src="images/exemple2.png"></p>
+<p><img alt="" class="center" src="images/exemple2.png" /></p>
 <p>Il est composé de :</p>
 <ul>
 <li>2 sous-réseaux locaux (LAN) ayant pour adresse réseau 192.168.0.0 et 172.16.0.0.</li>
@@ -4557,22 +4556,22 @@ Destination     NetMask             Gateway         Port    Cost
 <h3 id="applications">Applications<a class="headerlink" href="#applications" title="Permanent link">⚓︎</a></h3>
 <p><strong>Exercice 5</strong></p>
 <p>Tracer sur le schéma ci-dessous le chemin d'un ping de la machine 192.168.0.10 vers le serveur 172.16.0.30 en tenant compte des tables de routages suivantes (la ligne 0.0.0.0 est le trajet par défaut si l'IP de destination n'est pas écrite):</p>
-<p><img alt="" class="center" src="images/exemple2d.png"></p>
-<p><img alt="" class="center" src="images/exemple2b.png"></p>
+<p><img alt="" class="center" src="images/exemple2d.png" /></p>
+<p><img alt="" class="center" src="images/exemple2b.png" /></p>
 <details class="note">
 <summary>Correction</summary>
-<p><img alt="" src="images/Exercice5_Correction.png"></p>
+<p><img alt="" src="images/Exercice5_Correction.png" /></p>
 </details>
 <p><strong>Exercice 6</strong></p>
 <p>Modifier les tables de routages des routeurs du schéma "routage_manuel" de façon à obtenir le cheminement suivant lors d'un "ping" de la machine 192.168.0.10 vers le serveur 172.16.0.30.</p>
-<p><img alt="" class="center" src="images/exemple2c.png"></p>
+<p><img alt="" class="center" src="images/exemple2c.png" /></p>
 <details class="note">
 <summary>Correction</summary>
-<p><img alt="" src="images/Exercice6_Correction.png"></p>
+<p><img alt="" src="images/Exercice6_Correction.png" /></p>
 </details>
 <p><strong>Exercice 7</strong></p>
 <p>Soit le réseau suivant :</p>
-<p><img alt="" class="center" src="images/exo7.png"></p>
+<p><img alt="" class="center" src="images/exo7.png" /></p>
 <ol>
 <li>En vous basant sur le protocole RIP (métrique = nombre de sauts), déterminez la table de routage du routeur A</li>
 <li>Quel est, d'après la table de routage construite ci-dessus, le chemin qui sera emprunté par un paquet pour aller d'une machine ayant pour adresse IP 172.18.1.1/16 à une machine ayant pour adresse IP 172.16.5.3/16 ? </li>
@@ -4670,7 +4669,7 @@ Destination     NetMask             Gateway         Port    Cost
 
 <h3 id="decouverte-de-la-topologie-du-reseau">Découverte de la topologie du réseau<a class="headerlink" href="#decouverte-de-la-topologie-du-reseau" title="Permanent link">⚓︎</a></h3>
 <p>OSPF a besoin de connaître la topologie du réseau ainsi que la qualité de chaque lien en terme de bande passante. Pour cela, chaque routeur va fabriquer une table de voisinage : il s'agit d'un tableau permettant d'identifier tous les routeurs qui lui sont connectés ainsi que le débit associé à chaque lien. Pour obtenir ces information, le routeur échange périodiquement des messages (appelés messages hello) avec ses voisins.</p>
-<p><img alt="" class="center" src="images/hello.png"></p>
+<p><img alt="" class="center" src="images/hello.png" /></p>
 <table>
 <thead>
 <tr>
@@ -4691,7 +4690,7 @@ Destination     NetMask             Gateway         Port    Cost
 </table>
 <p>Une fois tous ses voisins directs identifiés, le routeur va envoyer sa table de voisinage à tous les autres routeurs du réseau. Il va recevoir des autres routeurs leurs tables de voisinages et ainsi pouvoir constituer une cartographie complète du réseau.</p>
 <p><strong>Exercice 8</strong></p>
-<p><img alt="" class="center" src="images/exo8.png"></p>
+<p><img alt="" class="center" src="images/exo8.png" /></p>
 <ol>
 <li>En vous basant sur le protocole OSPF (métrique = somme des coûts), déterminez la table de routage du routeur A.
 <br>
@@ -4780,9 +4779,9 @@ Le coût est alors calculé de la façon suivante : <span class="arithmatex">\(c
 <p>L'algorithme de Djikstra datant de 1959 permet de trouver le chemin le plus court sur un graphe.</p>
 <h4 id="exemple_2">Exemple<a class="headerlink" href="#exemple_2" title="Permanent link">⚓︎</a></h4>
 <p>Considérons le <a href="https://graphonline.ru/fr?graph=BPTnrZPMWqlGXaGe">réseau suivant</a>. Après échanges de messages hello, la cartographie suivante du réseau a été constituée :</p>
-<p><img alt="" class="center" src="images/exemple3.png"></p>
+<p><img alt="" class="center" src="images/exemple3.png" /></p>
 <p>Nous cherchons à déterminer le chemin le plus rapide entre R1 et R7. L'outil <a href="https://graphonline.ru/fr?graph=BPTnrZPMWqlGXaGe">graphonline</a> vous permet de le faire visuellement via le menu <em>Algorithmes / plus court chemin avec l'algorithme de Djisktra</em>.</p>
-<p><img alt="" class="center" src="images/exemple4.png"></p>
+<p><img alt="" class="center" src="images/exemple4.png" /></p>
 <p>Contrairement à RIP, le chemin qu'OSPF nous indiquera sera R1 → R2 → R3 → R5 → R4 → R6 → R7. Ce chemin n'est clairement pas le plus efficace en termes de sauts mais est le plus rapide en termes de débit car il n'exploite pratiquement que des liaisons à 10 Gb/s. </p>
 <h4 id="principe-de-lalgorithme">Principe de l'algorithme<a class="headerlink" href="#principe-de-lalgorithme" title="Permanent link">⚓︎</a></h4>
 <p>Cet algorithme est expliqué dans cette video :</p>
@@ -5049,7 +5048,7 @@ Le coût est alors calculé de la façon suivante : <span class="arithmatex">\(c
 <td style="text-align: center;">Gourmand (CPU, mémoire), complexe</td>
 </tr>
 </tbody>
-</table></div>
+</table>
 
 
 

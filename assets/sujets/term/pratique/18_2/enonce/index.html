@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,7 +3856,7 @@
 
   <h1>Enonce</h1>
 
-<div><p>L’ordre des gènes sur un chromosome est représenté par un tableau <code>ordre</code> de <code>n</code> cases
+<p>L’ordre des gènes sur un chromosome est représenté par un tableau <code>ordre</code> de <code>n</code> cases
 d’entiers distincts deux à deux et compris entre 1 et <code>n</code>.</p>
 <p>Par exemple, <code>ordre = [5, 4, 3, 6, 7, 2, 1, 8, 9]</code> dans le cas <code>n = 9</code>.</p>
 <p>On dit qu’il y a un point de rupture dans <code>ordre</code> dans chacune des situations suivantes :</p>
@@ -3887,7 +3886,7 @@ d’un tableau passé en paramètre représentant l’ordre de gènes d’un
 chromosome.</p>
 </li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3916,10 +3915,10 @@ chromosome.</p>
 <span class="normal">27</span>
 <span class="normal">28</span>
 <span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">est_un_ordre</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">'''</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Renvoie True si tab est de longueur n et contient tous les entiers</span>
 <span class="sd">    de 1 à n, False sinon</span>
-<span class="sd">    '''</span>
+<span class="sd">    &#39;&#39;&#39;</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="o">...</span><span class="p">):</span>
         <span class="k">if</span> <span class="o">...</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">False</span>
@@ -3927,26 +3926,26 @@ chromosome.</p>
 
 
 <span class="k">def</span> <span class="nf">nombre_points_rupture</span><span class="p">(</span><span class="n">ordre</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">'''</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Renvoie le nombre de point de rupture de ordre qui représente un ordre</span>
 <span class="sd">    de gènes de chromosome</span>
-<span class="sd">    '''</span>
-    <span class="k">assert</span> <span class="o">...</span> <span class="c1"># ordre n'est pas un ordre de gènes</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="o">...</span> <span class="c1"># ordre n&#39;est pas un ordre de gènes</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ordre</span><span class="p">)</span>
     <span class="n">nb</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">if</span> <span class="n">ordre</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span> <span class="c1"># le premier n'est pas 1</span>
+    <span class="k">if</span> <span class="n">ordre</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span> <span class="c1"># le premier n&#39;est pas 1</span>
         <span class="n">nb</span> <span class="o">=</span> <span class="n">nb</span> <span class="o">+</span> <span class="mi">1</span>
     <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="o">...</span><span class="p">:</span>
-        <span class="k">if</span> <span class="o">...</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]:</span> <span class="c1"># l'écart n'est pas 1</span>
+        <span class="k">if</span> <span class="o">...</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]:</span> <span class="c1"># l&#39;écart n&#39;est pas 1</span>
             <span class="n">nb</span> <span class="o">=</span> <span class="n">nb</span> <span class="o">+</span> <span class="mi">1</span>
         <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="k">if</span> <span class="n">ordre</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">!=</span> <span class="n">n</span><span class="p">:</span> <span class="c1"># le dernier n'est pas n</span>
+    <span class="k">if</span> <span class="n">ordre</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">!=</span> <span class="n">n</span><span class="p">:</span> <span class="c1"># le dernier n&#39;est pas n</span>
         <span class="n">nb</span> <span class="o">=</span> <span class="n">nb</span> <span class="o">+</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="n">nb</span>
 </code></pre></div></td></tr></table></div>
 <p>Exemples :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">est_un_ordre</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">est_un_ordre</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
 <span class="kc">False</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">est_un_ordre</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
 <span class="kc">True</span>
@@ -3958,7 +3957,7 @@ chromosome.</p>
 <span class="mi">7</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">nombre_points_rupture</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
 <span class="mi">2</span>
-</code></pre></div></div>
+</code></pre></div>
 
 
 

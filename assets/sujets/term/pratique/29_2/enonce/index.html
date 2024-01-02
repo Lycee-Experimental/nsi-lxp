@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,29 +3856,29 @@
 
   <h1>Enonce</h1>
 
-<div><p>La méthode <code>insert</code> de la classe <code>list</code> permet d’insérer un élément dans une liste à un
+<p>La méthode <code>insert</code> de la classe <code>list</code> permet d’insérer un élément dans une liste à un
 <code>indice</code> donné.</p>
 <p>Le but de cet exercice est, <em>sans utiliser cette méthode</em>, d’écrire une fonction <code>ajoute</code>
 réalisant cette insertion en produisant une nouvelle liste.</p>
 <p>Cette fonction <code>ajoute</code> prend en paramètres trois variables <code>indice</code>, <code>element</code> et <code>liste</code>
 et renvoie une liste <code>L</code> dans laquelle les éléments sont ceux de la liste <code>liste</code> avec, en
-plus, l’élément <code>element</code> à l’indice <code>indice</code>.<br>
+plus, l’élément <code>element</code> à l’indice <code>indice</code>.<br />
 On considère que les variables <code>indice</code> et <code>element</code> sont des entiers positifs et que les
-éléments de <code>liste</code> sont également des entiers positifs.<br>
+éléments de <code>liste</code> sont également des entiers positifs.<br />
 Les éléments de la liste <code>liste</code>, dont les indices sont supérieurs ou égaux à <code>indice</code>
-apparaissent décalés vers la droite dans la liste <code>L</code>.<br>
+apparaissent décalés vers la droite dans la liste <code>L</code>.<br />
 Si <code>indice</code> est supérieur ou égal au nombre d’éléments de la liste <code>liste</code>, l’élément
 element est ajouté dans <code>L</code> après tous les éléments de la liste <code>liste</code>.</p>
 <p>Exemple :
-</p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">ajoute</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">ajoute</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
 <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">ajoute</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
 <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">ajoute</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
 <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-</code></pre></div>
+</code></pre></div></p>
 <p>Compléter et tester le code ci-dessous :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3906,7 +3905,7 @@ element est ajouté dans <code>L</code> après tous les éléments de la liste <
             <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
         <span class="n">L</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
     <span class="k">return</span> <span class="n">L</span>
-</code></pre></div></td></tr></table></div></div>
+</code></pre></div></td></tr></table></div>
 
 
 

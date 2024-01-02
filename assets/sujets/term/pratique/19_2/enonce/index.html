@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,7 +3856,7 @@
 
   <h1>Enonce</h1>
 
-<div><p>Le codage de César transforme un message en changeant chaque lettre en la décalant
+<p>Le codage de César transforme un message en changeant chaque lettre en la décalant
 dans l’alphabet.
 Par exemple, avec un décalage de 3, le A se transforme en D, le B en E, ..., le X en A,
 le Y en B et le Z en C. Les autres caractères (‘!’,’ ?’ ...) ne sont pas codés.</p>
@@ -3866,7 +3865,7 @@ et renvoie la position de <code>lettre</code> dans la chaîne de caractères <co
 <p>La fonction <code>cesar</code> prend en paramètre une chaîne de caractères <code>message</code> et un nombre
 entier <code>decalage</code> et renvoie le nouveau message codé avec le codage de César utilisant
 le décalage <code>decalage</code>.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3879,15 +3878,15 @@ le décalage <code>decalage</code>.</p>
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">ALPHABET</span> <span class="o">=</span> <span class="s1">'ABCDEFGHIJKLMNOPQRSTUVWXYZ'</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">ALPHABET</span> <span class="o">=</span> <span class="s1">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span>
 
 <span class="k">def</span> <span class="nf">position_alphabet</span><span class="p">(</span><span class="n">lettre</span><span class="p">):</span>
-    <span class="k">return</span> <span class="nb">ord</span><span class="p">(</span><span class="n">lettre</span><span class="p">)</span> <span class="o">-</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">'A'</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">ord</span><span class="p">(</span><span class="n">lettre</span><span class="p">)</span> <span class="o">-</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">cesar</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">decalage</span><span class="p">):</span>
-    <span class="n">resultat</span> <span class="o">=</span> <span class="s1">''</span>
+    <span class="n">resultat</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
     <span class="k">for</span> <span class="o">...</span> <span class="ow">in</span> <span class="n">message</span><span class="p">:</span>
-        <span class="k">if</span> <span class="s1">'A'</span> <span class="o">&lt;=</span> <span class="n">c</span> <span class="ow">and</span> <span class="n">c</span> <span class="o">&lt;=</span> <span class="s1">'Z'</span><span class="p">:</span>
+        <span class="k">if</span> <span class="s1">&#39;A&#39;</span> <span class="o">&lt;=</span> <span class="n">c</span> <span class="ow">and</span> <span class="n">c</span> <span class="o">&lt;=</span> <span class="s1">&#39;Z&#39;</span><span class="p">:</span>
             <span class="n">indice</span> <span class="o">=</span> <span class="p">(</span> <span class="o">...</span> <span class="p">)</span> <span class="o">%</span> <span class="mi">26</span>
             <span class="n">resultat</span> <span class="o">=</span> <span class="n">resultat</span> <span class="o">+</span> <span class="n">ALPHABET</span><span class="p">[</span><span class="n">indice</span><span class="p">]</span>
         <span class="k">else</span><span class="p">:</span>
@@ -3896,11 +3895,11 @@ le décalage <code>decalage</code>.</p>
 </code></pre></div></td></tr></table></div>
 <p>Compléter la fonction <code>cesar</code>.</p>
 <p>Exemples :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">cesar</span><span class="p">(</span><span class="s1">'BONJOUR A TOUS. VIVE LA MATIERE NSI !'</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-<span class="s1">'FSRNSYV E XSYW. ZMZI PE QEXMIVI RWM !'</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">cesar</span><span class="p">(</span><span class="s1">'GTSOTZW F YTZX. ANAJ QF RFYNJWJ SXN !'</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">)</span>
-<span class="s1">'BONJOUR A TOUS. VIVE LA MATIERE NSI !'</span>
-</code></pre></div></div>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">cesar</span><span class="p">(</span><span class="s1">&#39;BONJOUR A TOUS. VIVE LA MATIERE NSI !&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="s1">&#39;FSRNSYV E XSYW. ZMZI PE QEXMIVI RWM !&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">cesar</span><span class="p">(</span><span class="s1">&#39;GTSOTZW F YTZX. ANAJ QF RFYNJWJ SXN !&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">)</span>
+<span class="s1">&#39;BONJOUR A TOUS. VIVE LA MATIERE NSI !&#39;</span>
+</code></pre></div>
 
 
 

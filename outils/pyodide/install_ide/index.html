@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -108,7 +107,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#guide-de-lide" class="md-skip">
+        <a href="#macro-rendering-error" class="md-skip">
           Aller au contenu
         </a>
       
@@ -2857,17 +2856,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Guide de l'IDE
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2877,39 +2865,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#exemple" class="md-nav__link">
-    Exemple
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prise-en-main" class="md-nav__link">
-    Prise en main
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -3920,267 +3875,20 @@
   
 
 
-<div><h1 id="guide-de-lide">Guide de l'IDE<a class="headerlink" href="#guide-de-lide" title="Permanent link">⚓︎</a></h1>
-<h2 id="exemple">Exemple<a class="headerlink" href="#exemple" title="Permanent link">⚓︎</a></h2>
-<p>Un IDE se présente sous cette forme :</p>
-<details class="info" open="open">
-<summary>Enroulez-moi !</summary>
-<p></p><div class="py_mk_ide" data-max="∞" data-max_size="20" data-exclude="eval,exec,eval,max"><div class="wrapper"><span id="comment_editor_00000034" class="comment">###</span><div class="line" id="editor_00000034"></div><div id="term_editor_00000034" class="term_editor"></div></div><button class="tooltip" onclick='play("editor_00000034","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000034","demo/exo2")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000034').click()">            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000034" name="file" enctype="multipart/form-data" class="py_mk_hide"><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000034")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000034")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000034" class="py_mk_hide"></span><span id="corr_content_editor_00000034" class="py_mk_hide" data-strudel=""></span>
-<p><strong>A</strong></p>
-<p><strong>Z</strong></p>
-</details>
-<p>Il dispose de six boutons :</p>
-<div class="py_mk_ide">
-<ul>
-<li> Lancer le script : <button class="tooltip"><img src="../pyodide-mkdocs/icons8-play-64.png"></button></li>
-<li> Valider le script avec des tests unitaires : <button class="tooltip"><img src="../pyodide-mkdocs/icons8-check-64.png"></button></li>
-<li> Télécharger le script actuel : <button class="tooltip"><img src="../pyodide-mkdocs/icons8-download-64.png"></button></li>
-<li> Téléverser un script local : <button class="tooltip"><img src="../pyodide-mkdocs/icons8-upload-64.png"></button></li>
-<li> Recharger l'énoncé : <button class="tooltip"><img src="../pyodide-mkdocs/icons8-restart-64.png"></button></li>
-<li> Enregistrer le script actuel : <button class="tooltip"><img src="../pyodide-mkdocs/icons8-save-64.png"></button></li>
-</ul>
-</div>
-
-<details class="info">
-<summary>Rappel RGPD</summary>
-<p>Tout se fait du côté client. <strong>Rien n'est envoyé au serveur</strong>.</p>
-</details>
-<h2 id="prise-en-main">Prise en main<a class="headerlink" href="#prise-en-main" title="Permanent link">⚓︎</a></h2>
-<p>Par défaut, la commande <code class="highlight">{{IDE('exo2')}}</code> permet de charger un script placé dans <code>docs/scripts/</code>.</p>
-<div class="admonition summary">
-<p class="admonition-title">Organisations possibles</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Classement par chapitre</label><label for="__tabbed_1_2">Classement par exercice</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Votre page <code>markdown</code> constitue un chapitre et regroupe de nombreux exercices avec de nombreux IDE. </p>
-<p>Dans ce cas, optez pour l'arborescence suivante :</p>
-<div class="highlight"><pre><span></span><code>docs/
-├──<span class="w"> </span>images
-│<span class="w">   </span>└──<span class="w"> </span>projet2
-│<span class="w">       </span>└──<span class="w"> </span>plante.png
-├──<span class="w"> </span>index.md
-├──<span class="w"> </span>projet1.md
-├──<span class="w"> </span>projet2.md<span class="w">     </span>⬅︎<span class="w"> </span>corps<span class="w"> </span>du<span class="w"> </span>chapitre<span class="w"> </span>que<span class="w"> </span>vous<span class="w"> </span>souhaitez<span class="w"> </span>écrire
-├──<span class="w"> </span>projet3.md
-├──<span class="w"> </span>scripts
-│<span class="w">   </span>├──<span class="w"> </span>projet2<span class="w">    </span>⬅︎<span class="w"> </span>dossier<span class="w"> </span>contenant<span class="w"> </span>les<span class="w"> </span>exercices<span class="w"> </span>à<span class="w"> </span>intégrer<span class="w"> </span>à<span class="w"> </span>vos<span class="w"> </span>IDE
-│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo1.py
-│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo1_corr.py
-│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo1_test.py
-│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo2.py
-│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo2_corr.py
-│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo2_test.py
-│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo3.py
-│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo3_corr.py
-│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo3_test.py
-│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo4.py
-│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo4_corr.py
-│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo4_test.py
-│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo5.py
-│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo5_corr.py
-│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>plante_fractale.py
-│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>tableau_dynamique.py
-......
+<h1 id="macro-rendering-error"><em>Macro Rendering Error</em><a class="headerlink" href="#macro-rendering-error" title="Permanent link">⚓︎</a></h1>
+<p><em>File</em>: <code>outils/pyodide/install_ide.md</code></p>
+<p><em>TypeError</em>: define_env.<locals>.IDE() got an unexpected keyword argument 'SIZE'</p>
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Traceback (most recent call last):
+  File &quot;/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/mkdocs_macros/plugin.py&quot;, line 527, in render
+    return md_template.render(**page_variables)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/jinja2/environment.py&quot;, line 1301, in render
+    self.environment.handle_exception()
+  File &quot;/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/jinja2/environment.py&quot;, line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File &quot;&lt;template&gt;&quot;, line 9, in top-level template code
+TypeError: define_env.&lt;locals&gt;.IDE() got an unexpected keyword argument &#39;SIZE&#39;
 </code></pre></div>
-<p>Exemple : </p>
-<p><code class="highlight">{{IDE('projet2/exo2')}}</code> chargera le script exo2.py depuis <code>docs/scripts/projet2/</code>.</p>
-</div>
-<div class="tabbed-block">
-<p>Votre page <code>markdown</code> est spécialisée sur un exercice particulier, indiqué dans <code>mkdocs.yml</code>. </p>
-<p>Dans ce cas, optez pour l'arborescence ci-dessous :</p>
-<div class="highlight"><pre><span></span><code>docs/
-├──<span class="w"> </span>N1
-│<span class="w">   </span>├──<span class="w"> </span><span class="m">110</span>-maximum_nombres
-│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo.py
-│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo_corr.py
-│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo_test.py
-│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>sujet.md
-</code></pre></div>
-<p>Exemple : </p>
-<ul>
-<li><code>mkdocs.yml</code> contient la ligne <code class="highlight"><span class="k">-</span><span class="w"> </span>"Calcul de max": N1/110-maximum_nombres/sujet.md</code>. </li>
-<li><code class="highlight">{{IDE('exo')}}</code> chargera le script exo.py depuis <code>docs/N1/110-maximum_nombres/</code>.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Format de fichiers</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><input id="__tabbed_2_4" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Fichier d'exercice : <code>exo.py</code></label><label for="__tabbed_2_2">Fichier correction <code>exo_corr.py</code></label><label for="__tabbed_2_3">Fichier juge <code>exo_test.py</code> - Assert</label><label for="__tabbed_2_4">Fichier juge <code>exo_test.py</code> - Benchmark</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Le script Python est écrit de manière classique avec quelques particularités. </p>
-<p>Il peut se décomposer en ces éléments (tous facultatifs) :</p>
-<div class="highlight"><pre><span></span><code><span class="c1">#MAX Nombre_d_essais_autorisés</span>
-<span class="c1">#--- HDR ---#</span>
-<span class="sd">"""</span>
-<span class="sd">Code Python dans un header</span>
-<span class="sd">Ce code ne sera pas visible par l'élève et sera exécuté avant le code élève à l'exécution et à la validation</span>
-
-<span class="sd">Utile pour proposer des classes spécifiques à un exercice</span>
-<span class="sd">"""</span>
-<span class="c1">#--- HDR ---#</span>
-
-<span class="sd">"""</span>
-<span class="sd">Code élève à compléter</span>
-<span class="sd">"""</span>
-
-<span class="c1">#Tests</span>
-<span class="sd">"""</span>
-<span class="sd">Tests publics faits à l'exécution et à la validation</span>
-<span class="sd">Exemple: assert machin == 0, "vous avez une erreur de machin"</span>
-<span class="sd">"""</span>
-</code></pre></div>
-<p>Les librairies standards sont pour la plupart acceptées, les limitations étant principalement graphiques. Les annotations de type, le walrus opérator sont acceptées.</p>
-</div>
-<div class="tabbed-block">
-<p>Le fichier Python de correction s'appelle <code>nom_de_script_corr.py</code>. </p>
-<p>Vous pouvez répéter le HDR si vous le souhaitez afin que l'élève puisse tester en local</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>
-</code></pre></div></td></tr></table></div>
-</div>
-<div class="tabbed-block">
-<p>Le fichier de juge en ligne peut être écrit de manière beaucoup plus "classique" en utilisant <code class="highlight"><span class="k">assert</span></code> :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">assert</span> <span class="n">longueur_ajout</span><span class="p">([],</span> <span class="p">[])</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">'longueur_ajout([], []) == 0'</span>
-<span class="k">assert</span> <span class="n">longueur_ajout</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],[])</span> <span class="o">==</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">'longueur_ajout([1, 3, 5, 5],[]) == 4'</span>
-<span class="k">assert</span> <span class="n">longueur_ajout</span><span class="p">([</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="mi">20</span><span class="p">)</span> <span class="o">==</span> <span class="mi">120</span><span class="p">,</span> <span class="s1">'longueur_ajout([0]*100, [1]*20) == 120'</span>
-</code></pre></div></td></tr></table></div>
-<p>Les <code class="highlight"><span class="k">assert</span></code> sont directement évalués par Pyodide. Seul le test ayant échoué sera affiché. Les tests réussis n'afficheront rien.</p>
-<p>Pas de problème pour tester autant de fonctions que nécessaire.</p>
-</div>
-<div class="tabbed-block">
-<p>Le fichier de juge en ligne doit contenir une variable appelée <code>benchmark</code>, de type <code class="highlight"><span class="nb">list</span></code> ou <code class="highlight"><span class="nb">tuple</span></code> :</p>
-<p>1) Si l'on souhaite vérifier une unique fonction grâce à l'évaluateur de code :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">benchmark</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'longueur([])==0'</span><span class="p">,</span> <span class="s1">'longueur([1,3,5,5])==4'</span><span class="p">,</span> <span class="s1">'longueur([0]*100)==100'</span><span class="p">]</span>
-</code></pre></div></td></tr></table></div>
-<p>On a donc un tuple de chaînes de caractères qui sera évalué avec <code class="highlight"><span class="nb">eval</span><span class="p">()</span></code>. </p>
-<p>2) Si l'on souhaite vérifier plusieurs fonctions grâce à l'évaluateur de code :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>
-</code></pre></div></td></tr></table></div>
-<p>On a donc un tuple de tableau de chaînes de caractères qui sera évalué avec <code class="highlight"><span class="nb">eval</span><span class="p">()</span></code>. </p>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Options</p>
-<p>Lors de l'appel à un IDE dans le fichier .md, il est possible de spécifier plusieurs options telles :</p>
-<p><code class="highlight">{{IDE("fichier1.py", MAX = 5, SANS = "sort, exec", SIZE = 14)}}</code></p>
-<p>ou</p>
-<p><code class="highlight">{{IDE("fichier2.py", MAX = "+")}}</code></p>
-<ul>
-<li>MAX : indique le nombre maximum d'essais autorisés pour résoudre un exercice avant révélation de la solution (1000 ou "+" pour infini). Par défaut : 5.</li>
-<li>SANS : exclu des instructions Python (builtins ou non). Par défaut : "exec, eval".</li>
-<li>SIZE : donne la taille <strong>maximale</strong> d'un IDE. Si le script est plus petit, la taille réelle s'adaptera au plus petit. Un script Python plus long que SIZE sera tout de même visible à l'aide des sliders. Par défaut : 20.</li>
-</ul>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Important</p>
-<p>Le bouton de validation du script à l'aide de tests unitaires est présent uniquement si vous fournissez un fichier <code>nom_du_fichier_test.py</code> présent dans le même répertoire que <code>nom_du_fichier.py</code>.</p>
-<p>La solution apparait au bout du nombre de tests unitaires définis dans le fichier ou directement dans la création de l'IDE seulement si vous fournissez un fichier <code>nom_du_fichier_corr.py</code>dans le même répertoire que <code>nom_du_fichier.py</code>.</p>
-<p>Les boutons de lancement du script, de téléchargement, de téléversement, de sauvegarde et de rechargement sont présents par défaut.</p>
-</div>
-<div class="admonition conclu">
-<p class="admonition-title">Conclusion</p>
-<p>À condition que les fichiers <code>fichier.py</code>, <code>fichier_corr.py</code> et <code>fichier_test.py</code> soient présents, <code class="highlight">{{IDE('foo/bar/truc/muche/fichier')}}</code> gère <strong>tout seul</strong> :</p>
-<ul>
-<li>l'énoncé, </li>
-<li>le juge en ligne, </li>
-<li>les fichiers de correction</li>
-</ul>
-</div>
-<!-- !!! info "Exercices sur la longueur d'un tableau"
-
-    === "Exercice 1"
-        Complétez la fonction `longueur` afin que celle-ci renvoie la taille d'un tableau L.
-
-        <div class="py_mk_ide"  data-max="5"  data-max_size="30"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000035" class="comment">###</span><div class="line" id="editor_00000035"></div><div id="term_editor_00000035"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000035","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000035","demo/demo1")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000035').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000035" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000035")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000035")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000035" class="py_mk_hide"></span><span id="corr_content_editor_00000035" class="py_mk_hide" data-strudel=""></span>
-
-        __A__
-
-
-        __Z__
-
-
-
-    === "Exercice 2"
-        Complétez la fonction `longueur_ajout` afin que celle-ci renvoie la taille de deux tableaux T1 et T2.
-        <div class="py_mk_ide"  data-max="5"  data-max_size="30"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000036" class="comment">###</span><div class="line" id="editor_00000036"></div><div id="term_editor_00000036"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000036","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000036","demo/demo2")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000036').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000036" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000036")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000036")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000036" class="py_mk_hide"></span><span id="corr_content_editor_00000036" class="py_mk_hide" data-strudel=""></span>
-
-        __A__
-
-
-        __Z__
-
-
-    === "Exercice 3"
-        On découpe une phrase à l'aide de l'instruction [split](https://docs.python.org/fr/3/library/stdtypes.html#str.split "Instruction split en Python").
-
-        Complétez la fonction `nombre_mots` afin que celle-ci renvoie le nombre de mots séparé par un espace d'une phrase `phrase`.
-        <div class="py_mk_ide"  data-max="5"  data-max_size="30"  data-exclude="eval,exec" ><div class="wrapper_v" ><span id="comment_editor_00000037" class="comment">###</span><div class="line_v"><div id="editor_00000037"></div></div><div id="term_editor_00000037"  class="term_editor_v" ></div></div><button class="tooltip" onclick='play("editor_00000037","_v")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000037","demo/demo3")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000037').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000037" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000037")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000037")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000037" class="py_mk_hide"></span><span id="corr_content_editor_00000037" class="py_mk_hide" data-strudel=""></span>
-
-        __A__
-
-
-        __Z__
-
-
-On peut bien sur enrouler tout cela... -->
-
-<!--
-??? info "Exercices sur la longueur d'un tableau"
-
-    === "Exercice 1"
-        Complétez la fonction `longueur` afin que celle-ci renvoie la taille d'un tableau L.
-
-        <div class="py_mk_ide"  data-max="5"  data-max_size="30"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000038" class="comment">###</span><div class="line" id="editor_00000038"></div><div id="term_editor_00000038"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000038","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000038","demo/demo1")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000038').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000038" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000038")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000038")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000038" class="py_mk_hide"></span><span id="corr_content_editor_00000038" class="py_mk_hide" data-strudel=""></span>
-
-        __A__
-
-
-        __Z__
-
-
-    === "Exercice 2"
-        Complétez la fonction `longueur_ajout` afin que celle-ci renvoie la taille de deux tableaux T1 et T2.
-        <div class="py_mk_ide"  data-max="5"  data-max_size="30"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000039" class="comment">###</span><div class="line" id="editor_00000039"></div><div id="term_editor_00000039"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000039","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000039","demo/demo2")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000039').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000039" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000039")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000039")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000039" class="py_mk_hide"></span><span id="corr_content_editor_00000039" class="py_mk_hide" data-strudel=""></span>
-
-        __A__
-
-
-        __Z__
-
-
-    === "Exercice 3"
-        On découpe une phrase à l'aide de l'instruction [split](https://docs.python.org/fr/3/library/stdtypes.html#str.split "Instruction split en Python").
-
-        Complétez la fonction `nombre_mots` afin que celle-ci renvoie le nombre de mots séparé par un espace d'une phrase `phrase`.
-        <div class="py_mk_ide"  data-max="5"  data-max_size="30"  data-exclude="eval,exec" ><div class="wrapper_v" ><span id="comment_editor_00000040" class="comment">###</span><div class="line_v"><div id="editor_00000040"></div></div><div id="term_editor_00000040"  class="term_editor_v" ></div></div><button class="tooltip" onclick='play("editor_00000040","_v")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000040","demo/demo3")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000040').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000040" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000040")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000040")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000040" class="py_mk_hide"></span><span id="corr_content_editor_00000040" class="py_mk_hide" data-strudel=""></span>
-
-        __A__
-
-
-        __Z__
-
-
-
-## Technique !
-
-_Pour l'instant, j'ai la grosse flemme d'écrire cette section._
-
-En quelques mots, on crée deux `#!html div` désigné par un numéro auto-incrémenté : 
-
-- `#!html <div id="editor_6">` crée la partie éditeur de texte. Ce `#!html div` est converti en éditeur grâce à l'[éditeur ACE](https://ace.c9.io "ACE Editor") ;
-- `#!html <div id="term_editor_6">` crée la partie Terminal. Le Terminal n'est créé qu'au moment de la validation du script ou du juge en ligne. Il est créé grâce au plugin Terminal de jQuery par converstion du `#!html div` (voir section Guide du Terminal).
-
-
-<!-- ??? info "Patience, patience"
-
-    Le guide du IDE arrive bientôt.
- --></div>
 
 
 

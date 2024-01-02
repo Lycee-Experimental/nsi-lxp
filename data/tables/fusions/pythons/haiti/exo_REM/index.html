@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3863,12 +3862,12 @@
 
   <h1>exo REM</h1>
 
-<div><p>La boucle <code class="highlight"><span class="k">while</span></code> dans la recherche du code d'Haiti pourrait aussi être remplacée par un <code class="highlight"><span class="k">for</span></code> accompagné de l'instruction <code class="highlight"><span class="k">break</span></code> qui interrompt la boucle :</p>
-<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">entree</span> <span class="ow">in</span> <span class="n">pays</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">entree</span><span class="p">[</span><span class="s2">"Name"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"Haiti"</span><span class="p">:</span>
-        <span class="n">code</span> <span class="o">=</span> <span class="n">entree</span><span class="p">[</span><span class="s2">"CountryCode"</span><span class="p">]</span>
+<p>La boucle <code class="highlight"><span class="k">while</span></code> dans la recherche du code d'Haiti pourrait aussi être remplacée par un <code class="highlight"><span class="k">for</span></code> accompagné de l'instruction <code class="highlight"><span class="k">break</span></code> qui interrompt la boucle :</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">for</span> <span class="n">entree</span> <span class="ow">in</span> <span class="n">pays</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">entree</span><span class="p">[</span><span class="s2">&quot;Name&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Haiti&quot;</span><span class="p">:</span>
+        <span class="n">code</span> <span class="o">=</span> <span class="n">entree</span><span class="p">[</span><span class="s2">&quot;CountryCode&quot;</span><span class="p">]</span>
         <span class="k">break</span>
-</code></pre></div></div>
+</code></pre></div>
 
 
 

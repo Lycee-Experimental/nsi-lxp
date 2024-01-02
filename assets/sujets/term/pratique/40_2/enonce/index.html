@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,8 +3856,8 @@
 
   <h1>Enonce</h1>
 
-<div><p>La classe ABR ci-dessous permet d'implémenter une structure d'arbre binaire de recherche.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<p>La classe ABR ci-dessous permet d'implémenter une structure d'arbre binaire de recherche.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3901,34 +3900,34 @@
 <span class="normal">41</span>
 <span class="normal">42</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Noeud</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">valeur</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">'''Méthode constructeur pour la classe Noeud.</span>
-<span class="sd">        Paramètre d'entrée : valeur (str)'''</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Méthode constructeur pour la classe Noeud.</span>
+<span class="sd">        Paramètre d&#39;entrée : valeur (str)&#39;&#39;&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="n">valeur</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="k">def</span> <span class="nf">getValeur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">'''Méthode accesseur pour obtenir la valeur du noeud</span>
-<span class="sd">        Aucun paramètre en entrée'''</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Méthode accesseur pour obtenir la valeur du noeud</span>
+<span class="sd">        Aucun paramètre en entrée&#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span>
 
     <span class="k">def</span> <span class="nf">droitExiste</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">'''Méthode renvoyant True si l'enfant droit existe</span>
-<span class="sd">        Aucun paramètre en entrée'''</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Méthode renvoyant True si l&#39;enfant droit existe</span>
+<span class="sd">        Aucun paramètre en entrée&#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">droit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">gaucheExiste</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">'''Méthode renvoyant True si l'enfant gauche existe</span>
-<span class="sd">        Aucun paramètre en entrée'''</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Méthode renvoyant True si l&#39;enfant gauche existe</span>
+<span class="sd">        Aucun paramètre en entrée&#39;&#39;&#39;</span>
         <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gauche</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">inserer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cle</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">'''Méthode d'insertion de clé dans un arbre binaire de recherche</span>
-<span class="sd">        Paramètre d'entrée : cle (int)'''</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Méthode d&#39;insertion de clé dans un arbre binaire de recherche</span>
+<span class="sd">        Paramètre d&#39;entrée : cle (int)&#39;&#39;&#39;</span>
         <span class="k">if</span> <span class="n">cle</span> <span class="o">&lt;</span> <span class="o">...</span><span class="p">:</span>
             <span class="c1"># on insère à gauche</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">gaucheExiste</span><span class="p">():</span>
-                <span class="c1"># on descend à gauche et on retente l'insertion de la clé</span>
+                <span class="c1"># on descend à gauche et on retente l&#39;insertion de la clé</span>
                 <span class="o">...</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="c1"># on crée un fils gauche</span>
@@ -3936,7 +3935,7 @@
         <span class="k">elif</span> <span class="n">cle</span> <span class="o">&gt;</span> <span class="o">...</span> <span class="p">:</span>
             <span class="c1"># on insère à droite</span>
             <span class="k">if</span> <span class="o">...</span> <span class="p">:</span>
-                <span class="c1"># on descend à droite et on retente l'insertion de la clé</span>
+                <span class="c1"># on descend à droite et on retente l&#39;insertion de la clé</span>
                 <span class="o">...</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="c1"># on crée un fils droit</span>
@@ -3945,7 +3944,7 @@
 <p>Compléter la fonction récursive <code>inserer</code> afin qu'elle permette d’insérer un nœud
 dans l’arbre binaire de recherche proposé, à l’aide de sa clé.</p>
 <p>Voici un exemple d'utilisation :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">arbre</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">arbre</span> <span class="o">=</span> <span class="n">Noeud</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">cle</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
         <span class="n">arbre</span><span class="o">.</span><span class="n">inserer</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">arbre</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">getValeur</span><span class="p">()</span>
@@ -3956,7 +3955,7 @@ dans l’arbre binaire de recherche proposé, à l’aide de sa clé.</p>
 <span class="mi">1</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">arbre</span><span class="o">.</span><span class="n">gauche</span><span class="o">.</span><span class="n">droit</span><span class="o">.</span><span class="n">getValeur</span><span class="p">()</span>
 <span class="mi">6</span>
-</code></pre></div></div>
+</code></pre></div>
 
 
 

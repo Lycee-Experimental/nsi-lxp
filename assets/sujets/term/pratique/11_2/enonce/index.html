@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,7 +3856,7 @@
 
   <h1>Enonce</h1>
 
-<div><p>La fonction <code>tri_insertion</code> suivante prend en argument une liste <code>tab</code> et trie cette liste en
+<p>La fonction <code>tri_insertion</code> suivante prend en argument une liste <code>tab</code> et trie cette liste en
 utilisant la méthode du tri par insertion. Compléter cette fonction pour qu'elle réponde à la
 spécification demandée.</p>
 <p>On rappelle le principe du tri par insertion : on considère les éléments à trier un par un,
@@ -3868,7 +3867,7 @@ troisième élément pour avoir une liste triée de longueur 3 et ainsi de suite
 éléments déjà triés de sorte que cette sous-liste demeure triée.  </p>
 <p>Le principe du tri par insertion est donc d'insérer à la n-ième itération, le n-ième élément
 à la bonne place.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3885,7 +3884,7 @@ troisième élément pour avoir une liste triée de longueur 3 et ainsi de suite
         <span class="n">valeur_insertion</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="o">...</span><span class="p">]</span>
         <span class="c1"># la variable j sert à déterminer où placer la valeur à ranger</span>
         <span class="n">j</span> <span class="o">=</span> <span class="o">...</span>
-        <span class="c1"># tant qu'on a pas trouvé la place de l'élément à insérer</span>
+        <span class="c1"># tant qu&#39;on a pas trouvé la place de l&#39;élément à insérer</span>
         <span class="c1"># on décale les valeurs du tableau vers la droite</span>
         <span class="k">while</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="o">...</span> <span class="ow">and</span> <span class="n">valeur_insertion</span> <span class="o">&lt;</span> <span class="n">tab</span><span class="p">[</span><span class="o">...</span><span class="p">]:</span>
             <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
@@ -3893,11 +3892,11 @@ troisième élément pour avoir une liste triée de longueur 3 et ainsi de suite
         <span class="n">tab</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
 </code></pre></div></td></tr></table></div>
 <p>Exemples :
-</p><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">tri_insertion</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">liste</span>
 <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
-</code></pre></div></div>
+</code></pre></div></p>
 
 
 

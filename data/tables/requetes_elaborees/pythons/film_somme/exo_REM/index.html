@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3863,12 +3862,12 @@
 
   <h1>exo REM</h1>
 
-<div><p>Il existe plusieurs solutions alternatives :</p>
+<p>Il existe plusieurs solutions alternatives :</p>
 <ul>
 <li>avec la fonction <code>projection</code> :</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">somme</span><span class="p">(</span><span class="n">donnees</span><span class="p">,</span> <span class="n">descripteur</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""Renvoie la somme des valeurs de ce descripteur"""</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">somme</span><span class="p">(</span><span class="n">donnees</span><span class="p">,</span> <span class="n">descripteur</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Renvoie la somme des valeurs de ce descripteur&quot;&quot;&quot;</span>
     <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">valeur</span> <span class="ow">in</span> <span class="n">projection</span><span class="p">(</span><span class="n">donnees</span><span class="p">,</span> <span class="n">descripteur</span><span class="p">):</span>
         <span class="n">total</span> <span class="o">+=</span> <span class="n">valeur</span>
@@ -3877,17 +3876,17 @@
 <ul>
 <li>avec la fonction <code>sum</code> de Python :</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">somme</span><span class="p">(</span><span class="n">donnees</span><span class="p">,</span> <span class="n">descripteur</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""Renvoie la somme des valeurs de ce descripteur"""</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">somme</span><span class="p">(</span><span class="n">donnees</span><span class="p">,</span> <span class="n">descripteur</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Renvoie la somme des valeurs de ce descripteur&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="nb">sum</span><span class="p">([</span><span class="n">entree</span><span class="p">[</span><span class="n">descripteur</span><span class="p">]</span> <span class="k">for</span> <span class="n">entree</span> <span class="ow">in</span> <span class="n">donnees</span><span class="p">])</span>
 </code></pre></div>
 <ul>
 <li>avec la fonction <code>projection</code> et la fonction <code>sum</code> :</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">somme</span><span class="p">(</span><span class="n">donnees</span><span class="p">,</span> <span class="n">descripteur</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""Renvoie la somme des valeurs de ce descripteur"""</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">somme</span><span class="p">(</span><span class="n">donnees</span><span class="p">,</span> <span class="n">descripteur</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Renvoie la somme des valeurs de ce descripteur&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">projection</span><span class="p">(</span><span class="n">donnees</span><span class="p">,</span> <span class="n">descripteur</span><span class="p">))</span>
-</code></pre></div></div>
+</code></pre></div>
 
 
 

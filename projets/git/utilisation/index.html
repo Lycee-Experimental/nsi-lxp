@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3927,13 +3926,13 @@
   
 
 
-<div><h1 id="utilisation">Utilisation<a class="headerlink" href="#utilisation" title="Permanent link">⚓︎</a></h1>
+<h1 id="utilisation">Utilisation<a class="headerlink" href="#utilisation" title="Permanent link">⚓︎</a></h1>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">⚓︎</a></h2>
 <p>Avec linux, rien de plus simple :
-</p><div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>git-all
-</code></pre></div>
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>git-all
+</code></pre></div></p>
 <h2 id="renseigner-son-identite">Renseigner son identité<a class="headerlink" href="#renseigner-son-identite" title="Permanent link">⚓︎</a></h2>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">"John Doe"</span>
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;John Doe&quot;</span>
 git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span>johndoe@example.com
 </code></pre></div>
 <div class="admonition warning">
@@ -3942,15 +3941,15 @@ git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"
 </div>
 <h2 id="cloner-un-depot-existant-sur-github">Cloner un dépot existant sur Github<a class="headerlink" href="#cloner-un-depot-existant-sur-github" title="Permanent link">⚓︎</a></h2>
 <p>Commencez par vous rendre dans le dossier ou vous souhaitez importer le projet :
-</p><div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/Documents/mes_projets_de_progra
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/Documents/mes_projets_de_progra
 </code></pre></div>
 La commande <code>git clone</code> permet ensuite d'importer le contenu d'un projet hébergé sur Github (ou autre) :
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/lycee-experimental/django-lxp
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/lycee-experimental/django-lxp
 </code></pre></div>
-Le contenu du dossier ainsi que l'intégralité de l'historique des versions sera ainsi importé dans le dossier <code>~/Documents/mes_projets_de_progra/django-lxp</code>
+Le contenu du dossier ainsi que l'intégralité de l'historique des versions sera ainsi importé dans le dossier <code>~/Documents/mes_projets_de_progra/django-lxp</code></p>
 <p>Vous pouvez aussi faire directement :
-</p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/lycee-experimental/django-lxp<span class="w"> </span>~/Documents/mes_projets_de_progra/django-lxp
-</code></pre></div></div>
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/lycee-experimental/django-lxp<span class="w"> </span>~/Documents/mes_projets_de_progra/django-lxp
+</code></pre></div></p>
 
 
 

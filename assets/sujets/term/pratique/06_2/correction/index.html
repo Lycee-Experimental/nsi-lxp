@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,7 +3856,7 @@
 
   <h1>Correction</h1>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3874,11 +3873,11 @@
 <span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
 
 <span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">point1</span><span class="p">,</span> <span class="n">point2</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">""" Calcule et renvoie la distance entre deux points. """</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Calcule et renvoie la distance entre deux points. &quot;&quot;&quot;</span>
 <span class="hll">    <span class="k">return</span> <span class="n">sqrt</span><span class="p">((</span><span class="n">point1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">point2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">((</span><span class="n">point1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">point2</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 </span>
 <span class="k">def</span> <span class="nf">plus_courte_distance</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">depart</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">""" Renvoie le point du tableau tab se trouvant à la plus courte distance du point depart."""</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Renvoie le point du tableau tab se trouvant à la plus courte distance du point depart.&quot;&quot;&quot;</span>
     <span class="n">point</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="hll">    <span class="n">min_dist</span> <span class="o">=</span> <span class="n">distance</span><span class="p">(</span><span class="n">point</span><span class="p">,</span> <span class="n">depart</span><span class="p">)</span>
 </span><span class="hll">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)):</span>

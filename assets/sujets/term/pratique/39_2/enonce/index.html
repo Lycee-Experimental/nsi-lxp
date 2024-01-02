@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,15 +3856,15 @@
 
   <h1>Enonce</h1>
 
-<div><p>On considère la fonction <code>pantheon</code> prenant en paramètres <code>eleves</code> et <code>notes</code> deux
+<p>On considère la fonction <code>pantheon</code> prenant en paramètres <code>eleves</code> et <code>notes</code> deux
 tableaux de même longueur, le premier contenant le nom des élèves et le second, des
 entiers positifs désignant leur note à un contrôle de sorte que <code>eleves[i]</code> a obtenu la
-note <code>notes[i]</code>.<br>
+note <code>notes[i]</code>.<br />
 Cette fonction renvoie le couple constitué de la note maximale attribuée et des noms
-des élèves ayant obtenu cette note regroupés dans un tableau.<br>
+des élèves ayant obtenu cette note regroupés dans un tableau.<br />
 Ainsi, l’instruction <code>pantheon(['a', 'b', 'c', 'd'], [15, 18, 12, 18])</code> renvoie
 le couple <code>(18, ['b', 'd'])</code>.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3891,13 +3890,13 @@ le couple <code>(18, ['b', 'd'])</code>.</p>
 </code></pre></div></td></tr></table></div>
 <p>Compléter ce code.</p>
 <p>Exemples :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">eleves_nsi</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'a'</span><span class="p">,</span><span class="s1">'b'</span><span class="p">,</span><span class="s1">'c'</span><span class="p">,</span><span class="s1">'d'</span><span class="p">,</span><span class="s1">'e'</span><span class="p">,</span><span class="s1">'f'</span><span class="p">,</span><span class="s1">'g'</span><span class="p">,</span><span class="s1">'h'</span><span class="p">,</span><span class="s1">'i'</span><span class="p">,</span><span class="s1">'j'</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">eleves_nsi</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">,</span><span class="s1">&#39;i&#39;</span><span class="p">,</span><span class="s1">&#39;j&#39;</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">notes_nsi</span> <span class="o">=</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">24</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">pantheon</span><span class="p">(</span><span class="n">eleves_nsi</span><span class="p">,</span> <span class="n">notes_nsi</span><span class="p">)</span>
-<span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="p">[</span><span class="s1">'c'</span><span class="p">,</span> <span class="s1">'f'</span><span class="p">,</span> <span class="s1">'h'</span><span class="p">])</span>
+<span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">])</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">pantheon</span><span class="p">([],[])</span>
 <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">[])</span>
-</code></pre></div></div>
+</code></pre></div>
 
 
 

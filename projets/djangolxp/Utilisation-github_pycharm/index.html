@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3956,7 +3955,7 @@
   
 
 
-<div><h1 id="utilisation-de-github-avec-pycharm">Utilisation de Github avec Pycharm<a class="headerlink" href="#utilisation-de-github-avec-pycharm" title="Permanent link">⚓︎</a></h1>
+<h1 id="utilisation-de-github-avec-pycharm">Utilisation de Github avec Pycharm<a class="headerlink" href="#utilisation-de-github-avec-pycharm" title="Permanent link">⚓︎</a></h1>
 <p><strong>Github</strong> est le site le plus utilisé pour la gestion des versions (historique des modifications du code) avec l'outil <strong>Git</strong>. Bien que racheté récemment par Microsoft, nous allons donc apprendre à l'utiliser (d'autres services basés sur git existent : Gitlab, bitbucket...).</p>
 <p>L'objectif de cette page wiki n'est pas de remplacer la documentation de l'outil <a href="https://git-scm.com/book/fr/v2">Git</a> ou de <a href="https://docs.github.com/en">Github</a>, mais de voir comment utiliser Github avec notre IDE <strong>PyCharm</strong> pour centraliser les modifications apportées au projet.</p>
 <h2 id="workflow">Workflow<a class="headerlink" href="#workflow" title="Permanent link">⚓︎</a></h2>
@@ -3967,29 +3966,29 @@
 <p>Une fois que nos quelques petites modifications de branche sont testées (pas de grosses révolutions du code, on y va par petites touches...) on pourra alors procéder à un <strong>Pull Request</strong>, c'est dire tenter une fusion de notre branche éphémère à la branche <code>main</code>.</p>
 <p>Voir un exemple ici : https://github.com/Lycee-Experimental/django-lxp/pull/2</p>
 <h3 id="creer-une-nouvelle-branche-avec-pycharm">Créer une nouvelle branche avec Pycharm<a class="headerlink" href="#creer-une-nouvelle-branche-avec-pycharm" title="Permanent link">⚓︎</a></h3>
-<p>Commencer par mettre votre branche <code>main</code> à jour des dernières modifs depuis github avec un <code>git pull</code> obtenu via le raccourci en haut à gauche de pycharm : <img alt="pull" src="https://i.imgur.com/JPZJgCd.png"></p>
-<p>Cliquer ensuite sur l'icône suivant en bas à droite de la fenêtre de PyCharm : <img alt="branch-icon" src="https://i.imgur.com/cxzQwtG.png"></p>
+<p>Commencer par mettre votre branche <code>main</code> à jour des dernières modifs depuis github avec un <code>git pull</code> obtenu via le raccourci en haut à gauche de pycharm : <img alt="pull" src="https://i.imgur.com/JPZJgCd.png" /></p>
+<p>Cliquer ensuite sur l'icône suivant en bas à droite de la fenêtre de PyCharm : <img alt="branch-icon" src="https://i.imgur.com/cxzQwtG.png" /></p>
 <p>Puis sur <code>+ New Branch</code> pour créer une nouvelle branche dont PyCharm vous demande ensuite le nom. :</p>
-<p><img alt="new-branch" src="https://i.imgur.com/L1ObUow.png"></p>
+<p><img alt="new-branch" src="https://i.imgur.com/L1ObUow.png" /></p>
 <h3 id="modification-de-nos-fichiers-sources">Modification de nos fichiers sources<a class="headerlink" href="#modification-de-nos-fichiers-sources" title="Permanent link">⚓︎</a></h3>
 <p>Effectuez alors des modifs dans les fichiers du code, par exemple <code>models.py</code> et <code>forms.py</code> pour <a href="https://github.com/Lycee-Experimental/django-lxp/wiki/5.-Ajout-de-champs-dans-le-formulaire">ajouter des champs et les afficher dans le formulaire</a>.</p>
 <h3 id="tester-les-changements-en-local">Tester les changements en local<a class="headerlink" href="#tester-les-changements-en-local" title="Permanent link">⚓︎</a></h3>
-<p>Avant de valider nos changements et les pousser (push) sur Github, tester localement notre application : <img alt="launch" src="https://i.imgur.com/Wn58KyI.png"></p>
+<p>Avant de valider nos changements et les pousser (push) sur Github, tester localement notre application : <img alt="launch" src="https://i.imgur.com/Wn58KyI.png" /></p>
 <h3 id="enregistrement-des-modifications-dans-notre-nouvelle-branche">Enregistrement des modifications dans notre nouvelle branche<a class="headerlink" href="#enregistrement-des-modifications-dans-notre-nouvelle-branche" title="Permanent link">⚓︎</a></h3>
-<p>La commande <code>git commit</code> permet d'enregistrer les changements, on y accède ici avec PyCharm : <img alt="commit" src="https://i.imgur.com/cP2HRTZ.png"></p>
+<p>La commande <code>git commit</code> permet d'enregistrer les changements, on y accède ici avec PyCharm : <img alt="commit" src="https://i.imgur.com/cP2HRTZ.png" /></p>
 <p>Une fenêtre s'ouvre à gauche pour indiquer les fichiers à intégrer à notre enregistrement (commit), et le commentaire à associer à ce changement, puis <code>COMMIT</code> pour les enregistrer localement, ou <code>COMMIT AND PUSH</code> pour envoyer directement sur github :</p>
-<p><img alt="push" src="https://i.imgur.com/R5jrx2m.png"></p>
+<p><img alt="push" src="https://i.imgur.com/R5jrx2m.png" /></p>
 <p>Un test automatique de l'application est alors effectué par Github Actions. S'il est valide, on obtient ceci :</p>
-<p><img alt="action-ok" src="https://i.imgur.com/rc4LIhW.png"></p>
+<p><img alt="action-ok" src="https://i.imgur.com/rc4LIhW.png" /></p>
 <h3 id="bascule-des-changements-dans-main">Bascule des changements dans <code>main</code>.<a class="headerlink" href="#bascule-des-changements-dans-main" title="Permanent link">⚓︎</a></h3>
 <p>Aller dans le menu <code>Git</code> du haut, puis <code>Github</code>, puis <code>Create Pull Request</code>.</p>
-<p><img alt="PR" src="https://i.imgur.com/AKGTKso.png"></p>
+<p><img alt="PR" src="https://i.imgur.com/AKGTKso.png" /></p>
 <p>Renseigner le titre et la description de votre requète de fusion de votre branche avec <code>main</code>
 On pourra alors discuter sur Github de la pertinence de cette fusion, et y apporter d'éventuelles modifications avant de la valider.</p>
 <p>Un test de la <strong>pull request</strong> sera réalisé par <strong>Github Actions</strong>, qui s'il est valide, sera déployé automatiquement par <strong>Heroku</strong> à une adresse de la forme : https://django-lxp-pr-3.herokuapp.com</p>
 <p>Une fois la Pull Request validée par notre équipe, notre nouvelle main sera accessible à l'adresse : https://main.inscription.cf, prête à passer en production à l'adresse : https://inscription.cf</p>
 <p>Vous pouvez ensuite effacer votre nouvelle branche dans le menu en bas à droite.
-<img alt="del-branch" src="https://i.imgur.com/haEALYL.png"></p></div>
+<img alt="del-branch" src="https://i.imgur.com/haEALYL.png" /></p>
 
 
 

@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,13 +3856,13 @@
 
   <h1>Enonce</h1>
 
-<div><p>On dispose d’une classe <code>Carte</code> permettant de créer des objets modélisant des cartes à
+<p>On dispose d’une classe <code>Carte</code> permettant de créer des objets modélisant des cartes à
 jouer.</p>
 <p>Compléter la classe <code>Paquet_de_cartes</code> suivante en respectant les spécifications
 données dans les chaînes de documentation.</p>
 <p>Ajouter une assertion dans la méthode <code>get_carte</code> afin de vérifier que le paramètre <code>pos</code>
 est correct.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3890,43 +3889,43 @@ est correct.</p>
 <span class="normal">25</span>
 <span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Carte</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">""" Initialise les attributs couleur (entre 1 et 4), et valeur (entre 1 et 13). """</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Initialise les attributs couleur (entre 1 et 4), et valeur (entre 1 et 13). &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">couleur</span> <span class="o">=</span> <span class="n">c</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="n">v</span>
 
     <span class="k">def</span> <span class="nf">get_valeur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">""" Renvoie la valeur de la carte : As, 2, ..., 10, Valet, Dame, Roi """</span>
-        <span class="n">valeurs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'As'</span><span class="p">,</span><span class="s1">'2'</span><span class="p">,</span> <span class="s1">'3'</span><span class="p">,</span> <span class="s1">'4'</span><span class="p">,</span> <span class="s1">'5'</span><span class="p">,</span> <span class="s1">'6'</span><span class="p">,</span> <span class="s1">'7'</span><span class="p">,</span> <span class="s1">'8'</span><span class="p">,</span> <span class="s1">'9'</span><span class="p">,</span> <span class="s1">'10'</span><span class="p">,</span> <span class="s1">'Valet'</span><span class="p">,</span> <span class="s1">'Dame'</span><span class="p">,</span> <span class="s1">'Roi'</span><span class="p">]</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Renvoie la valeur de la carte : As, 2, ..., 10, Valet, Dame, Roi &quot;&quot;&quot;</span>
+        <span class="n">valeurs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;As&#39;</span><span class="p">,</span><span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="s1">&#39;6&#39;</span><span class="p">,</span> <span class="s1">&#39;7&#39;</span><span class="p">,</span> <span class="s1">&#39;8&#39;</span><span class="p">,</span> <span class="s1">&#39;9&#39;</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;Valet&#39;</span><span class="p">,</span> <span class="s1">&#39;Dame&#39;</span><span class="p">,</span> <span class="s1">&#39;Roi&#39;</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">valeurs</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
 
     <span class="k">def</span> <span class="nf">get_couleur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">""" Renvoie la couleur de la carte (parmi pique, coeur, carreau, trèfle). """</span>
-        <span class="n">couleurs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'pique'</span><span class="p">,</span> <span class="s1">'coeur'</span><span class="p">,</span> <span class="s1">'carreau'</span><span class="p">,</span> <span class="s1">'trèfle'</span><span class="p">]</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Renvoie la couleur de la carte (parmi pique, coeur, carreau, trèfle). &quot;&quot;&quot;</span>
+        <span class="n">couleurs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;pique&#39;</span><span class="p">,</span> <span class="s1">&#39;coeur&#39;</span><span class="p">,</span> <span class="s1">&#39;carreau&#39;</span><span class="p">,</span> <span class="s1">&#39;trèfle&#39;</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">couleurs</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">couleur</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
 
 <span class="k">class</span> <span class="nc">Paquet_de_cartes</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">""" Initialise l'attribut contenu avec une liste des 52 objets Carte possibles</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Initialise l&#39;attribut contenu avec une liste des 52 objets Carte possibles</span>
 <span class="sd">            rangés par valeurs croissantes en commençant par pique, puis coeur,</span>
-<span class="sd">            carreau et tréfle. """</span>
+<span class="sd">            carreau et tréfle. &quot;&quot;&quot;</span>
         <span class="c1"># A compléter</span>
 
     <span class="k">def</span> <span class="nf">get_carte</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">""" Renvoie la carte qui se trouve à la position pos (entier compris entre 0 et 51). """</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Renvoie la carte qui se trouve à la position pos (entier compris entre 0 et 51). &quot;&quot;&quot;</span>
         <span class="c1"># A compléter</span>
 </code></pre></div></td></tr></table></div>
 <p>Exemple :</p>
-<div class="highlight"><pre><span></span><code><span class="n">Exemple</span> <span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">Exemple</span> <span class="p">:</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">jeu</span> <span class="o">=</span> <span class="n">Paquet_de_cartes</span><span class="p">()</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">carte1</span> <span class="o">=</span> <span class="n">jeu</span><span class="o">.</span><span class="n">get_carte</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">carte1</span><span class="o">.</span><span class="n">get_valeur</span><span class="p">()</span> <span class="o">+</span> <span class="s2">" de "</span> <span class="o">+</span> <span class="n">carte1</span><span class="o">.</span><span class="n">get_couleur</span><span class="p">())</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">carte1</span><span class="o">.</span><span class="n">get_valeur</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; de &quot;</span> <span class="o">+</span> <span class="n">carte1</span><span class="o">.</span><span class="n">get_couleur</span><span class="p">())</span>
 <span class="mi">8</span> <span class="n">de</span> <span class="n">coeur</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">carte2</span> <span class="o">=</span> <span class="n">jeu</span><span class="o">.</span><span class="n">get_carte</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">carte2</span><span class="o">.</span><span class="n">get_valeur</span><span class="p">()</span> <span class="o">+</span> <span class="s2">" de "</span> <span class="o">+</span> <span class="n">carte2</span><span class="o">.</span><span class="n">get_couleur</span><span class="p">())</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">carte2</span><span class="o">.</span><span class="n">get_valeur</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; de &quot;</span> <span class="o">+</span> <span class="n">carte2</span><span class="o">.</span><span class="n">get_couleur</span><span class="p">())</span>
 <span class="n">As</span> <span class="n">de</span> <span class="n">pique</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">carte3</span> <span class="o">=</span> <span class="n">jeu</span><span class="o">.</span><span class="n">get_carte</span><span class="p">(</span><span class="mi">52</span><span class="p">)</span>
 <span class="ne">AssertionError</span> <span class="p">:</span> <span class="n">paramètre</span> <span class="n">pos</span> <span class="n">invalide</span>
-</code></pre></div></div>
+</code></pre></div>
 
 
 

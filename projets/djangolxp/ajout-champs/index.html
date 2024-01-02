@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3929,17 +3928,17 @@
   
 
 
-<div><h1 id="ajout-de-champs-avec-django">Ajout de champs avec Django<a class="headerlink" href="#ajout-de-champs-avec-django" title="Permanent link">⚓︎</a></h1>
+<h1 id="ajout-de-champs-avec-django">Ajout de champs avec Django<a class="headerlink" href="#ajout-de-champs-avec-django" title="Permanent link">⚓︎</a></h1>
 <h2 id="creation-de-champs-dans-la-base-modelspy">Création de champs dans la base : <a href="https://github.com/Lycee-Experimental/django-lxp/blob/main/inscription/models.py">models.py</a><a class="headerlink" href="#creation-de-champs-dans-la-base-modelspy" title="Permanent link">⚓︎</a></h2>
 <p>Les champs de la base élèves sont à définir dans le fichier  <a href="https://github.com/Lycee-Experimental/django-lxp/blob/main/inscription/models.py">models.py</a> qui correspond à la gestion des bases de données.</p>
 <p>Exemple :
-</p><div class="highlight"><pre><span></span><code><span class="n">phone</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                             <span class="n">verbose_name</span><span class="o">=</span><span class="s2">"Téléphone"</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">phone</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                             <span class="n">verbose_name</span><span class="o">=</span><span class="s2">&quot;Téléphone&quot;</span><span class="p">)</span>
 </code></pre></div>
 * <code>phone</code> est le nom du champ.
 * <code>CharField</code> signifie que c'est une chaine de caractères (on pourrait plutôt implémenter un contrôle du nombre de chiffres...).
 * <code>verbose_name</code> est son nom complet que l'on pourra utiliser pour l'affichage dans les formulaires.
-* <code>blank=True, null=True</code> permet d'indiquer que ce champ n'est pas nécessaire à renseigner pour ajouter un élève dans la base.
+* <code>blank=True, null=True</code> permet d'indiquer que ce champ n'est pas nécessaire à renseigner pour ajouter un élève dans la base.</p>
 <p>L'enjeux ici est donc de déterminer les champs à ajouter, s'ils sont indispensables ou pas à la saisie, et de quel type ils sont.</p>
 <blockquote>
 <p>Pour déterminer les champs à créer, se baser sur ceux des fiches d'inscription du LXP, et des bases <a href="https://github.com/Lycee-Experimental/django-lxp/blob/main/extra/Siecle/Exemple.csv">SIECLE</a> et <a href="https://github.com/Lycee-Experimental/django-lxp/raw/main/extra/cyclades/champs_cyclades.ods">CYCLADES</a></p>
@@ -3949,69 +3948,69 @@
 <p>Pour pouvoir faire des saisies d'élèves et ainsi tester notre appli, il faut également faire en sorte que ces champs (et surtoût les champs nécessaires), soient affichés dans les formulaires.
 Cela se passe dans le fichier <a href="https://github.com/Lycee-Experimental/django-lxp/blob/main/inscription/forms.py">forms.py</a>.
 Il existe différents formulaires qui correspondent aux étapes de la saisie :
-</p><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">InscriptionForm1</span><span class="p">(</span><span class="n">forms</span><span class="o">.</span><span class="n">ModelForm</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">InscriptionForm1</span><span class="p">(</span><span class="n">forms</span><span class="o">.</span><span class="n">ModelForm</span><span class="p">):</span>
 </code></pre></div>
 Dans le formulaire de votre choix, les nouveaux champs créés précédement dans models.py <strong>doivent être renseignés à 2 niveaux</strong> :
 1. Pour la mise en forme du formulaire dans la partie Layout :
-<div class="highlight"><pre><span></span><code> <span class="bp">self</span><span class="o">.</span><span class="n">helper</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span>
-            <span class="s1">'civility'</span><span class="p">,</span>
-            <span class="s1">'last_name'</span><span class="p">,</span>
-            <span class="s1">'first_name'</span><span class="p">,</span>
-            <span class="s1">'birth_date'</span><span class="p">,</span>
-            <span class="s1">'birth_place'</span><span class="p">,</span>
-            <span class="s1">'birth_country'</span><span class="p">,</span>
-            <span class="s1">'address'</span><span class="p">,</span>
-            <span class="s1">'photo'</span><span class="p">,</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code> <span class="bp">self</span><span class="o">.</span><span class="n">helper</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span>
+            <span class="s1">&#39;civility&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;last_name&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;first_name&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;birth_date&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;birth_place&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;birth_country&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;address&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;photo&#39;</span><span class="p">,</span>
         <span class="p">)</span>
-</code></pre></div>
+</code></pre></div></p>
 <blockquote>
 <p>Pour en savoir plus sur la mise en forme des champs et changer leur apparence, voir la <a href="https://django-crispy-forms.readthedocs.io/en/latest/layouts.html">doc de la librairie Crispy</a>.</p>
 </blockquote>
 <ol>
 <li>Pour lier ce champs à notre modèle de Base Elève
-<div class="highlight"><pre><span></span><code> <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code> <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
         <span class="c1"># Modèle utilisé et entrées à renseigner</span>
         <span class="n">model</span> <span class="o">=</span> <span class="n">BaseEleve</span>
-        <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'address'</span><span class="p">,</span> <span class="s1">'civility'</span><span class="p">,</span> <span class="s1">'last_name'</span><span class="p">,</span> <span class="s1">'first_name'</span><span class="p">,</span> <span class="s1">'birth_date'</span><span class="p">,</span> <span class="s1">'birth_place'</span><span class="p">,</span> <span class="s1">'birth_country'</span><span class="p">,</span>
-                  <span class="s1">'photo'</span><span class="p">,]</span>
+        <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;address&#39;</span><span class="p">,</span> <span class="s1">&#39;civility&#39;</span><span class="p">,</span> <span class="s1">&#39;last_name&#39;</span><span class="p">,</span> <span class="s1">&#39;first_name&#39;</span><span class="p">,</span> <span class="s1">&#39;birth_date&#39;</span><span class="p">,</span> <span class="s1">&#39;birth_place&#39;</span><span class="p">,</span> <span class="s1">&#39;birth_country&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;photo&#39;</span><span class="p">,]</span>
 </code></pre></div></li>
 </ol>
 <h2 id="ajouter-une-etape-au-formulaire-viewspy">Ajouter une étape au formulaire : <a href="https://github.com/Lycee-Experimental/django-lxp/blob/main/inscription/views.py">views.py</a><a class="headerlink" href="#ajouter-une-etape-au-formulaire-viewspy" title="Permanent link">⚓︎</a></h2>
 <p>Si vous souhaitez rajouter une étape à la saisie, créer un nouveau formulaire dans forms.py, par exemple
-</p><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">InscriptionForm4</span><span class="p">(</span><span class="n">forms</span><span class="o">.</span><span class="n">ModelForm</span><span class="p">):</span>
-    <span class="n">name</span> <span class="o">=</span> <span class="s1">'Ma nouvelle étape'</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">InscriptionForm4</span><span class="p">(</span><span class="n">forms</span><span class="o">.</span><span class="n">ModelForm</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Ma nouvelle étape&#39;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">"""</span>
-<span class="sd">        Surcharge de l'initialisation du formulaire</span>
-<span class="sd">        """</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Surcharge de l&#39;initialisation du formulaire</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="c1"># FormHelper pour customiser ton formulaire</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">helper</span> <span class="o">=</span> <span class="n">FormHelper</span><span class="p">()</span>
         <span class="c1"># Id et la classe bootstrap de ton formulaire</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">helper</span><span class="o">.</span><span class="n">form_class</span> <span class="o">=</span> <span class="s1">'form-horizontal'</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">helper</span><span class="o">.</span><span class="n">form_id</span> <span class="o">=</span> <span class="s1">'BaseEleve-form'</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">helper</span><span class="o">.</span><span class="n">form_class</span> <span class="o">=</span> <span class="s1">&#39;form-horizontal&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">helper</span><span class="o">.</span><span class="n">form_id</span> <span class="o">=</span> <span class="s1">&#39;BaseEleve-form&#39;</span>
         <span class="c1"># Largeur des labels et des champs sur la grille</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">helper</span><span class="o">.</span><span class="n">label_class</span> <span class="o">=</span> <span class="s1">'col-md-4'</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">helper</span><span class="o">.</span><span class="n">field_class</span> <span class="o">=</span> <span class="s1">'col-md-8'</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">helper</span><span class="o">.</span><span class="n">label_class</span> <span class="o">=</span> <span class="s1">&#39;col-md-4&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">helper</span><span class="o">.</span><span class="n">field_class</span> <span class="o">=</span> <span class="s1">&#39;col-md-8&#39;</span>
         <span class="c1"># Affichage de ton formulaire</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">helper</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">Layout</span><span class="p">(</span>
             <span class="c1"># Liste des champs à afficher</span>
-           <span class="s1">'mon_nouveau_champ'</span><span class="p">,</span>
+           <span class="s1">&#39;mon_nouveau_champ&#39;</span><span class="p">,</span>
         <span class="p">)</span>
 
     <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
         <span class="c1"># Modèle utilisé et entrées à renseigner</span>
         <span class="n">model</span> <span class="o">=</span> <span class="n">BaseEleve</span>
-        <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'mon_nouveau_champ'</span><span class="p">,</span>
+        <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;mon_nouveau_champ&#39;</span><span class="p">,</span>
                  <span class="p">]</span>
-</code></pre></div>
+</code></pre></div></p>
 <p>Importer votre nouveaux formulaire dans le fichier <a href="https://github.com/Lycee-Experimental/django-lxp/blob/main/inscription/views.py">views.py</a>
-</p><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">.forms</span> <span class="kn">import</span> <span class="n">InscriptionForm1</span><span class="p">,</span> <span class="n">InscriptionForm2</span><span class="p">,</span> <span class="n">InscriptionForm3</span><span class="p">,</span> <span class="n">ListeEleveForm</span><span class="p">,</span> <span class="n">InscriptionForm4</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">.forms</span> <span class="kn">import</span> <span class="n">InscriptionForm1</span><span class="p">,</span> <span class="n">InscriptionForm2</span><span class="p">,</span> <span class="n">InscriptionForm3</span><span class="p">,</span> <span class="n">ListeEleveForm</span><span class="p">,</span> <span class="n">InscriptionForm4</span>
 </code></pre></div>
 Et l'ajouter à la liste utilisée par notre formulaire d'inscription :
-<div class="highlight"><pre><span></span><code><span class="n">form_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">InscriptionForm1</span><span class="p">,</span> <span class="n">InscriptionForm2</span><span class="p">,</span> <span class="n">InscriptionForm3</span><span class="p">,</span> <span class="n">InscriptionForm4</span><span class="p">,]</span>
-</code></pre></div></div>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">form_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">InscriptionForm1</span><span class="p">,</span> <span class="n">InscriptionForm2</span><span class="p">,</span> <span class="n">InscriptionForm3</span><span class="p">,</span> <span class="n">InscriptionForm4</span><span class="p">,]</span>
+</code></pre></div></p>
 
 
 

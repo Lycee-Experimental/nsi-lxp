@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,7 +3856,7 @@
 
   <h1>Enonce</h1>
 
-<div><p>On s’intéresse à un algorithme récursif qui permet de rendre la monnaie à partir d’une
+<p>On s’intéresse à un algorithme récursif qui permet de rendre la monnaie à partir d’une
 liste donnée de valeurs de pièces et de billets.</p>
 <p>Le système monétaire est donné sous forme d’une liste <code>valeurs = [100, 50, 20,
 10, 5, 2, 1]</code>. On suppose que les pièces et billets sont disponibles sans limitation.</p>
@@ -3865,7 +3864,7 @@ liste donnée de valeurs de pièces et de billets.</p>
 argument. L’algorithme utilisé est de type glouton.</p>
 <p>Compléter le code Python ci-dessous de la fonction <code>rendu_glouton</code> qui implémente cet
 algorithme et renvoie la liste des pièces à rendre.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3886,13 +3885,13 @@ algorithme et renvoie la liste des pièces à rendre.</p>
         <span class="k">return</span> <span class="n">rendu_glouton</span><span class="p">(</span><span class="n">a_rendre</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>On devra obtenir :</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span><span class="n">rendu_glouton</span><span class="p">(</span><span class="mi">67</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span><span class="n">rendu_glouton</span><span class="p">(</span><span class="mi">67</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span><span class="n">rendu_glouton</span><span class="p">(</span><span class="mi">291</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">rendu_glouton</span><span class="p">(</span><span class="mi">291</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># si on ne dispose pas de billets de 100</span>
 <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-</code></pre></div></div>
+</code></pre></div>
 
 
 

@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3866,7 +3865,7 @@
 
   <h1>Langages et programmation (Terminale)</h1>
 
-<div><h3 id="langages-et-programmation-terminale-recursivite">Langages et programmation (Terminale) - Récursivité<a class="headerlink" href="#langages-et-programmation-terminale-recursivite" title="Permanent link">⚓︎</a></h3>
+<h3 id="langages-et-programmation-terminale-recursivite">Langages et programmation (Terminale) - Récursivité<a class="headerlink" href="#langages-et-programmation-terminale-recursivite" title="Permanent link">⚓︎</a></h3>
 <p>n°1397
 <br>
 Test récursif<br>
@@ -3883,10 +3882,10 @@ Que retourne la commande suivante ?<br>
 mystere(4)
 ```</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 0</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> False</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> True</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> L'exécution génère une erreur.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 0</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> False</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> True</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> L'exécution génère une erreur.</li>
 </ul>
 <h3 id="langages-et-programmation-terminale-recursivite_1">Langages et programmation (Terminale) - Récursivité<a class="headerlink" href="#langages-et-programmation-terminale-recursivite_1" title="Permanent link">⚓︎</a></h3>
 <p>n°1398
@@ -3897,7 +3896,7 @@ Laquelle de ces fonctions retourne True lorsqu'on exécute :<br>
 f(5)
 ```</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 
 ```python
 def f(n):
     if n==0 :
@@ -3905,7 +3904,7 @@ def f(n):
     else :
         return f(n-2)
 ```</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 
 ```python
 def f(n):
     if n&lt;=0 :
@@ -3913,14 +3912,14 @@ def f(n):
     else :
         f(n-2)
 ```</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> 
 ```python
 def f(n):
     if n&lt;=0 :
         return True
     return f(n-2)
 ```</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 
 ```python
 def f(n):
     if n==0 :
@@ -3941,21 +3940,21 @@ def affiche(n):
 ```
 Quel affichage obtient-on en exécutant <code>affiche(3)</code></p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 
 ```python
 3
 2
 1
 0
 ```</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 
 ```python
 0
 1
 2
 3
 ```</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> 
 ```python
 3
 2
@@ -3963,7 +3962,7 @@ Quel affichage obtient-on en exécutant <code>affiche(3)</code></p>
 0
 -1
 ```</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 
 ```python
 3
 ```</li>
@@ -3974,7 +3973,7 @@ Quel affichage obtient-on en exécutant <code>affiche(3)</code></p>
 Fonction récursive de deux variables<br>
 Une seule des fonctions définies ci-dessous retourne <code>'ccccc'</code> à l'appel de <code>replique(5,'c')</code>. Déterminer laquelle.</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 
 ```python
 def replique(a,b):
     if a==1:
@@ -3982,7 +3981,7 @@ def replique(a,b):
     else :
         return replique( a-1 , b+b)
 ```</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 
 ```python
 def replique(a,b):
     if a==1:
@@ -3992,7 +3991,7 @@ def replique(a,b):
     else :
         return b + replique( a-2 , b+b)
 ```</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> 
 ```python
 def replique(a,b):
     if a==1:
@@ -4002,7 +4001,7 @@ def replique(a,b):
     else :
         return b + replique( a//2 , b+b)
 ```</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 
 ```python
 def replique(a,b):
     if a==1:
@@ -4024,10 +4023,10 @@ def copy(n,s):
 ```
 Que retourne l'instruction <code>copy(3,'A')</code> ?</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> <code>'AAA'</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> <code>'AAAAAA'</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> <code>'AAAAAAAA'</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> <code>'3A'</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <code>'AAA'</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <code>'AAAAAA'</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> <code>'AAAAAAAA'</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <code>'3A'</code></li>
 </ul>
 <h3 id="langages-et-programmation-terminale-recursivite_5">Langages et programmation (Terminale) - Récursivité<a class="headerlink" href="#langages-et-programmation-terminale-recursivite_5" title="Permanent link">⚓︎</a></h3>
 <p>n°1402
@@ -4042,27 +4041,27 @@ def affiche(n):
 ```
 Quel affichage obtient-on en exécutant <code>affiche(3)</code></p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 
 ```python
 3
 2
 1
 0
 ```</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 
 ```python
 3
 2
 1
 ```</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> 
 ```python
 0
 1
 2
 3
 ```</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 
 ```python
 1
 2
@@ -4082,10 +4081,10 @@ def mystere(n,s):
 ```
 Que retourne l'instruction :  <code>mystere(3,'$')</code> ?</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> <code>'$$$'</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> <code>'$2$'</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> <code>'$$$$'</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> L'exécution déclenche une erreur</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <code>'$$$'</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <code>'$2$'</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> <code>'$$$$'</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> L'exécution déclenche une erreur</li>
 </ul>
 <h3 id="langages-et-programmation-terminale-recursivite_7">Langages et programmation (Terminale) - Récursivité<a class="headerlink" href="#langages-et-programmation-terminale-recursivite_7" title="Permanent link">⚓︎</a></h3>
 <p>n°1404
@@ -4102,10 +4101,10 @@ def g(n):
 ```
 Qu'obtient-on en exécutant la commande <code>g(3)</code>?</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> <code>1789</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> <code>1</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> <code>AssertionError</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> <code>RecursionError</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <code>1789</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <code>1</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> <code>AssertionError</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <code>RecursionError</code></li>
 </ul>
 <h3 id="langages-et-programmation-terminale-recursivite_8">Langages et programmation (Terminale) - Récursivité<a class="headerlink" href="#langages-et-programmation-terminale-recursivite_8" title="Permanent link">⚓︎</a></h3>
 <p>n°1405
@@ -4120,10 +4119,10 @@ def f(a,b):
 ```
 Que retourne la commande <code>f(3,4)</code> ?</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 4</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 5</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 6</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> 7</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 4</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 5</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 6</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> 7</li>
 </ul>
 <h3 id="langages-et-programmation-terminale-recursivite_9">Langages et programmation (Terminale) - Récursivité<a class="headerlink" href="#langages-et-programmation-terminale-recursivite_9" title="Permanent link">⚓︎</a></h3>
 <p>n°1406
@@ -4139,10 +4138,10 @@ def mystere(n):
 ```
 Que retourne la commande : <code>mystere(3)</code></p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> True</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> False</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> RecursionError</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 0</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> True</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> False</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> RecursionError</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 0</li>
 </ul>
 <h3 id="langages-et-programmation-terminale-modularite">Langages et programmation (Terminale) - Modularité<a class="headerlink" href="#langages-et-programmation-terminale-modularite" title="Permanent link">⚓︎</a></h3>
 <p>n°1504
@@ -4150,10 +4149,10 @@ Que retourne la commande : <code>mystere(3)</code></p>
 Modularité<br>
 Parmi les lignes suivantes, trouver celle qui ne permet pas d'importer et d'utiliser la totalité du module itertools :</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> import itertools</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> import itertools as itt</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> from itertools import cycle</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> Je ne sais pas...</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> import itertools</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> import itertools as itt</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> from itertools import cycle</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Je ne sais pas...</li>
 </ul>
 <h3 id="langages-et-programmation-terminale-modularite_1">Langages et programmation (Terminale) - Modularité<a class="headerlink" href="#langages-et-programmation-terminale-modularite_1" title="Permanent link">⚓︎</a></h3>
 <p>n°1505
@@ -4167,10 +4166,10 @@ for i in range(3):
     a = 2 * a
 ```</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> NameError</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> SyntaxError</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> IndexError</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> IndentationError</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> NameError</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> SyntaxError</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> IndexError</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> IndentationError</li>
 </ul>
 <h3 id="langages-et-programmation-terminale-modularite_2">Langages et programmation (Terminale) - Modularité<a class="headerlink" href="#langages-et-programmation-terminale-modularite_2" title="Permanent link">⚓︎</a></h3>
 <p>n°1506
@@ -4187,10 +4186,10 @@ while v &lt; 100:
     v = v + 1
 ```</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> NameError</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> SyntaxError</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> IndexError</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> IndentationError</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> NameError</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> SyntaxError</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> IndexError</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> IndentationError</li>
 </ul>
 <h3 id="langages-et-programmation-terminale-paradigmes">Langages et programmation (Terminale) - Paradigmes<a class="headerlink" href="#langages-et-programmation-terminale-paradigmes" title="Permanent link">⚓︎</a></h3>
 <p>n°1518
@@ -4215,10 +4214,10 @@ class Objet_3D:
 ```
 Si o est une instance de la classe Objet_3D, pour calculer le volume de o, l'instruction correcte est :</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> Volume(o)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> o.Volume(self)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> o.Volume()</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> Volume(self)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Volume(o)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> o.Volume(self)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> o.Volume()</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Volume(self)</li>
 </ul>
 <h3 id="langages-et-programmation-terminale-paradigmes_1">Langages et programmation (Terminale) - Paradigmes<a class="headerlink" href="#langages-et-programmation-terminale-paradigmes_1" title="Permanent link">⚓︎</a></h3>
 <p>n°1521
@@ -4242,10 +4241,10 @@ print(s)
 ```
 Que contient la variable s à la fin de l’exécution de ce script ?</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> Segment : [(1, 2), (3, 4)]</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> Segment : [(1.0, 2.0), (3.0, 4.0)]</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> Segment : 1, 2, 3, 4</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> Segment : [(4, 3), (2, 1)]</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Segment : [(1, 2), (3, 4)]</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Segment : [(1.0, 2.0), (3.0, 4.0)]</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Segment : 1, 2, 3, 4</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Segment : [(4, 3), (2, 1)]</li>
 </ul>
 <h3 id="langages-et-programmation-terminale-paradigmes_2">Langages et programmation (Terminale) - Paradigmes<a class="headerlink" href="#langages-et-programmation-terminale-paradigmes_2" title="Permanent link">⚓︎</a></h3>
 <p>n°1522
@@ -4269,10 +4268,10 @@ print(s)
 ```
 Que contient la variable s à la fin de l’exécution de ce script ?</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> Segment : [(1, 2), (3, 4)]</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> Segment : [(4, 3), (2, 1)]</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> Segment : [(1.0, 2.0), (3.0, 4.0)]</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> Segment : 1, 2, 3, 4</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Segment : [(1, 2), (3, 4)]</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Segment : [(4, 3), (2, 1)]</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Segment : [(1.0, 2.0), (3.0, 4.0)]</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Segment : 1, 2, 3, 4</li>
 </ul>
 <h3 id="langages-et-programmation-terminale-recursivite_10">Langages et programmation (Terminale) - Récursivité<a class="headerlink" href="#langages-et-programmation-terminale-recursivite_10" title="Permanent link">⚓︎</a></h3>
 <p>n°1571
@@ -4288,16 +4287,16 @@ def puissance(x,n):
 ```
 Que doit-on écrire à la place des pointillés ?</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 
 ```python
 puissance(x,n-1)
 ```</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> 
 ```python
 x*puissance(x,n-1)
 ```</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> Quoi que l'on écrive, cette fonction ne donnera pas le résultat attendu.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Quoi que l'on écrive, cette fonction ne donnera pas le résultat attendu.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 
 ```python
 x**(n-1)*puissance(x,n-1)
 ```</li>
@@ -4318,19 +4317,19 @@ print(ed(L))
 ```
 Que renvoi ce programme en console ?</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 
 ```python
 None
 ```</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> 
 ```python
 [9, 8, 7, 6, 3, 10, 2]
 ```</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 
 ```python
 [9, 8, 8, 7, 6, 3, 9, 10, 9, 9, 8, 6, 2, 3, 2]
 ```</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 
 ```python
 [2, 10, 3, 6, 7, 8, 9]
 ```</li>
@@ -4348,19 +4347,19 @@ def B(x) :
 print(A(4))
 ```</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> 
 ```python
 13
 ```</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 
 ```python
 1
 ```</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 
 ```python
 12
 ```</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> Une erreur de type : 'RecursionError: maximum recursion depth exceeded in comparison '</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Une erreur de type : 'RecursionError: maximum recursion depth exceeded in comparison '</li>
 </ul>
 <h3 id="langages-et-programmation-terminale-autres">Langages et programmation (Terminale) - Autres<a class="headerlink" href="#langages-et-programmation-terminale-autres" title="Permanent link">⚓︎</a></h3>
 <p>n°1605
@@ -4375,10 +4374,10 @@ for (i=0;i&lt;5;i++) {
 }
 ```</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> {2,3,4,5,6}</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> {0,2,6,12,20}</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> {5,4,3,2,1}</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> {1,2,3,4,5}</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> {2,3,4,5,6}</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> {0,2,6,12,20}</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> {5,4,3,2,1}</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> {1,2,3,4,5}</li>
 </ul>
 <h3 id="langages-et-programmation-terminale-autres_1">Langages et programmation (Terminale) - Autres<a class="headerlink" href="#langages-et-programmation-terminale-autres_1" title="Permanent link">⚓︎</a></h3>
 <p>n°1606
@@ -4396,10 +4395,10 @@ while (i&lt;3) {
 printf('%d',j);
 ```</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 6</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 0</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> 3</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> %d,3</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 6</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 0</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> 3</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> %d,3</li>
 </ul>
 <h3 id="langages-et-programmation-terminale-autres_2">Langages et programmation (Terminale) - Autres<a class="headerlink" href="#langages-et-programmation-terminale-autres_2" title="Permanent link">⚓︎</a></h3>
 <p>n°1607
@@ -4407,10 +4406,10 @@ printf('%d',j);
 Langage C<br>
 Le langage C est un langage ...</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> compliqué.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> interprété.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> compilé.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> de l'antiquité.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> compliqué.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> interprété.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> compilé.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> de l'antiquité.</li>
 </ul>
 <h3 id="langages-et-programmation-terminale-autres_3">Langages et programmation (Terminale) - Autres<a class="headerlink" href="#langages-et-programmation-terminale-autres_3" title="Permanent link">⚓︎</a></h3>
 <p>n°1615
@@ -4426,10 +4425,10 @@ a++;
 ```
 Que contient la variable a à la fin de l’exécution de ce programme ?</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 0</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> 21</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 23</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 5</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 0</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> 21</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 23</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 5</li>
 </ul>
 <h3 id="langages-et-programmation-terminale-recursivite_13">Langages et programmation (Terminale) - Récursivité<a class="headerlink" href="#langages-et-programmation-terminale-recursivite_13" title="Permanent link">⚓︎</a></h3>
 <p>n°1743
@@ -4449,10 +4448,10 @@ def pgcd_recursif(a, b):
 ```
 Parmi les lignes suivantes, quelle est la correcte ?</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> <code>return pgcd_recursif(a, b)</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> <code>return pgcd_recursif(b, a % b)</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> <code>return pgcd_recursif(a % b, b)</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> <code>return pgcd_recursif(a // b, a % b)</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <code>return pgcd_recursif(a, b)</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> <code>return pgcd_recursif(b, a % b)</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <code>return pgcd_recursif(a % b, b)</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <code>return pgcd_recursif(a // b, a % b)</code></li>
 </ul>
 <h3 id="langages-et-programmation-terminale-recursivite_14">Langages et programmation (Terminale) - Récursivité<a class="headerlink" href="#langages-et-programmation-terminale-recursivite_14" title="Permanent link">⚓︎</a></h3>
 <p>n°1744
@@ -4460,10 +4459,10 @@ Parmi les lignes suivantes, quelle est la correcte ?</p>
 Pas récursif alors...<br>
 Un algorithme contenant des boucles sans appels récursifs est dit :</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> itératif</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> instructif</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> impératif</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> peu élégant</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> itératif</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> instructif</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> impératif</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> peu élégant</li>
 </ul>
 <h3 id="langages-et-programmation-terminale-recursivite_15">Langages et programmation (Terminale) - Récursivité<a class="headerlink" href="#langages-et-programmation-terminale-recursivite_15" title="Permanent link">⚓︎</a></h3>
 <p>n°1745
@@ -4478,7 +4477,7 @@ def mystere(T, n=0):
 ```
 Parmi les réponses suivantes, quelle est sa version itérative ?</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> 
 ```python
 def mystere(T):
     n = len(T) // 2
@@ -4486,7 +4485,7 @@ def mystere(T):
         T[i], T[-1 - i] = T[-1 - i], T[i]
     return T
 ```</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 
 ```python
 def mystere(T):
     n = len(T) // 2
@@ -4494,7 +4493,7 @@ def mystere(T):
         T[i], T[-n - i] = T[-n - i], T[i]
     return T
 ```</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 
 ```python
 def mystere(T):
     n = len(T)
@@ -4502,7 +4501,7 @@ def mystere(T):
         T[i], T[-1 - i] = T[-1 - i], T[i]
     return T
 ```</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 
 ```python
 def mystere(T):
     n = len(T) // 2
@@ -4532,7 +4531,7 @@ class Couleur:
 ```
 Parmi les codes suivants lequel est le plus convenable pour la méthode change_r ?</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> 
 ```python
 assert isinstance(nouveau_r, int)
 if nouveau_r &gt;= 0 and nouveau_r &lt;= 255:
@@ -4540,18 +4539,18 @@ if nouveau_r &gt;= 0 and nouveau_r &lt;= 255:
 else:
     raise ValueError('Valeur inappropriée')
 ```</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 
 ```python
 if nouveau_r &gt;= 0 and nouveau_r &lt;= 255 and isinstance(nouveau_r, int):
     self.r = nouveau_r
 else:
     raise ValueError('Valeur inappropriée')
 ```</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 
 ```python
 self.r = nouveau_r
 ```</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 
 ```python
 if nouveau_r &gt;= 0 and nouveau_r &lt;= 255:
     self.r = nouveau_r
@@ -4576,25 +4575,25 @@ def pgcd(a, b):
 ```
 Parmi les lignes suivantes, quelle est la correcte ?</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 
 ```python
     while b &gt; 0:
         a, b = a // b, a % b
     return a
 ```</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 
 ```python
     while b &gt; 0:
         a, b = a, a % b
     return a
 ```</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 
 ```python
     while b &lt; 0:
         a, b = a, a % b
     return a
 ```</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> 
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> 
 ```python
     while b &gt; 0:
         a, b = b, a % b
@@ -4609,10 +4608,10 @@ Module<br>
 Dans un programme, on trouve l'instruction suivante : <code>import module2</code>  <br>
 Quelle instruction permet alors d'accéder à ma_fonction dans le programme ?</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> module2.ma_fonction()</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> ma_fonction()</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> module2-&gt;ma_fonction()</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> On ne peut pas y accéder car elle n'est pas dans l'espace de nommage.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> module2.ma_fonction()</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> ma_fonction()</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> module2-&gt;ma_fonction()</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> On ne peut pas y accéder car elle n'est pas dans l'espace de nommage.</li>
 </ul>
 <h3 id="langages-et-programmation-terminale-modularite_4">Langages et programmation (Terminale) - Modularité<a class="headerlink" href="#langages-et-programmation-terminale-modularite_4" title="Permanent link">⚓︎</a></h3>
 <p>n°1936
@@ -4620,10 +4619,10 @@ Quelle instruction permet alors d'accéder à ma_fonction dans le programme ?</p
 Module<br>
  En Python, un module :</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> est forcément un programme compilé en C</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> peut être n'importe quel fichier d'extension .py</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> doit être installé dans le répertoire de l'interpréteur</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> ne peut contenir que des fonctions</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> est forcément un programme compilé en C</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> peut être n'importe quel fichier d'extension .py</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> doit être installé dans le répertoire de l'interpréteur</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> ne peut contenir que des fonctions</li>
 </ul>
 <h3 id="langages-et-programmation-terminale-modularite_5">Langages et programmation (Terminale) - Modularité<a class="headerlink" href="#langages-et-programmation-terminale-modularite_5" title="Permanent link">⚓︎</a></h3>
 <p>n°1937
@@ -4631,11 +4630,11 @@ Module<br>
 Module<br>
  Parmi ces affirmations sur les espaces de noms, laquelle sont vraie ?</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> Ils lient les noms de variables avec leur valeur.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> Ils ne sont utilisés que pour les fonctions contenues dans les modules.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"><span class="task-list-indicator"></span></label> Ils persistent après la fin de l'exécution du programme.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked><span class="task-list-indicator"></span></label> Ils assurent l'unicité des noms de variables.</li>
-</ul></div>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Ils lient les noms de variables avec leur valeur.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Ils ne sont utilisés que pour les fonctions contenues dans les modules.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Ils persistent après la fin de l'exécution du programme.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Ils assurent l'unicité des noms de variables.</li>
+</ul>
 
 
 

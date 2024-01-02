@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3857,7 +3856,7 @@
 
   <h1>Correction</h1>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3885,30 +3884,30 @@
 <span class="normal">26</span>
 <span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Carte</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">""" Initialise les attributs couleur (entre 1 et 4), et valeur (entre 1 et 13). """</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Initialise les attributs couleur (entre 1 et 4), et valeur (entre 1 et 13). &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">couleur</span> <span class="o">=</span> <span class="n">c</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">=</span> <span class="n">v</span>
 
     <span class="k">def</span> <span class="nf">get_valeur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">""" Renvoie la valeur de la carte : As, 2, ..., 10, Valet, Dame, Roi """</span>
-        <span class="n">valeurs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'As'</span><span class="p">,</span><span class="s1">'2'</span><span class="p">,</span> <span class="s1">'3'</span><span class="p">,</span> <span class="s1">'4'</span><span class="p">,</span> <span class="s1">'5'</span><span class="p">,</span> <span class="s1">'6'</span><span class="p">,</span> <span class="s1">'7'</span><span class="p">,</span> <span class="s1">'8'</span><span class="p">,</span> <span class="s1">'9'</span><span class="p">,</span> <span class="s1">'10'</span><span class="p">,</span> <span class="s1">'Valet'</span><span class="p">,</span> <span class="s1">'Dame'</span><span class="p">,</span> <span class="s1">'Roi'</span><span class="p">]</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Renvoie la valeur de la carte : As, 2, ..., 10, Valet, Dame, Roi &quot;&quot;&quot;</span>
+        <span class="n">valeurs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;As&#39;</span><span class="p">,</span><span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="s1">&#39;6&#39;</span><span class="p">,</span> <span class="s1">&#39;7&#39;</span><span class="p">,</span> <span class="s1">&#39;8&#39;</span><span class="p">,</span> <span class="s1">&#39;9&#39;</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;Valet&#39;</span><span class="p">,</span> <span class="s1">&#39;Dame&#39;</span><span class="p">,</span> <span class="s1">&#39;Roi&#39;</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">valeurs</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">valeur</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
 
     <span class="k">def</span> <span class="nf">get_couleur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">""" Renvoie la couleur de la carte (parmi pique, coeur, carreau, trèfle). """</span>
-        <span class="n">couleurs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'pique'</span><span class="p">,</span> <span class="s1">'coeur'</span><span class="p">,</span> <span class="s1">'carreau'</span><span class="p">,</span> <span class="s1">'trèfle'</span><span class="p">]</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Renvoie la couleur de la carte (parmi pique, coeur, carreau, trèfle). &quot;&quot;&quot;</span>
+        <span class="n">couleurs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;pique&#39;</span><span class="p">,</span> <span class="s1">&#39;coeur&#39;</span><span class="p">,</span> <span class="s1">&#39;carreau&#39;</span><span class="p">,</span> <span class="s1">&#39;trèfle&#39;</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">couleurs</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">couleur</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
 
 <span class="k">class</span> <span class="nc">Paquet_de_cartes</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">""" Initialise l'attribut contenu avec une liste des 52 objets Carte possibles</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Initialise l&#39;attribut contenu avec une liste des 52 objets Carte possibles</span>
 <span class="sd">            rangés par valeurs croissantes en commençant par pique, puis coeur,</span>
-<span class="sd">            carreau et tréfle. """</span>
+<span class="sd">            carreau et tréfle. &quot;&quot;&quot;</span>
 <span class="hll">        <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">=</span> <span class="p">[</span><span class="n">Carte</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">14</span><span class="p">)]</span>  
 </span>
     <span class="k">def</span> <span class="nf">get_carte</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">""" Renvoie la carte qui se trouve à la position pos (entier compris entre 0 et 51). """</span>
-<span class="hll">        <span class="k">assert</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">pos</span> <span class="o">&lt;=</span> <span class="mi">51</span><span class="p">,</span>  <span class="s1">'paramètre pos invalide'</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Renvoie la carte qui se trouve à la position pos (entier compris entre 0 et 51). &quot;&quot;&quot;</span>
+<span class="hll">        <span class="k">assert</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">pos</span> <span class="o">&lt;=</span> <span class="mi">51</span><span class="p">,</span>  <span class="s1">&#39;paramètre pos invalide&#39;</span>
 </span><span class="hll">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span>
 </span></code></pre></div></td></tr></table></div>
 

@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3941,7 +3940,7 @@
   
 
 
-<div><h1 id="options-avancees">Options avancées<a class="headerlink" href="#options-avancees" title="Permanent link">⚓︎</a></h1>
+<h1 id="options-avancees">Options avancées<a class="headerlink" href="#options-avancees" title="Permanent link">⚓︎</a></h1>
 <h2 id="version">Version<a class="headerlink" href="#version" title="Permanent link">⚓︎</a></h2>
 <p>Pour connaitre la version de Pyodide-MkDocs que vous utilisez. Utiliser simplement le terminal ou le terminal associé à un IDE :</p>
 <ul>
@@ -3971,7 +3970,7 @@
 - <code>crimson_editor</code> pour le mode <code>default</code> ; 
 - <code>tomorrow_night_bright</code> pour le mode <code>slate</code>.</p>
 <p>Il est possible de changer cela en ajoutant les lignes suivantes dans la partie <code>extra</code> de votre fichier <code>mkdocs.yml</code> :</p>
-<div class="highlight"><pre><span></span><code><span class="nt">extra</span><span class="p">:</span>
+<div class="highlight"><span class="filename">YAML</span><pre><span></span><code><span class="nt">extra</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">ace_style</span><span class="p">:</span><span class="w"> </span>
 <span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">crimson_editor</span>
 <span class="w">    </span><span class="nt">slate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tomorrow_night_bright</span>
@@ -3980,7 +3979,7 @@
 <h2 id="integration-a-la-palette-de-mkdocs">Intégration à la palette de MkDocs<a class="headerlink" href="#integration-a-la-palette-de-mkdocs" title="Permanent link">⚓︎</a></h2>
 <p>Il existe d'autres modes de colorations dans MkDocs. Vous pouvez par exemple imposer que le mode noir ne soit pas <code>slate</code> mais <code>youtube</code>. </p>
 <p>Dans ce cas, il est impératif de rajouter les lignes suivantes dans la partie <code>extra</code> du fichier <code>yaml</code> : </p>
-<div class="highlight"><pre><span></span><code><span class="nt">extra</span><span class="p">:</span>
+<div class="highlight"><span class="filename">YAML</span><pre><span></span><code><span class="nt">extra</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">ace_style</span><span class="p">:</span><span class="w"> </span>
 <span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">crimson_editor</span>
 <span class="w">    </span><span class="nt">slate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tomorrow_night_bright|youtube</span>
@@ -3991,7 +3990,7 @@
 <p>Celui-ci porte l'extension <code>_REM</code>. </p>
 <p>Ce fichier de remarques n'est actif que si votre exercice dispose d'un fichier de correction <code>_corr</code> et d'un fichier de test <code>_test</code> en plus du fichier d'exerice. </p>
 <p>Ainsi, on aura l'arborescence suivante :</p>
-<div class="highlight"><pre><span></span><code>docs/
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code>docs/
 ├──<span class="w"> </span>N1
 │<span class="w">   </span>├──<span class="w"> </span><span class="m">110</span>-maximum_nombres
 │<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo.py
@@ -3999,7 +3998,7 @@
 │<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo_corr.py
 │<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exo_test.py
 │<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>sujet.md
-</code></pre></div></div>
+</code></pre></div>
 
 
 

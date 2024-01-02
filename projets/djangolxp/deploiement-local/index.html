@@ -52,7 +52,6 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet">
-<script src="../../../pyodide-mkdocs/utils.js"></script> 
 <script src="../../../pyodide-mkdocs/interpreter.js"></script> 
 
     
@@ -3998,23 +3997,23 @@
   
 
 
-<div><h1 id="developpement-du-projet-avec-pycharm">Développement du projet avec Pycharm<a class="headerlink" href="#developpement-du-projet-avec-pycharm" title="Permanent link">⚓︎</a></h1>
+<h1 id="developpement-du-projet-avec-pycharm">Développement du projet avec Pycharm<a class="headerlink" href="#developpement-du-projet-avec-pycharm" title="Permanent link">⚓︎</a></h1>
 <h2 id="installation-de-pycharm">Installation de Pycharm<a class="headerlink" href="#installation-de-pycharm" title="Permanent link">⚓︎</a></h2>
 <p>Commencer par installer <a href="/pycharm/install-pycharm">Pycharm</a></p>
 <h2 id="installation-des-dependances">Installation des dépendances<a class="headerlink" href="#installation-des-dependances" title="Permanent link">⚓︎</a></h2>
 <p>Installer les dépendances nécessaires au projet. Dans un terminal :
-</p><div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gdal-bin<span class="w"> </span>libpq-dev<span class="w"> </span>git<span class="w"> </span>python3.8-dev<span class="w"> </span>python3-distutils<span class="w"> </span>libmysqlclient-dev
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gdal-bin<span class="w"> </span>libpq-dev<span class="w"> </span>git<span class="w"> </span>python3.8-dev<span class="w"> </span>python3-distutils<span class="w"> </span>libmysqlclient-dev
 <span class="c1"># Installation de Poetry</span>
 curl<span class="w"> </span>-sSL<span class="w"> </span>https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py<span class="w"> </span><span class="p">|</span><span class="w"> </span>python3
-</code></pre></div>
+</code></pre></div></p>
 <div class="admonition note">
 <p class="admonition-title">Pour info</p>
 <p><code>git</code> est le gestionnaire de version que nous utilisons via Github <a href="/git/presentation.md">Voir ici</a>. 
-<code>gdal-bin</code> est une librairie dont dépend l'affichage des cartes géographiques par <code>django-leaflet</code>.<br>
-<code>libpq-dev</code> est nécessaire à l'installation de psycopg, la librairie python pour se connecter à une base PostgreSQL<br>
+<code>gdal-bin</code> est une librairie dont dépend l'affichage des cartes géographiques par <code>django-leaflet</code>.<br />
+<code>libpq-dev</code> est nécessaire à l'installation de psycopg, la librairie python pour se connecter à une base PostgreSQL<br />
 <code>python3.8-dev</code> est sont librairies de dévelopement de python3.8.
 <code>libmysqlclient-dev</code> est une librairie dont dépend <code>mysqlclient</code> pour se connecter à notre base mariadb
-<code>python3-distutils</code> est requis pour le bon fonctionnement de Poetry<br>
+<code>python3-distutils</code> est requis pour le bon fonctionnement de Poetry<br />
 <code>Poetry</code> est un outil qui permet de mettre en place un environnement virtuel et installer les dépendances  </p>
 </div>
 <h2 id="configuration-de-github-dans-pycharm">Configuration de Github dans Pycharm<a class="headerlink" href="#configuration-de-github-dans-pycharm" title="Permanent link">⚓︎</a></h2>
@@ -4027,23 +4026,23 @@ Pour cela demander à l'un de ses membres de vous y inviter en lui indiquant le 
 de l'organisation</a> pour accepter l'invit.</p>
 <h3 id="configurer-pycharm-avec-votre-identifiant-github">Configurer Pycharm avec votre identifiant Github<a class="headerlink" href="#configurer-pycharm-avec-votre-identifiant-github" title="Permanent link">⚓︎</a></h3>
 <p>Aller dans le menu <code>File</code> / <code>Settings</code></p>
-<p><img alt="settings" src="https://i.imgur.com/t34xNqk.png"></p>
+<p><img alt="settings" src="https://i.imgur.com/t34xNqk.png" /></p>
 <p>Puis dans <code>Version control</code> / <code>Github</code> / <code>+</code> / <code>Log via Github</code></p>
-<p><img alt="github" src="https://i.imgur.com/aLEIy25.png"></p>
+<p><img alt="github" src="https://i.imgur.com/aLEIy25.png" /></p>
 <p>Votre navigateur devrait s'ouvrir pour que vous puissiez accepter que Pycharm soit associé à votre compte Github.</p>
 <h2 id="telecharement-du-code-source-du-projet">Télécharement du code source du projet<a class="headerlink" href="#telecharement-du-code-source-du-projet" title="Permanent link">⚓︎</a></h2>
 <p>Rendez-vous dans le menu <code>git</code> / <code>clone</code>.</p>
-<p><img alt="" src="https://i.imgur.com/HnQCBaL.png"></p>
-<p><img alt="" src="https://i.imgur.com/lCW2YoL.png">
+<p><img alt="" src="https://i.imgur.com/HnQCBaL.png" /></p>
+<p><img alt="" src="https://i.imgur.com/lCW2YoL.png" />
 Indiquez l'url de notre dépôt (<code>https://github.com/Lycee-Experimental/django-lxp</code>), ainsi que le répertoire dans lequel
 vous souhaitez le télécharger, puis cliquez sur <code>Clone</code>.</p>
 <h2 id="configuration-de-lenvironnement-virtuel">Configuration de l'environnement virtuel<a class="headerlink" href="#configuration-de-lenvironnement-virtuel" title="Permanent link">⚓︎</a></h2>
 <p>Une fois le code source téléchargé depuis notre dépot distant Github, Pycharm va détecter le fichier <code>pyproject.toml</code>
 et donc vous proposer de mettre en place l'environnement virtuel avec Poetry.
 Cliquer sur <code>OK</code>.</p>
-<p><img alt="" src="https://i.imgur.com/pzBv48A.png"></p>
+<p><img alt="" src="https://i.imgur.com/pzBv48A.png" /></p>
 <p>Patienter pendant que Poetry install l'ensemble des paquets nécessaires</p>
-<p><img alt="" src="https://i.imgur.com/IO9aeky.png"></p>
+<p><img alt="" src="https://i.imgur.com/IO9aeky.png" /></p>
 <h2 id="generation-du-fichier-env-contenant-nos-cles-secretes-et-des-donnees-initiales">Génération du fichier .env contenant nos clés secrètes, et des données initiales<a class="headerlink" href="#generation-du-fichier-env-contenant-nos-cles-secretes-et-des-donnees-initiales" title="Permanent link">⚓︎</a></h2>
 <p>Certaines clés ne doivent pas être publiées sur Github car sont personnelles (service AWS, google map...).
 On va donc les générer à partir d'un fichier encrypté <code>encrypted.data</code>.
@@ -4051,14 +4050,14 @@ On télécharge ensuite les données initiales sous forme de json qui sont aussi
 <ul>
 <li>Ouvrir un terminal en cliquant en bas à gauche :</li>
 </ul>
-<p><img alt="" src="https://i.imgur.com/ZcxTcvb.png"></p>
+<p><img alt="" src="https://i.imgur.com/ZcxTcvb.png" /></p>
 <ul>
 <li>Y copier la commande suivante (<code>CTR+SHIFT+V</code> pour coller dans le terminal) :</li>
 </ul>
-<div class="highlight"><pre><span></span><code>openssl<span class="w"> </span>enc<span class="w"> </span>-d<span class="w"> </span>-aes-256-cbc<span class="w"> </span>-in<span class="w"> </span>encrypted.data<span class="w"> </span>-out<span class="w"> </span>.env
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code>openssl<span class="w"> </span>enc<span class="w"> </span>-d<span class="w"> </span>-aes-256-cbc<span class="w"> </span>-in<span class="w"> </span>encrypted.data<span class="w"> </span>-out<span class="w"> </span>.env
 <span class="nb">export</span><span class="w"> </span><span class="k">$(</span>cat<span class="w"> </span>.env<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="k">)</span>
 mkdir<span class="w"> </span>data
-curl<span class="w"> </span><span class="s2">"https://gist.githubusercontent.com/davy39/c382e6a01e0b15a3be883bbfd4863627/raw/c875f335cc2b2d8f58adf9c6ff3545184f609afd/secured.tar.gz"</span><span class="w">  </span><span class="p">|</span><span class="w"> </span>openssl<span class="w"> </span>enc<span class="w"> </span>-d<span class="w"> </span>-aes256<span class="w"> </span>-pbkdf2<span class="w"> </span>-pass<span class="w"> </span>pass:<span class="nv">$SECRET_KEY</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tar<span class="w"> </span>xz<span class="w"> </span>-C<span class="w"> </span>data
+curl<span class="w"> </span><span class="s2">&quot;https://gist.githubusercontent.com/davy39/c382e6a01e0b15a3be883bbfd4863627/raw/c875f335cc2b2d8f58adf9c6ff3545184f609afd/secured.tar.gz&quot;</span><span class="w">  </span><span class="p">|</span><span class="w"> </span>openssl<span class="w"> </span>enc<span class="w"> </span>-d<span class="w"> </span>-aes256<span class="w"> </span>-pbkdf2<span class="w"> </span>-pass<span class="w"> </span>pass:<span class="nv">$SECRET_KEY</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tar<span class="w"> </span>xz<span class="w"> </span>-C<span class="w"> </span>data
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -4069,14 +4068,14 @@ curl<span class="w"> </span><span class="s2">"https://gist.githubusercontent.com
 <ul>
 <li>Soit entrer la commande suivante dans le terminal :</li>
 </ul>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>manage.py<span class="w"> </span>migrate
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code>python<span class="w"> </span>manage.py<span class="w"> </span>migrate
 </code></pre></div>
 <ul>
 <li>Soit ouvrir l'onglet manage.py à partir du menu <code>Tools</code> ou <code>CTL+ALT+R</code> :</li>
 </ul>
-<p><img alt="" src="https://i.imgur.com/7HvhW2h.png">
+<p><img alt="" src="https://i.imgur.com/7HvhW2h.png" />
   Puis tapper simplement la commande <code>migrate</code>
-  <img alt="" src="https://i.imgur.com/i4Db9o7.png"></p>
+  <img alt="" src="https://i.imgur.com/i4Db9o7.png" /></p>
 <h2 id="creation-dun-superutilisateur">Création d'un superutilisateur<a class="headerlink" href="#creation-dun-superutilisateur" title="Permanent link">⚓︎</a></h2>
 <p>Pour pouvoir accéder à l'interface d'administration de notre appli, il faut préalablement créer un superutilisateur.</p>
 <ul>
@@ -4084,8 +4083,8 @@ curl<span class="w"> </span><span class="s2">"https://gist.githubusercontent.com
 </ul>
 <h2 id="lancement-du-serveur-django">Lancement du serveur Django<a class="headerlink" href="#lancement-du-serveur-django" title="Permanent link">⚓︎</a></h2>
 <p>Il suffit ensuite de lancer l'application :
-<img alt="launch" src="https://i.imgur.com/Wn58KyI.png"></p>
-<p>L'application est alors accessible à l'adresse : <a href="https://127.0.0.1">https://127.0.0.1</a></p></div>
+<img alt="launch" src="https://i.imgur.com/Wn58KyI.png" /></p>
+<p>L'application est alors accessible à l'adresse : <a href="https://127.0.0.1">https://127.0.0.1</a></p>
 
 
 
