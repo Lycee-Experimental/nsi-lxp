@@ -3957,19 +3957,19 @@
 <h2 id="communications-dmx">Communications DMX<a class="headerlink" href="#communications-dmx" title="Permanent link">⚓︎</a></h2>
 <details class="info">
 <summary>Protocole DMX512</summary>
-<p>Le protocole DMX512 est relativement simple à un <strong>baudrate</strong> de 250 kbit/s, soit un bit toute les 4 μs.</p>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Idle |       Break       |MAB|  Slot 0  |  Slot 1  |
+<p>Le protocole DMX512 est relativement simple. Il s'effectue à un <strong>baudrate</strong> de 250 kbit/s, soit un bit toute les 4 μs.</p>
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Idle  |       Break       |MAB|  Slot 0  |  Slot 1  |
 ------\                   /---\        /-\ /--------\
-    |                   |   |        | | |        |
-    |                   |   |        | | |        |
-    \-------------------/   \--------/ \-/        \--- - - -  -  -  -
+      |                   |   |        | | |        |
+      |                   |   |        | | |        |
+      \-------------------/   \--------/ \-/        \-- - -
 </code></pre></div>
 <p><strong>Idle</strong> : En l'absence de signal, la sortie digitale est à <code>1</code> .</p>
-<p><strong>Break</strong> : Pur prévenir l'arrivée du signal, il faut commencer par envoyer un signal à <code>0</code> pendant environ 100 μs.</p>
-<p><strong>MAB</strong> : Le Mark After Break (MAB) est un signal de 12 μs à <code>1</code> qui suit le <strong>break</strong>.</p>
+<p><strong>Break</strong> : POur prévenir l'arrivée du signal, il faut commencer par envoyer un signal à <code>0</code> pendant environ <strong>100 μs</strong>.</p>
+<p><strong>MAB</strong> : Le Mark After Break (MAB) est un signal de <strong>12 μs</strong> à <code>1</code> qui suit le <strong>break</strong>.</p>
 <p><strong>Slots</strong> : Les slots correspondent a un signal de départ (un octet à <code>0</code>), suivi des octets qui correspondent au valeurs de chaque canaux DMX (512 au maximum). </p>
 <p>Exemple d'un slot à une valeur de 152 (<code>0b10011000</code>).</p>
-<p><div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>S 0 1 2 3 4 5 6 7 E E
+<p><div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code> S 0 1 2 3 4 5 6 7 E E
 \ /-\   /---\      /--
 | | |   |   |      |
 | | |   |   |      |
@@ -3978,7 +3978,7 @@
 Chaque octet doit être précédé d'un start à <code>0</code> (S), et de 2 stops à <code>1</code> (E).</p>
 </details>
 <details class="info">
-<summary>Cablage</summary>
+<summary>Câblage</summary>
 <p>Le protocole DMX512 utilise un protocole de type <strong>RS-485</strong> qui permet des communications sur des plus longues distances par le recours à un signal symétrisé (2 pins A + B, plus le GND).</p>
 <p>La puce <strong>MAX485</strong> permet de convertir un signal tx habituel en un signal rs-485.</p>
 <p><img alt="" src="http://hobbycomponents.com/images/forum/RS485_Module_HCMODU0081_Diagram.png" /></p>
@@ -4026,6 +4026,7 @@ Chaque octet doit être précédé d'un start à <code>0</code> (S), et de 2 sto
 <ul>
 <li>Créer simplement un fichier nommé <code>code.py</code> à la racine du système de fichier CIRCUITPY.</li>
 </ul>
+</details>
 <details class="info">
 <summary>Ajout de librairies</summary>
 <ul>
@@ -4044,7 +4045,6 @@ Chaque octet doit être précédé d'un start à <code>0</code> (S), et de 2 sto
 <p>Par exemple, pour installer la librairie <code>adafruit_ble_radio</code> :</p>
 <div class="highlight"><span class="filename">Bash</span><pre><span></span><code>circup<span class="w"> </span>install<span class="w"> </span>adafruit_ble_radio
 </code></pre></div>
-</details>
 </details>
 <h3 id="librairie-dmx_transmitter">Librairie dmx_transmitter<a class="headerlink" href="#librairie-dmx_transmitter" title="Permanent link">⚓︎</a></h3>
 <p>Une librairie, uniquement valable pour le Raspberry Pico est en cours de développement sur <a href="https://github.com/mydana/CircuitPython_DMX_Transmitter">github</a></p>
