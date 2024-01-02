@@ -3422,50 +3422,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#circuitpython" class="md-nav__link">
-    Circuitpython
-  </a>
-  
-    <nav class="md-nav" aria-label="Circuitpython">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#utilisation" class="md-nav__link">
-    Utilisation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ajout-de-librairies" class="md-nav__link">
-    Ajout de librairies
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#communications-dmx" class="md-nav__link">
     Communications DMX
   </a>
   
-    <nav class="md-nav" aria-label="Communications DMX">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programmation-dun-signal-dmx" class="md-nav__link">
+    Programmation d'un signal DMX
+  </a>
+  
+    <nav class="md-nav" aria-label="Programmation d'un signal DMX">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cablage" class="md-nav__link">
-    Cablage
+  <a href="#circuitpython" class="md-nav__link">
+    Circuitpython
   </a>
   
 </li>
@@ -3477,36 +3450,16 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#peripheriques-dentree" class="md-nav__link">
     Périphériques d'entrée
   </a>
   
-    <nav class="md-nav" aria-label="Périphériques d'entrée">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#joystics-analogique-a-2-axes" class="md-nav__link">
-    Joystics analogique à 2 axes
-  </a>
-  
 </li>
         
           <li class="md-nav__item">
-  <a href="#encodeurs-rotatifs" class="md-nav__link">
-    Encodeurs rotatifs
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ecran-ssd1306" class="md-nav__link">
-    Ecran SSD1306
+  <a href="#peripherique-de-sortie" class="md-nav__link">
+    Périphérique de sortie
   </a>
   
 </li>
@@ -4001,16 +3954,71 @@
 <h1 id="controlleurs-dmx">Controlleurs DMX<a class="headerlink" href="#controlleurs-dmx" title="Permanent link">⚓︎</a></h1>
 <p>Le <strong>DMX512</strong> (Digital Multiplexing) est une norme de transmission de données utilisée pour le contrôle de l'éclairage et des effets de scène dans le spectacle.</p>
 <p>Le projet est de fabriquer des contrôleurs DMX pour piloter nos lumières.</p>
-<h2 id="circuitpython">Circuitpython<a class="headerlink" href="#circuitpython" title="Permanent link">⚓︎</a></h2>
+<h2 id="communications-dmx">Communications DMX<a class="headerlink" href="#communications-dmx" title="Permanent link">⚓︎</a></h2>
+<details class="info">
+<summary>Protocole DMX512</summary>
+<p>Le protocole DMX512 est relativement simple à un <strong>baudrate</strong> de 250 kbit/s, soit un bit toute les 4 μs.</p>
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Idle |       Break       |MAB|  Slot 0  |  Slot 1  |
+------\                   /---\        /-\ /--------\
+    |                   |   |        | | |        |
+    |                   |   |        | | |        |
+    \-------------------/   \--------/ \-/        \--- - - -  -  -  -
+</code></pre></div>
+<p><strong>Idle</strong> : En l'absence de signal, la sortie digitale est à <code>1</code> .</p>
+<p><strong>Break</strong> : Pur prévenir l'arrivée du signal, il faut commencer par envoyer un signal à <code>0</code> pendant environ 100 μs.</p>
+<p><strong>MAB</strong> : Le Mark After Break (MAB) est un signal de 12 μs à <code>1</code> qui suit le <strong>break</strong>.</p>
+<p><strong>Slots</strong> : Les slots correspondent a un signal de départ (un octet à <code>0</code>), suivi des octets qui correspondent au valeurs de chaque canaux DMX (512 au maximum). </p>
+<p>Exemple d'un slot à une valeur de 152 (<code>0b10011000</code>).</p>
+<p><div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>S 0 1 2 3 4 5 6 7 E E
+\ /-\   /---\      /--
+| | |   |   |      |
+| | |   |   |      |
+\-/ \---/   \------/
+</code></pre></div>
+Chaque octet doit être précédé d'un start à <code>0</code> (S), et de 2 stops à <code>1</code> (E).</p>
+</details>
+<details class="info">
+<summary>Cablage</summary>
+<p>Le protocole DMX512 utilise un protocole de type <strong>RS-485</strong> qui permet des communications sur des plus longues distances par le recours à un signal symétrisé (2 pins A + B, plus le GND).</p>
+<p>La puce <strong>MAX485</strong> permet de convertir un signal tx habituel en un signal rs-485.</p>
+<p><img alt="" src="http://hobbycomponents.com/images/forum/RS485_Module_HCMODU0081_Diagram.png" /></p>
+<p><strong>Mode Émission</strong></p>
+<ul>
+<li>
+<p>RE &amp; DE -&gt; Gnd</p>
+</li>
+<li>
+<p>RO -&gt; RX</p>
+</li>
+</ul>
+<p><strong>Mode Transmission</strong></p>
+<ul>
+<li>
+<p>RE &amp; DE -&gt; 5V</p>
+</li>
+<li>
+<p>DI -&gt; TX</p>
+</li>
+</ul>
+</details>
+<h2 id="programmation-dun-signal-dmx">Programmation d'un signal DMX<a class="headerlink" href="#programmation-dun-signal-dmx" title="Permanent link">⚓︎</a></h2>
+<h3 id="circuitpython">Circuitpython<a class="headerlink" href="#circuitpython" title="Permanent link">⚓︎</a></h3>
 <p>Circuitpython est un dérivé de micropython, adaptation de python pour les microcontroleurs.</p>
-<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">⚓︎</a></h3>
+<details class="info">
+<summary>Installation</summary>
 <p>L'installation se fait en copiant un fichier UF2 sur le microcontroleur démarrer en mode boot.</p>
 <p>Télécharger l'UF2 :</p>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>- pour le [Raspberry Pico](https://circuitpython.org/board/raspberry_pi_pico/)
-
-- pour le [LOLIN S3](https://circuitpython.org/board/lolin_s3/)
-</code></pre></div>
-<h3 id="utilisation">Utilisation<a class="headerlink" href="#utilisation" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>
+<p>pour le <a href="https://circuitpython.org/board/raspberry_pi_pico/">Raspberry Pico</a></p>
+</li>
+<li>
+<p>pour le <a href="https://circuitpython.org/board/lolin_s3/">LOLIN S3</a></p>
+</li>
+</ul>
+</details>
+<details class="info">
+<summary>Utilisation</summary>
 <div class="admonition note">
 <p class="admonition-title">Remarque</p>
 <p>L'IDE <a href="https://codewith.mu/en/">mu-editor</a> est prévue spécifiquement pour interfacer les boards CIRCUITPY. Une extension Circuitpython est également disponible dans <strong>VScode</strong>.</p>
@@ -4018,7 +4026,8 @@
 <ul>
 <li>Créer simplement un fichier nommé <code>code.py</code> à la racine du système de fichier CIRCUITPY.</li>
 </ul>
-<h3 id="ajout-de-librairies">Ajout de librairies<a class="headerlink" href="#ajout-de-librairies" title="Permanent link">⚓︎</a></h3>
+<details class="info">
+<summary>Ajout de librairies</summary>
 <ul>
 <li>Créer un dossier <code>lib</code> qui contiendra les librairies supplémentaires.</li>
 </ul>
@@ -4035,27 +4044,15 @@
 <p>Par exemple, pour installer la librairie <code>adafruit_ble_radio</code> :</p>
 <div class="highlight"><span class="filename">Bash</span><pre><span></span><code>circup<span class="w"> </span>install<span class="w"> </span>adafruit_ble_radio
 </code></pre></div>
-<h2 id="communications-dmx">Communications DMX<a class="headerlink" href="#communications-dmx" title="Permanent link">⚓︎</a></h2>
-<h3 id="cablage">Cablage<a class="headerlink" href="#cablage" title="Permanent link">⚓︎</a></h3>
-<p>Le protocole DMX512 utilise un protocole de type RS-485 qui permet des communications sur des plus longues distances par le recours à un signal symétrisé (2 pins A + B, plus le GND).</p>
-<p>La puce <strong>MAX485</strong> permet de convertir un signal tx habituel en un signal rs-485</p>
-<p><img alt="" src="http://hobbycomponents.com/images/forum/RS485_Module_HCMODU0081_Diagram.png" /></p>
-<p><strong>Mode Emmission</strong></p>
-<blockquote>
-<p>RE &amp; DE -&gt; Gnd
-RO -&gt; RX</p>
-</blockquote>
-<p><strong>Mode Transmission</strong></p>
-<blockquote>
-<p>RE &amp; DE -&gt; 5V
-DI -&gt; TX</p>
-</blockquote>
+</details>
+</details>
 <h3 id="librairie-dmx_transmitter">Librairie dmx_transmitter<a class="headerlink" href="#librairie-dmx_transmitter" title="Permanent link">⚓︎</a></h3>
 <p>Une librairie, uniquement valable pour le Raspberry Pico est en cours de développement sur <a href="https://github.com/mydana/CircuitPython_DMX_Transmitter">github</a></p>
 <ul>
 <li>Cloner le dépot et copier le dossier <code>dmx_transmitter</code> dans le dossier <code>lib</code></li>
 </ul>
-<h4 id="exemple-dutilisation">Exemple d'utilisation<a class="headerlink" href="#exemple-dutilisation" title="Permanent link">⚓︎</a></h4>
+<div class="admonition python">
+<p class="admonition-title">Exemple d'utilisation</p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="s2">&quot;Exemple de clignottement d&#39;une lampe DMX.&quot;</span>
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">import</span> <span class="nn">board</span>
@@ -4078,31 +4075,36 @@ DI -&gt; TX</p>
     <span class="c1"># Attend 1 seconde</span>
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div>
-<h2 id="peripheriques-dentree">Périphériques d'entrée<a class="headerlink" href="#peripheriques-dentree" title="Permanent link">⚓︎</a></h2>
-<h3 id="joystics-analogique-a-2-axes">Joystics analogique à 2 axes<a class="headerlink" href="#joystics-analogique-a-2-axes" title="Permanent link">⚓︎</a></h3>
+</div>
+<h3 id="peripheriques-dentree">Périphériques d'entrée<a class="headerlink" href="#peripheriques-dentree" title="Permanent link">⚓︎</a></h3>
+<details class="note">
+<summary>Joystics analogique à 2 axes</summary>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">import</span> <span class="nn">analogio</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">analogio</span><span class="o">.</span><span class="n">AnalogIn</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">A0</span><span class="p">)</span>
 <span class="n">ay</span> <span class="o">=</span> <span class="n">analogio</span><span class="o">.</span><span class="n">AnalogIn</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">A1</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">range_map</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">in_min</span><span class="p">,</span> <span class="n">in_max</span><span class="p">,</span> <span class="n">out_min</span><span class="p">,</span> <span class="n">out_max</span><span class="p">):</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">in_min</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">out_max</span> <span class="o">-</span> <span class="n">out_min</span><span class="p">)</span> <span class="o">//</span> <span class="p">(</span><span class="n">in_max</span> <span class="o">-</span> <span class="n">in_min</span><span class="p">)</span> <span class="o">+</span> <span class="n">out_min</span>
+<span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">in_min</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">out_max</span> <span class="o">-</span> <span class="n">out_min</span><span class="p">)</span> <span class="o">//</span> <span class="p">(</span><span class="n">in_max</span> <span class="o">-</span> <span class="n">in_min</span><span class="p">)</span> <span class="o">+</span> <span class="n">out_min</span>
 
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="n">x</span><span class="o">=</span><span class="n">range_map</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4095</span><span class="p">,</span> <span class="o">-</span><span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">)</span>
-    <span class="n">y</span><span class="o">=</span><span class="n">range_map</span><span class="p">(</span><span class="n">ay</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4095</span><span class="p">,</span> <span class="o">-</span><span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">x</span><span class="o">=</span><span class="n">range_map</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4095</span><span class="p">,</span> <span class="o">-</span><span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">)</span>
+<span class="n">y</span><span class="o">=</span><span class="n">range_map</span><span class="p">(</span><span class="n">ay</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4095</span><span class="p">,</span> <span class="o">-</span><span class="mi">127</span><span class="p">,</span> <span class="mi">127</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Remarque</p>
-<p>Il n'y a que 4 Analog In avec le RP2040. Il peut être utile d'utiliser un multiplexeur comme le module hc4067.</p>
 </div>
-<h3 id="encodeurs-rotatifs">Encodeurs rotatifs<a class="headerlink" href="#encodeurs-rotatifs" title="Permanent link">⚓︎</a></h3>
+<p>Il n'y a que 4 Analog In avec le RP2040. Il peut être utile d'utiliser un multiplexeur comme le module hc4067.</p>
+</details>
+<details class="note">
+<summary>Encodeurs rotatifs</summary>
 <p>Contrairement aux potentiomètres et faders, les encodeurs rotatifs permettrons de changer dynamiquement les canaux DMX, en passant d'un preset à l'autre, et sont minis d'une fonction bouton (pour enregistrer la valeur dans le preset ?).</p>
 <p><img alt="" src="https://cdn-learn.adafruit.com/assets/assets/000/044/661/original/rotary_encoder_bb.png?1486239862" /></p>
 <p>Leur utilisation avec circuitpython est détaillée <a href="https://learn.adafruit.com/rotary-encoder/hardware">ici</a></p>
-<h4 id="exemple-dutilisation_1">Exemple d'utilisation<a class="headerlink" href="#exemple-dutilisation_1" title="Permanent link">⚓︎</a></h4>
+<div class="admonition python">
+<p class="admonition-title">Exemple d'utilisation</p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">rotaryio</span> <span class="c1">#pour l&#39;ncodeur rotatif</span>
 <span class="kn">import</span> <span class="nn">digitalio</span> <span class="c1">#pour le bouton</span>
 <span class="kn">import</span> <span class="nn">board</span>
@@ -4127,11 +4129,16 @@ DI -&gt; TX</p>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Appui sur le bouton.&quot;</span><span class="p">)</span>
         <span class="n">button_state</span> <span class="o">=</span> <span class="kc">None</span>
 </code></pre></div>
-<h3 id="ecran-ssd1306">Ecran SSD1306<a class="headerlink" href="#ecran-ssd1306" title="Permanent link">⚓︎</a></h3>
-<h4 id="exemple-dutilisation_2">Exemple d'utilisation<a class="headerlink" href="#exemple-dutilisation_2" title="Permanent link">⚓︎</a></h4>
+</div>
+</details>
+<h3 id="peripherique-de-sortie">Périphérique de sortie<a class="headerlink" href="#peripherique-de-sortie" title="Permanent link">⚓︎</a></h3>
+<p>On peut utiliser un écran pour afficher les valeurs des canaux DMX, et le numéro des présets.</p>
+<details class="note">
+<summary>Ecran SSD1306</summary>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">displayio</span>
 <span class="kn">import</span> <span class="nn">terminalio</span>
 <span class="kn">import</span> <span class="nn">adafruit_displayio_ssd1306</span>
+<span class="kn">from</span> <span class="nn">adafruit_display_text</span> <span class="kn">import</span> <span class="n">label</span>
 
 <span class="c1"># On efface le contenu de l&#39;écran</span>
 <span class="n">displayio</span><span class="o">.</span><span class="n">release_displays</span><span class="p">()</span>
@@ -4155,6 +4162,7 @@ DI -&gt; TX</p>
 <span class="n">text_group</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">text_area</span><span class="p">)</span>
 <span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">text_group</span><span class="p">)</span>
 </code></pre></div>
+</details>
 
 
 
