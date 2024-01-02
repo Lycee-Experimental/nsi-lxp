@@ -1,2 +1,3 @@
-!!! warning "En construction"
-    Cette section de **cours de spécialité Numérique et Sciences de l'Informatique (NSI)** est en construction.
+|Notions|Compétences|Remarques|
+|--|--|--|
+Modalités de l’interaction entre l’homme et la machine <br> Événements | Identifier les différents composants graphiques permettant d’interagir avec une application Web.<br>Identifier les événements que les fonctions associées aux différents composants graphiques sont capables de traiter. | Il s’agit d’examiner le code HTML d’une page comprenant des composants graphiques et de distinguer ce qui relève de la description des composants graphiques en HTML de leur comportement (réaction aux événements) programmé par exemple en JavaScript.

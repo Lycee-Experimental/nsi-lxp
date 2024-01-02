@@ -1,5 +1,6 @@
 nav:
     - 1️⃣ Introduction: index.md
     - 1️⃣ Langages web: langage.md
-    - 1️⃣ Protocole HTTP: http.md
-    - 1️⃣ Requêtes GET et POST et formulaires: requete.md
+    - 1️⃣ Protocoles de communication - http: protocole.md
+    - 1️⃣ Formulaires et requêtes GET et POST: requete.md
+    - 🇹 Chiffrement des communications - https: secu

@@ -8,9 +8,7 @@
     |Notions|Compétences|Remarques|
     |--|--|--|
     |p-uplets.<br>p-uplets nommés | Écrire une fonction renvoyant un p-uplet de valeurs.||
-    Tableau indexé, tableau donné en compréhension. | Lire et modifier les éléments
-    d’un tableau grâce à leurs index.Construire un tableau par compréhension. <br> Utiliser des tableaux de tableaux pour représenter des matrices : notation a [i] [j].<br> Itérer sur les éléments d’un tableau. | Seuls les tableaux dont les éléments sont du même type sont présentés. <br> Aucune connaissance des tranches (slices) n’est exigible. <br> L’aspect dynamique des tableaux de Python n’est pas évoqué.<br>
-    Python identifie listes et tableaux.<br> Il n’est pas fait référence aux tableaux de la bibliothèque NumPy.
+    Tableau indexé, tableau donné en compréhension. | Lire et modifier les éléments d’un tableau grâce à leurs index.Construire un tableau par compréhension. <br> Utiliser des tableaux de tableaux pour représenter des matrices : notation a [i] [j].<br> Itérer sur les éléments d’un tableau. | Seuls les tableaux dont les éléments sont du même type sont présentés. <br> Aucune connaissance des tranches (slices) n’est exigible. <br> L’aspect dynamique des tableaux de Python n’est pas évoqué.<br> Python identifie listes et tableaux.<br> Il n’est pas fait référence aux tableaux de la bibliothèque NumPy.
     Dictionnaires par clés et valeurs | Construire une entrée de dictionnaire. <br> Itérer sur les éléments d’un dictionnaire. | Il est possible de présenter les données EXIF d’une image sous la forme d’un enregistrement.<br> En Python, les p-uplets nommés sont implémentés par des dictionnaires.<br>Utiliser les méthodes keys(), values () et items ().
 
 
