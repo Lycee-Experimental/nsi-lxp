@@ -83,7 +83,7 @@ $("[id^=editor_]").each(function () {
       var exerciseCode =
         `Missing ${tagHdr} tag. Please check !\n\n` + exerciseFileContent;
     } else {
-      let _ = matchResults[1];
+      let headerCode = matchResults[1];
       var exerciseCode = matchResults[2];
       let newline = "bksl-nl";
       while (exerciseCode.startsWith(newline)) {
@@ -94,10 +94,10 @@ $("[id^=editor_]").each(function () {
     var exerciseCode = exerciseFileContent;
   }
 
-  exerciseCode = restoreEscapedCharacters(exerciseCode);
-  let ideMaximumSize = document.getElementById(this.id).parentElement
-    .parentElement.dataset.max_size;
-  console.log(this.id, ideMaximumSize);
+  exerciseCode = exerciseCode
+    .replace(/bksl-nl/g, "\n")
+    .replace(/py-und/g, "_")
+    .replace(/py-str/g, "*");
 
   let idEditor = "editor_" + number;
   function createACE(idEditor) {
@@ -106,7 +106,7 @@ $("[id^=editor_]").each(function () {
       theme: createTheme(),
       mode: "ace/mode/python",
       autoScrollEditorIntoView: true,
-      maxLines: ideMaximumSize,
+      maxLines: 30,
       minLines: 6,
       tabSize: 4,
       printMargin: false, // hide ugly margins...
@@ -117,12 +117,12 @@ $("[id^=editor_]").each(function () {
       enableSnippets: true,
       enableLiveAutocompletion: false,
     });
+    // editor.commands.bindKey({win: 'Tab', mac: 'Tab'}, 'startAutocomplete')
     editor.commands.bindKey(
       { win: "Alt-Tab", mac: "Alt-Tab" },
       "startAutocomplete"
     );
     editor.getSession().setValue(exerciseCode);
-    editor.resize();
     editor.commands.addCommand({
       name: "commentTests",
       bindKey: { win: "Ctrl-I", mac: "Cmd-I" },
@@ -171,14 +171,14 @@ $("[id^=editor_]").each(function () {
   // console.log('la4', prevNode.innerHTML)
   if (prevNode.innerHTML !== "" || key !== "") {
     // soit y a pas de correction, soit la clé SHA256 n'est pas vide
-      //console.log('la4', prevNode.parentNode.tagName)
-
     if (prevNode.parentNode.tagName === "P") {
-//      if (prevNode.parentNode.tagName === "DETAILS") {
-
       // REM file on top level
-      workingNode = prevNode.parentNode.nextElementSibling; 
-      console.log('la4', workingNode)
+      workingNode = prevNode.parentNode.nextElementSibling; //'<strong>A</strong>'
+      // console.log('bef', idEditor)
+      // console.log(workingNode.innerHTML)
+      // console.log(workingNode.nextElementSibling.innerHTML)
+      // console.log(prevNode.parentNode.nextElementSibling, workingNode.innerHTML)
+      // if (workingNode.nex)
 
       if (
         workingNode.innerHTML.includes("<strong>A</strong>") &&
@@ -190,6 +190,7 @@ $("[id^=editor_]").each(function () {
       } else {
         workingNode.remove();
         workingNode = prevNode.parentNode.nextElementSibling;
+        // console.log(prevNode.parentNode)
 
         var tableElements = [];
         while (!workingNode.innerHTML.includes("<strong>Z</strong>")) {
@@ -204,11 +205,11 @@ $("[id^=editor_]").each(function () {
     } else {
       // Search for the rem DIV.
       workingNode = workingNode.nextElementSibling;
-      console.log(workingNode)
+      console.log("BLABLA", workingNode.innerHTML, prevNode.innerHTML);
+      // console.log(prevNode, workingNode)
       // If workingNode is a <p> (admonition), we continue
       // else, we are outside an admonition
       if (workingNode !== null) workingNode = workingNode.nextElementSibling;
-      console.log(workingNode)
 
       // No remark file. Creates standard sentence.
       if (workingNode === null)
@@ -246,25 +247,14 @@ $("[id^=editor_]").each(function () {
     remNode.setAttribute("id", "rem_content_" + idEditor);
     document.getElementById("rem_content_" + idEditor).style.display = "none";
   } else {
-    console.log(prevNode.parentNode);
+    console.log("on est là ICIIII!");
     workingNode = prevNode.parentNode.nextElementSibling;
     if (
-      workingNode &&
       workingNode.innerHTML.includes("<strong>A</strong>") &&
       workingNode.nextElementSibling.innerHTML.includes("<strong>Z</strong>")
     ) {
       workingNode.nextElementSibling.remove();
       workingNode.remove();
-    }
-    /* Cas où on est dans un admonition  */
-    workingNode2 = prevNode.parentNode.lastElementChild;
-    if (
-      workingNode2 &&
-      workingNode2.innerHTML.includes("<strong>Z</strong>") &&
-      workingNode2.previousElementSibling.innerHTML.includes("<strong>A</strong>")
-    ) {
-      workingNode2.previousElementSibling.remove();
-      workingNode2.remove();
     }
   }
 });

@@ -1,3 +1,4 @@
+# Debut copie
 import os
 import hashlib
 from math import log10
@@ -1106,12 +1107,11 @@ $(document).ready(launchDebian());
         @details : The content of the file is hidden in the webpage. Replacing \n, _ and * by a string enables
         the integration in mkdocs admonitions.
         """
-        docs_path = f"""docs"""
+        docs_path = f"""docs/"""
+
         try:
             relative_path = "scripts" if path == "" else path
-            with open(
-                f"""{docs_path}/{relative_path}/{script_name}.{extension}"""
-            ) as filename:
+            with open(f"""{docs_path}/{relative_path}/{script_name}.{extension}""") as filename:
                 content = "".join(filename.readlines())
                 content = content + "\n"
 
@@ -1119,39 +1119,44 @@ $(document).ready(launchDebian());
         except FileNotFoundError:
             return ""
 
-
     def escape_problematic_characters(script: str) -> str:
-        return (
-            script.replace("\n", "bksl-nl")
-            .replace("_", "py-und")
-            .replace("*", "py-str")
-        )
+        return script.replace("\n", "bksl-nl").replace("_", "py-und").replace("*", "py-str")
 
     def get_image_path() -> str:
-        split_page_url = os.path.dirname(
-            convert_url_to_utf8(env.variables.page.url)
-        ).split("/")
+        split_page_url = os.path.dirname(convert_url_to_utf8(env.variables.page.url)).split("/")
         prefix = "".join(["../" for folder in split_page_url if folder != ""])
         return f"""{prefix}pyodide-mkdocs"""
 
     # TODO : this issue concerning the urls must be closed ASAP
     def get_filepath() -> str:
-        if env.variables.page.is_index:
-            path = "/".join(
+        print("docs_dirs", env.conf["docs_dir"])
+        print(
+            "P1",
+            env.variables.page.abs_url,
+            "/".join(
                 filter(
                     lambda folder: folder != "",
-                    convert_url_to_utf8(env.variables.page.abs_url).split("/")[1:-1],
+                    convert_url_to_utf8(env.variables.page.url).split("/")[:-2],
                 )
-            )
-        else:
-            path = "/".join(
+            ),
+        )
+        print(
+            "P2",
+            env.variables.page.abs_url,
+            "/".join(
                 filter(
                     lambda folder: folder != "",
-                    convert_url_to_utf8(env.variables.page.abs_url).split("/")[1:-2],
+                    convert_url_to_utf8(env.variables.page.abs_url).split("/")[2:-2],
                 )
+            ),
+        )
+        return "/".join(
+            filter(
+                lambda folder: folder != "",
+                convert_url_to_utf8(env.variables.page.abs_url).split("/")[:-2],
             )
-        #print(path)
-        return path
+        )
+
     # TODO : handle the case where the same files are loaded on the same page.
     def generate_id_ide(content: str) -> str:
         """
@@ -1170,9 +1175,7 @@ $(document).ready(launchDebian());
         """
         return f"""<span style="display: inline-block; width:{s}em"></span>"""
 
-    def format_unlimited_attempts(
-        max: Union[int, Literal["+"]]
-    ) -> Union[int, Literal["∞"]]:
+    def format_unlimited_attempts(max: Union[int, Literal["+"]]) -> Union[int, Literal["∞"]]:
         return int(max) if max not in ["+", 1000] else INFINITY_SYMBOL
 
     def get_max_from_file(content: str) -> str:
@@ -1200,29 +1203,21 @@ $(document).ready(launchDebian());
     ) -> Union[int, Literal["∞"]]:
 
         if max_from_file != "":
-            return format_unlimited_attempts(
-                int(max_from_file) if max_from_file != "+" else "+"
-            )
+            return format_unlimited_attempts(int(max_from_file) if max_from_file != "+" else "+")
 
         return format_unlimited_attempts(max_IDE)
 
     def test_style(script_name: str, element: str) -> bool:
         quotes = ["'", '"']
         ide_style = ["", "v"]
-        styles = [
-            f"""IDE{style}({quote}{script_name}{quote}"""
-            for quote in quotes
-            for style in ide_style
-        ]
+        styles = [f"""IDE{style}({quote}{script_name}{quote}""" for quote in quotes for style in ide_style]
         return any([style for style in styles if style in element])
 
     def convert_url_to_utf8(nom: str) -> str:
         return unquote(nom, encoding="utf-8")
 
     @env.macro
-    def IDEv(
-        script_name: str = "", MAX: Union[int, Literal["+"]] = 5, SANS: str = ""
-    ) -> str:
+    def IDEv(script_name: str = "", MAX: Union[int, Literal["+"]] = 5, SANS: str = "") -> str:
         """
         @brief : Helper macro to generate vertical IDE in Markdown mkdocs.
         @details : Starts the IDE function with 'v' mode.
@@ -1238,9 +1233,7 @@ $(document).ready(launchDebian());
         return key_ide
 
     @env.macro
-    def create_button(
-        button_name: str, onclick_action: str, isTranslated: bool = True
-    ) -> str:
+    def create_button(button_name: str, onclick_action: str, isTranslated: bool = True) -> str:
         AVAILABLE_BUTTONS = {
             "Play": "Lancer",
             "Download": "Télécharger",
@@ -1267,9 +1260,7 @@ $(document).ready(launchDebian());
         @details : Use an HTML input to upload a file from user. The user clicks on the button to fire a JS event
         that triggers the hidden input.
         """
-        onclick_action = (
-            f""""document.getElementById('input_{editor_name}').click()" """
-        )
+        onclick_action = f""""document.getElementById('input_{editor_name}').click()" """
         return f"""{create_button("Upload", onclick_action)}\
                 <input type="file" id="input_{editor_name}" name="file" enctype="multipart/form-data" class="py_mk_hide"/>"""
 
@@ -1299,10 +1290,7 @@ $(document).ready(launchDebian());
 
     def div(content: str, div_options: dict[str, str]) -> str:
         formatted_div_options = " ".join(
-            [
-                f"""{div_attribute}="{attribute_value}" """
-                for div_attribute, attribute_value in div_options.items()
-            ]
+            [f"""{div_attribute}="{attribute_value}" """ for div_attribute, attribute_value in div_options.items()]
         )
         return f"""<div {formatted_div_options}>{content}</div>"""
 
@@ -1310,13 +1298,9 @@ $(document).ready(launchDebian());
         return buttons + blank_space(1)
 
     def generate_empty_ide(editor_name: str, mode: str) -> str:
-        shortcut_comment_asserts = (
-            f'<span id="comment_{editor_name}" class="comment">###</span>'
-        )
+        shortcut_comment_asserts = f'<span id="comment_{editor_name}" class="comment">###</span>'
 
-        div_editor_terminal = div(
-            "", {"id": f"term_{editor_name}", "class": f"term_editor{mode}"}
-        )
+        div_editor_terminal = div("", {"id": f"term_{editor_name}", "class": f"term_editor{mode}"})
 
         div_decorations = (
             f'<div class="line_v"><div id="{editor_name}"></div></div>'
@@ -1338,15 +1322,11 @@ $(document).ready(launchDebian());
     ) -> str:
         play_buttons_group = grouped_buttons(
             create_button("Play", f"""'play("{editor_name}","{mode}")'""")
-            + create_unittest_button(
-                editor_name, script_name, filepath, mode, number_max_attempts
-            )
+            + create_unittest_button(editor_name, script_name, filepath, mode, number_max_attempts)
         )
 
         transfer_buttons_group = grouped_buttons(
-            create_button(
-                "Download", f"""\'download("{editor_name}","{script_name}")\'"""
-            )
+            create_button("Download", f"""\'download("{editor_name}","{script_name}")\'""")
             + blank_space()
             + create_upload_button(editor_name)
         )
@@ -1370,12 +1350,8 @@ $(document).ready(launchDebian());
 
     @env.macro
     def insert_remark_file(script_name: str, key_ide: str) -> str:
-        IDE_calls_from_md_file = [
-            elt for elt in env.page.markdown.split("\n") if test_style(script_name, elt)
-        ]
-        first_IDE_call = (
-            IDE_calls_from_md_file[0] if len(IDE_calls_from_md_file) >= 1 else ""
-        )
+        IDE_calls_from_md_file = [elt for elt in env.page.markdown.split("\n") if test_style(script_name, elt)]
+        first_IDE_call = IDE_calls_from_md_file[0] if len(IDE_calls_from_md_file) >= 1 else ""
 
         leading_spaces = " " * (len(first_IDE_call) - len(first_IDE_call.lstrip()))
 
@@ -1397,13 +1373,10 @@ $(document).ready(launchDebian());
 """
         return block_remark
 
-
     def insert_content(editor_name: str, ide_content: str) -> str:
         return f"""<span id="content_{editor_name}" class="py_mk_hide">{ide_content}</span>"""
 
-    def insert_corr_content(
-        editor_name: str, ide_corr_content: str, key_ide: str
-    ) -> str:
+    def insert_corr_content(editor_name: str, ide_corr_content: str, key_ide: str) -> str:
         return f"""<span id="corr_content_{editor_name}" class="py_mk_hide" data-strudel="{str(key_ide)}">{ide_corr_content}</span>"""
 
     @env.macro
@@ -1412,7 +1385,6 @@ $(document).ready(launchDebian());
         mode: str = "",
         MAX: Union[int, Literal["+"]] = 5,
         SANS: str = "",
-        SIZE: int = 30,
     ) -> str:
         """
         @brief : Create an IDE (Editor+Terminal) within an Mkdocs document. {script_name}.py is loaded on the editor if present.
@@ -1420,6 +1392,7 @@ $(document).ready(launchDebian());
         Last span hides the code content of the IDE when loaded.
         """
         filepath = get_filepath()
+
         ide_content = read_external_file(script_name, filepath)
         id_ide = generate_id_ide(ide_content)
 
@@ -1428,21 +1401,16 @@ $(document).ready(launchDebian());
         allowed_number_of_attempts = get_allowed_number_of_attempts(max_from_file, MAX)
 
         format_excluded_instructions = (
-            lambda instructions: "," + "".join(instructions.split(" "))
-            if len(instructions) > 0
-            else ""
+            lambda instructions: "," + "".join(instructions.split(" ")) if len(instructions) > 0 else ""
         )
         editor_name = f"editor_{id_ide}"
 
         div_exercise = div(
             generate_empty_ide(editor_name, mode)
-            + generate_row_of_buttons(
-                editor_name, script_name, mode, filepath, allowed_number_of_attempts
-            ),
+            + generate_row_of_buttons(editor_name, script_name, mode, filepath, allowed_number_of_attempts),
             {
                 "class": "py_mk_ide",
                 "data-max": f"{allowed_number_of_attempts}",
-                "data-max_size": f"{SIZE}",
                 "data-exclude": f'{"eval,exec" + format_excluded_instructions(SANS)}',
             },
         )
@@ -1456,6 +1424,7 @@ $(document).ready(launchDebian());
         )
         div_exercise += insert_corr_content(editor_name, ide_corr_content, key_ide)
         div_exercise += insert_remark_file(script_name, key_ide)
+
         return div_exercise
 
     @env.macro
@@ -1475,17 +1444,13 @@ $(document).ready(launchDebian());
         blabla $1+1$
         """
         answer = str(answer)
-        if (
-            answer.count("$") - answer.count("\$") >= 2
-        ):  # regex begin ___$ and end $____ and $ not preceded by \
+        if answer.count("$") - answer.count("\$") >= 2:  # regex begin ___$ and end $____ and $ not preceded by \
             string = ""
             start_dollar = True
             for i in range(len(answer)):
                 lettre = answer[i]
                 if lettre == "$":
-                    if i == 0 or (
-                        i >= 1 and answer[i - 1] != "\\"
-                    ):  # case escaping dollar \$
+                    if i == 0 or (i >= 1 and answer[i - 1] != "\\"):  # case escaping dollar \$
                         string += "\(" if start_dollar else "\)"
                         start_dollar = not start_dollar
                     else:
@@ -1498,13 +1463,11 @@ $(document).ready(launchDebian());
     @env.macro
     def qcm(list_answers, list_correct, opts=None, shuffle=True, single=True):
         # single -> une seule question de QCM
-        #print("opts", opts)
+        print("opts", opts)
         if type(list_correct) == int:
             list_correct = [list_correct]
-        #print("liste", list_correct, type(list_correct))
-        list_correct = list(
-            map(lambda x: x - 1, list_correct)
-        )  # back to 0 to n-1 indexing
+        print("liste", list_correct, type(list_correct))
+        list_correct = list(map(lambda x: x - 1, list_correct))  # back to 0 to n-1 indexing
 
         def spanify(html_tag):
             return f"""<span>{html_tag}</span>"""
@@ -1531,7 +1494,7 @@ $(document).ready(launchDebian());
         prefix = "data-var-"
         variable_part = ""
         if opts != None:
-            #print("opts", opts, type(opts))
+            print("opts", opts, type(opts))
             for clé in opts:
                 variable_part += f"""{prefix}{clé} = "{opts[clé]}" """
         html_element = f"""<div class="wrapper_qcm" id = "qcm_{id}" data-n-correct = {len(list_correct)} data-shuffle = {1 if shuffle else 0} {variable_part}>"""
@@ -1545,12 +1508,8 @@ $(document).ready(launchDebian());
                     answer = "Erreur de format"
             answer = codeblockify(latexify(answer))
             id_answer = f"""{id}-{i}"""
-            correct_answer = (
-                "correct" if inv_dict_correspondance[i] in list_correct else "incorrect"
-            )
-            html_element += (
-                f"""{spanify(buttonify(answer, id_answer, correct_answer))}"""
-            )
+            correct_answer = "correct" if inv_dict_correspondance[i] in list_correct else "incorrect"
+            html_element += f"""{spanify(buttonify(answer, id_answer, correct_answer))}"""
         html_element += "</div>"
 
         return html_element
@@ -1574,13 +1533,11 @@ $(document).ready(launchDebian());
             content = list(map(lambda x: x[:-1], f.readlines()))
             header = content.pop(0).split(sep)
             csv_file = []
-            #print(header)
+            print(header)
             for ligne in content:
                 split_ligne = ligne.split(sep)
                 dico = {
-                    header[i]: split_ligne[i].replace("\\\\", "\\")
-                    if split_ligne[i] != ""
-                    else None
+                    header[i]: split_ligne[i].replace("\\\\", "\\") if split_ligne[i] != "" else None
                     for i in range(len(header))
                 }
                 csv_file.append(dico)
@@ -1603,17 +1560,13 @@ $(document).ready(launchDebian());
     @env.macro
     def multi_qcm(*input, shuffle=True):
         def latexify(answer):
-            if (
-                answer.count("$") - answer.count("\$") >= 2
-            ):  # regex begin ___$ and end $____ and $ not preceded by \
+            if answer.count("$") - answer.count("\$") >= 2:  # regex begin ___$ and end $____ and $ not preceded by \
                 string = ""
                 start_dollar = True
                 for i in range(len(answer)):
                     lettre = answer[i]
                     if lettre == "$":
-                        if i == 0 or (
-                            i >= 1 and answer[i - 1] != "\\"
-                        ):  # case escaping dollar \$
+                        if i == 0 or (i >= 1 and answer[i - 1] != "\\"):  # case escaping dollar \$
                             string += "\(" if start_dollar else "\)"
                             start_dollar = not start_dollar
                         else:
@@ -1638,9 +1591,7 @@ $(document).ready(launchDebian());
             regex = r"\s*(\w*)\s*:\s*(\[[\s\w,\.'\"‘“’”]*\]|\w*)\s*,"
             words = re.findall(regex, string)
             for var in words:
-                dico[var[0]] = list(
-                    map(convert_type, var[1].strip("[").strip("]").split(","))
-                )
+                dico[var[0]] = list(map(convert_type, var[1].strip("[").strip("]").split(",")))
             return dico
 
         liste_QCM = []
@@ -1648,29 +1599,17 @@ $(document).ready(launchDebian());
             csv_file = extract_csv_file(input[0])
             for entry in csv_file:
                 question = entry["Question"]
-                list_answers = [
-                    entry[clé]
-                    for clé in entry
-                    if "Answer" in clé and entry[clé] != None
-                ]
+                list_answers = [entry[clé] for clé in entry if "Answer" in clé and entry[clé] != None]
                 list_correct = list(map(int, entry["Valid"].split(",")))
-                dictionnaire_var = (
-                    dictionnarify(entry["Variable"])
-                    if entry["Variable"] != None
-                    else None
-                )
-                liste_QCM.append(
-                    [question, list_answers, list_correct, dictionnaire_var]
-                )
+                dictionnaire_var = dictionnarify(entry["Variable"]) if entry["Variable"] != None else None
+                liste_QCM.append([question, list_answers, list_correct, dictionnaire_var])
         else:
             for i in range(len(input)):
                 question = input[i][0]
                 list_answers = input[i][1]
                 list_correct = input[i][2]
                 dictionnaire_var = input[i][3] if len(input[i]) == 4 else None
-                liste_QCM.append(
-                    [question, list_answers, list_correct, dictionnaire_var]
-                )
+                liste_QCM.append([question, list_answers, list_correct, dictionnaire_var])
 
         id_qcm = generate_id()
         html_element = "<div>"
@@ -1680,7 +1619,7 @@ $(document).ready(launchDebian());
             list_correct = entry[2]
             dictionnaire_var = entry[3]
 
-            #print(entry, dictionnaire_var)
+            print(entry, dictionnaire_var)
 
             html_element += f"<div class = 'setQCM'>"
             html_element += f"<span class = 'questionQCM arithmatex' data-nq = {i+1}>{latexify(question)}</span>"
