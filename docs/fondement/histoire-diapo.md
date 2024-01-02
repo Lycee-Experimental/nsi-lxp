@@ -14,7 +14,8 @@ On peut donc voir un abaque comme une forme très rudimentaire d'ordinateur méc
 ---
 ## Abaque Romain
 Entre V et II siècles av. JC
-<p class="stretch"><img src="/assets/images/abaqueRomain.png"></p>
+ 
+<p class="stretch"><img src="/assets/images/abaqueRomain.png"></p> 
 ---
 ## Abaque chinois
 XIe siècle
