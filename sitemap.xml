@@ -1276,42 +1276,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nsi.lycee-experimental.org/internet/protocole/</loc>
-         <lastmod>2024-01-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://nsi.lycee-experimental.org/internet/routage/</loc>
-         <lastmod>2024-01-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/internet/secu/</loc>
-         <lastmod>2024-01-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/internet/secu/Corrections/Exercice1_correction/</loc>
-         <lastmod>2024-01-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/internet/secu/Corrections/Exercice2_correction/</loc>
-         <lastmod>2024-01-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/internet/secu/Corrections/Exercice3_correction/</loc>
-         <lastmod>2024-01-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/internet/secu/Corrections/Exercice4_correction/</loc>
-         <lastmod>2024-01-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/internet/secu/Corrections/Exercice5_correction/</loc>
          <lastmod>2024-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1811,7 +1776,42 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://nsi.lycee-experimental.org/web/protocole/</loc>
+         <lastmod>2024-01-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://nsi.lycee-experimental.org/web/requete/</loc>
+         <lastmod>2024-01-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/web/secu/</loc>
+         <lastmod>2024-01-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/web/secu/Corrections/Exercice1_correction/</loc>
+         <lastmod>2024-01-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/web/secu/Corrections/Exercice2_correction/</loc>
+         <lastmod>2024-01-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/web/secu/Corrections/Exercice3_correction/</loc>
+         <lastmod>2024-01-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/web/secu/Corrections/Exercice4_correction/</loc>
+         <lastmod>2024-01-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/web/secu/Corrections/Exercice5_correction/</loc>
          <lastmod>2024-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
