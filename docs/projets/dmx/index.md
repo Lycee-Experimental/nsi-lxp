@@ -9,30 +9,30 @@ Le projet est de fabriquer des contrôleurs DMX pour piloter nos lumières.
 
 ??? info "Protocole DMX512"
 
-    Le protocole DMX512 est relativement simple à un **baudrate** de 250 kbit/s, soit un bit toute les 4 μs.
+    Le protocole DMX512 est relativement simple. Il s'effectue à un **baudrate** de 250 kbit/s, soit un bit toute les 4 μs.
 
 
     ```
-    Idle |       Break       |MAB|  Slot 0  |  Slot 1  |
+    Idle  |       Break       |MAB|  Slot 0  |  Slot 1  |
     ------\                   /---\        /-\ /--------\
-        |                   |   |        | | |        |
-        |                   |   |        | | |        |
-        \-------------------/   \--------/ \-/        \--- - - -  -  -  -
+          |                   |   |        | | |        |
+          |                   |   |        | | |        |
+          \-------------------/   \--------/ \-/        \-- - -
     ```
 
 
     **Idle** : En l'absence de signal, la sortie digitale est à `1` .
 
-    **Break** : Pur prévenir l'arrivée du signal, il faut commencer par envoyer un signal à ``0`` pendant environ 100 μs.
+    **Break** : POur prévenir l'arrivée du signal, il faut commencer par envoyer un signal à ``0`` pendant environ **100 μs**.
 
-    **MAB** : Le Mark After Break (MAB) est un signal de 12 μs à `1` qui suit le **break**.
+    **MAB** : Le Mark After Break (MAB) est un signal de **12 μs** à `1` qui suit le **break**.
 
     **Slots** : Les slots correspondent a un signal de départ (un octet à `0`), suivi des octets qui correspondent au valeurs de chaque canaux DMX (512 au maximum). 
 
     Exemple d'un slot à une valeur de 152 (`0b10011000`).
 
     ```
-    S 0 1 2 3 4 5 6 7 E E
+     S 0 1 2 3 4 5 6 7 E E
     \ /-\   /---\      /--
     | | |   |   |      |
     | | |   |   |      |
@@ -40,7 +40,7 @@ Le projet est de fabriquer des contrôleurs DMX pour piloter nos lumières.
     ```
     Chaque octet doit être précédé d'un start à `0` (S), et de 2 stops à `1` (E).
 
-??? info "Cablage"
+??? info "Câblage"
 
     Le protocole DMX512 utilise un protocole de type **RS-485** qui permet des communications sur des plus longues distances par le recours à un signal symétrisé (2 pins A + B, plus le GND).
 
@@ -87,25 +87,25 @@ Circuitpython est un dérivé de micropython, adaptation de python pour les micr
 
     - Créer simplement un fichier nommé `code.py` à la racine du système de fichier CIRCUITPY.
 
-    ??? info "Ajout de librairies"
+??? info "Ajout de librairies"
 
-        - Créer un dossier `lib` qui contiendra les librairies supplémentaires.
+    - Créer un dossier `lib` qui contiendra les librairies supplémentaires.
 
-        !!! note "Remarque"
-            De nombreuses librairies sont diffusées dans les [bundle](https://circuitpython.org/libraries) officiels et communautaires. D'autres se trouvent sur github. Pour un gain de place et de ressources du microcontrolleur, elles sont précompilées dans un format `mpy`.
+    !!! note "Remarque"
+        De nombreuses librairies sont diffusées dans les [bundle](https://circuitpython.org/libraries) officiels et communautaires. D'autres se trouvent sur github. Pour un gain de place et de ressources du microcontrolleur, elles sont précompilées dans un format `mpy`.
 
-        - Pour les installer facilement, installer l'outil `circup`
-        ```bash
-        pip install circup
-        ```
+    - Pour les installer facilement, installer l'outil `circup`
+    ```bash
+    pip install circup
+    ```
 
-        Une fois votre board CIRCUITPY connectée, l'installation d'une librairie se fait en une commande.
+    Une fois votre board CIRCUITPY connectée, l'installation d'une librairie se fait en une commande.
 
-        Par exemple, pour installer la librairie `adafruit_ble_radio` :
+    Par exemple, pour installer la librairie `adafruit_ble_radio` :
 
-        ```bash
-        circup install adafruit_ble_radio
-        ```
+    ```bash
+    circup install adafruit_ble_radio
+    ```
 
 ### Librairie dmx_transmitter
 
