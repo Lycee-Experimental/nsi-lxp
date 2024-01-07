@@ -4,13 +4,6 @@ Ce chapitre est une introduction au traitement et à à l'analyse des données, 
 
 Les données sont d'une importance fondamentale en informatique et plus largement en sciences. De nos données personnelles qu'il faut savoir protéger face des entreprises peu scrupuleuses qui en font le commerce, à des mesures physico-chimiques qu'il faut traiter en masse pour modéliser l'évolution du climat... des **datacenters** fonctionnent aux 4 coins du mondes pour stocker et traiter des milliards d'informations.
 
-
-!!! info "Définition d'un type construit de donnée ou structures de données"
-    Une **donnée** représente une information ou une valeur qui est utilisée, stockée ou traitée par un programme informatique.  
-    On a vu que les données peuvent être de différents **types de base** : tels que des booléens (`#!py bool`), des nombres entiers (`#!py int`) ou naturels (`#!py float`), des caractères (`#!py char`), du texte (`#!py string`). Elles peuvent être entrées par l'utilisateur, générées par le programme lui-même ou provenir de sources externes.  
-    Les **données construites**, également appelées **structures de données**, sont des regroupements de plusieurs données simples ou de base, combinées pour former une entité plus complexe. Elles permettent de représenter des informations plus riches et structurées dans un programme informatique.
-
-
 ??? python "Prérequis Python" 
 
     * Les variables : types élémentaires (`#!py int`, `#!py str`, `#!py float`), affectations, calculs ;
