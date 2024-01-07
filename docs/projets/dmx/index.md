@@ -152,17 +152,17 @@ Une librairie, uniquement valable pour le Raspberry Pico est en cours de dévelo
     ay = analogio.AnalogIn(board.A1)
 
     def range_map(x, in_min, in_max, out_min, out_max):
-    return (x - in_min) * (out_max - out_min) // (in_max - in_min) + out_min
+        return (x - in_min) * (out_max - out_min) // (in_max - in_min) + out_min
 
     while True:
-    x=range_map(ax.value, 0, 4095, -127, 127)
-    y=range_map(ay.value, 0, 4095, -127, 127)
-    print("x", x, "y", y)
-    time.sleep(0.1)
+        x=range_map(ax.value, 0, 4095, -127, 127)
+        y=range_map(ay.value, 0, 4095, -127, 127)
+        print("x", x, "y", y)
+        time.sleep(0.1)
     ```
 
     !!! note "Remarque"
-    Il n'y a que 4 Analog In avec le RP2040. Il peut être utile d'utiliser un multiplexeur comme le module hc4067.
+        Il n'y a que 4 Analog In avec le RP2040. Il peut être utile d'utiliser un multiplexeur comme le module hc4067.
 
 
 ??? note "Encodeurs rotatifs"
