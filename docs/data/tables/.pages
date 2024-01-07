@@ -1,6 +1,5 @@
 nav:
     - index.md
-    - Prendre un bon départ: depart
     - Les fichiers: csv        
     - Requêtes simples: requetes_simples
     - Requêtes élaborées: requetes_elaborees

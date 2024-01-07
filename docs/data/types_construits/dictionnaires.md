@@ -1,10 +1,6 @@
----
-author: Nicolas Revéret
-title: Dictionnaires
----
-# 🏁 Les dictionnaires Python
+# Les dictionnaires Python
 
-!!! note "Remarque"
+!!! warning "Remarque"
 
     Cette page rappelle rapidement les outils fondamentaux sur les dictionnaires Python.
 
@@ -79,7 +75,7 @@ On rappelle les opérations suivantes sur les dictionnaires :
 
 ## Exercices
 
-??? question "QCM"
+{{exercice(1,titre="QCM")}}
 
     On considère le dictionnaire ci-dessous décrivant une liste de courses :
 
@@ -109,7 +105,7 @@ On rappelle les opérations suivantes sur les dictionnaires :
         - :x: `#!py courses[1.5]` lève une erreur car `#!py 1.5` n'est pas une clé
         - :x: On accède à la quantité de poireaux en faisant `#!py courses["légumes"]["poireaux"][0]`
 
-??? question "Départements"
+{{exercice(titre="Départements")}}
 
     On fournit ci-dessous le dictionnaire dont les clés sont les noms des départements français et les valeurs, la superficie en km² de chacun d'eux.
 

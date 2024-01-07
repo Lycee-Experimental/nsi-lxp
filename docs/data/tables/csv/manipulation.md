@@ -118,7 +118,7 @@ La seconde permet toutefois de traiter précisément chaque ligne lue. On l'util
 
 Nous sommes donc équipés pour ouvrir et lire nos fichiers. 
 
-???+ question "Lire les fables de la Fontaine"
+{{exercice(1,titre="Lire les fables de la Fontaine")}}
 
     Le fichier contenant les fables de la Fontaine est nommé `#!py fables.txt`, il est situé dans le même dossier que le fichier Python manipulé par l'éditeur. Il est encodé en `#!py utf-8`.
 
@@ -126,52 +126,55 @@ Nous sommes donc équipés pour ouvrir et lire nos fichiers.
 
     {{ IDE('pythons/ouverture/exo', MAX=5) }}
 
-On obtient la liste suivante :
+    ??? tip "Et ensuite ?"
 
-```python
-fables = [
-    'FABLES DE LA FONTAINE\n',
-    '\n',
-    'I\n',
-    '\n',
-    'LA CIGALE ET LA FOURMI.\n',
-    '\n',
-    '\n',
-    'La cigale, ayant chanté\n',
-    "Tout l'été,\n",
-    ...
-]
-```
+        On obtient la liste suivante :
 
-Le `#!py '\n'` que l'on observe à plusieurs reprises est le caractère de retour à la ligne. On peut le supprimer en faisant `#!py ligne.strip()`. En effet, la méthode `#!py strip` supprime les caractères « blancs » au début ou à la fin d'une chaîne de caractères.
+        ```python
+        fables = [
+            'FABLES DE LA FONTAINE\n',
+            '\n',
+            'I\n',
+            '\n',
+            'LA CIGALE ET LA FOURMI.\n',
+            '\n',
+            '\n',
+            'La cigale, ayant chanté\n',
+            "Tout l'été,\n",
+            ...
+        ]
+        ```
 
-La lecture du fichier devient alors :
+        Le `#!py '\n'` que l'on observe à plusieurs reprises est le caractère de retour à la ligne. On peut le supprimer en faisant `#!py ligne.strip()`. En effet, la méthode `#!py strip` supprime les caractères « blancs » au début ou à la fin d'une chaîne de caractères.
 
-```python
-fables = []
-with open(file="fables.txt", mode="r", encoding="utf-8") as fichier:
-    for ligne in fichier:
-        ligne_propre = ligne.strip()  # suppression des \n
-        fables.append(ligne_propre)
-```
+        La lecture du fichier devient alors :
 
-On obtient :
+        ```python
+        fables = []
+        with open(file="fables.txt", mode="r", encoding="utf-8") as fichier:
+            for ligne in fichier:
+                ligne_propre = ligne.strip()  # suppression des \n
+                fables.append(ligne_propre)
+        ```
 
-```python
-fables = [
-    'FABLES DE LA FONTAINE',
-    '',
-    'I',
-    '',
-    'LA CIGALE ET LA FOURMI.',
-    '',
-    '',
-    'La cigale, ayant chanté',
-    "Tout l'été,",
-    ...
-]
-```
-??? question "Relire les fables de la Fontaine"
+        On obtient :
+
+        ```python
+        fables = [
+            'FABLES DE LA FONTAINE',
+            '',
+            'I',
+            '',
+            'LA CIGALE ET LA FOURMI.',
+            '',
+            '',
+            'La cigale, ayant chanté',
+            "Tout l'été,",
+            ...
+        ]
+        ```
+
+{{exercice(titre="Relire les fables de la Fontaine")}}
 
     On a supprimé les caractères de retour à la ligne mais il reste désormais des lignes vides dans la liste `#!py fables`.
 
@@ -194,7 +197,9 @@ print(len(moutons))  # le nombre de vers
 
     On passe le vers en minuscule avec `#!py vers.lower()` afin de trouver en une seule passe les chaînes `#!py "mouton"`, `#!py "Mouton"`, `#!py "MOUTON"`, *etc*
 
-??? question "Requêtes dans les fables"
+
+{{exercice(titre="Requêtes dans les fables")}}
+
 
     Compléter le script ci-dessous afin d'effectuer les requêtes demandées.
     

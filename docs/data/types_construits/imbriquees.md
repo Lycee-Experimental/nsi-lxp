@@ -1,8 +1,4 @@
----
-author: Nicolas Revéret
-title: Listes de listes/dictionnaires
----
-# 🏁 Listes de listes ou de dictionnaires
+# Listes de listes ou de dictionnaires
 
 Considérons le tableau de couleurs ci-dessous décrivant différentes couleurs à l'aide de quatre descripteurs :
 
@@ -77,7 +73,9 @@ Les informations décrivant une couleur étant décrites dans des sous-listes, e
 
 Il est donc possible de récupérer le nom de la troisième couleur de la liste en faisant `#!py liste_couleurs[2][0]` qui renvoie `#!py "rouge"`.
 
-??? question "Liste de listes"
+
+
+{{exercice(1,titre="Liste de listes")}}
 
     On considère la liste décrite ci-dessus.
 
@@ -97,7 +95,7 @@ Il est donc possible de récupérer le nom de la troisième couleur de la liste 
         - :white_check_mark: `#!py liste_couleurs[5][2]` désigne la composante verte du jaune
         - :white_check_mark: `#!py [c[0] for c in liste_couleurs]` permet de récupérer les noms de toutes les couleurs
 
-??? question "Requêtes (listes)"
+{{exercice(titre="Requêtes (listes)")}}
 
     On travaille toujours avec la liste de listes décrite ci-dessus.
 
@@ -105,8 +103,7 @@ Il est donc possible de récupérer le nom de la troisième couleur de la liste 
 
     {{ IDE('pythons/couleurs_listes/exo', MAX=10) }}
 
-
-??? question "Nuances de gris (listes)"
+{{exercice(titre="Nuances de gris (listes)")}}
 
     On travaille toujours avec la liste décrite ci-dessus.
 
@@ -151,7 +148,7 @@ Au sein de chaque dictionnaire, les informations sont identifiées par les clés
 
 Il est possible de récupérer le nom de la troisième couleur de la liste en faisant `#!py liste_couleurs[2]["nom"]` qui renvoie là encore `#!py "rouge"`.
 
-??? question "Liste de dictionnaires"
+{{exercice(titre="Liste de dictionnaires")}}
 
     On considère la liste décrite ci-dessus.
 
@@ -169,7 +166,7 @@ Il est possible de récupérer le nom de la troisième couleur de la liste en fa
         - :x: La couleur jaune est à l'indice `#!py 5` de la liste
         - :white_check_mark: `#!py [c["nom"] for c in dico_couleurs]` permet bien de récupérer les noms de toutes les couleurs
 
-??? question "Requêtes (dictionnaires)"
+{{exercice(titre="Requêtes (dictionnaires)")}}
 
     On travaille toujours avec la liste de dictionnaires décrite ci-dessus.
 
@@ -177,7 +174,7 @@ Il est possible de récupérer le nom de la troisième couleur de la liste en fa
 
     {{ IDE('pythons/couleurs_dico/exo', MAX=10) }}
 
-??? question "Nuances de gris (dictionnaires)"
+{{exercice(titre="Nuances de gris (dictionnaires)")}}
 
     On travaille toujours avec la liste de dictionnaires ci-dessus.
 

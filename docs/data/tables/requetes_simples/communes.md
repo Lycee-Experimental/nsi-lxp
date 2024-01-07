@@ -1,8 +1,4 @@
----
-author: Nicolas Revéret
-title: Les prénoms
----
-# 🦝 Populations des communes françaises (Métropole)
+# Populations des communes françaises (Métropole)
 
 On s'intéresse au fichier [pop_hist.csv](../pop_hist.csv) regroupant des informations sur la population des communes de France Métropolitaine à travers l'histoire.
 
@@ -47,7 +43,8 @@ Les descripteurs sont explicités ci-dessous :
 
 On propose ci-dessous deux versions du même exercice selon le type de listes choisis : liste de listes ou de dictionnaires.
 
-??? question "Requêtes dans une liste de listes"
+
+{{exercice(1, titre="Requêtes dans une liste de listes")}}
 
     Compléter le script ci-dessous afin d'effectuer les requêtes demandées. 
     
@@ -59,7 +56,7 @@ On propose ci-dessous deux versions du même exercice selon le type de listes ch
     
     {{ IDE('pythons/population_liste/exo', MAX=10) }}
 
-??? question "Requêtes dans une liste de dictionnaires"
+{{exercice(titre="Requêtes dans une liste de dictionnaires")}}
 
     Compléter le script ci-dessous afin d'effectuer les requêtes demandées. 
     

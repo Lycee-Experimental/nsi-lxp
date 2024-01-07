@@ -1,7 +1,3 @@
----
-author: Nicolas Revéret
-title: Import vers listes
----
 # Import d'un fichier `csv` dans une liste de listes
 
 On considère le fichier [temperatures_2020.csv](../temperatures_2020.csv). Ce fichier regroupe les températures minimales, maximales et moyennes dans différentes régions françaises pour certains jours de l'année 2020. Il est dans le dossier de travail et est encodé en `#!py utf-8`.
@@ -14,7 +10,7 @@ août,13,Pays de la Loire,19.25,25.35,22.3
 août,13,Occitanie,17.51,26.55,22.03
 ```
 
-??? question "Repérer les bonnes informations"
+{{exercice(1, titre="Repérer les bonnes informations")}}
 
     Observez l'extrait proposé et répondez aux questions suivantes :
 
@@ -83,7 +79,7 @@ for entree in temperatures:
     entree[1] = int(entree[1])  # int convertit une chaîne de caractère en un entier
 ```
 
-???+ question "Import et typage complets"
+{{exercice(titre="Import et typage complets")}}
 
     Compléter le script ci-dessous permettant d'importer et de typer convenablement les données du fichier `temperatures_2020.csv`.
 

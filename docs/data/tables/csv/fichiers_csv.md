@@ -1,51 +1,50 @@
----
-author: Nicolas Revéret
-title: Fichiers csv
----
 # 📑 Les fichiers `csv` et `json`
 
-## Découverte
 
-Le site [data.gouv](https://www.data.gouv.fr/fr/) propose de nombreux jeux de données en libre accès.
+!!! info "Fichiers de données"
 
-Les fichiers correspondants sont souvent proposés aux formats 
+    Le site [data.gouv](https://www.data.gouv.fr/fr/) propose de nombreux jeux de données en libre accès.
 
-* `csv` pour _**C**omma **S**eparated **V**alues_,
-* `json` pour _**J**ava**S**cript **O**bject **N**otation_.
+    Les fichiers correspondants sont souvent proposés aux formats 
 
-Ces deux formats de fichiers permettent de **présenter des données textuelles**. Voici par exemple les mêmes informations présentées dans chacun des formats :
+    * `csv` pour _**C**omma **S**eparated **V**alues_,
+    * `json` pour _**J**ava**S**cript **O**bject **N**otation_.
 
-* au format  `csv` (le fichier s'appelle `amis.csv`):
+    Ces deux formats de fichiers permettent de **présenter des données textuelles**. Voici par exemple les mêmes informations présentées dans chacun des formats :
 
-    ```title="📑 Données CSV"
-    nom,âge,ville,passion
-    Jean,26,Paris,VTT
-    Marion,28,Lyon,badminton
-    ```
+    * au format  `csv` (le fichier s'appelle `amis.csv`):
 
-* au format `json` (le fichier s'appelle `amis.json`):
+        ```title="📑 Données CSV"
+        nom,âge,ville,passion
+        Jean,26,Paris,VTT
+        Marion,28,Lyon,badminton
+        ```
 
-    ```json
-	{ "amis": [
-        {"nom": "Jean","âge": 26,"ville": "Paris","passion": "VTT"},
-        {"nom": "Marion","âge": 28,"ville": "Lyon","passion": "badminton"},
-              ]
-    }
-    ```
+    * au format `json` (le fichier s'appelle `amis.json`):
 
-Nous travaillerons désormais avec les fichiers `csv`. L'exemple précédent permet de remarquer plusieurs choses :
+        ```json
+        { "amis": [
+            {"nom": "Jean","âge": 26,"ville": "Paris","passion": "VTT"},
+            {"nom": "Marion","âge": 28,"ville": "Lyon","passion": "badminton"},
+                ]
+        }
+        ```
 
-* un fichier `csv` contient des **données textuelles**,
+!!! note "Remarques"
 
-* les données sont organisées en lignes,
+    Nous travaillerons désormais avec les fichiers `csv`. L'exemple précédent permet de remarquer plusieurs choses :
 
-* la première ligne regroupe le nom des **descripteurs** (il y en a quatre ici : `#!py nom`, `#!py âge`, `#!py ville` et `#!py passion`),
+    * un fichier `csv` contient des **données textuelles**,
 
-* les autres lignes contiennent des **enregistrements** (il y en a deux ici : `#!py Jean,26,Paris,VTT` et `#!py Marion,28,Lyon,badminton`),
+    * les données sont organisées en lignes,
 
-* au sein de chaque ligne, les valeurs sont délimitées par un **séparateur** (ici le caractère `#!py ","`),
+    * la première ligne regroupe le nom des **descripteurs** (il y en a quatre ici : `#!py nom`, `#!py âge`, `#!py ville` et `#!py passion`),
 
-* les données peuvent être de types différents. Ici le `#!py nom`, la `#!py ville` et la `#!py passion` sont des chaînes de caractères, l'`#!py âge` un entier.
+    * les autres lignes contiennent des **enregistrements** (il y en a deux ici : `#!py Jean,26,Paris,VTT` et `#!py Marion,28,Lyon,badminton`),
+
+    * au sein de chaque ligne, les valeurs sont délimitées par un **séparateur** (ici le caractère `#!py ","`),
+
+    * les données peuvent être de types différents. Ici le `#!py nom`, la `#!py ville` et la `#!py passion` sont des chaînes de caractères, l'`#!py âge` un entier.
 
 !!! danger "Attention"
 
@@ -57,7 +56,7 @@ Nous travaillerons désormais avec les fichiers `csv`. L'exemple précédent per
     
     * le séparateur **n'est pas toujours une virgule**. Il est courant que l'on trouve des `#!py ";"` dans les fichiers français car la virgule est utilisée comme séparateur décimal.
 
-??? question "Premiers contacts"
+{{exercice(1, titre="Premiers contacts")}}
 
     On considère les deux fichiers `csv` ci-dessous (on n'en donne que les trois première lignes) :
 
@@ -93,7 +92,7 @@ Nous travaillerons désormais avec les fichiers `csv`. L'exemple précédent per
         - :white_check_mark: Le séparateur du fichier `bac.csv` est bien la virgule
         - :x: `INT` est un type de données
 
-??? question "Problème !"
+{{exercice(titre="Problème")}}
 
     On propose ci-dessous un extrait d'un fichier `csv`. Identifiez les trois problèmes présents :
 
@@ -142,7 +141,7 @@ On l'a dit, les fichiers `csv` et `json` sont des fichiers « texte » classique
 
 ![Création d'un fichier csv](creation_dark.gif){ width=60% .center}
 
-??? question "« *Créer* » un fichier `csv`"
+{{exercice(titre="« *Créer* » un fichier `csv`")}}
 
     On souhaite « *créer* » un fichier `csv` recensant les jours fériés en France durant l'année 2023.
     
@@ -177,8 +176,7 @@ On l'a dit, les fichiers `csv` et `json` sont des fichiers « texte » classique
     {{ IDE('pythons/creation_csv/exo') }}
 
 
-
-??? question "« *Créer* » un fichier `json`"
+{{exercice(titre="« *Créer* » un fichier `json`")}}
 
     On souhaite « *créer* » un fichier `json` recensant les jours fériés en France durant l'année 2023. Ces jours sont présentés dans le tableau ci-dessous :
 

@@ -1,8 +1,7 @@
 ---
-author: Nicolas Revéret
 title: Requêtes élaborées
 ---
-# 🐻 Meilleurs films selon IMDB
+# Meilleurs films selon IMDB
 
 À ce stade nous savons :
 
@@ -75,7 +74,7 @@ Le fichier compte 25 films dont l'un des `#!py Genres` est `#!py Family` et 26 a
 
 Parmi ces deux genres, quel est celui qui a reçu le plus de votes au total (en additionnant les votes reçus par chaque film) ?
 
-??? question "Comparaison de genres"
+{{exercice(1, titre="Comparaison de genres")}}
 
     Compléter le script ci-dessous afin de compter : 
     
@@ -103,7 +102,8 @@ Afin de généraliser le procédé, on souhaite écrire une fonction `#!py proje
 
 * renvoie la liste ne contenant que les valeurs associées à ce descripteur.
 
-??? question "La fonction `projection`"
+{{exercice( titre="La fonction `projection`")}}
+
 
     Compléter le code ci-dessous en saisissant la fonction `projection` telle que décrite.
 
@@ -111,7 +111,7 @@ Afin de généraliser le procédé, on souhaite écrire une fonction `#!py proje
 
     {{ IDE('pythons/film_projection/exo') }}
 
-??? question "La fonction `projection_multiple`"
+{{exercice( titre="La fonction `projection_multiple`")}}
 
     On souhaite désormais récupérer les données associées à plusieurs descripteurs : la fonction `#!py projection_multiple` prend en argument la liste des données et un tuple contenant les descripteurs à conserver.
 
@@ -143,7 +143,7 @@ Quel est le montant total rapporté par l'ensemble de ces films ? Et le montant 
 
 Écrivons une fonction pour cela.
 
-??? question "La fonction `somme`"
+{{exercice( titre="La fonction `somme`")}}
 
     Compléter le code ci-dessous en saisissant la fonction `somme` qui :
 
@@ -159,7 +159,7 @@ Quel est le montant total rapporté par l'ensemble de ces films ? Et le montant 
 
 Il est désormais possible de calculer la moyenne des valeurs d'un descripteurs. Là encore, écrivons une fonction pour cela.
 
-??? question "La fonction `moyenne`"
+{{exercice( titre="La fonction `moyenne`")}}
 
     Compléter le code ci-dessous en saisissant la fonction `moyenne` qui :
 
@@ -184,7 +184,7 @@ En effet, pour certains films le revenu total est inconnu. Néanmoins, afin de p
 
 Pouvez-vous calculer la moyenne des revenus générés par les films pour lesquels les revenus sont connus ?
 
-??? question "Revenu moyen des films"
+{{exercice( titre="Revenu moyen des films")}}
 
     Calculer le revenu moyen des films proposés. Il ne faut pas tenir compte des films pour lesquels cette valeur est inconnue (`#!py -1.0` dans le fichier).
 
@@ -213,7 +213,7 @@ Une approche plus efficace consiste à utiliser un dictionnaire dont les clés s
   * si son année de production n'est pas présente dans le dictionnaire, on l'ajoute (en tant que clé) avec la valeur `#!py 1` (c'est la première fois que l'on rencontre cette valeur)
   * si l'année est déjà dans le dictionnaire on incrémente simplement la valeur associée.
 
-??? question "Films par années"
+{{exercice( titre="Films par années")}}
 
     Compléter le script ci-dessous permettant de compléter le dictionnaire `annee_films` associant à chaque année présente dans la liste des films le nombre de films produits cette année-ci.
     
@@ -221,7 +221,7 @@ Une approche plus efficace consiste à utiliser un dictionnaire dont les clés s
 
 Il reste à déterminer l'année durant laquelle le plus de films ont été produits.
 
-??? question "La meilleure année"
+{{exercice( titre="La meilleure année")}}
 
     On a chargé en mémoire le dictionnaire `annee_films` associant à chaque année le nombre de films produits cette année-ci.
 
@@ -250,7 +250,7 @@ Quel genre de film est cité le plus de fois ? Facile, il suffit de compter les 
 ```
 Pouvez-vous déterminer le genre le plus présent ?
 
-??? question "Le meilleur genre"
+{{exercice( titre="Le meilleur genre")}}
 
     Déterminer le genre le plus représenté dans les films.
 

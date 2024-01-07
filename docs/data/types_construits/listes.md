@@ -1,6 +1,6 @@
-# 🏁 Rappels sur les listes Python
+# Les listes Python
 
-!!! note "Remarque"
+!!! warning "Remarque"
 
     Cette page rappelle rapidement les outils fondamentaux sur les listes Python.
 
@@ -8,7 +8,7 @@
 
 ## Présentation
 
-Les listes sont des structures de données linéaires : des **valeurs** stockée dans un certain **ordre**.
+Les listes sont des **structures de données linéaires** : des **valeurs** stockée dans un certain **ordre**.
 
 Considérons par exemple les données suivantes présentant des informations sur un animal (nom, espèce, date de naissance) :
 
@@ -162,27 +162,80 @@ On rappelle les opérations suivantes sur les listes :
 
 ## Exercices
 
-??? question "Manipulations élémentaires"
-
+{{exercice(1,titre="Manipulations élémentaires")}}
     Compléter le code ci-dessous afin d'effectuer les actions demandées. Au bout de 10 essais infructueux, le corrigé vous est proposé.
 
     {{ IDE('pythons/creation/exo', MAX=10) }}
 
-??? question "Recherche d'indice - non guidé"
 
-    Il s'agit de déterminer l'indice de la plus petite valeur dans une liste non-vide.
+{{exercice(titre="Recherche d'indice")}}
+    Écrire une fonction `indice_min` qui prend en paramètre un tableau **non vide** de nombres et qui renvoie l'indice de la première occurrence du minimum de ce tableau.
 
-    [Indice du minimum d'un tableau](https://e-nsi.forge.aeif.fr/pratique/N1/100-ind_min/sujet/){ .md-button target="_blank" rel="noopener" }
+    > - Les tableaux seront représentés sous forme de liste Python.
+    > - On n'utilisera pas les fonctions `min` et `index`.
 
-??? question "Recherche de valeur - non guidé"
+    ???+ example "Exemples"
 
-    La recherche de la valeur maximale dans une liste. Classique.
-    
-    [Maximum](https://e-nsi.forge.aeif.fr/pratique/N1/110-maximum_nombres/sujet/){ .md-button target="_blank" rel="noopener" }
+        ```pycon
+        >>> indice_min([5])
+        0
+        >>> indice_min([2, 4, 1, 1])
+        2
+        >>> indice_min([5, 3, 2, 5, 2])
+        2
+        ```
 
-??? question "Modification d'un tableau - non guidé"
+    {{ IDE('pythons/ind_min/exo', SANS="min, index") }}
 
-    On se donne un tableau, une valeur cible et une valeur de remplacement et il faut parcourir le tableau et remplacer la cible par la nouvelle valeur.
 
-    [Remplacer une valeur](https://e-nsi.forge.aeif.fr/pratique/N1/100-remplacer/sujet/){ .md-button target="_blank" rel="noopener" }
+{{exercice(titre="Recherche de valeur")}}
+    Écrire une fonction `maximum` :
 
+    - prenant en paramètre une liste **non vide** de nombres : `nombres`
+    - renvoyant le plus grand élément de cette liste.
+
+    Chacun des nombres utilisés est de type `int` ou `float`.
+
+    > :warning: On interdit ici d'utiliser `max`, ainsi que `sort` ou `sorted`.
+
+    ???+ example "Exemples"
+
+        ```pycon
+        >>> maximum([98, 12, 104, 23, 131, 9])
+        131
+        >>> maximum([-27, 24, -3, 15])
+        24
+        ```
+
+    {{ IDE('pythons/maximum_nombres/exo', SANS = "max, sorted, sort") }}
+
+{{exercice(titre="Modification d'un tableau")}}
+    Écrire la fonction `remplacer` prenant en argument :
+
+    * une liste d'entiers `valeurs`
+    * un entier `valeur_cible`
+    * un entier `nouvelle_valeur`
+
+    et renvoyant une **nouvelle** liste contenant les mêmes valeurs que `valeurs`, dans le même ordre, sauf `valeur_cible` qui a été remplacée par `nouvelle_valeur`. 
+
+    **La liste passée en paramètre ne doit pas être modifiée**.
+
+    ???+ example "Exemples"
+
+        ```pycon
+        >>> valeurs = [3, 8, 7]
+        >>> remplacer(valeurs, 3, 0)
+        [0, 8, 7]
+        >>> valeurs
+        [3, 8, 7]
+        ```
+
+        ```pycon
+        >>> valeurs = [3, 8, 3, 5]
+        >>> remplacer(valeurs, 3, 0)
+        [0, 8, 0, 5]
+        >>> valeurs
+        [3, 8, 3, 5]
+        ```
+
+    {{ IDE('pythons/remplacer/exo') }}

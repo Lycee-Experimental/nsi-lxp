@@ -1,8 +1,4 @@
----
-author: Nicolas Revéret
-title: Les prénoms
----
-# 🦝 Les prénoms donnés en France
+# Les prénoms donnés en France
 
 On s'intéresse au fichier [nat2021.csv](../nat2021.csv) regroupant des informations sur les prénoms donnés en France de 1900 à 2021. Ce fichier provient du [site de l'INSEE](https://www.insee.fr/fr/statistiques/2540004?sommaire=4767262#documentation).
 
@@ -30,7 +26,7 @@ G;PRENOMS_RARES;2001;13285
 
     On remarquera de plus que **tous les prénoms sont saisis en majuscule** (avec potentiellement des accents comme dans `LÉONIE`).
 
-???+ question "Repérer les bonnes informations"
+{{exercice(1, titre="Repérer les bonnes informations")}}
 
     Observez l'extrait proposé et répondez aux questions suivantes :
 
@@ -57,7 +53,8 @@ On rappelle que la structure du fichier est la suivante :
 |   Indice    |  `#!py 0`   |   `#!py 1`    |   `#!py 2`   |   `#!py 3`    |
 | Type Python | `#!py str`  |  `#!py str`   |  `#!py int`  |  `#!py int`   |
 
-??? question "Import dans une liste de listes"
+
+{{exercice(titre="Import dans une liste de listes")}}
 
     Compléter le script ci-dessous afin d'importer les données dans une liste de listes.
 
@@ -67,7 +64,7 @@ On rappelle que la structure du fichier est la suivante :
 
     {{ IDE('pythons/prenoms_import_liste/exo', MAX=10) }}
 
-??? question "Import dans une liste de dictionnaires"
+{{exercice(titre="Import dans une liste de dictionnaires")}}
 
     Compléter le script ci-dessous afin d'importer les données dans une liste de dictionnaires.
 
@@ -83,7 +80,7 @@ Dans ce qui suit, les imports ont été effectués et la liste `prenoms` est cha
 
 On propose ci-dessous deux versions du même exercice selon le type de listes choisis : liste de listes ou de dictionnaires.
 
-??? question "Requêtes dans une liste de listes"
+{{exercice(titre="Requêtes dans une liste de listes")}}
 
     La première entrée de la liste est :
 
@@ -112,7 +109,7 @@ On propose ci-dessous deux versions du même exercice selon le type de listes ch
     
     {{ IDE('pythons/prenoms_requetes_liste/exo', MAX=10) }}
 
-??? question "Requêtes dans une liste de dictionnaires"
+{{exercice(titre="Requêtes dans une liste de dictionnaires")}}
 
     La première entrée de la liste est :
 

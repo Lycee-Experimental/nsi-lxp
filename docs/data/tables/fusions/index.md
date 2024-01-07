@@ -1,5 +1,4 @@
 ---
-author: Nicolas Revéret
 title: Fusions
 ---
 # :scissors: Fusionner des tables
@@ -86,7 +85,7 @@ Quelles sont les langues parlées en Haïti ? Pour le savoir il faut :
 
 * parcourir la liste `langues` et en extraire les valeurs correspondant à ce code.
 
-??? question "Langues parlées en Haïti"
+{{exercice(1, titre="Langues parlées en Haïti")}}
 
     Compléter le code ci-dessous permettant de déterminer les langues parlées en Haïti.
 
@@ -96,7 +95,8 @@ Le descripteur `CountryCode` permet donc de faire le lien entre les deux listes 
 
 Utilisons cette relation afin de déterminer les langues parlées dans un pays quelconque.
 
-??? question "Langues parlées dans un pays"
+
+{{exercice(titre="Langues parlées dans un pays")}}
 
     On demande d'écrire deux fonctions :
     
@@ -134,7 +134,7 @@ Nous allons effectuer ces actions pour chacun des pays présents dans la liste. 
     
     Lors de l'import des données, on leur a associé la valeur `#!py -1` à la clé `#!py Capital`.
 
-??? question "Liens"
+{{exercice(titre="Liens")}}
 
     Quels sont les descripteurs permettant de faire le lien entre les listes `pays` et `villes` ?
 
@@ -152,7 +152,7 @@ Nous allons effectuer ces actions pour chacun des pays présents dans la liste. 
         - :white_check_mark: Le descripteur `"Capital"` de `pays` et `"ID"` de `villes`
         - :x: Le descripteur `"ID"` de `pays` et `"Capital"` de `villes`
 
-??? question "Associer les capitales aux pays"
+{{exercice(titre="Associer les capitales aux pays")}}
 
     Compléter le code ci-dessous afin d'ajouter à chaque dictionnaire correspondant à un pays une nouvelle entrée `CapitalName` contenant le nom de sa capitale.
 

@@ -1,7 +1,3 @@
----
-author: Nicolas Revéret
-title: Import vers dictionnaires
----
 # Import d'un fichier `csv` dans une liste de dictionnaire
 
 ## Avec le module `csv`
@@ -16,7 +12,7 @@ août,13,Pays de la Loire,19.25,25.35,22.3
 août,13,Occitanie,17.51,26.55,22.03
 ```
 
-??? question "Repérer les bonnes informations"
+{{exercice(1, titre="Repérer les bonnes informations")}}
 
     Observez l'extrait proposé et répondez aux questions suivantes :
 
@@ -83,7 +79,7 @@ temperatures = [
 
 Le typage s'apparente à celui effectué dans le cas d'une liste de listes. Il est néanmoins plus simple sur un point : on peut directement utiliser le nom des descripteurs plutôt que leurs indices.
 
-??? question "Import et typage complets"
+{{exercice(titre="Import et typage complets")}}
 
     Compléter le script ci-dessous permettant d'importer et de typer convenablement les données du fichier `temperatures_2020.csv`.
 
@@ -136,7 +132,7 @@ L'idée est la suivante :
 
     On pourra (re)lire avec intérêt la page sur [les fichiers](1_manipulation.md)
 
-??? question "Récupérer les noms des descripteurs"
+{{exercice(titre="Récupérer les noms des descripteurs")}}
 
     On considère un fichier `csv` dont le séparateur est le point-virgule.
 
@@ -196,7 +192,7 @@ L'idée est la suivante :
                     descripteurs = fichier.readline().strip().split(",")
                 ```
 
-??? question "Import dans une liste de dictionnaires à la main"
+{{exercice(titre="Import dans une liste de dictionnaires à la main")}}
 
     Compléter le script ci-dessous permettant d'importer les données du fichier `temperatures_2020.csv` dans une liste de dictionnaires. On n'utilisera pas le module `csv`.
 

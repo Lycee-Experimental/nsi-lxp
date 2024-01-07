@@ -1,7 +1,7 @@
-title: Bigdata
+title: Données
 nav:
-    - index.md
-    - 1️⃣ Types construits: types_construits.md
+    - Introduction: index.md
+    - 1️⃣ Types construits: types_construits
     - 1️⃣ Données en tables: tables
     - 🇹 Structures de données: structure
     - 🇹 Bases de données: bases_de_donnees

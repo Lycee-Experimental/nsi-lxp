@@ -1,8 +1,4 @@
----
-author: Nicolas Revéret
-title: Listes en compréhension
----
-# 🏁 Les listes en compréhension
+# Les listes en compréhension
 
 ## Sans condition
 
@@ -15,47 +11,50 @@ for x in range(101):
     entiers.append(x)
 ```
 
-Python propose une autre façon de créer la même liste : la **liste en compréhension**.
+!!! info "Syntaxe pour des listes en compréhension"
 
-Le schéma général est `#!py [valeur for element in iterable]` dans lequel :
+    Python propose une autre façon de créer la même liste : la **liste en compréhension**.
 
-* `#!py valeur` est une valeur quelconque. Cela peut être un entier, une chaîne de caractère, obtenu en effectuant un calcul à l'aide de `#!py element` ou sans rapport avec ce dernier...,
+    Le schéma général est `#!py [valeur for element in iterable]` dans lequel :
 
-* `#!py element` prend les différentes valeurs présentes dans `#!py iterable`,
+    * `#!py valeur` est une valeur quelconque. Cela peut être un entier, une chaîne de caractère, obtenu en effectuant un calcul à l'aide de `#!py element` ou sans rapport avec ce dernier...,
 
-* `#!py iterable` est un objet que Python peut parcourir. Ce peut être une liste, un tuple, un dictionnaire, un objet de type `#!py range`...
+    * `#!py element` prend les différentes valeurs présentes dans `#!py iterable`,
 
-Par exemple :
+    * `#!py iterable` est un objet que Python peut parcourir. Ce peut être une liste, un tuple, un dictionnaire, un objet de type `#!py range`...
 
-* Les entiers entre `#!py 0` et `#!py 4` :
+!!! example "Exemples"
 
-    ```pycon
-    >>> [x for x in range(5)]
-    [0, 1, 2, 3, 4]
+    * Les entiers entre `#!py 0` et `#!py 4` :
+
+        ```pycon
+        >>> [x for x in range(5)]
+        [0, 1, 2, 3, 4]
+        ```
+
+    * Les entiers pairs entre `#!py 0` et `#!py 8` :
+
+        ```pycon
+        >>> [2 * x for x in range(5)]
+        [0, 2, 4, 6, 8]
+        ```
+
+    * La liste des lettres de `#!py "python"` :
+
+        ```pycon
+        >>> [lettre for lettre in "python"]
+        ['p', 'y', 't', 'h', 'o', 'n']
+        ```
+
+    * La liste des lettres de `#!py "python"` en majuscule :
+
+        ```pycon
+        >>> [lettre.upper() for lettre in "python"]
+        ['P', 'Y', 'T', 'H', 'O', 'N']
     ```
 
-* Les entiers pairs entre `#!py 0` et `#!py 8` :
 
-    ```pycon
-    >>> [2 * x for x in range(5)]
-    [0, 2, 4, 6, 8]
-    ```
-
-* La liste des lettres de `#!py "python"` :
-
-    ```pycon
-    >>> [lettre for lettre in "python"]
-    ['p', 'y', 't', 'h', 'o', 'n']
-    ```
-
-* La liste des lettres de `#!py "python"` en majuscule :
-
-    ```pycon
-    >>> [lettre.upper() for lettre in "python"]
-    ['P', 'Y', 'T', 'H', 'O', 'N']
-    ```
-
-??? question "Comment faire ?"
+{{exercice(1,titre="Comment faire ?")}}
 
     On souhaite obtenir la liste des entiers entre `#!py 3` (inclus) et `#!py 103` (inclus).
 
@@ -77,7 +76,7 @@ Par exemple :
         - :white_check_mark: `#!py [k + 3 for k in range(101)]`
         - :x: `#!py [k // 2 for k in range(6, 208)]` pourrait fonctionner si l'on utilisait un pas égal à `#!py 2`. Ici on génère la liste `#!py [3, 3, 4, 4, ..., 103, 103]`
         
-??? question "Dans un terminal"
+{{exercice(titre="Dans un terminal")}}
 
     Utilisez le terminal ci-dessous afin de créer les listes suivantes :
 
@@ -101,8 +100,8 @@ Par exemple :
           6. `#!py [caractere for caractere in "Hello World"]`
           7. `#!py [caractere.lower() for caractere in "Hello World"]`
 
-??? question "Générer l'alphabet"
 
+{{exercice(titre="Générer l'alphabet")}}
 
     On cherche dans cet exercice à créer la liste de toutes les lettres de l'alphabet en majuscule. Plusieurs options s'offrent à nous :
 
@@ -150,59 +149,60 @@ Par exemple :
 
 ## Avec condition
 
-Les listes en compréhension sont encore plus intéressantes lorsque l'on rajoute des conditions. La structure générale devient alors `#!py [valeur for element in iterable if condition]` :
+!!! info "Listes en compréhension conditionnelles"
 
-* `#!py valeur`, `#!py element` et `#!py iterable` répondent aux même spécifications que dans la version de base,
-* `#!py condition` est une expression renvoyant un booléen (`#!py True` ou `#!py False`).
+    Les listes en compréhension sont encore plus intéressantes lorsque l'on rajoute des conditions. La structure générale devient alors `#!py [valeur for element in iterable if condition]` :
 
-Par exemple :
+    * `#!py valeur`, `#!py element` et `#!py iterable` répondent aux même spécifications que dans la version de base,
+    * `#!py condition` est une expression renvoyant un booléen (`#!py True` ou `#!py False`).
 
-* Les entiers pairs entre `#!py 0` et `#!py 10` :
+??? example "Exemples"
+    * Les entiers pairs entre `#!py 0` et `#!py 10` :
 
-    ```pycon
-    >>> [x for x in range(11) if x % 2 == 0]
-    [0, 2, 4, 6, 8, 10]
+        ```pycon
+        >>> [x for x in range(11) if x % 2 == 0]
+        [0, 2, 4, 6, 8, 10]
+        ```
+        
+    * Les notes comprises entre `#!py 12` et `#!py 14` (inclus l'un et l'autre):
+
+        ```pycon
+        >>> notes = [17, 11, 13, 14, 10, 19, 13]
+        >>> [x for x in notes if 12 <= x <= 14]
+        [13, 14, 13]
+        ```
+
+    * Les fleurs débutants par le caractère `#!py "A"` :
+
+        ```pycon
+        >>> fleurs = ("Arum", "Rose", "Azalée", "aster")
+        >>> [f for f in fleurs if f[0] == "A"]
+        ["Arum", "Azalée"]
+        ```
+
+        !!! note "Remarque"
+
+            Notez que `#!py fleurs` est un `#!py tuple` mais que l'on crée bien une **liste** en compréhension.
+
+    Il est aussi possible d'utiliser des conditions complexes :
+
+    * Les nombres pairs et inférieurs à `#!py 100` :
+
+        ```pycon
+        >>> nombres = [353, 108, 98, 101, 79, 93]
+        >>> [x for x in nombres if x % 2 == 0 and x <= 100]
+        [98]
+        ```
+
+    * Les fleurs débutants par `#!py "A"` ou dont le nom comporte moins de `#!py 4` caractères :
+
+        ```pycon
+        >>> fleurs = ("Arum", "Rose", "Azalée", "aster")
+        >>> [f for f in fleurs if f[0] == "A" or len(f) <= 4]
+        ["Arum", "Rose", "Azalée"]
     ```
-    
-* Les notes comprises entre `#!py 12` et `#!py 14` (inclus l'un et l'autre):
 
-    ```pycon
-    >>> notes = [17, 11, 13, 14, 10, 19, 13]
-    >>> [x for x in notes if 12 <= x <= 14]
-    [13, 14, 13]
-    ```
-
-* Les fleurs débutants par le caractère `#!py "A"` :
-
-    ```pycon
-    >>> fleurs = ("Arum", "Rose", "Azalée", "aster")
-    >>> [f for f in fleurs if f[0] == "A"]
-    ["Arum", "Azalée"]
-    ```
-
-    !!! note "Remarque"
-
-        Notez que `#!py fleurs` est un `#!py tuple` mais que l'on crée bien une **liste** en compréhension.
-
-Il est aussi possible d'utiliser des conditions complexes :
-
-* Les nombres pairs et inférieurs à `#!py 100` :
-
-    ```pycon
-    >>> nombres = [353, 108, 98, 101, 79, 93]
-    >>> [x for x in nombres if x % 2 == 0 and x <= 100]
-    [98]
-    ```
-
-* Les fleurs débutants par `#!py "A"` ou dont le nom comporte moins de `#!py 4` caractères :
-
-    ```pycon
-    >>> fleurs = ("Arum", "Rose", "Azalée", "aster")
-    >>> [f for f in fleurs if f[0] == "A" or len(f) <= 4]
-    ["Arum", "Rose", "Azalée"]
-    ```
-
-??? question "Qui fait quoi ?"
+{{exercice(titre="Qui fait quoi ?")}}
 
     On considère la liste nombres définie par `#!py nombres = [k for k in range(-10, 11)]`.
 
@@ -222,7 +222,8 @@ Il est aussi possible d'utiliser des conditions complexes :
         - :white_check_mark: `#!py [True for x in nombres if x % 2 == 0]` renvoie une liste autant de fois `#!py True` que `#!py nombres` compte de nombres pairs
         - :x: `#!py [1 / x for x in nombres]` renvoie une erreur car on demande à Python de diviser par `#!py 0`
 
-??? question "Filtrer des nombres aléatoires"
+
+{{exercice(titre="Filtrer des nombres aléatoires")}}
 
     Les instructions suivantes permettent de générer 1 000 nombres entiers aléatoires de -100 à 100 :
 
@@ -237,7 +238,8 @@ Il est aussi possible d'utiliser des conditions complexes :
 
     {{ IDE('/pythons/filtre/exo', MAX=10) }}
 
-??? question "π à Monte-Carlo"
+
+{{exercice(titre="π à Monte-Carlo")}}
 
     La [méthode de Monte-Carlo](https://fr.wikipedia.org/wiki/M%C3%A9thode_de_Monte-Carlo) est un ensemble de méthodes algorithmiques visant à déterminer la valeur approchée d'une constante en utilisant des procédés aléatoires.
 
