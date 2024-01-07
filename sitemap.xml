@@ -1046,11 +1046,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nsi.lycee-experimental.org/data/types_construits/</loc>
-         <lastmod>2024-01-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://nsi.lycee-experimental.org/data/bases_de_donnees/</loc>
          <lastmod>2024-01-07</lastmod>
          <changefreq>daily</changefreq>
@@ -1116,31 +1111,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://nsi.lycee-experimental.org/data/tables/depart/comprehension/</loc>
-         <lastmod>2024-01-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/data/tables/depart/dictionnaires/</loc>
-         <lastmod>2024-01-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/data/tables/depart/imbriquees/</loc>
-         <lastmod>2024-01-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/data/tables/depart/listes/</loc>
-         <lastmod>2024-01-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/data/tables/depart/pythons/gris/exo_REM/</loc>
-         <lastmod>2024-01-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://nsi.lycee-experimental.org/data/tables/fusions/</loc>
          <lastmod>2024-01-07</lastmod>
          <changefreq>daily</changefreq>
@@ -1187,6 +1157,56 @@
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/data/tables/requetes_simples/prenoms/</loc>
+         <lastmod>2024-01-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/types_construits/</loc>
+         <lastmod>2024-01-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/types_construits/comprehension/</loc>
+         <lastmod>2024-01-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/types_construits/dictionnaires/</loc>
+         <lastmod>2024-01-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/types_construits/imbriquees/</loc>
+         <lastmod>2024-01-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/types_construits/listes/</loc>
+         <lastmod>2024-01-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/types_construits/tuples/</loc>
+         <lastmod>2024-01-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/types_construits/pythons/gris/exo_REM/</loc>
+         <lastmod>2024-01-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/types_construits/pythons/ind_min/exo_REM/</loc>
+         <lastmod>2024-01-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/types_construits/pythons/maximum_nombres/exo_REM/</loc>
+         <lastmod>2024-01-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/types_construits/pythons/remplacer/exo_REM/</loc>
          <lastmod>2024-01-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1557,11 +1577,6 @@
     </url>
     <url>
          <loc>https://nsi.lycee-experimental.org/outils/quiz/sources/banque_progra/</loc>
-         <lastmod>2024-01-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nsi.lycee-experimental.org/premiere/linux/permission/</loc>
          <lastmod>2024-01-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
