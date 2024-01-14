@@ -360,7 +360,7 @@
 
 
 
-### Périphérique de sortie
+## Périphérique de sortie
 
 ??? note "Ecran SSD1306"
 
