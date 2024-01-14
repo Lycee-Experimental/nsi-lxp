@@ -1,5 +1,5 @@
 nav:
     - index.md
-    - Données linéaires: lineaire.md
+    - Données linéaires: lineaire
     - Données en arbres: arbre.md
     - Données en graphes: graphe.md
