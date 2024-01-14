@@ -26,7 +26,7 @@
 
 ??? info "Ajout de librairies"
 
-- Créer un dossier `lib` qui contiendra les librairies supplémentaires.
+    - Créer un dossier `lib` qui contiendra les librairies supplémentaires.
 
     !!! note "Remarque"
         De nombreuses librairies sont diffusées dans les [bundle](https://circuitpython.org/libraries) officiels et communautaires. D'autres se trouvent sur github. Pour un gain de place et de ressources du microcontrolleur, elles sont précompilées dans un format `mpy`.
