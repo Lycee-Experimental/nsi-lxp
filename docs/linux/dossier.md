@@ -1,5 +1,11 @@
 # Arborescence du système de fichiers Unix / GNU-Linux
 
+??? conclu "Programme"
+    |Notions|Compétences|Remarques|
+    |--|--|--|
+    Systèmes d’exploitation.|Identifier les fonctions d’un système d’exploitation.| |
+
+
 Dans les systèmes de type Unix (dont GNU-Linux), le système de fichier est dit en **arborescence**, car ce système de fichier ressemble à un arbre à l'envers. La base de l'arbre s'appelle la **racine** (root) de l'arborescence et se représente par un simple `/`.
 
 Le schéma ci-dessous représente les principaux **répertoires** (entourés d'un rectangle sur le schéma) et **fichiers** (entourés d'ovales) de l'arborescence GNU-Linux.
