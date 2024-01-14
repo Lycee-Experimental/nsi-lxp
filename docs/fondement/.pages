@@ -6,6 +6,6 @@ nav:
     - 1️⃣ Binaire et portes logiques: binaire.md
     - 1️⃣ Architecture matérielle: materiel.md
     - 1️⃣ Langage machine et assembleur: assembleur.md
-    - 1️⃣ Interfaces Homme/Machine: ihm.md
+    - 1️⃣ Interfaces Homme/Machine: ihm
     - 🇹 Systèmes sur puces (SoC): composants_integres_systeme_puce
     - Quiz: ../outils/quiz/Architectures matérielles et systèmes d’exploitation (Première)
