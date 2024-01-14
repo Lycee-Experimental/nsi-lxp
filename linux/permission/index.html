@@ -2269,16 +2269,144 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../data/structure/lineaire/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../data/structure/lineaire/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Données linéaires
   </span>
   
 
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8_4_2" id="__nav_8_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Données linéaires
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/structure/lineaire/liste/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Listes
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/structure/lineaire/pileFile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Piles et Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/structure/lineaire/interface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interfaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/structure/lineaire/conclu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conclusion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3956,6 +4084,25 @@
 
 
 <h1 id="la-gestion-des-permissions-dans-le-shell">La gestion des permissions dans le shell<a class="headerlink" href="#la-gestion-des-permissions-dans-le-shell" title="Permanent link">⚓︎</a></h1>
+<details class="conclu">
+<summary>Programme</summary>
+<table>
+<thead>
+<tr>
+<th>Notions</th>
+<th>Compétences</th>
+<th>Remarques</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Systèmes d’exploitation.</td>
+<td>Gérer les droits et permissions d’accès aux fichiers.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</details>
 <div class="admonition info">
 <p class="admonition-title">Lecture des droits</p>
 </div>
@@ -3967,47 +4114,47 @@ total<span class="w"> </span><span class="m">1</span>
 </code></pre></div>
 <p>Lisons cette ligne de gauche à droite :</p>
 <p>1- <code>-rw-r--r--</code></p>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>- le premier symbole `-` signifie que l&#39;on a affaire à un fichier, dans le cas d&#39;un répertoire,nous aurions un `d` (directory)
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>  - le premier symbole `-` signifie que l&#39;on a affaire à un fichier, dans le cas d&#39;un répertoire,nous aurions un `d` (directory)
 
-- les 3 symboles suivants `rw-` donnent les droits du propriétaire du fichier : lecture autorisée (r), écriture autorisée (w), exécution interdite (- à la place de x)
+  - les 3 symboles suivants `rw-` donnent les droits du propriétaire du fichier : lecture autorisée (r), écriture autorisée (w), exécution interdite (- à la place de x)
 
-- Les 3 symboles suivants `r--` donnent les droits du groupe lié au fichier : lecture autorisée (r), écriture interdite (- à la place de w), exécution interdite (- à laplace de x)
+  - Les 3 symboles suivants `r--` donnent les droits du groupe lié au fichier : lecture autorisée (r), écriture interdite (- à la place de w), exécution interdite (- à laplace de x)
 
-- Les 3 symboles suivants `r--` donnent les droits des autres utilisateurs : lecture autorisée (r), écriture interdite (- à la place de w), exécution interdite (- à la place de x)
+  - Les 3 symboles suivants `r--` donnent les droits des autres utilisateurs : lecture autorisée (r), écriture interdite (- à la place de w), exécution interdite (- à la place de x)
 </code></pre></div>
 <p>2 - Un peu plus loins sur la ligne :</p>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>- Le caractère suivant &quot;1&quot; donne le nombre de liens (nous n&#39;étudierons pas cette notion ici)
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>  - Le caractère suivant &quot;1&quot; donne le nombre de liens (nous n&#39;étudierons pas cette notion ici)
 
-- Le premier `luna` représente le nom du propriétaire du fichier
+  - Le premier `luna` représente le nom du propriétaire du fichier
 
-- Le second `luna` représente le nom du groupe lié au fichier
+  - Le second `luna` représente le nom du groupe lié au fichier
 
-- `0` représente la taille du fichier en octet (ici notre fichier est vide)
+  - `0` représente la taille du fichier en octet (ici notre fichier est vide)
 
-`Feb 20 14:59` donne la date et l&#39;heure de la dernière modification du fichier
+  `Feb 20 14:59` donne la date et l&#39;heure de la dernière modification du fichier
 
-`TODO.txt` est le nom du fichier
+  `TODO.txt` est le nom du fichier
 </code></pre></div>
 <table>
-  <tr>
-    <td>-</td>
-    <td>r</td>
-    <td>w</d>
-    <td>-</td>
-    <td>r</td>
-    <td>-</td>
-    <td>-</td>
-    <td>r</td>
-    <td>-</td>
-    <td>-</td>
-  </tr>
-  <tr>
-    <td>type</td>
-    <td colspan="3">Propriétaire : u</td>
-    <td colspan="3">Groupe : g</td>
-    <td colspan="3">Les autres : o</td>    
-  </tr>
-</table>
+    <tr>
+      <td>-</td>
+      <td>r</td>
+      <td>w</d>
+      <td>-</td>
+      <td>r</td>
+      <td>-</td>
+      <td>-</td>
+      <td>r</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>type</td>
+      <td colspan="3">Propriétaire : u</td>
+      <td colspan="3">Groupe : g</td>
+      <td colspan="3">Les autres : o</td>    
+    </tr>
+  </table>
 
 
 

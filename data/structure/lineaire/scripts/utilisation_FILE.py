@@ -25,16 +25,16 @@ def FILE_PLEINE(P):
 F = CREER_FILE_VIDE()
 print(F)
 
-print(FILE_VIDE())
+print(FILE_VIDE(F))
 
-EMFILER(F, 2)
-EMFILER(F, 5)
-EMFILER(F, 3)
-EMFILER(F, 7)
+ENFILER(F, 2)
+ENFILER(F, 5)
+ENFILER(F, 3)
+ENFILER(F, 7)
 
 print(F)
 
 DEFILER(F)
 print(F)
 
-print(FILE_VIDE())
+print(FILE_VIDE(F))

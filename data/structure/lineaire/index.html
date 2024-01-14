@@ -16,7 +16,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../arbre/">
+        <link rel="next" href="liste/">
       
       
       <link rel="icon" href="../../../assets/images/logo-lxp-noir.svg">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Données linéaires - NSI-LXP</title>
+        <title>Introduction - NSI-LXP</title>
       
     
     
@@ -140,7 +140,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Données linéaires
+              Introduction
             
           </span>
         </div>
@@ -2263,102 +2263,143 @@
     
   
   
-    <li class="md-nav__item md-nav__item--active">
+    
+    
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
+        
+          
+        
       
         
       
+        
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4_2" checked>
+        
           
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
   
   <span class="md-ellipsis">
     Données linéaires
   </span>
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_8_4_2" id="__nav_8_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Données linéaires
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="liste/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Données linéaires
+    Listes
   </span>
   
 
       </a>
-      
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+              
+            
+              
+                
   
   
   
-    
+    <li class="md-nav__item">
+      <a href="pileFile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Piles et Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#la-liste" class="md-nav__link">
-    La LISTE
-  </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#les-piles-et-les-files" class="md-nav__link">
-    Les PILES et les FILES
-  </a>
+    <li class="md-nav__item">
+      <a href="interface/" class="md-nav__link">
+        
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#les-dictionnaires" class="md-nav__link">
-    Les dictionnaires
-  </a>
+  <span class="md-ellipsis">
+    Interfaces
+  </span>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comment-choisir-une-structure-de-donnees-adaptee-a-la-situation-a-modeliser" class="md-nav__link">
-    Comment choisir une structure de données adaptée à la situation à modéliser ?
-  </a>
+
+      </a>
+    </li>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comment-distinguer-les-structures-par-le-jeu-des-methodes-qui-les-caracterisent" class="md-nav__link">
-    Comment distinguer les structures ? … par le jeu des méthodes qui les caractérisent
-  </a>
+
+              
+            
+              
+                
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#structures-de-donnees-interface-et-implementation" class="md-nav__link">
-    Structures de données, interface et implémentation
-  </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
+  
+    <li class="md-nav__item">
+      <a href="conclu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     Conclusion
-  </a>
+  </span>
   
-</li>
-      
-    </ul>
+
+      </a>
+    </li>
   
-</nav>
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -4062,625 +4103,7 @@
 </table>
 </details>
 <p>Une <strong>structure linéaire</strong> relie les données en <strong>séquences</strong>. C'est à dire qu'on peut numéroter les données, et que chaque élément a un rang.</p>
-<p>Nous verrons dans ce chapitre l'exemple de la LISTE, dont la PILE et la FILE en sont des sous-exemple avec des opérations restreintes.</p>
-<h2 id="la-liste">La LISTE<a class="headerlink" href="#la-liste" title="Permanent link">⚓︎</a></h2>
-<div class="admonition python">
-<p class="admonition-title">Rappels sur les types construits de Python</p>
-<p>Nous avons vu dans les chapitres <a href="../../premiere/encodage/">Encodage</a> et <a href="../../premiere/python/">Python</a> comment représenter des données avec des types et valeurs de base : <strong>entier</strong>,  <strong>flottant</strong>, <strong>booléen</strong> et <strong>texte</strong>, appelés respectivement en Python : <code>int</code>, <code>float</code>, <code>bool</code> et <code>str</code>.</p>
-<p>Nous avons appris à reconnaître différents <strong>types construits</strong> :</p>
-<ul>
-<li>
-<p>Le <strong>tuple</strong> : <code>tuple = ('1', 'a')</code> contenant des valeurs ordonnées et repérées par un index (index 0 pour le premier élément, <code>tuple[0] = '1'</code>) et pour lequel on ne peut pas remplacer la valeur en un index donné ; </p>
-</li>
-<li>
-<p>La <strong>liste</strong> : <code>liste = [1, 2, 3]</code> contenant des valeurs ordonnées et repérées aussi par un index (<code>liste[-1] = 3</code>). </p>
-</li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Attention</p>
-<p>On appelle <strong>liste</strong> en Python ce qui est plus généralement un <strong>tableau indexé</strong>. Un tableau indexé est une suite d’éléments de même type (il est possible de créer des listes contenant des valeurs de types différents mais c’est déconseillé car le traitement de la liste serait compliqué puisque chaque type devrait être traité différemment) . Il ne faudra pas confondre ces tableaux indexés avec les listes que l’on aborde dans ce chapitre. </p>
-</div>
-</div>
-<p>La <strong>LISTE</strong> est aussi une suite d’éléments de même type pour les mêmes raisons que le tableau indexé. Une LISTE est utilisée pour stocker en mémoire des données qui doivent être traitées dans un certain ordre. On peut y <strong>ajouter</strong>, <strong>enlever</strong>, <strong>consulter</strong> un élément d’une liste et <strong>modifier</strong> un élément sans affecter les autres éléments. </p>
-<p><strong>Etape 1 : Que fait une LISTE ? … les méthodes du type (ou de la classe) LISTE</strong></p>
-<p>La LISTE contiendra des données de même type T (que des entiers par exemple)</p>
-<p>On ne conserve que les opérations utiles et autant que possible, les plus efficaces.</p>
-<p>Les opérations (ou les méthodes ou interactions avec environnement) sont :</p>
-<ul>
-<li><code>CREER_LISTE_VIDE()</code> qui retourne un objet de type LISTE : la LISTE est créée et est vide.</li>
-<li><code>INSERER(L, i, e)</code> : l’élément e est inséré à la position i dans la LISTE L.</li>
-<li><code>SUPPRIMER(L, i)</code> : l’élément situé à la position i est supprimé.</li>
-<li><code>RECHERCHER(L, e)</code> qui retourne un objet de type entier  : l’élément e est cherché dans la LISTE et c’est la position i qui est retourné.</li>
-<li><code>LIRE(L, i)</code> qui retourne un objet du type T : c’est l’élément situé à la position i qui est retourné.</li>
-<li><code>MODIFIER(L, i, e)</code> : l’élément situé à la position i dans la LISTE est écrasé par le nouvel élément e.</li>
-<li><code>LONGUEUR(L)</code> qui retourne un objet de type entier : le nombre d’éléments de la LISTE est retourné.</li>
-</ul>
-<p><strong>Exercice d'utilisation d'une LISTE</strong></p>
-<p>1) Que donne la liste d'instructions suivante?</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">L</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
-
-<span class="n">INSERER</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
-
-<span class="n">SUPPRIMER</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">RECHERCHER</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">RECHERCHER</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">LIRE</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
-
-<span class="n">MODIFIER</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
-
-
-<span class="nb">print</span><span class="p">(</span><span class="n">LONGUEUR</span><span class="p">(</span><span class="n">L</span><span class="p">))</span>
-</code></pre></div>
-<p>2) Vérifier avec la console ci-dessous (les fonctions sont déjà préchargées, mais non visibles)</p>
-<div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_74eba7b6aa1f8df0e8455baa55f22dfe9c3b5b54" class="comment">###</span><div class="line" id="editor_74eba7b6aa1f8df0e8455baa55f22dfe9c3b5b54"></div><div id="term_editor_74eba7b6aa1f8df0e8455baa55f22dfe9c3b5b54"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_74eba7b6aa1f8df0e8455baa55f22dfe9c3b5b54","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_74eba7b6aa1f8df0e8455baa55f22dfe9c3b5b54","scripts/utilisation_LISTE")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_74eba7b6aa1f8df0e8455baa55f22dfe9c3b5b54').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_74eba7b6aa1f8df0e8455baa55f22dfe9c3b5b54" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_74eba7b6aa1f8df0e8455baa55f22dfe9c3b5b54")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_74eba7b6aa1f8df0e8455baa55f22dfe9c3b5b54")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
-<p><span id="content_editor_74eba7b6aa1f8df0e8455baa55f22dfe9c3b5b54" class="py_mk_hide">#--- HDR ---#bksl-nlbksl-nl# Les Listesbksl-nlbksl-nldef CREERpy-undLISTEpy-undVIDE():bksl-nl    return []bksl-nlbksl-nldef INSERER(L, i, e):bksl-nl    if i &gt; len(L):bksl-nl        msg = "insertion pas possible: indice pas correct"bksl-nl    else:bksl-nl        L.insert(i, e)bksl-nl        L.pop()bksl-nl        msg = "insertion effectuée"bksl-nl    return msgbksl-nlbksl-nlbksl-nldef SUPPRIMER(L, i):    bksl-nl    if  i &gt; len(L):bksl-nl        msg = "suppression pas possible"bksl-nl    else :bksl-nl        del L[i]bksl-nl        L.append(None)bksl-nl        msg = "la suppression est possible"bksl-nl    return msgbksl-nlbksl-nlbksl-nldef RECHERCHER(L, e):bksl-nl    if e in L:bksl-nl        msg = L.index(e)bksl-nl    else:bksl-nl        msg = "L'élément n'est pas dans la liste"bksl-nl    return msgbksl-nlbksl-nldef LIRE(L, i):bksl-nl    if  i &gt; len(L):bksl-nl        msg = "lecture impossible"bksl-nl    else:bksl-nl        msg = L[i]bksl-nl    return msgbksl-nlbksl-nldef MODIFIER(L, i, e):bksl-nl    if  i &gt; len(L):bksl-nl        msg = "modification impossible"bksl-nl    else:bksl-nl        L[i] = ebksl-nl        msg = "modification effectuée"bksl-nl    return msgbksl-nlbksl-nldef LONGUEUR(L):bksl-nl    return len(L)bksl-nl#--- HDR ---#bksl-nlbksl-nlL=[2, 4, 7, 1, 9, None, None]bksl-nlbksl-nlINSERER(L, 2, 9)bksl-nlprint(L)bksl-nlbksl-nlSUPPRIMER(L, 1)bksl-nlprint(L)bksl-nlbksl-nlprint(RECHERCHER(L, 1))bksl-nlbksl-nlprint(RECHERCHER(L, 10))bksl-nlbksl-nlprint(LIRE(L, 7))bksl-nlbksl-nlMODIFIER(L, 4, 8)bksl-nlprint(L)bksl-nlbksl-nlbksl-nlprint(LONGUEUR(L))bksl-nlbksl-nlbksl-nlbksl-nl</span><span id="corr_content_editor_74eba7b6aa1f8df0e8455baa55f22dfe9c3b5b54" class="py_mk_hide" data-strudel=""></span></p>
-<p><strong>A</strong></p>
-<p><strong>Z</strong></p>
-<p><strong>Etape 2 : comment représenter une liste ?</strong></p>
-<p>Puisqu’on les connaît bien, on peut choisir d’utiliser les tableaux indexés vus en première et qui sont de taille fixe.</p>
-<p>Lorsqu’on crée une LISTE de taille n, un espace mémoire légèrement plus grand lui est alloué.</p>
-<p>Mais attention, la première case de ce tableau, donc d’index 0 est réservée pour contenir le nombre d’éléments contenus dans la liste. </p>
-<p>Le nombre d’éléments contenus dans la liste indique la dernière position occupée et donc informe sur la position de la case disponible. Et chaque élément <em>e</em> sera caractérisé par sa position supérieure ou égale à 1.</p>
-<p>Supposons un tableau de 11 cases. Alors ce tableau pourra représenter une liste de <span class="arithmatex">\(n=10\)</span> éléments au maximum. On grise l’espace où l’insertion est possible.</p>
-<p><img alt="" class="center" src="../images/tab1.JPG" /></p>
-<p>Les espaces libres sont alloués au fur et à mesure, tant qu’il reste de l’espace. Ci-dessous, on rend compte de l’évolution du remplissage du tableau qui représente cette liste, pour différentes insertions</p>
-<p><strong>Exercice 1</strong></p>
-<p>On vous donne les deux premières allocations, à vous de compléter pour les suivantes.</p>
-<p><img alt="" class="center" src="../images/tab2.JPG" /></p>
-<details class="note">
-<summary>Correction</summary>
-<p><img alt="" src="../images/Exercice1_correction.JPG" /></p>
-</details>
-<div class="admonition note">
-<p class="admonition-title">Remarques</p>
-<p>Si on veut modifier un élément, puisque l’élément est de position connue, il n’y a pas de coût supplémentaire et ce quel que soit le nombre d’éléments de la liste. Donc la modification, de même que l’allocation, ne dépend pas du nombre d’éléments de la liste. On dit qu’elles ont un coût constant.</p>
-<p>En revanche si la liste doit être rallongée, il faut modifier le nombre de cases du tableau initial et l’index doit être modifié. Cette action dépend proportionnellement du nombre d’éléments de la liste.</p>
-<p>De même si on doit retirer un élément de la liste, il sera moins coûteux de retirer un élément en bout de liste qu’un élément au coeur de la liste où il faudrait redéfinir les index.</p>
-</div>
-<p><strong>Etape 3 : algorithme et implémentation dans Python</strong></p>
-<p>On sait déjà réaliser les opérations sur une liste déjà existante : trouver sa longueur, rechercher une valeur, lire une valeur, modifier une valeur. On limite donc l’étude à l’implémentation de l’insertion et de la suppression.</p>
-<p>Pour cette activité, on part de la liste suivante (un tableau pouvant accueillir les 10 valeurs entières d’une liste)  </p>
-<p><code>LISTE=[4, 1, 5, 4, 16, None, None, None, None, None, None]</code></p>
-<p><strong>Exercice 2</strong></p>
-<ul>
-<li>Objectif 1 : écrire une fonction qui affiche les éléments de la liste, excepté l’élément d’index 0 .</li>
-<li>Objectif 2 : écrire une fonction qui supprime l’élément e d’index i de la liste LISTE définie ci-dessus.</li>
-<li>Objectif 3 : écrire une fonction qui insère l’élément e à l’index i dans la LISTE définie ci-dessus.</li>
-</ul>
-<p>1) Complétez le programme ci-dessous.</p>
-<div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_e37a7834221fdb0943d10589f4d380a32e13890e" class="comment">###</span><div class="line" id="editor_e37a7834221fdb0943d10589f4d380a32e13890e"></div><div id="term_editor_e37a7834221fdb0943d10589f4d380a32e13890e"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_e37a7834221fdb0943d10589f4d380a32e13890e","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_e37a7834221fdb0943d10589f4d380a32e13890e","scripts/exercice2")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_e37a7834221fdb0943d10589f4d380a32e13890e').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_e37a7834221fdb0943d10589f4d380a32e13890e" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_e37a7834221fdb0943d10589f4d380a32e13890e")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_e37a7834221fdb0943d10589f4d380a32e13890e")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
-<p><span id="content_editor_e37a7834221fdb0943d10589f4d380a32e13890e" class="py_mk_hide">"""bksl-nlCe module contient les fonctions :bksl-nl- AFFICHER : fonction afficher la liste , sans l'element d'index 0bksl-nl- SUPPRIMER : fonction qui supprime un élément de la listebksl-nl- INSERER : fonction qui insère un élément dans la listebksl-nl"""bksl-nlbksl-nl#objectif 1: fonction afficher la liste , sans l'element d'index 0bksl-nldef AFFICHER(L):bksl-nl    """bksl-nl    Cette fonction permet d'afficher les éléments d'une liste à partir de l'indice 1bksl-nl    bksl-nl    param : L(list)bksl-nl    return msg(str)bksl-nl    bksl-nl    Exemples :bksl-nl    bksl-nl    &gt;&gt;&gt; AFFICHER([4, 1, 5, 4, 16, None, None, None, None, None, None])bksl-nl    'Liste :  1  5  4  16 ' bksl-nl    """bksl-nl    bksl-nl    ...bksl-nl    ...bksl-nl    ...bksl-nl    ...bksl-nl    return ...bksl-nlbksl-nl#objectif 2: fonction supprimer un elementbksl-nldef SUPPRIMER(L, i):bksl-nl    """bksl-nl    Cette fonction permet de supprimer un élément à l'indice i d'une listebksl-nl    bksl-nl    param : L(list)bksl-nl            i(int)bksl-nl    return : msg(str)bksl-nl    bksl-nl    Exemples :bksl-nl    &gt;&gt;&gt; SUPPRIMER([4, 1, 5, 4, 16, None, None, None, None, None, None], 2)bksl-nl    'la suppression est possible'bksl-nl    bksl-nl    &gt;&gt;&gt; SUPPRIMER([4, 1, 5 ,4, 16, None, None, None, None, None, None], 0)bksl-nl    'suppression pas possible'bksl-nl    """bksl-nl    bksl-nl    # Test de validite pour l'application de supprimerbksl-nl    if ...:bksl-nl        ...bksl-nl    # Recopie des valeurs gardeesbksl-nl    else:bksl-nl        ....bksl-nl        L[k] = L[k+1]bksl-nl        # mise a jour de la taille de la listebksl-nl        L[0] = L[0] - 1bksl-nl        msg = "la suppression est possible"bksl-nl    return ...bksl-nlbksl-nl#objectif 3: fonction inserer un elementbksl-nldef INSERER(L, i, e):bksl-nl    """bksl-nl    Cette fonction permet d'insérer un élément à un indice donné dans une listebksl-nl    bksl-nl    param : L(list)bksl-nl            i(int)bksl-nl            e(float)bksl-nl    return : msg(str)bksl-nl    bksl-nl    Exemples :bksl-nl    bksl-nl    &gt;&gt;&gt; INSERER([4, 1, 5 ,4, 16, None, None, None, None, None, None], 3, 9)bksl-nl    'insertion possible'bksl-nl    bksl-nl    &gt;&gt;&gt; INSERER([4, 1, 5 ,4, 16, None, None, None, None, None, None], 0, 9)bksl-nl    'insertion pas possible: indice pas correct'bksl-nl    bksl-nl    &gt;&gt;&gt; INSERER([10,1,5,4,16,5,6,7,8,9,10],8,3)bksl-nl    'insertion pas possible: liste pleine'bksl-nl    """bksl-nl    bksl-nl    # Test de validite pour l'application de insererbksl-nl    if ...:bksl-nl        msg = "insertion pas possible: indice pas correct"bksl-nl    elif ...:    bksl-nl        msg = "insertion pas possible: liste pleine"bksl-nl    # Recopie des valeurs deplaceesbksl-nl    else:bksl-nl        ...bksl-nl        L[k+1] = L[k]bksl-nl        # Insertion de la valeur e a la position ibksl-nl        ...bksl-nl        # mise a jour de la taille de la listebksl-nl        L[0] = L[0] + 1bksl-nl        msg = "insertion possible"bksl-nl    return ...bksl-nl</span><span id="corr_content_editor_e37a7834221fdb0943d10589f4d380a32e13890e" class="py_mk_hide" data-strudel=""></span></p>
-<p><strong>A</strong></p>
-<p><strong>Z</strong></p>
-<p>2) Testez ce programme avec un doctest, et éventuellement, corrigez-le.</p>
-<details class="note">
-<summary>Correction</summary>
-<p>Code Capytale : <code>2a5b-774982</code></p>
-</details>
-<h2 id="les-piles-et-les-files">Les PILES et les FILES<a class="headerlink" href="#les-piles-et-les-files" title="Permanent link">⚓︎</a></h2>
-<p><strong>Etape 1 : principe illustré dans une vidéo</strong></p>
-<p><strong>Exercice 3</strong></p>
-<ol>
-<li>
-<p>Lire la vidéo ci-dessous <strong>jusqu’à 6 minutes</strong>.</p>
-<p><iframe title="45522059-bb03-41c3-a38e-bcd390eabc2c-360" src="https://tube-sciences-technologies.apps.education.fr/videos/embed/2e283f1d-4658-4ad9-bb17-75a37cf8dd80" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" width="560" height="315" frameborder="0"></iframe></p>
-</li>
-<li>
-<p>Qu’est-ce qui distingue une PILE ou une FILE d’une LISTE ?</p>
-</li>
-<li>
-<p>Compléter le tableau suivant :</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;"></th>
-<th style="text-align: center;">La PILE</th>
-<th style="text-align: center;">La FILE</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Une image du quotidien qui l'illustre</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td style="text-align: left;">Qu'est-ce que c'est? (principe)</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td style="text-align: left;">Acronyme du mode associé et signification</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td style="text-align: left;">Ce qu'on peut faire avec? (méthodes)</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td style="text-align: left;">A quoi cela sert?</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-</tbody>
-</table>
-</li>
-</ol>
-<details class="note">
-<summary>Correction</summary>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"></th>
-<th style="text-align: center;">La PILE</th>
-<th style="text-align: center;">La FILE</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">Une image du quotidien qui l’illustre</td>
-<td style="text-align: center;">La pile d’assiettes (collection verticale)</td>
-<td style="text-align: center;">La file d’attente (collection horizontale)</td>
-</tr>
-<tr>
-<td style="text-align: center;">Qu’est-ce que c’est (principe) ?</td>
-<td style="text-align: center;">Structure où le dernier élément ajouté sera le premier à être retiré.</td>
-<td style="text-align: center;">Structure dans laquelle les  éléments sont récupérés dans l’ordre dans lequel ils ont été ajoutés. Les premiers ajoutés sont les premiers à  être récupérés.</td>
-</tr>
-<tr>
-<td style="text-align: center;">Acronyme du mode associé et signification</td>
-<td style="text-align: center;">LIFO (last in first out)</td>
-<td style="text-align: center;">FIFO (first in first out)</td>
-</tr>
-<tr>
-<td style="text-align: center;">Ce qu’on peut faire avec (méthode)?</td>
-<td style="text-align: center;">On peut empiler, consulter sommet de la  pile, dépiler, vérifier si la pile est vide.</td>
-<td style="text-align: center;">On enfile un élément par la gauche. On défile un élément par la droite. On peut vérifier si la file est vide.</td>
-</tr>
-<tr>
-<td style="text-align: center;">A quoi cela sert ?</td>
-<td style="text-align: center;">Les  processeurs dans les ordinateurs gèrent un système de piles. Une pile est utilisée pour mémoriser les pages visitées dans un navigateur web ;on utilise une pile pour évaluer les expressions mathématiques en notation  polonaise  inverse  (notation sans parenthèses) ; la fonction annuler la  frappe  (<code>ctrl+Z</code>); les algorithmes de recherche en profondeur et algorithmes récursifs utilisent une pile.</td>
-<td style="text-align: center;">Elle sert à traiter les données dans l’ordre dans lequel elles arrivent. Utilisés dans les mécanismes d’attente (système d’impression pour traiter les requêtes dans l’ordre dans lequel elles arrivent)dans les systèmes d’exploitation dans mécanismes d’ordonnancement afin de gérer l’ordre d’exécution des processus; pour gérer les mémoires tampons. Dans les algorithmes de parcours en largeur.</td>
-</tr>
-</tbody>
-</table>
-</details>
-<p>La vidéo évoque le type abstrait (reporté en fin de chapitre). La fin de la vidéo constitue une ouverture sur le type abstrait et des listes chainées et doublement chainées qui sont hors programme.</p>
-<div class="admonition info">
-<p class="admonition-title">Complément</p>
-<p>Ces deux structures bien que différentes par certains aspects, sont utilisées pour stocker des éléments dans la LISTE et effectuer des opérations comme ajouter ou supprimer l’élément d’une LISTE. Dans une PILE on n’utilise qu’un seul pointeur (vers le haut de la PILE), alors que dans une FILE, il en faut deux (un vers la tête et l’autre vers la queue)</p>
-<p>Les PILES sont très utilisées sur les plateformes de streaming musical. Lorsqu’on demande à la plateforme de lire une chanson à la suite, elle ajoute cette dernière, tout en haut de la liste "en attente de lecture".</p>
-<p>Mais si nous voulons accéder non pas aux dernières données ajoutées, mais aux premières, il faut alors utiliser une FILE. Les programmeurs l’utilisent dans des services de commande en ligne (commande de pizza sur Internet) ou dans les plateformes de gestion de la clientèle (le premier à avoir posé une question est le premier servi).</p>
-</div>
-<p><strong>Etape 2 : des méthodes de la PILE à son implémentation en Python avec un tableau</strong></p>
-<p>La PILE est encore une LISTE qui contiendra le même type T de données (que des entiers par exemple).</p>
-<p>Les opérations (ou les méthodes ou interactions avec environnement) sont :</p>
-<ul>
-<li><code>CREER_PILE_VIDE()</code>, qui retourne un objet de type PILE : la PILE existe et est vide</li>
-<li><code>EMPILER(P, e)</code>: l’élément e est placé au sommet de la PILE</li>
-<li><code>DEPILER(P)</code> qui retourne un objet de type T : l’élément situé au sommet de la PILE est retiré de la PILE et est renvoyé.</li>
-<li><code>PILE_VIDE(P)</code>, qui retourne un objet de type booléen  : si la PILE est vide True est renvoyé, sinon False</li>
-<li><code>PILE_PLEINE(P)</code>, qui retourne un objet de type booléen  : si la PILE est pleine True est renvoyé, sinon False</li>
-</ul>
-<p><strong>Exercice d'utilisation d'une PILE</strong></p>
-<p>1) Que donne la liste d'instructions suivante?</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">P</span> <span class="o">=</span> <span class="n">CREER_PILE_VIDE</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">P</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">PILE_VIDE</span><span class="p">(</span><span class="n">P</span><span class="p">))</span>
-
-<span class="n">EMPILER</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">EMPILER</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<span class="n">EMPILER</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">EMPILER</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">P</span><span class="p">)</span>
-
-<span class="n">DEPILER</span><span class="p">(</span><span class="n">P</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">P</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">PILE_VIDE</span><span class="p">(</span><span class="n">P</span><span class="p">))</span>
-</code></pre></div>
-<p>2) Vérifier avec la console ci-dessous (les fonctions sont déjà préchargées, mais non visibles)</p>
-<div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_088133db8a5c4a72d49fa80d5d580cc17df343f2" class="comment">###</span><div class="line" id="editor_088133db8a5c4a72d49fa80d5d580cc17df343f2"></div><div id="term_editor_088133db8a5c4a72d49fa80d5d580cc17df343f2"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_088133db8a5c4a72d49fa80d5d580cc17df343f2","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_088133db8a5c4a72d49fa80d5d580cc17df343f2","scripts/utilisation_PILE")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_088133db8a5c4a72d49fa80d5d580cc17df343f2').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_088133db8a5c4a72d49fa80d5d580cc17df343f2" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_088133db8a5c4a72d49fa80d5d580cc17df343f2")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_088133db8a5c4a72d49fa80d5d580cc17df343f2")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
-<p><span id="content_editor_088133db8a5c4a72d49fa80d5d580cc17df343f2" class="py_mk_hide">#--- HDR ---#bksl-nlbksl-nl# Les Pilesbksl-nlbksl-nldef CREERpy-undPILEpy-undVIDE():bksl-nl    return []bksl-nlbksl-nldef EMPILER(P, e):bksl-nl    P.append(e)bksl-nlbksl-nldef DEPILER(P):bksl-nl    x=P.pop()bksl-nl    return xbksl-nlbksl-nldef PILEpy-undVIDE(P):bksl-nl    if P==[]:bksl-nl        return Truebksl-nl    else:bksl-nl        return Falsebksl-nlbksl-nldef PILEpy-undPLEINE(P):bksl-nl    passbksl-nl#--- HDR ---#bksl-nlbksl-nlP = CREERpy-undPILEpy-undVIDE()bksl-nlprint(P)bksl-nlbksl-nlprint(PILEpy-undVIDE())bksl-nlbksl-nlEMPILER(P, 2)bksl-nlEMPILER(P, 5)bksl-nlEMPILER(P, 3)bksl-nlEMPILER(P, 7)bksl-nlbksl-nlprint(P)bksl-nlbksl-nlDEPILER(P)bksl-nlprint(P)bksl-nlbksl-nlprint(PILEpy-undVIDE())bksl-nl</span><span id="corr_content_editor_088133db8a5c4a72d49fa80d5d580cc17df343f2" class="py_mk_hide" data-strudel=""></span></p>
-<p><strong>A</strong></p>
-<p><strong>Z</strong></p>
-<p>Si on choisit de représenter la PILE par un tableau, sa première case, d’index 0 contiendra l’indice (ou position) de la prochaine case vide et donc l’indice du prochain élément à insérer. Ensuite chaque élément inséré sera repéré par son index. Le sommet de la PILE correspond à la dernière case non vide du tableau.</p>
-<p>Un exemple pour fixer les idées : </p>
-<p>On part d’un tableau de 11 cases donc qui pourra accueillir les <span class="arithmatex">\(n=10\)</span> éléments d’une PILE :</p>
-<p><img alt="" class="center" src="../images/tab3.JPG" /></p>
-<p><strong>Exercice 4</strong></p>
-<p>Remplir les tableaux suivants. On grise les cases où l’empilement est possible.</p>
-<p><img alt="" class="center" src="../images/tab4.JPG" /></p>
-<details class="note">
-<summary>Correction</summary>
-<p><img alt="" src="../images/Exercice4_Correction.JPG" /></p>
-</details>
-<p><strong>Remarque</strong> : on voit qu’il est inutile de « vider » la case lorsqu’on dépile, la valeur dépilée sera écrasée à l’empilement suivant.</p>
-<p><strong>Exercice 5</strong></p>
-<p>On part d’une PILE vide, à 4 cases donc pouvant accueillir 3 éléments : </p>
-<p><code>PILE = [1, None, None, None]</code></p>
-<ul>
-<li>Objectif 1 : écrire une fonction qui affiche les éléments de la PILE, sous forme d’une PILE.</li>
-<li>Objectif 2 : écrire une fonction qui empile. Attention on ne peut empiler que si la PILE n’est pas pleine.</li>
-<li>Objectif 3 : écrire une fonction qui dépile. Attention on ne peut dépiler que si la PILE n’est pas vide.</li>
-</ul>
-<p>1) Complétez le programme suivant.</p>
-<div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_09ac398f48968e83fa01e91eceea3fe1aca68713" class="comment">###</span><div class="line" id="editor_09ac398f48968e83fa01e91eceea3fe1aca68713"></div><div id="term_editor_09ac398f48968e83fa01e91eceea3fe1aca68713"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_09ac398f48968e83fa01e91eceea3fe1aca68713","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_09ac398f48968e83fa01e91eceea3fe1aca68713","scripts/exercice5")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_09ac398f48968e83fa01e91eceea3fe1aca68713').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_09ac398f48968e83fa01e91eceea3fe1aca68713" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_09ac398f48968e83fa01e91eceea3fe1aca68713")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_09ac398f48968e83fa01e91eceea3fe1aca68713")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
-<p><span id="content_editor_09ac398f48968e83fa01e91eceea3fe1aca68713" class="py_mk_hide">"""bksl-nlCe module contient les fonctions :bksl-nl- AFFICHER : fonction afficher la pile verticalement , sans l'element d'index 0bksl-nl- EMPILER : fonction qui empile l'element e dans la pile Pbksl-nl- DEPILER : fonction qui depile dans la pile Pbksl-nl"""bksl-nlbksl-nl#objectif 1: fonction qui affiche sous forme d’une pile, les elements de la pile P, excepte celui d'index 0bksl-nldef AFFICHER(P):bksl-nl    """bksl-nl    Cette fonction permet d'afficher les éléments d'une pile verticalement à partir de l'indice 1bksl-nl    param : L(list)bksl-nl    return msg(str)bksl-nl    Exemples :bksl-nl    &gt;&gt;&gt; print(AFFICHER([5, 1, 5, 4, 16, None, None, None ,None, None, None]))bksl-nl    Pile :bksl-nl    16bksl-nl    4bksl-nl    5bksl-nl    1bksl-nl    """ bksl-nl    bksl-nl    msg=f"Pile : \n"bksl-nl    ...bksl-nl    ...bksl-nl    return ...bksl-nlbksl-nl#objectif 2:fonction qui empile l'element e dans la pile Pbksl-nldef EMPILER(P, e):bksl-nl    """bksl-nl    Cette fonction permet d'empiler l'élement e dans la pile Pbksl-nl    param : L(list)bksl-nl            e(float)bksl-nl    return : msg(str)bksl-nl    Exemples :bksl-nl    &gt;&gt;&gt; EMPILER([5, 1, 5, 4, 16], 2)bksl-nl    'la pile est pleine'bksl-nl    &gt;&gt;&gt; EMPILER([5, 1, 5, 4, 16, None], 2)bksl-nl    'element empiler : 2'bksl-nl    """bksl-nl    bksl-nl    # test si on peut empilerbksl-nl    if ...:bksl-nl        msg = 'la pile est pleine'bksl-nl    else:bksl-nl        # empiler l'element ebksl-nl        ...bksl-nl        #mise a jour de la prochaine position disponiblebksl-nl        ...bksl-nl        msg = f"element empiler : {e}"bksl-nl    return ...bksl-nlbksl-nl #objectif 3: fonction qui depile dans la pile Pbksl-nldef DEPILER(P):bksl-nl    """bksl-nl    Cette fonction permet de dépiler la pile Pbksl-nl    param : L(list)bksl-nl    return : msg(str)bksl-nl    Exemples :bksl-nl    &gt;&gt;&gt; DEPILER([1, None, None, None, None, None, None])bksl-nl    'la pile est vide'bksl-nl    &gt;&gt;&gt; DEPILER([5, 1, 5, 4, 16, None, None, None, None, None, None])bksl-nl    'element dépilé : 16'bksl-nl    """bksl-nl    bksl-nl    # test si on peut depilerbksl-nl    if ...:bksl-nl        msg = 'la pile est vide'bksl-nl    else:bksl-nl        # mise a jour de la prochaine position disponiblebksl-nl        ...bksl-nl        # depiler et renvoyer l'element retirebksl-nl        ...bksl-nl        msg = f"element dépilé : {eltpy-unddepile}"bksl-nl    return msgbksl-nl</span><span id="corr_content_editor_09ac398f48968e83fa01e91eceea3fe1aca68713" class="py_mk_hide" data-strudel=""></span></p>
-<p><strong>A</strong></p>
-<p><strong>Z</strong></p>
-<p>2) Testez ce programme avec Doctest.</p>
-<details class="note">
-<summary>Correction</summary>
-<p>Code Capytale : <code>cdcd-775263</code></p>
-</details>
-<p><strong>Etape 3 : des méthodes de la FILE à son implémentation sous forme d’un tableau.</strong></p>
-<p>La FILE est encore une LISTE qui contiendra le même type T de données (que des entiers par exemple).</p>
-<p>Les opérations (ou les méthodes ou interactions avec environnement) sont :</p>
-<ul>
-<li><code>CREER_FILE_VIDE()</code>, qui retourne un objet de type FILE : la FILE existe et est vide</li>
-<li><code>ENFILER(F, e)</code>: l’élément e est enfilé en queue de FILE</li>
-<li><code>DEFILER(F)</code> qui retourne un objet de type T : l’élément situé à la tête de la FILE est retiré de la FILE et est renvoyé.</li>
-<li><code>FILE_VIDE(F)</code>, qui retourne un objet de type booléen  : si la FILE est vide True est renvoyé, sinon False</li>
-<li><code>FILE_PLEINE(F)</code>, qui retourne un objet de type booléen  : si la FILE est pleine True est renvoyé, sinon False</li>
-</ul>
-<p><strong>Exercice d'utilisation d'une FILE</strong></p>
-<p>1) Que donne la liste d'instructions suivante?</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">F</span> <span class="o">=</span> <span class="n">CREER_FILE_VIDE</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">FILE_VIDE</span><span class="p">(</span><span class="n">F</span><span class="p">))</span>
-
-<span class="n">ENFILER</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">ENFILER</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<span class="n">ENFILER</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">ENFILER</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
-
-<span class="n">DEFILER</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">FILE_VIDE</span><span class="p">(</span><span class="n">F</span><span class="p">))</span>
-</code></pre></div>
-<p>2) Vérifier avec la console ci-dessous (les fonctions sont déjà préchargées, mais non visibles)</p>
-<div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_7cb006810350806a5f84e3e7fc57b4e12232e423" class="comment">###</span><div class="line" id="editor_7cb006810350806a5f84e3e7fc57b4e12232e423"></div><div id="term_editor_7cb006810350806a5f84e3e7fc57b4e12232e423"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_7cb006810350806a5f84e3e7fc57b4e12232e423","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_7cb006810350806a5f84e3e7fc57b4e12232e423","scripts/utilisation_FILE")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_7cb006810350806a5f84e3e7fc57b4e12232e423').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_7cb006810350806a5f84e3e7fc57b4e12232e423" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_7cb006810350806a5f84e3e7fc57b4e12232e423")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_7cb006810350806a5f84e3e7fc57b4e12232e423")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
-<p><span id="content_editor_7cb006810350806a5f84e3e7fc57b4e12232e423" class="py_mk_hide">#--- HDR ---#bksl-nlbksl-nl# Les Filesbksl-nlbksl-nldef CREERpy-undFILEpy-undVIDE():bksl-nl    return []bksl-nlbksl-nldef ENFILER(P, e):bksl-nl    P.insert(0,e)bksl-nlbksl-nldef DEFILER(P):bksl-nl    x=P.pop()bksl-nl    return xbksl-nlbksl-nldef FILEpy-undVIDE(P):bksl-nl    if P==[]:bksl-nl        return Truebksl-nl    else:bksl-nl        return Falsebksl-nlbksl-nldef FILEpy-undPLEINE(P):bksl-nl    passbksl-nl#--- HDR ---#bksl-nlbksl-nlF = CREERpy-undFILEpy-undVIDE()bksl-nlprint(F)bksl-nlbksl-nlprint(FILEpy-undVIDE())bksl-nlbksl-nlEMFILER(F, 2)bksl-nlEMFILER(F, 5)bksl-nlEMFILER(F, 3)bksl-nlEMFILER(F, 7)bksl-nlbksl-nlprint(F)bksl-nlbksl-nlDEFILER(F)bksl-nlprint(F)bksl-nlbksl-nlprint(FILEpy-undVIDE())bksl-nl</span><span id="corr_content_editor_7cb006810350806a5f84e3e7fc57b4e12232e423" class="py_mk_hide" data-strudel=""></span></p>
-<p><strong>A</strong></p>
-<p><strong>Z</strong></p>
-<p>Si on choisit de représenter la FILE par un tableau, sa première case, d’index 0 contiendra l’indice de la tête de la FILE ; la deuxième contiendra l’indice de la queue de la FILE et la troisième contiendra le nombre d’éléments présents dans la FILE.</p>
-<p>Ensuite chaque élément inséré sera repéré par son index.</p>
-<p>Un exemple pour fixer les idées : </p>
-<p>On part d’un tableau de 11 cases donc qui pourra accueillir les n=8 éléments d’une FILE :</p>
-<p><img alt="" class="center" src="../images/tab5.JPG" /></p>
-<p>Chaque fois qu’un élément est enfilé, la queue et la taille augmente chacune d’une unité.</p>
-<p>Chaque fois qu’un élément est défilé, la taille diminue d’une unité et la tête augmente d’une unité.</p>
-<p>Lorsque la tête ou la queue dépasse la longueur du tableau, on repart au début du tableau (gestion circulaire du tableau)</p>
-<p><strong>Exercice 6</strong></p>
-<p>Pour comprendre, remplir les tableaux suivants. On grise les espaces dans lesquelles les valeurs pourront être enfilées.</p>
-<p><img alt="" class="center" src="../images/tab6.JPG" /></p>
-<details class="note">
-<summary>Correction</summary>
-<p><img alt="" src="../images/Exercice6_Correction.JPG" /></p>
-</details>
-<p><strong>Remarque :</strong> lorsqu’on défile, la case n’est pas vidée. Son contenu sera écrasé lorsqu’un prochain élément sera enfilé.</p>
-<p><strong>Exercice 7</strong></p>
-<p>On part d’une FILE vide, soit un tableau à 6 cases donc pouvant accueillir 3 éléments : </p>
-<p><code>FILE = [3, 3, 0, None, None, None]</code></p>
-<ul>
-<li>Objectif 1 : écrire une fonction qui affiche tous les éléments du tableau, y compris la tête, la queue et la taille</li>
-<li>Objectif 2 : écrire une fonction qui enfile. Attention on ne peut enfiler que si la FILE n’est pas pleine.</li>
-<li>Objectif 3 : écrire une fonction qui défile. Attention on ne peut défiler que si la FILE n’est pas vide.</li>
-</ul>
-<p>1) Complétez le programme ci-dessous.</p>
-<div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_78680ca9f83f194104b0302efa3d7510d3dc9785" class="comment">###</span><div class="line" id="editor_78680ca9f83f194104b0302efa3d7510d3dc9785"></div><div id="term_editor_78680ca9f83f194104b0302efa3d7510d3dc9785"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_78680ca9f83f194104b0302efa3d7510d3dc9785","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_78680ca9f83f194104b0302efa3d7510d3dc9785","scripts/exercice7")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_78680ca9f83f194104b0302efa3d7510d3dc9785').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_78680ca9f83f194104b0302efa3d7510d3dc9785" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_78680ca9f83f194104b0302efa3d7510d3dc9785")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_78680ca9f83f194104b0302efa3d7510d3dc9785")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
-<p><span id="content_editor_78680ca9f83f194104b0302efa3d7510d3dc9785" class="py_mk_hide">"""bksl-nlCe module contient les fonctions :bksl-nl- AFFICHER : fonction afficher la file , sans les elements d'index 0 et 1bksl-nl- ENFILER : fonction qui enfile l'element e dans la file Fbksl-nl- DEFILER : fonction qui defile dans la file Fbksl-nl"""bksl-nlbksl-nlbksl-nl#objectif 1: fonction qui affiche le tableau completbksl-nldef AFFICHERpy-undtableau(F):bksl-nl    """bksl-nl    Cette fonction permet d'afficher les éléments d'une pile à partir de l'indice 3bksl-nl    param : F(list)bksl-nl    return msg(str)bksl-nl    Exemples :bksl-nl    &gt;&gt;&gt; print(AFFICHERpy-undtableau([3,5,2,4,16,None,None]))bksl-nl    FILE : 4 16 None None bksl-nl    """   bksl-nl    bksl-nl    msg = f'FILE : 'bksl-nl    ...bksl-nl    ...bksl-nl    return ...bksl-nlbksl-nl#objectif 2:fonction qui enfile l'element e dans la file Fbksl-nldef ENFILER(F, e):bksl-nl    """bksl-nl    Cette fonction permet d'enfiler l'élement e dans la file Fbksl-nl    param : F(list)bksl-nl            e(float)bksl-nl    return : msg(str)bksl-nl    Exemples :bksl-nl    &gt;&gt;&gt; ENFILER([3, 3, 2, 4, 16], 2)bksl-nl    'la file est pleine'bksl-nl    &gt;&gt;&gt; ENFILER([3, 5, 2, 4, 16, None, None], 2)bksl-nl    'élément enfilé : 2'bksl-nl    &gt;&gt;&gt; ENFILER([3, 5, 2, 5, 10, None], 2)bksl-nl    'retour au debut, élément enfilé : 2'bksl-nl    """bksl-nl    bksl-nl    msg = ""bksl-nl    # test si on peut enfilerbksl-nl    if ...:bksl-nl        msg = 'la file est pleine'bksl-nl    else : bksl-nl        # enfiler l'element e dans la filebksl-nl        ...bksl-nl        # test si on doit retourner au debutbksl-nl        if ...:bksl-nl            ...bksl-nl            msg = 'retour au debut, 'bksl-nl        else:bksl-nl            # mise a jour de la position de la place prochaine place disponiblebksl-nl            ...bksl-nl        # mise a jour du nombre d'elements dans la filebksl-nl        ...bksl-nl        msg = msg + f"élément enfilé : {e}"bksl-nl    return ....bksl-nlbksl-nlbksl-nl#objectif 3: fonction qui defile dans la file Fbksl-nldef DEFILER(F):bksl-nl    """bksl-nl    Cette fonction permet de défiler la file Fbksl-nl    param : F(list)bksl-nl    return : msg(str)bksl-nl    Exemples :bksl-nl    &gt;&gt;&gt; DEFILER([2, 2, 0, None, None, None, None])bksl-nl    'la file est vide'bksl-nl    &gt;&gt;&gt; DEFILER([3, 5, 2, 4, 16, None, None])bksl-nl    'élément retiré : 4'bksl-nl    &gt;&gt;&gt; DEFILER([3, 3, 1, 5, 10, 15])bksl-nl    'élément retiré : 5'bksl-nl    """bksl-nl    bksl-nl    msg = ""bksl-nl    # test si on peut defilerbksl-nl    if ...:bksl-nl        msg = 'la file est vide'bksl-nl    else :bksl-nl        # defiler et renvoyer l'element retirebksl-nl        ...bksl-nl        # mise à jour de la têtebksl-nl            ...bksl-nl        # mise a jour du nombre d'elements dans la filebksl-nl        ...bksl-nl        msg = msg + f"élément retiré : {eltpy-undretire}"bksl-nl    return ...bksl-nl</span><span id="corr_content_editor_78680ca9f83f194104b0302efa3d7510d3dc9785" class="py_mk_hide" data-strudel=""></span></p>
-<p><strong>A</strong></p>
-<p><strong>Z</strong></p>
-<p>2) Testez-le.</p>
-<details class="note">
-<summary>Correction</summary>
-<p>Code Capytale : <code>5ee6-775379</code></p>
-</details>
-<h2 id="les-dictionnaires">Les dictionnaires<a class="headerlink" href="#les-dictionnaires" title="Permanent link">⚓︎</a></h2>
-<p>Les dictionnaires sont comme les listes, des objets structurés pouvant contenir d’autres objets. Mais contrairement aux listes, dans un dictionnaire, les données ne sont pas stockées dans un ordre précis. Donc pour accéder à un objet, on utilise une clé à la place d’un indice.</p>
-<p>Avantage du dictionnaire sur la liste : lors de la recherche d’une valeur, inutile de parcourir une liste, on la trouve grâce à la clé. Inconvénient, pour ajouter des paires au dictionnaire il faut prévoir plus de mémoire potentiellement inutilisée.</p>
-<p>Les dictionnaires existent nativement dans Python, il est donc inutile de les implémenter ; toutefois dans d’autres langages, on pourrait être amené à le faire. Auquel cas il faut définir les méthodes de la classe dictionnaire :</p>
-<ul>
-<li><code>CREER_DICO_VIDE()</code> : qui retourne un objet dictionnaire, le dictionnaire existe et il est vide.</li>
-<li><code>INSERER(D, cle, valeur)</code> : qui insère la paire clé-valeur dans le dictionnaire</li>
-<li><code>SUPPRIMER(D, cle)</code> : qui supprime la paire clé-valeur dans le dictionnaire, lorsque la clé est supprimée, la valeur l’est aussi automatiquement.</li>
-<li><code>LIRE(D, cle)</code> : qui retourne un objet de même type que celui de la valeur.</li>
-<li><code>RECHERCHER(D, cle)</code> : qui retourne un objet de type booléen, True si clé présente dans le dictionnaire et False si clé absente.</li>
-</ul>
-<h2 id="comment-choisir-une-structure-de-donnees-adaptee-a-la-situation-a-modeliser">Comment choisir une structure de données adaptée à la situation à modéliser ?<a class="headerlink" href="#comment-choisir-une-structure-de-donnees-adaptee-a-la-situation-a-modeliser" title="Permanent link">⚓︎</a></h2>
-<p><strong>Exercice 8</strong></p>
-<p>Nommer la structure de données qui convient pour chaque situation ci-dessous : </p>
-<ol>
-<li>Représenter un répertoire téléphonique.</li>
-<li>Stocker l’historique des actions effectuées dans un logiciel et disposer d’une commande Annuler (ou Undo).</li>
-<li>Envoyer des fichiers au serveur d’impression.</li>
-</ol>
-<details class="note">
-<summary>Correction</summary>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>a. dictionnaire
-b. pile
-c. file
-</code></pre></div>
-</details>
-<div class="admonition note">
-<p class="admonition-title">A Noter</p>
-<p>Il est aisé de reconnaître l’outil adapté mais pourquoi est-il le mieux adapté?</p>
-<p>En organisant d'une certaine manière les données, on permet un traitement automatique de ces dernières plus efficace et rapide.</p>
-<p>Le fait d'utiliser une structure de données appropriée à un traitement informatique peut également faire baisser de manière significative la complexité d'une application informatique et ainsi contribuer à diminuer le taux d'erreurs.</p>
-<p>En plus de manipuler l'information, il faut aussi la stocker. La manière dont on organise cette information stockée peut avoir des conséquences très importantes sur leur manipulation.</p>
-<p>La performance est quantifiée par la notion de complexité (rien à voir avec difficulté) déjà abordée en première pour les algorithmes de recherche et de tris.</p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Rappels</p>
-<p>Vidéo à regarder pour revoir la notion de complexité et voir le lien entre la complexité et les structures de données à utiliser : 
-<iframe title="eca60635-980a-4883-96d3-ee42aea020fd-360" src="https://tube-sciences-technologies.apps.education.fr/videos/embed/9a6d40ee-d8fb-4756-93b5-96bf53eb6d1d" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" width="560" height="315" frameborder="0"></iframe></p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">En Résumé</p>
-<p>Si un algorithme est une recette de cuisine (succession d’étapes à réaliser, plus ou moins difficiles et plus ou moins longues), la complexité de l’algorithme correspond à la difficulté des étapes, le nombre de réalisation et leur temps de réalisation. 
-Dans le cas du traitement des données, la complexité est liée à l’espace de stockage (mémoire) le temps de traitement (par le processeur) et le nombre de ces données.</p>
-</div>
-<p>Les complexités et leur représentation graphique :</p>
-<p><img alt="" class="center" src="../images/tab7.JPG" /></p>
-<p>Tableau résumé des complexités pour les différentes structures abordées :</p>
-<p><img alt="" class="center" src="../images/tab8.JPG" /></p>
-<h2 id="comment-distinguer-les-structures-par-le-jeu-des-methodes-qui-les-caracterisent">Comment distinguer les structures ? … par le jeu des méthodes qui les caractérisent<a class="headerlink" href="#comment-distinguer-les-structures-par-le-jeu-des-methodes-qui-les-caracterisent" title="Permanent link">⚓︎</a></h2>
-<p>Tableau résumé des méthodes de la liste, de la pile, de la file et du dictionnaire</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">classe</th>
-<th style="text-align: left;">LISTE</th>
-<th style="text-align: left;">PILE</th>
-<th style="text-align: left;">FILE</th>
-<th style="text-align: left;">dictionnaire</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Méthodes</strong></td>
-<td style="text-align: left;">CREER_LISTE_VIDE()</td>
-<td style="text-align: left;">CREER_PILE_VIDE()</td>
-<td style="text-align: left;">CREER_FILE_VIDE()</td>
-<td style="text-align: left;">CREER_DICO_VIDE()</td>
-</tr>
-<tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">INSERER(L,indice,element)</td>
-<td style="text-align: left;">EMPILER(P,element)</td>
-<td style="text-align: left;">ENFILER(F,element)</td>
-<td style="text-align: left;">INSERER(D, cle, valeur)</td>
-</tr>
-<tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">SUPPRIMER(L,indice)</td>
-<td style="text-align: left;">DEPILER(P)</td>
-<td style="text-align: left;">DEFILER(F)</td>
-<td style="text-align: left;">SUPPRIMER(D, cle)</td>
-</tr>
-<tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">RECHERCHER(L,element)</td>
-<td style="text-align: left;">PILE_VIDE(P)</td>
-<td style="text-align: left;">FILE_VIDE(F)</td>
-<td style="text-align: left;">LIRE(D, cle)</td>
-</tr>
-<tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">LIRE(L,indice)</td>
-<td style="text-align: left;">PILE_PLEINE(P)</td>
-<td style="text-align: left;">FILE_PLEINE(F)</td>
-<td style="text-align: left;">RECHERCHER(D, cle)</td>
-</tr>
-<tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">MODIFIER(L,indice,element)</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">LONGUEUR(L)</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
-<p>On rend compte d’un jeu de méthodes spécifiques à chaque classe. C’est pour cela qu’on peut qualifier d’abstraite, chacune de ces structures de données.</p>
-<h2 id="structures-de-donnees-interface-et-implementation">Structures de données, interface et implémentation<a class="headerlink" href="#structures-de-donnees-interface-et-implementation" title="Permanent link">⚓︎</a></h2>
-<p>Dans les parties précédentes, nous avons choisi le tableau pour représenter, la LISTE, la PILE et la FILE. L’objectif de l’activité suivante est de réinvestir ce qui a été vu dans la programmation objet  et de montrer que l’on peut implémenter différemment une même structure de données : la FILE.</p>
-<p><strong>Objectif final : implémenter une FILE avec deux PILES</strong></p>
-<p>Pour alléger l’implémentation et réinvestir le vocabulaire de la programmation objet, on décompose la tâche en plusieurs étapes.</p>
-<p><strong>Etape 1 :</strong></p>
-<p>On crée la classe PILE avec les méthodes rappelées ci-dessus. </p>
-<p><strong>Exercice 9</strong> </p>
-<p>1) Parcourir le programme implémenté et indiquer ce que l’on obtient lorsqu’on effectue les tests.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">Pile</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">set_n</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-        <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_n</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">PILE</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">TaillePILE</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">Queue</span> <span class="o">=</span> <span class="mi">1</span>
-        
-    <span class="k">def</span> <span class="nf">set_n</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nouveau_n</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">n</span> <span class="o">=</span> <span class="n">nouveau_n</span>
-        
-    <span class="k">def</span> <span class="nf">get_n</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">n</span>
-    
-    
-    <span class="k">def</span> <span class="nf">PILE_VIDE</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">Queue</span> <span class="o">==</span> <span class="mi">1</span>
-    
-    <span class="k">def</span> <span class="nf">PILE_PLEINE</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">Queue</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">TaillePILE</span>
-    
-    <span class="k">def</span> <span class="nf">EMPILER</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">PILE_PLEINE</span><span class="p">():</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;la pile est pleine&#39;</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">PILE</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">Queue</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">Queue</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Queue</span> <span class="o">+</span> <span class="mi">1</span>
-        <span class="k">return</span> <span class="n">msg</span>
-        
-    <span class="k">def</span> <span class="nf">DEPILER</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">PILE_VIDE</span><span class="p">():</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;la pile est vide&#39;</span>
-            <span class="k">return</span> <span class="n">msg</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">Queue</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Queue</span> <span class="o">-</span> <span class="mi">1</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">PILE</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">Queue</span><span class="p">]</span>
-    
-    <span class="k">def</span> <span class="nf">AFFICHER_PILE</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;PILE :</span><span class="se">\n</span><span class="s2"> &quot;</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Queue</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">PILE</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">&quot;</span>
-        <span class="k">return</span> <span class="n">msg</span>    
-        
-<span class="c1"># zone de tests de la pile</span>
-<span class="n">MAPILE</span><span class="o">=</span><span class="n">Pile</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">EMPILER</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">AFFICHER_PILE</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">EMPILER</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">AFFICHER_PILE</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">EMPILER</span><span class="p">(</span><span class="mi">15</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">AFFICHER_PILE</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">EMPILER</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">AFFICHER_PILE</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">DEPILER</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">AFFICHER_PILE</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">EMPILER</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">AFFICHER_PILE</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">DEPILER</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">AFFICHER_PILE</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">DEPILER</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">AFFICHER_PILE</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">DEPILER</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">AFFICHER_PILE</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">DEPILER</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">AFFICHER_PILE</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">EMPILER</span><span class="p">(</span><span class="mi">25</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAPILE</span><span class="o">.</span><span class="n">AFFICHER_PILE</span><span class="p">())</span>
-</code></pre></div>
-<p>2) Implémenter ce programme sur Python et vérifier vos résultats de la question 1)</p>
-<div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000034" class="comment">###</span><div class="line" id="editor_00000034"></div><div id="term_editor_00000034"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000034","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000034","")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000034').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000034" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000034")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000034")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
-<p><span id="content_editor_00000034" class="py_mk_hide"></span><span id="corr_content_editor_00000034" class="py_mk_hide" data-strudel=""></span></p>
-<details class="note">
-<summary>Correction</summary>
-<p>Code Capytale : <code>7407-775471</code></p>
-</details>
-<p><strong>Etape 2 :</strong></p>
-<p>On crée la classe FILE à partir de deux PILES a et b. La PILE a est une zone de remplissage de la FILE. La PILE b est une zone de suppression de la FILE. Lorsqu’on veut enfiler un élément dans la FILE, on l’empile dans la PILE a. Lorsqu’on veut défiler la FILE, il faut dépiler la PILE a dans la PILE b puis dépiler la PILE b.</p>
-<p>Soit par exemple deux PILES pouvant contenir 3 éléments chacune, et la FILE pourra en contenir 3. La FILE est initialement vide. On montre le fonctionnement ci-dessous.</p>
-<p><img alt="" class="center" src="../images/tab9.JPG" /></p>
-<div class="admonition note">
-<p class="admonition-title">Remarque</p>
-<p>Il faut dépiler complètement b avant de dépiler a dans b.</p>
-</div>
-<p><strong>Exercice 10</strong></p>
-<p>1) Parcourir le programme et indiquer ce qui est renvoyé lorsqu’on effectue les tests.</p>
-<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">class</span> <span class="nc">File</span><span class="p">:</span>
-<span class="c1">#Definition d&#39;une file a l&#39;aide de deux piles</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">set_n</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-        <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_n</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-        
-    <span class="k">def</span> <span class="nf">set_n</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nouveau_n</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">n</span> <span class="o">=</span> <span class="n">nouveau_n</span>
-        
-    <span class="k">def</span> <span class="nf">get_n</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">n</span>
-    
-    <span class="k">def</span> <span class="nf">FILE_VIDE</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">PILE_VIDE</span><span class="p">()</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">PILE_VIDE</span><span class="p">()</span>
-    
-    <span class="k">def</span> <span class="nf">FILE_PLEINE</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">PILE_PLEINE</span><span class="p">()</span>
-    
-    <span class="k">def</span> <span class="nf">ENFILER</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">FILE_PLEINE</span><span class="p">():</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;la file est pleine&#39;</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">EMPILER</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;élément enfilé : </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span>
-        <span class="k">return</span> <span class="n">msg</span>
-            
-    <span class="k">def</span> <span class="nf">DEFILER</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">FILE_VIDE</span><span class="p">():</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;la file est vide&#39;</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">PILE_VIDE</span><span class="p">():</span>
-                <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">PILE_VIDE</span><span class="p">():</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">EMPILER</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">DEPILER</span><span class="p">())</span>
-            <span class="n">elt_retire</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">DEPILER</span><span class="p">()</span>
-            <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;élément retiré : </span><span class="si">{</span><span class="n">elt_retire</span><span class="si">}</span><span class="s2">&quot;</span>
-        <span class="k">return</span> <span class="n">msg</span>
-    
-    <span class="k">def</span> <span class="nf">AFFICHER_FILE</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ZONE POUR EMPILAGE&#39;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">AFFICHER_PILE</span><span class="p">())</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ZONE POUR DEPILAGE&#39;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">AFFICHER_PILE</span><span class="p">())</span> 
-        
-<span class="c1"># zone de tests de la file</span>
-<span class="n">MAFILE</span><span class="o">=</span><span class="n">File</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">ENFILER</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">AFFICHER_FILE</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">ENFILER</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">AFFICHER_FILE</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">ENFILER</span><span class="p">(</span><span class="mi">15</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">AFFICHER_FILE</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">ENFILER</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">AFFICHER_FILE</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">DEFILER</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">AFFICHER_FILE</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">DEFILER</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">AFFICHER_FILE</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">DEFILER</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">AFFICHER_FILE</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">DEFILER</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">AFFICHER_FILE</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">ENFILER</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">MAFILE</span><span class="o">.</span><span class="n">AFFICHER_FILE</span><span class="p">())</span>
-</code></pre></div>
-2) Implémenter ce programme sur Python et vérifier vos résultats de la question 1)</p>
-<div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000035" class="comment">###</span><div class="line" id="editor_00000035"></div><div id="term_editor_00000035"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000035","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000035","")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000035').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000035" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000035")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000035")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div>
-<p><span id="content_editor_00000035" class="py_mk_hide"></span><span id="corr_content_editor_00000035" class="py_mk_hide" data-strudel=""></span></p>
-<details class="note">
-<summary>Correction</summary>
-<p>Code Capytale : <code>b04c-775506</code></p>
-</details>
-<p>On a donc implémenté différemment une même structure de données</p>
-<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">⚓︎</a></h2>
-<p>Pour une même spécification, plusieurs implémentations concrètes peuvent exister. Cette notion de spécification et implémentation existe aussi pour les algorithmes en général, nous avons par exemple vu que plusieurs algorithmes de tri existent (leur spécification, « trier la liste qui leur est passée en argument », étant commune).</p>
-<p>En général, il existe plusieurs manières de représenter ces données et plusieurs implémentations de leur manipulation.
-De manière générale, on définit une interface, ou spécification, d’une structure de données.</p>
-<p>L'interface sera définie dans un type de données abstrait (TDA). Il spécifie précisément la nature et les propriétés des données à stocker et les modalités des opérations.</p>
-<p>En informatique, une structure de données est une manière d'organiser les données pour les traiter plus facilement. Une structure de données est une mise en œuvre concrète d'un type abstrait.</p>
-<p>Le type abstrait de données = représentation logique qui définit le comportement ; que l’on différencie de la réalisation concrète et physique avec utilisation de la mémoire, qu’on appelle implémentation.</p>
-<p>En Python, l’interface et l’implémentation sont en général mêlés dans le même fichier. L’interface est tout ce dont on  a besoin de connaître pour écrire un programme utilisant la classe. L’implémentation est nécessaire à l’ordinateur pour l’exécution du programme.</p>
+<p>Nous verrons dans ce chapitre l'exemple de la <strong>LISTE</strong>, dont la <strong>PILE</strong> et la <strong>FILE</strong> en sont des sous-exemple avec des opérations restreintes.</p>
 
 
 
@@ -4727,13 +4150,13 @@ De manière générale, on définit une interface, ou spécification, d’une st
         
         
           
-          <a href="../arbre/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Données en arbres">
+          <a href="liste/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Listes">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Suivant
               </span>
               <div class="md-ellipsis">
-                Données en arbres
+                Listes
               </div>
             </div>
             <div class="md-footer__button md-icon">

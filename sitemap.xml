@@ -1071,6 +1071,26 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/lineaire/conclu/</loc>
+         <lastmod>2024-01-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/lineaire/interface/</loc>
+         <lastmod>2024-01-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/lineaire/liste/</loc>
+         <lastmod>2024-01-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nsi.lycee-experimental.org/data/structure/lineaire/pileFile/</loc>
+         <lastmod>2024-01-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://nsi.lycee-experimental.org/data/tables/</loc>
          <lastmod>2024-01-14</lastmod>
          <changefreq>daily</changefreq>
