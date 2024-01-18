@@ -4176,18 +4176,11 @@ Le script ci-dessous crée par exemple la liste des éléments entre <code class
 </li>
 <li>
 <p>La liste des lettres de <code class="highlight"><span class="s2">&quot;python&quot;</span></code> en majuscule :</p>
-<p>```pycon</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>[lettre.upper() for lettre in "python"]
-['P', 'Y', 'T', 'H', 'O', 'N']</p>
-</blockquote>
-</blockquote>
-</blockquote>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">lettre</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="s2">&quot;python&quot;</span><span class="p">]</span>
+<span class="go">[&#39;P&#39;, &#39;Y&#39;, &#39;T&#39;, &#39;H&#39;, &#39;O&#39;, &#39;N&#39;]</span>
+</code></pre></div>
 </li>
 </ul>
-<p>```</p>
 </div>
 <details class="question">
 <summary>Activité 1 - Comment faire ?</summary>
@@ -4292,8 +4285,8 @@ Le script ci-dessous crée par exemple la liste des éléments entre <code class
 <li><code class="highlight"><span class="n">condition</span></code> est une expression renvoyant un booléen (<code class="highlight"><span class="kc">True</span></code> ou <code class="highlight"><span class="kc">False</span></code>).</li>
 </ul>
 </div>
-<details class="example">
-<summary>Exemples</summary>
+<div class="admonition example">
+<p class="admonition-title">Exemples</p>
 <ul>
 <li>
 <p>Les entiers pairs entre <code class="highlight"><span class="mi">0</span></code> et <code class="highlight"><span class="mi">10</span></code> :</p>
@@ -4331,20 +4324,13 @@ Le script ci-dessous crée par exemple la liste des éléments entre <code class
 </li>
 <li>
 <p>Les fleurs débutants par <code class="highlight"><span class="s2">&quot;A&quot;</span></code> ou dont le nom comporte moins de <code class="highlight"><span class="mi">4</span></code> caractères :</p>
-<p>```pycon</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>fleurs = ("Arum", "Rose", "Azalée", "aster")
-[f for f in fleurs if f[0] == "A" or len(f) &lt;= 4]
-["Arum", "Rose", "Azalée"]</p>
-</blockquote>
-</blockquote>
-</blockquote>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">fleurs</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Arum&quot;</span><span class="p">,</span> <span class="s2">&quot;Rose&quot;</span><span class="p">,</span> <span class="s2">&quot;Azalée&quot;</span><span class="p">,</span> <span class="s2">&quot;aster&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">fleurs</span> <span class="k">if</span> <span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;A&quot;</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">4</span><span class="p">]</span>
+<span class="go">[&quot;Arum&quot;, &quot;Rose&quot;, &quot;Azalée&quot;]</span>
+</code></pre></div>
 </li>
 </ul>
-<p>```</p>
-</details>
+</div>
 <details class="question">
 <summary>Activité 4 - Qui fait quoi ?</summary>
 <p>On considère la liste nombres définie par <code class="highlight"><span class="n">nombres</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">)]</span></code>.</p>

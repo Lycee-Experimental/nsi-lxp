@@ -9,7 +9,7 @@ liste_B = [10, 11, 12, 13]
 cinquante_toto = ["Toto"] * 50
 
 greetings = []
-# Ajouter successivement les valeurs "Hello" et "World" à salutations
+# Ajouter successivement les valeurs "Hello" et "World" à greetings
 greetings.append("Hello")
 greetings.append("World")
 
