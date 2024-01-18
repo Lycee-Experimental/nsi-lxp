@@ -1,6 +1,6 @@
 # Traitement et visualisation des données
 
-Ce chapitre est une introduction au traitement et à à l'analyse des données, domaine communément appelé **Data Science** en informatique.
+Ce chapitre est une introduction au traitement et à l'analyse des données, domaine communément appelé **Data Science** en informatique.
 
 Les données sont d'une importance fondamentale en informatique et plus largement en sciences. De nos données personnelles qu'il faut savoir protéger face des entreprises peu scrupuleuses qui en font le commerce, à des mesures physico-chimiques qu'il faut traiter en masse pour modéliser l'évolution du climat... des **datacenters** fonctionnent aux 4 coins du mondes pour stocker et traiter des milliards d'informations.
 

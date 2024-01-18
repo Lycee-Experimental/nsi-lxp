@@ -51,7 +51,7 @@ for x in range(101):
         ```pycon
         >>> [lettre.upper() for lettre in "python"]
         ['P', 'Y', 'T', 'H', 'O', 'N']
-    ```
+        ```
 
 
 {{exercice(1,titre="Comment faire ?")}}
@@ -156,7 +156,7 @@ for x in range(101):
     * `#!py valeur`, `#!py element` et `#!py iterable` répondent aux même spécifications que dans la version de base,
     * `#!py condition` est une expression renvoyant un booléen (`#!py True` ou `#!py False`).
 
-??? example "Exemples"
+!!! example "Exemples"
     * Les entiers pairs entre `#!py 0` et `#!py 10` :
 
         ```pycon
@@ -200,7 +200,7 @@ for x in range(101):
         >>> fleurs = ("Arum", "Rose", "Azalée", "aster")
         >>> [f for f in fleurs if f[0] == "A" or len(f) <= 4]
         ["Arum", "Rose", "Azalée"]
-    ```
+        ```
 
 {{exercice(titre="Qui fait quoi ?")}}
 

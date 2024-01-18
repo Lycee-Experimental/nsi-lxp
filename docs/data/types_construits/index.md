@@ -14,7 +14,7 @@
 
 !!! info "Définition d'un type construit de donnée ou structures de données"
     Une **donnée** représente une information ou une valeur qui est utilisée, stockée ou traitée par un programme informatique.  
-    On a vu que les données peuvent être de différents **types de base** : tels que des booléens (`#!py bool`), des nombres entiers (`#!py int`) ou naturels (`#!py float`), des caractères (`#!py char`), du texte (`#!py string`). Elles peuvent être entrées par l'utilisateur, générées par le programme lui-même ou provenir de sources externes.  
+    On a vu que les données peuvent être de différents **types de base** : tels que des booléens (`#!py bool`), des nombres entiers (`#!py int`) ou naturels (`#!py float`), du texte (`#!py str`). Elles peuvent être entrées par l'utilisateur, générées par le programme lui-même ou provenir de sources externes.  
     Les **données construites**, également appelées **structures de données**, sont des regroupements de plusieurs données simples ou de base, combinées pour former une entité plus complexe. Elles permettent de représenter des informations plus riches et structurées dans un programme informatique.
 
 

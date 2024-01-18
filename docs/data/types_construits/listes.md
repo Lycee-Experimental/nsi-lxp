@@ -165,14 +165,14 @@ On rappelle les opérations suivantes sur les listes :
 {{exercice(1,titre="Manipulations élémentaires")}}
     Compléter le code ci-dessous afin d'effectuer les actions demandées. Au bout de 10 essais infructueux, le corrigé vous est proposé.
 
-    {{ IDE('pythons/creation/exo', MAX=10) }}
+    {{ IDE('pythons/creation/exo', MAX=5) }}
 
 
 {{exercice(titre="Recherche d'indice")}}
     Écrire une fonction `indice_min` qui prend en paramètre un tableau **non vide** de nombres et qui renvoie l'indice de la première occurrence du minimum de ce tableau.
 
-    > - Les tableaux seront représentés sous forme de liste Python.
-    > - On n'utilisera pas les fonctions `min` et `index`.
+    - Les tableaux seront représentés sous forme de liste Python.
+    - On n'utilisera pas les fonctions `min` et `index`.
 
     ???+ example "Exemples"
 
