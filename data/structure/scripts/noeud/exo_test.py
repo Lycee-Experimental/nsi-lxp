@@ -1,0 +1,1 @@
+assert arbre.__str__() == '1, 2, 4, None, None, 5, None, None, 3, None, 6, None, None', "L'arbre n'a pas poussé correctement..."

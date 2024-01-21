@@ -4137,13 +4137,8 @@
 
 
 <h1 id="les-dictionnaires-python">Les dictionnaires Python<a class="headerlink" href="#les-dictionnaires-python" title="Permanent link">⚓︎</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Remarque</p>
-<p>Cette page rappelle rapidement les outils fondamentaux sur les dictionnaires Python.</p>
-<p>Il ne s'agit pas d'un cours exhaustif sur ce thème.</p>
-</div>
 <h2 id="presentation">Présentation<a class="headerlink" href="#presentation" title="Permanent link">⚓︎</a></h2>
-<p>Un dictionnaire Python est une structure de données organisée sous forme de couples <code class="highlight"><span class="n">clé</span> <span class="p">:</span> <span class="n">valeur</span></code>.</p>
+<p>Un <strong>dictionnaire</strong> Python est une structure de données organisée sous forme de couples <code class="highlight"><span class="n">clé</span> <span class="p">:</span> <span class="n">valeur</span></code>.</p>
 <p>Contrairement aux listes dans lesquelles les valeurs sont identifiées par leur indice, dans un dictionnaire, une <strong>valeur</strong> est associée à une <strong>clé</strong>. Ces clés peuvent être des entiers, des chaînes de carcactères, des tuples...</p>
 <p>Considérons par exemple le dictionnaire suivant qui contient les dates de naissances de <em>Roméo</em> et <em>Juliette</em> :</p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">naissances</span><span class="o">=</span> <span class="p">{</span>
@@ -4153,7 +4148,7 @@
 </code></pre></div>
 <p><code class="highlight"><span class="s2">&quot;Roméo&quot;</span></code> et <code class="highlight"><span class="s2">&quot;Juliette&quot;</span></code> sont les clés du dictionnaire, <code class="highlight"><span class="mi">20040517</span></code> et <code class="highlight"><span class="mi">20040417</span></code> les valeurs associées.</p>
 <details class="danger">
-<summary>Des clés <em>immuables</em> ?</summary>
+<summary>Des clés <em>immuables</em></summary>
 <p>Lors de la construction d'un dictionnaire, Python associe à chaque clé une valeur précise. Cette association repose sur le fait que la clé ne va pas évoluer au fil de l'exécution du programme. Si c'était le cas, l'association deviendrait caduque dès que la clé est modifiée.</p>
 <p>Les clés des dictionnaires Python doivent donc être des objets non modifiables, <em>immuables</em>.</p>
 <p>Retenons pour faire simple qu'une liste ne <strong>peut pas</strong> être utilisée comme clé d'un dictionnaire (car on peut la modifier au fil du programme).</p>
@@ -4194,6 +4189,23 @@
 <span class="gp">&gt;&gt;&gt; </span><span class="n">echiquier</span>
 <span class="go">{(0, 0): None, (5, 1): &#39;Roi noir&#39;, (0, 1): &#39;Roi blanc&#39;}</span>
 </code></pre></div>
+</details>
+<details class="tip">
+<summary>Suppression d'un couple <code>Clé :valeur</code></summary>
+<ul>
+<li>On peut supprimer une clé et sa valeur avec <code class="highlight"><span class="k">del</span></code> :</li>
+</ul>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">mon_dictionnaire</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;nom&quot;</span><span class="p">:</span> <span class="s2">&quot;Dupont&quot;</span><span class="p">,</span> <span class="s2">&quot;prénom&quot;</span><span class="p">:</span> <span class="s2">&quot;Jean&quot;</span><span class="p">,</span><span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span> <span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">del</span> <span class="n">mon_dictionnaire</span><span class="p">[</span><span class="s2">&quot;prénom&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mon_dictionnaire</span>
+<span class="go">{&#39;nom&#39;: &#39;Dupont&#39;, &#39;age&#39;: 30}</span>
+</code></pre></div>
+<ul>
+<li>Si la clé n'existe pas dans le dictionnaire, une <code class="highlight"><span class="ne">KeyError</span></code> sera levée. Pour éviter cela, on peut utiliser la méthode <code class="highlight"><span class="n">pop</span><span class="p">()</span></code> avec un argument optionnel pour retourner la valeur par défaut en cas d'absence de la clé. </li>
+</ul>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">valeur_supprimee</span> <span class="o">=</span> <span class="n">mon_dictionnaire</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;prénom&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+</code></pre></div>
+<p>Dans cet exemple, valeur_supprimee contiendra la valeur de la clé "prénom" si elle existe, sinon None.</p>
 </details>
 <h2 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">⚓︎</a></h2>
 <details class="question">

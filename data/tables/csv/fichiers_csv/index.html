@@ -2006,17 +2006,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Fichiers csv
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2026,32 +2015,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#creation" class="md-nav__link">
-    Création
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -4127,8 +4090,7 @@
 <h1 id="les-fichiers-csv-et-json">📑 Les fichiers <code>csv</code> et <code>json</code><a class="headerlink" href="#les-fichiers-csv-et-json" title="Permanent link">⚓︎</a></h1>
 <div class="admonition info">
 <p class="admonition-title">Fichiers de données</p>
-<p>Le site <a href="https://www.data.gouv.fr/fr/">data.gouv</a> propose de nombreux jeux de données en libre accès.</p>
-<p>Les fichiers correspondants sont souvent proposés aux formats </p>
+<p>Le site <a href="https://www.data.gouv.fr/fr/">data.gouv</a> propose de nombreux jeux de données en libre accès. Ces données sont souvent proposées aux formats : </p>
 <ul>
 <li><code>csv</code> pour <em><strong>C</strong>omma <strong>S</strong>eparated <strong>V</strong>alues</em>,</li>
 <li><code>json</code> pour <em><strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation</em>.</li>
@@ -4152,16 +4114,36 @@ Marion,28,Lyon,badminton
 </code></pre></div>
 </li>
 </ul>
+<details class="note">
+<summary>Autres formats...</summary>
+<p>Les fichiers <code>csv</code> et <code>json</code> ne sont pas les seuls formats de fichiers de données. Par exemple on trouve souvent les fichiers xml.</p>
+<div class="highlight"><span class="filename">📑 Données XML</span><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;amis&gt;</span>
+<span class="w">    </span><span class="nt">&lt;personne&gt;</span>
+<span class="w">        </span><span class="nt">&lt;nom&gt;</span>Jean<span class="nt">&lt;/nom&gt;</span>
+<span class="w">        </span><span class="nt">&lt;âge&gt;</span>26<span class="nt">&lt;/âge&gt;</span>
+<span class="w">        </span><span class="nt">&lt;ville&gt;</span>Paris<span class="nt">&lt;/ville&gt;</span>
+<span class="w">        </span><span class="nt">&lt;passion&gt;</span>VTT<span class="nt">&lt;/passion&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/personne&gt;</span>
+<span class="w">    </span><span class="nt">&lt;personne&gt;</span>
+<span class="w">        </span><span class="nt">&lt;nom&gt;</span>Marion<span class="nt">&lt;/nom&gt;</span>
+<span class="w">        </span><span class="nt">&lt;âge&gt;</span>28<span class="nt">&lt;/âge&gt;</span>
+<span class="w">        </span><span class="nt">&lt;ville&gt;</span>Lyon<span class="nt">&lt;/ville&gt;</span>
+<span class="w">        </span><span class="nt">&lt;passion&gt;</span>badminton<span class="nt">&lt;/passion&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/personne&gt;</span>
+<span class="nt">&lt;/amis&gt;</span>
+</code></pre></div>
+</details>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Remarques</p>
+<details class="note">
+<summary>Remarques</summary>
 <p>Nous travaillerons désormais avec les fichiers <code>csv</code>. L'exemple précédent permet de remarquer plusieurs choses :</p>
 <ul>
 <li>
 <p>un fichier <code>csv</code> contient des <strong>données textuelles</strong>,</p>
 </li>
 <li>
-<p>les données sont organisées en lignes,</p>
+<p>les données sont organisées en <strong>lignes</strong>,</p>
 </li>
 <li>
 <p>la première ligne regroupe le nom des <strong>descripteurs</strong> (il y en a quatre ici : <code class="highlight"><span class="n">nom</span></code>, <code class="highlight"><span class="n">âge</span></code>, <code class="highlight"><span class="n">ville</span></code> et <code class="highlight"><span class="n">passion</span></code>),</p>
@@ -4176,10 +4158,8 @@ Marion,28,Lyon,badminton
 <p>les données peuvent être de types différents. Ici le <code class="highlight"><span class="n">nom</span></code>, la <code class="highlight"><span class="n">ville</span></code> et la <code class="highlight"><span class="n">passion</span></code> sont des chaînes de caractères, l'<code class="highlight"><span class="n">âge</span></code> un entier.</p>
 </li>
 </ul>
-</div>
-<div class="admonition danger">
+<div class="admonition warning">
 <p class="admonition-title">Attention</p>
-<p>La réalité n'est pas aussi simple :</p>
 <ul>
 <li>
 <p>il arrive que <strong>la première ligne ne contienne pas les entêtes</strong>. Ils peuvent être listés dans un fichier annexe ou... perdus !</p>
@@ -4192,6 +4172,11 @@ Marion,28,Lyon,badminton
 </li>
 </ul>
 </div>
+<ul>
+<li>Les fichiers <code>csv</code> et <code>json</code> étant de simples fichiers « texte », il est donc possible de les créer avec un quelconque éditeur de texte.</li>
+</ul>
+<p><img alt="Création d'un fichier csv" class="center" src="../creation_dark.gif" width="60%" /></p>
+</details>
 <details class="question">
 <summary>Activité 1 - Premiers contacts</summary>
 <p>On considère les deux fichiers <code>csv</code> ci-dessous (on n'en donne que les trois première lignes) :</p>
@@ -4248,30 +4233,6 @@ Mapple,Marc,marc.mapple,20221231
 <p>On pourrait aussi noter le <strong>gros</strong> problème qui consiste à stocker les mots de passe des utilisateurs en clair dans un fichier !</p>
 </details>
 </details>
-<details class="note">
-<summary>Autres formats...</summary>
-<p>Les fichiers <code>csv</code> et <code>json</code> ne sont pas les seuls formats permettant de conserver des données. </p>
-<p>On peut aussi retenir le format <code>xml</code> pour <em>e<strong>X</strong>tensible <strong>M</strong>arkup <strong>L</strong>anguage</em> qui utilise des balises au même titre que le <code>html</code> :</p>
-<div class="highlight"><span class="filename">📑 Données XML</span><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="nt">&lt;amis&gt;</span>
-<span class="w">    </span><span class="nt">&lt;personne&gt;</span>
-<span class="w">        </span><span class="nt">&lt;nom&gt;</span>Jean<span class="nt">&lt;/nom&gt;</span>
-<span class="w">        </span><span class="nt">&lt;âge&gt;</span>26<span class="nt">&lt;/âge&gt;</span>
-<span class="w">        </span><span class="nt">&lt;ville&gt;</span>Paris<span class="nt">&lt;/ville&gt;</span>
-<span class="w">        </span><span class="nt">&lt;passion&gt;</span>VTT<span class="nt">&lt;/passion&gt;</span>
-<span class="w">    </span><span class="nt">&lt;/personne&gt;</span>
-<span class="w">    </span><span class="nt">&lt;personne&gt;</span>
-<span class="w">        </span><span class="nt">&lt;nom&gt;</span>Marion<span class="nt">&lt;/nom&gt;</span>
-<span class="w">        </span><span class="nt">&lt;âge&gt;</span>28<span class="nt">&lt;/âge&gt;</span>
-<span class="w">        </span><span class="nt">&lt;ville&gt;</span>Lyon<span class="nt">&lt;/ville&gt;</span>
-<span class="w">        </span><span class="nt">&lt;passion&gt;</span>badminton<span class="nt">&lt;/passion&gt;</span>
-<span class="w">    </span><span class="nt">&lt;/personne&gt;</span>
-<span class="nt">&lt;/amis&gt;</span>
-</code></pre></div>
-</details>
-<h2 id="creation">Création<a class="headerlink" href="#creation" title="Permanent link">⚓︎</a></h2>
-<p>On l'a dit, les fichiers <code>csv</code> et <code>json</code> sont des fichiers « texte » classique. Il est donc possible de les créer avec un simple éditeur de texte.</p>
-<p><img alt="Création d'un fichier csv" class="center" src="../creation_dark.gif" width="60%" /></p>
 <details class="question">
 <summary>Activité 3 - « <em>Créer</em> » un fichier <code>csv</code></summary>
 <p>On souhaite « <em>créer</em> » un fichier <code>csv</code> recensant les jours fériés en France durant l'année 2023.</p>

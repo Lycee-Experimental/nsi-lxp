@@ -1,0 +1,1 @@
+assert taille(Noeud(1,Noeud(2, Noeud(4),Noeud(5)), Noeud(3, filsD = Noeud(6)))) == 6, "L'arbre n'est pas de la bonne taille"

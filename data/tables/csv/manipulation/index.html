@@ -1986,17 +1986,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Lire un fichier
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2006,53 +1995,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#la-fonction-open" class="md-nav__link">
-    La fonction open
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lire-le-fichier-des-lignes-une-ligne" class="md-nav__link">
-    Lire le fichier, des lignes, une ligne !
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#des-cigales-et-des-fourmis" class="md-nav__link">
-    Des cigales et des fourmis
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comptons-les-moutons" class="md-nav__link">
-    Comptons les moutons
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -4147,10 +4089,13 @@
 
 <h1 id="lire-un-fichier">📑 Lire un fichier<a class="headerlink" href="#lire-un-fichier" title="Permanent link">⚓︎</a></h1>
 <p>Le <a href="https://www.gutenberg.org/">Projet Gutenberg</a> est une bibliothèque en ligne regroupant les versions numériques d'ouvrages libres de droits. On y a récupéré le fichier des <a href="../fables.txt">Fables de la Fontaine</a> au format <code>txt</code>.</p>
-<h2 id="la-fonction-open">La fonction <code class="highlight"><span class="nb">open</span></code><a class="headerlink" href="#la-fonction-open" title="Permanent link">⚓︎</a></h2>
-<p>Ouvrir un fichier avec Python est simple. On utilise la fonction <code>open</code> présente dans la <a href="https://docs.python.org/fr/3/library/functions.html#open">bibliothèque native</a>.</p>
-<p>Cette fonction prend plusieurs paramètres. Retenons les trois suivants (déroulez pour avoir des détails):</p>
 <details class="info">
+<summary>La fonction <code class="highlight"><span class="nb">open</span></code></summary>
+<p>Pour ouvrir un fichier avec Python, on utilise la fonction <code>open</code> présente dans la <a href="https://docs.python.org/fr/3/library/functions.html#open">bibliothèque native</a>.</p>
+<details class="abstract">
+<summary>Paramètres</summary>
+<p>Cette fonction prend plusieurs <strong>paramètres</strong>. Retenons les trois suivants (déroulez pour avoir des détails):</p>
+<details class="note">
 <summary><code class="highlight"><span class="n">file</span></code> : le nom du fichier</summary>
 <p>Le nom du fichier (avec son extension donc, au format <code class="highlight"><span class="nb">str</span></code>).</p>
 <p>Attention, par « nom » on désigne <strong>l'adresse</strong> du fichier. Cette adresse peut-être :</p>
@@ -4164,7 +4109,7 @@
 </ul>
 <p>On conseille <strong>très fortement</strong> d'utiliser des adresses relatives.</p>
 </details>
-<details class="info">
+<details class="note">
 <summary><code class="highlight"><span class="n">mode</span></code> : le mode d'ouverture</summary>
 <p>Le mode d'ouverture du fichier (au format <code class="highlight"><span class="nb">str</span></code>).</p>
 <p>On peut retenir les modes suivants :</p>
@@ -4196,7 +4141,7 @@
 </table>
 <p>On notera que le mode <code class="highlight"><span class="s1">&#39;w&#39;</span></code> efface directement le contenu du fichier, il n'y a pas de message d'avertissement !</p>
 </details>
-<details class="info">
+<details class="note">
 <summary><code class="highlight"><span class="n">encoding</span></code> : l'encodage utilisé</summary>
 <p>Le type d'encodage (au format <code class="highlight"><span class="nb">str</span></code>).</p>
 <p>L'encodage d'un fichier correspond à la façon dont le programme qui l'ouvre doit interpréter les données qu'il contient.</p>
@@ -4213,15 +4158,20 @@
 </ul>
 <p>L'encodage le plus classique pour nous sera <code class="highlight"><span class="s1">&#39;utf-8&#39;</span></code>.</p>
 </details>
+</details>
+<details class="abstract">
+<summary>Utilisation</summary>
+<details class="note">
+<summary>Ouverture du fichier</summary>
 <p>La fonction <code class="highlight"><span class="nb">open</span></code> peut être utilisée de deux façons :</p>
-<ul>
-<li>
-<p>utilisation classique, on ouvre <strong>et</strong> on ferme le fichier :</p>
+<details class="tip">
+<summary><code>open</code> &amp; <code>close</code></summary>
+<p>Utilisation classique, on ouvre <strong>et</strong> on ferme le fichier :</p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">fichier</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s2">&quot;fichier.txt&quot;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
 <span class="c1"># Traitement du fichier</span>
 <span class="n">fichier</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
-<p>Techniquement, on devrait même utiliser un <code class="highlight"><span class="k">try</span> <span class="o">...</span> <span class="k">except</span></code> au cas où le fichier est inaccessible :</p>
+<p>Techniquement, on devrait plutôt utiliser un <code class="highlight"><span class="k">try</span> <span class="o">...</span> <span class="k">except</span></code> au cas où le fichier est inaccessible :</p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">try</span><span class="p">:</span>
     <span class="n">fichier</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s2">&quot;fichier.txt&quot;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
     <span class="c1"># Traitement du fichier</span>
@@ -4229,27 +4179,23 @@
 <span class="k">except</span> <span class="ne">IOError</span><span class="p">:</span>  <span class="c1"># Le fichier est inaccessible</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Le fichier est inaccessible&quot;</span><span class="p">)</span>
 </code></pre></div>
-</li>
-<li>
-<p>utilisation avec <code>with</code>, il est inutile de fermer le fichier et de gérer les erreurs, c'est automatique :</p>
+</details>
+<details class="tip">
+<summary><code>with open</code> (à privilégier)</summary>
+<p>Avec <code>with</code>, il est inutile de fermer le fichier et de gérer les erreurs, c'est automatique :</p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s2">&quot;fichier.txt&quot;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fichier</span><span class="p">:</span>
     <span class="c1"># Traitement du fichier</span>
 </code></pre></div>
-</li>
-</ul>
-<p>On utilisera la seconde méthode.</p>
-<h2 id="lire-le-fichier-des-lignes-une-ligne">Lire le fichier, des lignes, une ligne !<a class="headerlink" href="#lire-le-fichier-des-lignes-une-ligne" title="Permanent link">⚓︎</a></h2>
+</details>
+</details>
+<details class="note">
+<summary>Lecture du fichier</summary>
 <p>Une fois le fichier ouvert, on peut réaliser différentes actions. Si l'objet renvoyé par <code class="highlight"><span class="nb">open</span></code> s'appelle <code class="highlight"><span class="n">fichier</span></code>, on peut :</p>
 <ul>
 <li><code class="highlight"><span class="n">fichier</span><span class="o">.</span><span class="n">read</span><span class="p">()</span></code> : lit la totalité du fichier. Renvoie une unique chaîne de caractères.</li>
 <li><code class="highlight"><span class="n">fichier</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span></code> : lit la totalité du fichier <strong>ligne par ligne</strong>. Renvoie la liste contenant les différentes lignes.</li>
 <li><code class="highlight"><span class="n">fichier</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span></code> : lit la prochaine ligne du fichier <strong>ligne par ligne</strong>. Renvoie une chaîne de caractères.</li>
 </ul>
-<details class="note">
-<summary>Écrire ?</summary>
-<p>Si le fichier est ouvert en mode <em>écriture</em>, on peut écrire en faisant <code class="highlight"><span class="n">fichier</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;texte à écrire&quot;</span><span class="p">)</span></code>.</p>
-<p>Attention toutefois à ne pas écraser le contenu du fichier !</p>
-</details>
 <p>Les deux scripts ci-dessous sont donc équivalents :</p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s2">&quot;fichier.txt&quot;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fichier</span><span class="p">:</span>
     <span class="n">contenu</span> <span class="o">=</span> <span class="n">fichier</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
@@ -4260,30 +4206,26 @@
         <span class="n">contenu</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ligne</span><span class="p">)</span>
 </code></pre></div>
 <p>La seconde permet toutefois de traiter précisément chaque ligne lue. On l'utilisera préférentiellement.</p>
-<h2 id="des-cigales-et-des-fourmis">Des cigales et des fourmis<a class="headerlink" href="#des-cigales-et-des-fourmis" title="Permanent link">⚓︎</a></h2>
-<p>Nous sommes donc équipés pour ouvrir et lire nos fichiers. </p>
+</details>
+<details class="note">
+<summary>Écriture</summary>
+<p>Si le fichier est ouvert en mode <em>écriture</em>, on peut écrire en faisant <code class="highlight"><span class="n">fichier</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;texte à écrire&quot;</span><span class="p">)</span></code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Attention à ne pas écraser le contenu du fichier !</p>
+</div>
+</details>
+</details>
+</details>
 <details class="question">
 <summary>Activité 1 - Lire les fables de la Fontaine</summary>
-<p>Le fichier contenant les fables de la Fontaine est nommé <code class="highlight"><span class="n">fables</span><span class="o">.</span><span class="n">txt</span></code>, il est situé dans le même dossier que le fichier Python manipulé par l'éditeur. Il est encodé en <code class="highlight"><span class="n">utf</span><span class="o">-</span><span class="mi">8</span></code>.</p>
+<p>Un fichier contenant les fables de la Fontaine est nommé <code class="highlight"><span class="n">fables</span><span class="o">.</span><span class="n">txt</span></code>, il est situé dans le même dossier que le fichier Python manipulé par l'éditeur. Il est encodé en <code class="highlight"><span class="n">utf</span><span class="o">-</span><span class="mi">8</span></code>.</p>
 <p>Compléter le script afin d'ouvrir ce fichier et charger ses différentes lignes dans une liste.</p>
 <p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_e149ab7697c9093cfb3c12b097e1efd602c5c455" class="comment">###</span><div class="line" id="editor_e149ab7697c9093cfb3c12b097e1efd602c5c455"></div><div id="term_editor_e149ab7697c9093cfb3c12b097e1efd602c5c455"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_e149ab7697c9093cfb3c12b097e1efd602c5c455","")'>            <img src="../../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_e149ab7697c9093cfb3c12b097e1efd602c5c455" class="py_mk_hide"># Testbksl-nlcontenupy-und = []bksl-nlwith open(file="fables.txt", mode="r", encoding="utf-8") as fichier:bksl-nl    for ligne in fichier:bksl-nl        contenupy-und.append(ligne)bksl-nlbksl-nlassert fables == contenupy-und, "Erreur de lecture"bksl-nl</span>            <button class="tooltip" onclick='check("editor_e149ab7697c9093cfb3c12b097e1efd602c5c455","")'>            <img src="../../../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_e149ab7697c9093cfb3c12b097e1efd602c5c455","pythons/ouverture/exo")'>            <img src="../../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_e149ab7697c9093cfb3c12b097e1efd602c5c455').click()" >            <img src="../../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_e149ab7697c9093cfb3c12b097e1efd602c5c455" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_e149ab7697c9093cfb3c12b097e1efd602c5c455")'>            <img src="../../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_e149ab7697c9093cfb3c12b097e1efd602c5c455")'>            <img src="../../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_e149ab7697c9093cfb3c12b097e1efd602c5c455" class="py_mk_hide">#--- HDR ---#bksl-nlurlpy-undfichier = "fables.txt"bksl-nlencodage = "utf-8"bksl-nlbksl-nlfrom js import fetchbksl-nlbksl-nlreponse = await fetch(f"../{urlpy-undfichier}")bksl-nlcontenu = await reponse.text()bksl-nlbksl-nlwith open(file=urlpy-undfichier, mode="w", encoding=encodage) as fichier:bksl-nl    fichier.write(contenu)bksl-nl#--- HDR ---#bksl-nlfables = []bksl-nlwith open(file=..., mode=..., encoding=...) as fichier:bksl-nl    for ligne in ...:bksl-nl        ....append(...)bksl-nlbksl-nlprint(fables[4:29])  # La cigale et la fourmibksl-nlbksl-nl</span><span id="corr_content_editor_e149ab7697c9093cfb3c12b097e1efd602c5c455" class="py_mk_hide" data-strudel="">fables = []bksl-nlwith open(file="fables.txt", mode="r", encoding="utf-8") as fichier:bksl-nl    for ligne in fichier:bksl-nl        fables.append(ligne)bksl-nlbksl-nl</span></p>
 <p><strong>A</strong></p>
-<p><strong>Z</strong></p>
 <details class="tip">
 <summary>Et ensuite ?</summary>
 <p>On obtient la liste suivante :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">fables</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s1">&#39;FABLES DE LA FONTAINE</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;I</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;LA CIGALE ET LA FOURMI.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;La cigale, ayant chanté</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span>
-    <span class="s2">&quot;Tout l&#39;été,</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>
-    <span class="o">...</span>
-<span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">fables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;LA CIGALE ET LA FOURMI.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;La cigale, ayant chanté</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s2">&quot;Tout l&#39;été,</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s1">&#39;Se trouva fort dépourvue</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;Quand la bise fut venue:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;Pas un seul petit morceau</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;De mouche ou de vermisseau.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;Elle alla crier famine</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;Chez la fourmi sa voisine,</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;La priant de lui prêter</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;Quelque grain pour subsister</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s2">&quot;Jusqu&#39;à la saison nouvelle:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s1">&#39;Je vous paierai, lui dit-elle,</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s2">&quot;Avant l&#39;août, foi d&#39;animal,</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s1">&#39;Intérêt et principal.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s2">&quot;La fourmi n&#39;est pas prêteuse;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;C&#39;est là son moindre défaut:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s1">&#39;Que faisiez-vous au temps chaud?</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;Dit-elle à cette emprunteuse.--</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;Nuit et jour à tout venant</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;Je chantais, ne vous déplaise.--</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s2">&quot;Vous chantiez! j&#39;en suis fort aise.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s1">&#39;Hé bien! dansez maintenant.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">]</span>
 </code></pre></div>
 <p>Le <code class="highlight"><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span></code> que l'on observe à plusieurs reprises est le caractère de retour à la ligne. On peut le supprimer en faisant <code class="highlight"><span class="n">ligne</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span></code>. En effet, la méthode <code class="highlight"><span class="n">strip</span></code> supprime les caractères « blancs » au début ou à la fin d'une chaîne de caractères.</p>
 <p>La lecture du fichier devient alors :</p>
@@ -4294,30 +4236,21 @@
         <span class="n">fables</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ligne_propre</span><span class="p">)</span>
 </code></pre></div>
 <p>On obtient :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">fables</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s1">&#39;FABLES DE LA FONTAINE&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;I&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;LA CIGALE ET LA FOURMI.&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;La cigale, ayant chanté&#39;</span><span class="p">,</span>
-    <span class="s2">&quot;Tout l&#39;été,&quot;</span><span class="p">,</span>
-    <span class="o">...</span>
-<span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="p">[</span><span class="s1">&#39;LA CIGALE ET LA FOURMI.&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;La cigale, ayant chanté&#39;</span><span class="p">,</span> <span class="s2">&quot;Tout l&#39;été,&quot;</span><span class="p">,</span> <span class="s1">&#39;Se trouva fort dépourvue&#39;</span><span class="p">,</span> <span class="s1">&#39;Quand la bise fut venue:&#39;</span><span class="p">,</span> <span class="s1">&#39;Pas un seul petit morceau&#39;</span><span class="p">,</span> <span class="s1">&#39;De mouche ou de vermisseau.&#39;</span><span class="p">,</span> <span class="s1">&#39;Elle alla crier famine&#39;</span><span class="p">,</span> <span class="s1">&#39;Chez la fourmi sa voisine,&#39;</span><span class="p">,</span> <span class="s1">&#39;La priant de lui prêter&#39;</span><span class="p">,</span> <span class="s1">&#39;Quelque grain pour subsister&#39;</span><span class="p">,</span> <span class="s2">&quot;Jusqu&#39;à la saison nouvelle:&quot;</span><span class="p">,</span> <span class="s1">&#39;Je vous paierai, lui dit-elle,&#39;</span><span class="p">,</span> <span class="s2">&quot;Avant l&#39;août, foi d&#39;animal,&quot;</span><span class="p">,</span> <span class="s1">&#39;Intérêt et principal.&#39;</span><span class="p">,</span> <span class="s2">&quot;La fourmi n&#39;est pas prêteuse;&quot;</span><span class="p">,</span> <span class="s2">&quot;C&#39;est là son moindre défaut:&quot;</span><span class="p">,</span> <span class="s1">&#39;Que faisiez-vous au temps chaud?&#39;</span><span class="p">,</span> <span class="s1">&#39;Dit-elle à cette emprunteuse.--&#39;</span><span class="p">,</span> <span class="s1">&#39;Nuit et jour à tout venant&#39;</span><span class="p">,</span> <span class="s1">&#39;Je chantais, ne vous déplaise.--&#39;</span><span class="p">,</span> <span class="s2">&quot;Vous chantiez! j&#39;en suis fort aise.&quot;</span><span class="p">,</span> <span class="s1">&#39;Hé bien! dansez maintenant.&#39;</span><span class="p">]</span>
 </code></pre></div>
 </details>
+<p><strong>Z</strong></p>
 </details>
 <details class="question">
 <summary>Activité 2 - Relire les fables de la Fontaine</summary>
 <p>On a supprimé les caractères de retour à la ligne mais il reste désormais des lignes vides dans la liste <code class="highlight"><span class="n">fables</span></code>.</p>
 <p>Compléter le script afin d'ouvrir ce fichier, charger ses différentes lignes <strong>non vides</strong> dans une liste.</p>
-<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_1b9a797b458461f41502931db9c6acae26367cad" class="comment">###</span><div class="line" id="editor_1b9a797b458461f41502931db9c6acae26367cad"></div><div id="term_editor_1b9a797b458461f41502931db9c6acae26367cad"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_1b9a797b458461f41502931db9c6acae26367cad","")'>            <img src="../../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_1b9a797b458461f41502931db9c6acae26367cad" class="py_mk_hide"># Testbksl-nlcontenupy-und = []bksl-nlwith open(file="fables.txt", mode="r", encoding="utf-8") as fichier:bksl-nl    for ligne in fichier:bksl-nl        ligne = ligne.strip()bksl-nl        if ligne:bksl-nl            contenupy-und.append(ligne)bksl-nlbksl-nlassert fables == contenupy-und, "Erreur de lecture"bksl-nl</span>            <button class="tooltip" onclick='check("editor_1b9a797b458461f41502931db9c6acae26367cad","")'>            <img src="../../../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_1b9a797b458461f41502931db9c6acae26367cad","pythons/ouverture_propre/exo")'>            <img src="../../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_1b9a797b458461f41502931db9c6acae26367cad').click()" >            <img src="../../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_1b9a797b458461f41502931db9c6acae26367cad" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_1b9a797b458461f41502931db9c6acae26367cad")'>            <img src="../../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_1b9a797b458461f41502931db9c6acae26367cad")'>            <img src="../../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_1b9a797b458461f41502931db9c6acae26367cad" class="py_mk_hide">#--- HDR ---#bksl-nlurlpy-undfichier = "fables.txt"bksl-nlencodage = "utf-8"bksl-nlbksl-nlfrom js import fetchbksl-nlbksl-nlreponse = await fetch(f"../{urlpy-undfichier}")bksl-nlcontenu = await reponse.text()bksl-nlbksl-nlwith open(file=urlpy-undfichier, mode="w", encoding=encodage) as fichier:bksl-nl    fichier.write(contenu)bksl-nl#--- HDR ---#bksl-nlfables = []bksl-nlbksl-nl# Compléter icibksl-nlbksl-nlprint(fables[2:25])  # La cigale et la fourmibksl-nlbksl-nl</span><span id="corr_content_editor_1b9a797b458461f41502931db9c6acae26367cad" class="py_mk_hide" data-strudel="">fables = []bksl-nlwith open(file="fables.txt", mode="r", encoding="utf-8") as fichier:bksl-nl    for ligne in fichier:bksl-nl        lignepy-undpropre = ligne.strip()bksl-nl        if lignepy-undpropre != "":bksl-nl            fables.append(ligne)bksl-nlbksl-nl</span></p>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_1b9a797b458461f41502931db9c6acae26367cad" class="comment">###</span><div class="line" id="editor_1b9a797b458461f41502931db9c6acae26367cad"></div><div id="term_editor_1b9a797b458461f41502931db9c6acae26367cad"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_1b9a797b458461f41502931db9c6acae26367cad","")'>            <img src="../../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_1b9a797b458461f41502931db9c6acae26367cad" class="py_mk_hide"># Testbksl-nlcontenupy-und = []bksl-nlwith open(file="fables.txt", mode="r", encoding="utf-8") as fichier:bksl-nl    for ligne in fichier:bksl-nl        ligne = ligne.strip()bksl-nl        if ligne:bksl-nl            contenupy-und.append(ligne)bksl-nlbksl-nlassert fables == contenupy-und, "Erreur de lecture"bksl-nl</span>            <button class="tooltip" onclick='check("editor_1b9a797b458461f41502931db9c6acae26367cad","")'>            <img src="../../../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_1b9a797b458461f41502931db9c6acae26367cad","pythons/ouverture_propre/exo")'>            <img src="../../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_1b9a797b458461f41502931db9c6acae26367cad').click()" >            <img src="../../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_1b9a797b458461f41502931db9c6acae26367cad" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_1b9a797b458461f41502931db9c6acae26367cad")'>            <img src="../../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_1b9a797b458461f41502931db9c6acae26367cad")'>            <img src="../../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_1b9a797b458461f41502931db9c6acae26367cad" class="py_mk_hide">#--- HDR ---#bksl-nlurlpy-undfichier = "fables.txt"bksl-nlencodage = "utf-8"bksl-nlbksl-nlfrom js import fetchbksl-nlbksl-nlreponse = await fetch(f"../{urlpy-undfichier}")bksl-nlcontenu = await reponse.text()bksl-nlbksl-nlwith open(file=urlpy-undfichier, mode="w", encoding=encodage) as fichier:bksl-nl    fichier.write(contenu)bksl-nl#--- HDR ---#bksl-nlfables = []bksl-nlbksl-nl# Compléter icibksl-nlbksl-nlprint(fables[2:25])  # La cigale et la fourmibksl-nlbksl-nl</span><span id="corr_content_editor_1b9a797b458461f41502931db9c6acae26367cad" class="py_mk_hide" data-strudel="">fables = []bksl-nlwith open(file="fables.txt", mode="r", encoding="utf-8") as fichier:bksl-nl    for ligne in fichier:bksl-nl        lignepy-undpropre = ligne.strip()bksl-nl        if lignepy-undpropre != "":bksl-nl            fables.append(lignepy-undpropre)bksl-nlbksl-nl</span></p>
 <p><strong>A</strong></p>
 <p><strong>Z</strong></p>
 </details>
-<h2 id="comptons-les-moutons">Comptons les moutons<a class="headerlink" href="#comptons-les-moutons" title="Permanent link">⚓︎</a></h2>
+<details class="question">
+<summary>Activité 3 - Comptons les moutons</summary>
 <p>Nous avons donc récupéré l'ensembles des fables dans une liste contenant toutes les lignes. Nous pouvons désormais faire des requêtes sur cette liste.</p>
 <p>Combien de vers contiennent le mot <code class="highlight"><span class="s2">&quot;mouton&quot;</span></code> ? Pour le savoir on fait :</p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">moutons</span> <span class="o">=</span> <span class="p">[</span><span class="n">vers</span> <span class="k">for</span> <span class="n">vers</span> <span class="ow">in</span> <span class="n">fables</span> <span class="k">if</span> <span class="s2">&quot;mouton&quot;</span> <span class="ow">in</span> <span class="n">vers</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span>  <span class="c1"># tous les vers contenant &quot;mouton&quot;</span>
@@ -4327,8 +4260,6 @@
 <p class="admonition-title">Astuce</p>
 <p>On passe le vers en minuscule avec <code class="highlight"><span class="n">vers</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span></code> afin de trouver en une seule passe les chaînes <code class="highlight"><span class="s2">&quot;mouton&quot;</span></code>, <code class="highlight"><span class="s2">&quot;Mouton&quot;</span></code>, <code class="highlight"><span class="s2">&quot;MOUTON&quot;</span></code>, <em>etc</em></p>
 </div>
-<details class="question">
-<summary>Activité 3 - Requêtes dans les fables</summary>
 <p>Compléter le script ci-dessous afin d'effectuer les requêtes demandées.</p>
 <p>Toutes les recherches de chaînes de caractères seront insensibles à la casse (utiliser <code class="highlight"><span class="n">vers</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span></code> comme ci-dessus).</p>
 <p><div class="py_mk_ide"  data-max="10"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_f6b880cdb385504f0ca68b6dd97055ac1f01bf7c" class="comment">###</span><div class="line" id="editor_f6b880cdb385504f0ca68b6dd97055ac1f01bf7c"></div><div id="term_editor_f6b880cdb385504f0ca68b6dd97055ac1f01bf7c"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_f6b880cdb385504f0ca68b6dd97055ac1f01bf7c","")'>            <img src="../../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_f6b880cdb385504f0ca68b6dd97055ac1f01bf7c" class="py_mk_hide"># listepy-und1 contient les vers dans lequel apparaît la chaîne "mouton"bksl-nlattendu = [vers for vers in fables if "mouton" in vers.lower()]bksl-nlassert listepy-und1 == attendu, "Erreur sur la liste 1"bksl-nlbksl-nl# listepy-und2 contient les vers dans lequel apparaît la chaîne "cigale"bksl-nlattendu = [vers for vers in fables if "cigale" in vers.lower()]bksl-nlassert listepy-und2 == attendu, "Erreur sur la liste 2"bksl-nlbksl-nl# listepy-und3 contient les vers dans lequel apparaîssent les chaînes "cigale" et "fourmi"bksl-nlattendu = [vers for vers in fables if "cigale" in vers.lower() and "fourmi" in vers.lower()]bksl-nlassert listepy-und3 == attendu, "Erreur sur la liste 3"bksl-nlbksl-nl# listepy-und4 contient les vers de plus de 5 caractères de long (inclus)bksl-nlattendu = [vers for vers in fables if len(vers) &gt;= 4]bksl-nlassert listepy-und4 == attendu, "Erreur sur la liste 4"bksl-nlbksl-nl# listepy-und5 contient les vers dans lesquels on utilise les guillemets (")bksl-nlattendu = [vers for vers in fables if '"' in vers]bksl-nlassert listepy-und5 == attendu, "Erreur sur la liste 5"bksl-nlbksl-nl# listepy-und6 contient les noms des fablesbksl-nl# (ils font plus de 3 caractères de long et sont en majuscule)bksl-nlattendu = [vers for vers in fables if len(vers) &gt;= 3 and vers.upper() == vers]bksl-nlassert listepy-und6 == attendu, "Erreur sur la liste 6"bksl-nlbksl-nl</span>            <button class="tooltip" onclick='check("editor_f6b880cdb385504f0ca68b6dd97055ac1f01bf7c","")'>            <img src="../../../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">10/10</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_f6b880cdb385504f0ca68b6dd97055ac1f01bf7c","pythons/requetes_fables/exo")'>            <img src="../../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_f6b880cdb385504f0ca68b6dd97055ac1f01bf7c').click()" >            <img src="../../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_f6b880cdb385504f0ca68b6dd97055ac1f01bf7c" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_f6b880cdb385504f0ca68b6dd97055ac1f01bf7c")'>            <img src="../../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_f6b880cdb385504f0ca68b6dd97055ac1f01bf7c")'>            <img src="../../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_f6b880cdb385504f0ca68b6dd97055ac1f01bf7c" class="py_mk_hide">#--- HDR ---#bksl-nlurlpy-undfichier = "fables.txt"bksl-nlencodage = "utf-8"bksl-nlbksl-nlfrom js import fetchbksl-nlbksl-nlreponse = await fetch(f"../{urlpy-undfichier}")bksl-nlcontenu = await reponse.text()bksl-nlbksl-nlwith open(file=urlpy-undfichier, mode="w", encoding=encodage) as fichier:bksl-nl    fichier.write(contenu)bksl-nl#--- HDR ---#bksl-nlfables = []bksl-nlwith open(file="fables.txt", mode="r", encoding="utf-8") as fichier:bksl-nl    for ligne in fichier:bksl-nl        lignepy-undpropre = ligne.strip()bksl-nl        if lignepy-undpropre != "":bksl-nl            fables.append(lignepy-undpropre)bksl-nlbksl-nl# listepy-und1 contient les vers dans lequel apparaît la chaîne "mouton"bksl-nllistepy-und1 = ...bksl-nlbksl-nl# listepy-und2 contient les vers dans lequel apparaît la chaîne "cigale"bksl-nllistepy-und2 = ...bksl-nlbksl-nl# listepy-und3 contient les vers dans lequel apparaîssent les chaînes "cigale" et "fourmi"bksl-nllistepy-und3 = ...bksl-nlbksl-nl# listepy-und4 contient les vers de plus de 5 caractères de long (inclus)bksl-nllistepy-und4 = ...bksl-nlbksl-nl# listepy-und5 contient les vers dans lesquels on utilise les guillemets (")bksl-nllistepy-und5 = ...bksl-nlbksl-nl# listepy-und6 contient les noms des fablesbksl-nl# (ils font plus de 6 caractères de long et sont en majuscule)bksl-nllistepy-und6 = ...bksl-nlbksl-nl</span><span id="corr_content_editor_f6b880cdb385504f0ca68b6dd97055ac1f01bf7c" class="py_mk_hide" data-strudel=""># listepy-und1 contient les vers dans lequel apparaît la chaîne "mouton"bksl-nllistepy-und1 = [vers for vers in fables if "cigale" in vers.lower()]bksl-nlbksl-nl# listepy-und2 contient les vers dans lequel apparaît la chaîne "cigale"bksl-nllistepy-und2 = [vers for vers in fables if "cigale" in vers.lower()]bksl-nlbksl-nl# listepy-und3 contient les vers dans lequel apparaîssent les chaînes "cigale" et "fourmi"bksl-nllistepy-und3 = [vers for vers in fables if "cigale" in vers.lower() and "fourmi" in vers.lower()]bksl-nlbksl-nl# listepy-und4 contient les vers de plus de 5 caractères de long (inclus)bksl-nllistepy-und4 = [vers for vers in fables if len(vers) &gt;= 4]bksl-nlbksl-nl# listepy-und5 contient les vers dans lesquels on utilise les guillemets (")bksl-nllistepy-und5 = [vers for vers in fables if '"' in vers]bksl-nlbksl-nl# listepy-und6 contient les noms des fablesbksl-nl# (ils font plus de 3 caractères de long et sont en majuscule)bksl-nllistepy-und6 = [vers for vers in fables if len(vers) &gt;= 3 and vers.upper() == vers]bksl-nlbksl-nl</span></p>
