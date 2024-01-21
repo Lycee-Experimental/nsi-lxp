@@ -1,0 +1,1 @@
+assert hauteur(Noeud(1,Noeud(2, Noeud(4),Noeud(5)), Noeud(3, filsD = Noeud(6)))) == 3, "L'arbre n'a pas la bonne hauteur"
