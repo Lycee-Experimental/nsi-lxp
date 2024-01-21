@@ -32,15 +32,15 @@ Ces données sont organisées en colonnes :
 Ces données peuvent être représentées dans un objet Python de type `#!py list` :
 
 ```python
-# indices     0       1   2       3     4
+# indices   0      1     2     3      4
 animal = ["Oli", "Chat", 10, "juin", 2018]
 ```
 
-Dans ce cadre on distingue les indices et les valeurs des éléments :
+Dans ce cadre on distingue les **indices** et les **valeurs** des **éléments** :
 
-* l'indice correspond à la position de l'élément dans la liste (un peu comme le numéro de la colonne),
+* l'**indice** correspond à la position de l'élément dans la liste (un peu comme le numéro de la colonne),
 
-* la valeur est le contenu à proprement parler.
+* la **valeur** est le contenu à proprement parler.
 
 !!! danger "Attention"
 
@@ -74,7 +74,7 @@ On rappelle les opérations suivantes sur les listes :
 
 ??? tip "Longueur"
 
-    * La longueur d'une liste est données par la fonction `#!py len`:
+    * La **longueur d'une liste** est donnée par la fonction `#!py len`:
 
     ```pycon
     >>> repertoire = ["Clarissa", "Dalloway", 14, "May", 1925]
@@ -84,9 +84,9 @@ On rappelle les opérations suivantes sur les listes :
 
 ??? tip "Lecture de valeur"
 
-    Les valeurs sont repérées par leur indice (la première est à l'indice `#!py 0`).
+    Les **valeurs** sont repérées par leur **indice** (la première est à l'indice `#!py 0`).
   
-    * On accède à une valeur en utilisant des **crochets** :
+    * On accède à une valeur en utilisant des **crochets []** :
 
     ```pycon
     >>> repertoire = ["Clarissa", "Dalloway", 14, "May", 1925]
@@ -103,7 +103,7 @@ On rappelle les opérations suivantes sur les listes :
     1925
     ```
 
-    * Python autorise les indices négatifs : la dernière valeur a pour indice `#!py -1`, l'avant-dernière `#!py -2`, *etc*
+    * Python autorise les **indices négatifs** : la dernière valeur a pour indice `#!py -1`, l'avant-dernière `#!py -2`, *etc*
     
     ```pycon
     >>> repertoire[-1]
@@ -132,7 +132,7 @@ On rappelle les opérations suivantes sur les listes :
   
     ```pycon
     >>> for i in range(len(animaux)):
-            print("Indice :",i, "; Valeur :", animaux[i])
+    ...     print("Indice :",i, "; Valeur :", animaux[i])
     Indice : 0 ; Valeur : 'éléphants'
     Indice : 1 ; Valeur : 'girafes'
     Indice : 2 ; Valeur : 'chevaux'
@@ -142,7 +142,7 @@ On rappelle les opérations suivantes sur les listes :
   
     ```pycon
     >>> for animal in animaux:
-            print(animal)
+    ...     print(animal)
     'éléphants'
     'girafes'
     'chevaux'
@@ -150,7 +150,7 @@ On rappelle les opérations suivantes sur les listes :
 
 ??? tip "Ajout d'éléments"
 
-    On peut ajouter des éléments à la fin d'une liste en utilisant `#!py append` :
+    - On peut ajouter des éléments à la fin d'une liste en utilisant `#!py append()` :
 
     ```pycon
     >>> conjonctions = ["mais", "ou", "et", "donc", "or"]
@@ -159,6 +159,14 @@ On rappelle les opérations suivantes sur les listes :
     >>> conjonctions
     ['mais', 'ou', 'et', 'donc', 'or', 'ni', 'car']
     ```
+    - On peut aussi ajouter des éléments à la fin d'une liste en y ajoutant une autre liste par exemple avec `#!py +=` :
+    ```pycon
+    >>> conjonctions = ["mais", "ou", "et", "donc", "or"]
+    >>> conjonctions += ["ni", "car"]
+    >>> conjonctions
+    ['mais', 'ou', 'et', 'donc', 'or', 'ni', 'car']
+    ```
+
 
 ## Exercices
 

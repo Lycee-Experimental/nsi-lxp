@@ -2,7 +2,8 @@
 
 ## Sans condition
 
-Créer une liste contenant de nombreux éléments peut se faire à l'aide d'une boucle « Pour ».
+Créer une liste contenant de nombreux éléments peut se faire à l'aide d'une boucle `#!py for`.
+
 Le script ci-dessous crée par exemple la liste des éléments entre `#!py 0` et `#!py 100` :
 
 ```python

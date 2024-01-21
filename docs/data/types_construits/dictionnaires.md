@@ -1,14 +1,8 @@
 # Les dictionnaires Python
 
-!!! warning "Remarque"
-
-    Cette page rappelle rapidement les outils fondamentaux sur les dictionnaires Python.
-
-    Il ne s'agit pas d'un cours exhaustif sur ce thème.
-
 ## Présentation
 
-Un dictionnaire Python est une structure de données organisée sous forme de couples `#!py clé : valeur`.
+Un **dictionnaire** Python est une structure de données organisée sous forme de couples `#!py clé : valeur`.
 
 Contrairement aux listes dans lesquelles les valeurs sont identifiées par leur indice, dans un dictionnaire, une **valeur** est associée à une **clé**. Ces clés peuvent être des entiers, des chaînes de carcactères, des tuples...
 
@@ -23,7 +17,7 @@ naissances= {
 
 `#!py "Roméo"` et `#!py "Juliette"` sont les clés du dictionnaire, `#!py 20040517` et `#!py 20040417` les valeurs associées.
 
-??? danger "Des clés *immuables* ?"
+??? danger "Des clés *immuables*"
 
     Lors de la construction d'un dictionnaire, Python associe à chaque clé une valeur précise. Cette association repose sur le fait que la clé ne va pas évoluer au fil de l'exécution du programme. Si c'était le cas, l'association deviendrait caduque dès que la clé est modifiée.
 
@@ -72,6 +66,24 @@ On rappelle les opérations suivantes sur les dictionnaires :
     >>> echiquier
     {(0, 0): None, (5, 1): 'Roi noir', (0, 1): 'Roi blanc'}
     ```
+
+??? tip "Suppression d'un couple `Clé :valeur`"
+    * On peut supprimer une clé et sa valeur avec `#!py del` :
+  
+    ```pycon
+    >>> mon_dictionnaire = { "nom": "Dupont", "prénom": "Jean","age": 30 }
+    >>> del mon_dictionnaire["prénom"]
+    >>> mon_dictionnaire
+    {'nom': 'Dupont', 'age': 30}
+    ```
+    
+    * Si la clé n'existe pas dans le dictionnaire, une `#!py KeyError` sera levée. Pour éviter cela, on peut utiliser la méthode `#!py pop()` avec un argument optionnel pour retourner la valeur par défaut en cas d'absence de la clé. 
+
+    ```pycon
+    >>> valeur_supprimee = mon_dictionnaire.pop("prénom", None)
+    ```
+    
+    Dans cet exemple, valeur_supprimee contiendra la valeur de la clé "prénom" si elle existe, sinon None.
 
 ## Exercices
 
