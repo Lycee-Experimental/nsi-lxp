@@ -3,9 +3,7 @@
 
 !!! info "Fichiers de données"
 
-    Le site [data.gouv](https://www.data.gouv.fr/fr/) propose de nombreux jeux de données en libre accès.
-
-    Les fichiers correspondants sont souvent proposés aux formats 
+    Le site [data.gouv](https://www.data.gouv.fr/fr/) propose de nombreux jeux de données en libre accès. Ces données sont souvent proposées aux formats : 
 
     * `csv` pour _**C**omma **S**eparated **V**alues_,
     * `json` pour _**J**ava**S**cript **O**bject **N**otation_.
@@ -30,13 +28,34 @@
         }
         ```
 
-!!! note "Remarques"
+    ??? note "Autres formats..."
+        Les fichiers `csv` et `json` ne sont pas les seuls formats de fichiers de données. Par exemple on trouve souvent les fichiers xml.
+
+        ```xml title="📑 Données XML"
+        <?xml version="1.0" encoding="UTF-8"?>
+        <amis>
+            <personne>
+                <nom>Jean</nom>
+                <âge>26</âge>
+                <ville>Paris</ville>
+                <passion>VTT</passion>
+            </personne>
+            <personne>
+                <nom>Marion</nom>
+                <âge>28</âge>
+                <ville>Lyon</ville>
+                <passion>badminton</passion>
+            </personne>
+        </amis>
+        ```
+
+??? note "Remarques"
 
     Nous travaillerons désormais avec les fichiers `csv`. L'exemple précédent permet de remarquer plusieurs choses :
 
     * un fichier `csv` contient des **données textuelles**,
 
-    * les données sont organisées en lignes,
+    * les données sont organisées en **lignes**,
 
     * la première ligne regroupe le nom des **descripteurs** (il y en a quatre ici : `#!py nom`, `#!py âge`, `#!py ville` et `#!py passion`),
 
@@ -46,15 +65,17 @@
 
     * les données peuvent être de types différents. Ici le `#!py nom`, la `#!py ville` et la `#!py passion` sont des chaînes de caractères, l'`#!py âge` un entier.
 
-!!! danger "Attention"
+    !!! warning "Attention"
 
-    La réalité n'est pas aussi simple :
-
-    * il arrive que **la première ligne ne contienne pas les entêtes**. Ils peuvent être listés dans un fichier annexe ou... perdus !
+        * il arrive que **la première ligne ne contienne pas les entêtes**. Ils peuvent être listés dans un fichier annexe ou... perdus !
+        
+        * on trouve parfois **une seconde ligne contenant les types des données** (entier, texte...).
+        
+        * le séparateur **n'est pas toujours une virgule**. Il est courant que l'on trouve des `#!py ";"` dans les fichiers français car la virgule est utilisée comme séparateur décimal.
     
-    * on trouve parfois **une seconde ligne contenant les types des données** (entier, texte...).
+    * Les fichiers `csv` et `json` étant de simples fichiers « texte », il est donc possible de les créer avec un quelconque éditeur de texte.
     
-    * le séparateur **n'est pas toujours une virgule**. Il est courant que l'on trouve des `#!py ";"` dans les fichiers français car la virgule est utilisée comme séparateur décimal.
+    ![Création d'un fichier csv](creation_dark.gif){ width=60% .center}
 
 {{exercice(1, titre="Premiers contacts")}}
 
@@ -110,36 +131,7 @@
 
         On pourrait aussi noter le **gros** problème qui consiste à stocker les mots de passe des utilisateurs en clair dans un fichier !
 
-??? note "Autres formats..."
 
-    Les fichiers `csv` et `json` ne sont pas les seuls formats permettant de conserver des données. 
-    
-    On peut aussi retenir le format `xml` pour _e**X**tensible **M**arkup **L**anguage_ qui utilise des balises au même titre que le `html` :
-
-
-    ```xml title="📑 Données XML"
-    <?xml version="1.0" encoding="UTF-8"?>
-    <amis>
-        <personne>
-            <nom>Jean</nom>
-            <âge>26</âge>
-            <ville>Paris</ville>
-            <passion>VTT</passion>
-        </personne>
-        <personne>
-            <nom>Marion</nom>
-            <âge>28</âge>
-            <ville>Lyon</ville>
-            <passion>badminton</passion>
-        </personne>
-    </amis>
-    ```
-
-## Création
-
-On l'a dit, les fichiers `csv` et `json` sont des fichiers « texte » classique. Il est donc possible de les créer avec un simple éditeur de texte.
-
-![Création d'un fichier csv](creation_dark.gif){ width=60% .center}
 
 {{exercice(titre="« *Créer* » un fichier `csv`")}}
 

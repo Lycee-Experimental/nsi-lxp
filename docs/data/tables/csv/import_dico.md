@@ -130,7 +130,7 @@ L'idée est la suivante :
 
 !!! tip "Conseil"
 
-    On pourra (re)lire avec intérêt la page sur [les fichiers](1_manipulation.md)
+    On pourra (re)lire avec intérêt la page sur [les fichiers](./manipulation.md)
 
 {{exercice(titre="Récupérer les noms des descripteurs")}}
 
