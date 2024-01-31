@@ -3,7 +3,7 @@ attendu = [c[0] for c in liste_couleurs]
 assert liste_1 == attendu, "Erreur sur la liste 1"
 
 # liste_2 est la liste des composantes vertes des couleurs
-attendu = [c[3] for c in liste_couleurs]
+attendu = [c[2] for c in liste_couleurs]
 assert liste_2 == attendu, "Erreur sur la liste 2"
 
 # liste_3 est la liste des noms des couleurs dont la composante rouge est supérieure ou égale à 200
