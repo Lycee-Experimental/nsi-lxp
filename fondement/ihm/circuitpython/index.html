@@ -4191,9 +4191,10 @@
 <details class="python">
 <summary>Exemple d'utilisation</summary>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">board</span>
 <span class="kn">import</span> <span class="nn">analogio</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">analogio</span><span class="o">.</span><span class="n">AnalogIn</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">A0</span><span class="p">)</span>
-<span class="n">ay</span> <span class="o">=</span> <span class="n">analogio</span><span class="o">.</span><span class="n">AnalogIn</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">A1</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">analogio</span><span class="o">.</span><span class="n">AnalogIn</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">GPIO0</span><span class="p">)</span>
+<span class="n">ay</span> <span class="o">=</span> <span class="n">analogio</span><span class="o">.</span><span class="n">AnalogIn</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">GPIO1</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">range_map</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">in_min</span><span class="p">,</span> <span class="n">in_max</span><span class="p">,</span> <span class="n">out_min</span><span class="p">,</span> <span class="n">out_max</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">in_min</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">out_max</span> <span class="o">-</span> <span class="n">out_min</span><span class="p">)</span> <span class="o">//</span> <span class="p">(</span><span class="n">in_max</span> <span class="o">-</span> <span class="n">in_min</span><span class="p">)</span> <span class="o">+</span> <span class="n">out_min</span>
@@ -4223,13 +4224,13 @@
 </ul>
 <details class="python">
 <summary>Exemple d'utilisation</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">rotaryio</span> <span class="c1">#pour l&#39;ncodeur rotatif</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">rotaryio</span> <span class="c1">#pour l&#39;encodeur rotatif</span>
 <span class="kn">import</span> <span class="nn">digitalio</span> <span class="c1">#pour le bouton</span>
 <span class="kn">import</span> <span class="nn">board</span>
 
-<span class="n">encoder</span> <span class="o">=</span> <span class="n">rotaryio</span><span class="o">.</span><span class="n">IncrementalEncoder</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">D10</span><span class="p">,</span> <span class="n">board</span><span class="o">.</span><span class="n">D9</span><span class="p">)</span>
+<span class="n">encoder</span> <span class="o">=</span> <span class="n">rotaryio</span><span class="o">.</span><span class="n">IncrementalEncoder</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">GPIO10</span><span class="p">,</span> <span class="n">board</span><span class="o">.</span><span class="n">GPIO9</span><span class="p">)</span>
 
-<span class="n">button</span> <span class="o">=</span> <span class="n">digitalio</span><span class="o">.</span><span class="n">DigitalInOut</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">D12</span><span class="p">)</span>
+<span class="n">button</span> <span class="o">=</span> <span class="n">digitalio</span><span class="o">.</span><span class="n">DigitalInOut</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">GPIO12</span><span class="p">)</span>
 <span class="n">button</span><span class="o">.</span><span class="n">direction</span> <span class="o">=</span> <span class="n">digitalio</span><span class="o">.</span><span class="n">Direction</span><span class="o">.</span><span class="n">INPUT</span>
 <span class="n">button</span><span class="o">.</span><span class="n">pull</span> <span class="o">=</span> <span class="n">digitalio</span><span class="o">.</span><span class="n">Pull</span><span class="o">.</span><span class="n">UP</span>
 
@@ -4263,7 +4264,7 @@
 <p>Installation de la librairie :</p>
 </li>
 </ul>
-<div class="highlight"><span class="filename">Bash</span><pre><span></span><code>circup<span class="w"> </span>install<span class="w"> </span>adafruit-circuitpython-bme680
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code>circup<span class="w"> </span>install<span class="w"> </span>adafruit-bme680
 </code></pre></div>
 <details class="python">
 <summary>Exemple d'utilisation</summary>
@@ -4272,10 +4273,11 @@
 
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">import</span> <span class="nn">board</span>
+<span class="kn">import</span> <span class="nn">busio</span>
 <span class="kn">import</span> <span class="nn">adafruit_bme680</span>
 
 <span class="c1"># Create sensor object, communicating over the board&#39;s default I2C bus</span>
-<span class="n">i2c</span> <span class="o">=</span> <span class="n">board</span><span class="o">.</span><span class="n">I2C</span><span class="p">()</span>  <span class="c1"># uses board.SCL and board.SDA</span>
+<span class="n">i2c</span> <span class="o">=</span> <span class="n">busio</span><span class="o">.</span><span class="n">I2C</span><span class="p">(</span><span class="n">scl</span><span class="o">=</span><span class="n">board</span><span class="o">.</span><span class="n">GPIO0</span><span class="p">,</span> <span class="n">sda</span><span class="o">=</span><span class="n">board</span><span class="o">.</span><span class="n">GPIO1</span><span class="p">)</span>  <span class="c1"># uses board.SCL and board.SDA</span>
 <span class="c1"># i2c = board.STEMMA_I2C()  # For using the built-in STEMMA QT connector on a microcontroller</span>
 <span class="n">bme680</span> <span class="o">=</span> <span class="n">adafruit_bme680</span><span class="o">.</span><span class="n">Adafruit_BME680_I2C</span><span class="p">(</span><span class="n">i2c</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
@@ -4325,7 +4327,7 @@
 <span class="kn">import</span> <span class="nn">board</span>
 <span class="kn">from</span> <span class="nn">analogio</span> <span class="kn">import</span> <span class="n">AnalogIn</span>
 
-<span class="n">capteur</span> <span class="o">=</span> <span class="n">AnalogIn</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">A0</span><span class="p">)</span>
+<span class="n">capteur</span> <span class="o">=</span> <span class="n">AnalogIn</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">GPIO0</span><span class="p">)</span>
 
 <span class="n">samples</span> <span class="o">=</span> <span class="mi">370</span>
 
@@ -4359,9 +4361,10 @@
 <summary>Exemple d'utilisation</summary>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">import</span> <span class="nn">board</span>
+<span class="kn">import</span> <span class="nn">busio</span>
 <span class="kn">import</span> <span class="nn">adafruit_bh1750</span>
 
-<span class="n">i2c</span> <span class="o">=</span> <span class="n">board</span><span class="o">.</span><span class="n">I2C</span><span class="p">()</span>
+<span class="n">i2c</span> <span class="o">=</span> <span class="n">busio</span><span class="o">.</span><span class="n">I2C</span><span class="p">(</span><span class="n">scl</span><span class="o">=</span><span class="n">board</span><span class="o">.</span><span class="n">GPIO0</span><span class="p">,</span> <span class="n">sda</span><span class="o">=</span><span class="n">board</span><span class="o">.</span><span class="n">GPIO1</span><span class="p">)</span>
 <span class="n">sensor</span> <span class="o">=</span> <span class="n">adafruit_bh1750</span><span class="o">.</span><span class="n">BH1750</span><span class="p">(</span><span class="n">i2c</span><span class="p">)</span>
 
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
@@ -4375,7 +4378,7 @@
 <p><img alt="" src="https://m.media-amazon.com/images/I/61MvLrjDlaL._AC_SL1000_.jpg" /></p>
 <ul>
 <li>
-<p><a href="https://github.com/wallarug/CircuitPython_MPU9250/tree/master">Librairie et documentation</a></p>
+<p><a href="https://github.com/davy39/CircuitPython_MPU9250">Librairie et documentation</a></p>
 </li>
 <li>
 <p>Protocole de communication : <strong>I2C</strong></p>
@@ -4394,9 +4397,9 @@
 
 <span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
 
-<span class="n">i2c</span> <span class="o">=</span> <span class="n">busio</span><span class="o">.</span><span class="n">I2C</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">SCL</span><span class="p">,</span> <span class="n">board</span><span class="o">.</span><span class="n">SDA</span><span class="p">)</span>
+<span class="n">i2c</span> <span class="o">=</span> <span class="n">busio</span><span class="o">.</span><span class="n">I2C</span><span class="p">(</span><span class="n">scl</span><span class="o">=</span><span class="n">board</span><span class="o">.</span><span class="n">GPIO6</span><span class="p">,</span> <span class="n">sda</span><span class="o">=</span><span class="n">board</span><span class="o">.</span><span class="n">GPIO7</span><span class="p">)</span>
 
-<span class="n">mpu</span> <span class="o">=</span> <span class="n">MPU6500</span><span class="p">(</span><span class="n">i2c</span><span class="p">,</span> <span class="n">address</span><span class="o">=</span><span class="mh">0x69</span><span class="p">)</span>
+<span class="n">mpu</span> <span class="o">=</span> <span class="n">MPU6500</span><span class="p">(</span><span class="n">i2c</span><span class="p">,</span> <span class="n">address</span><span class="o">=</span><span class="mh">0x68</span><span class="p">)</span>
 <span class="n">ak</span> <span class="o">=</span> <span class="n">AK8963</span><span class="p">(</span><span class="n">i2c</span><span class="p">)</span>
 
 <span class="n">sensor</span> <span class="o">=</span> <span class="n">MPU9250</span><span class="p">(</span><span class="n">mpu</span><span class="p">,</span> <span class="n">ak</span><span class="p">)</span>
@@ -4437,7 +4440,7 @@
 
 <span class="kn">import</span> <span class="nn">adafruit_gps</span>
 
-<span class="n">uart</span> <span class="o">=</span> <span class="n">busio</span><span class="o">.</span><span class="n">UART</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">TX</span><span class="p">,</span> <span class="n">board</span><span class="o">.</span><span class="n">RX</span><span class="p">,</span> <span class="n">baudrate</span><span class="o">=</span><span class="mi">9600</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">uart</span> <span class="o">=</span> <span class="n">busio</span><span class="o">.</span><span class="n">UART</span><span class="p">(</span><span class="n">tx</span><span class="o">=</span><span class="n">board</span><span class="o">.</span><span class="n">GPIO0</span><span class="p">,</span> <span class="n">rx</span><span class="o">=</span><span class="n">board</span><span class="o">.</span><span class="n">GPIO1</span><span class="p">,</span> <span class="n">baudrate</span><span class="o">=</span><span class="mi">9600</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 
 <span class="n">gps</span> <span class="o">=</span> <span class="n">adafruit_gps</span><span class="o">.</span><span class="n">GPS</span><span class="p">(</span><span class="n">uart</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># Use UART/pyserial</span>
 
@@ -4507,14 +4510,18 @@
 </details>
 <h2 id="peripherique-de-sortie">Périphérique de sortie<a class="headerlink" href="#peripherique-de-sortie" title="Permanent link">⚓︎</a></h2>
 <details class="note">
-<summary>Ecran SSD1306</summary>
+<summary>Ecran SSD1306 ou SH1106</summary>
 <p><img alt="" src="https://m.media-amazon.com/images/I/517eTutb0GL._SL1084_.jpg" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>Les écrans SSD1306 et sh1106 sont indifférenciables en apparence. Tester l'autre librairie si la première ne fonctionne pas.</p>
+</div>
 <ul>
 <li>
-<p>Documentation <strong>CircuitPython</strong> sur les <a href="https://learn.adafruit.com/adafruit-oled-featherwing/python-usage">écrans OLED SSD1306</a> et l'utilisation plus générale de <a href="https://learn.adafruit.com/circuitpython-display-support-using-displayio">DisplayIO</a></p>
+<p>Documentation <strong>CircuitPython</strong> sur les <a href="https://learn.adafruit.com/adafruit-oled-featherwing/python-usage">écrans OLED SSD1306</a> et <a href="https://docs.circuitpython.org/projects/displayio_sh1106/en/latest/api.html">sh1106</a> et sur l'utilisation plus générale de <a href="https://learn.adafruit.com/circuitpython-display-support-using-displayio">DisplayIO</a></p>
 </li>
 <li>
-<p><strong>Librairies</strong> pour l'utilisation des <a href="https://docs.circuitpython.org/projects/displayio_ssd1306/en/latest/">écrans SSD1306</a>, pour l'affichage de <a href="https://docs.circuitpython.org/projects/display_text/en/latest/">texte</a> et pour la création de <a href="https://github.com/greatest-gatsby/fruity_menu">menus</a></p>
+<p><strong>Librairies</strong> pour l'utilisation des <a href="https://docs.circuitpython.org/projects/displayio_ssd1306/en/latest/">écrans SSD1306</a>, ou <a href="https://docs.circuitpython.org/projects/displayio_sh1106/en/latest/api.html">sh1106</a>, pour l'affichage de <a href="https://docs.circuitpython.org/projects/display_text/en/latest/">texte</a> et pour la création de <a href="https://github.com/greatest-gatsby/fruity_menu">menus</a></p>
 </li>
 <li>
 <p>Protocole de communication : <strong>I2C</strong> ou <strong>SPI</strong> selon le matériel</p>
@@ -4589,7 +4596,7 @@
 <span class="n">led</span><span class="o">.</span><span class="n">direction</span> <span class="o">=</span> <span class="n">digitalio</span><span class="o">.</span><span class="n">Direction</span><span class="o">.</span><span class="n">OUTPUT</span>
 
 <span class="c1"># Connect to the card and mount the filesystem.</span>
-<span class="n">spi</span> <span class="o">=</span> <span class="n">busio</span><span class="o">.</span><span class="n">SPI</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">SCK</span><span class="p">,</span> <span class="n">board</span><span class="o">.</span><span class="n">MOSI</span><span class="p">,</span> <span class="n">board</span><span class="o">.</span><span class="n">MISO</span><span class="p">)</span>
+<span class="n">spi</span> <span class="o">=</span> <span class="n">busio</span><span class="o">.</span><span class="n">SPI</span><span class="p">(</span><span class="n">clock</span><span class="o">=</span><span class="n">board</span><span class="o">.</span><span class="n">GPIO0</span><span class="p">,</span> <span class="n">MOSI</span><span class="o">=</span><span class="n">board</span><span class="o">.</span><span class="n">GPIO1</span><span class="p">,</span> <span class="n">MISO</span><span class="o">=</span><span class="n">board</span><span class="o">.</span><span class="n">GPIO2</span><span class="p">)</span>
 <span class="n">cs</span> <span class="o">=</span> <span class="n">digitalio</span><span class="o">.</span><span class="n">DigitalInOut</span><span class="p">(</span><span class="n">SD_CS</span><span class="p">)</span>
 <span class="n">sdcard</span> <span class="o">=</span> <span class="n">adafruit_sdcard</span><span class="o">.</span><span class="n">SDCard</span><span class="p">(</span><span class="n">spi</span><span class="p">,</span> <span class="n">cs</span><span class="p">)</span>
 <span class="n">vfs</span> <span class="o">=</span> <span class="n">storage</span><span class="o">.</span><span class="n">VfsFat</span><span class="p">(</span><span class="n">sdcard</span><span class="p">)</span>
@@ -4652,8 +4659,8 @@
     <span class="k">raise</span>
 
 <span class="c1"># Create a serial connection for the FONA connection</span>
-<span class="n">uart</span> <span class="o">=</span> <span class="n">busio</span><span class="o">.</span><span class="n">UART</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">TX</span><span class="p">,</span> <span class="n">board</span><span class="o">.</span><span class="n">RX</span><span class="p">)</span>
-<span class="n">rst</span> <span class="o">=</span> <span class="n">digitalio</span><span class="o">.</span><span class="n">DigitalInOut</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">D4</span><span class="p">)</span>
+<span class="n">uart</span> <span class="o">=</span> <span class="n">busio</span><span class="o">.</span><span class="n">UART</span><span class="p">(</span><span class="n">tx</span><span class="o">=</span><span class="n">board</span><span class="o">.</span><span class="n">GPIO0</span><span class="p">,</span> <span class="n">rx</span><span class="o">=</span><span class="n">board</span><span class="o">.</span><span class="n">GPIO1</span><span class="p">)</span>
+<span class="n">rst</span> <span class="o">=</span> <span class="n">digitalio</span><span class="o">.</span><span class="n">DigitalInOut</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">GPIO2</span><span class="p">)</span>
 
 <span class="c1"># Use this for FONA800 and FONA808</span>
 <span class="n">fona</span> <span class="o">=</span> <span class="n">FONA</span><span class="p">(</span><span class="n">uart</span><span class="p">,</span> <span class="n">rst</span><span class="p">)</span>
@@ -4700,6 +4707,73 @@
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Done!&quot;</span><span class="p">)</span>
 </code></pre></div>
 </details>
+</details>
+<details class="example">
+<summary>Example d'affichage des données d'un capteur</summary>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># On déclare les librairies nécessaires</span>
+<span class="c1"># Les installer au préalable avec :</span>
+<span class="c1"># circup install adafruit_bme680 adafruit_display_text adafruit_displayio_ssd1306 adafruit_sdcard</span>
+<span class="kn">import</span> <span class="nn">board</span>
+<span class="kn">import</span> <span class="nn">busio</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">adafruit_bme680</span>
+<span class="kn">import</span> <span class="nn">digitalio</span>
+<span class="kn">import</span> <span class="nn">adafruit_sdcard</span>
+<span class="kn">import</span> <span class="nn">storage</span>
+<span class="kn">import</span> <span class="nn">terminalio</span>
+<span class="kn">import</span> <span class="nn">displayio</span>
+<span class="kn">from</span> <span class="nn">adafruit_display_text</span> <span class="kn">import</span> <span class="n">label</span>
+<span class="kn">import</span> <span class="nn">adafruit_displayio_ssd1306</span>
+
+<span class="c1"># On efface le contenu de l&#39;écran</span>
+<span class="n">displayio</span><span class="o">.</span><span class="n">release_displays</span><span class="p">()</span>
+<span class="c1"># On déclare un bus I2C sur les pins GPIO1 et GPIO2</span>
+<span class="n">i2c</span> <span class="o">=</span> <span class="n">busio</span><span class="o">.</span><span class="n">I2C</span><span class="p">(</span><span class="n">scl</span><span class="o">=</span><span class="n">board</span><span class="o">.</span><span class="n">GPIO1</span><span class="p">,</span> <span class="n">sda</span><span class="o">=</span><span class="n">board</span><span class="o">.</span><span class="n">GPIO0</span><span class="p">)</span>
+<span class="c1"># On déclare le BME680 sur l&#39;I2C</span>
+<span class="n">bme680</span> <span class="o">=</span> <span class="n">adafruit_bme680</span><span class="o">.</span><span class="n">Adafruit_BME680_I2C</span><span class="p">(</span><span class="n">i2c</span><span class="p">)</span>
+<span class="c1"># On déclare notre écran de 128x32 pixels sur l&#39;I2C à l&#39;addresse 0x3C</span>
+<span class="n">display_bus</span> <span class="o">=</span> <span class="n">displayio</span><span class="o">.</span><span class="n">I2CDisplay</span><span class="p">(</span><span class="n">i2c</span><span class="p">,</span> <span class="n">device_address</span><span class="o">=</span><span class="mh">0x3C</span><span class="p">)</span>
+<span class="n">display</span> <span class="o">=</span> <span class="n">adafruit_displayio_ssd1306</span><span class="o">.</span><span class="n">SSD1306</span><span class="p">(</span><span class="n">display_bus</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span>
+<span class="c1"># On indique ici la pression (hPa) mesurée au niveau de la mer</span>
+<span class="n">bme680</span><span class="o">.</span><span class="n">sea_level_pressure</span> <span class="o">=</span> <span class="mf">1013.25</span>
+<span class="c1"># On déclare un bus SPI sur les pins GPIO2, GPIO3, GPIO4 et GPIO5</span>
+<span class="n">spi</span> <span class="o">=</span> <span class="n">busio</span><span class="o">.</span><span class="n">SPI</span><span class="p">(</span><span class="n">clock</span><span class="o">=</span><span class="n">board</span><span class="o">.</span><span class="n">GPIO2</span><span class="p">,</span> <span class="n">MOSI</span><span class="o">=</span><span class="n">board</span><span class="o">.</span><span class="n">GPIO3</span><span class="p">,</span> <span class="n">MISO</span><span class="o">=</span><span class="n">board</span><span class="o">.</span><span class="n">GPIO4</span><span class="p">)</span>
+<span class="n">cs</span> <span class="o">=</span> <span class="n">digitalio</span><span class="o">.</span><span class="n">DigitalInOut</span><span class="p">(</span><span class="n">board</span><span class="o">.</span><span class="n">GPIO5</span><span class="p">)</span>
+<span class="c1">#On déclare une carte SD connectée sur le SPI</span>
+<span class="n">sdcard</span> <span class="o">=</span> <span class="n">adafruit_sdcard</span><span class="o">.</span><span class="n">SDCard</span><span class="p">(</span><span class="n">spi</span><span class="p">,</span> <span class="n">cs</span><span class="p">)</span>
+<span class="c1">#On déclare un système de fichier VfsFat sur la carte SD</span>
+<span class="n">vfs</span> <span class="o">=</span> <span class="n">storage</span><span class="o">.</span><span class="n">VfsFat</span><span class="p">(</span><span class="n">sdcard</span><span class="p">)</span>
+<span class="c1">#On le monte dans un dossier /sd</span>
+<span class="n">storage</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="n">vfs</span><span class="p">,</span> <span class="s2">&quot;/sd&quot;</span><span class="p">)</span>
+
+<span class="c1">#On lance une boucle qui tourne en permanence</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="c1">#On récupère un tuple comprenant tous les paramètres mesurés par le BME680</span>
+    <span class="n">result</span><span class="o">=</span><span class="p">(</span><span class="n">bme680</span><span class="o">.</span><span class="n">temperature</span><span class="p">,</span><span class="n">bme680</span><span class="o">.</span><span class="n">gas</span><span class="p">,</span><span class="n">bme680</span><span class="o">.</span><span class="n">relative_humidity</span><span class="p">,</span><span class="n">bme680</span><span class="o">.</span><span class="n">pressure</span><span class="p">,</span><span class="n">bme680</span><span class="o">.</span><span class="n">altitude</span><span class="p">)</span>
+    <span class="c1">#On affiche le tuple sur le serial pour éventuellement pouvoir le tracer en direct avec l&#39;icone &quot;Graphique&quot; de Mu-Editor</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+    <span class="c1">#On ouvre un fichier test.txt pour continuer à le remplir (&quot;a&quot;=append)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/sd/test.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="c1">#On y écrit nos paramètres, séparés d&#39;un espace, et formatés avec plus ou moins de décimales</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%0.1f</span><span class="s2"> </span><span class="si">%d</span><span class="s2"> </span><span class="si">%0.1f</span><span class="s2"> </span><span class="si">%0.3f</span><span class="s2"> </span><span class="si">%0.2f</span><span class="se">\r\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">result</span><span class="p">)</span>
+    <span class="c1"># On gère l&#39;affichage du texte sur l&#39;écran</span>
+    <span class="n">text_group</span> <span class="o">=</span> <span class="n">displayio</span><span class="o">.</span><span class="n">Group</span><span class="p">()</span>
+    <span class="c1"># On écrit la température sur un ligne située à 3 pixel du haut</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Temp : </span><span class="si">{:.2f}</span><span class="s2"> C&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">bme680</span><span class="o">.</span><span class="n">temperature</span><span class="p">)</span>
+    <span class="n">text_area</span> <span class="o">=</span> <span class="n">label</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">terminalio</span><span class="o">.</span><span class="n">FONT</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="n">text</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="mh">0xFFFFFF</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">text_group</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">text_area</span><span class="p">)</span>
+    <span class="c1"># On écrit la pression sur un ligne située à 14 pixel du haut</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Pres : </span><span class="si">{:.2f}</span><span class="s2"> hPa&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">bme680</span><span class="o">.</span><span class="n">pressure</span><span class="p">)</span>
+    <span class="n">text_area</span> <span class="o">=</span> <span class="n">label</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">terminalio</span><span class="o">.</span><span class="n">FONT</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="n">text</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="mh">0xFFFFFF</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+    <span class="n">text_group</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">text_area</span><span class="p">)</span>
+    <span class="c1"># On écrit l&#39;humidité sur un ligne située à 25 pixel du haut</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Humi : </span><span class="si">{:.2f}</span><span class="s2"> %&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">bme680</span><span class="o">.</span><span class="n">relative_humidity</span><span class="p">)</span>
+    <span class="n">text_area</span> <span class="o">=</span> <span class="n">label</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">terminalio</span><span class="o">.</span><span class="n">FONT</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="n">text</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="mh">0xFFFFFF</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+    <span class="n">text_group</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">text_area</span><span class="p">)</span>
+    <span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">text_group</span><span class="p">)</span>
+    <span class="c1">#on attend 2 secondes avant de recommencer une mesure.</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
 </details>
 
 
