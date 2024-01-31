@@ -56,9 +56,10 @@
 
         ```python
         import time
+        import board
         import analogio
-        ax = analogio.AnalogIn(board.A0)
-        ay = analogio.AnalogIn(board.A1)
+        ax = analogio.AnalogIn(board.GPIO0)
+        ay = analogio.AnalogIn(board.GPIO1)
 
         def range_map(x, in_min, in_max, out_min, out_max):
             return (x - in_min) * (out_max - out_min) // (in_max - in_min) + out_min
@@ -86,13 +87,13 @@
 
     ??? python "Exemple d'utilisation"
         ```python
-        import rotaryio #pour l'ncodeur rotatif
+        import rotaryio #pour l'encodeur rotatif
         import digitalio #pour le bouton
         import board
 
-        encoder = rotaryio.IncrementalEncoder(board.D10, board.D9)
+        encoder = rotaryio.IncrementalEncoder(board.GPIO10, board.GPIO9)
 
-        button = digitalio.DigitalInOut(board.D12)
+        button = digitalio.DigitalInOut(board.GPIO12)
         button.direction = digitalio.Direction.INPUT
         button.pull = digitalio.Pull.UP
 
@@ -125,7 +126,7 @@
     - Installation de la librairie :
 
     ```bash
-    circup install adafruit-circuitpython-bme680
+    circup install adafruit-bme680
 
     ```
 
@@ -137,10 +138,11 @@
 
         import time
         import board
+        import busio
         import adafruit_bme680
 
         # Create sensor object, communicating over the board's default I2C bus
-        i2c = board.I2C()  # uses board.SCL and board.SDA
+        i2c = busio.I2C(scl=board.GPIO0, sda=board.GPIO1)  # uses board.SCL and board.SDA
         # i2c = board.STEMMA_I2C()  # For using the built-in STEMMA QT connector on a microcontroller
         bme680 = adafruit_bme680.Adafruit_BME680_I2C(i2c, debug=False)
 
@@ -186,7 +188,7 @@
         import board
         from analogio import AnalogIn
 
-        capteur = AnalogIn(board.A0)
+        capteur = AnalogIn(board.GPIO0)
 
         samples = 370
 
@@ -218,9 +220,10 @@
         ```python
         import time
         import board
+        import busio
         import adafruit_bh1750
 
-        i2c = board.I2C()
+        i2c = busio.I2C(scl=board.GPIO0, sda=board.GPIO1)
         sensor = adafruit_bh1750.BH1750(i2c)
 
         while True:
@@ -233,7 +236,7 @@
 
     ![](https://m.media-amazon.com/images/I/61MvLrjDlaL._AC_SL1000_.jpg)
 
-    - [Librairie et documentation](https://github.com/wallarug/CircuitPython_MPU9250/tree/master)
+    - [Librairie et documentation](https://github.com/davy39/CircuitPython_MPU9250)
 
     - Protocole de communication : **I2C**
 
@@ -250,9 +253,9 @@
 
         from time import sleep
 
-        i2c = busio.I2C(board.SCL, board.SDA)
+        i2c = busio.I2C(scl=board.GPIO6, sda=board.GPIO7)
 
-        mpu = MPU6500(i2c, address=0x69)
+        mpu = MPU6500(i2c, address=0x68)
         ak = AK8963(i2c)
 
         sensor = MPU9250(mpu, ak)
@@ -290,7 +293,7 @@
 
         import adafruit_gps
 
-        uart = busio.UART(board.TX, board.RX, baudrate=9600, timeout=10)
+        uart = busio.UART(tx=board.GPIO0, rx=board.GPIO1, baudrate=9600, timeout=10)
 
         gps = adafruit_gps.GPS(uart, debug=False)  # Use UART/pyserial
 
@@ -362,13 +365,16 @@
 
 ## Périphérique de sortie
 
-??? note "Ecran SSD1306"
+??? note "Ecran SSD1306 ou SH1106"
 
     ![](https://m.media-amazon.com/images/I/517eTutb0GL._SL1084_.jpg)
 
-    - Documentation **CircuitPython** sur les [écrans OLED SSD1306](https://learn.adafruit.com/adafruit-oled-featherwing/python-usage) et l'utilisation plus générale de [DisplayIO](https://learn.adafruit.com/circuitpython-display-support-using-displayio)
+    !!! warning "Attention"
+        Les écrans SSD1306 et sh1106 sont indifférenciables en apparence. Tester l'autre librairie si la première ne fonctionne pas.
 
-    - **Librairies** pour l'utilisation des [écrans SSD1306](https://docs.circuitpython.org/projects/displayio_ssd1306/en/latest/), pour l'affichage de [texte](https://docs.circuitpython.org/projects/display_text/en/latest/) et pour la création de [menus](https://github.com/greatest-gatsby/fruity_menu)
+    - Documentation **CircuitPython** sur les [écrans OLED SSD1306](https://learn.adafruit.com/adafruit-oled-featherwing/python-usage) et [sh1106](https://docs.circuitpython.org/projects/displayio_sh1106/en/latest/api.html) et sur l'utilisation plus générale de [DisplayIO](https://learn.adafruit.com/circuitpython-display-support-using-displayio)
+
+    - **Librairies** pour l'utilisation des [écrans SSD1306](https://docs.circuitpython.org/projects/displayio_ssd1306/en/latest/), ou [sh1106](https://docs.circuitpython.org/projects/displayio_sh1106/en/latest/api.html), pour l'affichage de [texte](https://docs.circuitpython.org/projects/display_text/en/latest/) et pour la création de [menus](https://github.com/greatest-gatsby/fruity_menu)
 
     - Protocole de communication : **I2C** ou **SPI** selon le matériel
 
@@ -439,7 +445,7 @@
         led.direction = digitalio.Direction.OUTPUT
 
         # Connect to the card and mount the filesystem.
-        spi = busio.SPI(board.SCK, board.MOSI, board.MISO)
+        spi = busio.SPI(clock=board.GPIO0, MOSI=board.GPIO1, MISO=board.GPIO2)
         cs = digitalio.DigitalInOut(SD_CS)
         sdcard = adafruit_sdcard.SDCard(spi, cs)
         vfs = storage.VfsFat(sdcard)
@@ -501,8 +507,8 @@
             raise
 
         # Create a serial connection for the FONA connection
-        uart = busio.UART(board.TX, board.RX)
-        rst = digitalio.DigitalInOut(board.D4)
+        uart = busio.UART(tx=board.GPIO0, rx=board.GPIO1)
+        rst = digitalio.DigitalInOut(board.GPIO2)
 
         # Use this for FONA800 and FONA808
         fona = FONA(uart, rst)
@@ -548,3 +554,72 @@
 
         print("Done!")
         ```
+
+
+??? example "Example d'affichage des données d'un capteur"
+
+    ```python
+    # On déclare les librairies nécessaires
+    # Les installer au préalable avec :
+    # circup install adafruit_bme680 adafruit_display_text adafruit_displayio_ssd1306 adafruit_sdcard
+    import board
+    import busio
+    import time
+    import adafruit_bme680
+    import digitalio
+    import adafruit_sdcard
+    import storage
+    import terminalio
+    import displayio
+    from adafruit_display_text import label
+    import adafruit_displayio_ssd1306
+
+    # On efface le contenu de l'écran
+    displayio.release_displays()
+    # On déclare un bus I2C sur les pins GPIO1 et GPIO2
+    i2c = busio.I2C(scl=board.GPIO1, sda=board.GPIO0)
+    # On déclare le BME680 sur l'I2C
+    bme680 = adafruit_bme680.Adafruit_BME680_I2C(i2c)
+    # On déclare notre écran de 128x32 pixels sur l'I2C à l'addresse 0x3C
+    display_bus = displayio.I2CDisplay(i2c, device_address=0x3C)
+    display = adafruit_displayio_ssd1306.SSD1306(display_bus, width=128, height=32)
+    # On indique ici la pression (hPa) mesurée au niveau de la mer
+    bme680.sea_level_pressure = 1013.25
+    # On déclare un bus SPI sur les pins GPIO2, GPIO3, GPIO4 et GPIO5
+    spi = busio.SPI(clock=board.GPIO2, MOSI=board.GPIO3, MISO=board.GPIO4)
+    cs = digitalio.DigitalInOut(board.GPIO5)
+    #On déclare une carte SD connectée sur le SPI
+    sdcard = adafruit_sdcard.SDCard(spi, cs)
+    #On déclare un système de fichier VfsFat sur la carte SD
+    vfs = storage.VfsFat(sdcard)
+    #On le monte dans un dossier /sd
+    storage.mount(vfs, "/sd")
+
+    #On lance une boucle qui tourne en permanence
+    while True:
+        #On récupère un tuple comprenant tous les paramètres mesurés par le BME680
+        result=(bme680.temperature,bme680.gas,bme680.relative_humidity,bme680.pressure,bme680.altitude)
+        #On affiche le tuple sur le serial pour éventuellement pouvoir le tracer en direct avec l'icone "Graphique" de Mu-Editor
+        print(result)
+        #On ouvre un fichier test.txt pour continuer à le remplir ("a"=append)
+        with open("/sd/test.txt", "a") as f:
+            #On y écrit nos paramètres, séparés d'un espace, et formatés avec plus ou moins de décimales
+            f.write("%0.1f %d %0.1f %0.3f %0.2f\r\n" % result)
+        # On gère l'affichage du texte sur l'écran
+        text_group = displayio.Group()
+        # On écrit la température sur un ligne située à 3 pixel du haut
+        text = "Temp : {:.2f} C".format(bme680.temperature)
+        text_area = label.Label(terminalio.FONT, text=text, color=0xFFFFFF, x=0, y=3)
+        text_group.append(text_area)
+        # On écrit la pression sur un ligne située à 14 pixel du haut
+        text = "Pres : {:.2f} hPa".format(bme680.pressure)
+        text_area = label.Label(terminalio.FONT, text=text, color=0xFFFFFF, x=0, y=14)
+        text_group.append(text_area)
+        # On écrit l'humidité sur un ligne située à 25 pixel du haut
+        text = "Humi : {:.2f} %".format(bme680.relative_humidity)
+        text_area = label.Label(terminalio.FONT, text=text, color=0xFFFFFF, x=0, y=25)
+        text_group.append(text_area)
+        display.show(text_group)
+        #on attend 2 secondes avant de recommencer une mesure.
+        time.sleep(2)
+    ```
