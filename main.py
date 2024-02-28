@@ -1129,33 +1129,21 @@ $(document).ready(launchDebian());
 
     # TODO : this issue concerning the urls must be closed ASAP
     def get_filepath() -> str:
-        print("docs_dirs", env.conf["docs_dir"])
-        print(
-            "P1",
-            env.variables.page.abs_url,
-            "/".join(
+        if env.variables.page.is_index:
+            path = "/".join(
+                    filter(
+                        lambda folder: folder != "",
+                        convert_url_to_utf8(env.variables.page.abs_url).split("/")[:-1],
+                    )
+                )
+        else:
+            path = "/".join(
                 filter(
                     lambda folder: folder != "",
-                    convert_url_to_utf8(env.variables.page.url).split("/")[:-2],
+                    convert_url_to_utf8(env.variables.page.abs_url).split("/")[:-2],
                 )
-            ),
-        )
-        print(
-            "P2",
-            env.variables.page.abs_url,
-            "/".join(
-                filter(
-                    lambda folder: folder != "",
-                    convert_url_to_utf8(env.variables.page.abs_url).split("/")[2:-2],
-                )
-            ),
-        )
-        return "/".join(
-            filter(
-                lambda folder: folder != "",
-                convert_url_to_utf8(env.variables.page.abs_url).split("/")[:-2],
             )
-        )
+        return path
 
     # TODO : handle the case where the same files are loaded on the same page.
     def generate_id_ide(content: str) -> str:
