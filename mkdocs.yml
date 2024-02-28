@@ -114,6 +114,7 @@ extra:
 plugins:
   - search
   #- mkdocs-video
+
   - awesome-pages:
       filename: .pages
       collapse_single_pages: true
@@ -122,7 +123,17 @@ plugins:
       sort_type: natural
       order_by: title
   - macros
-
+  #- enumerate-headings:
+  #      toc_depth: 0
+  #      strict: true
+  #      increment_across_pages: true
+  #      include:
+  #        - "*"
+  #      exclude:
+  #        - index.md
+  #        - another_page.md
+  #      restart_increment_after:
+  #        - second_section.md
   #- inline-svg
 
 extra_javascript:
