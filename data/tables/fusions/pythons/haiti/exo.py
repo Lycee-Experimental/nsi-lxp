@@ -9,7 +9,7 @@ import csv
 url_fichier = "cities.csv"
 encodage = "utf-8"
 
-reponse = await fetch(f"../{url_fichier}")
+reponse = await fetch(f"{url_fichier}")
 contenu = await reponse.text()
 
 with open(file=url_fichier, mode="w", encoding=encodage) as fichier:
@@ -30,7 +30,7 @@ with open(url_fichier, "r", encoding="utf-8") as fichier:
 url_fichier = "languages.csv"
 encodage = "utf-8"
 
-reponse = await fetch(f"../{url_fichier}")
+reponse = await fetch(f"{url_fichier}")
 contenu = await reponse.text()
 
 with open(file=url_fichier, mode="w", encoding=encodage) as fichier:
@@ -52,7 +52,7 @@ with open(url_fichier, "r", encoding="utf-8") as fichier:
 url_fichier = "countries.csv"
 encodage = "utf-8"
 
-reponse = await fetch(f"../{url_fichier}")
+reponse = await fetch(f"{url_fichier}")
 contenu = await reponse.text()
 
 with open(file=url_fichier, mode="w", encoding=encodage) as fichier:
