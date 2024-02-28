@@ -4157,16 +4157,18 @@
   
 
 
-<h1 id="meilleurs-films-selon-imdb">Meilleurs films selon IMDB<a class="headerlink" href="#meilleurs-films-selon-imdb" title="Permanent link">⚓︎</a></h1>
-<p>À ce stade nous savons :</p>
+<h1 id="meilleurs-films-selon-imdb">🎬 Meilleurs films selon IMDB 🎬<a class="headerlink" href="#meilleurs-films-selon-imdb" title="Permanent link">⚓︎</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Nous savons maintenant</p>
 <ul>
 <li>ouvrir un fichier <code>csv</code> à l'aide de Python,</li>
 <li>lire son contenu dans une liste (de listes ou de dictionnaires),</li>
 <li>typer les données,</li>
 <li>effectuer des requêtes sur ces données à l'aide de listes en compréhension.</li>
 </ul>
+</div>
 <h2 id="presentation-des-donnees-et-import">Présentation des données et import<a class="headerlink" href="#presentation-des-donnees-et-import" title="Permanent link">⚓︎</a></h2>
-<p>Nous allons pousser notre étude un peu plus loin lors de l'étude du fichier <code>films.csv</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. Ce <a href="../films.csv">fichier</a> reprend les 517 films les mieux notés sur le site <a href="https://www.imdb.com/">IMDB</a>.</p>
+<p>Nous allons pousser notre étude un peu plus loin lors de l'étude du fichier <code>films.csv</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. Ce <a href="../films.csv">fichier</a> reprend les 517 films les mieux notés sur le site <a href="https://www.imdb.com/">Internet Movie DataBase (IDMB)</a>.</p>
 <p>Les descripteurs proposés sont :</p>
 <table>
 <thead>
@@ -4230,7 +4232,7 @@
 </table>
 <div class="admonition note">
 <p class="admonition-title">Les genres</p>
-<p>Chaque film est associé à au moins un genre, certains à trois genres...</p>
+<p>Chaque film est associé à au moins un genre, certains à plusieurs.</p>
 <p>Dans le cas où plusieurs genres sont cités, ceux-ci sont séparés par des virgules.</p>
 </div>
 <p>Voici les premières lignes du fichier :</p>
@@ -4256,13 +4258,12 @@
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Import réalisé !</p>
-<p>Dans toute la suite du TP, la liste <code>films</code> telle qu'importée ci-dessus sera accessible dans chaque éditeur.</p>
+<p>Dans la suite de ce chapitre, la liste <code>films</code> telle qu'importée ci-dessus sera directement accessible dans les éditeurs.</p>
 </div>
 <h2 id="votes-par-genre">Votes par genre<a class="headerlink" href="#votes-par-genre" title="Permanent link">⚓︎</a></h2>
-<p>Le fichier compte 25 films dont l'un des <code class="highlight"><span class="n">Genres</span></code> est <code class="highlight"><span class="n">Family</span></code> et 26 avec le genre <code class="highlight"><span class="n">Horror</span></code>. On précise qu'<strong>aucun film ne possède ces deux genres</strong>.</p>
-<p>Parmi ces deux genres, quel est celui qui a reçu le plus de votes au total (en additionnant les votes reçus par chaque film) ?</p>
+<p>Le fichier compte 25 films dont l'un des <code class="highlight"><span class="n">Genres</span></code> est <code class="highlight"><span class="n">Family</span></code>, il en compte 26 avec le genre <code class="highlight"><span class="n">Horror</span></code>. On précise qu'aucun film ne possède à la fois ces deux genres.</p>
 <details class="question">
-<summary>Activité 1 - Comparaison de genres</summary>
+<summary>Activité 1 - Lequel de ces deux genres a reçu le plus de votes ?</summary>
 <p>Compléter le script ci-dessous afin de compter : </p>
 <ul>
 <li>
@@ -4291,22 +4292,21 @@
 <p><strong>Z</strong></p>
 </details>
 <h2 id="projections">Projection(s)<a class="headerlink" href="#projections" title="Permanent link">⚓︎</a></h2>
-<p>Comment faire pour n'obtenir que les noms des films cités dans le fichier ?</p>
-<p>On peut procéder ainsi :</p>
+<p>Pour obtenir la liste des noms de films, on peut procéder ainsi :</p>
 <div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">entree</span><span class="p">[</span><span class="s2">&quot;Name&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">entree</span> <span class="ow">in</span> <span class="n">films</span><span class="p">]</span>
 <span class="go">[&#39;Citizen Kane&#39;, &#39;The Godfather&#39;, &#39;The Wizard of Oz&#39;, &#39;The Shawshank Redemption&#39;, &#39;Pulp Fiction&#39;, ...]</span>
 </code></pre></div>
-<p>Afin de généraliser le procédé, on souhaite écrire une fonction <code class="highlight"><span class="n">projection</span></code> qui :</p>
+<details class="question">
+<summary>Activité 2 - La fonction <code>projection</code></summary>
+<p>On souhaite écrire une fonction <code class="highlight"><span class="n">projection</span></code> qui :</p>
 <ul>
 <li>
-<p>prend en argument la liste de dictionnaires à manipuler ainsi que le nom d'un descripteur,</p>
+<p>prend en argument la <strong>liste</strong> de dictionnaires à manipuler ainsi que le nom d'un <strong>descripteur</strong>,</p>
 </li>
 <li>
 <p>renvoie la liste ne contenant que les valeurs associées à ce descripteur.</p>
 </li>
 </ul>
-<details class="question">
-<summary>Activité 2 - La fonction <code>projection</code></summary>
 <p>Compléter le code ci-dessous en saisissant la fonction <code>projection</code> telle que décrite.</p>
 <p>Attention, les résultats doivent être <strong>dans le même ordre que dans la liste initiale</strong>.</p>
 <p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_74ef4085b419f5842de3ea0b42a3653c15ee34ed" class="comment">###</span><div class="line" id="editor_74ef4085b419f5842de3ea0b42a3653c15ee34ed"></div><div id="term_editor_74ef4085b419f5842de3ea0b42a3653c15ee34ed"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_74ef4085b419f5842de3ea0b42a3653c15ee34ed","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_74ef4085b419f5842de3ea0b42a3653c15ee34ed" class="py_mk_hide"># Tests publicsbksl-nlassert projection(films, "Ranking")[4] == 5, "Erreur sur la projection de 'Ranking'"bksl-nlassert projection(films, "Name")[4] == "Pulp Fiction", "Erreur sur la projection de 'Name'"bksl-nlassert projection(films, "Year")[4] == 1994, "Erreur sur la projection de 'Year'"bksl-nlbksl-nl# Tests aléatoiresbksl-nldef projectionpy-undcorr(donnees, descripteur):bksl-nl    return [entree[descripteur] for entree in donnees]bksl-nlbksl-nlbksl-nlfor descripteur in films[0]:bksl-nl    attendu = projectionpy-undcorr(films, descripteur)bksl-nl    assert projection(films, descripteur) == attendu, f"Erreur sur la projection de '{descripteur}'"bksl-nlbksl-nlneveux = [bksl-nl    {1: "riri", 2: "fifi", 3: "loulou"},bksl-nl    {1: "rara", 2: "fafa", 3: "laulau"},bksl-nl]bksl-nlassert projection(neveux, 1) == ["riri", "rara"], "Erreur dans un test secret"bksl-nlassert projection(neveux, 2) == ["fifi", "fafa"], "Erreur dans un test secret"bksl-nlbksl-nl</span>            <button class="tooltip" onclick='check("editor_74ef4085b419f5842de3ea0b42a3653c15ee34ed","")'>            <img src="../../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_74ef4085b419f5842de3ea0b42a3653c15ee34ed","pythons/film_projection/exo")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_74ef4085b419f5842de3ea0b42a3653c15ee34ed').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_74ef4085b419f5842de3ea0b42a3653c15ee34ed" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_74ef4085b419f5842de3ea0b42a3653c15ee34ed")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_74ef4085b419f5842de3ea0b42a3653c15ee34ed")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_74ef4085b419f5842de3ea0b42a3653c15ee34ed" class="py_mk_hide"># --- HDR ---#bksl-nlurlpy-undfichier = "films.csv"bksl-nlencodage = "utf-8"bksl-nlbksl-nlfrom js import fetchbksl-nlbksl-nlreponse = await fetch(f"{urlpy-undfichier}")bksl-nlcontenu = await reponse.text()bksl-nlbksl-nlwith open(file=urlpy-undfichier, mode="w", encoding=encodage) as fichier:bksl-nl    fichier.write(contenu)bksl-nlbksl-nlimport csvbksl-nlbksl-nlfilms = []bksl-nlwith open("films.csv", "r", encoding="utf-8") as fichier:bksl-nl    lecteur = csv.DictReader(fichier, delimiter=";")bksl-nl    for entree in lecteur:bksl-nl        entree["Ranking"] = int(entree["Ranking"])bksl-nl        entree["Year"] = int(entree["Year"])bksl-nl        entree["Minutes"] = int(entree["Minutes"])bksl-nl        entree["Rating"] = float(entree["Rating"])bksl-nl        entree["Votes"] = int(entree["Votes"])bksl-nl        entree["Gross"] = float(entree["Gross"])bksl-nl        films.append(entree)bksl-nl# --- HDR ---#bksl-nldef projection(donnees, descripteur):bksl-nl    """Renvoie la liste des valeurs de ce descripteur"""bksl-nl    passbksl-nlbksl-nl</span><span id="corr_content_editor_74ef4085b419f5842de3ea0b42a3653c15ee34ed" class="py_mk_hide" data-strudel="">def projection(donnees, descripteur):bksl-nl    """Renvoie la liste des valeurs de ce descripteur"""bksl-nl    return [entree[descripteur] for entree in donnees]bksl-nl    bksl-nlbksl-nl</span></p>
@@ -4335,8 +4335,8 @@
 <p><strong>Z</strong></p>
 </details>
 <h2 id="sommes-et-moyennes">Sommes et moyennes<a class="headerlink" href="#sommes-et-moyennes" title="Permanent link">⚓︎</a></h2>
-<p>Quel est le montant total rapporté par l'ensemble de ces films ? Et le montant moyen ? Pour le savoir il faut dans un premier temps additionner les revenus générés.</p>
-<p>Écrivons une fonction pour cela.</p>
+<p>Quel est le montant total rapporté par l'ensemble de ces films ? Et le montant moyen ? </p>
+<p>Pour le savoir il faut dans un premier temps additionner les revenus générés.</p>
 <details class="question">
 <summary>Activité 4 - La fonction <code>somme</code></summary>
 <p>Compléter le code ci-dessous en saisissant la fonction <code>somme</code> qui :</p>
@@ -4406,9 +4406,8 @@
 <div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">projection_multiple</span><span class="p">(</span><span class="n">films</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span> <span class="s2">&quot;Gross&quot;</span><span class="p">))[</span><span class="mi">18</span><span class="p">]</span>
 <span class="go">(&#39;The 400 Blows&#39;, -1.0)</span>
 </code></pre></div>
-<p>Pouvez-vous calculer la moyenne des revenus générés par les films pour lesquels les revenus sont connus ?</p>
 <details class="question">
-<summary>Activité 6 - Revenu moyen des films</summary>
+<summary>Activité 6 - Calcul du revenu moyen des films</summary>
 <p>Calculer le revenu moyen des films proposés. Il ne faut pas tenir compte des films pour lesquels cette valeur est inconnue (<code class="highlight"><span class="o">-</span><span class="mf">1.0</span></code> dans le fichier).</p>
 <p>Votre variable contenant la bonne valeur doit s'appeler <code>moyenne_valide</code> afin de pouvoir passer les tests avec succès.</p>
 <p>Les fonctions <code>somme</code> et <code>moyenne</code> sont déjà chargées.</p>
@@ -4476,17 +4475,15 @@
 <h2 id="le-meilleur-genre">Le meilleur genre ?<a class="headerlink" href="#le-meilleur-genre" title="Permanent link">⚓︎</a></h2>
 <p>Quel genre de film est cité le plus de fois ? Facile, il suffit de compter les apparitions de chaque genre comme l'on vient de compter les années.</p>
 <p><strong>Mais</strong> les genres sont mal présentés : chaque film est associé à un, deux ou trois genres, si besoin séparés par des virgules, avec des espaces derrière les virgules...</p>
-<p><div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">films</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="s2">&quot;Genres&quot;</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">films</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="s2">&quot;Genres&quot;</span><span class="p">]</span>
 <span class="go">&#39;Drama&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">films</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="s2">&quot;Genres&quot;</span><span class="p">]</span>
 <span class="go">&#39;Crime, Drama&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">films</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="s2">&quot;Genres&quot;</span><span class="p">]</span>
 <span class="go">&#39;Drama, Romance, War&#39;</span>
 </code></pre></div>
-Pouvez-vous déterminer le genre le plus présent ?</p>
 <details class="question">
-<summary>Activité 9 - Le meilleur genre</summary>
-<p>Déterminer le genre le plus représenté dans les films.</p>
+<summary>Activité 9 - Détermination du genre le plus représenté dans les films</summary>
 <p>La variable contenant ce genre sera nommée <code>meilleur_genre</code></p>
 <div class="admonition tip">
 <p class="admonition-title">Astuce</p>
@@ -4501,7 +4498,7 @@ Pouvez-vous déterminer le genre le plus présent ?</p>
 <hr />
 <ol>
 <li id="fn:1">
-<p><a href="https://www.kaggle.com/datasets/faisaljanjua0555/top-500-movies-of-all-time">source</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p><a href="https://www.kaggle.com/datasets/faisaljanjua0555/top-500-movies-of-all-time">Source sur Kaggle</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>

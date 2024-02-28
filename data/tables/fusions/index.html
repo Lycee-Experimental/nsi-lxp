@@ -2182,17 +2182,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Fusions
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2202,39 +2191,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#langues-parlees-dans-chaque-pays" class="md-nav__link">
-    Langues parlées dans chaque pays
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#capitales" class="md-nav__link">
-    Capitales
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -4129,7 +4085,7 @@
   
 
 
-<h1 id="fusionner-des-tables"><img alt="✂" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2702.svg" title=":scissors:" /> Fusionner des tables<a class="headerlink" href="#fusionner-des-tables" title="Permanent link">⚓︎</a></h1>
+<h1 id="fusionner-des-tables"><img alt="✂" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2702.svg" title=":scissors:" /> Fusionner des tables <img alt="✂" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2702.svg" title=":scissors:" /><a class="headerlink" href="#fusionner-des-tables" title="Permanent link">⚓︎</a></h1>
 <p>On considère dans ce sujet les trois fichiers <code>csv</code> décrits ci-dessous :</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Les pays</label><label for="__tabbed_1_2">Les langues parlées</label><label for="__tabbed_1_3">Les villes</label></div>
 <div class="tabbed-content">
@@ -4198,8 +4154,8 @@
 </div>
 </div>
 </div>
-<div class="admonition tip">
-<p class="admonition-title">Import réalisés !</p>
+<details class="tip">
+<summary>Import des listes réalisés !</summary>
 <p>Dans toute la suite du TP, les listes <code>pays</code>, <code>langues</code> et <code>villes</code> contiennent les <strong>dictionnaires</strong> correspondant aux imports de ces différents fichiers.</p>
 <p>Les données sont correctement typées (en particulier les valeurs <code>isOfficial</code> de la liste <code>langues</code> qui sont des booléens).</p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">pays</span> <span class="o">=</span> <span class="p">[</span>
@@ -4220,19 +4176,17 @@
     <span class="o">...</span>
 <span class="p">]</span>
 </code></pre></div>
-</div>
-<h2 id="langues-parlees-dans-chaque-pays">Langues parlées dans chaque pays<a class="headerlink" href="#langues-parlees-dans-chaque-pays" title="Permanent link">⚓︎</a></h2>
-<p>Quelles sont les langues parlées en Haïti ? Pour le savoir il faut :</p>
+</details>
+<details class="question">
+<summary>Activité 1 - Quelles sont les langues parlées en Haïti ?</summary>
 <ul>
 <li>
-<p>parcourir la liste <code>pays</code> jusqu'à trouver le code de Haïti (orthographié <code>Haiti</code> dans la liste <code>pays</code>),</p>
+<p>Parcourir la liste <code>pays</code> jusqu'à trouver le code de Haïti (orthographié <code>Haiti</code> dans la liste <code>pays</code>),</p>
 </li>
 <li>
-<p>parcourir la liste <code>langues</code> et en extraire les valeurs correspondant à ce code.</p>
+<p>Parcourir la liste <code>langues</code> et extraire les valeurs correspondant à ce code.</p>
 </li>
 </ul>
-<details class="question">
-<summary>Activité 1 - Langues parlées en Haïti</summary>
 <p>Compléter le code ci-dessous permettant de déterminer les langues parlées en Haïti.</p>
 <p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_afaa29c3203bec6aea64714de5b5a3dcf37d5ce4" class="comment">###</span><div class="line" id="editor_afaa29c3203bec6aea64714de5b5a3dcf37d5ce4"></div><div id="term_editor_afaa29c3203bec6aea64714de5b5a3dcf37d5ce4"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_afaa29c3203bec6aea64714de5b5a3dcf37d5ce4","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_afaa29c3203bec6aea64714de5b5a3dcf37d5ce4" class="py_mk_hide"># Testbksl-nlassert code == "HTI", "Erreur de code"bksl-nlassert languespy-undhaiti == [bksl-nl    {"CountryCode": "HTI", "Language": "French", "IsOfficial": True, "Percentage": 0.0},bksl-nl    {"CountryCode": "HTI", "Language": "Haiti Creole", "IsOfficial": False, "Percentage": 100.0},bksl-nl], "Erreur dans la recherche"bksl-nlbksl-nl</span>            <button class="tooltip" onclick='check("editor_afaa29c3203bec6aea64714de5b5a3dcf37d5ce4","")'>            <img src="../../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_afaa29c3203bec6aea64714de5b5a3dcf37d5ce4","pythons/haiti/exo")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_afaa29c3203bec6aea64714de5b5a3dcf37d5ce4').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_afaa29c3203bec6aea64714de5b5a3dcf37d5ce4" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_afaa29c3203bec6aea64714de5b5a3dcf37d5ce4")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_afaa29c3203bec6aea64714de5b5a3dcf37d5ce4")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_afaa29c3203bec6aea64714de5b5a3dcf37d5ce4" class="py_mk_hide">#--- HDR ---#bksl-nlfrom js import fetchbksl-nlimport csvbksl-nlbksl-nl##########bksl-nl# Villes #bksl-nl##########bksl-nlbksl-nlurlpy-undfichier = "cities.csv"bksl-nlencodage = "utf-8"bksl-nlbksl-nlreponse = await fetch(f"{urlpy-undfichier}")bksl-nlcontenu = await reponse.text()bksl-nlbksl-nlwith open(file=urlpy-undfichier, mode="w", encoding=encodage) as fichier:bksl-nl    fichier.write(contenu)bksl-nlbksl-nlvilles = []bksl-nlwith open(urlpy-undfichier, "r", encoding="utf-8") as fichier:bksl-nl    lecteur = csv.DictReader(fichier, delimiter=",")bksl-nl    for entree in lecteur:bksl-nl        entree["ID"] = int(entree["ID"])bksl-nl        entree["Population"] = int(entree["Population"])bksl-nl        villes.append(entree)bksl-nlbksl-nl###########bksl-nl# Langues #bksl-nl###########bksl-nlbksl-nlurlpy-undfichier = "languages.csv"bksl-nlencodage = "utf-8"bksl-nlbksl-nlreponse = await fetch(f"{urlpy-undfichier}")bksl-nlcontenu = await reponse.text()bksl-nlbksl-nlwith open(file=urlpy-undfichier, mode="w", encoding=encodage) as fichier:bksl-nl    fichier.write(contenu)bksl-nlbksl-nlbksl-nllangues = []bksl-nlwith open(urlpy-undfichier, "r", encoding="utf-8") as fichier:bksl-nl    lecteur = csv.DictReader(fichier, delimiter=",")bksl-nl    for entree in lecteur:bksl-nl        entree["Percentage"] = float(entree["Percentage"])bksl-nl        entree["IsOfficial"] = True if entree["IsOfficial"] == "T" else Falsebksl-nl        langues.append(entree)bksl-nlbksl-nl########bksl-nl# Pays #bksl-nl########bksl-nlbksl-nlurlpy-undfichier = "countries.csv"bksl-nlencodage = "utf-8"bksl-nlbksl-nlreponse = await fetch(f"{urlpy-undfichier}")bksl-nlcontenu = await reponse.text()bksl-nlbksl-nlwith open(file=urlpy-undfichier, mode="w", encoding=encodage) as fichier:bksl-nl    fichier.write(contenu)bksl-nlbksl-nlpays = []bksl-nlwith open(urlpy-undfichier, "r", encoding="utf-8") as fichier:bksl-nl    lecteur = csv.DictReader(fichier, delimiter=",")bksl-nl    for entree in lecteur:bksl-nl        entree["SurfaceArea"] = float(entree["SurfaceArea"])bksl-nl        entree["GNP"] = float(entree["GNP"])bksl-nl        entree["Population"] = int(entree["Population"])bksl-nl        entree["Capital"] = int(entree["Capital"]) if entree["Capital"] else -1bksl-nl        pays.append(entree)bksl-nl#--- HDR ---#bksl-nlipy-undhaiti = 0bksl-nlwhile pays[ipy-undhaiti]["Name"] ... "Haiti":bksl-nl    ipy-undhaiti = ...bksl-nlbksl-nlcode = pays[ipy-undhaiti][...]bksl-nlbksl-nlbksl-nllanguespy-undhaiti = []bksl-nlfor entree in langues:bksl-nl    if entree[...] == code:bksl-nl        languespy-undhaiti.append(entree)bksl-nlbksl-nlfor langue in languespy-undhaiti:bksl-nl    print(langue)bksl-nl    bksl-nl</span><span id="corr_content_editor_afaa29c3203bec6aea64714de5b5a3dcf37d5ce4" class="py_mk_hide" data-strudel="">ipy-undhaiti = 0bksl-nlwhile pays[ipy-undhaiti]["Name"] != "Haiti":bksl-nl    ipy-undhaiti += 1bksl-nlbksl-nlcode = pays[ipy-undhaiti]["CountryCode"]bksl-nlbksl-nllanguespy-undhaiti = []bksl-nlfor entree in langues:bksl-nl    if entree["CountryCode"] == code:bksl-nl        languespy-undhaiti.append(entree)bksl-nlbksl-nl</span></p>
 <p><strong>A</strong></p>
@@ -4244,11 +4198,10 @@
 </code></pre></div>
 <p><strong>Z</strong></p>
 </details>
-<p>Le descripteur <code>CountryCode</code> permet donc de faire le lien entre les deux listes <code>pays</code> et <code>langues</code>.</p>
-<p>Utilisons cette relation afin de déterminer les langues parlées dans un pays quelconque.</p>
 <details class="question">
-<summary>Activité 2 - Langues parlées dans un pays</summary>
-<p>On demande d'écrire deux fonctions :</p>
+<summary>Activité 2 - Langues parlées dans le monde</summary>
+<p>Le descripteur <code>CountryCode</code> permet donc de faire le lien entre les deux listes <code>pays</code> et <code>langues</code>, utiliser cette relation afin de déterminer les langues parlées dans un pays quelconque.</p>
+<p>Écrire les deux fonctions :</p>
 <ul>
 <li>
 <p><code>code_pays</code> prend en argument la liste des pays ainsi que le nom d'un pays et renvoie son code ;</p>
@@ -4265,14 +4218,15 @@
 <span class="go">[&#39;French&#39;, &#39;Haiti Creole&#39;]</span>
 </code></pre></div>
 </div>
-<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_e53b23daf0593b74af47e476e0111a23cb77e1b3" class="comment">###</span><div class="line" id="editor_e53b23daf0593b74af47e476e0111a23cb77e1b3"></div><div id="term_editor_e53b23daf0593b74af47e476e0111a23cb77e1b3"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_e53b23daf0593b74af47e476e0111a23cb77e1b3","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_e53b23daf0593b74af47e476e0111a23cb77e1b3" class="py_mk_hide"># Test publicbksl-nlassert sorted(languespy-undparlees(pays, langues, "Haiti")) == ['French', 'Haiti Creole']bksl-nlbksl-nl# Tests supplémentairesbksl-nldef codepy-undpayspy-undcorr(pays, nom):bksl-nl    for entree in pays:bksl-nl        if entree["Name"] == nom:bksl-nl            return entree["CountryCode"]bksl-nlbksl-nl    raise ValueError("Le nom n'apparaît pas dans la liste")bksl-nlbksl-nlbksl-nldef languespy-undcorr(pays, langues, nom):bksl-nl    code = codepy-undpayspy-undcorr(pays, nom)bksl-nl    bksl-nl    resultat = []bksl-nl    for entree in langues:bksl-nl        if entree["CountryCode"] == code:bksl-nl            resultat.append(entree["Language"])bksl-nl        bksl-nl    return resultatbksl-nlbksl-nlbksl-nlfrom random import randrangebksl-nlfor py-und in range(5):bksl-nl    indice = randrange(0, len(pays))bksl-nl    nom = pays[indice]["Name"]bksl-nl    attendu = pays[indice]["CountryCode"]bksl-nl    assert codepy-undpays(pays, nom) == attendu, f"Erreur en cherchant le code de {nom}"bksl-nl    attendu = sorted(languespy-undcorr(pays, langues, nom))bksl-nl    assert sorted(languespy-undparlees(pays, langues, nom)) == attendu, f"Erreur pour les langues de {nom}"bksl-nl</span>            <button class="tooltip" onclick='check("editor_e53b23daf0593b74af47e476e0111a23cb77e1b3","")'>            <img src="../../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_e53b23daf0593b74af47e476e0111a23cb77e1b3","pythons/langues/exo")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_e53b23daf0593b74af47e476e0111a23cb77e1b3').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_e53b23daf0593b74af47e476e0111a23cb77e1b3" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_e53b23daf0593b74af47e476e0111a23cb77e1b3")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_e53b23daf0593b74af47e476e0111a23cb77e1b3")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_e53b23daf0593b74af47e476e0111a23cb77e1b3" class="py_mk_hide">#--- HDR ---#bksl-nlfrom js import fetchbksl-nlimport csvbksl-nlbksl-nl##########bksl-nl# Villes #bksl-nl##########bksl-nlbksl-nlurlpy-undfichier = "cities.csv"bksl-nlencodage = "utf-8"bksl-nlbksl-nlreponse = await fetch(f"{urlpy-undfichier}")bksl-nlcontenu = await reponse.text()bksl-nlbksl-nlwith open(file=urlpy-undfichier, mode="w", encoding=encodage) as fichier:bksl-nl    fichier.write(contenu)bksl-nlbksl-nlvilles = []bksl-nlwith open(urlpy-undfichier, "r", encoding="utf-8") as fichier:bksl-nl    lecteur = csv.DictReader(fichier, delimiter=",")bksl-nl    for entree in lecteur:bksl-nl        entree["ID"] = int(entree["ID"])bksl-nl        entree["Population"] = int(entree["Population"])bksl-nl        villes.append(entree)bksl-nlbksl-nl###########bksl-nl# Langues #bksl-nl###########bksl-nlbksl-nlurlpy-undfichier = "languages.csv"bksl-nlencodage = "utf-8"bksl-nlbksl-nlreponse = await fetch(f"{urlpy-undfichier}")bksl-nlcontenu = await reponse.text()bksl-nlbksl-nlwith open(file=urlpy-undfichier, mode="w", encoding=encodage) as fichier:bksl-nl    fichier.write(contenu)bksl-nlbksl-nlbksl-nllangues = []bksl-nlwith open(urlpy-undfichier, "r", encoding="utf-8") as fichier:bksl-nl    lecteur = csv.DictReader(fichier, delimiter=",")bksl-nl    for entree in lecteur:bksl-nl        entree["Percentage"] = float(entree["Percentage"])bksl-nl        entree["IsOfficial"] = True if entree["IsOfficial"] == "T" else Falsebksl-nl        langues.append(entree)bksl-nlbksl-nl########bksl-nl# Pays #bksl-nl########bksl-nlbksl-nlurlpy-undfichier = "countries.csv"bksl-nlencodage = "utf-8"bksl-nlbksl-nlreponse = await fetch(f"{urlpy-undfichier}")bksl-nlcontenu = await reponse.text()bksl-nlbksl-nlwith open(file=urlpy-undfichier, mode="w", encoding=encodage) as fichier:bksl-nl    fichier.write(contenu)bksl-nlbksl-nlpays = []bksl-nlwith open(urlpy-undfichier, "r", encoding="utf-8") as fichier:bksl-nl    lecteur = csv.DictReader(fichier, delimiter=",")bksl-nl    for entree in lecteur:bksl-nl        entree["SurfaceArea"] = float(entree["SurfaceArea"])bksl-nl        entree["GNP"] = float(entree["GNP"])bksl-nl        entree["Population"] = int(entree["Population"])bksl-nl        entree["Capital"] = int(entree["Capital"]) if entree["Capital"] else -1bksl-nl        pays.append(entree)bksl-nl#--- HDR ---#bksl-nldef codepy-undpays(pays, nom):bksl-nl    """Renvoie le code d'un pays"""bksl-nl    ...bksl-nlbksl-nlbksl-nldef languespy-undparlees(pays, langues, nom):bksl-nl    """Renvoie la liste des noms des langues parlées dans le pays indiqué par son nom"""bksl-nl    ...bksl-nlbksl-nlassert sorted(languespy-undparlees(pays, langues, "Haiti")) == ['French', 'Haiti Creole']bksl-nl</span><span id="corr_content_editor_e53b23daf0593b74af47e476e0111a23cb77e1b3" class="py_mk_hide" data-strudel="">def codepy-undpays(pays, nom):bksl-nl    """Renvoie le code d'un pays"""bksl-nl    for entree in pays:bksl-nl        if entree["Name"] == nom:bksl-nl            return entree["CountryCode"]bksl-nlbksl-nl    raise ValueError("Le nom n'apparaît pas dans la liste")bksl-nlbksl-nlbksl-nldef languespy-undparlees(pays, langues, nom):bksl-nl    """Renvoie la liste des noms des langues parlées dans le pays indiqué par son nom"""bksl-nl    code = codepy-undpays(pays, nom)bksl-nl    bksl-nl    resultat = []bksl-nl    for entree in langues:bksl-nl        if entree["CountryCode"] == code:bksl-nl            resultat.append(entree["Language"])bksl-nl        bksl-nl    return resultatbksl-nl</span></p>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_140e59877ce254ff5afac8a72fd2175229365647" class="comment">###</span><div class="line" id="editor_140e59877ce254ff5afac8a72fd2175229365647"></div><div id="term_editor_140e59877ce254ff5afac8a72fd2175229365647"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_140e59877ce254ff5afac8a72fd2175229365647","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_140e59877ce254ff5afac8a72fd2175229365647" class="py_mk_hide"># Test publicbksl-nlassert sorted(languespy-undparlees(pays, langues, "Haiti")) == ['French', 'Haiti Creole']bksl-nlbksl-nl# Tests supplémentairesbksl-nldef codepy-undpayspy-undcorr(pays, nom):bksl-nl    for entree in pays:bksl-nl        if entree["Name"] == nom:bksl-nl            return entree["CountryCode"]bksl-nlbksl-nl    raise ValueError("Le nom n'apparaît pas dans la liste")bksl-nlbksl-nlbksl-nldef languespy-undcorr(pays, langues, nom):bksl-nl    code = codepy-undpayspy-undcorr(pays, nom)bksl-nl    bksl-nl    resultat = []bksl-nl    for entree in langues:bksl-nl        if entree["CountryCode"] == code:bksl-nl            resultat.append(entree["Language"])bksl-nl        bksl-nl    return resultatbksl-nlbksl-nlbksl-nlfrom random import randrangebksl-nlfor py-und in range(5):bksl-nl    indice = randrange(0, len(pays))bksl-nl    nom = pays[indice]["Name"]bksl-nl    attendu = pays[indice]["CountryCode"]bksl-nl    assert codepy-undpays(pays, nom) == attendu, f"Erreur en cherchant le code de {nom}"bksl-nl    attendu = sorted(languespy-undcorr(pays, langues, nom))bksl-nl    assert sorted(languespy-undparlees(pays, langues, nom)) == attendu, f"Erreur pour les langues de {nom}"bksl-nl</span>            <button class="tooltip" onclick='check("editor_140e59877ce254ff5afac8a72fd2175229365647","")'>            <img src="../../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_140e59877ce254ff5afac8a72fd2175229365647","pythons/langues/exo")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_140e59877ce254ff5afac8a72fd2175229365647').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_140e59877ce254ff5afac8a72fd2175229365647" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_140e59877ce254ff5afac8a72fd2175229365647")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_140e59877ce254ff5afac8a72fd2175229365647")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_140e59877ce254ff5afac8a72fd2175229365647" class="py_mk_hide">#--- HDR ---#bksl-nlfrom js import fetchbksl-nlimport csvbksl-nlbksl-nl##########bksl-nl# Villes #bksl-nl##########bksl-nlbksl-nlurlpy-undfichier = "cities.csv"bksl-nlencodage = "utf-8"bksl-nlbksl-nlreponse = await fetch(f"{urlpy-undfichier}")bksl-nlcontenu = await reponse.text()bksl-nlbksl-nlwith open(file=urlpy-undfichier, mode="w", encoding=encodage) as fichier:bksl-nl    fichier.write(contenu)bksl-nlbksl-nlvilles = []bksl-nlwith open(urlpy-undfichier, "r", encoding="utf-8") as fichier:bksl-nl    lecteur = csv.DictReader(fichier, delimiter=",")bksl-nl    for entree in lecteur:bksl-nl        entree["ID"] = int(entree["ID"])bksl-nl        entree["Population"] = int(entree["Population"])bksl-nl        villes.append(entree)bksl-nlbksl-nl###########bksl-nl# Langues #bksl-nl###########bksl-nlbksl-nlurlpy-undfichier = "languages.csv"bksl-nlencodage = "utf-8"bksl-nlbksl-nlreponse = await fetch(f"{urlpy-undfichier}")bksl-nlcontenu = await reponse.text()bksl-nlbksl-nlwith open(file=urlpy-undfichier, mode="w", encoding=encodage) as fichier:bksl-nl    fichier.write(contenu)bksl-nlbksl-nlbksl-nllangues = []bksl-nlwith open(urlpy-undfichier, "r", encoding="utf-8") as fichier:bksl-nl    lecteur = csv.DictReader(fichier, delimiter=",")bksl-nl    for entree in lecteur:bksl-nl        entree["Percentage"] = float(entree["Percentage"])bksl-nl        entree["IsOfficial"] = True if entree["IsOfficial"] == "T" else Falsebksl-nl        langues.append(entree)bksl-nlbksl-nl########bksl-nl# Pays #bksl-nl########bksl-nlbksl-nlurlpy-undfichier = "countries.csv"bksl-nlencodage = "utf-8"bksl-nlbksl-nlreponse = await fetch(f"{urlpy-undfichier}")bksl-nlcontenu = await reponse.text()bksl-nlbksl-nlwith open(file=urlpy-undfichier, mode="w", encoding=encodage) as fichier:bksl-nl    fichier.write(contenu)bksl-nlbksl-nlpays = []bksl-nlwith open(urlpy-undfichier, "r", encoding="utf-8") as fichier:bksl-nl    lecteur = csv.DictReader(fichier, delimiter=",")bksl-nl    for entree in lecteur:bksl-nl        entree["SurfaceArea"] = float(entree["SurfaceArea"])bksl-nl        entree["GNP"] = float(entree["GNP"])bksl-nl        entree["Population"] = int(entree["Population"])bksl-nl        entree["Capital"] = int(entree["Capital"]) if entree["Capital"] else -1bksl-nl        pays.append(entree)bksl-nl#--- HDR ---#bksl-nldef codepy-undpays(pays, nom):bksl-nl    """Renvoie le code d'un pays"""bksl-nl    ...bksl-nlbksl-nlbksl-nldef languespy-undparlees(pays, langues, nom):bksl-nl    """Renvoie la liste des noms des langues parlées dans le pays indiqué par son nom"""bksl-nl    ...bksl-nlbksl-nl</span><span id="corr_content_editor_140e59877ce254ff5afac8a72fd2175229365647" class="py_mk_hide" data-strudel="">def codepy-undpays(pays, nom):bksl-nl    """Renvoie le code d'un pays"""bksl-nl    for entree in pays:bksl-nl        if entree["Name"] == nom:bksl-nl            return entree["CountryCode"]bksl-nlbksl-nl    raise ValueError("Le nom n'apparaît pas dans la liste")bksl-nlbksl-nlbksl-nldef languespy-undparlees(pays, langues, nom):bksl-nl    """Renvoie la liste des noms des langues parlées dans le pays indiqué par son nom"""bksl-nl    code = codepy-undpays(pays, nom)bksl-nl    bksl-nl    resultat = []bksl-nl    for entree in langues:bksl-nl        if entree["CountryCode"] == code:bksl-nl            resultat.append(entree["Language"])bksl-nl        bksl-nl    return resultatbksl-nl</span></p>
 <p><strong>A</strong></p>
 <p>Contrairement à l'exemple de Haïti précédent, on peut ici utiliser une boucle <code class="highlight"><span class="k">for</span></code> sans avoir recours à l'instruction <code class="highlight"><span class="k">break</span></code>. En effet, le <code>return</code> joue ce rôle.</p>
 <p>On a de plus ajouté la ligne <code class="highlight"><span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Le nom n&#39;apparaît pas dans la liste&quot;</span><span class="p">)</span></code> afin de gérer les cas où le nom passé en argument ne correspond à aucun pays. On est dans ce cas de figure si l'on a effectué la totalité du parcours (de la boucle <code class="highlight"><span class="k">for</span></code>) sans avoir renvoyé de résultat.</p>
 <p><strong>Z</strong></p>
 </details>
-<h2 id="capitales">Capitales<a class="headerlink" href="#capitales" title="Permanent link">⚓︎</a></h2>
-<p>Quelle est la capitale d'Haïti ? Là encore, il faut :</p>
+<details class="question">
+<summary>Activité 3 - Quelle est la capitale d'Haïti ?</summary>
+<p>Pour cela, nous devons :</p>
 <ul>
 <li>
 <p>parcourir la liste des pays jusqu'à trouver l'entrée correspondant à Haïti,</p>
@@ -4284,14 +4238,8 @@
 <p>parcourir la liste des villes jusqu'à trouver le code cherché.</p>
 </li>
 </ul>
-<p>Nous allons effectuer ces actions pour chacun des pays présents dans la liste. La capitale étant trouvée, nous ajouterons une nouvelle clé <code>CapitalName</code> au dictionnaire du pays. La valeur associée sera le nom de la capitale obtenu.</p>
-<div class="admonition warning">
-<p class="admonition-title">Pas de capitale ?</p>
-<p>Certains des « pays » listés n'en sont pas vraiment et n'ont donc pas de capitale. C'est par exemple le cas de l'Antarctique.</p>
-<p>Lors de l'import des données, on leur a associé la valeur <code class="highlight"><span class="o">-</span><span class="mi">1</span></code> à la clé <code class="highlight"><span class="n">Capital</span></code>.</p>
-</div>
 <details class="question">
-<summary>Activité 3 - Liens</summary>
+<summary>Lien entre les listes <code>pays</code> et <code>villes</code></summary>
 <p>Quels sont les descripteurs permettant de faire le lien entre les listes <code>pays</code> et <code>villes</code> ?</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Cocher l'affirmation correcte</label><label for="__tabbed_2_2">Solution</label></div>
 <div class="tabbed-content">
@@ -4313,11 +4261,16 @@
 </div>
 </div>
 </div>
+<p>Certains des « pays » listés n'en sont pas vraiment et n'ont donc pas de capitale. C'est par exemple le cas de l'Antarctique.</p>
+<p>Lors de l'import des données, on leur a associé la valeur </p>
 </details>
 <details class="question">
-<summary>Activité 4 - Associer les capitales aux pays</summary>
-<p>Compléter le code ci-dessous afin d'ajouter à chaque dictionnaire correspondant à un pays une nouvelle entrée <code>CapitalName</code> contenant le nom de sa capitale.</p>
-<p>On utilisera la chaîne vide <code>""</code> comme valeur pour les « pays » sans capitale.</p>
+<summary>Associer les capitales aux pays</summary>
+<p>Ajouter une nouvelle clé <code>CapitalName</code> au dictionnaire du pays dont la valeur sera le nom de la capitale obtenu.</p>
+<div class="admonition warning">
+<p class="admonition-title">Pas de capitale ?</p>
+<p>On utilisera la chaîne vide <code>""</code> comme valeur pour les « pays » sans capitale (valeur <code class="highlight"><span class="o">-</span><span class="mi">1</span></code> à la clé <code class="highlight"><span class="n">Capital</span></code>.).</p>
+</div>
 <p>Ainsi :</p>
 <ul>
 <li>
@@ -4327,9 +4280,11 @@
 <p>celui de l'Antarctique <code>"CapitalName": ""</code>.</p>
 </li>
 </ul>
+<p>Compléter le code ci-dessous afin d'ajouter à chaque dictionnaire correspondant à un pays une nouvelle entrée <code>CapitalName</code> contenant le nom de sa capitale.    </p>
 <p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_ae560e74b90f292a8d3bfb1af204ca823e172e4f" class="comment">###</span><div class="line" id="editor_ae560e74b90f292a8d3bfb1af204ca823e172e4f"></div><div id="term_editor_ae560e74b90f292a8d3bfb1af204ca823e172e4f"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_ae560e74b90f292a8d3bfb1af204ca823e172e4f","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_ae560e74b90f292a8d3bfb1af204ca823e172e4f" class="py_mk_hide"># Testbksl-nlfor entree in pays:bksl-nl    capitale = entree["Capital"]bksl-nl    if capitale == -1:bksl-nl        assert entree["CapitalName"] == "", f"Erreur pour {entree['Name']}"bksl-nl    else:bksl-nl        for ville in villes:bksl-nl            if ville["ID"] == capitale:    bksl-nl                assert entree["CapitalName"] == ville["Name"], f"Erreur pour {entree['Name']}"bksl-nl                breakbksl-nl</span>            <button class="tooltip" onclick='check("editor_ae560e74b90f292a8d3bfb1af204ca823e172e4f","")'>            <img src="../../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_ae560e74b90f292a8d3bfb1af204ca823e172e4f","pythons/capitales/exo")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_ae560e74b90f292a8d3bfb1af204ca823e172e4f').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_ae560e74b90f292a8d3bfb1af204ca823e172e4f" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_ae560e74b90f292a8d3bfb1af204ca823e172e4f")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_ae560e74b90f292a8d3bfb1af204ca823e172e4f")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_ae560e74b90f292a8d3bfb1af204ca823e172e4f" class="py_mk_hide">#--- HDR ---#bksl-nlfrom js import fetchbksl-nlimport csvbksl-nlbksl-nl##########bksl-nl# Villes #bksl-nl##########bksl-nlbksl-nlurlpy-undfichier = "cities.csv"bksl-nlencodage = "utf-8"bksl-nlbksl-nlreponse = await fetch(f"{urlpy-undfichier}")bksl-nlcontenu = await reponse.text()bksl-nlbksl-nlwith open(file=urlpy-undfichier, mode="w", encoding=encodage) as fichier:bksl-nl    fichier.write(contenu)bksl-nlbksl-nlvilles = []bksl-nlwith open(urlpy-undfichier, "r", encoding="utf-8") as fichier:bksl-nl    lecteur = csv.DictReader(fichier, delimiter=",")bksl-nl    for entree in lecteur:bksl-nl        entree["ID"] = int(entree["ID"])bksl-nl        entree["Population"] = int(entree["Population"])bksl-nl        villes.append(entree)bksl-nlbksl-nl###########bksl-nl# Langues #bksl-nl###########bksl-nlbksl-nlurlpy-undfichier = "languages.csv"bksl-nlencodage = "utf-8"bksl-nlbksl-nlreponse = await fetch(f"{urlpy-undfichier}")bksl-nlcontenu = await reponse.text()bksl-nlbksl-nlwith open(file=urlpy-undfichier, mode="w", encoding=encodage) as fichier:bksl-nl    fichier.write(contenu)bksl-nlbksl-nlbksl-nllangues = []bksl-nlwith open(urlpy-undfichier, "r", encoding="utf-8") as fichier:bksl-nl    lecteur = csv.DictReader(fichier, delimiter=",")bksl-nl    for entree in lecteur:bksl-nl        entree["Percentage"] = float(entree["Percentage"])bksl-nl        entree["IsOfficial"] = True if entree["IsOfficial"] == "T" else Falsebksl-nl        langues.append(entree)bksl-nlbksl-nl########bksl-nl# Pays #bksl-nl########bksl-nlbksl-nlurlpy-undfichier = "countries.csv"bksl-nlencodage = "utf-8"bksl-nlbksl-nlreponse = await fetch(f"{urlpy-undfichier}")bksl-nlcontenu = await reponse.text()bksl-nlbksl-nlwith open(file=urlpy-undfichier, mode="w", encoding=encodage) as fichier:bksl-nl    fichier.write(contenu)bksl-nlbksl-nlpays = []bksl-nlwith open(urlpy-undfichier, "r", encoding="utf-8") as fichier:bksl-nl    lecteur = csv.DictReader(fichier, delimiter=",")bksl-nl    for entree in lecteur:bksl-nl        entree["SurfaceArea"] = float(entree["SurfaceArea"])bksl-nl        entree["GNP"] = float(entree["GNP"])bksl-nl        entree["Population"] = int(entree["Population"])bksl-nl        entree["Capital"] = int(entree["Capital"]) if entree["Capital"] else -1bksl-nl        pays.append(entree)bksl-nl#--- HDR ---#bksl-nl# Compléter icibksl-nlbksl-nlprint(f"La capitale de la {pays[72]['Name']} est {pays[72]['CapitalName']}.")bksl-nlbksl-nl</span><span id="corr_content_editor_ae560e74b90f292a8d3bfb1af204ca823e172e4f" class="py_mk_hide" data-strudel="">for entree in pays:bksl-nl    capitale = entree["Capital"]bksl-nl    if capitale == -1:bksl-nl        entree["CapitalName"] = ""bksl-nl    else:bksl-nl        fait = Falsebksl-nl        i = 0bksl-nl        while not fait:bksl-nl            ville = villes[i]bksl-nl            if ville["ID"] == capitale:bksl-nl                entree["CapitalName"] = ville["Name"]bksl-nl                fait = Truebksl-nl            else:bksl-nl                i += 1bksl-nl                bksl-nl</span></p>
 <p><strong>A</strong></p>
 <p><strong>Z</strong></p>
+</details>
 </details>
 
 

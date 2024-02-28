@@ -76,5 +76,3 @@ def code_pays(pays, nom):
 def langues_parlees(pays, langues, nom):
     """Renvoie la liste des noms des langues parlées dans le pays indiqué par son nom"""
     ...
-
-assert sorted(langues_parlees(pays, langues, "Haiti")) == ['French', 'Haiti Creole']
