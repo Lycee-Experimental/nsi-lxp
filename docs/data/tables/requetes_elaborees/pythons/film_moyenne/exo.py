@@ -4,7 +4,7 @@ encodage = "utf-8"
 
 from js import fetch
 
-reponse = await fetch(f"../{url_fichier}")
+reponse = await fetch(f"{url_fichier}")
 contenu = await reponse.text()
 
 with open(file=url_fichier, mode="w", encoding=encodage) as fichier:
@@ -33,5 +33,3 @@ def moyenne(donnees, descripteur):
     """Renvoie la moyenne des valeurs de ce descripteur"""
     pass
 
-
-assert abs(moyenne(films, "Minutes") - 122.57) < 10**-2, "Erreur sur la moyenne de 'Minutes'"

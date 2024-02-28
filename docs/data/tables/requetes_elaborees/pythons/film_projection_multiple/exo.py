@@ -4,7 +4,7 @@ encodage = "utf-8"
 
 from js import fetch
 
-reponse = await fetch(f"../{url_fichier}")
+reponse = await fetch(f"{url_fichier}")
 contenu = await reponse.text()
 
 with open(file=url_fichier, mode="w", encoding=encodage) as fichier:
@@ -28,5 +28,3 @@ def projection_multiple(donnees, descripteurs):
     """Renvoie les valeurs de ces descripteurs"""
     pass
 
-
-assert projection_multiple(films, ("Name", "Year", "Rating"))[0] == ("Citizen Kane", 1941, 8.3), "Erreur"
