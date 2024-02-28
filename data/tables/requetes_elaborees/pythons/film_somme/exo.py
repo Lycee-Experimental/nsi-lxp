@@ -4,7 +4,7 @@ encodage = "utf-8"
 
 from js import fetch
 
-reponse = await fetch(f"../{url_fichier}")
+reponse = await fetch(f"{url_fichier}")
 contenu = await reponse.text()
 
 with open(file=url_fichier, mode="w", encoding=encodage) as fichier:
@@ -27,6 +27,3 @@ with open("films.csv", "r", encoding="utf-8") as fichier:
 def somme(donnees, descripteur):
     """Renvoie la somme des valeurs de ce descripteur"""
     pass
-
-
-assert abs(somme(films, "Gross") - 33072.07) < 10**-6, "Erreur sur la somme de 'Gross'"
