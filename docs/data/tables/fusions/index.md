@@ -1,7 +1,7 @@
 ---
 title: Fusions
 ---
-# :scissors: Fusionner des tables
+# :scissors: Fusionner des tables :scissors:
 
 
 On considère dans ce sujet les trois fichiers `csv` décrits ci-dessous :
@@ -51,7 +51,7 @@ On considère dans ce sujet les trois fichiers `csv` décrits ci-dessous :
     * `Population` : la population de la ville (entier)
 
 
-!!! tip "Import réalisés !"
+??? tip "Import des listes réalisés !"
 
     Dans toute la suite du TP, les listes `pays`, `langues` et `villes` contiennent les **dictionnaires** correspondant aux imports de ces différents fichiers.
 
@@ -77,28 +77,23 @@ On considère dans ce sujet les trois fichiers `csv` décrits ci-dessous :
     ]
     ```
 
-## Langues parlées dans chaque pays
 
-Quelles sont les langues parlées en Haïti ? Pour le savoir il faut :
 
-* parcourir la liste `pays` jusqu'à trouver le code de Haïti (orthographié `Haiti` dans la liste `pays`),
+{{exercice(1, titre="Quelles sont les langues parlées en Haïti ?")}}
 
-* parcourir la liste `langues` et en extraire les valeurs correspondant à ce code.
+    * Parcourir la liste `pays` jusqu'à trouver le code de Haïti (orthographié `Haiti` dans la liste `pays`),
 
-{{exercice(1, titre="Langues parlées en Haïti")}}
+    * Parcourir la liste `langues` et extraire les valeurs correspondant à ce code.
 
     Compléter le code ci-dessous permettant de déterminer les langues parlées en Haïti.
 
     {{ IDE('pythons/haiti/exo') }}
 
-Le descripteur `CountryCode` permet donc de faire le lien entre les deux listes `pays` et `langues`.
+{{exercice(titre="Langues parlées dans le monde")}}
 
-Utilisons cette relation afin de déterminer les langues parlées dans un pays quelconque.
+    Le descripteur `CountryCode` permet donc de faire le lien entre les deux listes `pays` et `langues`, utiliser cette relation afin de déterminer les langues parlées dans un pays quelconque.
 
-
-{{exercice(titre="Langues parlées dans un pays")}}
-
-    On demande d'écrire deux fonctions :
+    Écrire les deux fonctions :
     
     * `code_pays` prend en argument la liste des pays ainsi que le nom d'un pays et renvoie son code ;
 
@@ -116,52 +111,56 @@ Utilisons cette relation afin de déterminer les langues parlées dans un pays q
     {{ IDE('pythons/langues/exo') }}
     
 
-## Capitales
+{{exercice(titre="Quelle est la capitale d'Haïti ?")}}
 
-Quelle est la capitale d'Haïti ? Là encore, il faut :
+    Pour cela, nous devons :
 
-* parcourir la liste des pays jusqu'à trouver l'entrée correspondant à Haïti,
-  
-* repérer le code de la capitale correspondante,
-
-* parcourir la liste des villes jusqu'à trouver le code cherché.
-
-Nous allons effectuer ces actions pour chacun des pays présents dans la liste. La capitale étant trouvée, nous ajouterons une nouvelle clé `CapitalName` au dictionnaire du pays. La valeur associée sera le nom de la capitale obtenu.
-
-!!! warning "Pas de capitale ?"
-
-    Certains des « pays » listés n'en sont pas vraiment et n'ont donc pas de capitale. C'est par exemple le cas de l'Antarctique.
+    * parcourir la liste des pays jusqu'à trouver l'entrée correspondant à Haïti,
     
-    Lors de l'import des données, on leur a associé la valeur `#!py -1` à la clé `#!py Capital`.
+    * repérer le code de la capitale correspondante,
 
-{{exercice(titre="Liens")}}
+    * parcourir la liste des villes jusqu'à trouver le code cherché.
 
-    Quels sont les descripteurs permettant de faire le lien entre les listes `pays` et `villes` ?
+    ??? question "Lien entre les listes `pays` et `villes`"
 
-    === "Cocher l'affirmation correcte"
+        Quels sont les descripteurs permettant de faire le lien entre les listes `pays` et `villes` ?
+
+        === "Cocher l'affirmation correcte"
+            
+            - [ ] Le descripteur `"Capital"` de `pays` et `"Name"` de `villes`
+            - [ ] Le descripteur `"Name"` de `pays` et `"Name"` de `villes`
+            - [ ] Le descripteur `"Capital"` de `pays` et `"ID"` de `villes`
+            - [ ] Le descripteur `"ID"` de `pays` et `"Capital"` de `villes`
+
+        === "Solution"
+            
+            - :x: Le descripteur `"Capital"` de `pays` et `"Name"` de `villes`
+            - :x: Le descripteur `"Name"` de `pays` et `"Name"` de `villes`
+            - :white_check_mark: Le descripteur `"Capital"` de `pays` et `"ID"` de `villes`
+            - :x: Le descripteur `"ID"` de `pays` et `"Capital"` de `villes`
+
+
+
+        Certains des « pays » listés n'en sont pas vraiment et n'ont donc pas de capitale. C'est par exemple le cas de l'Antarctique.
         
-        - [ ] Le descripteur `"Capital"` de `pays` et `"Name"` de `villes`
-        - [ ] Le descripteur `"Name"` de `pays` et `"Name"` de `villes`
-        - [ ] Le descripteur `"Capital"` de `pays` et `"ID"` de `villes`
-        - [ ] Le descripteur `"ID"` de `pays` et `"Capital"` de `villes`
+        Lors de l'import des données, on leur a associé la valeur 
 
-    === "Solution"
+
+
+    ??? question "Associer les capitales aux pays"
+
+        Ajouter une nouvelle clé `CapitalName` au dictionnaire du pays dont la valeur sera le nom de la capitale obtenu.
         
-        - :x: Le descripteur `"Capital"` de `pays` et `"Name"` de `villes`
-        - :x: Le descripteur `"Name"` de `pays` et `"Name"` de `villes`
-        - :white_check_mark: Le descripteur `"Capital"` de `pays` et `"ID"` de `villes`
-        - :x: Le descripteur `"ID"` de `pays` et `"Capital"` de `villes`
+        !!! warning "Pas de capitale ?"
+            On utilisera la chaîne vide `""` comme valeur pour les « pays » sans capitale (valeur `#!py -1` à la clé `#!py Capital`.).
 
-{{exercice(titre="Associer les capitales aux pays")}}
-
-    Compléter le code ci-dessous afin d'ajouter à chaque dictionnaire correspondant à un pays une nouvelle entrée `CapitalName` contenant le nom de sa capitale.
-
-    On utilisera la chaîne vide `""` comme valeur pour les « pays » sans capitale.
-
-    Ainsi :
+        Ainsi :
     
-    * le dictionnaire correspondant à la France contiendra un nouveau couple `"CapitalName": "Paris"`,
-    
-    * celui de l'Antarctique `"CapitalName": ""`.
+        * le dictionnaire correspondant à la France contiendra un nouveau couple `"CapitalName": "Paris"`,
+        
+        * celui de l'Antarctique `"CapitalName": ""`.
+        
+        Compléter le code ci-dessous afin d'ajouter à chaque dictionnaire correspondant à un pays une nouvelle entrée `CapitalName` contenant le nom de sa capitale.    
+       
 
-    {{ IDE('pythons/capitales/exo') }}
+        {{ IDE('pythons/capitales/exo') }}

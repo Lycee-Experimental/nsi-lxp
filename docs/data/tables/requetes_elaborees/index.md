@@ -1,20 +1,20 @@
 ---
 title: Requêtes élaborées
 ---
-# Meilleurs films selon IMDB
+# 🎬 Meilleurs films selon IMDB 🎬
 
-À ce stade nous savons :
+!!! info "Nous savons maintenant"
 
-* ouvrir un fichier `csv` à l'aide de Python,
-* lire son contenu dans une liste (de listes ou de dictionnaires),
-* typer les données,
-* effectuer des requêtes sur ces données à l'aide de listes en compréhension.
+    * ouvrir un fichier `csv` à l'aide de Python,
+    * lire son contenu dans une liste (de listes ou de dictionnaires),
+    * typer les données,
+    * effectuer des requêtes sur ces données à l'aide de listes en compréhension.
 
 ## Présentation des données et import
 
-Nous allons pousser notre étude un peu plus loin lors de l'étude du fichier `films.csv`[^1]. Ce [fichier](../films.csv) reprend les 517 films les mieux notés sur le site [IMDB](https://www.imdb.com/).
+Nous allons pousser notre étude un peu plus loin lors de l'étude du fichier `films.csv`[^1]. Ce [fichier](../films.csv) reprend les 517 films les mieux notés sur le site [Internet Movie DataBase (IDMB)](https://www.imdb.com/).
 
-[^1]: [source](https://www.kaggle.com/datasets/faisaljanjua0555/top-500-movies-of-all-time)
+[^1]: [Source sur Kaggle](https://www.kaggle.com/datasets/faisaljanjua0555/top-500-movies-of-all-time)
 
 Les descripteurs proposés sont :
 
@@ -32,7 +32,7 @@ Les descripteurs proposés sont :
 
 !!! note "Les genres"
 
-    Chaque film est associé à au moins un genre, certains à trois genres...
+    Chaque film est associé à au moins un genre, certains à plusieurs.
 
     Dans le cas où plusieurs genres sont cités, ceux-ci sont séparés par des virgules.
 
@@ -66,15 +66,14 @@ with open("films.csv", "r", encoding="utf-8") as fichier:
 
 !!! tip "Import réalisé !"
 
-    Dans toute la suite du TP, la liste `films` telle qu'importée ci-dessus sera accessible dans chaque éditeur.
+    Dans la suite de ce chapitre, la liste `films` telle qu'importée ci-dessus sera directement accessible dans les éditeurs.
 
 ## Votes par genre
 
-Le fichier compte 25 films dont l'un des `#!py Genres` est `#!py Family` et 26 avec le genre `#!py Horror`. On précise qu'**aucun film ne possède ces deux genres**.
+Le fichier compte 25 films dont l'un des `#!py Genres` est `#!py Family`, il en compte 26 avec le genre `#!py Horror`. On précise qu'aucun film ne possède à la fois ces deux genres.
 
-Parmi ces deux genres, quel est celui qui a reçu le plus de votes au total (en additionnant les votes reçus par chaque film) ?
 
-{{exercice(1, titre="Comparaison de genres")}}
+{{exercice(1, titre="Lequel de ces deux genres a reçu le plus de votes ?")}}
 
     Compléter le script ci-dessous afin de compter : 
     
@@ -87,23 +86,18 @@ Parmi ces deux genres, quel est celui qui a reçu le plus de votes au total (en 
 
 ## Projection(s)
 
-Comment faire pour n'obtenir que les noms des films cités dans le fichier ?
-
-On peut procéder ainsi :
+Pour obtenir la liste des noms de films, on peut procéder ainsi :
 
 ```pycon
 >>> [entree["Name"] for entree in films]
 ['Citizen Kane', 'The Godfather', 'The Wizard of Oz', 'The Shawshank Redemption', 'Pulp Fiction', ...]
 ```
-
-Afin de généraliser le procédé, on souhaite écrire une fonction `#!py projection` qui :
-
-* prend en argument la liste de dictionnaires à manipuler ainsi que le nom d'un descripteur,
-
-* renvoie la liste ne contenant que les valeurs associées à ce descripteur.
-
 {{exercice( titre="La fonction `projection`")}}
+    On souhaite écrire une fonction `#!py projection` qui :
 
+    * prend en argument la **liste** de dictionnaires à manipuler ainsi que le nom d'un **descripteur**,
+
+    * renvoie la liste ne contenant que les valeurs associées à ce descripteur.
 
     Compléter le code ci-dessous en saisissant la fonction `projection` telle que décrite.
 
@@ -139,9 +133,9 @@ Afin de généraliser le procédé, on souhaite écrire une fonction `#!py proje
 
 ## Sommes et moyennes
 
-Quel est le montant total rapporté par l'ensemble de ces films ? Et le montant moyen ? Pour le savoir il faut dans un premier temps additionner les revenus générés.
+Quel est le montant total rapporté par l'ensemble de ces films ? Et le montant moyen ? 
 
-Écrivons une fonction pour cela.
+Pour le savoir il faut dans un premier temps additionner les revenus générés.
 
 {{exercice( titre="La fonction `somme`")}}
 
@@ -182,9 +176,7 @@ En effet, pour certains films le revenu total est inconnu. Néanmoins, afin de p
 ('The 400 Blows', -1.0)
 ```
 
-Pouvez-vous calculer la moyenne des revenus générés par les films pour lesquels les revenus sont connus ?
-
-{{exercice( titre="Revenu moyen des films")}}
+{{exercice( titre="Calcul du revenu moyen des films")}}
 
     Calculer le revenu moyen des films proposés. Il ne faut pas tenir compte des films pour lesquels cette valeur est inconnue (`#!py -1.0` dans le fichier).
 
@@ -248,11 +240,8 @@ Quel genre de film est cité le plus de fois ? Facile, il suffit de compter les 
 >>> films[5]["Genres"]
 'Drama, Romance, War'
 ```
-Pouvez-vous déterminer le genre le plus présent ?
 
-{{exercice( titre="Le meilleur genre")}}
-
-    Déterminer le genre le plus représenté dans les films.
+{{exercice( titre="Détermination du genre le plus représenté dans les films")}}
 
     La variable contenant ce genre sera nommée `meilleur_genre`
 
