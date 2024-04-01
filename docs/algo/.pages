@@ -1,9 +1,10 @@
 title: Algorithmes
 nav:
     - index.md
-    - 1️⃣ Parcours d'un tableau: parcours.md
-    - 1️⃣ Recherche par dichotomie: dichotomie.md
+    - 1️⃣ Propriétés des algorithmes: proprietes.md
+    - 1️⃣ Parcours séquentiel d'un tableau: sequentiel.md
     - 1️⃣ Algorithmes de tri : tris
+    - 1️⃣ Recherche par dichotomie: dichotomie.md
     - 1️⃣ Algorithmes gloutons: glouton
     - 1️⃣ Algorithme KNN: knn
     - 🇹 Diviser pour régner: diviser.md

@@ -7,6 +7,7 @@
 
 
 
+
 ??? abstract "Le tri en informatique"
     Dans la vie courante, les deux verbes trier et classer ne sont pas synonymes.
     - **Trier** ou effectuer un tri c’est répartir les éléments en paquets correspondant à un certain critère : par exemple séparer les déchets selon leur nature, les personnes d’une assemblée selon leur sexe ou selon leur langue maternelle.
@@ -43,13 +44,13 @@
         {{ IDE('scripts/reverse') }}
 
 
-    - [Tri par sélection](selection.md)
-    - [Tri par insertion](insertion.md)
-    - [Exercices](exercices.md)
-
 
 
 ??? abstract "Compléments"
     <iframe loading="lazy" src="https://animations.interstices.info/methodes-tri/index.html" width="740" height="410" frameborder="0" scrolling="no" bis_size="{&quot;x&quot;:995,&quot;y&quot;:1284,&quot;w&quot;:740,&quot;h&quot;:410,&quot;abs_x&quot;:995,&quot;abs_y&quot;:1284}"></iframe>
 
     😊 Pour approfondir : [Interstices](https://interstices.info/les-algorithmes-de-tri/){ .md-button target="_blank" rel="noopener" }
+
+
+
+

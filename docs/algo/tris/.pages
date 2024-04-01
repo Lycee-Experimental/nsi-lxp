@@ -1,2 +1,6 @@
 nav:
-    - 1️⃣ Algorithmes de tri : index.md
+    - 1️⃣ Introduction au tri : index.md
+    - 1️⃣ Tri par insertion : insertion.md
+    - 1️⃣ Tri par sélection : selection.md
+    - 1️⃣ Exercices : exercices.md
+
