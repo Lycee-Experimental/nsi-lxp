@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://nsi.lycee-experimental.org/algo/parcours/">
+        <link rel="canonical" href="https://nsi.lycee-experimental.org/algo/sequentiel/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../proprietes/">
       
       
-        <link rel="next" href="../dichotomie/">
+        <link rel="next" href="../tris/">
       
       
       <link rel="icon" href="../../assets/images/logo-lxp-noir.svg">
@@ -24,7 +24,7 @@
     
     
       
-        <title>1️⃣ Parcours d'un tableau - NSI-LXP</title>
+        <title>1️⃣ Parcours séquentiel d'un tableau - NSI-LXP</title>
       
     
     
@@ -107,7 +107,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#algorithmes-de-recherches-naives" class="md-skip">
+        <a href="#algorithmes-de-recherches-naives-avec-parcours-sequentiel" class="md-skip">
           Aller au contenu
         </a>
       
@@ -140,7 +140,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1️⃣ Parcours d'un tableau
+              1️⃣ Parcours séquentiel d'un tableau
             
           </span>
         </div>
@@ -2502,7 +2502,7 @@
         
       
         
-          
+      
         
       
         
@@ -2570,6 +2570,26 @@
                 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../proprietes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Propriétés des algorithmes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -2585,11 +2605,140 @@
         
   
   <span class="md-ellipsis">
-    1️⃣ Parcours d'un tableau
+    1️⃣ Parcours séquentiel d'un tableau
   </span>
   
 
       </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../tris/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    1️⃣ Algorithmes de tri
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9_4" id="__nav_9_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_4">
+            <span class="md-nav__icon md-icon"></span>
+            1️⃣ Algorithmes de tri
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tris/insertion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Tri par insertion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tris/selection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Tri par sélection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tris/exercices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Exercices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -2607,26 +2756,6 @@
   
   <span class="md-ellipsis">
     1️⃣ Recherche par dichotomie
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tris/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    1️⃣ Algorithmes de tri
   </span>
   
 
@@ -4091,7 +4220,7 @@
   
 
 
-<h1 id="algorithmes-de-recherches-naives">🔎 Algorithmes de recherches naïves 🔎<a class="headerlink" href="#algorithmes-de-recherches-naives" title="Permanent link">⚓︎</a></h1>
+<h1 id="algorithmes-de-recherches-naives-avec-parcours-sequentiel">🔎 Algorithmes de recherches naïves, avec parcours séquentiel 🔎<a class="headerlink" href="#algorithmes-de-recherches-naives-avec-parcours-sequentiel" title="Permanent link">⚓︎</a></h1>
 <details class="conclu">
 <summary>Programme</summary>
 <table>
@@ -4111,10 +4240,10 @@
 </tbody>
 </table>
 </details>
+<details class="question">
+<summary>Activité 1 - Recherche séquentielle</summary>
 <p>La recherche d'un élément dans une liste est un problème fréquemment rencontré dans les algorithmes.  </p>
 <p>La façon la plus simple de chercher une valeur dans une liste est de parcourir un à un les éléments de la liste (de manière <strong>séquentielle</strong>). On compare les éléments à la valeur recherchée.</p>
-<details class="question">
-<summary>Activité 1 - Parcours séquentiel version longue</summary>
 <p>Compléter la fonction <code>appartient_1</code> dont les spécifications sont données.</p>
 <div class="admonition danger">
 <p class="admonition-title">Contrainte</p>
@@ -4125,7 +4254,7 @@
 <p><strong>Z</strong></p>
 </details>
 <details class="question">
-<summary>Activité 2 - Parcours séquentiel version courte</summary>
+<summary>Activité 2 - Recherche séquentielle raccourcie</summary>
 <p>🌵 Le problème de cette technique, c'est qu'on peut continuer à parcourir le tableau jusqu'au bout, pour rien, si on a trouvé l'élément avant la fin.  </p>
 <p>👉 Il est recommandé de faire une sortie anticipée de la boucle en utilisant le <code>return</code></p>
 <p>Compléter la fonction <code>appartient_2</code> dont les spécifications sont données en utilisant une sortie anticipée.</p>
@@ -4138,11 +4267,199 @@
 <p><strong>Z</strong></p>
 </details>
 <details class="python">
-<summary>Astuce : savoir si un élément est présent dans une liste</summary>
+<summary>Astuce Python : savoir si un élément est présent dans une liste</summary>
 <p>La fonction <code>in</code> de python fait cela :</p>
 <p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_e65cac1723af780f53a961b1a8d55b896832819b" class="comment">###</span><div class="line" id="editor_e65cac1723af780f53a961b1a8d55b896832819b"></div><div id="term_editor_e65cac1723af780f53a961b1a8d55b896832819b"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_e65cac1723af780f53a961b1a8d55b896832819b","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_e65cac1723af780f53a961b1a8d55b896832819b","scripts/fct_in")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_e65cac1723af780f53a961b1a8d55b896832819b').click()" >            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_e65cac1723af780f53a961b1a8d55b896832819b" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_e65cac1723af780f53a961b1a8d55b896832819b")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_e65cac1723af780f53a961b1a8d55b896832819b")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_e65cac1723af780f53a961b1a8d55b896832819b" class="py_mk_hide">liste = [4, 2, 4, 5, 8, 9]bksl-nlprint (9 in liste)bksl-nlprint (10 in liste)bksl-nlbksl-nlbksl-nl</span><span id="corr_content_editor_e65cac1723af780f53a961b1a8d55b896832819b" class="py_mk_hide" data-strudel=""></span></p>
 <p><strong>A</strong></p>
 <p><strong>Z</strong></p>
+</details>
+<details class="question">
+<summary>Activité 3 - Algorithme de recherche de maximum</summary>
+<p>On cherche à coder une fonction <code>recherche_max</code> qui prend en paramètre une liste <code>tab</code> et qui renvoie le plus grand élément de cette liste. L'usage de la fonction <code>max</code> est interdit.</p>
+<p>Utilisation :
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_max</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="mi">8</span>
+</code></pre></div></p>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000002" class="comment">###</span><div class="line" id="editor_00000002"></div><div id="term_editor_00000002"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000002","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000002","")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000002').click()" >            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000002" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000002")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000002")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000002" class="py_mk_hide"></span><span id="corr_content_editor_00000002" class="py_mk_hide" data-strudel=""></span></p>
+<details class="tip">
+<summary>Indices</summary>
+<details class="note">
+<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /></summary>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_max</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie le maximum de la liste tab&#39;&#39;&#39;</span>
+</code></pre></div>
+</details>
+<details class="note">
+<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span> </summary>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_max</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie le maximum de la liste tab&#39;&#39;&#39;</span>
+    <span class="o">...</span> <span class="o">=</span> <span class="o">...</span>                
+    <span class="k">for</span> <span class="o">...</span> <span class="ow">in</span> <span class="o">...</span><span class="p">:</span>
+        <span class="k">if</span> <span class="o">...</span> <span class="o">&gt;</span> <span class="o">...</span><span class="p">:</span>
+            <span class="o">...</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">return</span> <span class="o">...</span>
+</code></pre></div>
+</details>
+<details class="note">
+<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span></summary>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_max</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie le maximum de la liste tab&#39;&#39;&#39;</span>
+    <span class="n">maxi</span> <span class="o">=</span> <span class="o">...</span>           
+    <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="o">...</span><span class="p">:</span>
+        <span class="k">if</span> <span class="o">...</span> <span class="o">&gt;</span> <span class="o">...</span><span class="p">:</span>
+            <span class="o">...</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">return</span> <span class="o">...</span>
+</code></pre></div>
+</details>
+<details class="note">
+<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span></summary>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_max</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;renvoie le maximum de la liste tab&#39;&#39;&#39;</span>
+    <span class="n">maxi</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>           
+    <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">tab</span><span class="p">:</span>
+        <span class="k">if</span> <span class="o">...</span> <span class="o">&gt;</span> <span class="o">...</span><span class="p">:</span>
+            <span class="n">maxi</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">return</span> <span class="o">...</span>
+</code></pre></div>
+</details>
+</details>
+</details>
+<details class="question">
+<summary>Activité 4 - Algorithme de calcul de moyenne</summary>
+<p>On cherche à coder une fonction <code>moyenne</code> qui prend en paramètre une liste <code>tab</code> et qui renvoie la moyenne des éléments de cette liste.</p>
+<p>Utilisation :
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">moyenne</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="mf">4.0</span>
+</code></pre></div>
+<div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000003" class="comment">###</span><div class="line" id="editor_00000003"></div><div id="term_editor_00000003"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000003","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000003","")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000003').click()" >            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000003" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000003")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000003")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000003" class="py_mk_hide"></span><span id="corr_content_editor_00000003" class="py_mk_hide" data-strudel=""></span></p>
+<details class="tip">
+<summary>Indices</summary>
+<details class="note">
+<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /></summary>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; renvoie la moyenne de tab&#39;&#39;&#39;</span>
+</code></pre></div>
+</details>
+<details class="note">
+<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span> </summary>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; renvoie la moyenne de tab&#39;&#39;&#39;</span>
+    <span class="o">...</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">for</span> <span class="o">...</span> <span class="ow">in</span> <span class="o">...</span><span class="p">:</span>
+        <span class="o">...</span> <span class="o">+=</span> <span class="o">...</span>
+    <span class="k">return</span> <span class="o">...</span> <span class="o">/</span> <span class="o">...</span>
+</code></pre></div>
+</details>
+<details class="note">
+<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span></summary>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; renvoie la moyenne de tab&#39;&#39;&#39;</span>
+    <span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="o">...</span><span class="p">:</span>
+        <span class="o">...</span> <span class="o">+=</span> <span class="o">...</span>
+    <span class="k">return</span> <span class="o">...</span> <span class="o">/</span> <span class="o">...</span>
+</code></pre></div>
+</details>
+<details class="note">
+<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span></summary>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">tab</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; renvoie la moyenne de tab&#39;&#39;&#39;</span>
+    <span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">tab</span><span class="p">:</span>
+        <span class="n">somme</span> <span class="o">+=</span> <span class="o">...</span>
+    <span class="k">return</span> <span class="o">...</span> <span class="o">/</span> <span class="o">...</span>
+</code></pre></div>
+</details>
+</details>
+</details>
+<details class="question">
+<summary>Activité 5 - Algorithme de recherche d'occurrence</summary>
+<p>On cherche à coder une fonction <code>recherche_occurrence</code> qui prend en paramètre un élément <code>elt</code> et une liste <code>tab</code> et qui renvoie la liste (éventuellement vide) des indices de <code>elt</code> dans <code>tab</code>.</p>
+<p>Utilisation :
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_occurrence</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_occurrence</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="p">[]</span>
+</code></pre></div>
+<div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000004" class="comment">###</span><div class="line" id="editor_00000004"></div><div id="term_editor_00000004"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000004","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000004","")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000004').click()" >            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000004" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000004")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000004")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000004" class="py_mk_hide"></span><span id="corr_content_editor_00000004" class="py_mk_hide" data-strudel=""></span></p>
+<details class="tip">
+<summary>Indices</summary>
+<details class="note">
+<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /></summary>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_occurrence</span><span class="p">(</span><span class="n">elt</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; renvoie la liste (éventuellement vide)</span>
+<span class="sd">    des indices de elt dans tab&#39;&#39;&#39;</span>
+</code></pre></div>
+</details>
+<details class="note">
+<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span> </summary>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_occurrence</span><span class="p">(</span><span class="n">elt</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; renvoie la liste (éventuellement vide)</span>
+<span class="sd">    des indices de elt dans tab&#39;&#39;&#39;</span>
+    <span class="o">...</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">for</span> <span class="o">...</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">...</span><span class="p">):</span>
+        <span class="k">if</span> <span class="o">...</span> <span class="o">==</span> <span class="o">...</span><span class="p">:</span>
+            <span class="o">...</span>
+    <span class="k">return</span> <span class="o">...</span>
+</code></pre></div>
+</details>
+<details class="note">
+<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span></summary>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_occurrence</span><span class="p">(</span><span class="n">elt</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; renvoie la liste (éventuellement vide)</span>
+<span class="sd">    des indices de elt dans tab&#39;&#39;&#39;</span>
+    <span class="n">liste_indices</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">...</span><span class="p">):</span>
+        <span class="k">if</span> <span class="o">...</span> <span class="o">==</span> <span class="o">...</span><span class="p">:</span>
+            <span class="o">....</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">return</span> <span class="o">...</span>
+</code></pre></div>
+</details>
+<details class="note">
+<summary>Code à trous <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .25a.75.75 0 0 1 .673.418l3.058 6.197 6.839.994a.75.75 0 0 1 .415 1.279l-4.948 4.823 1.168 6.811a.751.751 0 0 1-1.088.791L12 18.347l-6.117 3.216a.75.75 0 0 1-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 0 1 .416-1.28l6.838-.993L11.328.668A.75.75 0 0 1 12 .25Zm0 2.445L9.44 7.882a.75.75 0 0 1-.565.41l-5.725.832 4.143 4.038a.748.748 0 0 1 .215.664l-.978 5.702 5.121-2.692a.75.75 0 0 1 .698 0l5.12 2.692-.977-5.702a.748.748 0 0 1 .215-.664l4.143-4.038-5.725-.831a.75.75 0 0 1-.565-.41L12 2.694Z"/></svg></span></summary>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_occurrence</span><span class="p">(</span><span class="n">elt</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; renvoie la liste (éventuellement vide)</span>
+<span class="sd">    des indices de elt dans tab&#39;&#39;&#39;</span>
+    <span class="n">liste_indices</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="o">...</span><span class="p">:</span>
+            <span class="o">....</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">return</span> <span class="o">...</span>
+</code></pre></div>
+</details>
+</details>
+</details>
+<details class="question">
+<summary>Activité 6 - Algorithme de recherche de maximum avec indice</summary>
+<p>On cherche à coder une fonction <code>recherche_max_et_indice</code> qui prend en paramètre une liste <code>tab</code> et qui renvoie le plus grand élément de cette liste ainsi que l'indice de ce maximum dans la liste (si il est présent plusieurs fois, un seul indice sera renvoyé). L'usage de la fonction <code>max</code> est interdit.</p>
+<p>Utilisation :
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_max_et_indice</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="mi">8</span><span class="p">,</span> <span class="mi">5</span>
+</code></pre></div>
+<div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_00000005" class="comment">###</span><div class="line" id="editor_00000005"></div><div id="term_editor_00000005"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_00000005","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_00000005","")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_00000005').click()" >            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_00000005" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_00000005")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_00000005")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_00000005" class="py_mk_hide"></span><span id="corr_content_editor_00000005" class="py_mk_hide" data-strudel=""></span></p>
+</details>
+<details class="python">
+<summary>Astuce Python : fonctions min(), max() et sum()</summary>
+<p>Les fonctions <code>min</code> et <code>`max</code> permettent de déterminer directement minimums et maximum d'une liste, la fonction sum d'en calculer la somme :</p>
+<div class="highlight"><span class="filename">🐍 Console Python</span><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">min</span><span class="p">([</span><span class="mi">23</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">45</span><span class="p">]))</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">([</span><span class="mi">23</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">45</span><span class="p">]))</span>
+<span class="go">45</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">([</span><span class="mi">23</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">45</span><span class="p">]))</span>
+<span class="go">70</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">23</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">45</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">moy</span><span class="o">=</span><span class="nb">sum</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">moy</span><span class="p">)</span>
+<span class="go">23.333333333333332</span>
+</code></pre></div>
+<p><div onclick='start_term("id0")' id="fake_id0" class="py_mk_terminal_f"><label class="terminal"><span>&gt;&gt;&gt; </span></label></div><div id="id0" class="py_mk_hide"></div></p>
+</details>
+<details class="info">
+<summary>Complexité/Coût linéaire d'un parcours séquentiel</summary>
+<p>On note <span class="arithmatex">\(n\)</span> la taille des données en entrée. Dans notre cas, la mesure de cette taille correspond à la taille de la liste <code>n=len(tab)</code>.</p>
+<p>Le coût/complexité <span class="arithmatex">\(C(n)\)</span> de ces algorithmes de recherche ou calculs séquentiels correspond au nombre d'opérations réalisées. Dans chacun des cas ci-dessus, cela correspond au nombre nombre d'itérations <span class="arithmatex">\(C(n)\)</span> dans la boucle <code>for</code> de cet algorithme.  </p>
+<p>La complexité/coût de l'algorithme de recherche de minimum est <strong>linéaire</strong>, on le note <span class="arithmatex">\(O(n)\)</span>:</p>
+<p><center><enc><span class="arithmatex">\(C(n) = n\)</span></enc></center></p>
 </details>
 
 
@@ -4173,7 +4490,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Algorithmes">
+          <a href="../proprietes/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: 1️⃣ Propriétés des algorithmes">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -4183,20 +4500,20 @@
                 Précédent
               </span>
               <div class="md-ellipsis">
-                Algorithmes
+                1️⃣ Propriétés des algorithmes
               </div>
             </div>
           </a>
         
         
           
-          <a href="../dichotomie/" class="md-footer__link md-footer__link--next" aria-label="Suivant: 1️⃣ Recherche par dichotomie">
+          <a href="../tris/" class="md-footer__link md-footer__link--next" aria-label="Suivant: 1️⃣ Introduction au tri">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Suivant
               </span>
               <div class="md-ellipsis">
-                1️⃣ Recherche par dichotomie
+                1️⃣ Introduction au tri
               </div>
             </div>
             <div class="md-footer__button md-icon">
