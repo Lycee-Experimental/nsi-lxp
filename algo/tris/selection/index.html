@@ -13,10 +13,10 @@
         <link rel="canonical" href="https://nsi.lycee-experimental.org/algo/tris/selection/">
       
       
-        <link rel="prev" href="../insertion/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../exercices/">
+        <link rel="next" href="../insertion/">
       
       
       <link rel="icon" href="../../../assets/images/logo-lxp-noir.svg">
@@ -2673,26 +2673,6 @@
                 
   
   
-  
-    <li class="md-nav__item">
-      <a href="../insertion/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    1️⃣ Tri par insertion
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -2714,6 +2694,26 @@
 
       </a>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../insertion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Tri par insertion
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -4224,26 +4224,15 @@
 
 <h1 id="tri-par-selection">Tri par sélection<a class="headerlink" href="#tri-par-selection" title="Permanent link">⚓︎</a></h1>
 <details class="abstract" open="open">
-<summary>Le tri par sélection en bref</summary>
+<summary>Principe du tri par sélection</summary>
 <p><center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rXEI25l9RQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </center></p>
+<p><strong>En résumé :</strong></p>
 <ul>
 <li>On cherche la valeur minimale et on la place au début du tableau.</li>
 <li>On recommence à partir de la deuxième valeur, et on la place en deuxième position par échange. </li>
 <li>Ainsi de suite </li>
-</ul>
-<p>Le tri par sélection est l'un des plus simples à comprendre. Il est même probable que vous l'ayez déjà mis en application.</p>
-<p>Supposons que vous ayez des cartes à jouer en main et que vous souhaitiez les trier dans l'ordre croissant. Vous pouvez :</p>
-<ul>
-<li>
-<p>Parcourir du regard l'ensemble des cartes et déterminer laquelle est la plus petite,</p>
-</li>
-<li>
-<p>Échanger cette carte minimale avec la première carte de votre main,</p>
-</li>
-<li>Recommencer en cherchant la carte minimale à partir de la deuxième carte et l'échanger avec celle-ci,</li>
-<li>Recommencer à partir de la troisième carte <em>etc</em>.</li>
 </ul>
 </details>
 <details class="question">
@@ -4329,76 +4318,54 @@
 <summary>Activité 2 - Tri par sélection en Python</summary>
 <p>L'une des étapes essentielles du tri par sélection est donc de déterminer l'indice de la valeur minimale à partir d'un certain indice <code>i</code>.
 Cette recherche ayant lieu à plusieurs reprises, nous allons utiliser une fonction pour la réaliser.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:4"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><input id="__tabbed_3_4" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Fonction <code class="highlight"><span class="n">indice_minimum_depuis</span></code></label><label for="__tabbed_3_2">Fonction <code class="highlight"><span class="n">tri_selection</span></code></label><label for="__tabbed_3_3">Fonction <code class="highlight"><span class="n">tri_selection</span></code> (bis)</label><label for="__tabbed_3_4">Utilisation</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:5"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><input id="__tabbed_3_4" name="__tabbed_3" type="radio" /><input id="__tabbed_3_5" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Fonction <code class="highlight"><span class="n">indice_minimum_depuis</span></code></label><label for="__tabbed_3_2">Fonction <code class="highlight"><span class="n">tri_selection</span></code></label><label for="__tabbed_3_3">Fonction <code class="highlight"><span class="n">tri_selection</span></code> (bis)</label><label for="__tabbed_3_4">Utilisation #1</label><label for="__tabbed_3_5">Utilisation #2</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Compléter la fonction <code class="highlight"><span class="n">indice_minimum_depuis</span></code> prenant en argument un <code class="highlight"><span class="n">tableau</span></code> ainsi qu'un indice <code class="highlight"><span class="n">i</span></code> et renvoyant l'indice de la valeur minimale parmi les éléments situés après celui d'indice <code class="highlight"><span class="n">i</span></code> (inclus).</p>
 <p>On garantit que <code class="highlight"><span class="n">i</span></code> est un indice valide.</p>
 <p>Si plusieurs valeurs sont égales au minimum, on renverra l'indice de la première d'entre elles.</p>
-<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_b554e00e4ec0737f43d83dc3b46c107166deea76" class="comment">###</span><div class="line" id="editor_b554e00e4ec0737f43d83dc3b46c107166deea76"></div><div id="term_editor_b554e00e4ec0737f43d83dc3b46c107166deea76"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_b554e00e4ec0737f43d83dc3b46c107166deea76","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_b554e00e4ec0737f43d83dc3b46c107166deea76","scripts/mini_depuis")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_b554e00e4ec0737f43d83dc3b46c107166deea76').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_b554e00e4ec0737f43d83dc3b46c107166deea76" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_b554e00e4ec0737f43d83dc3b46c107166deea76")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_b554e00e4ec0737f43d83dc3b46c107166deea76")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_b554e00e4ec0737f43d83dc3b46c107166deea76" class="py_mk_hide">def indicepy-undminimumpy-unddepuis(tableau, i):bksl-nl    ipy-undmini = ibksl-nl    ...bksl-nlbksl-nlbksl-nlassert indicepy-undminimumpy-unddepuis([3, 8, 1, 5, 4], 0) == 2, "Erreur en partant de l'indice 0"bksl-nlassert indicepy-undminimumpy-unddepuis([3, 8, 1, 5, 4], 1) == 2, "Erreur en partant de l'indice 1"bksl-nlassert indicepy-undminimumpy-unddepuis([3, 8, 1, 5, 4], 2) == 2, "Erreur en partant de l'indice 2"bksl-nlassert indicepy-undminimumpy-unddepuis([3, 8, 1, 5, 4], 4) == 4, "Erreur en partant de l'indice 4"bksl-nlprint("Bravo !")bksl-nlbksl-nl</span><span id="corr_content_editor_b554e00e4ec0737f43d83dc3b46c107166deea76" class="py_mk_hide" data-strudel=""></span></p>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_287b9e63d848d37587a5204c05cf7baa37ee07e4" class="comment">###</span><div class="line" id="editor_287b9e63d848d37587a5204c05cf7baa37ee07e4"></div><div id="term_editor_287b9e63d848d37587a5204c05cf7baa37ee07e4"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_287b9e63d848d37587a5204c05cf7baa37ee07e4","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_287b9e63d848d37587a5204c05cf7baa37ee07e4" class="py_mk_hide">assert indicepy-undminimumpy-unddepuis([3, 8, 1, 5, 4], 0) == 2, "Erreur en partant de l'indice 0"bksl-nlassert indicepy-undminimumpy-unddepuis([3, 8, 1, 5, 4], 1) == 2, "Erreur en partant de l'indice 1"bksl-nlassert indicepy-undminimumpy-unddepuis([3, 8, 1, 5, 4], 2) == 2, "Erreur en partant de l'indice 2"bksl-nlassert indicepy-undminimumpy-unddepuis([3, 8, 1, 5, 4], 4) == 4, "Erreur en partant de l'indice 4"bksl-nlbksl-nl</span>            <button class="tooltip" onclick='check("editor_287b9e63d848d37587a5204c05cf7baa37ee07e4","")'>            <img src="../../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_287b9e63d848d37587a5204c05cf7baa37ee07e4","scripts/mini_depuis")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_287b9e63d848d37587a5204c05cf7baa37ee07e4').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_287b9e63d848d37587a5204c05cf7baa37ee07e4" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_287b9e63d848d37587a5204c05cf7baa37ee07e4")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_287b9e63d848d37587a5204c05cf7baa37ee07e4")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_287b9e63d848d37587a5204c05cf7baa37ee07e4" class="py_mk_hide">def indicepy-undminimumpy-unddepuis(tableau, i):bksl-nl    ipy-undmini = ibksl-nl    ...bksl-nlbksl-nl# Testsbksl-nlassert indicepy-undminimumpy-unddepuis([3, 8, 1, 5, 4], 0) == 2, "Erreur en partant de l'indice 0"bksl-nlassert indicepy-undminimumpy-unddepuis([3, 8, 1, 5, 4], 1) == 2, "Erreur en partant de l'indice 1"bksl-nlassert indicepy-undminimumpy-unddepuis([3, 8, 1, 5, 4], 2) == 2, "Erreur en partant de l'indice 2"bksl-nlassert indicepy-undminimumpy-unddepuis([3, 8, 1, 5, 4], 4) == 4, "Erreur en partant de l'indice 4"bksl-nlprint("Bravo !")bksl-nlbksl-nl</span><span id="corr_content_editor_287b9e63d848d37587a5204c05cf7baa37ee07e4" class="py_mk_hide" data-strudel="">def indicepy-undminimumpy-unddepuis(tableau, i):bksl-nl    ipy-undmini = ibksl-nl    for j in range(i + 1, len(tableau)):bksl-nl        if tableau[j] &lt; tableau[ipy-undmini]:bksl-nl            ipy-undmini = jbksl-nl    return ipy-undminibksl-nl</span></p>
 <p><strong>A</strong></p>
-<p><strong>Z</strong></p>
-<details class="success">
-<summary>Solution</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">indice_minimum_depuis</span><span class="p">(</span><span class="n">tableau</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
-    <span class="n">i_mini</span> <span class="o">=</span> <span class="n">i</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tableau</span><span class="p">)):</span>
-        <span class="k">if</span> <span class="n">tableau</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">tableau</span><span class="p">[</span><span class="n">i_mini</span><span class="p">]:</span>
-            <span class="n">i_mini</span> <span class="o">=</span> <span class="n">j</span>
-    <span class="k">return</span> <span class="n">i_mini</span>
-</code></pre></div>
 <p>Dans le cas où le minimum apparaît plusieurs fois, on aurait pu aussi retenir la dernière d'entre elles. Le fonctionnement général de l'algorithme aurait été similaire (mais il n'aurait plus été <a href="https://fr.wikipedia.org/wiki/Algorithme_de_tri#Tri_stable"><em>stable</em></a>)</p>
-</details>
+<p><strong>Z</strong></p>
 </div>
 <div class="tabbed-block">
 <p>On donne les fonctions <code class="highlight"><span class="n">echange</span></code> et <code class="highlight"><span class="n">indice_minimum_depuis</span></code>.</p>
 <p>Compléter la fonction <code class="highlight"><span class="n">tri_selection</span></code> prenant en argument un <code class="highlight"><span class="n">tableau</span></code> et le triant <strong>en place</strong> à l'aide du tri par sélection.</p>
 <p>On pourra utiliser les fonctions <code class="highlight"><span class="n">echange</span></code> et <code class="highlight"><span class="n">indice_minimum_depuis</span></code>.</p>
-<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_b271e5a6ff04b5dadaf48d8ac47fb649f930dc95" class="comment">###</span><div class="line" id="editor_b271e5a6ff04b5dadaf48d8ac47fb649f930dc95"></div><div id="term_editor_b271e5a6ff04b5dadaf48d8ac47fb649f930dc95"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_b271e5a6ff04b5dadaf48d8ac47fb649f930dc95","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_b271e5a6ff04b5dadaf48d8ac47fb649f930dc95","scripts/selection")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_b271e5a6ff04b5dadaf48d8ac47fb649f930dc95').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_b271e5a6ff04b5dadaf48d8ac47fb649f930dc95" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_b271e5a6ff04b5dadaf48d8ac47fb649f930dc95")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_b271e5a6ff04b5dadaf48d8ac47fb649f930dc95")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_b271e5a6ff04b5dadaf48d8ac47fb649f930dc95" class="py_mk_hide">def echange(tableau, i, j):bksl-nl    tableau[i], tableau[j] = tableau[j], tableau[i]bksl-nlbksl-nlbksl-nldef indicepy-undminimumpy-unddepuis(tableau, i):bksl-nl    ipy-undmini = ibksl-nl    for j in range(i + 1, len(tableau)):bksl-nl        if tableau[j] &lt; tableau[ipy-undmini]:bksl-nl            ipy-undmini = jbksl-nl    return ipy-undminibksl-nlbksl-nlbksl-nldef tripy-undselection(tableau):bksl-nl    ...bksl-nlbksl-nlbksl-nltableaupy-und0 = [3, 1, 2]bksl-nltripy-undselection(tableaupy-und0)bksl-nlassert tableaupy-und0 == [1, 2, 3], "Erreur avec [3, 1, 2]"bksl-nlbksl-nltableaupy-und1 = [1, 2, 3, 4]bksl-nltripy-undselection(tableaupy-und1)bksl-nlassert tableaupy-und1 == [1, 2, 3, 4], "Erreur avec [1, 2, 3, 4]"bksl-nlbksl-nltableaupy-und2 = [-2, -5]bksl-nltripy-undselection(tableaupy-und2)bksl-nlassert tableaupy-und2 == [-5, -2], "Erreur avec des valeurs négatives"bksl-nlbksl-nltableaupy-und4 = []bksl-nltripy-undselection(tableaupy-und4)bksl-nlassert tableaupy-und4 == [], "Erreur avec un tableau vide"bksl-nlbksl-nlprint("Bravo !")bksl-nlbksl-nlbksl-nl</span><span id="corr_content_editor_b271e5a6ff04b5dadaf48d8ac47fb649f930dc95" class="py_mk_hide" data-strudel=""></span></p>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_205d0e89e0766046deee5f83b06e08dcc2e2e029" class="comment">###</span><div class="line" id="editor_205d0e89e0766046deee5f83b06e08dcc2e2e029"></div><div id="term_editor_205d0e89e0766046deee5f83b06e08dcc2e2e029"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_205d0e89e0766046deee5f83b06e08dcc2e2e029","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_205d0e89e0766046deee5f83b06e08dcc2e2e029" class="py_mk_hide">tableaupy-und0 = [3, 1, 2]bksl-nltripy-undselection(tableaupy-und0)bksl-nlassert tableaupy-und0 == [1, 2, 3], "Erreur avec [3, 1, 2]"bksl-nlbksl-nltableaupy-und1 = [1, 2, 3, 4]bksl-nltripy-undselection(tableaupy-und1)bksl-nlassert tableaupy-und1 == [1, 2, 3, 4], "Erreur avec [1, 2, 3, 4]"bksl-nlbksl-nltableaupy-und2 = [-2, -5]bksl-nltripy-undselection(tableaupy-und2)bksl-nlassert tableaupy-und2 == [-5, -2], "Erreur avec des valeurs négatives"bksl-nlbksl-nltableaupy-und4 = []bksl-nltripy-undselection(tableaupy-und4)bksl-nlassert tableaupy-und4 == [], "Erreur avec un tableau vide"bksl-nlbksl-nl</span>            <button class="tooltip" onclick='check("editor_205d0e89e0766046deee5f83b06e08dcc2e2e029","")'>            <img src="../../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_205d0e89e0766046deee5f83b06e08dcc2e2e029","scripts/selection")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_205d0e89e0766046deee5f83b06e08dcc2e2e029').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_205d0e89e0766046deee5f83b06e08dcc2e2e029" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_205d0e89e0766046deee5f83b06e08dcc2e2e029")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_205d0e89e0766046deee5f83b06e08dcc2e2e029")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_205d0e89e0766046deee5f83b06e08dcc2e2e029" class="py_mk_hide">def echange(tableau, i, j):bksl-nl    tableau[i], tableau[j] = tableau[j], tableau[i]bksl-nlbksl-nlbksl-nldef indicepy-undminimumpy-unddepuis(tableau, i):bksl-nl    ipy-undmini = ibksl-nl    for j in range(i + 1, len(tableau)):bksl-nl        if tableau[j] &lt; tableau[ipy-undmini]:bksl-nl            ipy-undmini = jbksl-nl    return ipy-undminibksl-nlbksl-nlbksl-nldef tripy-undselection(tableau):bksl-nl    ...bksl-nlbksl-nl# Testsbksl-nltableaupy-und0 = [3, 1, 2]bksl-nltripy-undselection(tableaupy-und0)bksl-nlassert tableaupy-und0 == [1, 2, 3], "Erreur avec [3, 1, 2]"bksl-nlbksl-nltableaupy-und1 = [1, 2, 3, 4]bksl-nltripy-undselection(tableaupy-und1)bksl-nlassert tableaupy-und1 == [1, 2, 3, 4], "Erreur avec [1, 2, 3, 4]"bksl-nlbksl-nltableaupy-und2 = [-2, -5]bksl-nltripy-undselection(tableaupy-und2)bksl-nlassert tableaupy-und2 == [-5, -2], "Erreur avec des valeurs négatives"bksl-nlbksl-nltableaupy-und4 = []bksl-nltripy-undselection(tableaupy-und4)bksl-nlassert tableaupy-und4 == [], "Erreur avec un tableau vide"bksl-nlbksl-nlprint("Bravo !")bksl-nlbksl-nlbksl-nl</span><span id="corr_content_editor_205d0e89e0766046deee5f83b06e08dcc2e2e029" class="py_mk_hide" data-strudel="">def tripy-undselection(tableau):bksl-nl    for i in range(len(tableau) - 1):bksl-nl        ipy-undmini = indicepy-undminimumpy-unddepuis(tableau, i)bksl-nl        echange(tableau, i, ipy-undmini)bksl-nlbksl-nlbksl-nl</span></p>
 <p><strong>A</strong></p>
 <p><strong>Z</strong></p>
-<details class="success">
-<summary>Solution</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">tri_selection</span><span class="p">(</span><span class="n">tableau</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tableau</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
-        <span class="n">i_mini</span> <span class="o">=</span> <span class="n">indice_minimum_depuis</span><span class="p">(</span><span class="n">tableau</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
-        <span class="n">echange</span><span class="p">(</span><span class="n">tableau</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">i_mini</span><span class="p">)</span>
-</code></pre></div>
-</details>
 </div>
 <div class="tabbed-block">
 <p>Le code précédent est court et lisible.</p>
 <p>Toutefois le plus souvent le tri par sélection est rédigé en une seule fonction. Terminons notre étude par cette rédaction.</p>
 <p>Compléter la fonction <code class="highlight"><span class="n">tri_selection</span></code> prenant en argument un <code class="highlight"><span class="n">tableau</span></code> et le triant <strong>en place</strong> à l'aide du tri par sélection.</p>
 <p>On n'utilisera <strong>pas</strong> les fonctions <code class="highlight"><span class="n">echange</span></code> et <code class="highlight"><span class="n">indice_minimum_depuis</span></code>.</p>
-<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_b24f48f35d2de9f2123477c4b829d0216662c197" class="comment">###</span><div class="line" id="editor_b24f48f35d2de9f2123477c4b829d0216662c197"></div><div id="term_editor_b24f48f35d2de9f2123477c4b829d0216662c197"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_b24f48f35d2de9f2123477c4b829d0216662c197","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_b24f48f35d2de9f2123477c4b829d0216662c197" class="py_mk_hide"># testsbksl-nltableaupy-und0 = [3, 1, 2]bksl-nltripy-undselection(tableaupy-und0)bksl-nlassert tableaupy-und0 == [1, 2, 3], "Erreur avec [3, 1, 2]"bksl-nlbksl-nltableaupy-und1 = [1, 2, 3, 4]bksl-nltripy-undselection(tableaupy-und1)bksl-nlassert tableaupy-und1 == [1, 2, 3, 4], "Erreur avec [1, 2, 3, 4]"bksl-nlbksl-nltableaupy-und2 = [-2, -5]bksl-nltripy-undselection(tableaupy-und2)bksl-nlassert tableaupy-und2 == [-5, -2], "Erreur avec des valeurs négatives"bksl-nlbksl-nltableaupy-und4 = []bksl-nltripy-undselection(tableaupy-und4)bksl-nlassert tableaupy-und4 == [], "Erreur avec un tableau vide"bksl-nlbksl-nl# Autres testsbksl-nltableaupy-und4 = [i for i in range(100, 0, -1)]bksl-nltripy-undselection(tableaupy-und4)bksl-nlassert tableaupy-und4 == [i for i in range(1, 101)]bksl-nlbksl-nlbksl-nlbksl-nl</span>            <button class="tooltip" onclick='check("editor_b24f48f35d2de9f2123477c4b829d0216662c197","")'>            <img src="../../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_b24f48f35d2de9f2123477c4b829d0216662c197","scripts/selection_bis")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_b24f48f35d2de9f2123477c4b829d0216662c197').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_b24f48f35d2de9f2123477c4b829d0216662c197" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_b24f48f35d2de9f2123477c4b829d0216662c197")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_b24f48f35d2de9f2123477c4b829d0216662c197")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_b24f48f35d2de9f2123477c4b829d0216662c197" class="py_mk_hide">def tripy-undselection(tableau):bksl-nl    ...bksl-nlbksl-nl# Testsbksl-nltableaupy-und0 = [3, 1, 2]bksl-nltripy-undselection(tableaupy-und0)bksl-nlassert tableaupy-und0 == [1, 2, 3], "Erreur avec [3, 1, 2]"bksl-nlbksl-nltableaupy-und1 = [1, 2, 3, 4]bksl-nltripy-undselection(tableaupy-und1)bksl-nlassert tableaupy-und1 == [1, 2, 3, 4], "Erreur avec [1, 2, 3, 4]"bksl-nlbksl-nltableaupy-und2 = [-2, -5]bksl-nltripy-undselection(tableaupy-und2)bksl-nlassert tableaupy-und2 == [-5, -2], "Erreur avec des valeurs négatives"bksl-nlbksl-nltableaupy-und4 = []bksl-nltripy-undselection(tableaupy-und4)bksl-nlassert tableaupy-und4 == [], "Erreur avec un tableau vide"bksl-nlbksl-nlprint("Bravo !")bksl-nlbksl-nlbksl-nl</span><span id="corr_content_editor_b24f48f35d2de9f2123477c4b829d0216662c197" class="py_mk_hide" data-strudel="">def tripy-undselection(tableau):bksl-nl    for i in range(len(tableau) - 1):bksl-nl        ipy-undmini = ibksl-nl        for j in range(i + 1, len(tableau)):bksl-nl            if tableau[j] &lt; tableau[ipy-undmini]:bksl-nl                ipy-undmini = jbksl-nl        tableau[i], tableau[ipy-undmini] = tableau[ipy-undmini], tableau[i]bksl-nlbksl-nlbksl-nlbksl-nlbksl-nlbksl-nl</span></p>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_b24f48f35d2de9f2123477c4b829d0216662c197" class="comment">###</span><div class="line" id="editor_b24f48f35d2de9f2123477c4b829d0216662c197"></div><div id="term_editor_b24f48f35d2de9f2123477c4b829d0216662c197"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_b24f48f35d2de9f2123477c4b829d0216662c197","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span id="test_term_editor_b24f48f35d2de9f2123477c4b829d0216662c197" class="py_mk_hide"># testsbksl-nltableaupy-und0 = [3, 1, 2]bksl-nltripy-undselection(tableaupy-und0)bksl-nlassert tableaupy-und0 == [1, 2, 3], "Erreur avec [3, 1, 2]"bksl-nlbksl-nltableaupy-und1 = [1, 2, 3, 4]bksl-nltripy-undselection(tableaupy-und1)bksl-nlassert tableaupy-und1 == [1, 2, 3, 4], "Erreur avec [1, 2, 3, 4]"bksl-nlbksl-nltableaupy-und2 = [-2, -5]bksl-nltripy-undselection(tableaupy-und2)bksl-nlassert tableaupy-und2 == [-5, -2], "Erreur avec des valeurs négatives"bksl-nlbksl-nltableaupy-und4 = []bksl-nltripy-undselection(tableaupy-und4)bksl-nlassert tableaupy-und4 == [], "Erreur avec un tableau vide"bksl-nlbksl-nl# Autres testsbksl-nltableaupy-und4 = [i for i in range(100, 0, -1)]bksl-nltripy-undselection(tableaupy-und4)bksl-nlassert tableaupy-und4 == [i for i in range(1, 101)]bksl-nlbksl-nlbksl-nlbksl-nl</span>            <button class="tooltip" onclick='check("editor_b24f48f35d2de9f2123477c4b829d0216662c197","")'>            <img src="../../../pyodide-mkdocs/icons8-check-64.png">            <span class="tooltiptext">Valider</span>            </button>            <span class="compteur">5/5</span><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_b24f48f35d2de9f2123477c4b829d0216662c197","scripts/selection_bis")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_b24f48f35d2de9f2123477c4b829d0216662c197').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_b24f48f35d2de9f2123477c4b829d0216662c197" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_b24f48f35d2de9f2123477c4b829d0216662c197")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_b24f48f35d2de9f2123477c4b829d0216662c197")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_b24f48f35d2de9f2123477c4b829d0216662c197" class="py_mk_hide">def tripy-undselection(tableau):bksl-nl    ...bksl-nlbksl-nl# Testsbksl-nltableaupy-und0 = [3, 1, 2]bksl-nltripy-undselection(tableaupy-und0)bksl-nlassert tableaupy-und0 == [1, 2, 3], "Erreur avec [3, 1, 2]"bksl-nlbksl-nltableaupy-und1 = [1, 2, 3, 4]bksl-nltripy-undselection(tableaupy-und1)bksl-nlassert tableaupy-und1 == [1, 2, 3, 4], "Erreur avec [1, 2, 3, 4]"bksl-nlbksl-nltableaupy-und2 = [-2, -5]bksl-nltripy-undselection(tableaupy-und2)bksl-nlassert tableaupy-und2 == [-5, -2], "Erreur avec des valeurs négatives"bksl-nlbksl-nltableaupy-und4 = []bksl-nltripy-undselection(tableaupy-und4)bksl-nlassert tableaupy-und4 == [], "Erreur avec un tableau vide"bksl-nlbksl-nlprint("Bravo !")bksl-nlbksl-nlbksl-nl</span><span id="corr_content_editor_b24f48f35d2de9f2123477c4b829d0216662c197" class="py_mk_hide" data-strudel="">def tripy-undselection(tableau):bksl-nl    for i in range(len(tableau) - 1):bksl-nl        ipy-undmini = ibksl-nl        for j in range(i + 1, len(tableau)):bksl-nl            if tableau[j] &lt; tableau[ipy-undmini]:bksl-nl                ipy-undmini = jbksl-nl        tableau[i], tableau[ipy-undmini] = tableau[ipy-undmini], tableau[i]bksl-nlbksl-nlbksl-nl</span></p>
 <p><strong>A</strong></p>
 <p><strong>Z</strong></p>
 </div>
 <div class="tabbed-block">
-<details class="question">
-<summary>Tester le tri par sélection</summary>
-<p>Tester ci-dessous. Que s'est-il passé ?</p>
-<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_52da97c3d0ddf505e69e01ad5976ec5f40cfd9e9" class="comment">###</span><div class="line" id="editor_52da97c3d0ddf505e69e01ad5976ec5f40cfd9e9"></div><div id="term_editor_52da97c3d0ddf505e69e01ad5976ec5f40cfd9e9"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_52da97c3d0ddf505e69e01ad5976ec5f40cfd9e9","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_52da97c3d0ddf505e69e01ad5976ec5f40cfd9e9","scripts/tri_selection")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_52da97c3d0ddf505e69e01ad5976ec5f40cfd9e9').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_52da97c3d0ddf505e69e01ad5976ec5f40cfd9e9" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_52da97c3d0ddf505e69e01ad5976ec5f40cfd9e9")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_52da97c3d0ddf505e69e01ad5976ec5f40cfd9e9")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_52da97c3d0ddf505e69e01ad5976ec5f40cfd9e9" class="py_mk_hide">def tripy-undselection(tableau):bksl-nl    for i in range(len(tableau) - 1):bksl-nl        ipy-undmini = ibksl-nl        for j in range(i + 1, len(tableau)):bksl-nl            if tableau[j] &lt; tableau[ipy-undmini]:bksl-nl                ipy-undmini = jbksl-nl        tableau[i], tableau[ipy-undmini] = tableau[ipy-undmini], tableau[i]bksl-nlbksl-nlvaleurs = [5, 1, 2]bksl-nlprint(tripy-undselection(valeurs))bksl-nlbksl-nl</span><span id="corr_content_editor_52da97c3d0ddf505e69e01ad5976ec5f40cfd9e9" class="py_mk_hide" data-strudel=""></span></p>
-<p><strong>A</strong></p>
-<p><strong>Z</strong></p>
+<p>Tester ci-dessous. Que se passe-t-il ?</p>
 <details class="success">
-<summary>Solution</summary>
+<summary>Réponse</summary>
 <p>La fonction n'a pas de <code>return</code>, c'est une procédure. Elle renvoie donc <code>None</code></p>
 </details>
-</details>
-<details class="question">
-<summary>Que fait la fonction de tri par sélection ?</summary>
-<p>Tester ci-dessous. Que s'est-il passé ?</p>
-<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_8445770d57b9e309a6dc024d7da7e3443845da88" class="comment">###</span><div class="line" id="editor_8445770d57b9e309a6dc024d7da7e3443845da88"></div><div id="term_editor_8445770d57b9e309a6dc024d7da7e3443845da88"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_8445770d57b9e309a6dc024d7da7e3443845da88","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_8445770d57b9e309a6dc024d7da7e3443845da88","scripts/tri_sel_effet")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_8445770d57b9e309a6dc024d7da7e3443845da88').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_8445770d57b9e309a6dc024d7da7e3443845da88" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_8445770d57b9e309a6dc024d7da7e3443845da88")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_8445770d57b9e309a6dc024d7da7e3443845da88")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_8445770d57b9e309a6dc024d7da7e3443845da88" class="py_mk_hide">def tripy-undselection(tableau):bksl-nl    for i in range(len(tableau) - 1):bksl-nl        ipy-undmini = ibksl-nl        for j in range(i + 1, len(tableau)):bksl-nl            if tableau[j] &lt; tableau[ipy-undmini]:bksl-nl                ipy-undmini = jbksl-nl        tableau[i], tableau[ipy-undmini] = tableau[ipy-undmini], tableau[i]bksl-nlbksl-nlvaleurs = [5, 1, 2]bksl-nlprint("valeurs = ", valeurs)bksl-nltripy-undselection(valeurs) # Appel de la fonction avec l'argument [5, 1, 2]bksl-nlprint("Après appel de la fonction de tri : valeurs = ", valeurs)bksl-nlbksl-nl</span><span id="corr_content_editor_8445770d57b9e309a6dc024d7da7e3443845da88" class="py_mk_hide" data-strudel=""></span></p>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_52da97c3d0ddf505e69e01ad5976ec5f40cfd9e9" class="comment">###</span><div class="line" id="editor_52da97c3d0ddf505e69e01ad5976ec5f40cfd9e9"></div><div id="term_editor_52da97c3d0ddf505e69e01ad5976ec5f40cfd9e9"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_52da97c3d0ddf505e69e01ad5976ec5f40cfd9e9","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_52da97c3d0ddf505e69e01ad5976ec5f40cfd9e9","scripts/tri_selection")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_52da97c3d0ddf505e69e01ad5976ec5f40cfd9e9').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_52da97c3d0ddf505e69e01ad5976ec5f40cfd9e9" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_52da97c3d0ddf505e69e01ad5976ec5f40cfd9e9")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_52da97c3d0ddf505e69e01ad5976ec5f40cfd9e9")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_52da97c3d0ddf505e69e01ad5976ec5f40cfd9e9" class="py_mk_hide">def tripy-undselection(tableau):bksl-nl    for i in range(len(tableau) - 1):bksl-nl        ipy-undmini = ibksl-nl        for j in range(i + 1, len(tableau)):bksl-nl            if tableau[j] &lt; tableau[ipy-undmini]:bksl-nl                ipy-undmini = jbksl-nl        tableau[i], tableau[ipy-undmini] = tableau[ipy-undmini], tableau[i]bksl-nlbksl-nlvaleurs = [5, 1, 2]bksl-nlprint(tripy-undselection(valeurs))bksl-nlbksl-nl</span><span id="corr_content_editor_52da97c3d0ddf505e69e01ad5976ec5f40cfd9e9" class="py_mk_hide" data-strudel="">bksl-nl</span></p>
 <p><strong>A</strong></p>
 <p><strong>Z</strong></p>
+</div>
+<div class="tabbed-block">
+<p>Tester ci-dessous. Que se passe-t-il ?</p>
 <details class="success">
-<summary>Solution</summary>
+<summary>Réponse</summary>
 <p>La liste de départ a été modifiée ...</p>
 <p>C'est ce qu'on appelle un <strong>effet de bord</strong>. La fonction a modifié <strong>"en place"</strong> la liste.</p>
 </details>
-</details>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_8445770d57b9e309a6dc024d7da7e3443845da88" class="comment">###</span><div class="line" id="editor_8445770d57b9e309a6dc024d7da7e3443845da88"></div><div id="term_editor_8445770d57b9e309a6dc024d7da7e3443845da88"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_8445770d57b9e309a6dc024d7da7e3443845da88","")'>            <img src="../../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_8445770d57b9e309a6dc024d7da7e3443845da88","scripts/tri_sel_effet")'>            <img src="../../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_8445770d57b9e309a6dc024d7da7e3443845da88').click()" >            <img src="../../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_8445770d57b9e309a6dc024d7da7e3443845da88" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_8445770d57b9e309a6dc024d7da7e3443845da88")'>            <img src="../../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_8445770d57b9e309a6dc024d7da7e3443845da88")'>            <img src="../../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_8445770d57b9e309a6dc024d7da7e3443845da88" class="py_mk_hide">def tripy-undselection(tableau):bksl-nl    for i in range(len(tableau) - 1):bksl-nl        ipy-undmini = ibksl-nl        for j in range(i + 1, len(tableau)):bksl-nl            if tableau[j] &lt; tableau[ipy-undmini]:bksl-nl                ipy-undmini = jbksl-nl        tableau[i], tableau[ipy-undmini] = tableau[ipy-undmini], tableau[i]bksl-nlbksl-nlvaleurs = [5, 1, 2]bksl-nlprint("valeurs = ", valeurs)bksl-nltripy-undselection(valeurs) # Appel de la fonction avec l'argument [5, 1, 2]bksl-nlprint("Après appel de la fonction de tri : valeurs = ", valeurs)bksl-nlbksl-nl</span><span id="corr_content_editor_8445770d57b9e309a6dc024d7da7e3443845da88" class="py_mk_hide" data-strudel="">def tripy-undselection(tableau):bksl-nl    for i in range(len(tableau) - 1):bksl-nl        ipy-undmini = ibksl-nl        for j in range(i + 1, len(tableau)):bksl-nl            if tableau[j] &lt; tableau[ipy-undmini]:bksl-nl                ipy-undmini = jbksl-nl        tableau[i], tableau[ipy-undmini] = tableau[ipy-undmini], tableau[i]bksl-nlbksl-nlvaleurs = [5, 1, 2]bksl-nlprint("valeurs = ", valeurs)bksl-nltripy-undselection(valeurs) # Appel de la fonction avec l'argument [5, 1, 2]bksl-nlprint("Après appel de la fonction de tri : valeurs = ", valeurs)bksl-nlbksl-nl</span></p>
+<p><strong>A</strong></p>
+<p><strong>Z</strong></p>
 </div>
 </div>
 </div>
@@ -4562,10 +4529,6 @@ On dit que la complexité de l'algorithme de tri par sélection est en : <span c
 On a donc <span class="arithmatex">\(2 \times C(n)=(n-1)n\)</span> , et donc <span class="arithmatex">\(C(n)=\dfrac{(n-1)n}{2}\)</span> </p>
 </details>
 </details>
-<div class="admonition abstract">
-<p class="admonition-title">💚 A retenir</p>
-<p>La complexité du tri par sélection est quadratique : <strong>Le coût est quadratique</strong>.</p>
-</div>
 <details class="question">
 <summary>Activité 4 - Mesures du temps de calcul</summary>
 <details class="question">
@@ -4633,19 +4596,19 @@ On a donc <span class="arithmatex">\(2 \times C(n)=(n-1)n\)</span> , et donc <sp
 </details>
 </details>
 <details class="question">
-<summary>Activité 5 - Visulalisation du temps de calcul du tri par insertion</summary>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>&lt;iframe src=&quot;/xtra/jupyterlite/lab/index.html?fromURL=/algo/notebooks/temps_tri_selection.ipynb&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; style=&quot;width: 100%; height: 700px;&quot;&gt;&lt;/iframe&gt;
-</code></pre></div>
+<summary>Activité 5 - Visualisation du temps de calcul du tri par sélection</summary>
+<p><iframe src="/xtra/jupyterlite/lab/index.html?fromURL=/notebooks/temps_tri_selection.ipynb" frameborder="0" scrolling="auto" style="width: 100%; height: 700px;"></iframe></p>
 </details>
-<details class="abstract">
-<summary>Correction de l'algorithme de tri par sélection</summary>
-<details class="info">
-<summary>Invariant de boucle</summary>
+<details class="question">
+<summary>Activité 6 - Correction de l'algorithme de tri par sélection</summary>
+<p>Démontrer, par récurrence, la correction de l'algorithme de tri par sélection.</p>
+<div class="admonition info">
+<p class="admonition-title">Rappel sur les invariant de boucle</p>
 <p>On appelle invariant d’une boucle une propriété qui, si elle est vraie avant l’exécution d’une itération, le demeure après l’exécution de l’itération.  </p>
 <p>Un invariant de boucle bien choisi permet de prouver qu’une boucle produit le résultat attendu (correction). </p>
-</details>
-<details class="info">
-<summary>Correction de l'algorithme</summary>
+</div>
+<details class="success">
+<summary>Réponse</summary>
 <p><strong>Après la ième itération (boucle en i de l’algorithme fourni) les i premiers éléments sont triés.</strong></p>
 <p><strong>a. Vérifions sur l'exemple du tri de  :  <code>[9, 5, 8, -2, 6, 4]</code></strong></p>
 <table>
@@ -4698,13 +4661,17 @@ On a donc <span class="arithmatex">\(2 \times C(n)=(n-1)n\)</span> , et donc <sp
 <p>On prouve ainsi de proche en proche que pour n’importe quel entier i, après la ième itération, les i premiers éléments sont triés. Cela prouve la correction de l’algorithme de tri par sélection, car après n itérations une liste de longueur n est donc triée.</p>
 </details>
 </details>
-<details class="info">
-<summary>Terminaison de l'algorithme de tri par sélection</summary>
-<p>L’algorithme de tri par sélection se termine car il a un nombre limité de tours de boucles, car il ne comporte que des boucles Pour.</p>
-</details>
-<details class="abstract">
-<summary>A mémoriser : l'algorithme du tri par sélection</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">tri_selection</span><span class="p">(</span><span class="n">tableau</span><span class="p">):</span>
+<details class="mem">
+<summary>A retenir</summary>
+<ul>
+<li>
+<p>La <strong>complexité</strong> du tri par sélection est <strong>quadratique</strong> : <span class="arithmatex">\(O(n^2)\)</span></p>
+</li>
+<li>
+<p>L’algorithme de tri par sélection <strong>se termine</strong> car il a un nombre limité de tours de boucles, du fait qu'il ne comporte que des boucles Pour qui sont des <strong>boucles bornées</strong>.</p>
+</li>
+</ul>
+<div class="highlight"><span class="filename">Algorithme du tri par sélection</span><pre><span></span><code><span class="k">def</span> <span class="nf">tri_selection</span><span class="p">(</span><span class="n">tableau</span><span class="p">):</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tableau</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
     <span class="n">i_mini</span> <span class="o">=</span> <span class="n">i</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tableau</span><span class="p">)):</span>
@@ -4712,10 +4679,6 @@ On a donc <span class="arithmatex">\(2 \times C(n)=(n-1)n\)</span> , et donc <sp
             <span class="n">i_mini</span> <span class="o">=</span> <span class="n">j</span>
     <span class="n">tableau</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">tableau</span><span class="p">[</span><span class="n">i_mini</span><span class="p">]</span> <span class="o">=</span> <span class="n">tableau</span><span class="p">[</span><span class="n">i_mini</span><span class="p">],</span> <span class="n">tableau</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
 </code></pre></div>
-</details>
-<details class="abstract">
-<summary>A mémoriser : la complexité du tri par sélection</summary>
-<p>Le tri par sélection a une complexité <strong>quadratique</strong>, c'est à dire de l'ordre du carré de la taille de la liste à trier.</p>
 </details>
 
 
@@ -4746,7 +4709,7 @@ On a donc <span class="arithmatex">\(2 \times C(n)=(n-1)n\)</span> , et donc <sp
       <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
         
           
-          <a href="../insertion/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: 1️⃣ Tri par insertion">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Précédent: 1️⃣ Introduction au tri">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -4756,20 +4719,20 @@ On a donc <span class="arithmatex">\(2 \times C(n)=(n-1)n\)</span> , et donc <sp
                 Précédent
               </span>
               <div class="md-ellipsis">
-                1️⃣ Tri par insertion
+                1️⃣ Introduction au tri
               </div>
             </div>
           </a>
         
         
           
-          <a href="../exercices/" class="md-footer__link md-footer__link--next" aria-label="Suivant: 1️⃣ Exercices">
+          <a href="../insertion/" class="md-footer__link md-footer__link--next" aria-label="Suivant: 1️⃣ Tri par insertion">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Suivant
               </span>
               <div class="md-ellipsis">
-                1️⃣ Exercices
+                1️⃣ Tri par insertion
               </div>
             </div>
             <div class="md-footer__button md-icon">

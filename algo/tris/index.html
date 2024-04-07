@@ -16,7 +16,7 @@
         <link rel="prev" href="../sequentiel/">
       
       
-        <link rel="next" href="insertion/">
+        <link rel="next" href="selection/">
       
       
       <link rel="icon" href="../../assets/images/logo-lxp-noir.svg">
@@ -2675,11 +2675,11 @@
   
   
     <li class="md-nav__item">
-      <a href="insertion/" class="md-nav__link">
+      <a href="selection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    1️⃣ Tri par insertion
+    1️⃣ Tri par sélection
   </span>
   
 
@@ -2695,11 +2695,11 @@
   
   
     <li class="md-nav__item">
-      <a href="selection/" class="md-nav__link">
+      <a href="insertion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    1️⃣ Tri par sélection
+    1️⃣ Tri par insertion
   </span>
   
 
@@ -4232,8 +4232,8 @@
 </tbody>
 </table>
 </details>
-<details class="abstract">
-<summary>Le tri en informatique</summary>
+<details class="info">
+<summary>Intro : Le tri en informatique</summary>
 <p>Dans la vie courante, les deux verbes trier et classer ne sont pas synonymes.
 - <strong>Trier</strong> ou effectuer un tri c’est répartir les éléments en paquets correspondant à un certain critère : par exemple séparer les déchets selon leur nature, les personnes d’une assemblée selon leur sexe ou selon leur langue maternelle.</p>
 <p><img :=":" alt="tri1" class="center" src="images/tri.jpg" width="80%;" /></p>
@@ -4246,19 +4246,23 @@
 <p>En informatique le <strong>tri</strong>  est à prendre avec le sens de <strong>classement</strong>.</p>
 </div>
 </details>
-<details class="question">
-<summary>Activité 1 - Algorithmes de tri</summary>
-<p>Le lien suivant va nous aider à imaginer des algorithmes de tris en manipulant des cartes :</p>
-<p><a class="md-button" href="https://deck.of.cards/" rel="noopener" target="_blank">Simulateur de jeu de cartes</a></p>
-<p>💡 Vous devez imaginer et expliquer une méthode qui permette de trier des cartes. Il y a beaucoup de méthodes possibles ! A vous d'en trouver au moins une !</p>
+<details class="video">
+<summary>Vidéo : Les algorithmes de tri</summary>
+<p><iframe title="Les algorithmes de tri" width="560" height="315" src="https://peertube.lyceeconnecte.fr/videos/embed/cffa5c51-e0fa-4ef7-9437-743a683fc937" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups"></iframe></p>
+</details>
+<details class="example">
+<summary>Animation : Différentes méthodes de tri</summary>
+<p>Changer le <em>type de tri</em> et cliquer sur <em>commencer</em> pour visualiser les étapes de l'algorithme.</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> Seuls les tris par <strong>insertion</strong> et <strong>sélection</strong> sont au programme en NSI.</p>
+<p><iframe loading="lazy" src="https://animations.interstices.info/methodes-tri/index.html" width="740" height="410" frameborder="0" scrolling="no" bis_size="{&quot;x&quot;:995,&quot;y&quot;:1284,&quot;w&quot;:740,&quot;h&quot;:410,&quot;abs_x&quot;:995,&quot;abs_y&quot;:1284}"></iframe></p>
 </details>
 <details class="python">
-<summary>Le tri natif en Python avec <code>sorted</code></summary>
+<summary>Astuce Python : tri natif avec <code>sorted()</code> et <code>sort()</code></summary>
 <p>👉 En Python, vous pourrez utiliser la fonction <code>sorted</code></p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><code>help(sorted)</code></label><label for="__tabbed_1_2"><code>sorted(ma_liste)</code></label><label for="__tabbed_1_3"><code>sorted(ma_liste, reverse = True)</code></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_bee6303e3fdd40e54643fa62379ec9944887f6ea" class="comment">###</span><div class="line" id="editor_bee6303e3fdd40e54643fa62379ec9944887f6ea"></div><div id="term_editor_bee6303e3fdd40e54643fa62379ec9944887f6ea"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_bee6303e3fdd40e54643fa62379ec9944887f6ea","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_bee6303e3fdd40e54643fa62379ec9944887f6ea","scripts/help_sorted")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_bee6303e3fdd40e54643fa62379ec9944887f6ea').click()" >            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_bee6303e3fdd40e54643fa62379ec9944887f6ea" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_bee6303e3fdd40e54643fa62379ec9944887f6ea")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_bee6303e3fdd40e54643fa62379ec9944887f6ea")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_bee6303e3fdd40e54643fa62379ec9944887f6ea" class="py_mk_hide">help(sorted)bksl-nlbksl-nlbksl-nl</span><span id="corr_content_editor_bee6303e3fdd40e54643fa62379ec9944887f6ea" class="py_mk_hide" data-strudel=""></span></p>
+<p><div class="py_mk_ide"  data-max="5"  data-exclude="eval,exec" ><div class="wrapper" ><span id="comment_editor_bee6303e3fdd40e54643fa62379ec9944887f6ea" class="comment">###</span><div class="line" id="editor_bee6303e3fdd40e54643fa62379ec9944887f6ea"></div><div id="term_editor_bee6303e3fdd40e54643fa62379ec9944887f6ea"  class="term_editor" ></div></div><button class="tooltip" onclick='play("editor_bee6303e3fdd40e54643fa62379ec9944887f6ea","")'>            <img src="../../pyodide-mkdocs/icons8-play-64.png">            <span class="tooltiptext">Lancer</span>            </button><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='download("editor_bee6303e3fdd40e54643fa62379ec9944887f6ea","scripts/help_sorted")'>            <img src="../../pyodide-mkdocs/icons8-download-64.png">            <span class="tooltiptext">Télécharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick="document.getElementById('input_editor_bee6303e3fdd40e54643fa62379ec9944887f6ea').click()" >            <img src="../../pyodide-mkdocs/icons8-upload-64.png">            <span class="tooltiptext">Téléverser</span>            </button>                <input type="file" id="input_editor_bee6303e3fdd40e54643fa62379ec9944887f6ea" name="file" enctype="multipart/form-data" class="py_mk_hide"/><span style="display: inline-block; width:1em"></span><button class="tooltip" onclick='restart("editor_bee6303e3fdd40e54643fa62379ec9944887f6ea")'>            <img src="../../pyodide-mkdocs/icons8-restart-64.png">            <span class="tooltiptext">Recharger</span>            </button><span style="display: inline-block; width:0.3em"></span><button class="tooltip" onclick='save("editor_bee6303e3fdd40e54643fa62379ec9944887f6ea")'>            <img src="../../pyodide-mkdocs/icons8-save-64.png">            <span class="tooltiptext">Sauvegarder</span>            </button><span style="display: inline-block; width:1em"></span></div><span id="content_editor_bee6303e3fdd40e54643fa62379ec9944887f6ea" class="py_mk_hide">help(sorted)bksl-nlbksl-nlbksl-nl</span><span id="corr_content_editor_bee6303e3fdd40e54643fa62379ec9944887f6ea" class="py_mk_hide" data-strudel="">help(sorted)bksl-nlbksl-nlbksl-nl</span></p>
 <p><strong>A</strong></p>
 <p><strong>Z</strong></p>
 </div>
@@ -4277,8 +4281,7 @@
 </details>
 <details class="abstract">
 <summary>Compléments</summary>
-<p><iframe loading="lazy" src="https://animations.interstices.info/methodes-tri/index.html" width="740" height="410" frameborder="0" scrolling="no" bis_size="{&quot;x&quot;:995,&quot;y&quot;:1284,&quot;w&quot;:740,&quot;h&quot;:410,&quot;abs_x&quot;:995,&quot;abs_y&quot;:1284}"></iframe></p>
-<p>😊 Pour approfondir : <a class="md-button" href="https://interstices.info/les-algorithmes-de-tri/" rel="noopener" target="_blank">Interstices</a></p>
+<p>Pour approfondir : <a class="md-button" href="https://interstices.info/les-algorithmes-de-tri/" rel="noopener" target="_blank">Interstices</a></p>
 </details>
 
 
@@ -4326,13 +4329,13 @@
         
         
           
-          <a href="insertion/" class="md-footer__link md-footer__link--next" aria-label="Suivant: 1️⃣ Tri par insertion">
+          <a href="selection/" class="md-footer__link md-footer__link--next" aria-label="Suivant: 1️⃣ Tri par sélection">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Suivant
               </span>
               <div class="md-ellipsis">
-                1️⃣ Tri par insertion
+                1️⃣ Tri par sélection
               </div>
             </div>
             <div class="md-footer__button md-icon">

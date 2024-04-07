@@ -13,7 +13,7 @@ def indice_minimum_depuis(tableau, i):
 def tri_selection(tableau):
     ...
 
-
+# Tests
 tableau_0 = [3, 1, 2]
 tri_selection(tableau_0)
 assert tableau_0 == [1, 2, 3], "Erreur avec [3, 1, 2]"

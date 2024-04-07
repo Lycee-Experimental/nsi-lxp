@@ -6,6 +6,3 @@ def tri_selection(tableau):
                 i_mini = j
         tableau[i], tableau[i_mini] = tableau[i_mini], tableau[i]
 
-
-
-
