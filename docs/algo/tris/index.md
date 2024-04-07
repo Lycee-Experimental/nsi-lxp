@@ -36,17 +36,22 @@
 
 
 ??? python "Astuce Python : tri natif avec `sorted()` et `sort()`"
-    👉 En Python, vous pourrez utiliser la fonction `sorted`
-    === "`help(sorted)`"
-        {{ IDE('scripts/help_sorted') }}
 
-    === "`sorted(ma_liste)`"
-        {{ IDE('scripts/tri_hello') }}
+    === "Nouvelle liste triée avec `sorted()`"
+        En Python, nous pouvons utiliser la fonction built-in `sorted()` pour créer une **nouvelle liste** triée.
+        === "`help(sorted)`"
+            {{ IDE('scripts/help_sorted') }}
 
-    === "`sorted(ma_liste, reverse = True)`"
-        {{ IDE('scripts/reverse') }}
+        === "`sorted(ma_liste)`"
+            {{ IDE('scripts/tri_hello') }}
 
+        === "`sorted(ma_liste, reverse = True)`"
+            {{ IDE('scripts/reverse') }}
 
+    === "Tri "en place" avec la méthode `.sort()`" 
+        Il est également possible d'utiliser la méthode `.sort()` des objets de type `list` pour les trier **en place**.
+
+        {{ IDE('scripts/sort_liste') }}
 
 ??? abstract "Compléments" 
     Pour approfondir : [Interstices](https://interstices.info/les-algorithmes-de-tri/){ .md-button target="_blank" rel="noopener" }
