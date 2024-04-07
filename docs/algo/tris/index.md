@@ -8,7 +8,7 @@
 
 
 
-??? abstract "Le tri en informatique"
+??? info "Intro : Le tri en informatique"
     Dans la vie courante, les deux verbes trier et classer ne sont pas synonymes.
     - **Trier** ou effectuer un tri c’est répartir les éléments en paquets correspondant à un certain critère : par exemple séparer les déchets selon leur nature, les personnes d’une assemblée selon leur sexe ou selon leur langue maternelle.
 
@@ -21,18 +21,21 @@
     !!! info "Définition à retenir"
         En informatique le **tri**  est à prendre avec le sens de **classement**.
 
-{{exercice(prem=1, titre="Algorithmes de tri")}}
-    Le lien suivant va nous aider à imaginer des algorithmes de tris en manipulant des cartes :
 
-    [Simulateur de jeu de cartes](https://deck.of.cards/){ .md-button target="_blank" rel="noopener" }
-
-    💡 Vous devez imaginer et expliquer une méthode qui permette de trier des cartes. Il y a beaucoup de méthodes possibles ! A vous d'en trouver au moins une !
+??? video "Vidéo : Les algorithmes de tri"
+    <iframe title="Les algorithmes de tri" width="560" height="315" src="https://peertube.lyceeconnecte.fr/videos/embed/cffa5c51-e0fa-4ef7-9437-743a683fc937" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups"></iframe>
 
 
+??? example "Animation : Différentes méthodes de tri"
+
+    Changer le *type de tri* et cliquer sur *commencer* pour visualiser les étapes de l'algorithme.
+
+    :warning: Seuls les tris par **insertion** et **sélection** sont au programme en NSI.
+
+    <iframe loading="lazy" src="https://animations.interstices.info/methodes-tri/index.html" width="740" height="410" frameborder="0" scrolling="no" bis_size="{&quot;x&quot;:995,&quot;y&quot;:1284,&quot;w&quot;:740,&quot;h&quot;:410,&quot;abs_x&quot;:995,&quot;abs_y&quot;:1284}"></iframe>
 
 
-
-??? python "Le tri natif en Python avec `sorted`"
+??? python "Astuce Python : tri natif avec `sorted()` et `sort()`"
     👉 En Python, vous pourrez utiliser la fonction `sorted`
     === "`help(sorted)`"
         {{ IDE('scripts/help_sorted') }}
@@ -45,12 +48,7 @@
 
 
 
-
-??? abstract "Compléments"
-    <iframe loading="lazy" src="https://animations.interstices.info/methodes-tri/index.html" width="740" height="410" frameborder="0" scrolling="no" bis_size="{&quot;x&quot;:995,&quot;y&quot;:1284,&quot;w&quot;:740,&quot;h&quot;:410,&quot;abs_x&quot;:995,&quot;abs_y&quot;:1284}"></iframe>
-
-    😊 Pour approfondir : [Interstices](https://interstices.info/les-algorithmes-de-tri/){ .md-button target="_blank" rel="noopener" }
-
-
+??? abstract "Compléments" 
+    Pour approfondir : [Interstices](https://interstices.info/les-algorithmes-de-tri/){ .md-button target="_blank" rel="noopener" }
 
 

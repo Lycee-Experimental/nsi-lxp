@@ -328,7 +328,7 @@
 
             </center>
 
-    ??? example "Exemple"
+    ??? example "Exemples"
         Soit un algorithme qui demande en entrée le nombre $n$ de jours restant avant le bac, et qui prépare un élève au bac.
 
         ??? note "Complexité Constante"

@@ -1,0 +1,1 @@
+Dans le cas où le minimum apparaît plusieurs fois, on aurait pu aussi retenir la dernière d'entre elles. Le fonctionnement général de l'algorithme aurait été similaire (mais il n'aurait plus été [*stable*](https://fr.wikipedia.org/wiki/Algorithme_de_tri#Tri_stable))

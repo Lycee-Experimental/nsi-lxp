@@ -1,21 +1,27 @@
 # Tri par insertion
 
-??? abstract "Insérer la clef"
+!!! abstract "Principe du tri par insertion"
     <center>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/bRPHvWgc6YM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </center>
-    <font color="blue">Pour un tableau `tab` de taille `n`</font>  
-    <pre><code style="background-color:black;color:white;width:100%;font-size: large;"><b>
-    pour <font color="red">i</font> allant de 1 à n-1
-        <font color="green">clef</font> ← tab[<font color="red">i</font>]
-        insérer la clef au bon endroit dans tab 
-    </b></code></pre>
 
-??? info "Le tri par insertion en bref"
+    **En résumé :**
 
     L'opération, pour chaque position <b>`i`</b>, consiste à prendre l'éléments d'indice `i` (la clef) et à l'insérer à la bonne place dans le tableau des éléments d'indices `0` à`i - 1`. Ce processus assure que les `i` premiers éléments seront triés.  
 
     On pourra donc recommencer avec l'élément suivant (la clef suivante à l'indice `i + 1`).
+
+    **Algorithme :** 
+
+    Pour un tableau `tab` de taille `n`
+    
+    <pre><code>pour <font color="red">i</font> allant de 1 à n-1
+        <font color="green">clef</font> ← tab[<font color="red">i</font>]
+        insérer la clef au bon endroit dans tab 
+    </b></code></pre>
+
+
+
 
 
 
@@ -63,11 +69,6 @@
         ![Étape 4](images/4_fleche.png){ width=50% .center}
 
     ---
-
-    Il est important de s'attarder sur deux points :
-
-    * à quels éléments est-il **indispensable** d'appliquer l'algorithme ?
-    * sous quelle condition peut-on décaler des éléments ?
 
     ???+ question "À quels éléments est-il **indispensable** d'appliquer l'algorithme ?"
 
@@ -146,6 +147,10 @@
                 );
             </script>
         </section>
+        
+
+    === "En python"
+
         Avant de transcrire en Python l'algorithme, gardons à l'esprit que :
 
         * il n'est pas indispensable d'aborder **tous** les éléments du tableau,
@@ -153,7 +158,6 @@
         * la condition pour savoir s'il est possible de décaler des éléments est **double**,
         * lors de chaque décalage, on **duplique** un élément.
 
-    === "En python"
         Compléter la fonction `#!py tri_insertion` prenant en argument un `#!py tableau` et le triant **en place** à l'aide du tri par insertion.
 
         {{ IDE('scripts/insertion') }}
@@ -259,36 +263,30 @@
             - :x: Lors de la dernière itération, la dernière valeur remonte en première position. Il faut effectuer $19$ décalages
 
 
-    ???+ question "Quel est le "pire des cas?""
+    ???+ question "Complexité dans le "pire des cas?""
 
         ??? success "Solution"
 
             Le **pire des cas** est atteint lorsque le tableau est trié dans l'ordre décroissant. Dans ce cas, pour un tableau de $N$ valeurs :
 
-    **Dans le pire des cas** : 
+        **Dans le pire des cas** : 
 
-    * la boucle principale effectue $N-1$ itérations,
-    * la première boucle secondaire effectue $1$ décalage,
-    * la deuxième effectue $2$ décalages,
-    * la troisième $3$ décalages,
-    * ...
-    * la dernière boucle $N - 1$ décalages.
+        * la boucle principale effectue $N-1$ itérations,
+        * la première boucle secondaire effectue $1$ décalage,
+        * la deuxième effectue $2$ décalages,
+        * la troisième $3$ décalages,
+        * ...
+        * la dernière boucle $N - 1$ décalages.
 
-    On effectue donc au total $1 + 2 + 3 + \dots+(N-1)$ décalages. On retrouve la somme étudiée dans [cette page](../2_selection/#iii-complexite-du-tri-par-selection). Le coût de cet algorithme est donc **quadratique**.
+        On effectue donc au total $1 + 2 + 3 + \dots+(N-1)$ décalages. On retrouve la somme étudiée dans [cette page](../2_selection/#iii-complexite-du-tri-par-selection). Le coût de cet algorithme est donc **quadratique**.
 
-    !!! info "Dans le *meilleur* des cas ?"
+    ???+ question "Complexité dans le "meilleur des cas?""
+        ??? success "Solution"
 
-        Dans le cas où le tableau est initialement trié dans l'ordre croissant, l'algorithme n'effectuera qu'une seule comparaison et aucun échange à chaque itération de la boucle principale.
+            Dans le cas où le tableau est initialement trié dans l'ordre croissant, l'algorithme n'effectuera qu'une seule comparaison et aucun échange à chaque itération de la boucle principale.
+            
+            Le coût sera alors **linéaire**.
         
-        Le coût sera alors **linéaire**.
-        
-
-    !!! abstract "💚 A retenir"
-
-        La complexité du tri par insertion est quadratique : **Le coût est quadratique**.  
-        On se place en effet dans le pire des cas : celui où le tableau est trié dans l'ordre décroissant.
-
-
 {{exercice(titre="Mesures du temps de calcul")}}
 
     ??? note "On se place dans le pire des cas"
@@ -369,44 +367,41 @@
             Cela correspond bien à une complexité **quadratique**
 
     ??? info "Visulalisation du temps de calcul"
-        {{jupyter('/algo/notebooks/temps_tri_insertion.ipynb')}}
+        {{jupyter('/notebooks/temps_tri_insertion.ipynb')}}
 
+
+{{exercice(titre="Correction de l'algorithme de tri par insertion")}}
+
+    Prouver la correction de l'algorithme à l'aide d'un invariant de boucle.
+
+    ??? success "Réponse"
+        *Après la ième itération de la boucle for (boucle en i de l’algorithme fourni) les i premiers éléments sont triés.*
+
+        Cette propriété est un invariant de boucle pour le tri par insertion.  
+        Cela se comprend aisément car dans chaque tour de boucle nous avions utilisé la fonction `insere` dont le rôle est de ranger les i premiers éléments de la liste par ordre croissant.  
     
-??? "Correction de l'algorithme de tri par insertion et invariant de boucle"
+        Cet invariant de boucle prouve la correction du tri par insertion.
 
-    **Après la ième itération de la boucle for (boucle en i de l’algorithme fourni) les i premiers éléments sont triés.**  
-    Cette propriété est un invariant de boucle pour le tri par insertion.  
-    Cela se comprend aisément car dans chaque tour de boucle nous avions utilisé la fonction `insere` dont le rôle est de ranger les i premiers éléments de la liste par ordre croissant.  
-  
-    😀 Cet invariant de boucle prouve la correction du tri par insertion.
+{{exercice(titre="Terminaison de l'algorithme de tri par insertion")}}
+    Justifier la terminaison à l'aide d'un variant de boucle.
 
-??? info "Terminaison de l'algorithme de tri par insertion"
+    ??? success "Réponse"
+        La procédure de tri par insertion contient une boucle `while` :warning: : est-on sûr que cette boucle va se terminer ?
 
-	😒 La procédure de tri par insertion contient une boucle while.  
+        Cette boucle s'arrête quand l'une des 2 conditions est fausse, donc quand :
 
-    A chaque fois qu'on écrit une boucle while, il faut s'interroger : est-on sûr que cette boucle va se terminer ?
+        * `j <= 0`
+        * ou `tableau[j - 1] <= valeur_a_inserer`
 
-    Rien de pire qu'un programme qui ne se termine jamais...
-
-    Cette boucle s'arrête quand l'une des 2 conditions est fausse, donc quand :
-
-    * `j <= 0`
-    * ou `tableau[j - 1] <= valeur_a_inserer`
-
-    ??? info "Le variant de boucle"
-
-        👀 regardons ce qu'il se passe en détail :  
         Avant la boucle, `j` vaut `i` et `0 <= i <n`. 
 
-        😀 Notons que si `i = 0` on n'entre pas dans la boucle, elle se termine d'emblée sans commencer. La terminaison est alors évidente.
+        Notons que si `i = 0` on n'entre pas dans la boucle, elle se termine d'emblée sans commencer. La terminaison est alors évidente.
 
-        🏃 Sinon, on démarre avec `j` > 0, on entre donc dans la boucle. 
+        Sinon, on démarre avec `j` > 0, on entre donc dans la boucle. 
 
         Dans le corps de la boucle, `j` est décrémenté de 1.
 
         On a donc un entier positif qui décroît **strictement** à chaque itération.
-
-        Le mot strictement est ici crucial, car si ce n'était pas strictement, il se pourrait qu'on itère indéfiniment sans que `j` diminue, mais dans notre exemple, `j` diminue forcément.
 
         Donc `j` finira par devenir négatif si on n'a pas été stoppé avant par l'autre condition.
 
@@ -416,9 +411,11 @@
     
         Ici, ce **variant de boucle** est une quantité qui décroît strictement et finit donc inévitablement par atteindre une valeur "plancher" qui assure la terminaison.
 
-??? python "A mémoriser : l'algorithme du tri par insertion"
-
-	```python
+??? mem "À retenir"
+    
+    - Le tri par insertion a une complexité **quadratique**, c'est à dire de l'ordre du carré de la taille de la liste à trier $N^2$ : $O(n^2)$
+    
+	```python title="Algorithme de tri par insertion"
     def tri_insertion(tableau):
         for i in range(1, len(tableau)):
             valeur_a_inserer = tableau[i]
@@ -428,10 +425,5 @@
                 j = j - 1
             tableau[j] = valeur_a_inserer
     ```
-
-??? info "A mémoriser : la complexité du tri par insertion"
-
-	Le tri par insertion a une complexité **quadratique**, c'est à dire de l'ordre du carré de la taille de la liste à trier.
-
 
     

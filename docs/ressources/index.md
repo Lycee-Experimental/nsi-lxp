@@ -97,6 +97,8 @@ hide:
     - [Quentin Konieczko](https://www.youtube.com/@qkzk/videos)
     - Les vidéos de la chaine **Crash Courses**
     <iframe src="https://www.youtube.com/embed/videoseries?list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo" frameborder="0" scrolling="auto" style="width: 100%; height: 550px;"></iframe>
+    - Les vidéos de **Cédric Gerland** [lien](
+    https://www.youtube.com/@cedricgerland7621/videos)
 
 === "Tutoriels"
     Pour apprendre les bases du langage de programmation **python**, une application en français est accessible à l'addresse : https://fr.futurecoder.io

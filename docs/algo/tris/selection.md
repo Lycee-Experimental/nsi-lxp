@@ -1,23 +1,16 @@
 # Tri par sélection
 
-???+ abstract "Le tri par sélection en bref"
+???+ abstract "Principe du tri par sélection"
     <center>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/rXEI25l9RQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </center>
+
+    **En résumé :**
 
     * On cherche la valeur minimale et on la place au début du tableau.
     * On recommence à partir de la deuxième valeur, et on la place en deuxième position par échange. 
     * Ainsi de suite 
 
-    Le tri par sélection est l'un des plus simples à comprendre. Il est même probable que vous l'ayez déjà mis en application.
-
-    Supposons que vous ayez des cartes à jouer en main et que vous souhaitiez les trier dans l'ordre croissant. Vous pouvez :
-
-    * Parcourir du regard l'ensemble des cartes et déterminer laquelle est la plus petite,
-    
-    * Échanger cette carte minimale avec la première carte de votre main,
-    * Recommencer en cherchant la carte minimale à partir de la deuxième carte et l'échanger avec celle-ci,
-    * Recommencer à partir de la troisième carte *etc*.
 
 {{exercice(prem=1, titre="Déroulé « *à la main* »")}}
     === "Principe"
@@ -80,6 +73,7 @@
 {{exercice(titre="Tri par sélection en Python")}}
     L'une des étapes essentielles du tri par sélection est donc de déterminer l'indice de la valeur minimale à partir d'un certain indice `i`.
     Cette recherche ayant lieu à plusieurs reprises, nous allons utiliser une fonction pour la réaliser.
+    
     === "Fonction `#!py indice_minimum_depuis`"
 
         Compléter la fonction `#!py indice_minimum_depuis` prenant en argument un `#!py tableau` ainsi qu'un indice `#!py i` et renvoyant l'indice de la valeur minimale parmi les éléments situés après celui d'indice `#!py i` (inclus).
@@ -90,18 +84,8 @@
 
         {{ IDE('scripts/mini_depuis') }}
 
-        ??? success "Solution"
 
-            ```python
-            def indice_minimum_depuis(tableau, i):
-                i_mini = i
-                for j in range(i + 1, len(tableau)):
-                    if tableau[j] < tableau[i_mini]:
-                        i_mini = j
-                return i_mini
-            ```
 
-            Dans le cas où le minimum apparaît plusieurs fois, on aurait pu aussi retenir la dernière d'entre elles. Le fonctionnement général de l'algorithme aurait été similaire (mais il n'aurait plus été [*stable*](https://fr.wikipedia.org/wiki/Algorithme_de_tri#Tri_stable))
 
     === "Fonction `#!py tri_selection`"
         On donne les fonctions `#!py echange` et `#!py indice_minimum_depuis`.
@@ -112,14 +96,6 @@
 
         {{ IDE('scripts/selection') }}
 
-        ??? success "Solution"
-
-            ```python
-            def tri_selection(tableau):
-                for i in range(len(tableau) - 1):
-                    i_mini = indice_minimum_depuis(tableau, i)
-                    echange(tableau, i, i_mini)
-            ```
 
     === "Fonction `#!py tri_selection` (bis)"
 
@@ -134,29 +110,27 @@
         {{ IDE('scripts/selection_bis') }}
 
 
-    === "Utilisation"
-        ??? question "Tester le tri par sélection"
-
-            Tester ci-dessous. Que s'est-il passé ?
+    === "Utilisation #1"
+        Tester ci-dessous. Que se passe-t-il ?
         
-            {{ IDE('scripts/tri_selection') }}
-
-            ??? success "Solution"
-
-                La fonction n'a pas de `return`, c'est une procédure. Elle renvoie donc `None`
-
-        ??? question "Que fait la fonction de tri par sélection ?"
-
-            Tester ci-dessous. Que s'est-il passé ?
+        ??? success "Réponse"
+            La fonction n'a pas de `return`, c'est une procédure. Elle renvoie donc `None`
         
-            {{ IDE('scripts/tri_sel_effet') }}
+        {{ IDE('scripts/tri_selection') }}  
 
-            ??? success "Solution"
 
-                La liste de départ a été modifiée ...
 
-                C'est ce qu'on appelle un **effet de bord**. La fonction a modifié **"en place"** la liste.
+    === "Utilisation #2"
+        Tester ci-dessous. Que se passe-t-il ?
+        
+        ??? success "Réponse"
+            La liste de départ a été modifiée ...
 
+            C'est ce qu'on appelle un **effet de bord**. La fonction a modifié **"en place"** la liste.
+
+        {{ IDE('scripts/tri_sel_effet') }}  
+
+        
 
 {{exercice(titre="Complexité du tri par sélection")}}
     Nous allons étudier le tri de `[9, 5, 8, -2, 6, 4]`. Nous avons mis en vert la partie triée de la liste. La dernière colonne donne le nombre de comparaisons effectuées par la fonction `rechercher_position_du_min`.  
@@ -225,10 +199,6 @@
         La dernière ligne du tableau contient $n-1$ fois le terme  $n$.    
         On a donc $2 \times C(n)=(n-1)n$ , et donc $C(n)=\dfrac{(n-1)n}{2}$ 
 
-!!! abstract "💚 A retenir"
-
-    La complexité du tri par sélection est quadratique : **Le coût est quadratique**.
-
 {{exercice(titre="Mesures du temps de calcul")}}
     ??? question "Quel est le "pire des cas?""
         ??? success "Solution"
@@ -296,18 +266,22 @@
 
             Cela correspond bien à une complexité **quadratique**
 
-{{exercice(titre="Visulalisation du temps de calcul du tri par insertion")}}
-        {{jupyter('/algo/notebooks/temps_tri_selection.ipynb')}}
+{{exercice(titre="Visualisation du temps de calcul du tri par sélection")}}
+    {{jupyter('/notebooks/temps_tri_selection.ipynb')}}
 
-??? abstract "Correction de l'algorithme de tri par sélection"
-    ??? info "Invariant de boucle"
+
+{{exercice(titre="Correction de l'algorithme de tri par sélection")}}
+
+    Démontrer, par récurrence, la correction de l'algorithme de tri par sélection.
+
+    !!! info "Rappel sur les invariant de boucle"
 
         On appelle invariant d’une boucle une propriété qui, si elle est vraie avant l’exécution d’une itération, le demeure après l’exécution de l’itération.  
 
         Un invariant de boucle bien choisi permet de prouver qu’une boucle produit le résultat attendu (correction). 
 
 
-    ??? info "Correction de l'algorithme"
+    ??? success "Réponse"
         **Après la ième itération (boucle en i de l’algorithme fourni) les i premiers éléments sont triés.**
 
         **a. Vérifions sur l'exemple du tri de  :  `[9, 5, 8, -2, 6, 4] `**
@@ -330,11 +304,15 @@
         On prouve ainsi de proche en proche que pour n’importe quel entier i, après la ième itération, les i premiers éléments sont triés. Cela prouve la correction de l’algorithme de tri par sélection, car après n itérations une liste de longueur n est donc triée.
 
 
-??? info "Terminaison de l'algorithme de tri par sélection"
-	L’algorithme de tri par sélection se termine car il a un nombre limité de tours de boucles, car il ne comporte que des boucles Pour.
 
-??? abstract "A mémoriser : l'algorithme du tri par sélection"
-	```python
+
+??? mem "A retenir"
+
+    - La **complexité** du tri par sélection est **quadratique** : $O(n^2)$
+
+	- L’algorithme de tri par sélection **se termine** car il a un nombre limité de tours de boucles, du fait qu'il ne comporte que des boucles Pour qui sont des **boucles bornées**.
+
+	```python title="Algorithme du tri par sélection"
     def tri_selection(tableau):
     for i in range(len(tableau) - 1):
         i_mini = i
@@ -343,6 +321,3 @@
                 i_mini = j
         tableau[i], tableau[i_mini] = tableau[i_mini], tableau[i]
     ```
-
-??? abstract "A mémoriser : la complexité du tri par sélection"
-	Le tri par sélection a une complexité **quadratique**, c'est à dire de l'ordre du carré de la taille de la liste à trier.
